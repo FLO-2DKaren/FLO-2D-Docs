@@ -1,0 +1,24 @@
+# Ignore Sphinx build artifacts
+_build/
+build/
+.revision/  # added by sphinx-multiversion
+
+# Python cache and bytecode
+*.py[cod]
+__pycache__/
+
+# PyCharm & VS Code
+.idea/
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+
+# Ignore virtual environments (if you later create one inside the project folder)
+env/
+venv/
+.venv/
