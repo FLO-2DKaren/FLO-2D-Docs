@@ -30,7 +30,7 @@ def create_branch(build_name, project_dir):
 
     # Commit the changes
     run_command("git add .", cwd=project_dir)
-    run_command(f"git commit -m 'Add documentation for {build_name}'", cwd=project_dir)
+    run_command(f'git commit -m "Add documentation for {build_name}"', cwd=base_dir)
     # Optional: uncomment to push
     # run_command(f"git push -u origin {branch_name}", cwd=project_dir)
 
