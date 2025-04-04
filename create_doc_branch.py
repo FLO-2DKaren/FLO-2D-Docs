@@ -2,7 +2,6 @@ import os
 import subprocess
 import shutil
 
-
 def run_command(command, cwd=None):
     result = subprocess.run(command, shell=True, cwd=cwd, capture_output=True, text=True)
     if result.returncode != 0:
@@ -10,15 +9,14 @@ def run_command(command, cwd=None):
     else:
         print(result.stdout)
 
-
-def create_branch(build_name, project_dir):
+def create_branch(build_name, project_path):
     branch_name = build_name.replace(" ", "")
 
-    # Create new branch
-    run_command(f"git checkout -b {branch_name}", cwd=project_dir)
+    # Create and checkout new branch
+    run_command(f"git checkout -b {branch_name}", cwd=project_path)
 
     # Update index.rst with version info
-    index_path = os.path.join(project_dir, "source", "index.rst")
+    index_path = os.path.join(project_path, "source", "index.rst")
     with open(index_path, "r") as f:
         content = f.readlines()
 
@@ -29,11 +27,11 @@ def create_branch(build_name, project_dir):
         f.writelines(content)
 
     # Commit the changes
-    run_command("git add .", cwd=project_dir)
+    run_command("git add .", cwd=project_path)
     run_command(f'git commit -m "Add documentation for {build_name}"', cwd=project_path)
-    # Optional: uncomment to push
-    # run_command(f"git push -u origin {branch_name}", cwd=project_dir)
 
+    # Optional: uncomment to push
+    # run_command(f"git push -u origin {branch_name}", cwd=project_path)
 
 if __name__ == "__main__":
     # Your version builds
