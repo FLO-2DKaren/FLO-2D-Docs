@@ -1,10 +1,7 @@
-.. version: Build 23
-.. This is the documentation for Build 23
+FLO-2D Pro Documentation – main
+===============================
 
-FLO-2D Pro Documentation – Build23
-==================================
-
-Welcome to the Build23 version of the FLO-2D Documentation.
+Welcome to the main version of the FLO-2D Documentation.
 
 .. toctree::
    :maxdepth: 2
