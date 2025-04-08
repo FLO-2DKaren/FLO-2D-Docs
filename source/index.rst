@@ -1,13 +1,14 @@
-FLO-2D Pro Documentation – main
-===============================
+FLO-2D Pro Documentation
+========================
 
-Welcome to the main version of the FLO-2D Documentation.
+Welcome to the FLO-2D Pro Documentation.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :caption: Versions
 
-   setup/index
-   flo-2d_pro/index
-   flo-2d_plugin/index
-   tutorials/index
+   Build25/index
+   Build23/index
+   Build21/index
+
+You can also click the version dropdown above to view documentation by version.
