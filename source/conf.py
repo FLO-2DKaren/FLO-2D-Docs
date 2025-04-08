@@ -6,7 +6,7 @@ sys.path.insert(0, os.path.abspath("..."))
 project = 'FLO-2D Pro Documentation'
 copyright = "2025, Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 author = "Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
-html_logo = "../FLO-2D Transparent.png"
+html_logo = "FLO-2D Transparent.png"
 
 # -- Sphinx Multiversion Settings -------------------------------------------
 # NOTE: Use one of the following settings depending on your build environment
