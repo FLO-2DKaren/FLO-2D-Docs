@@ -1,8 +1,8 @@
 .. version: Build 25
 .. This is the documentation for Build 25
 
-FLO-2D Pro Documentation – main
-===============================
+FLO-2D Pro Documentation – Build 25
+====================================
 
 Welcome to the main version of the FLO-2D Documentation.
 
