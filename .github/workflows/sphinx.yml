@@ -1,52 +1,68 @@
-name: Build Sphinx Docs with Multiversion
+name: Build and publish multiversion documentation
 
+# Trigger this workflow when pushing to main or any branch that starts with "Build"
 on:
   push:
-    branches:
-      - main
-      - Build*
+    branches: [ main, Build* ]
+  # Allow manual runs from the GitHub Actions tab
   workflow_dispatch:
 
 jobs:
-  build-docs:
-    runs-on: ubuntu-latest
+  build_multiversion_docs:
+    name: Build and upload multiversion docs
+    runs-on: ubuntu-latest  # Use GitHub's latest Ubuntu runner
 
     steps:
+      # ✅ Step 1: Check out ALL branches (needed for sphinx-multiversion)
       - name: Checkout all branches
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Fetch full git history across all branches
 
+      # ✅ Step 2: Set up Python 3.12
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
+          python-version: '3.12'
 
+      # ✅ Step 3: Install Python packages needed for Sphinx and extensions
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install sphinx sphinx-rtd-theme sphinx-multiversion sphinxcontrib-mermaid
+          pip install sphinx sphinx-multiversion sphinxcontrib-mermaid sphinx-rtd-theme
 
-      - name: Build multiversion docs
-        run: |
-          sphinx-multiversion source build/html
+      # ✅ Step 4: Optional – List contents to debug the folder structure
+      - name: List directory contents
+        run: ls -l
 
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v2
+      # ✅ Step 5: Build the multiversion HTML using sphinx-multiversion
+      - name: Build with sphinx-multiversion
+        run: sphinx-multiversion source build/html
+
+      # ✅ Step 6: Upload the HTML files as an artifact to pass to the next job
+      - name: Upload multiversion HTML
+        uses: actions/upload-artifact@v4
         with:
-          path: build/html
+          name: FLO2D_Multiversion
+          path: build/html/
 
-  deploy:
-    needs: build-docs
+  publish_multiversion_docs:
+    name: Publish multiversion docs to GitHub Pages
+    needs: [build_multiversion_docs]  # Wait for the build job to finish
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+      # ✅ Step 7: Download the built HTML files
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: FLO2D_Multiversion
+          path: build/html/
+
+      # ✅ Step 8: Push the HTML to the gh-pages branch to publish on GitHub Pages
+      - name: Push to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/html
+          force_orphan: true  # Creates a fresh gh-pages branch each time (optional)
