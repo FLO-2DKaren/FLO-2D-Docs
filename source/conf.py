@@ -31,7 +31,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"
-html_static_path = ["style"]
+html_static_path = ['_static']
 html_css_files = [
     ('static/custom.css', {'priority': 1000})
 ]
