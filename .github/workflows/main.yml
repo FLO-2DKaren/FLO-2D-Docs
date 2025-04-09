@@ -62,7 +62,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: FLO2D_Multiversion
-          path: build/html/
+          path: build/html/main/
 
       # ✅ Step 8: Push the HTML to the gh-pages branch to publish on GitHub Pages
       - name: Push to gh-pages branch
