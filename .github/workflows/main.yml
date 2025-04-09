@@ -39,6 +39,11 @@ jobs:
       - name: Build with sphinx-multiversion
         run: sphinx-multiversion source build/html
 
+      # ✅ Step 5.5: Add root-level index.html that redirects to Build25
+      - name: Add root index.html
+        run: |
+            echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > build/html/index.html
+
       # ✅ Step 6: Upload the HTML files as an artifact to pass to the next job
       - name: Upload multiversion HTML
         uses: actions/upload-artifact@v4
