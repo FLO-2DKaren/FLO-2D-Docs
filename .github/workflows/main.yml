@@ -1,73 +1,38 @@
 name: Build and publish multiversion documentation
 
-# Trigger this workflow when pushing to main or any branch that starts with "Build"
 on:
   push:
     branches: [ main, Build* ]
-  # Allow manual runs from the GitHub Actions tab
   workflow_dispatch:
 
 jobs:
-  build_multiversion_docs:
-    name: Build and upload multiversion docs
-    runs-on: ubuntu-latest  # Use GitHub's latest Ubuntu runner
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-      # ✅ Step 1: Check out ALL branches (needed for sphinx-multiversion)
       - name: Checkout all branches
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch full git history across all branches
+          fetch-depth: 0
 
-      # ✅ Step 2: Set up Python 3.12
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
-      # ✅ Step 3: Install Python packages needed for Sphinx and extensions
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install sphinx sphinx-multiversion sphinxcontrib-mermaid sphinx-rtd-theme
+          pip install sphinx sphinx-multiversion sphinx-rtd-theme sphinxcontrib-mermaid ghp-import
 
-      # ✅ Step 4: Optional – List contents to debug the folder structure
-      - name: List directory contents
-        run: ls -l
-
-      # ✅ Step 5: Build the multiversion HTML using sphinx-multiversion
-      - name: Build with sphinx-multiversion
-        run: sphinx-multiversion source build/html
-
-      # ✅ Step 5.5: Add root-level index.html that redirects to Build25
-      - name: Add root index.html
+      - name: Build multiversion docs
         run: |
-            echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > build/html/index.html
+          sphinx-multiversion source _build/html
 
-      # ✅ Step 6: Upload the HTML files as an artifact to pass to the next job
-      - name: Upload multiversion HTML
-        uses: actions/upload-artifact@v4
-        with:
-          name: FLO2D_Multiversion
-          path: build/html/
+      - name: Add root index.html to redirect to Build25
+        run: |
+          echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > _build/html/index.html
 
-  publish_multiversion_docs:
-    name: Publish multiversion docs to GitHub Pages
-    needs: [build_multiversion_docs]  # Wait for the build job to finish
-    runs-on: ubuntu-latest
-
-    steps:
-      # ✅ Step 7: Download the built HTML files
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: FLO2D_Multiversion
-          path: build/html/main/
-
-      # ✅ Step 8: Push the HTML to the gh-pages branch to publish on GitHub Pages
-      - name: Push to gh-pages branch
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/html
-          force_orphan: true  # Creates a fresh gh-pages branch each time (optional)
+      - name: Deploy using ghp-import
+        run: |
+          ghp-import -n -p -f _build/html
