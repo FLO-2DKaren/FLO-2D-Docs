@@ -29,6 +29,10 @@ jobs:
         run: |
           sphinx-multiversion source _site
 
+      - name: List _site contents
+        run: |
+         ls -R _site
+
       - name: Add root index.html
         run: |
           echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > _site/index.html
