@@ -27,12 +27,12 @@ jobs:
 
       - name: Build multiversion docs
         run: |
-          sphinx-multiversion source _build/html
+          sphinx-multiversion source _site
 
-      - name: Add root index.html to redirect to Build25
+      - name: Add root index.html
         run: |
-          echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > _build/html/index.html
+          echo '<!DOCTYPE html><html><head><meta http-equiv="Refresh" content="0; url=Build25/index.html" /></head><body><p>Redirecting to Build25...</p></body></html>' > _site/index.html
 
       - name: Deploy using ghp-import
         run: |
-          ghp-import -n -p -f build/html/main
+          ghp-import -n -p -f _site
