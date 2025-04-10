@@ -120,7 +120,7 @@ jobs:
 
 ---
 
-### 🌍 5. Enable GitHub Pages
+### 🌍 5. Enable GitHub Pages ***Important***
 
 - Go to your repo → **Settings > Pages**
 - Set **Source**: `Deploy from a branch`
@@ -130,6 +130,9 @@ jobs:
 ---
 
 ### 🚀 6. Trigger Deployment
+
+> **Note:** If you don't have anything to commit, just rerun the deployment
+   from actions page.
 
 From the `main` branch, run:
 
