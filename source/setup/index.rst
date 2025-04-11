@@ -13,7 +13,7 @@ The training tutorials will teach project development using FLO-2D and QGIS.
 Advanced Modules are used to teach more specific and detailed projects.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
     FLO-2D Pro.rst
     GDS and Mapper Install Instructions.rst
