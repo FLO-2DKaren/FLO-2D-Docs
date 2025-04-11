@@ -6,4 +6,4 @@ FLO-2D Plugin
    :caption: FLO-2D Plugin
 
    user_manual/index.rst
-   technical_reference_manual
+   technical_reference_manual/index.rst
