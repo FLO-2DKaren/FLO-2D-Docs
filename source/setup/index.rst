@@ -1,11 +1,22 @@
-Setup
-=====
+FLO-2D Installation \& Setup
+=============================
+
+Welcome to the FLO-2D setup page. Get a computer ready for FLO-2D with:
+
+- FLO-2D Software package
+- QGIS stand alone installer
+- Plugins FLO-2D, QuickMapServices, ProfileTool, CurveNumberGenerator
+- GDS and Mapper
+- Training Data
+
+The training tutorials will teach project development using FLO-2D and QGIS.
+Advanced Modules are used to teach more specific and detailed projects.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Setup
+   :maxdepth: 1
 
-   flo-2d_pro_setup
-   qgis_setup
-   gds_mapper
-   test_setup
+   FLO-2D Pro
+   QGIS and FLO-2D Plugin
+   Port a GeoPackage
+   GDS and Mapper Install Instructions
+   Troubleshooting
