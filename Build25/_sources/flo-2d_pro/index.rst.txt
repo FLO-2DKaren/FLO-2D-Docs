@@ -6,5 +6,5 @@ FLO-2D Pro
    :caption: FLO-2D Pro
 
    data_input_manual
-   channel_modeling_guidelines
+   Channel Modeling Guidelines/index
    storm_drain_modeling_guidelines
