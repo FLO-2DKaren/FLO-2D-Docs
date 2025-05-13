@@ -84,12 +84,12 @@ FLO-2D Widgets
 The editor widget is used to digitize the User Layers.
 If the windows are missing, show them using the View>Panels>FLO-2D Panel.
 
-.. image:: ../img/Widgets/widgets.png
+.. image:: ../img/View-Options/View010.png
 
 The FLO-2D Widgets panel has some simple control buttons.  The Clear rubberband button will clear the red marker
 used to show the selected feature.  If a red rubberband is visible, the user can click the Clear button to remove it.
 
-.. image:: ../img/Widgets/View014.png
+.. image:: ../img/View-Options/View014.png
 
 This panel can be docked along with the QGIS Processing Tools Panel.
 
