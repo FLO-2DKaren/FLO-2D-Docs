@@ -5,7 +5,7 @@ In the current FLO-2D Plugin version, the QGIS Project file (\*.qgz) is saved in
 This new method has many advantages in terms of portability, styling the symbology, and reducing
 potential path errors. It is also allowed to save external user layers to the GeoPackage.
 
-Save a new FLO-2D Project
+Save a FLO-2D Project
 -----------------------------
 
 1. Click this button to save the FLO-2D Project.
@@ -43,8 +43,6 @@ Saving external layers into the geopackage
 
 6. Layers such as Google Maps, MapCrafter layers will not become part of the GeoPackage.  They will be saved to the
    QGZ system.
-
-.. image:: ../../img/Flo-2D-Project/saveproject002.png
 
 .. note:: The current version only supports vectors and rasters to be saved to the geopackage. CSV files and basemaps
           are not allowed.  If a basemap or other file is loaded, it may still be able to save in the QGZ storage table
