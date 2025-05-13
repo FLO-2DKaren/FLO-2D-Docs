@@ -32,6 +32,7 @@ Follow these instructions to set up QGIS.
 
 .. image:: img/Instructions/image14.png
 
+.. _flo2d_plugin_step:
 
 Step 2: FLO-2D Plugin
 ----------------------
