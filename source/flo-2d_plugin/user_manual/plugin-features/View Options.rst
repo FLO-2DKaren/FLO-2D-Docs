@@ -91,7 +91,7 @@ used to show the selected feature.  If a red rubberband is visible, the user can
 
 .. image:: ../img/View-Options/View014.png
 
-This panel can be docked along with the QGIS Processing Tools Panel.
+The Widget Panel can be docked with the QGIS Processing Tools Panel.
 
 .. image:: ../img/View-Options/View014.gif
 
