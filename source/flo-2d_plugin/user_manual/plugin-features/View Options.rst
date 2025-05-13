@@ -38,7 +38,8 @@ Plugin Toolbar
 --------------
 
 The FLO-2D Plugin toolbar is located on the QGIS toolbar lower tier.
-If the toolbar is missing, follow the FLO-2D Plugin installation instructions or use the View menu to load it onto the QGIS Toolbar menu.
+If the toolbar is missing, follow the FLO-2D Plugin installation instructions or use the View menu to load it onto the
+QGIS Toolbar menu.
 
 .. image:: ../img/Buttons/tools.png
 
@@ -46,7 +47,8 @@ Plugin Layers
 -------------
 
 The FLO-2D Layers are loaded into the QGIS program when the user creates a GeoPackage.
-These layers are grouped into categories such as User Layers that can be edited and Schematic Layers that are written when data is schematized.
+These layers are grouped into categories such as User Layers that can be edited and Schematic Layers that are written
+when data is schematized.
 There are also Storm Drain Layers, Infiltration Layers, Data Tables, and Channel Layers.
 All the data is stored as SQLite data in a GeoPackage file.
 
@@ -84,6 +86,11 @@ If the windows are missing, show them using the View>Panels>FLO-2D Panel.
 
 .. image:: ../img/Widgets/widgets.png
 
+The FLO-2D Widgets panel has some simple control buttons.  The Clear rubberband button will clear the red marker
+used to show the selected feature.  If a red rubberband is visible, the user can click the Clear button to remove it.
+
+.. image:: ../img/Widgets/View014.png
+
 This panel can be docked along with the QGIS Processing Tools Panel.
 
 .. image:: ../img/View-Options/View014.gif
@@ -91,9 +98,11 @@ This panel can be docked along with the QGIS Processing Tools Panel.
 FLO-2D Plot and Table Editor Windows
 ------------------------------------
 
-The plot window and table editor window are used to assign table data to various components such as inflow, rain, hydraulic structures, and channels.
+The plot window and table editor window are used to assign table data to various components such as inflow, rain,
+hydraulic structures, and channels.
 The user can copy and paste from excel or ASCII text files.
-If these windows are missing, they can be restored using the View Menu and they can be docked or shifted to other monitor screens for easy editing
+If these windows are missing, they can be restored using the View Menu and they can be docked or shifted to other
+monitor screens for easy editing
 and viewing.
 
 .. image:: ../img/View-Options/View011.png
