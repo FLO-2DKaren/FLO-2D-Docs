@@ -1,7 +1,7 @@
 Create FLO-2D Backup
 ======================
 
-This button will create a backup of the current FLO-2D project by saving the *.gpkg file.  It should preserve the
+This button will create a backup of the current FLO-2D project by saving the \*.gpkg file.  It should preserve the
 current project state and external layers regardless of if the layer is part of the GeoPackage or saved to the
 project as an external link.
 
