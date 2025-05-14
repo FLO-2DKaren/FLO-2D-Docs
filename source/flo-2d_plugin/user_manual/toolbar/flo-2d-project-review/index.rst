@@ -9,7 +9,6 @@ warnings or errors within the FLO-2D Project.
 .. image:: ../../img/Buttons/review001.png
 
 .. toctree::
-   :hidden:
    :maxdepth: 4
 
    Hazus Tool

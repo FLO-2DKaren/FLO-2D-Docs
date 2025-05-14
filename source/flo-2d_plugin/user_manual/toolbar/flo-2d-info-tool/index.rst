@@ -15,7 +15,6 @@ This section covers the 3 tools.
 .. image:: ../../img/Buttons/infoandresults.png
 
 .. toctree::
-   :hidden:
    :maxdepth: 4
 
    Grid Info Tool

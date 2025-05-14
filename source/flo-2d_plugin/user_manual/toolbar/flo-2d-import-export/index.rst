@@ -8,7 +8,6 @@ components, selected components, or to the \*.HDF5 file.
 .. image:: ../../img/Buttons/importexport001.png
 
 .. toctree::
-   :hidden:
    :maxdepth: 4
 
    Import Data Files

@@ -8,7 +8,6 @@ and running the Levee Tool.
 .. image:: ../../img/Buttons/control001.png
 
 .. toctree::
-   :hidden:
    :maxdepth: 4
 
    Control Variables
