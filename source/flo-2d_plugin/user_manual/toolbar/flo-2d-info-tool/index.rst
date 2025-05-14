@@ -15,7 +15,7 @@ This section covers the 3 tools.
 .. image:: ../../img/Buttons/infoandresults.png
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
 
    Grid Info Tool
    FLO-2D Info Tool

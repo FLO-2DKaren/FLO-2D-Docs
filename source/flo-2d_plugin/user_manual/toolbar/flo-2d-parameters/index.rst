@@ -8,7 +8,7 @@ and running the Levee Tool.
 .. image:: ../../img/Buttons/control001.png
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
 
    Control Variables
    Mud and Sediment Transport Tool

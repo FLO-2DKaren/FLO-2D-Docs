@@ -24,7 +24,7 @@ FLO-2D executable folder and the FLO-2D Project folder.
                FLO-2D Plugin Settings.
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
 
    FLO-2D Settings
    Quick Run FLO-2D Pro
