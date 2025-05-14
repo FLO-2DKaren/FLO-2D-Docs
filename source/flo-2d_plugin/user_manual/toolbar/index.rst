@@ -11,7 +11,7 @@ Note that the toolbar's position may vary based on active QGIS plugins/features,
 
 .. toctree::
    :hidden:
-   :maxdepth: 4
+   :maxdepth: 2
 
    flo-2d-project/index
    flo-2d-import-export/index
