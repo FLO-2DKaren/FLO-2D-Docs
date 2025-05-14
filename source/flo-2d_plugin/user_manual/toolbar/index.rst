@@ -10,7 +10,6 @@ Note that the toolbar's position may vary based on active QGIS plugins/features,
            It may be necessary to uncheck and recheck the box.
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
 
    flo-2d-project/index
