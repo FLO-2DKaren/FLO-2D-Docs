@@ -7,7 +7,6 @@ tool for external layer management within the user's GeoPackage.
 .. image:: ../../img/Buttons/open001.png
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
 
    New FLO-2D Project
