@@ -18,7 +18,7 @@ Open an existing FLO-2D GeoPackage
 .. important:: The latest FLO-2D plugin does not have a \*.qgz file.  Only a \*.gpkg file is needed.  This makes it
                easier to move a project to a new folder.
 
-.. image:: ../../img/Buttons/open002.png
+.. image:: ../../img/Flo-2D-Project/openflo2dproject001.png
 
 3. If the GeoPackage is updated, FLO-2D Plugin prompts a message to load the project. Click OK.
 

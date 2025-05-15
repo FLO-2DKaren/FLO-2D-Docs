@@ -5,7 +5,7 @@ Plugin Menu
 -----------
 
 The FLO-2D Plugin menu is in the Plugins drop down menu, Plugins>FLO-2D.
-If the Plugin is not listed, follow the installation instructions to install the Plugin.
+If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin_step>` to install it.
 
 .. image:: ../img/Plugin-Features/Plugin002.png
 
