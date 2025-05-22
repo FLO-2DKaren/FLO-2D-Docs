@@ -604,7 +604,7 @@ The energy loss for a contraction in pressure flow can be calculated from the fo
 .. math::
    :label:
 
-   H_c = K_c \left( frac{V_2 \, ^2}{2g} \right)
+   H_c = K_c \left( \frac{V_2 \, ^2}{2g} \right)
 
 where:
 
