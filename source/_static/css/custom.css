@@ -1,18 +1,5 @@
-h1::before {
-    content: "[CMG CONFIG ACTIVE] ";
-    color: red;
-}
-
-
-body {
-    background-color: lightyellow !important;
-}
-
-
 
 /* Custom styles for FLO-2D Documentation */
 .wy-nav-content {
     max-width: 1200px;
 }
-
-
