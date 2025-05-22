@@ -10,6 +10,7 @@ components, selected components, or to the \*.HDF5 file.
 .. toctree::
    :maxdepth: 1
 
+   Import from Geopackage
    Import Data Files
    Import Selected Component Files
    Export Project
