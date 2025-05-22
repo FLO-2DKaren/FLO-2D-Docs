@@ -5,6 +5,5 @@ FLO-2D Pro
    :maxdepth: 2
    :caption: FLO-2D Pro
 
-   data_input_manual
    Channel Modeling Guidelines/index
-   storm_drain_modeling_guidelines
+   Hydraulic Structures Guidelines/index
