@@ -18,4 +18,6 @@ components, selected components, or to the \*.HDF5 file.
    Export to HDF5
    Import swmm
    Export swmm
+   Import Multiple Domains
+   Export Multiple Domains
    Import RAS Channel

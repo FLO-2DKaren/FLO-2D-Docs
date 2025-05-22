@@ -2,7 +2,7 @@ Import from Geopackage
 ===========================
 
 1. Click the
-   Import from GeoPackage
+   Import from GeoPackage button
 
 .. image:: ../../img/Buttons/importexport009.png
 
