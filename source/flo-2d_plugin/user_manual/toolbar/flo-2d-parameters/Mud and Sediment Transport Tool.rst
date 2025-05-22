@@ -1,8 +1,8 @@
 Mud and Sediment Transport (SED.DAT)
 =====================================
 
-.. note:: Mudflow, sediment transport, and two phase flow are complex topics, find resources in the FLO-2D
-   Documentation Folder
+.. note:: Mudflow, sediment transport, and two phase flow are complex topics,
+   find resources in the FLO-2D Documentation Folder
 
    - Data Input Manual
    - FLO-2D Pro Reference Manual
@@ -26,8 +26,6 @@ At sufficiently high concentrations, the fine sediments alter the properties of 
 viscosity, and yield stress.
 
 2. Select the Mud / Debris Transport.
-
-.. image:: ../../img/Buttons/control002.png
 
 .. image:: ../../img/Mud/mud002.png
 
