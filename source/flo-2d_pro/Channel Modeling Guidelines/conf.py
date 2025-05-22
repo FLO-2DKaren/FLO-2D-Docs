@@ -1,5 +1,5 @@
 import os
-# import sys
+import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 project = 'Channel Modeling Guidelines'
@@ -14,7 +14,7 @@ html_css_files = [
     ('css/custom.css', {'priority': 1000})
 ]
 
-numfig = True
+numfig = False
 numfig_secnum_depth = 1
 
 mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
