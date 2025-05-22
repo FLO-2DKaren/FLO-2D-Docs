@@ -5,7 +5,7 @@ The FLO-2D Parameters button serves multiple functions, including setting contro
 managing Mud and Sediment data in the SED.DAT file, converting schematized data to user layers,
 and running the Levee Tool.
 
-.. image:: ../../img/Buttons/control001.png
+.. image:: ../../img/Buttons/controlparams.png
 
 .. toctree::
    :maxdepth: 1
