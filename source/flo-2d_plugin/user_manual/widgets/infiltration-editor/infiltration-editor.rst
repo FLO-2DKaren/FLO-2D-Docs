@@ -10,7 +10,7 @@ are defined below.
 .. image:: ../../img/Widgets/infiltration.png
 
 SCS
-===================
+------
 
 FLO-2D uses three infiltration method.  Green_Ampt, SCS, and Horton infiltration data development is outlined in this
 section.  The INFIL.DAT file contains the infiltration data.  The data can be global (uniform) or spatially variable
