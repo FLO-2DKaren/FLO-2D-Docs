@@ -11,5 +11,5 @@ tool for external layer management within the user's GeoPackage.
 
    New FLO-2D Project
    Open FLO-2D Project
-   Create FLO-2D Backup
+   Backup
    FLO-2D GeoPackage Management
