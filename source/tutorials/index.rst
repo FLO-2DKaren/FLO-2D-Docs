@@ -6,3 +6,4 @@ Tutorials
    :caption: Tutorials
 
    Tailings/index
+   TDT/index
