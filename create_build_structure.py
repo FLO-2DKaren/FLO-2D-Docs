@@ -46,8 +46,8 @@ for section, pages in structure.items():
     section_dir = os.path.join(base_dir, safe_filename(section))
     os.makedirs(section_dir, exist_ok=True)
 
-    # Create index.rst for each section
-    with open(os.path.join(section_dir, 'index.rst'), 'w', encoding='utf-8') as f:
+    # Create infiltration-editor.rst for each section
+    with open(os.path.join(section_dir, 'infiltration-editor.rst'), 'w', encoding='utf-8') as f:
         f.write(f"{section}\n{'=' * len(section)}\n\n")
         f.write(".. toctree::\n   :maxdepth: 2\n   :caption: {}\n\n".format(section))
         for page in pages:
@@ -62,10 +62,10 @@ for section, pages in structure.items():
             f.write(f"{page}\n{'=' * len(page)}\n\n")
             f.write(f"Content for {page} will go here.\n")
 
-# Define the path to the main index.rst file
-main_index = os.path.join(base_dir, 'index.rst')
+# Define the path to the main infiltration-editor.rst file
+main_index = os.path.join(base_dir, 'infiltration-editor.rst')
 
-# Write the main index.rst file
+# Write the main infiltration-editor.rst file
 with open(main_index, 'w', encoding='utf-8') as f:
     title = f"FLO-2D Pro Documentation – {branch_name}"
     f.write(f"{title}\n{'=' * len(title)}\n\n")

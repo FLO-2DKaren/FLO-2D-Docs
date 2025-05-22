@@ -17,8 +17,8 @@ def create_branch(build_name, project_dir):
     # Create new branch
     run_command(f"git checkout -b {branch_name}", cwd=project_dir)
 
-    # Update index.rst with version info
-    index_path = os.path.join(project_dir, "source", "index.rst")
+    # Update infiltration-editor.rst with version info
+    index_path = os.path.join(project_dir, "source", "infiltration-editor.rst")
     with open(index_path, "r") as f:
         content = f.readlines()
 

@@ -1,3 +1,14 @@
+Infiltration Editor
+===================
+
+FLO-2D uses three infiltration method.  Green_Ampt, SCS, and Horton infiltration data development is outlined in this
+section.  The INFIL.DAT file contains the infiltration data.  The data can be global (uniform) or spatially variable
+at the grid element resolution.  Global data is applied uniformly to all grid elements and spatially variable data allows
+different parameters to be applied to individual cells or groups of cells.  The different methods for setting up the data
+are defined below.
+
+.. image:: ../../img/Widgets/infiltration.png
+
 SCS
 ===================
 
@@ -20,21 +31,21 @@ infiltration curve numbers.
 
 .. image:: ../../img/Infiltration-Editor/Infilt018.png
 
-2. Fill the Global  
+2. Fill the Global
    Infiltration dialog box.
 
 .. image:: ../../img/Infiltration-Editor/Infilt019.png
 
-3. The INFIL.DAT file  
+3. The INFIL.DAT file
    looks like this:
 
-4. Where the infiltration  
+4. Where the infiltration
    type is 2 = SCS infiltration.
 
-5. The 85 is the uniform curve  
+5. The 85 is the uniform curve
    number for each grid.
 
-6. The 0.01 is the initial  
+6. The 0.01 is the initial
    abstraction.
 
 .. image:: ../../img/Infiltration-Editor/Infilt020.png
@@ -49,29 +60,29 @@ Spatially variable floodplain infiltration is set by digitizing infiltration pol
 Use the polygon editor to digitize spatially variable infiltration.
 Create a polygon to represent an area of infiltration.
 
-1. Select the Infiltration  
+1. Select the Infiltration
    Areas user layer.
 
-2. Click the editor pencil and  
+2. Click the editor pencil and
    snapping magnet button.
 
 .. image:: ../../img/Infiltration-Editor/Infilt021.png
 
-3. Create the polygons the  
+3. Create the polygons the
    represent areas with the same curve number.
 
-4. Fill the table for the  
+4. Fill the table for the
    infiltration data.
 
 .. image:: ../../img/Infiltration-Editor/Infilt022.png
 
-5. The finished table has a  
+5. The finished table has a
    CN for every polygon.
 
-6. Click the Save button to  
+6. Click the Save button to
    save the attributes.
 
-7. Click the pencil button  
+7. Click the pencil button
    to close the editor.
 
 .. image:: ../../img/Infiltration-Editor/Infilt023.png
@@ -81,7 +92,7 @@ Create a polygon to represent an area of infiltration.
 
 .. image:: ../../img/Infiltration-Editor/Infilt024.png
 
-9. The spatially variable  
+9. The spatially variable
    INFIL.DAT looks like this:
 
 .. image:: ../../img/Infiltration-Editor/Infilt025.png
@@ -119,7 +130,7 @@ SCS Calculator From Single Shapefile
 
 This option will add spatially variable infiltration data to the grid from a shapefile with one CN attribute field.
 
-1. Click the Calculate  
+1. Click the Calculate
    SCS CN button.
 
 .. image:: ../../img/Infiltration-Editor/Infilt026.png
@@ -158,7 +169,7 @@ The data should be arranged as shown in the attribute table.
 
 .. image:: ../../img/Infiltration-Editor/Infilt030.png
 
-1. Click the  
+1. Click the
    Calculate SCS CN button.
 
 .. image:: ../../img/Infiltration-Editor/Infilt031.png

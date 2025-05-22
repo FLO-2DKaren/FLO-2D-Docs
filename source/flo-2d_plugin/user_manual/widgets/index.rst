@@ -22,7 +22,7 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
    hydraulic-structure-editor/Hydraulic Structure Editor
    street-editor/Street Editor
    floodplain-cross-section-editor/Floodplain Cross Section Editor
-   infiltration-editor/index
+   infiltration-editor/infiltration-editor
    storm-drain-editor/index
    levees-breach-editor/Levees Breach Editor
    multiple-channels-editor/Multiple Channel Editor
