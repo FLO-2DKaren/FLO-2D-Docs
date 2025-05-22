@@ -12,7 +12,7 @@ Import the FLO-2D \*.DAT files into the Project
 1. Click the
    Import data (\*.DAT) files.
 
-.. image:: ../../img/Buttons/importexport001.png
+.. image:: ../../img/Import-Data/importdatafiles1.png
 
 2. Navigate to
    the FLO-2D \*.DAT files
