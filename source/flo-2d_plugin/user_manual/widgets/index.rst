@@ -26,3 +26,4 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
    storm-drain-editor/index
    levees-breach-editor/Levees Breach Editor
    multiple-channels-editor/Multiple Channel Editor
+   multiple-domains-editor/Multiple Domains Editor
