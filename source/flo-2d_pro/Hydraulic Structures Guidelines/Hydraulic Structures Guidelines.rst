@@ -16,6 +16,7 @@ A hydraulic structure rating curve equation specifies discharge as a function of
 
 .. math::
    :label:
+
    Q = a \, h ^b
 
 where:
