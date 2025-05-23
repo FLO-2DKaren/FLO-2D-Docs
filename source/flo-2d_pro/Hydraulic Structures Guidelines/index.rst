@@ -5,6 +5,6 @@ Hydraulic Structures Guidelines
 =====================================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
     Hydraulic Structures Guidelines
