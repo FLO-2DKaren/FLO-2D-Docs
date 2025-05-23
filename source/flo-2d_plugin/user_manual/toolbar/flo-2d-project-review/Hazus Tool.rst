@@ -172,6 +172,8 @@ Join Building Statistics Table to Building Polygons
 .. image:: ../../img/Hazus-Tool/hazustool21.png
 
 
+.. image:: ../../img/Hazus-Tool/hazustool21b.png
+
 2. Save the Buildings Layer to a
    shapefile. Select the Save As… to a location and name the file.
 
@@ -203,7 +205,9 @@ Rasterize the Buildings
 
 
 2. Enter the search term Rasterize
-   in the Processing Toolbox search field. Double click the Saga Rasterize tool. Saga>Raster Creation Tools>Rasterize.
+   in the Processing Toolbox search field.
+   Double click the GDAL Rasterize tool. GDAL>Vector Conversion>Rasterize
+   (vector to raster).
 
 .. image:: ../../img/Hazus-Tool/hazustool26.png
 
