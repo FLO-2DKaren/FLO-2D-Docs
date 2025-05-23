@@ -9,7 +9,7 @@ This section will describe how to digitize and schematize the data.
 Map Velocity
 --------------
 
-1. Run the model to produced results.
+1. Run the model to produce results.
 
 2. Use MapCrafter to map the velocity vectors before creating floodplain cross sections.
 
