@@ -15,9 +15,9 @@ Advanced Modules are used to teach more specific and detailed projects.
 .. toctree::
    :maxdepth: 2
 
+  QGIS and FLO-2D Plugin.rst
    FLO-2D Pro.rst
    GDS and Mapper Install Instructions.rst
    Port a GeoPackage.rst
-   QGIS and FLO-2D Plugin.rst
    Troubleshooting.rst
 
