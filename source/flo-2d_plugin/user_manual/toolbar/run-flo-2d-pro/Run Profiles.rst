@@ -13,8 +13,6 @@ surface profiles.
           `Channel Results tools <../flo-2d-info-tool/FLO-2D%20Results%20Tool.html#channel-results>`__.
 
 
-Run Profiles
----------------
 
 The Run Profiles button will load the Profiles executable in the Project Folder.
 
