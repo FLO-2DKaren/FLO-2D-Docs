@@ -269,10 +269,10 @@ High maximum velocities (VELTIMEFP.OUT), rapidly varying discharges (HYDROSTRUCT
 maximum water surface elevations are all evidence of numerical surging.
 
 Hydraulic Structure Troubleshooting
-===================================
+-------------------------------------
 
 **General – Warning and Error Messages**
-----------------------------------------
+++++++++++++++++++++++++++++++++++++++++++++
 
 Hydraulic structures can be a source of channel numerical instability when the rating curve or table
 discharge does not match the upstream flow.
