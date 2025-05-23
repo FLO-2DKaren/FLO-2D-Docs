@@ -13,8 +13,6 @@ generating templates for easy customization.
 
    <a href="https://www.youtube.com/playlist?list=PLkT3KNZwX6zkEAJ_4qB_57r0Id_9cWgPr" target="_blank">MapCrafter Videos</a>
 
-Run MapCrafter
-----------------
 
 1. Click on Run MapCrafter.
 

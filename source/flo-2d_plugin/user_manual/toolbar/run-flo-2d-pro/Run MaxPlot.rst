@@ -7,8 +7,6 @@ perform difference calculations.
 .. note:: Maxplot is a simple and fast tool for plotting results.  For more comprehensive map making, use
    MapCrafter or Rasterizor plugins.
 
-Run MaxPlot
----------------
 
 The Run MaxPlot button will load the MaxPlot executable in the Project Folder.
 
