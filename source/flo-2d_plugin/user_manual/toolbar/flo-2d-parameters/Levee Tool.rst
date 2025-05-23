@@ -3,8 +3,6 @@ Levee Elevation Tool
 
 The Levee Elevation Tool will create levees, berms, walls and dams.
 
-Levee Elevation Tool
----------------------
 
 1. Click on the Levee Elevation Tool.
 
