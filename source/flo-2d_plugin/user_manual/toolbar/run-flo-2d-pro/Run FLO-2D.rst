@@ -3,9 +3,6 @@ Run FLO-2D
 
 The Run FLO-2D button is used to run FLO-2D.
 
-Run FLO-2D
-------------------------
-
 .. note:: It is necessary to configure the correct paths to Run FLO-2D.
           See `FLO-2D Settings <FLO-2D%20Settings.html>`__
 
