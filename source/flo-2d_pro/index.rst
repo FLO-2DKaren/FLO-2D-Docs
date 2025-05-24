@@ -2,8 +2,9 @@ FLO-2D Pro
 ==========
 
 .. toctree::
+   :hidden:
    :maxdepth: 2
-   :caption:
+
 
    Channel Modeling Guidelines/index
    Hydraulic Structures Guidelines/index
