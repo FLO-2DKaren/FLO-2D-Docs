@@ -153,6 +153,7 @@ To improve a model with numerical stability issues:
   Applying the Courant equation:
 
 .. math::
+   :label:
 
    \Delta t = \frac{C \, \Delta x}{C \, + \, V}
 
