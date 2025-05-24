@@ -5,6 +5,7 @@ Storm Drain Modeling Guidelines
 =================================
 
 .. toctree::
+    :numbered:
     :maxdepth: 2
 
     Chapter 1
