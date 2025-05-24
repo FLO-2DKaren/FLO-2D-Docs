@@ -1,4 +1,4 @@
-# -- Path FLO-2D Installation & Setup --------------------------------------------------------------
+# -- Path setup --------------------------------------------------------------
 import sys, os
 sys.path.insert(0, os.path.abspath("..."))
 
