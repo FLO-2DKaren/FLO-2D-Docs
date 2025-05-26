@@ -5,6 +5,8 @@ FLO-2D Pro
    :maxdepth: 1
    :caption: Contents
 
+
+   Data Input Manual
    Channel Modeling Guidelines/index
    Hydraulic Structures Guidelines/index
    Levee Dam and Wall Breach Guidelines/index
