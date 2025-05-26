@@ -2758,7 +2758,7 @@ def gen(
         lns = source
         source = ""
     if '.' not in sys.path:
-        sys.path.append('.')
+        sys.path.append('')
     if fun:
         # fun ='sdf'
         gen_regex = r'#\s*def gen_' + fun + r'(\w*(lns,\*\*kw):)*'
