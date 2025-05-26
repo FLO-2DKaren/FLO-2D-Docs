@@ -15,6 +15,3 @@ Welcome to the main version of the FLO-2D Documentation.
    flo-2d_plugin/index
    tutorials/index
 
-   .. includes/tutorials/index
-   .. includes/references/index
-   .. includes/flo-2d_pro/index
