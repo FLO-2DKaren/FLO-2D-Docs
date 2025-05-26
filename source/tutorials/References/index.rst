@@ -4,6 +4,7 @@
 References
 ===========
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :numbered:
 
