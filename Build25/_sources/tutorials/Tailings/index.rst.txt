@@ -16,8 +16,8 @@ Tailings Dam Training for FLO-2D Gila Plugin v1.1.0
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
+   :caption: Contents
 
    computerset
    project
