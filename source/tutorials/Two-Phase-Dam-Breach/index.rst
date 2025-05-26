@@ -6,6 +6,6 @@ Two Phase Dam Breach
 
 .. toctree::
    :hidden:
-   :maxdepth: 1
+   :maxdepth: 2
 
    Two Phase Dam Breach
