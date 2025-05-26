@@ -1,12 +1,11 @@
 .. vim: syntax=rst
 
-===========
 References
 ===========
+
 .. toctree::
-   :hidden:
-   :maxdepth: 2
    :numbered:
+   :maxdepth: 2
 
    Chapter 1
    Chapter 2
