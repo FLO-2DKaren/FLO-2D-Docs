@@ -10,8 +10,9 @@ Welcome to the main version of the FLO-2D Documentation.
    :maxdepth: 2
    :caption: Contents:
 
-   setup/index
+   .. setup/index
    flo-2d_pro/index
    flo-2d_plugin/index
    tutorials/index
 
+   includes/flo-2d_pro/index
