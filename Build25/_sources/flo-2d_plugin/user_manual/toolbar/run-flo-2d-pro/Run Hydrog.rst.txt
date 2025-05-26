@@ -10,9 +10,6 @@ hydrographs.
 .. note:: Hydrog functions are all available using the FLO-2D Plugin.
 
 
-Run Hydrog
----------------
-
 The Run Hydrog button will load the Hydrog executable in the Project Folder.
 
 1. Click on the Run Hydrog.

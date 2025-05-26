@@ -10,6 +10,7 @@ components, selected components, or to the \*.HDF5 file.
 .. toctree::
    :maxdepth: 1
 
+   Import from Geopackage
    Import Data Files
    Import Selected Component Files
    Export Project
@@ -17,4 +18,6 @@ components, selected components, or to the \*.HDF5 file.
    Export to HDF5
    Import swmm
    Export swmm
+   Import Multiple Domains
+   Export Multiple Domains
    Import RAS Channel

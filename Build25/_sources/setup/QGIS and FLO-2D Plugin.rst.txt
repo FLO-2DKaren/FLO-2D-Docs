@@ -10,7 +10,7 @@ Step 1: QGIS Installer
 
 Follow these instructions to set up QGIS.
 
-1. Double click the QGIS-OSGeo4W-3.28.11-1.msi file.
+1. Double click the QGIS-OSGeo4W-3.34.9-1.msi file.
 
 2. Finish installing with the default settings.
 

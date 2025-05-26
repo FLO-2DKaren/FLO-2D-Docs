@@ -1,0 +1,368 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stack Failure Method &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Two Phase Dam Breach" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../TDT/index.html">Tailings Dam Tool</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Two Phase Dam Breach</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Stack Failure Method</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-loading-the-geopackage">Step 1: Loading the geopackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-set-up-the-stacks-initial-condition">Step 2: Set-up the stacks initial condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-review-two-phase-properties">Step 3: Review two-phase properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-run-the-two-phase-simulation">Step 4: Run the two-phase simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-check-the-results">Step 5: Check the results</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Two Phase Dam Breach</a></li>
+      <li class="breadcrumb-item active">Stack Failure Method</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/Two-Phase-Dam-Breach/Two Phase Dam Breach.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="stack-failure-method">
+<h1>Stack Failure Method<a class="headerlink" href="#stack-failure-method" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>In this tutorial, we simulate an instantaneous failure of a stacked tailings facility with water impounded above the
+tailings surface. The scenario assumes that water is stored on top of stationary tailings. When the failure occurs,
+the entire face of the stack collapses, releasing water that rapidly scours the tailings at the breach. This marks
+the beginning of Phase One which is a low-concentration water and sediment mixture that continues to erode the
+tailings as it flows downslope. As the tailings mobilize and liquefy, the flow transitions into Phase Two, which is
+the tailings material characterized by a high-concentration mudflow. The fluid phase continues to advance ahead of the
+denser material, scouring the downstream bed until sediment concentrations reach levels typical of hyperconcentrated flow.</p>
+<p><strong>Required Files</strong></p>
+<p>The step makes use of Tailings Area.
+The required data is available at C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\Tailings Dam Workshop\</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head" colspan="2"><p><strong>Content</strong></p></th>
+<th class="head"><p><strong>Location</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>tailingsarea.shp</p></td>
+<td colspan="2"><p>Tailings Area</p></td>
+<td><p>..\8. Two Phase\data</p></td>
+</tr>
+</tbody>
+</table>
+<section id="step-1-loading-the-geopackage">
+<h2>Step 1: Loading the geopackage<a class="headerlink" href="#step-1-loading-the-geopackage" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS and start a new empty project.</p></li>
+</ol>
+<img alt="../../_images/Two034.png" src="../../_images/Two034.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on the FLO-2D Project Icon and then click Open FLO-2D project.</p></li>
+</ol>
+<img alt="../../_images/Two035.png" src="../../_images/Two035.png" />
+<ol class="arabic simple" start="3">
+<li><p>Navigate to the Two-Phase-Dam-Breach folder, select Tailings Dam.gpkg, and click Open to load the geopackage.</p></li>
+</ol>
+<img alt="../../_images/Two036.png" src="../../_images/Two036.png" />
+</section>
+<section id="step-2-set-up-the-stacks-initial-condition">
+<h2>Step 2: Set-up the stacks initial condition<a class="headerlink" href="#step-2-set-up-the-stacks-initial-condition" title="Link to this heading"></a></h2>
+<p>A collapse of the tailing’s facility can be simulated without using the prescribed breach failure data in the LEVEE.DAT file.
+This is accomplished by assigning tailings depths to the grid elements within tailings facility.
+When the FLO-2D model is run with the levee dam cells removed, the storage tailings begin to move immediately.</p>
+<ol class="arabic simple">
+<li><p>Drag the Tailings Area onto map space.</p></li>
+</ol>
+<img alt="../../_images/Two006.png" src="../../_images/Two006.png" />
+<p>The tailings area is set to approximately 1/3 of the Dam height to match the volume released.</p>
+<ol class="arabic simple" start="2">
+<li><p>Open the Mad and Sediment Transport tool</p></li>
+</ol>
+<img alt="../../_images/Two026.png" src="../../_images/Two026.png" />
+<ol class="arabic simple" start="3">
+<li><p>Turn on the Two Phase switch.</p></li>
+</ol>
+<img alt="../../_images/Two027.png" src="../../_images/Two027.png" />
+<ol class="arabic simple" start="4">
+<li><p>Under the Initial Condition Editor Tailings, click the Add tailing button</p></li>
+</ol>
+<img alt="../../_images/Two007.png" src="../../_images/Two007.png" />
+<ol class="arabic simple" start="5">
+<li><p>Digitize as close as possible along the vertices of the Tailings Area shapefile.
+Set the tailings elevation to 936 and the Water Surface elevation to 940</p></li>
+</ol>
+<img alt="../../_images/Two028.png" src="../../_images/Two028.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the Add tailing button again to save.</p></li>
+</ol>
+<img alt="../../_images/Two007.png" src="../../_images/Two007.png" />
+<img alt="../../_images/Two029.png" src="../../_images/Two029.png" />
+<ol class="arabic simple" start="7">
+<li><p>The tailings stack section should now look as below</p></li>
+</ol>
+<img alt="../../_images/Two030.png" src="../../_images/Two030.png" />
+<ol class="arabic simple" start="8">
+<li><p>On the Export Two-Phase folder, a file named TAILINGS_STACK_DEPTH.DAT is created.
+This file contains all the grid elements, water depth on the surface of the tailings and tailings depth.
+This file is required for creating an instantaneous static or seismic failure.</p></li>
+</ol>
+</section>
+<section id="step-3-review-two-phase-properties">
+<h2>Step 3: Review two-phase properties<a class="headerlink" href="#step-3-review-two-phase-properties" title="Link to this heading"></a></h2>
+<p>Each variable is discussed in the Data Input Manual SED.DAT.
+This data may be available from the original dam construction manual or from periodical safety reports.
+Data for this tutorial was found in reports for the tailing dam failure.
+Check with the dam owner, or dam safety agency for data.</p>
+<ol class="arabic simple">
+<li><p>Click Mud and Sediment Transport icon in the toolbar.</p></li>
+</ol>
+<img alt="../../_images/Two010.png" src="../../_images/Two010.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the radio button for Two Phase Modeling.
+Enter Mud /Debris Transport Parameters as 2.65, 0, and Aspen Pit 2
+for the parameters Mudflow Specific Gravity, Laminar Flow Resistance,
+and Viscosity &amp; Yield Stress Relationship respectively.</p></li>
+</ol>
+<img alt="../../_images/Two011.png" src="../../_images/Two011.png" />
+<ol class="arabic simple" start="3">
+<li><p>Enter the Sediment Transport Parameters</p></li>
+</ol>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Value</strong></p></td>
+<td><p><strong>Description</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Yang</p></td>
+<td><p>Sediment Transport Equation</p></td>
+</tr>
+<tr class="row-odd"><td><p>2.65</p></td>
+<td><p>Sediment specific gravity</p></td>
+</tr>
+<tr class="row-even"><td><p>0.12</p></td>
+<td><p>Sediment size (D50) in mm</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.0778</p></td>
+<td><p>Global fine sediment volumetric concentration</p></td>
+</tr>
+<tr class="row-even"><td><p>14700</p></td>
+<td><p>Dry specific weight sediment</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.71</p></td>
+<td><p>Gradation coefficient</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Max allowable scour depth</p></td>
+</tr>
+</tbody>
+</table>
+<img alt="../../_images/Two013.png" src="../../_images/Two013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Scroll to the bottom and click <strong>OK</strong> to save the data.</p></li>
+</ol>
+</section>
+<section id="step-4-run-the-two-phase-simulation">
+<h2>Step 4: Run the two-phase simulation<a class="headerlink" href="#step-4-run-the-two-phase-simulation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the Control Variables.
+Increase the Bulking Concentration to 0.5.
+Uncheck the Levee from the System Components Switches.
+Select the Two-Phase as the Mud/Debris/Sediments physical process.
+Click save.</p></li>
+</ol>
+<img alt="../../_images/Two014.png" src="../../_images/Two014.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../../_images/Two015.png" src="../../_images/Two015.png" />
+<ol class="arabic simple" start="3">
+<li><p>The click <strong>Yes</strong> and <strong>OK</strong> for the subsequent windows.</p></li>
+</ol>
+<img alt="../../_images/Two031.png" src="../../_images/Two031.png" />
+<img alt="../../_images/Two032.png" src="../../_images/Two032.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the FLO-2D Data Export icon, select the previously created Export Two-Phase folder and select it.</p></li>
+</ol>
+<img alt="../../_images/Two016.png" src="../../_images/Two016.png" />
+<p>The two-phase guidelines are installed with FLO-2D Software.
+“C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\Two Phase Flood Routing Guidelines 2022.pdf”</p>
+<ol class="arabic simple" start="5">
+<li><p>Make sure to uncheck Levees, Rain, and Infiltration.</p></li>
+</ol>
+<img alt="../../_images/Two017.png" src="../../_images/Two017.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click on the Run FLO-2D Pro to run the simulation.</p></li>
+</ol>
+<img alt="../../_images/Two018.png" src="../../_images/Two018.png" />
+<ol class="arabic simple" start="7">
+<li><p>Check the simulation summary for any potential errors.</p></li>
+</ol>
+<img alt="../../_images/Two019.png" src="../../_images/Two019.png" />
+</section>
+<section id="step-5-check-the-results">
+<h2>Step 5: Check the results<a class="headerlink" href="#step-5-check-the-results" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use FLO-2D-Rasterizor or MaxPlot to check the results.</p></li>
+<li><p><strong>Rasterizor:</strong> Select the DEPTHMAX_2PHASE_COMBINED.OUT input file to visualize the combined two-phase results.</p></li>
+</ol>
+<img alt="../../_images/Two020.png" src="../../_images/Two020.png" />
+<img alt="../../_images/Two021.png" src="../../_images/Two021.png" />
+<ol class="arabic simple" start="3">
+<li><p><strong>Rasterizor:</strong> Select the DEPTH.OUT input file to visualize the fluid phase results.</p></li>
+</ol>
+<img alt="../../_images/Two022.png" src="../../_images/Two022.png" />
+<img alt="../../_images/Two023.png" src="../../_images/Two023.png" />
+<ol class="arabic simple" start="4">
+<li><p><strong>Rasterizor:</strong> Select the DEPFPMAX_MUD.OUT input file to visualize the mudflow phase results.</p></li>
+</ol>
+<img alt="../../_images/Two024.png" src="../../_images/Two024.png" />
+<img alt="../../_images/Two025.png" src="../../_images/Two025.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Two Phase Dam Breach" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jimmy O&#39;Brien, Noemi Gonzalez-Ramirez, Karen O&#39;Brien, Robson Pachaly.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Two Phase Dam Breach.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+            <dd><a href="../../../main/index.html">
+                    
+                    dev
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

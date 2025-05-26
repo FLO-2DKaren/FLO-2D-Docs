@@ -6,8 +6,6 @@ Leveraging site-specific and historical data, the tool predicts the likelihood o
 and projects the associated release volume. Users can refine their analysis by selecting a discharge and
 sediment concentration hydrograph, providing valuable insights for risk assessment and planning.
 
-Run Tailings Dam Tool
------------------------------
 
 The tailings dam tool button will load the tailings dam executable in the Project Folder.
 

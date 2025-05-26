@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hydrograph Breach Method &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Two Phase Dam Breach" href="../Two-Phase-Dam-Breach/index.html" />
+    <link rel="prev" title="Tailings Dam Tool" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Self-Help-Kit-Gila/index.html">Self-Help Kit Gila</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tailings Dam Tool</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hydrograph Breach Method</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-loading-the-geopackage">Step 1: Loading the geopackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-select-the-inflow-node">Step 2: Select the inflow node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-run-the-tailings-dam-tool">Step 3: Run the Tailings Dam Tool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-mudflow-parameters">Step 4: Mudflow parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-review-the-control-variables">Step 5: Review the control variables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-6-run-the-simulation">Step 6: Run the simulation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-7-load-new-results">Step 7: Load new results</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-8-organize-the-map-layers">Step 8: Organize the map layers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Two-Phase-Dam-Breach/index.html">Two Phase Dam Breach</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Tutorials</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Tailings Dam Tool</a></li>
+      <li class="breadcrumb-item active">Hydrograph Breach Method</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/tutorials/TDT/Tailings Dam Tool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hydrograph-breach-method">
+<h1>Hydrograph Breach Method<a class="headerlink" href="#hydrograph-breach-method" title="Link to this heading"></a></h1>
+<p><strong>Overview</strong></p>
+<p>In this tutorial, the tailings dam tool is used to create a tailings dam hydrograph
+and simulate a tailings dam failure. The Tailings Dam Tool estimates the tailings
+release volume. The tool was developed based on site and historical information.
+It predicts the potential for tailings dam failure occurrence and allows the user
+to select a discharge and mudflow concentration hydrograph.</p>
+<p><strong>Required data</strong></p>
+<p>This step makes use of the Tailings Dam Tool.
+The required data is available here:</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\ Tailings Dam Breach Workshop\</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+<th class="head"><p><strong>Location</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Tailings Dam Breach.exe</p></td>
+<td><p>Tailings Dam Tool</p></td>
+<td><p>Program Files (x86)/FLO-2D Pro</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tailings Dam Breach.exe</p></td>
+<td><p>Tailings Dam Tool</p></td>
+<td><p>..\Demo Engine</p></td>
+</tr>
+</tbody>
+</table>
+<section id="step-1-loading-the-geopackage">
+<h2>Step 1: Loading the geopackage<a class="headerlink" href="#step-1-loading-the-geopackage" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS and start a new empty project.</p></li>
+</ol>
+<img alt="../../_images/Tailin029.png" src="../../_images/Tailin029.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click on the FLO-2D Project Icon and then click Open FLO-2D project.</p></li>
+</ol>
+<img alt="../../_images/Tailin030.png" src="../../_images/Tailin030.png" />
+<ol class="arabic simple" start="3">
+<li><p>Navigate to the TDT folder, select Tailings Dam.gpkg, and click Open to load the geopackage.</p></li>
+</ol>
+<img alt="../../_images/Tailin031.png" src="../../_images/Tailin031.png" />
+</section>
+<section id="step-2-select-the-inflow-node">
+<h2>Step 2: Select the inflow node<a class="headerlink" href="#step-2-select-the-inflow-node" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Zoom into the Tailings Dam area and select the Grid Element where the inflow will be added.
+The pre-failure aerial shows the dam intact.</p></li>
+<li><p>This image was screen captured from Google Earth Historical view and aligned to the map using a plugin called Freehand raster georeferencer.</p></li>
+</ol>
+<img alt="../../_images/Tailin002.png" src="../../_images/Tailin002.png" />
+<ol class="arabic simple" start="3">
+<li><p>Use the Grid Info Tool to find the Grid Element ID.</p></li>
+</ol>
+<img alt="../../_images/Tailin003.png" src="../../_images/Tailin003.png" />
+<p>This Grid Element will be used as the inflow point from the output of the Tailings Dam Tool.
+It is recommended to select a Grid Element located where the Dam Breach is most likely to happen.</p>
+<ol class="arabic simple" start="4">
+<li><p>Write down the Grid Element ID because it will be required in the following steps.</p></li>
+</ol>
+</section>
+<section id="step-3-run-the-tailings-dam-tool">
+<h2>Step 3: Run the Tailings Dam Tool<a class="headerlink" href="#step-3-run-the-tailings-dam-tool" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the Tailings Dam Tool by clicking on the dropdown menu and clicking on Tailings Dam Tool.</p></li>
+</ol>
+<img alt="../../_images/Tailin004.png" src="../../_images/Tailin004.png" />
+<ol class="arabic simple" start="2">
+<li><p>If you encounter the warning that “Program Tailings Dam Breach.exe is not in directory”</p></li>
+</ol>
+<img alt="../../_images/Tailin032.png" src="../../_images/Tailin032.png" />
+<ol class="arabic simple" start="3">
+<li><p>Be sure to set the correct path to the Tailings Dam Breach.exe</p></li>
+</ol>
+<img alt="../../_images/Tailin033.png" src="../../_images/Tailin033.png" />
+<ol class="arabic simple" start="4">
+<li><p>Or set the path to Demo folder if you are working with the Demo model</p></li>
+</ol>
+<img alt="../../_images/Tailin034.png" src="../../_images/Tailin034.png" />
+<ol class="arabic simple" start="5">
+<li><p>You can also copy the “Tailings Dam Breach.exe” file from the Demo folder
+and paste it in the Program Files (x86)/FLO-2D Pro path.</p></li>
+</ol>
+<img alt="../../_images/Tailin035.png" src="../../_images/Tailin035.png" />
+<ol class="arabic simple" start="6">
+<li><p>Once the model opens successfully, it should look as follows.</p></li>
+</ol>
+<img alt="../../_images/Tailin005.jpeg" src="../../_images/Tailin005.jpeg" />
+<ol class="arabic simple" start="7">
+<li><p>Start with selecting the Metric system on Options.</p></li>
+</ol>
+<img alt="../../_images/Tailin006.png" src="../../_images/Tailin006.png" />
+<ol class="arabic simple" start="8">
+<li><p>Fill out the Tailings Dam parameters as follows:</p></li>
+</ol>
+<img alt="../../_images/Tailin007.png" src="../../_images/Tailin007.png" />
+<ol class="arabic simple" start="9">
+<li><p>Move the cursor over then dialog boxes the view a descriptive comment and/or click on the question mark on bottom left to visualize the physical
+meaning of each parameter.</p></li>
+</ol>
+<img alt="../../_images/Tailin008.png" src="../../_images/Tailin008.png" />
+<ol class="arabic simple" start="10">
+<li><p>On the next page, choose the Static Mode, set the Reservoir Level to Medium, and the Pore Pressure to high.
+Click on Create INFLOW.DAT.</p></li>
+</ol>
+<img alt="../../_images/Tailin009.png" src="../../_images/Tailin009.png" />
+<p>These equations result in volumes (Vr) that represent a percentage of the storage volume (Vi).</p>
+<ul class="simple">
+<li><p>Vi = 7,500,000 m<sup>3</sup></p></li>
+<li><p>Vrmin = 4.2% Vi</p></li>
+<li><p>Vrmax = 82% Vi</p></li>
+<li><p>Vraverage = 14.5% Vi</p></li>
+<li><p>Larrauri and Lall = 34% Vi</p></li>
+<li><p>Rico = 41% Vi</p></li>
+<li><p>Piciullo updated eq = 41% Vi</p></li>
+<li><p>Actual failed Feijao release = 71% Vi</p></li>
+</ul>
+<p>Refer to the PowerPoint presentation to see the source of the equations.</p>
+<p>“C:\Users\Public\Documents\FLO-2D PRO Documentationflo_help\PowerPoint Presentations\12 Tailings Dam Tool to Estimate Breach Volume.pptx”</p>
+<ol class="arabic simple" start="11">
+<li><p>On the save INFLOW.DAT window, select the Vrmax.
+Change the event time to 0.20 hours.
+This variable is highly sensitive to the early hazard zone.
+The report states that in 10 min 75% of the reservoir was drained.
+Set the Grid Cell as the Grid Element ID found in the previous steps.
+Select the graph shown in the picture below.</p></li>
+</ol>
+<img alt="../../_images/Tailin010.png" src="../../_images/Tailin010.png" />
+<ol class="arabic simple" start="12">
+<li><p>Click on the Sediment Concentration by Volume tab.
+Select the graph shown in the picture below.</p></li>
+</ol>
+<img alt="../../_images/Tailin011.png" src="../../_images/Tailin011.png" />
+<ol class="arabic simple" start="13">
+<li><p>Double check if the Peak Discharge and Hydrograph Sediment Volume are within the expected ranges.</p></li>
+<li><p>Click on Save INFLOW.DAT and set the export folder to Export Tailings Dam Tool.</p></li>
+<li><p>Click on Back to close the Save INFLOW.DAT window.</p></li>
+<li><p>Save the Tailings Breach.xml file to the data file in the Tailings Dam Tool folder and Exit the Tailings Dam Tool</p></li>
+</ol>
+<img alt="../../_images/Tailin012.png" src="../../_images/Tailin012.png" />
+</section>
+<section id="step-4-mudflow-parameters">
+<h2>Step 4: Mudflow parameters<a class="headerlink" href="#step-4-mudflow-parameters" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the mudflow tool.</p></li>
+</ol>
+<img alt="../../_images/Tailin013.png" src="../../_images/Tailin013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Mudflow Tab and fill the form and save the parameters.</p></li>
+</ol>
+<img alt="../../_images/Tailin014.png" src="../../_images/Tailin014.png" />
+<p>For more information on mudflow modeling, see the Mudflow Modeling Guidelines:</p>
+<p>“C:\Users\Public\Documents\FLO-2D PRO
+Documentation\flo_help\Manuals\Simulating Mudflow Guidelines.pdf”</p>
+</section>
+<section id="step-5-review-the-control-variables">
+<h2>Step 5: Review the control variables<a class="headerlink" href="#step-5-review-the-control-variables" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>On QGIS, open the control variables, adjust the time Control and Plot Variables.</p></li>
+</ol>
+<img alt="../../_images/Tailin015.png" src="../../_images/Tailin015.png" />
+<img alt="../../_images/Tailin016.png" src="../../_images/Tailin016.png" />
+<ol class="arabic simple" start="2">
+<li><p>Uncheck the Rainfall and Infiltration Physical Processes Switches.</p></li>
+</ol>
+<img alt="../../_images/Tailin017.png" src="../../_images/Tailin017.png" />
+<p>In this and on the forthcoming lessons, the Rainfall and Infiltration processes will not be activated as this is a sunny day failure.</p>
+<ol class="arabic simple" start="3">
+<li><p>Save the Control Variables and the Project.</p></li>
+</ol>
+<img alt="../../_images/Tailin018.png" src="../../_images/Tailin018.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the FLO-2D Data Export icon, select the Export Tailings Dam Tool folder.</p></li>
+</ol>
+<img alt="../../_images/Tailin019.png" src="../../_images/Tailin019.png" />
+<ol class="arabic simple" start="5">
+<li><p>Uncheck the Rain and Infiltration and click OK.</p></li>
+</ol>
+<img alt="../../_images/Tailin020.png" src="../../_images/Tailin020.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The INFLOW.DAT file is already on the export folder because it was created using the Tailings Dam Tool.
+That’s why there is no Inflow Elements switch on the FLO-2D Data Export.</p>
+</div>
+</section>
+<section id="step-6-run-the-simulation">
+<h2>Step 6: Run the simulation<a class="headerlink" href="#step-6-run-the-simulation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click on the Run FLO-2D icon to run the simulation.</p></li>
+</ol>
+<img alt="../../_images/Tailin021.png" src="../../_images/Tailin021.png" />
+<ol class="arabic simple" start="2">
+<li><p>Close the warning.</p></li>
+</ol>
+<img alt="../../_images/Tailin022.png" src="../../_images/Tailin022.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This warning shows that the peak discharge is high, leading to a probable slow simulation.
+This happens because there is a high inflow into a single Grid Element.
+It is a good practice to split the inflow hydrograph into several grid element.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Check the simulation output information.</p></li>
+</ol>
+<img alt="../../_images/Tailin023.png" src="../../_images/Tailin023.png" />
+</section>
+<section id="step-7-load-new-results">
+<h2>Step 7: Load new results<a class="headerlink" href="#step-7-load-new-results" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Open the FLO-2D Rasterizor plugin.</p></li>
+</ol>
+<img alt="../../_images/Tailin024.png" src="../../_images/Tailin024.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the FINALDEP.OUT file in the Export Tailings Dam folder.
+Set the Name the layer Final Depth TDT, select the Output Directory as the Export Tailings Dam folder and select Depth as style.</p></li>
+<li><p>Run FLO-2D Rasterizor and close.
+Check the results.</p></li>
+</ol>
+<img alt="../../_images/Tailin025.png" src="../../_images/Tailin025.png" />
+<img alt="../../_images/Tailin026.png" src="../../_images/Tailin026.png" />
+<ol class="arabic simple" start="4">
+<li><p>Check the volume in Summary.out</p></li>
+</ol>
+<img alt="../../_images/Tailin027.png" src="../../_images/Tailin027.png" />
+</section>
+<section id="step-8-organize-the-map-layers">
+<h2>Step 8: Organize the map layers<a class="headerlink" href="#step-8-organize-the-map-layers" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Group the external data, results, elevation, and aerials so that data is not lost when performing imports.</p></li>
+</ol>
+<img alt="../../_images/Tailin028.png" src="../../_images/Tailin028.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Tailings Dam Tool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Two-Phase-Dam-Breach/index.html" class="btn btn-neutral float-right" title="Two Phase Dam Breach" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jimmy O&#39;Brien, Noemi Gonzalez-Ramirez, Karen O&#39;Brien, Robson Pachaly.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Tailings Dam Tool.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+            <dd><a href="../../../main/index.html">
+                    
+                    dev
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

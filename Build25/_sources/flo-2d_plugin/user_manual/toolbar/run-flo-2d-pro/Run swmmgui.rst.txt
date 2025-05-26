@@ -3,8 +3,6 @@ Run EPA SWMM GUI 5.0
 
 Use this button to start the EPA SWMM Gui so that a storm drain system can be reviewed.
 
-Run EPA SWMM GUI
-------------------------
 
 1. Click Run EPA SWMM GUI.
 

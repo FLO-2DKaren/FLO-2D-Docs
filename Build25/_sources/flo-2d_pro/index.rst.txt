@@ -2,9 +2,12 @@ FLO-2D Pro
 ==========
 
 .. toctree::
-   :maxdepth: 2
-   :caption: FLO-2D Pro
+   :maxdepth: 1
+   :caption: Contents
 
-   data_input_manual
+
+   Data Input Manual/Data Input Manual
    Channel Modeling Guidelines/index
-   storm_drain_modeling_guidelines
+   Hydraulic Structures Guidelines/index
+   Levee Dam and Wall Breach Guidelines/index
+   Storm Drain Modeling Guidelines/index

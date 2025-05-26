@@ -5,9 +5,6 @@ The Quick Run tool streamlines the export of data and the execution of a FLO-2D 
 eliminating the need for separate export and run steps.
 
 
-Quick Run FLO-2D Pro
-------------------------
-
 1. Click on the Quick Run FLO-2D Pro button.
 
 .. image:: ../../img/Buttons/run002.png

@@ -16,8 +16,6 @@ A brief list of files that can be used are:
 All FLO-2D output files are listed and described in the Chapter 5 of the Data Input Manual.
 It is installed on your computer with the software.
 
-Run Rasterizor
------------------------------
 
 1. Click on Run Rasterizor.
 

@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Chapter 7: Porting a SWMM Model to the FLO-2D Storm Drain System &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="FLO-2D Plugin" href="../../flo-2d_plugin/index.html" />
+    <link rel="prev" title="6. Chapter 6: Reviewing Storm Drain Model Results" href="Chapter%206.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Data%20Input%20Manual/Data%20Input%20Manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Storm Drain Modeling Guidelines</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1: Storm Drain Modelling Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2: FLO-2D Storm Drain Features</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">3. Chapter 3: FLO-2D Storm Drain Data Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">4. Chapter 4: Guidelines Storm Drain Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">5. Chapter 5: Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">6. Chapter 6: Reviewing Storm Drain Model Results</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">7. Chapter 7: Porting a SWMM Model to the FLO-2D Storm Drain System</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">7.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#porting-swmm-data-files-to-a-flo-2d-storm-drain-model">7.2. Porting SWMM Data Files to a FLO-2D Storm Drain Model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Storm Drain Modeling Guidelines</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Chapter 7: Porting a SWMM Model to the FLO-2D Storm Drain System</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Storm Drain Modeling Guidelines/Chapter 7.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-7-porting-a-swmm-model-to-the-flo-2d-storm-drain-system">
+<h1><span class="section-number">7. </span>Chapter 7: Porting a SWMM Model to the FLO-2D Storm Drain System<a class="headerlink" href="#chapter-7-porting-a-swmm-model-to-the-flo-2d-storm-drain-system" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>This chapter describes the porting procedure to modify and adapt the input data for a ‘stand-alone’ EPA SWMM Version 5.0.022 to the FLO-2D Pro storm
+drain model.
+The SWMM engine was modified and integrated into the FLO-2D Pro model.
+The FLO-2D storm drain model is a distinctly new model that is superior to the original EPA SWMM model.
+The following data file revisions are required to convert an existing ‘stand-alone’ SWMM model to a FLO-2D storm drain model.</p>
+</section>
+<section id="porting-swmm-data-files-to-a-flo-2d-storm-drain-model">
+<h2><span class="section-number">7.2. </span>Porting SWMM Data Files to a FLO-2D Storm Drain Model<a class="headerlink" href="#porting-swmm-data-files-to-a-flo-2d-storm-drain-model" title="Link to this heading"></a></h2>
+<p>The modifications that must be made to the SWMM.inp file are discussed.</p>
+<section id="rain-gages">
+<h3><span class="section-number">7.2.1. </span>Rain gages<a class="headerlink" href="#rain-gages" title="Link to this heading"></a></h3>
+<p>Rain gages are not required in the FLO-2D Storm Drain Model.</p>
+</section>
+<section id="subcatchments">
+<h3><span class="section-number">7.2.2. </span>Subcatchments<a class="headerlink" href="#subcatchments" title="Link to this heading"></a></h3>
+<p>Subcatchments are not required in the FLO-2D Storm Drain Model.</p>
+</section>
+<section id="inlets">
+<h3><span class="section-number">7.2.3. </span>Inlets<a class="headerlink" href="#inlets" title="Link to this heading"></a></h3>
+<p>The required data for inlets are (Figure 60):</p>
+<ul class="simple">
+<li><p>Name (field): Starts with the character (‘I’ or ‘i’).</p></li>
+<li><p>X-coordinate and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.</p></li>
+<li><p>Invert Elevation and Maximum Depth (fields):</p>
+<ul>
+<li><p>The invert elevation and maximum depth can be edited manually in the QGIS plug-in or in the SWMM GUI.
+Open the FLO-2D surface model in QGIS, go to the Storm Drain Editor, and Import SWMM.inp file, then add the data.</p></li>
+<li><p>The maximum depth and the invert elevation are used to determine the rim elevation.</p></li>
+<li><p>The rim elevation is compared with the FLO-2D grid element elevations.</p></li>
+<li><p>These comparisons are listed in the FPRIMELEV.OUT file.</p></li>
+<li><p>Ideally the elevations in the *.inp file should match those of the grid system.</p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/image117.png" src="../../_images/image117.png" />
+<p><em>Figure 60.
+SWMM GUI Junction Dialog Box Showing the Required Data.</em></p>
+</section>
+<section id="outfalls">
+<h3><span class="section-number">7.2.4. </span>Outfalls<a class="headerlink" href="#outfalls" title="Link to this heading"></a></h3>
+<p>Outfalls are terminal nodes in the drainage system used to define final downstream boundaries.
+Only a single link can be connected to an outfall node.
+The required data includes (Figure 61):</p>
+<ul class="simple">
+<li><p>Name (field)</p></li>
+<li><p>X- and Y-coordinate: It is required to have a spatial reference to pair FLO-2D and the ‘stand-alone’ SWMM system.</p></li>
+<li><p>Invert Elevation:</p>
+<ul>
+<li><p>An outfall that returns flows to a channel must be assigned to the left bank.</p></li>
+<li><p>An option to have an underground (underwater representing ponded flow) outfall was added in the FLO-2D storm drain.</p></li>
+<li><p>This elevation can be lower than the grid element and is not reported in the FPRIMELEV.OUT file.</p></li>
+<li><p>The outfall can discharge off the model.</p></li>
+</ul>
+</li>
+<li><p>Outfall Type (Figure 61):</p>
+<ul>
+<li><p>Set to ‘FREE’ to exchange flow with the FLO-2D surface water system.</p></li>
+<li><p>Other types such as NORMAL, FIXED, TIDAL or TIME SERIES can be assigned but the flows will not be exchanged with the surface water but will debouch
+the flow off the storm drain system.</p></li>
+</ul>
+</li>
+<li><p>Tide gate: Set to ‘NO’ for the outfalls to exchange flows with the surface water.</p></li>
+</ul>
+<img alt="../../_images/image314.png" src="../../_images/image314.png" />
+<p><em>Figure 61.
+SWMM GUI Outfall Dialog Box.</em></p>
+</section>
+<section id="swmm-ini">
+<h3><span class="section-number">7.2.5. </span>SWMM.ini<a class="headerlink" href="#swmm-ini" title="Link to this heading"></a></h3>
+<p>This file contains information about the model global settings and output and is saved by the QGIS plug-in and by the SWMM GUI.
+To enable the display of the FLO-2D storm drain results in the SWMM GUI the user must set the following lines as follows:</p>
+<blockquote>
+<div><p>[Results]</p>
+<p>Saved=1</p>
+<p>Current=1</p>
+</div></blockquote>
+</section>
+<section id="swmmflo-dat">
+<h3><span class="section-number">7.2.6. </span>SWMMFLO.DAT<a class="headerlink" href="#swmmflo-dat" title="Link to this heading"></a></h3>
+<p>This file contains the inlet geometry as well as the names/numbers that identify the paired inlet with the FLO-2D grid cells.
+It is created from the SWMM.inp file by the QGIS plug-in.
+To use the SWMM.inp to create the SWMMFLO.DAT, the following SWMM components must be removed from file:</p>
+<ul class="simple">
+<li><p>Hydrologic processes such as time-varying rainfall, rainfall interception, evaporation, depression storage, groundwater percolation, snow accumulation
+and standing water surface.</p></li>
+<li><p>Watershed processes such as infiltration trenches, streets, and swales.</p></li>
+<li><p>Surface flood simulation features such as canals, culverts, and bridges.
+FLO-2D engine performs all the surface flood routing.</p></li>
+</ul>
+<p>After the SWMM.inp file was edited, the storm drain command can be called from the FLO-2D QGIS Plug-in (Figure 62.
+) create the additional Storm Drain data files, review FLO-2D Plugin User’s Manual for more details.</p>
+<img alt="../../_images/Chapte002.png" src="../../_images/Chapte002.png" />
+<p><em>Figure 62.
+QGIS Plug-in Storm Drain Commands.</em></p>
+<p>The FLO-2D QGIS Plug-in then locates and reads the SWMM.inp file (Figure 63.
+) and loads the SWMM inlet nodes and associates them with a FLO-2D grid element.
+At this point, the storm drain geometry can be entered in FLO-2D plug-in.</p>
+<img alt="../../_images/Chapte0031.png" src="../../_images/Chapte0031.png" />
+<p><em>Figure 63.
+Reading the SWMM.inp File in QGIS.</em></p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%206.html" class="btn btn-neutral float-left" title="6. Chapter 6: Reviewing Storm Drain Model Results" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../flo-2d_plugin/index.html" class="btn btn-neutral float-right" title="FLO-2D Plugin" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jimmy O&#39;Brien, Noemi Gonzalez-Ramirez, Karen O&#39;Brien, Robson Pachaly.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Chapter 7.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+            <dd><a href="../../../main/index.html">
+                    
+                    dev
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

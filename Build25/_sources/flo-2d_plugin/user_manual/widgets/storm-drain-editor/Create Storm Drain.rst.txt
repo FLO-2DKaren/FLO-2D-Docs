@@ -11,8 +11,6 @@ Create Storm Drain System
 In the latest plugin version, the Storm Drain System can be created from scratch. By using the Storm Drain layers in the User Layers,
 it is possible to create all Storm Drain elements. To begin creating the system, use the QGIS 'Toggle Editing' button.
 
-.. image:: ../../img/Storm-Drain/Storm032.png
-
 .. image:: ../../img/Buttons/editorpencil.png
 
 .. important:: The recommended  sequence is to start with the point layers (Storm Drain Inlets/Junctions, Storm Drain Outfalls,
