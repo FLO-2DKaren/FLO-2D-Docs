@@ -18,7 +18,6 @@ The full YouTube video Playlist is here:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/playlist?list=PLkT3KNZwX6zkkfrM5Pcdvt7WqZuHWYU4c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 .. toctree::
-   :hidden:
    :maxdepth: 1
    :caption: Self-Help-Gila
 
