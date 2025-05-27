@@ -6,18 +6,19 @@ class MathJaxResetTransform(SphinxTransform):
     default_priority = 500
 
     def apply(self):
-        docname = self.env.docname.lower()  # Normalize to lowercase
+        docname = self.env.docname  # e.g., 'flo-2d-pro/Reference Manual/Chapter 2'
         if not docname:
             return
 
-        # Normalize folder names (as Sphinx lowercases paths)
-        if docname.startswith("flo-2d-pro/reference manual/chapter"):
+        # Match specific subfolders
+        if docname.startswith("flo-2d-pro/Reference Manual/Chapter"):
             chapter_number = docname.split("/")[-1].split(" ")[1]
-        elif docname.startswith("flo-2d-pro/channel modeling guidelines/chapter"):
+        elif docname.startswith("flo-2d-pro/Channel Modeling Guidelines/Chapter"):
             chapter_number = docname.split("/")[-1].split(" ")[1]
         else:
-            return
+            return  # Not a chapter file in one of the target folders
 
+        # Inject MathJax reset script with proper chapter number prefix
         script = f"""
         <script>
           MathJax.texReset();
