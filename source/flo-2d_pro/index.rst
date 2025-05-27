@@ -6,7 +6,7 @@ FLO-2D Pro
    :caption: Contents
 
 
-   Data Input Manual/Data Input Manual
+   Data Input Manual
    Reference Manual/index
    Channel Modeling Guidelines/index
    Hydraulic Structures Guidelines/index
