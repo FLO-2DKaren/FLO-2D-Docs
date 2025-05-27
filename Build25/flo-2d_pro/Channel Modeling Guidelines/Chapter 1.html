@@ -9,7 +9,7 @@
   <title>1. Chapter 1 &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ec869ff9" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -17,7 +17,8 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -406,7 +407,7 @@ and the vertical velocity distribution is logarithmic.
 There are several mean velocity equations for open channel uniform flow and Manning’s equation is the
 best known of these:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[V = \frac{1.486}{n}R^{\frac{2}{3}}S^{\frac{1}{2}}\]</div>
+<span class="eqno">(1.1)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[V = \frac{1.486}{n}R^{\frac{2}{3}}S^{\frac{1}{2}}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>V = velocity</p>
@@ -491,7 +492,7 @@ and Chow, 1959).
 Using these criteria, a flow depth for coarse sand would be about 0.25 ft.</p>
 <p>The depth integrated roughness is given by the equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[n = n_d \, r_c \, e^ \left({- \frac{r2 \, \text{depth}}{d_{\text{max}}}} \right)\]</div>
+<span class="eqno">(1.2)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[n = n_d \, r_c \, e^ \left({- \frac{r2 \, \text{depth}}{d_{\text{max}}}} \right)\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>depth = flow depth</p>
@@ -601,7 +602,7 @@ The concept of the Courant Number is that a particle of fluid should not travel 
 increment Δx (channel element length) in one timestep Δt.
 In the FLO-2D model the Courant number limits the timestep Δt by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
+<span class="eqno">(1.3)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Courant Number (C ≤ 1.0)</p>
@@ -644,7 +645,7 @@ Discharge is a function of the friction slope S<sub>f</sub> in Manning’s equat
 and is inversely proportional to the n-value, but the discharge is a function of the flow area A
 to approximately the 5/3 power.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-3" title="Link to this equation"></a></span>\[Q = f(A, \, S, \, n)\]</div>
+<span class="eqno">(1.4)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-3" title="Link to this equation"></a></span>\[Q = f(A, \, S, \, n)\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>A = a d<sup>b</sup>, where;</p>
@@ -692,7 +693,7 @@ Check the Channel Bed Profile for Data Errors.</em></p>
 any model adjustments at runtime to limit unreasonable Froude numbers from being encountered.
 The Froude number is directly related to model stability through the Courant number:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-4" title="Link to this equation"></a></span>\[C = \frac{c(F + 1)}{\left({\frac{\Delta x}{\Delta t}} \right)}\]</div>
+<span class="eqno">(1.5)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-4" title="Link to this equation"></a></span>\[C = \frac{c(F + 1)}{\left({\frac{\Delta x}{\Delta t}} \right)}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = selected value of Courant number</p>
@@ -726,7 +727,7 @@ Supercritical flow is more prevalent on hard surfaces such as concrete-lined cha
 Jia (1990) provides a relationship to estimate a minimum Froude number (Fr<sub>min</sub>) for stable alluvial
 channels at equilibrium:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-5">
-<span class="eqno">(6)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-5" title="Link to this equation"></a></span>\[Fr_{min} = 4.49 \, d^{-0.186}(VS)^{0.377}\]</div>
+<span class="eqno">(1.6)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-5" title="Link to this equation"></a></span>\[Fr_{min} = 4.49 \, d^{-0.186}(VS)^{0.377}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>d = representative sediment size (typically D<sub>50)</sub></p>
@@ -768,16 +769,16 @@ As slope increases, competent flow for sediment transport asymptotically approac
 In most instances, flow is forced to be less than critical by incipient motion thresholds.
 This will define a limiting Froude number as given by Grant (1997):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-6">
-<span class="eqno">(7)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-6" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \, \text{gravel bed} \, (\tau^* \, _{cr}) = 0.03\]</div>
+<span class="eqno">(1.7)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-6" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \, \text{gravel bed} \, (\tau^* \, _{cr}) = 0.03\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-7">
-<span class="eqno">(8)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-7" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \, \text{sand bed} \, (\tau^* \, _{cr}) = 0.06\]</div>
+<span class="eqno">(1.8)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-7" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \, \text{sand bed} \, (\tau^* \, _{cr}) = 0.06\]</div>
 <p>For mobile bed channels a steep slope is required for flow to approach critical because the hydraulics
 oscillate with sediment entrainment.
 These relationships define the upper limit Froude number for sand and gravel for slopes &lt; 0.10.
 There is a unique relationship that exists between slope, flow area and roughness.
 The Froude number (Fr) is related to the flow resistance K and the energy slope S as given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-8">
-<span class="eqno">(9)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-8" title="Link to this equation"></a></span>\[Fr = (KS)^{0.5}\]</div>
+<span class="eqno">(1.9)<a class="headerlink" href="#equation-flo-2d-pro-channel-modeling-guidelines-chapter-1-8" title="Link to this equation"></a></span>\[Fr = (KS)^{0.5}\]</div>
 <p>If there is a mismatch between these physical variables in a flood routing model, then high velocities can
 occur that may result in flow surging.
 Assigning a limiting Froude number has several practical advantages.

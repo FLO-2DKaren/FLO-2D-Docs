@@ -9,7 +9,7 @@
   <title>3. Chapter 3. FLO-2D MODEL SYSTEM &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ec869ff9" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -17,7 +17,8 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -244,7 +245,7 @@ The timestep for the selected spatial spacing and the Courant number are not sma
 system.
 In the FLO-2D model the Courant number limits the timestep Δt by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-0" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-0" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Courant Number (C &lt; 1.0)</p>
@@ -258,7 +259,7 @@ In the FLO-2D model the Courant number limits the timestep Δt by:</p>
 </div></blockquote>
 <p>Rearranging the Courant number timestep equation to:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-1" title="Link to this equation"></a></span>\[V + c = \frac{C \, \Delta x}{\Delta t}\]</div>
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-1" title="Link to this equation"></a></span>\[V + c = \frac{C \, \Delta x}{\Delta t}\]</div>
 <p>results in a formula that relates the progression of the floodwave (V + c) to the discretized model in space and time.
 The Courant number C can vary from 0.1 to 1.0, and a value of 1.0 will enable the model to have the largest possible
 timestep.
@@ -345,9 +346,9 @@ It the grid cell size is reduced by half, the number of grid elements in model 
 <h2><span class="section-number">3.3. </span>Roughness Parameter Variability<a class="headerlink" href="#roughness-parameter-variability" title="Link to this heading"></a></h2>
 <p>The constitutive fluid motion equations in the FLO-2D are the continuity equation and the momentum equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-2" title="Link to this equation"></a></span>\[\frac{\partial h}{\partial t} + \frac{\partial hV}{\partial x} = i\]</div>
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-2" title="Link to this equation"></a></span>\[\frac{\partial h}{\partial t} + \frac{\partial hV}{\partial x} = i\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-3" title="Link to this equation"></a></span>\[S_f = S_o - \frac{\partial h}{\partial x} - \frac{V}{g} \frac{\partial V}{\partial x} -
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-3" title="Link to this equation"></a></span>\[S_f = S_o - \frac{\partial h}{\partial x} - \frac{V}{g} \frac{\partial V}{\partial x} -
 \frac{1}{g} \frac{\partial V}{\partial t}\]</div>
 <p>where:</p>
 <blockquote>
@@ -369,7 +370,7 @@ For practical purposes natural uniform flow is almost always turbulent implying 
 turbulent boundary layer is fully developed.
 There a number of uniform flow mean velocity equations for open channels and Manning’s equation is the best known of these</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-4" title="Link to this equation"></a></span>\[V = \frac{1.486}{n} R^{\frac{2}{3}} S_f^{\frac{1}{2}}\]</div>
+<span class="eqno">(3.5)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-4" title="Link to this equation"></a></span>\[V = \frac{1.486}{n} R^{\frac{2}{3}} S_f^{\frac{1}{2}}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>R = hydraulic radius,</p>
@@ -379,7 +380,7 @@ There a number of uniform flow mean velocity equations for open channels and Man
 <p>For wide cross section flow the hydraulic radius approaches the flow depth
 and the flow area can be expressed as a power function of the flow depth:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-5">
-<span class="eqno">(6)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-5" title="Link to this equation"></a></span>\[A = a \, h^b\]</div>
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-5" title="Link to this equation"></a></span>\[A = a \, h^b\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>a is a regressed coefficient</p>
@@ -391,7 +392,7 @@ The roughness coefficient or Manning’s n-value varies with a number of factors
 expansion/contraction, vegetation, obstructions, and flow depth.</p>
 <p>The discharge Q is a function of three variables, flow area slope and roughness when computing a solution to the equations of motion:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-6">
-<span class="eqno">(7)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-6" title="Link to this equation"></a></span>\[Q = f \left( A^{\sim 2.0}, \, S_o^{0.5}, \, \frac{1}{n} \right)\]</div>
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-6" title="Link to this equation"></a></span>\[Q = f \left( A^{\sim 2.0}, \, S_o^{0.5}, \, \frac{1}{n} \right)\]</div>
 <p>Since the discharge is function of the square root of the slope, the rate of change in the discharge is not overly sensitive to change in slope.
 Similarly, the discharge is only inversely proportional to the roughness coefficient.
 The discharge, however, is very sensitive to small changes in the flow area to the second power.
@@ -410,7 +411,7 @@ If the model computational timestep exceeds the Courant relationship timestep, t
 decrement occurs.
 Mathematically the Courant relationship is given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-7">
-<span class="eqno">(8)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-7" title="Link to this equation"></a></span>\[V + c = \frac{C \, \Delta x}{\Delta t}\]</div>
+<span class="eqno">(3.8)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-7" title="Link to this equation"></a></span>\[V + c = \frac{C \, \Delta x}{\Delta t}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Courant Number (C ≤ 1.0)</p>
@@ -430,7 +431,7 @@ values less than 1.0.
 The FLO-2D default Courant number is 0.6 which will provide a numerically stable model for most applications.
 Rearranging the CFL relationship, the model computes the Courant timestep Δt as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-8">
-<span class="eqno">(9)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-8" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-8" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
 <p>Numerical instability occurs when the computational timestep is too large or the rate of change in the timestep is too large and too much volume
 enters or leaves a grid element (discharge flux).
 The corresponding change in flow depth can result in a high velocity (or Froude number) with the discharge causing a rapid fluctuation in the grid
@@ -439,7 +440,7 @@ Numerical surging may cause spikes in the discharge hydrograph, adverse water su
 velocities or Froude numbers [F<sub>r</sub> = V/(gh)<sup>1/2</sup>].
 Substituting the Froude number F<sub>r</sub> for the velocity, the relationship between the Courant number and the Froude number is:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-9">
-<span class="eqno">(10)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-9" title="Link to this equation"></a></span>\[C = c \cdot \frac{Fr + 1}{\Delta x \cdot \Delta t}\]</div>
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-9" title="Link to this equation"></a></span>\[C = c \cdot \frac{Fr + 1}{\Delta x \cdot \Delta t}\]</div>
 <p>It is demonstrated with these equations that there is a unique relationship between discharge, n-value, Froude number and numerical stability (Courant
 number) with varying flow depths.
 Selecting one steady, uniform flow n-value for a full range of flood flow conditions on a cell is not realistic and can lead to numerical instability
@@ -460,7 +461,7 @@ The displacement thickness is generally 1/8 (rough) to 1/10 (smooth) of the turb
 If the flow is very shallow, roughness elements may protrude through the laminar sublayer and into the flow.
 Flows are considered hydraulically rough if the grain size or roughness element is greater than 6 times the laminar boundary layer:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-10">
-<span class="eqno">(11)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-10" title="Link to this equation"></a></span>\[\delta = \frac{11.6 \, v}{u^*}\]</div>
+<span class="eqno">(3.11)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-10" title="Link to this equation"></a></span>\[\delta = \frac{11.6 \, v}{u^*}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>ν = kinematic viscosity</p>
@@ -470,14 +471,14 @@ Flows are considered hydraulically rough if the grain size or roughness element 
 k<sub>s</sub> is the effective roughness height.
 In general, Manning’s equation is appropriate for a relative submergence (Julien, 1995):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-11">
-<span class="eqno">(12)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-11" title="Link to this equation"></a></span>\[\frac{R}{K_s} &gt; 100\]</div>
+<span class="eqno">(3.12)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-11" title="Link to this equation"></a></span>\[\frac{R}{K_s} &gt; 100\]</div>
 <p>which will correspond to the Manning-Stickler fixed bed roughness as function of sediment size D relationship (Simons and Senturk, 1976):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-12">
-<span class="eqno">(13)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-12" title="Link to this equation"></a></span>\[n = \frac{D^{\frac{1}{6}}}{21.1}\]</div>
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-12" title="Link to this equation"></a></span>\[n = \frac{D^{\frac{1}{6}}}{21.1}\]</div>
 <p>For lower a submergence value (R/k<sub>s</sub> &lt; 100), the logarithmic form of the resistance equation should be used (Julien, 1995).
 For flow transporting sediment in suspension, the flow will be primarily turbulent if:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-13">
-<span class="eqno">(14)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-13" title="Link to this equation"></a></span>\[\frac{R}{K_s} &gt; 70\]</div>
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-13" title="Link to this equation"></a></span>\[\frac{R}{K_s} &gt; 70\]</div>
 <p>Typical roughness height for grain size bed material can range from 0.0015 ft for rough concrete to 0.01 ft for coarse sand or uniform earth channels.
 In this case Manning’s equation for a coarse sand plane bed would be applicable to about 0.7 ft.
 Julien (1995) plotted the logarithmic velocity equation solution for turbulent flow over rough plane boundaries and it is noted that Manning’s
@@ -518,7 +519,7 @@ flow in fields.</p>
 <p><strong>Depth Integrated n-values:</strong> To improve the timing of the ﬂoodwave progression through the grid system, a depth variable roughness can be assigned.
 The equation for the grid element roughness n<sub>d</sub> as function of ﬂow depth is:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-14">
-<span class="eqno">(15)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-14" title="Link to this equation"></a></span>\[n_d = n_b \, * \, 1.5 \, *\, e^{-(\frac{0.4 \, depth}{dmax})}\]</div>
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-14" title="Link to this equation"></a></span>\[n_d = n_b \, * \, 1.5 \, *\, e^{-(\frac{0.4 \, depth}{dmax})}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>n<sub>b</sub> = bankfull discharge roughness</p>
@@ -607,9 +608,9 @@ As the flow accelerates to critical depth, more sediment is entrained and the hy
 erosion.
 The flow is forced to stay around critical flow conditions by incipient motion thresholds which define the limiting Froude (Grant, 1997):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-15">
-<span class="eqno">(16)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-15" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \quad \text{gravel bed} \quad \tau^{*}_{cr} = 0.03\]</div>
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-15" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \quad \text{gravel bed} \quad \tau^{*}_{cr} = 0.03\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-3-16">
-<span class="eqno">(17)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-16" title="Link to this equation"></a></span>\[Fr = 5.18 \, S^{0.11} \quad \text{sand bed} \quad \tau^{*}_{cr} = 0.06\]</div>
+<span class="eqno">(3.17)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-3-16" title="Link to this equation"></a></span>\[Fr = 5.18 \, S^{0.11} \quad \text{sand bed} \quad \tau^{*}_{cr} = 0.06\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>τ<sup>*</sup><sub>cr</sub> is the critical shear stress for incipient motion for different size bed material.</p>

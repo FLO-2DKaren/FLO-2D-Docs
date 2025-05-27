@@ -9,7 +9,7 @@
   <title>Levee Overview &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ec869ff9" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -17,7 +17,8 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -273,7 +274,7 @@ Subsequently the horizontal breach rate (HBR) for the time step is set equal to 
 horizontal breach rate (HBR<sub>orig</sub>) times the ratio of the computed shear stress for the time
 step to the maximum shear stress, as shown in Equation 1:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-0" title="Link to this equation"></a></span>\[HBR = HBR_{orig}\left( \frac{\tau_{calc}} {\tau_{\max}} \right)\]</div>
+<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-0" title="Link to this equation"></a></span>\[HBR = HBR_{orig}\left( \frac{\tau_{calc}} {\tau_{\max}} \right)\]</div>
 <p>This will slow the rate of breach widening as the flow depth and velocity decrease or as the tailwater
 to headwater equilibrates.
 A typical rate of breach width decrease is shown in Figure 4.</p>
@@ -412,7 +413,7 @@ Levee Overtopping Definition.</em></p>
 <p>The flow can occur in either direction and the discharge Q is computed using the conventional
 broadcrested weir, as shown in Equation 2:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-1" title="Link to this equation"></a></span>\[Q = CLH_{d}^{1.5}\]</div>
+<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-1" title="Link to this equation"></a></span>\[Q = CLH_{d}^{1.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C is the broadcrested weir coefficient (3.09 in English units, average typical coefficient for
@@ -789,7 +790,7 @@ geometry is adjusted to account for the difference.
 The downstream breach flood hydrograph is automatically bulked (BF) for the levee or dam sediment
 concentration by volume C<sub>v</sub>, as shown in Equation 3:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-2" title="Link to this equation"></a></span>\[ BF = \frac{1}{(1 - C_{v})}\]</div>
+<span class="eqno">(4)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-2" title="Link to this equation"></a></span>\[ BF = \frac{1}{(1 - C_{v})}\]</div>
 <section id="breach-erosion-parameter-sensitivity">
 <h2>Breach Erosion Parameter Sensitivity<a class="headerlink" href="#breach-erosion-parameter-sensitivity" title="Link to this heading"></a></h2>
 <p>The primary breach erosion parameters are:</p>
@@ -938,7 +939,7 @@ To effective model the slow velocities in reservoirs, a new friction slope
 (Equation 4, in English Units) was developed that kept the same form as Manning’s equation for
 velocity V but applied a flow depth d variable exponent b that was a function of both depth and slope.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-3" title="Link to this equation"></a></span>\[V = \frac{1.486}{n}{\ d}^{b}{\ S}_{f}^{0.5}\]</div>
+<span class="eqno">(5)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-3" title="Link to this equation"></a></span>\[V = \frac{1.486}{n}{\ d}^{b}{\ S}_{f}^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>V = flow velocity</p>
@@ -948,7 +949,7 @@ velocity V but applied a flow depth d variable exponent b that was a function of
 <p>b = exponent = f(depth, S<sub>f</sub>)</p>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-4" title="Link to this equation"></a></span>\[b = B - (a_{1} - b_{1}*d - c_{1}* S_{f})\]</div>
+<span class="eqno">(6)<a class="headerlink" href="#equation-flo-2d-pro-levee-dam-and-wall-breach-guidelines-levee-dam-and-wall-breach-guidelines-4" title="Link to this equation"></a></span>\[b = B - (a_{1} - b_{1}*d - c_{1}* S_{f})\]</div>
 <p>a1, b1, c1 = coefficients given in the following table:</p>
 <img alt="../../_images/Levee036.png" src="../../_images/Levee036.png" />
 <p>Applying this equation in its slightly different forms in different depth and friction slope regimes

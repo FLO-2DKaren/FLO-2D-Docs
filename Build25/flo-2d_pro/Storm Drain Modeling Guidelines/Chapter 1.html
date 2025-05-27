@@ -9,7 +9,7 @@
   <title>1. Chapter 1: Storm Drain Modelling Overview &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ec869ff9" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -17,7 +17,8 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -561,7 +562,7 @@ The SDCLOGGING.DAT file has the following format:</p>
 reduction that is specified by the user.
 The inlet discharge is calculated and then reduced using the clogging factor in the following equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[Q_R = (1 \, - \, C_f) \, Q_c\]</div>
+<span class="eqno">(1.10)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-0" title="Link to this equation"></a></span>\[Q_R = (1 \, - \, C_f) \, Q_c\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>Q<sub>R</sub> = reduced inflow discharge</p>
@@ -594,7 +595,7 @@ return flow from the storm drain to the surface water.
 The energy loss for a contraction in pressure flow can be calculated from the following equation
 (DOT Urban Drainage Design Manual):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[H_c = K_c \left( \frac{V_2 \, ^2}{2g} \right)\]</div>
+<span class="eqno">(1.11)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-1" title="Link to this equation"></a></span>\[H_c = K_c \left( \frac{V_2 \, ^2}{2g} \right)\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>K<sub>c</sub> = contraction coefficient (see Table 3)</p>
@@ -611,7 +612,7 @@ The energy loss for a contraction in pressure flow can be calculated from the fo
 that governs the unsteady flow of water through a network of pipes (Rossman, 2006).</p>
 <p>Continuity Equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = 0\]</div>
+<span class="eqno">(1.12)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-2" title="Link to this equation"></a></span>\[\frac{\partial A}{\partial t} + \frac{\partial Q}{\partial x} = 0\]</div>
 <p>Momentum equation for x-direction:</p>
 <p>where:</p>
 <blockquote>

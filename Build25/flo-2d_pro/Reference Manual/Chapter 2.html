@@ -9,7 +9,7 @@
   <title>2. Chapter 2. FLO-2D MODEL THEORY &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../../_static/static/custom.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=ec869ff9" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
@@ -17,7 +17,8 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -115,9 +116,9 @@ A discussion of the governing equations follows.</p>
 <h2><span class="section-number">2.1. </span>Governing Equations<a class="headerlink" href="#governing-equations" title="Link to this heading"></a></h2>
 <p>The constitutive fluid motion equations include the continuity equation and the momentum equation:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-0" title="Link to this equation"></a></span>\[ \frac{\partial h}{\partial t} + \frac{\partial hV}{\partial x} = i\]</div>
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-0" title="Link to this equation"></a></span>\[ \frac{\partial h}{\partial t} + \frac{\partial hV}{\partial x} = i\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-1">
-<span class="eqno">(2)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-1" title="Link to this equation"></a></span>\[ S_f = S_o - \frac{\partial h}{\partial x} - \frac{V}{g} \frac{\partial V}{\partial x} - \frac{1}{g} \frac{\partial V}{\partial t}\]</div>
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-1" title="Link to this equation"></a></span>\[ S_f = S_o - \frac{\partial h}{\partial x} - \frac{V}{g} \frac{\partial V}{\partial x} - \frac{1}{g} \frac{\partial V}{\partial t}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>h is the flow depth</p>
@@ -208,7 +209,7 @@ previous timestep.
 The convective acceleration term is evaluated as the difference in the flow velocity across the grid element from the previous timestep.
 For example, the local acceleration term (1/g*∂V/∂t) for grid element 251 in the east (2) direction converts to:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-2">
-<span class="eqno">(3)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-2" title="Link to this equation"></a></span>\[\frac{\Delta \left( V_{t} - V_{t-1} \right)_{251}}{g \cdot \Delta t}\]</div>
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-2" title="Link to this equation"></a></span>\[\frac{\Delta \left( V_{t} - V_{t-1} \right)_{251}}{g \cdot \Delta t}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>V<sub>t</sub> is the velocity in the east direction for grid element 251 at time t,</p>
@@ -219,14 +220,14 @@ For example, the local acceleration term (1/g*∂V/∂t) for grid element 251 in
 V<sub>4</sub> is the velocity in the west direction for grid element 251:</p>
 </div></blockquote>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-3">
-<span class="eqno">(4)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-3" title="Link to this equation"></a></span>\[V_2 \cdot \frac{\Delta \left( V_2 - V_4 \right)_{251}}{g \cdot \Delta x}\]</div>
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-3" title="Link to this equation"></a></span>\[V_2 \cdot \frac{\Delta \left( V_2 - V_4 \right)_{251}}{g \cdot \Delta x}\]</div>
 <p>The discharge across the grid element boundary is computed by multiplying the velocity times the cross sectional flow area.
 After the discharge is computed for all eight directions, the net change in discharge (sum of the discharge in the eight flow directions) in or out of
 the grid element is multiplied by the timestep to determine the net change in the grid element water volume.
 This net change in volume is then divided by the available surface area (A<sub>surf</sub> = storage area) on the grid element to obtain the increase or
 decrease in flow depth ∆h for the timestep.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-4" title="Link to this equation"></a></span>\[\sum Q_x^{i+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw} = A_{surf} \frac{\Delta h}{\Delta t}\]</div>
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-4" title="Link to this equation"></a></span>\[\sum Q_x^{i+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw} = A_{surf} \frac{\Delta h}{\Delta t}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>Q<sub>x</sub> = discharge across one boundary</p>
@@ -248,7 +249,7 @@ To summarize, the solution algorithm incorporates the following steps:</p>
 <p>The flow depth d<sub>x</sub> for computing the velocity across a grid boundary for the next timestep (i+1) is estimated from the previous timestep i
 using a linear estimate (the average depth between two elements).</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-5">
-<span class="eqno">(6)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-5" title="Link to this equation"></a></span>\[d_x^{i+1} = d_x^i + d_{x+1}^i\]</div>
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-5" title="Link to this equation"></a></span>\[d_x^{i+1} = d_x^i + d_{x+1}^i\]</div>
 <p>The flow direction first velocity overland, 1-D channel or street estimate is computed using the diffusive wave equation.
 The only unknown diffusive wave equation variable is the velocity.</p>
 <p>The predicted diffusive wave velocity for the current timestep is used as a seed in the Newton-Raphson method to solve the full dynamic wave equation
@@ -259,11 +260,11 @@ and yield stress terms.</p>
 For overland flow, the flow width is adjusted by the width reduction factors (WRFs).</p>
 <p>The incremental discharge for the timestep across the eight boundaries (or upstream and downstream channel elements) are summed:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-6">
-<span class="eqno">(7)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-6" title="Link to this equation"></a></span>\[\Delta Q_x^{i+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}\]</div>
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-6" title="Link to this equation"></a></span>\[\Delta Q_x^{i+1} = Q_n + Q_e + Q_s + Q_w + Q_{ne} + Q_{se} + Q_{sw} + Q_{nw}\]</div>
 <p>and the change in volume (net discharge x timestep) is distributed over the available storage area within the grid or channel element to determine an
 incremental increase in the flow depth.</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-7">
-<span class="eqno">(8)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-7" title="Link to this equation"></a></span>\[\Delta d_x^{i+1} = \Delta Q_x^{i+1} \, \Delta t / A_{surf}\]</div>
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-7" title="Link to this equation"></a></span>\[\Delta d_x^{i+1} = \Delta Q_x^{i+1} \, \Delta t / A_{surf}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>ΔQ<sub>x</sub> is the net change in discharge in the eight floodplain directions
@@ -317,7 +318,7 @@ FLO-2D uses the CFL condition for the floodplain, channel and street routing.
 The timestep Δt is limited by:</p>
 <blockquote>
 <div><div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-8">
-<span class="eqno">(9)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-8" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{\beta V + c}\]</div>
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-8" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{\beta V + c}\]</div>
 </div></blockquote>
 <p>where:</p>
 <blockquote>
@@ -369,7 +370,7 @@ criteria, the timestep is incremented by the TIME_ACCEL (default 1.0) + 0.001.
 If the timestep was 0.5, then the next timestep would be increased to 0.501 seconds.
 If the timestep is greater than 1 second, then the timestep increment is:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-9">
-<span class="eqno">(10)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-9" title="Link to this equation"></a></span>\[\text{DSEC} = \text{DSEC} + \frac{\text{TIME_ACCEL} \cdot 0.0085}{\text{XFAST}}\]</div>
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-9" title="Link to this equation"></a></span>\[\text{DSEC} = \text{DSEC} + \frac{\text{TIME_ACCEL} \cdot 0.0085}{\text{XFAST}}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>DSEC = computational timestep in seconds</p>
@@ -412,7 +413,7 @@ one timestep Δt.
 If the model computational timestep exceeds the Courant relationship timestep, the stability criteria is exceeded and a timestep decrement occurs.
 Mathematically the Courant relationship is given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-10">
-<span class="eqno">(11)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-10" title="Link to this equation"></a></span>\[V + c = \frac{C \, \Delta x}{\Delta t}\]</div>
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-10" title="Link to this equation"></a></span>\[V + c = \frac{C \, \Delta x}{\Delta t}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Courant Number (C ≤ 1.0)</p>
@@ -432,7 +433,7 @@ values less than 1.0.
 The FLO-2D default Courant number is 0.6 which will provide a numerically stable model for most applications.
 Rearranging the CFL relationship, the model computes the Courant timestep Δt as:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-11">
-<span class="eqno">(12)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-11" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-11" title="Link to this equation"></a></span>\[\Delta t = \frac{C \, \Delta x}{V + c}\]</div>
 <p>Numerical instability occurs when the computational timestep is too large or the rate of change in the timestep is too large and too much volume
 enters or leaves a grid element (discharge flux).
 The corresponding change in flow depth can result in a high velocity (or Froude number) with the discharge causing a rapid fluctuation in the grid
@@ -590,7 +591,7 @@ the model.
 It is even more important when considering mobile bed channels such as alluvial fans or high bedload rivers.
 The dimensionless Froude number Fr is given by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-12">
-<span class="eqno">(13)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-12" title="Link to this equation"></a></span>\[Fr = \frac{\text α^{0.5} V}{gd^{0.5}}\]</div>
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-12" title="Link to this equation"></a></span>\[Fr = \frac{\text α^{0.5} V}{gd^{0.5}}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>V = depth averaged flow velocity</p>
@@ -606,7 +607,7 @@ By accepting reasonable limitations of the overland (or channel) flow velocity a
 the relationship between the velocity and flow depth.</p>
 <p>For essentially steady and uniform flow, the Manning’s n value is defined would be defined by:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-13">
-<span class="eqno">(14)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-13" title="Link to this equation"></a></span>\[n = \frac{0.262}{F_r} d^{0.17} S^{o \, 0.5}\]</div>
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-13" title="Link to this equation"></a></span>\[n = \frac{0.262}{F_r} d^{0.17} S^{o \, 0.5}\]</div>
 <p>indicating that the flow roughness is inversely proportional to the Froude number.
 By assuming a reasonable limiting Froude number, the n value can be estimated from the normal depth and slope for a given flow discharge.
 In the FLO-2D model, the suggested n-value is based on either bankfull discharge for channel flow or 1 meter (3 ft) flow depth for overland flow
@@ -630,9 +631,9 @@ Flow is forced to stay around critical by incipient motion thresholds.
 The equilibrium sand bed morphology tends to minimize the Froude number (Jia, 1990).</p>
 <p>The limiting Froude number for mobile bed conditions can be approximated by (Grant, 1997):</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-14">
-<span class="eqno">(15)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-14" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \quad \text{gravel bed} \quad \tau^{*}_{cr} = 0.03\]</div>
+<span class="eqno">(2.15)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-14" title="Link to this equation"></a></span>\[Fr = 3.85 \, S^{0.33} \quad \text{gravel bed} \quad \tau^{*}_{cr} = 0.03\]</div>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-2-15">
-<span class="eqno">(16)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-15" title="Link to this equation"></a></span>\[Fr = 5.18 \, S^{0.11} \quad \text{sand bed} \quad \tau^{*}_{cr} = 0.06\]</div>
+<span class="eqno">(2.16)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-2-15" title="Link to this equation"></a></span>\[Fr = 5.18 \, S^{0.11} \quad \text{sand bed} \quad \tau^{*}_{cr} = 0.06\]</div>
 <p>Roughness n-values include many factors: n = n1 + n2 + n3 + n4 + …such as friction drag, vegetation, expansion/contraction, bed forms, flow in bends,
 unsteady and non-uniform flow.</p>
 </section>
