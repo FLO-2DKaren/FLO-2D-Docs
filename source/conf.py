@@ -23,12 +23,11 @@ smv_remote_whitelist = r'^origin$'  # Default remote
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinxcontrib.mermaid',
-    'sphinx_multiversion'
+    'sphinx_multiversion',
+    'mathjax_reset'
 ]
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
-
-extensions.append('equation_reset')
 
 
 # -- HTML Output -------------------------------------------------------------
