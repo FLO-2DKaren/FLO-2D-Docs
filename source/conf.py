@@ -69,13 +69,4 @@ mathjax3_config = {
     }
 }
 
-# -- Inject MathJax reset script at the top of every .rst file ---------------
-rst_prolog = """
-.. raw:: html
-
-   <script>
-     MathJax.texReset();
-     MathJax.startup.getComponents();
-   </script>
-"""
 
