@@ -1,3 +1,5 @@
+.. _outflow_editor:
+
 Outflow Editor
 ===============================
 
@@ -110,7 +112,7 @@ Time Stage Control
 ----------------------
 
 
-Outflow with Time – Stage Hydrograph for Floodplain
+Outflow with Time Stage Hydrograph for Floodplain
 ___________________________________________________________
 
 To represent variable time-stage boundary conditions such as:
@@ -120,7 +122,7 @@ To represent variable time-stage boundary conditions such as:
 -  Tsunamis
 -  Flooding from a large river
 
-The time–stage relationship can be synchronized with rainfall and upstream watershed flooding.
+The timestage relationship can be synchronized with rainfall and upstream watershed flooding.
 Select the outflow nodes along the downstream boundary with a polygon.
 
 1. Click
@@ -143,19 +145,19 @@ Select the outflow nodes along the downstream boundary with a polygon.
 6. In the figure below,
    there are two sets of outflow nodes. The Normal Depth nodes allow water that exceeds the
    Stage to cross the outflow boundary.
-   This allows rainfall accumulation or inflow hydrograph accumulation to leave the boundary. The Stage –
+   This allows rainfall accumulation or inflow hydrograph accumulation to leave the boundary. The Stage 
    Time nodes apply a water surface elevation.
    This water can fill the downstream area up to the stage.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc039.png
 
-Outflow with Time – Stage Hydrograph for Channel
+Outflow with Time  Stage Hydrograph for Channel
 _______________________________________________________
 
 Like the time-stage condition for the floodplain select this option to represent ocean tide, storm surge,
 tsunamis, or flooding from a large river
 control in a channel terminus.
-The time – stage relationship can be synchronized to rainfall and watershed flooding.
+The time stage relationship can be synchronized to rainfall and watershed flooding.
 
 1. Select the standard
    outflow node at the end of the channel.
@@ -194,7 +196,7 @@ Set the elevation for matching the water surface elevation of an existing FEMA m
 Time-Stage for Channel and Free Floodplain and Channel
 ______________________________________________________________
 
-This option is the same as option 7 with the condition that the stage – time table is assigned to the channel instead of the floodplain.
+This option is the same as option 7 with the condition that the stage time table is assigned to the channel instead of the floodplain.
 
 1. Set this up with
    the same method described in the previous two sections.
@@ -257,7 +259,7 @@ Use this option with any floodplain boundary that will transfer flow between two
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc022.png
 
-2. Draw a polygonn through the desired outflow nodes.
+2. Draw a polygon through the desired outflow nodes.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc024.png
 

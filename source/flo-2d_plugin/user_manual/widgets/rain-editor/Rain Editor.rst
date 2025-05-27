@@ -1,3 +1,5 @@
+.. _rain_editor:
+
 Rain Editor
 ===========
 

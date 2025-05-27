@@ -1,3 +1,5 @@
+.. _open_flo2d_project:
+
 Open FLO-2D Project
 ====================
 

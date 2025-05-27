@@ -1,3 +1,5 @@
+.. _export_dat_files:
+
 Export data (\*.DAT) files
 ===========================
 

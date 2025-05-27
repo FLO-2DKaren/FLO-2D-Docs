@@ -1,3 +1,5 @@
+.. _correct_grid_elevation:
+
 5. Correct Grid Elevation
 ==========================
 

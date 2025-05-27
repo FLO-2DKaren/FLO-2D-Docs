@@ -1,3 +1,5 @@
+.. _flo-2d-info-tool:
+
 FLO-2D Info Tool
 ==================
 

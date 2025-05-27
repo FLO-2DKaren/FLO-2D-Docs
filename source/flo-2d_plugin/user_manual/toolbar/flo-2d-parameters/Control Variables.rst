@@ -1,8 +1,7 @@
-Set Control Parameters (CONT.DAT)
-==================================
-
 .. _set_control_parameters:
 
+Set Control Parameters (CONT.DAT)
+==================================
 
 This button allows the user to set up the control variables.  The variable descriptions and instructions are available
 in the Data Input Manual.

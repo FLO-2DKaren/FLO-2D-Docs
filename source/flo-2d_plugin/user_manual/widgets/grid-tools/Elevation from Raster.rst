@@ -1,3 +1,5 @@
+.. _elevation_from_raster:
+
 2. Grid Elevation from Raster Layer
 =========================================
 

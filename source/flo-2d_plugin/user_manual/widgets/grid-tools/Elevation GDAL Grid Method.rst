@@ -1,3 +1,5 @@
+.. _elevation_gdal_grid_method:
+
 3. Grid Elevation from GDAL Grid Method
 =============================================================
 

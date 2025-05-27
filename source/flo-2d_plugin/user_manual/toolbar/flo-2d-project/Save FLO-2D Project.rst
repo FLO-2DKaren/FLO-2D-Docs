@@ -1,8 +1,7 @@
-Save FLO-2D Project
-===================
-
 .. _save_flo2d_project:
 
+Save FLO-2D Project
+===================
 
 In the current FLO-2D Plugin version, the QGIS Project file (\*.qgz) is saved inside the GeoPackage.
 This new method has many advantages in terms of portability, styling the symbology, and reducing

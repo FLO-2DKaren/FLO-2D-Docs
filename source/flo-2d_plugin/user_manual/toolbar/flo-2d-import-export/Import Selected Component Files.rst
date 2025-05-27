@@ -1,9 +1,11 @@
-Import selected component files
+.. _import_selected_component_files:
+
+Import Selected Component Files
 ================================
 
 This tool imports selected FLO-2D \*.DAT file into the FLO-2D GeoPackage.
 
-Import selected component files
+Import Selected Component Files
 --------------------------------
 
 .. note:: Use this method if a \*.DAT file is modified outside QGIS.  It will load only the single component and not

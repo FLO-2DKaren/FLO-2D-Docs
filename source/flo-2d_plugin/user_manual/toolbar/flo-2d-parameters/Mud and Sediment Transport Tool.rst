@@ -1,3 +1,5 @@
+.. _mud_and_sed_tool:
+
 Mud and Sediment Transport (SED.DAT)
 =====================================
 

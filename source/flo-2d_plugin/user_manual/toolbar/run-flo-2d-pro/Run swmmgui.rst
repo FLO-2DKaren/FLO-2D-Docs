@@ -1,3 +1,5 @@
+.. _run_swmmgui:
+
 Run EPA SWMM GUI 5.0
 =====================
 

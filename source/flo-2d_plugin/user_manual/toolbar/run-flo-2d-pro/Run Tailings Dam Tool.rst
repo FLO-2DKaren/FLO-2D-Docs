@@ -1,3 +1,5 @@
+.. _run_tailings_dam_tool:
+
 Run Tailings Dam Tool
 ======================
 

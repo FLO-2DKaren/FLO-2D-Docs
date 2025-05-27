@@ -1,3 +1,5 @@
+.. _grid_elevation_lidar:
+
 4. Grid Elevation from LiDAR
 =======================================
 

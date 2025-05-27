@@ -1,3 +1,5 @@
+.. _evaporation_editor:
+
 Evaporation Editor
 =====================
 

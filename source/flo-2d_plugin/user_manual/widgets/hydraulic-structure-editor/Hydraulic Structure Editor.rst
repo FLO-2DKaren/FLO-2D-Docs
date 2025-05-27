@@ -1,3 +1,5 @@
+.. _structures_editor:
+
 Structures Editor
 ==========================
 

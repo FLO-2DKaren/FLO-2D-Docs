@@ -1,3 +1,5 @@
+.. _view_options:
+
 View Options
 ============
 

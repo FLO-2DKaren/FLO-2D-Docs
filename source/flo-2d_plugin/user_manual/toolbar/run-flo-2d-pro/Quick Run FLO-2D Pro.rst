@@ -1,3 +1,5 @@
+.. _quick_run:
+
 Quick Run FLO-2D Pro
 =====================
 

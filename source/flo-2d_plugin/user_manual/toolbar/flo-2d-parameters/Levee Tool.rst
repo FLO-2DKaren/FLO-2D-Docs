@@ -1,3 +1,5 @@
+.. _levee_tool:
+
 Levee Elevation Tool
 =====================
 

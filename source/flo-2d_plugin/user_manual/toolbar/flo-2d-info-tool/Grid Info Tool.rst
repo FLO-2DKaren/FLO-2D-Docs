@@ -1,3 +1,5 @@
+.. _grid_info_tool:
+
 Grid Info Tool
 =====================
 

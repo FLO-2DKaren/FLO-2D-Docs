@@ -1,3 +1,5 @@
+.. _mult_domain_editor:
+
 Multiple Domains Editor
 =========================
 

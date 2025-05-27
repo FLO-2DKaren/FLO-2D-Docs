@@ -1,5 +1,7 @@
+.. _plugin_settings:
+
 FLO-2D Plugin Settings
-======================
+========================
 
 .. important:: To ensure proper execution of executables/plugins, it is essential to install the executables in the
                correct FLO-2D folder, the plugins in QGIS, and configure the paths accurately within the

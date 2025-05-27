@@ -1,3 +1,5 @@
+.. _run_hydrog:
+
 Run Hydrog
 ===================
 

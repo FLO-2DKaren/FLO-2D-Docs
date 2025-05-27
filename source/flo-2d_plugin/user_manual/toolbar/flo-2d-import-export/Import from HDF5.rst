@@ -1,3 +1,5 @@
+.. _import_hdf5:
+
 Import from HDF5
 =================
 

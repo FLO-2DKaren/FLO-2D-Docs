@@ -1,3 +1,5 @@
+.. _reduction_factors:
+
 8. Reduction Factors (ARF and WRF)
 ==========================================
 

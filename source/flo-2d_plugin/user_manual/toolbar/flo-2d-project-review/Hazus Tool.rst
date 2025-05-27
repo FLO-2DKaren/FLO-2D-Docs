@@ -1,3 +1,5 @@
+.. _hazus-tool:
+
 HAZUS
 ==========
 

@@ -1,3 +1,5 @@
+.. _roughness_from_raster:
+
 7. Grid Roughness from Raster
 =========================================
 

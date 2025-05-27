@@ -1,3 +1,5 @@
+.. _import_ras_channel:
+
 Import HEC-RAS Channel
 =========================
 

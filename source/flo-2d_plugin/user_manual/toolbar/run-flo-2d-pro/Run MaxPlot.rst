@@ -1,3 +1,5 @@
+.. _run_maxplot:
+
 Run MaxPlot
 ===================
 

@@ -1,3 +1,5 @@
+.. _geopackage_management:
+
 FLO-2D GeoPackage Management
 =============================
 
