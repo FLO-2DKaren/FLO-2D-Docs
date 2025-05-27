@@ -56,7 +56,7 @@ docx_pagebreak_before_section = 1
 
 
 
-# Added on 27/05/2025 to enable chapter-based equation numbering
+# Added on 27/05/2025 to enforce chapter-based equation numbering
 numfig = True
 numfig_secnum_depth = 1
 
