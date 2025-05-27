@@ -31,9 +31,9 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"
-html_static_path = ['_static']
+html_static_path = ['_static/css'] # Edited from ['_static'] on 25/05/2025
 html_css_files = [
-    ('static/custom.css', {'priority': 1000})
+    ('custom.css', {'priority': 1000}) # Edited from ('static/custom.css', {'priority': 1000})
 ]
 
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
@@ -53,3 +53,20 @@ docx_documents = [
      }, True),
 ]
 docx_pagebreak_before_section = 1
+
+
+
+# Added on 25/05/2025 to enforce chapter-based equation numbering
+numfig = True
+numfig_secnum_depth = 1
+
+mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+mathjax3_config = {
+    "tex": {
+        "tags": "none",
+        "useLabelIds": True
+    },
+    "options": {
+        "displayAlign": "right"
+    }
+}
