@@ -2,6 +2,7 @@
 import sys, os
 
 # -- Project information -----------------------------------------------------
+
 project = 'FLO-2D Pro Documentation'
 copyright = "2025, Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 author = "Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"

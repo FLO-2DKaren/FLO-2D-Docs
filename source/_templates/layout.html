@@ -2,26 +2,34 @@
 
 {% block extrahead %}
   {{ super() }}
+
   {% if "Chapter" in pagename %}
     {% set parts = pagename.split('/') %}
-    {% set chapter_num = parts[-1].split(' ')[1] %}
-    {% set folder_key = parts[-2].replace(' ', '_') %}
+    {% set chapter_number = parts[-1].split(' ')[1] %}
+    {% set folder_name = parts[-2].replace(' ', '_') %}
     <script type="text/javascript">
-      window.MathJax = {
+      MathJax = {
         tex: {
           tags: 'ams',
-          useLabelIds: true,
           tagSide: 'right',
           tagIndent: '0em',
+          useLabelIds: true,
           tagFormat: {
             number: function (n) {
-              return "{{ folder_key }}_{{ chapter_num }}." + n;
+              return "{{ chapter_number }}." + n;
             }
           }
         },
         options: {
           enableMenu: false,
           displayAlign: 'right'
+        },
+        startup: {
+          ready: () => {
+            MathJax.startup.defaultReady();
+            MathJax.texReset();
+            MathJax.tags.reset();
+          }
         }
       };
     </script>
