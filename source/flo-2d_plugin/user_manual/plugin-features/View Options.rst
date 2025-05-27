@@ -53,7 +53,7 @@ There are also Storm Drain Layers, Infiltration Layers, Data Tables, and Channel
 All the data is stored as SQLite data in a GeoPackage file.
 
 If the Layers Panel is missing, use the View Menu to display it.
-This window can be docked or undocked by clicking and dragging the title area.
+This window can be docked or un-docked by clicking and dragging the title area.
 In the following images, the Layers and Browser panel were docked together by dragging one panel onto the other.
 
 Close the Browser panel or dock both Layers and Browser together so layers can be easily viewed.
@@ -100,12 +100,14 @@ FLO-2D Plot and Table Editor Windows
 
 The plot window and table editor window are used to assign table data to various components such as inflow, rain,
 hydraulic structures, and channels.
+
 The user can copy and paste from excel or ASCII text files.
-If these windows are missing, they can be restored using the View Menu and they can be docked or shifted to other
-monitor screens for easy editing
-and viewing.
 
 .. image:: ../img/View-Options/View011.png
 
 .. |View012| image:: ../img/View-Options/View012.png
 .. |View013| image:: ../img/View-Options/View013.png
+
+If these windows are missing, they can be restored quickly by clicking the open table and plot buttons on the FLO-2D Widget.
+
+.. image:: ../img/View-Options/View015.png
