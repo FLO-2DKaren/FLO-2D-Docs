@@ -69,16 +69,13 @@ mathjax3_config = {
     }
 }
 
-# -- Auto-insert MathJax reset at start of each doc --------------------------
-def add_mathjax_reset(app, doctree, fromdocname):
-    from docutils import nodes
-    raw_node = nodes.raw('', '''
-    <script>
-      MathJax.texReset();
-      MathJax.startup.getComponents();
-    </script>
-    ''', format='html')
-    doctree.insert(0, raw_node)
+# -- Inject MathJax reset script at the top of every .rst file ---------------
+rst_prolog = """
+.. raw:: html
 
-def setup(app):
-    app.connect("doctree-resolved", add_mathjax_reset)
+   <script>
+     MathJax.texReset();
+     MathJax.startup.getComponents();
+   </script>
+"""
+
