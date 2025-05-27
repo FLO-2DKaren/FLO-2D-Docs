@@ -7,6 +7,7 @@ FLO-2D Pro
 
 
    Data Input Manual/Data Input Manual
+   References Manual/References
    Channel Modeling Guidelines/index
    Hydraulic Structures Guidelines/index
    Levee Dam and Wall Breach Guidelines/index
