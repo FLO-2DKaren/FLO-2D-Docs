@@ -37,7 +37,6 @@ html_static_path = ['_static']
 html_css_files = [
     ('css/custom.css', {'priority': 1000})
 ]
-html_js_files = ['mathjax_reset.js']
 
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
 html_context = {
