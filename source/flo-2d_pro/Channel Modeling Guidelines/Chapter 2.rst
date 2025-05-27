@@ -473,8 +473,9 @@ structure invert elevation) unless a headwater reference elevation is specified.
 A discharge rating curve uses headwater depth to calculate discharge:
 
 .. math::
+   :label:
 
-     Q = a \cdot \text{depth}^b
+   Q = a \cdot \text{depth}^b
 
 where:
 
