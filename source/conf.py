@@ -1,6 +1,5 @@
 # -- Path setup --------------------------------------------------------------
 import sys, os
-sys.path.insert(0, os.path.abspath("..."))
 sys.path.insert(0, os.path.abspath('_ext'))  # or 'source/_ext' if conf.py is higher
 
 # -- Project information -----------------------------------------------------
