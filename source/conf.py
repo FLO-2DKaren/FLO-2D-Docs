@@ -9,13 +9,10 @@ author = "Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 html_logo = "FLO-2D Transparent.png"
 
 # -- Sphinx Multiversion Settings -------------------------------------------
-# NOTE: Use one of the following settings depending on your build environment
-
 # 🔁 FULL BUILD: Use this when building all branches (e.g., on GitHub Actions)
 smv_tag_whitelist = r'^$'  # Exclude all tags
 smv_branch_whitelist = r'^(Build25)$'  # Include only branch Build25.
 smv_remote_whitelist = r'^origin$'  # Default remote
-
 
 # 🔁 QUICK BUILD: Uncomment below for fast local dev on current branch
 # smv_tag_whitelist = r'^$'
@@ -40,8 +37,7 @@ html_css_files = [
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
 html_context = {
     'current_version': "main",
-    # You can populate this with actual versions later using git refs or dynamically.
-    # 'versions': [["Build21", "/Build21/"], ["Build23", "/Build23/"], ...]
+    # Example: 'versions': [["Build21", "/Build21/"], ["Build23", "/Build23/"], ...]
 }
 
 # -- DOCX Output (if used) ---------------------------------------------------
@@ -55,21 +51,34 @@ docx_documents = [
 ]
 docx_pagebreak_before_section = 1
 
-
-
-
-
-
+# -- MathJax & Numbering -----------------------------------------------------
 numfig = True
 numfig_secnum_depth = 1
 
 mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 mathjax3_config = {
     "tex": {
-        "tags": "none",
-        "useLabelIds": True
+        "tags": "ams",           # Enable equation numbering (AMS style)
+        "useLabelIds": True,     # Allow referenceable equation labels
+        "tagSide": "right",      # Equation numbers on the right
+        "tagIndent": "0em"       # No indent
     },
     "options": {
-        "displayAlign": "right"
+        "enableMenu": False,     # Hide MathJax menu
+        "displayAlign": "right"  # Align equations to the right
     }
 }
+
+# -- Auto-insert MathJax reset at start of each doc --------------------------
+def add_mathjax_reset(app, doctree, fromdocname):
+    from docutils import nodes
+    raw_node = nodes.raw('', '''
+    <script>
+      MathJax.texReset();
+      MathJax.startup.getComponents();
+    </script>
+    ''', format='html')
+    doctree.insert(0, raw_node)
+
+def setup(app):
+    app.connect("doctree-resolved", add_mathjax_reset)
