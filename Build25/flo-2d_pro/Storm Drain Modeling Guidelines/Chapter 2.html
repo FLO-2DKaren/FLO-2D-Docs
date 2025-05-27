@@ -49,7 +49,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Data%20Input%20Manual/Data%20Input%20Manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Data%20Input%20Manual.html">Data Input Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">References</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
@@ -113,7 +114,7 @@ The flow exchange can occur bi-directionally capturing surface water runoff when
 when the pipe system capacity is exceeded.
 The storm drain system is represented by links and nodes where the links are the closed conduits and nodes are junctions and outfalls as shown in
 Figure 21.</p>
-<img alt="../../_images/image114.png" src="../../_images/image114.png" />
+<img alt="../../_images/image116.png" src="../../_images/image116.png" />
 <p><em>Figure 21.
 Surface and Closed Conduit Flow Exchange.</em></p>
 <p>Nodes represent several features of a storm drain system.
@@ -123,13 +124,13 @@ not connected to the surface water system.
 The water surface elevation is determined at each junction for each computational timestep based on the junction geometry and the flow hydraulics.
 Figure 22 is a profile of closed conduit system.
 The figure displays a peak water surface elevation for the 100-year return period storm.</p>
-<img alt="../../_images/image34.png" src="../../_images/image34.png" />
+<img alt="../../_images/image310.png" src="../../_images/image310.png" />
 <p><em>Figure 22.
 Profile of Typical Closed Conduit System.</em></p>
 <p>Inlets are nodes that collect surface water from the FLO-2D grid element.
 Only one inlet can be assigned to one FLO-2D grid cell.
 Storm drain inlets are depicted by the QGIS as blue in Figure 23.</p>
-<img alt="../../_images/image410.png" src="../../_images/image410.png" />
+<img alt="../../_images/image412.png" src="../../_images/image412.png" />
 <p><em>Figure 23.
 Storm Drain System in QGIS.
 Inlets are blue and outfalls are green.</em></p>
@@ -147,7 +148,7 @@ In Figure 25 the pipe outfall discharges into a channel and may have a potential
 <img alt="../../_images/image5.jpeg" src="../../_images/image5.jpeg" />
 <p><em>Figure 24.
 Outfall Discharge Retention Basin.</em></p>
-<img alt="../../_images/image64.png" src="../../_images/image64.png" />
+<img alt="../../_images/image610.png" src="../../_images/image610.png" />
 <p>Figure 25.
 Image of Storm Drain System with Outfall Discharging to a Channel.*</p>
 </section>
@@ -164,7 +165,7 @@ For slotted drains, combination inlets and other non-typical inlets, a rating ta
 <img alt="../../_images/image7.jpeg" src="../../_images/image7.jpeg" />
 <p><em>Figure 26.
 Combination Curb Opening Inlet with Sag and a Grate.</em></p>
-<img alt="../../_images/image81.jpeg" src="../../_images/image81.jpeg" />
+<img alt="../../_images/image82.jpeg" src="../../_images/image82.jpeg" />
 <p><em>Figure 27.
 Combination of a Curb Opening at Grade with a Grate.</em></p>
 <p>The manhole is a special inlet type that represents a service access point to the storm drain system.
@@ -181,7 +182,7 @@ When the surcharge depth is exceeded, the manhole is popped, and the manhole beh
 <li><p>Curb opening length (L)</p></li>
 <li><p>Curb opening height (h)</p></li>
 </ul>
-<img alt="../../_images/image92.jpeg" src="../../_images/image92.jpeg" />
+<img alt="../../_images/image93.jpeg" src="../../_images/image93.jpeg" />
 <p><em>Figure 28.
 Curb Opening at Grade (Type 1 inlet).</em></p>
 <p>The discharge is based on the flow depth in the FLO-2D grid cell and the inlet geometry:</p>
@@ -271,7 +272,7 @@ For weir flow (Johnson and Fred, 1984):</p>
 <li><p>Grate sag height (zero for at grade)</p></li>
 </ul>
 <p>Note: Orifice flow coefficient = 0.67 (hardcoded) for all cases.</p>
-<img alt="../../_images/image131.jpeg" src="../../_images/image131.jpeg" />
+<img alt="../../_images/image132.jpeg" src="../../_images/image132.jpeg" />
 <p><em>Figure 30.
 Grate Inlet in a Street (Type 3 Inlet, Johnson, and Fred, 1984).</em></p>
 <p>The smaller of two discharges (weir or orifice) calculated for a grate (gutter) inlet with/without sag is applied for the inlet discharge computation
@@ -440,7 +441,7 @@ The floodplain water surface elevation is compared to the storm drain pressure h
 invert elevation (Vertical Type 4 Inlets) or the outfall invert elevation.
 It is possible that the elevations of the closed conduit system may have a different datum than that applied to the FLO-2D surface topography.
 The elevation of each inlet rim and outfall invert should be reviewed especially for unique conditions such as combination inlets (Figure 36).</p>
-<img alt="../../_images/image193.png" src="../../_images/image193.png" />
+<img alt="../../_images/image194.png" src="../../_images/image194.png" />
 <p><em>Figure 36.
 Diagram of a Combination Inlet Rim Elevation.</em></p>
 <p>For curb opening inlets at grade (Type 1), curb opening inlets with sag (Type 2), grates with or without sag (Type 3) and manholes (Type 5), the
