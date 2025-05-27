@@ -33,7 +33,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static'] # Edited from ['_static'] on 27/05/2025
 html_css_files = [
-    ('static/custom.css', {'priority': 1000}) # Edited from ('static/custom.css', {'priority': 1000}) on 27/05/2025
+    ('css/custom.css', {'priority': 1000}) # Edited from ('static/custom.css', {'priority': 1000}) on 27/05/2025
 ]
 
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
