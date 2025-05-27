@@ -474,7 +474,7 @@ A discharge rating curve uses headwater depth to calculate discharge:
 
 .. math::
 
-     Q = a \\cdot \\text{depth}^b
+     Q = a \cdot \text{depth}^b
 
 where:
 
