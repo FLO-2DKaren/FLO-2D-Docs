@@ -1,34 +1,38 @@
-# source/_ext/mathjax_reset.py
+from docutils import nodes
+from sphinx.transforms import SphinxTransform
 import os
 
-def setup(app):
-    app.connect("source-read", inject_reset_script)
-    return {"version": "0.1", "parallel_read_safe": True}
+class MathJaxResetTransform(SphinxTransform):
+    default_priority = 500
 
-def inject_reset_script(app, docname, source):
-    chapter = os.path.basename(docname).lower()
-    folder = os.path.dirname(docname).split("/")[-1].lower()
+    def apply(self):
+        docname = self.env.docname  # e.g., 'flo-2d-pro/Reference Manual/Chapter 2'
+        if not docname:
+            return
 
-    # Assign a MathJax prefix by folder/chapter (e.g., "Reference Manual" → "1", "Channel Modeling Guidelines" → "2")
-    chapter_prefix = {
-        "reference manual": "1",
-        "channel modeling guidelines": "2",
-    }.get(folder, "0")
+        # Match specific subfolders
+        if docname.startswith("flo-2d-pro/Reference Manual/Chapter"):
+            chapter_number = docname.split("/")[-1].split(" ")[1]
+        elif docname.startswith("flo-2d-pro/Channel Modeling Guidelines/Chapter"):
+            chapter_number = docname.split("/")[-1].split(" ")[1]
+        else:
+            return  # Not a chapter file in one of the target folders
 
-    # Inject the JavaScript only at the top of each chapter .rst
-    if chapter.startswith("chapter"):
+        # Inject MathJax reset script with proper chapter number prefix
         script = f"""
-.. raw:: html
+        <script>
+          MathJax.texReset();
+          MathJax.tags.reset();
+          MathJax.tags.counter = 0;
+          MathJax.tags.allLabels = {{}};
+          MathJax.startup.getComponents();
+          MathJax.config.tex.tagFormat = {{
+            number: (n) => "{chapter_number}." + n
+          }};
+        </script>
+        """
+        raw_node = nodes.raw('', script, format='html')
+        self.document.insert(0, raw_node)
 
-   <script>
-     MathJax.texReset();
-     MathJax.tags.reset();
-     MathJax.tags.counter = 0;
-     MathJax.tags.allLabels = {{}};
-     MathJax.config.tex.tagFormat = {{
-       number: function(n) {{ return "{chapter_prefix}." + n; }}
-     }};
-     MathJax.startup.getComponents();
-   </script>
-"""
-        source[0] = script + "\n" + source[0]
+def setup(app):
+    app.add_transform(MathJaxResetTransform)
