@@ -5,7 +5,7 @@ Use this tool to import an old or alternate FLO-2D project from a GeoPackage fil
 
 .. _import_from_geopackage:
 
-.. important:: Before importing a GeoPackage, use New Project (:ref:`new_flo2d_project`) to build a template to import your current GeoPackage into.
+.. important:: Before importing a GeoPackage, use New Project (:ref:`new_flo-2d_project`) to build a template to import your current GeoPackage into.
    
 1. Click the
    Import from GeoPackage button.
