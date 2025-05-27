@@ -1,9 +1,8 @@
 FLO-2D GeoPackage Management
 =============================
 
-The FLO-2D GeoPackage Management tool allows users to delete layers added to the GeoPackage.
-Whether a layer is too heavy or was added mistakenly, this tool facilitates efficient maintenance of a
-well-structured GeoPackage.
+The FLO-2D GeoPackage Management tool enables users to efficiently manage their GeoPackage by removing user-added layers. 
+This feature is useful for maintaining an organized GeoPackage, especially when layers are no longer needed or were added by mistake.
 
 GeoPackage Management
 -----------------------------

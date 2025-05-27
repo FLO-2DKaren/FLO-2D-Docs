@@ -1,6 +1,8 @@
 New FLO-2D Project
 ===================
 
+.. _new_flo2d_project:
+
 This button sets up a new FLO-2D Project, defining its coordinate system, GeoPackage file, project information,
 and the default values for grid cell size and Manning's. Furthermore, the dialog shows the version details for
 the FLO-2D Plugin, FLO-2D Build, and QGIS.

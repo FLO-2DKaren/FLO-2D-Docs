@@ -1,10 +1,13 @@
 Set Control Parameters (CONT.DAT)
 ==================================
 
+.. _set_control_parameters:
+
+
 This button allows the user to set up the control variables.  The variable descriptions and instructions are available
 in the Data Input Manual.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Data Input Manual PRO 2024.pdf
+See the :ref: Data Input Manual 2025 <data_input_manual_pro> for more details.
 
 Control Parameters
 -----------------------------

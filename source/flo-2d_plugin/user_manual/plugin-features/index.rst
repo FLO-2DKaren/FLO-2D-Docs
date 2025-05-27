@@ -4,7 +4,7 @@ Plugin Features
 Plugin Menu
 -----------
 
-The FLO-2D Plugin menu is in the Plugins drop down menu, Plugins>FLO-2D.
+The FLO-2D Plugin menu is in the Plugins drop down menu, Plugin > FLO-2D.
 If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin_step>` to install it.
 
 .. image:: ../img/Plugin-Features/Plugin002.png
@@ -22,7 +22,7 @@ Other helpful Plugins include:
 
 
 .. note:: For QuickMapService, it is necessary to install and add maps.
-          Click on the QuickMapServices button > Settings > More Services > Get Contributed Pack> Save.
+          Click on the QuickMapServices button > Settings > More Services > Get Contributed Pack > Save.
 
 .. toctree::
    :hidden:

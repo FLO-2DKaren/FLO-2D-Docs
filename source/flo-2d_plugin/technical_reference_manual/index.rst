@@ -5,12 +5,12 @@ FLO-2D Plugin Gila v2.0.0
 
 Updates aim to deliver increased functionality, efficiency, and overall performance for FLO-2D modeling.
 
-If the FLO-2D plugin is not visible on the QGIS toolbar, use the
-`Install Instructions <../Setup/QGIS%20and%20FLO-2D%20Plugin.html#step-2-flo-2d-plugin>`__ to load it.
+The FLO-2D Plugin menu is in the Plugins drop down menu, Plugins>FLO-2D.
+If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin_step>` to install it.
 
 .. toctree::
    :hidden:
    :maxdepth: 4
-   :caption: FLO-2D Plugin Version 1.0.0:
+   :caption: FLO-2D Plugin Version 2.0.0:
 
    techref.rst

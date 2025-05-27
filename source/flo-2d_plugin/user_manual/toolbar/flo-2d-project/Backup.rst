@@ -17,4 +17,4 @@ Create Backup
 
 .. note:: The default name is the current project name with a plugin version and timestamp appended to it.
 
-.. image:: ../../img/FLO-2D-Project/backup001.png
+.. image:: ../../img/Flo-2D-Project/backup001.png
