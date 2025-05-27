@@ -58,16 +58,16 @@ numfig_secnum_depth = 1
 
 mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 mathjax3_config = {
-    "tex": {
-        "tags": "ams",           # Enable equation numbering (AMS style)
-        "useLabelIds": True,     # Allow referenceable equation labels
-        "tagSide": "right",      # Equation numbers on the right
-        "tagIndent": "0em"       # No indent
-    },
-    "options": {
-        "enableMenu": False,     # Hide MathJax menu
-        "displayAlign": "right"  # Align equations to the right
-    }
+    # "tex": {
+    #     "tags": "ams",           # Enable equation numbering (AMS style)
+    #     "useLabelIds": True,     # Allow referenceable equation labels
+    #     "tagSide": "right",      # Equation numbers on the right
+    #     "tagIndent": "0em"       # No indent
+    # },
+    # "options": {
+    #     "enableMenu": False,     # Hide MathJax menu
+    #     "displayAlign": "right"  # Align equations to the right
+    # }
 }
 
 
