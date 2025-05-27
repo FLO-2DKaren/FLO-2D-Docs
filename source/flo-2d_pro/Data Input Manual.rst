@@ -2,4 +2,4 @@
 Data Input Manual
 ==================
 
-Data Input Manual goes here...
+.. _data_input_manual:
