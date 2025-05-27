@@ -253,7 +253,10 @@ Multiple Domain System
 
 Use this option with any floodplain boundary that will transfer flow between two domains.
 
-.. note:: See `Multiple Domain Interfacing Training Package <https://flo-2d.com/product/multiple-domain-interfacing/>`__.
+.. note::
+
+   See the <a href="https://flo-2d.com/product/multiple-domain-interfacing/" target="_blank" rel="noopener noreferrer">Multiple Domain Interfacing Training Package</a>.
+
 
 1. Click the Add Polygon BC button.
 
