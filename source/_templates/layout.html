@@ -3,7 +3,9 @@
 {% block extrahead %}
   {{ super() }}
   {% if "Chapter" in pagename %}
-    {% set chapter_num = pagename.split('/')[-1].split(' ')[1] %}
+    {% set parts = pagename.split('/') %}
+    {% set chapter_num = parts[-1].split(' ')[1] %}
+    {% set folder_key = parts[-2].replace(' ', '_') %}
     <script type="text/javascript">
       window.MathJax = {
         tex: {
@@ -13,7 +15,7 @@
           tagIndent: '0em',
           tagFormat: {
             number: function (n) {
-              return "{{ chapter_num }}." + n;
+              return "{{ folder_key }}_{{ chapter_num }}." + n;
             }
           }
         },
