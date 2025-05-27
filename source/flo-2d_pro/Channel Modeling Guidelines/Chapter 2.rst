@@ -3,19 +3,6 @@
 Chapter 2
 =========
 
-.. raw:: html
-
-   <script>
-     MathJax.texReset();
-     MathJax.tags.reset();
-     MathJax.tags.counter = 0;
-     MathJax.tags.allLabels = {};
-     MathJax.startup.getComponents();
-     MathJax.config.tex.tagFormat = {
-       number: (n) => "2." + n
-     };
-   </script>
-
 Guidelines - Channels in the Urban Environment
 ----------------------------------------------
 
@@ -472,24 +459,10 @@ table that is based on the headwater depth above the channel thalweg (assumed to
 structure invert elevation) unless a headwater reference elevation is specified.
 A discharge rating curve uses headwater depth to calculate discharge:
 
-.. raw:: html
-
-   <script>
-     MathJax.texReset();
-     MathJax.tags.reset();
-     MathJax.tags.counter = 0;
-     MathJax.tags.allLabels = {};
-     MathJax.startup.getComponents();
-     MathJax.config.tex.tagFormat = {
-       number: (n) => "2." + n
-     };
-   </script>
-
 .. math::
    :label:
 
-   Q = a \cdot \text{depth}^b
-
+   Q = a \, depth \, ^b
 
 where:
 
