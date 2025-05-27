@@ -78,6 +78,6 @@ QGIS Save
 ----------
 
 The QGIS save button performs specific tasks when a FLO-2D Project is loaded.  These processes are outlined in
-:ref:Save a FLO-2D Project <save_flo2d_project>.
+:ref: Save a FLO-2D Project <save_flo2d_project>.
 
 .. image:: ../img/Buttons/savebutton.png
