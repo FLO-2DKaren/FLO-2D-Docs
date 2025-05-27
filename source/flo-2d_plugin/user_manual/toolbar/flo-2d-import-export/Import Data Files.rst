@@ -6,7 +6,7 @@ This tool imports existing FLO-2D \*.DAT files into the FLO-2D GeoPackage.
 Import the FLO-2D \*.DAT files into the Project
 -------------------------------------------------
 
-.. Important:: Before performing this task, set up a :ref:New FLO-2D Project <new_flo2d_project>.
+.. Important:: Before performing this task, set up a New FLO-2D Project (:ref:`new_flo2d_project`).
 
 1. Click the
    Import data (\*.DAT) files.

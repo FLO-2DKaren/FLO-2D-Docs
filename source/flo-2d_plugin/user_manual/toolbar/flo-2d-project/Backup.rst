@@ -15,6 +15,6 @@ Create Backup
 
 2. Name the backup file and click Save.
 
-.. note:: The default name is the current project name with a plugin version and timestamp appended to it.
+.. note:: The default name is the current project name with a plugin version and timestamp appended to it.  Use any name desired.
 
 .. image:: ../../img/Flo-2D-Project/backup001.png
