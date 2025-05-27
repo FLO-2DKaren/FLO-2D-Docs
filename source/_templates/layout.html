@@ -2,26 +2,26 @@
 
 {% block extrahead %}
   {{ super() }}
-  {% set chapter_num = env.docname.split('/')[-1].split(' ')[1] if "Chapter" in env.docname else "" %}
-  {% if chapter_num %}
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        tags: 'ams',
-        useLabelIds: true,
-        tagSide: 'right',
-        tagIndent: '0em',
-        tagFormat: {
-          number: function (n) {
-            return "{{ chapter_num }}." + n;
+  {% if "Chapter" in pagename %}
+    {% set chapter_num = pagename.split('/')[-1].split(' ')[1] %}
+    <script type="text/javascript">
+      window.MathJax = {
+        tex: {
+          tags: 'ams',
+          useLabelIds: true,
+          tagSide: 'right',
+          tagIndent: '0em',
+          tagFormat: {
+            number: function (n) {
+              return "{{ chapter_num }}." + n;
+            }
           }
+        },
+        options: {
+          enableMenu: false,
+          displayAlign: 'right'
         }
-      },
-      options: {
-        enableMenu: false,
-        displayAlign: 'right'
-      }
-    };
-  </script>
+      };
+    </script>
   {% endif %}
 {% endblock %}
