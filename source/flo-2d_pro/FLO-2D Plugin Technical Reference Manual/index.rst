@@ -1,8 +1,8 @@
 .. vim: syntax=rst
 
-===
-FLO
-===
+===========================
+Technical Reference Manual
+===========================
 
 .. toctree::
 
