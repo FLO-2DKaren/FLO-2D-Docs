@@ -5,7 +5,7 @@ Technical Reference Manual
 ===========================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
 
     FLO-2D Plugin Technical Reference Manual
