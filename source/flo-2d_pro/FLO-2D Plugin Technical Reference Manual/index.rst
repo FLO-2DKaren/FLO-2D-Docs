@@ -5,6 +5,7 @@ Technical Reference Manual
 ===========================
 
 .. toctree::
+   :hidden: 1
    :maxdepth: 2
 
 
