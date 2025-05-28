@@ -32,7 +32,7 @@ FLO-2D uses \*.dat or \*.hdf5 files.
 These files are exported from the \*.gpkg database.
 Figure 1 shows the layout of the layers and tables in QGIS that are used by the FLO-2D Plugin.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO02.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image1.png
 
 *Figure 1.
 Overview of the QGIS Layout and Layer Structure.*
