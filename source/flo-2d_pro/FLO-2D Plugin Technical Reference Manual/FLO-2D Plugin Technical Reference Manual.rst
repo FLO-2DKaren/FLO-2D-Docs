@@ -872,8 +872,8 @@ Figure 36 shows the initial abstraction for the landuse layer.
 *Figure 36.
 Landuse with Initial Abstraction.*
 
-The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.
-10):
+The intersection between the landuse and grid element gives an area weighted average for the initial
+abstraction equation (10):
 
 .. math::
    :label:
@@ -899,8 +899,8 @@ Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2018.
 *Figure 37.
 Green-Ampt dialog (FCDMC Method 2018).*
 
-For each grid element, compute wetting front capillary suction PSIF according to the following regressions as a function of *XKSAT* (Generated from
-Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
+For each grid element, compute wetting front capillary suction PSIF according to the following regressions as
+a function of *XKSAT* (Generated from Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
 
 .. list-table::
    :widths: 50 50
