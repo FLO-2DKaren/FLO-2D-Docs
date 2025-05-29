@@ -678,7 +678,7 @@ The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`
 .. math::
    :label:
 
-   math:: {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
+   {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
 
 
 Where:
