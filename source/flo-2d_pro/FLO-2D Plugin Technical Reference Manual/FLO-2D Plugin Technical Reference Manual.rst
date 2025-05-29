@@ -675,26 +675,17 @@ The area weighted log average is calculated for each grid element from the soil 
 2).
 The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
-
-   * -
-     - ..
-       math:: {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
-     - Eq.
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+   math:: {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
 
 
 Where:
 
-*XKSAT\ i* is obtained from the soil attribute table.
+    *XKSAT\ i* is obtained from the soil attribute table.
 
-*A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
+    *A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
 
 *PSIF*
 ^^^^^^
