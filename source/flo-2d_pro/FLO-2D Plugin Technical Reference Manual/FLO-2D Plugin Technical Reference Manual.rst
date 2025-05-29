@@ -745,20 +745,10 @@ DTHETA\ :sub:`wet`, DTHETA\ :sub:`normal`, and DTHETA\ :sub:`dry` attributes are
 Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a weighted average for each grid element (Eq.
 4).
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
-
-   * -
-     - ..
-       math:: {\overline{DTHETA}}_{\mathbf{grid}} = \l eft( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
-     - Eq.
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
+   {\overline{DTHETA}}_{\mathbf{grid}} = \l eft( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
 
 Where:
 
