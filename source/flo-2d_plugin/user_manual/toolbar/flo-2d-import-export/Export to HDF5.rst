@@ -51,4 +51,6 @@ The tables are relatively simple as you can see in the coordinates table below. 
 
     <a href="https://www.hdfgroup.org/downloads/hdfview/" target="_blank" rel="noopener">HDFView</a>
 
+|hdfview| can be downloaded from the HDF Group website.
+
 .. note:: The HDF5 file format is a binary format, so it cannot be opened in a text editor. It must be opened with a program that can read HDF5 files, such as HDFView.
