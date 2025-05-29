@@ -9162,611 +9162,235 @@ Appendix B FLO-2D Plugin Error Codes
 Errors
 ------
 
-+-------+--------------+--------------------------------------------------------+
-|  Type |     Code     |                            Message                     |
-+=======+==============+========================================================+
-| ERROR | 110 618.1828 | Line 1 Could not save FLO-2D parameters!               |
-|       |              |                                                        |
-|       |              | Line 2 Could not save FLO-2D parameters!               |
-+-------+--------------+--------------------------------------------------------+
-|       |              | Line 3 Could not save FLO-2D parameters!               |
-+-------+--------------+--------------------------------------------------------+
-| ERROR | 110 618.1828 | Line 4 Could not save FLO-2D parameters!               |
-|       |              | Line 5 Could not save FLO-2D parameters!               |
-+-------+--------------+--------------------------------------------------------+
-
-.. list-table::
-   :widths: 20 20 20 20 20
-   :header-rows: 0
-
-
-   * - Type
-     - Code
-     - Message
-     - Details
-     -
-
-   * - ERROR
-     - 110 618.1828
-     - Could not save FLO-2D parameters!
-     -
-     -
-
-   * - ERROR
-     - 110 618.1816
-     - Could not save FLO-2D parameters!!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1535
-     - Exporting CONT.DAT or TOLER.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1541
-     - Exporting M ANNINGS_N.DAT or TOPO.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1542
-     - Exporting INFLOW.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1543
-     - Exporting OUTFLOW.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1543
-     - Exporting RAIN.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1558
-     - Exporting RAINCELL.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1559
-     - Exporting INFIL.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1544
-     - Exporting EVAPOR.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1623
-     - Exporting CHAN.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1607
-     - Exporting XSEC.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1608
-     - Exporting HYSTRUC.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1609
-     - Exporting STREET.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 10 1218.161
-     - Exporting ARF.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1611
-     - Exporting MULT.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1539
-     - Exporting T OLSPATIAL.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1612
-     - Exporting SED.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1614
-     - Exporting LEVEE.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1613
-     - Exporting FPXSEC.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1616
-     - Exporting BREACH.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1617
-     - Exporting FPFROUDE.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1901
-     - Exporting SHALLOW N_SPATIAL.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1618
-     - Exporting SWMMFLO.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1619
-     - Exporting SWMMFLORT.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 10 1218.162
-     - Exporting SWMMOUTF.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1621
-     - Exporting WSURF.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1622
-     - Exporting WSTIME.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 170 618.0611
-     - Construction of INP dictionary failed!
-     -
-     -
-
-   * - ERROR
-     - 170 618.0701
-     - Couldn't create a [LOSSES] group from storm drain .INP file!
-     -
-     -
-
-   * - ERROR
-     - 170 618.0704
-     - Couldn't create a [XSECTIONS] group from storm drain .INP file!
-     -
-     -
-
-   * - ERROR
-     - 1 70618.07
-     - Couldn't create a [OUTFALLS] group from storm drain .INP file!
-     -
-     -
-
-   * - ERROR
-     - 170 618.0701
-     - Couldn't create a [JUNCTIONS] group from storm drain .INP file!
-     -
-     -
-
-   * - ERROR
-     - 060 319.1604
-     - Evaluation of ARFs and WRFs failed!
-
-       Please check your Blocked Areas User Layer.
-     -
-     -
-
-   * - ERROR
-     - 060 319.1606
-     - Evaluation of ARFs and WRFs failed!
-
-       Please check your Blocked Areas User Layer.
-     -
-     -
-
-   * - ERROR
-     - 051 218.2035
-     - Green-Ampt infiltration failed!
-
-       While intersecting soil layer with grid.
-     -
-     -
-
-   * - ERROR
-     - 51 218.2001
-     - Green-Ampt infiltration failed!
-     -
-     -
-
-   * - ERROR
-     - 140 119.1715
-     - Green-Ampt infiltration failed!
-     -
-     -
-
-   * - ERROR
-     - 40 319.1921
-     - Adding features to Storm Drain Nodes failed!
-     -
-     -
-
-   * - ERROR
-     - 21 019.0629
-     - Update of Breach Global Data failed!
-     -
-     -
-
-   * - ERROR
-     - 40 219.2015
-     - Update of Individual Breach Data failed!"
-     -
-     -
-
-   * - ERROR
-     - 130 219.0755
-     - Update of fragility curves failed!
-     -
-     -
-
-   * - ERROR
-     - 200 618.0707
-     - Assignment of value failed!
-     -
-     -
-
-   * - ERROR
-     - 200 618.0705
-     - Assignment of value from conduits users layer failed!
-     -
-     -
-
-   * - ERROR
-     - 200 618.0631
-     - Assignment of value failed!
-     -
-     -
-
-   * - ERROR
-     - 310 718.1942
-     - Error populating control variables dialog.
-     -
-     -
-
-   * - ERROR
-     - 110 618.1806
-     - Could not save FLO-2D parameters!
-     -
-     -
-
-   * - ERROR
-     - 13 0618.165
-     - Hazus layers loading failed!
-     -
-     -
-
-   * - ERROR
-     - 130 618.1715
-     - Hazus layers loading failed!
-     -
-     -
-
-   * - ERROR
-     - 80 618.0456
-     - Uniformization of field values failed!
-     -
-     -
-
-   * - ERROR
-     - 150 618.0235
-     - Error while computing buildings statistics!
-     -
-     -
-
-   * - ERROR
-     - 80 618.0456
-     - Uniformization of field values failed!
-     -
-     -
-
-   * - ERROR
-     - 40 219.2015
-     - Update of Individual Breach Data failed!
-     -
-     -
-
-   * - ERROR
-     - 20 219.0812
-     - Couldn't save in lets/junction into User Storm Drain Nodes!
-     -
-     -
-
-   * - ERROR
-     - 100 618.0846
-     - Error while loading outfalls components!
-     -
-     -
-
-   * - ERROR
-     - 210 618.1702
-     - Error assigning outfall values!
-     -
-     -
-
-   * - ERROR
-     - 40 319.1915
-     - Converting Schematic SD Inlets to User Storm Drain Nodes failed!
-     -
-     -
-
-   * - ERROR
-     - 51 218.1146
-     - couldn't load point or/and line layers!
-     -
-     -
-
-   * - ERROR
-     - 51 218.0559
-     - There are not defined or visible point layers to select ‘inle ts/junctions’ components!
-     -
-     -
-
-   * - ERROR
-     - 51218.06
-     - There are not defined or visible point layers to select outfall components!
-     -
-     -
-
-   * - ERROR
-     - 51 218.0601
-     - There are not defined or visible line layers to select conduits components!
-     -
-     -
-
-   * - ERROR
-     - 70 618.0451
-     - Creation of Storm Drain Nodes (Inlets) layer failed!
-     -
-     -
-
-   * - ERROR
-     - 70 618.0454
-     - Creation of Storm Drain Nodes (Outfalls) layer failed!
-     -
-     -
-
-   * - ERROR
-     - 70618.05
-     - Creation of Storm Drain Conduits User layer failed!
-     -
-     -
-
-   * - ERROR
-     - 290 718.1934
-     - Error while displaying elevation of cell ' + fid
-     -
-     -
-
-   * - ERROR
-     - 60 319.1607
-     - Assigning grid elevation aborted! Please check your input layers.
-     -
-     -
-
-   * - ERROR
-     - 60 319.1608
-     - Evaluation of ARFs and WRFs failed! Please check your Blocked Areas User Layer.
-     -
-     -
-
-   * - ERROR
-     - 60 319.1609
-     - Replacing duplicated ARFs and WRFs failed!
-     -
-     -
-
-   * - ERROR
-     - 110 618.1818
-     - Could not read infiltration global parameters!
-     -
-     -
-
-   * - ERROR
-     - 271 118.1638
-     - Error schematizing infiltration!
-     -
-     -
-
-   * - ERROR
-     - 51 218.1839
-     - Green-Ampt infiltration failed! Please check data in your input layers.
-     -
-     -
-
-   * - ERROR
-     - 40 219.2004
-     - Assignment of Individual Breach Data failed!
-     -
-     -
-
-   * - ERROR
-     - 210 119.0626
-     - Assignment of Breach Global Data failed!
-     -
-     -
-
-   * - ERROR
-     - 40 219.2004
-     - Assignment of Individual Breach Data failed!
-     -
-     -
-
-   * - ERROR
-     - 130 219.0746
-     - Saving of Fragility Curve Data failed!
-     -
-     -
-
-   * - ERROR
-     - 100 219.0646
-     - Assignment of Individual Multiple Channels Data failed!
-     -
-     -
-
-   * - ERROR
-     - 310 818.0824
-     - Error populating export storm drain INP dialog!
-     -
-     -
-
-   * - ERROR
-     - 80 618.0448
-     - Reading SWMM input file failed!
-     -
-     -
-
-   * - ERROR
-     - 6 0319.161
-     - Creating Storm Drain Nodes layer failed!\\n
-     - "Please check your SWMM input data.\\nAre the nodes coordinates inside the computational domain?
-     -
-
-   * - ERROR
-     - 50 618.1804
-     - Creation of Storm Drain Conduits layer failed!
-     -
-     -
-
-   * - ERROR
-     - 70 618.0851
-     - Error while exporting [JUNCTIONS] to .INP file!
-     -
-     -
-
-   * - ERROR
-     - 70 618.1619
-     - Error while exporting [OUTFALLS] to .INP file!
-     -
-     -
-
-   * - ERROR
-     - 7 0618.162
-     - Error while exporting [CONDUITS] to .INP file!
-     -
-     -
-
-   * - ERROR
-     - 70 618.1621
-     - Error while exporting [XSECTIONS] to .INP file!
-     -
-     -
-
-   * - ERROR
-     - 70 618.1622
-     - Error while exporting [LOSSES] to .INP file!
-     -
-     -
-
-   * - ERROR
-     - 70 618.1623
-     - Error while exporting [COORDINATES] to .INP file!
-     -
-     -
-
-   * - ERROR
-     - 160 618.0634
-     - Couldn't export .INP file!
-     -
-     -
-
-   * - ERROR
-     - 130 718.0831
-     - Schematized dialog failed to show!
-     -
-     -
-
-   * - ERROR
-     - 60 319.1611
-     - Schematizing left bank lines failed!
-     -
-     -
-
-   * - ERROR
-     - 280 718.1054
-     - Schematizing right bank lines failed!
-     -
-     -
-
-   * - ERROR
-     - 101 218.1607
-     - Exporting XSEC.DAT failed!
-     -
-     -
-
-   * - ERROR
-     - 260 618.0416
-     - Couldn’t read CHANBANK.DAT or reassign right bank coordinates!
-     -
-     -
-
-   * - ERROR
-     - 50 818.0618
-     - Couldn’t process HYCHAN.OUT!
-     -
-     -
-
-   * - ERROR
-     - 240 718.0359
-     - Couldn't join left and right banks!
-     -
-     -
-
-   * - ERROR
-     - 80 618.0456
-     - Couldn't update the inl ets/junctions component using [ SUBCATCHMENT] group from storm drain .INP file!
-     -
-     -
-
-   * - ERROR
-     - 60 319.1631
-     - Interpolation of channel n-values failed!
-     -
-     -
++-------+--------------+-------------------------------------------------+---------------------------------------+
+|  Type |     Code     |                            Message              | Details                               |
++=======+==============+=================================================+=======================================+
+| ERROR | 110 618.1828 | Line 1 Could not save FLO-2D parameters!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 110 618.1816 | Could not save FLO-2D parameters!               |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 110 618.1828 | Line 4 Could not save FLO-2D parameters!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1535 | Exporting CONT.DAT or TOLER.DAT failed!         |                                       |                                   |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1541 | Exporting M ANNINGS_N.DAT or TOPO.DAT failed!   |                                       |                                   |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1542 | Exporting INFLOW.DAT failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1543 | Exporting OUTFLOW.DAT failed!                   |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1543 | Exporting RAIN.DAT failed!                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1558 | Exporting RAINCELL.DAT failed!                  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1559 | Exporting INFIL.DAT failed!                     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1544 | Exporting EVAPOR.DAT failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1623 | Exporting CHAN.DAT failed!                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1607 | Exporting XSEC.DAT failed!                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1608 | Exporting HYSTRUC.DAT failed!                   |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1609 | Exporting STREET.DAT failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 10 1218.161  | Exporting ARF.DAT failed!                       |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1611 | Exporting MULT.DAT failed!                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1539 | Exporting T OLSPATIAL.DAT failed!               |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1612 | Exporting SED.DAT failed!                       |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1614 | Exporting LEVEE.DAT failed!                     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1613 | Exporting FPXSEC.DAT failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1616 | Exporting BREACH.DAT failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1617 | Exporting FPFROUDE.DAT failed!                  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1901 | Exporting SHALLOW N_SPATIAL.DAT failed!         |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1618 | Exporting SWMMFLO.DAT failed!                   |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1619 | Exporting SWMMFLORT.DAT failed!                 |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 10 1218.162  | Exporting SWMMFLORT.DAT failed!                 |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 10 1218.162  | Exporting SWMMOUTF.DAT failed!                  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1621 | Exporting WSURF.DAT failed!                     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1622 | Exporting WSTIME.DAT failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 170 618.0611 | Construction of INP dictionary failed!          |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 170 618.0701 | Couldn't create a [LOSSES] group from storm     |                                       |
+|       |              | drain .INP file!                                |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 170 618.0704 | Couldn't create a [XSECTIONS] group from storm  |                                       |
+|       |              | drain .INP file!                                |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 1 70618.07   | Couldn't create a [OUTFALLS] group from storm   |                                       |
+|       |              | drain .INP file!                                |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 170 618.0701 | Couldn't create a [JUNCTIONS] group from storm  |                                       |
+|       |              | drain .INP file!                                |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 060 319.1604 | Evaluation of ARFs and WRFs failed!             |                                       |
+|       |              |                                                 |                                       |
+|       |              | Please check your Blocked Areas User Layer.     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 060 319.1606 | Evaluation of ARFs and WRFs failed!             |                                       |
+|       |              |                                                 |                                       |
+|       |              | Please check your Blocked Areas User Layer.     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 051 218.2035 | Green-Ampt infiltration failed!                 | While intersecting soil layer         |
+|       |              |                                                 | with grid.                            |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 51 218.2001  | Green-Ampt infiltration failed!                 |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 140 119.1715 | Green-Ampt infiltration failed!                 |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 40 319.1921  | Adding features to Storm Drain Nodes failed!    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 21 019.0629  | Update of Breach Global Data failed!            |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 40 219.2015  | Update of Individual Breach Data failed!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 130 219.0755 | Update of fragility curves failed!              |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 200 618.0707 | Assignment of value failed!                     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 200 618.0705 | Assignment of value from conduits users layer   |                                       |
+|       |              | failed!                                         |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 200 618.0631 | Assignment of value failed!                     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 310 718.1942 | Error populating control variables dialog.      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 110 618.1806 | Could not save FLO-2D parameters!               |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 13 0618.165  | Hazus layers loading failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 130 618.1715 | Hazus layers loading failed!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 80 618.0456  | Uniformization of field values failed!          |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 150 618.0235 | Error while computing buildings statistics!     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 80 618.0456  | Uniformization of field values failed!          |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 40 219.2015  | Update of Individual Breach Data failed!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 20 219.0812  | Couldn't save in lets/junction into User        |                                       |
+|       |              | Storm Drain Nodes!                              |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 100 618.0846 | Error while loading outfalls components!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 210 618.1702 | Error assigning outfall values!                 |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 40 319.1915  | Converting Schematic SD Inlets to User Storm    |                                       |
+|       |              | Drain Nodes failed!                             |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 51 218.1146  | Couldn't load point or/and line layers!         |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 51 218.0559  | There are not defined or visible point layers   |                                       |
+|       |              | to select ‘inlets/junctions’ components!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 51218.06     | There are not defined or visible point layers   |                                       |
+|       |              | to select outfall components!                   |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 51 218.0601  | There are not defined or visible line layers    |                                       |
+|       |              | to select conduits components!                  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.0451  | Creation of Storm Drain Nodes (Inlets) layer    |                                       |
+|       |              | failed!                                         |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.0454  | Creation of Storm Drain Nodes (Outfalls)        |                                       |
+|       |              | layer failed!                                   |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70618.05     | Creation of Storm Drain Conduits User layer     |                                       |
+|       |              | failed!                                         |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 290 718.1934 | Error while displaying elevation of cell        |                                       |
+|       |              | '+ fid                                          |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 60 319.1607  | Assigning grid elevation aborted! Please check  |                                       |
+|       |              | your input layers.                              |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 60 319.1608  | Evaluation of ARFs and WRFs failed!             |                                       |
+|       |              | Please check your Blocked Areas User Layer.     |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 60 319.1609  | Replacing duplicated ARFs and WRFs failed!      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 110 618.1818 | Could not read infiltration global parameters!  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 271 118.1638 | Error schematizing infiltration!                |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 51 218.1839  | Green-Ampt infiltration failed!                 |                                       |
+|       |              | Please check data in your input layers.         |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 40 219.2004  | Assignment of Individual Breach Data failed!    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 210 119.0626 | Assignment of Breach Global Data failed!        |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 40 219.2004  | Assignment of Individual Breach Data failed!    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 130 219.0746 | Saving of Fragility Curve Data failed!          |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 100 219.0646 | Assignment of Individual Multiple Channels      |                                       |
+|       |              | Data failed!                                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 310 818.0824 | Error populating export storm drain INP dialog! |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 80 618.0448  | Reading SWMM input file failed!                 |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 6 0319.161   | Creating Storm Drain Nodes layer failed!        | Please check your SWMM input data.    |
+|       |              |                                                 |                                       |
+|       |              |                                                 | Are the nodes coordinates inside the  |
+|       |              |                                                 | computational domain?                 |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 50 618.1804  | Creation of Storm Drain Conduits layer failed!  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.0851  | Error while exporting [JUNCTIONS] to .INP file! |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.1619  | Error while exporting [OUTFALLS] to .INP file!  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 7 0618.162   | Error while exporting [CONDUITS] to .INP file!  |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.1621  | Error while exporting [XSECTIONS] to .INP file! |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.1622  | Error while exporting [LOSSES] to .INP file!    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 70 618.1623  | Error while exporting [COORDINATES]             |                                       |
+|       |              | to .INP file!                                   |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 160 618.0634 | Couldn't export .INP file!                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 130 718.0831 | Schematized dialog failed to show!              |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 60 319.1611  | Schematizing left bank lines failed!            |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 280 718.1054 | Schematizing right bank lines failed!           |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 101 218.1607 | Exporting XSEC.DAT failed!                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 260 618.0416 | Couldn’t read CHANBANK.DAT or reassign right    |                                       |
+|       |              | bank coordinates!                               |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 50 818.0618  | Couldn’t process HYCHAN.OUT!                    |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 240 718.0359 | Couldn't join left and right banks!             |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 80 618.0456  | Couldn't update the inl ets/junctions component |                                       |
+|       |              | using [SUBCATCHMENT] group from storm drain     |                                       |
+|       |              | .INP file!                                      |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
+| ERROR | 60 319.1631  | Interpolation of channel n-values failed!       |                                       |
++-------+--------------+-------------------------------------------------+---------------------------------------+
 
 
 Warnings
