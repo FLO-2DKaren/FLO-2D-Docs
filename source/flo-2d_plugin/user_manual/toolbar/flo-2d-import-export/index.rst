@@ -8,7 +8,7 @@ components, selected components, or to the \*.HDF5 file.
 .. image:: ../../img/Buttons/importexport001.png
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents
 
    Import from Geopackage
