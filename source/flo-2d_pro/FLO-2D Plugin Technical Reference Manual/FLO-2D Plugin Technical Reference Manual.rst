@@ -9523,13 +9523,13 @@ Errors
 
    * - ERROR
      - 51 218.0559
-     - there are not defined or visible point layers to select ‘inle ts/junctions’ components!
+     - There are not defined or visible point layers to select ‘inle ts/junctions’ components!
      -
      -
 
    * - ERROR
      - 51218.06
-     - there are not defined or visible point layers to select outfall components!
+     - There are not defined or visible point layers to select outfall components!
      -
      -
 
@@ -9589,7 +9589,7 @@ Errors
 
    * - ERROR
      - 271 118.1638
-     - error schematizing infiltration!
+     - Error schematizing infiltration!
      -
      -
 
@@ -9631,13 +9631,13 @@ Errors
 
    * - ERROR
      - 310 818.0824
-     - Error populating export storm drain INP dialog.
+     - Error populating export storm drain INP dialog!
      -
      -
 
    * - ERROR
      - 80 618.0448
-     - Reading SWMM input file failed!"
+     - Reading SWMM input file failed!
      -
      -
 
