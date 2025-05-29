@@ -676,7 +676,7 @@ The area weighted log average is calculated for each grid element from the soil 
 The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
 
 .. math::
-   :label:
+   :label: Eq.
 
    {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
 
