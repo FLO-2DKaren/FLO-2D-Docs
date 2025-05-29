@@ -875,30 +875,18 @@ Landuse with Initial Abstraction.*
 The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.
 10):
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
+   IABSTR\  = \left( \frac{\sum_{}^{}{A_{i}({IA}_{i})}}{A_{GE}} \right)
 
-   * -
-     - ..
-       math:: IABSTR\  = \lef t( \frac{\sum_{}^{}{A_{i}({IA}_{i})}}{A_{GE}} \right)
-     - Eq.
+Where:
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+    *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element and
+    is based on the 3\ :sup:`rd` column of the landuse table.
 
-
-..
-
-   Where:
-
-   *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element and is based on the 3\ :sup:`rd` column of the landuse table.
-
-   The intercepted subareas are computed using the landuse shape file and
-
-   *IABSTR* is added to the INFIL.DAT file for each element.
+The intercepted subareas are computed using the landuse shape file and
+*IABSTR* is added to the INFIL.DAT file for each element.
 
 Green and Ampt (FCDMC Method 2018)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
