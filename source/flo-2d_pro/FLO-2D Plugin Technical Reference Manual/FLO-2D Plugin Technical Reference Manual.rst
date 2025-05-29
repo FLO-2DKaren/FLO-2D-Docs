@@ -9193,73 +9193,73 @@ Errors
 
    * - ERROR
      - 101 218.1541
-     - exporting M ANNINGS_N.DAT or TOPO.DAT failed!
+     - Exporting M ANNINGS_N.DAT or TOPO.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1542
-     - exporting INFLOW.DAT failed!
+     - Exporting INFLOW.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1543
-     - exporting OUTFLOW.DAT failed!
+     - Exporting OUTFLOW.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1543
-     - exporting RAIN.DAT failed!
+     - Exporting RAIN.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1558
-     - exporting RAINCELL.DAT failed!
+     - Exporting RAINCELL.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1559
-     - exporting INFIL.DAT failed!
+     - Exporting INFIL.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1544
-     - exporting EVAPOR.DAT failed!
+     - Exporting EVAPOR.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1623
-     - exporting CHAN.DAT failed!
+     - Exporting CHAN.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1607
-     - exporting XSEC.DAT failed!
+     - Exporting XSEC.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1608
-     - exporting HYSTRUC.DAT failed!
+     - Exporting HYSTRUC.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1609
-     - exporting STREET.DAT failed!
+     - Exporting STREET.DAT failed!
      -
      -
 
    * - ERROR
      - 10 1218.161
-     - exporting ARF.DAT failed!
+     - Exporting ARF.DAT failed!
      -
      -
 
@@ -9271,85 +9271,85 @@ Errors
 
    * - ERROR
      - 101 218.1539
-     - exporting T OLSPATIAL.DAT failed!
+     - Exporting T OLSPATIAL.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1612
-     - exporting SED.DAT failed!
+     - Exporting SED.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1614
-     - exporting LEVEE.DAT failed!
+     - Exporting LEVEE.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1613
-     - exporting FPXSEC.DAT failed!
+     - Exporting FPXSEC.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1616
-     - exporting BREACH.DAT failed!
+     - Exporting BREACH.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1617
-     - exporting FPFROUDE.DAT failed!
+     - Exporting FPFROUDE.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1901
-     - exporting SHALLOW N_SPATIAL.DAT failed!
+     - Exporting SHALLOW N_SPATIAL.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1618
-     - exporting SWMMFLO.DAT failed!
+     - Exporting SWMMFLO.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1619
-     - exporting SWMMFLORT.DAT failed!
+     - Exporting SWMMFLORT.DAT failed!
      -
      -
 
    * - ERROR
      - 10 1218.162
-     - exporting SWMMOUTF.DAT failed!
+     - Exporting SWMMOUTF.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1621
-     - exporting WSURF.DAT failed!
+     - Exporting WSURF.DAT failed!
      -
      -
 
    * - ERROR
      - 101 218.1622
-     - exporting WSTIME.DAT failed!
+     - Exporting WSTIME.DAT failed!
      -
      -
 
    * - ERROR
      - 170 618.0611
-     - construction of INP dictionary failed!
+     - Construction of INP dictionary failed!
      -
      -
 
    * - ERROR
      - 170 618.0701
-     - couldn't create a [LOSSES] group from storm drain .INP file!
+     - Couldn't create a [LOSSES] group from storm drain .INP file!
      -
      -
 
