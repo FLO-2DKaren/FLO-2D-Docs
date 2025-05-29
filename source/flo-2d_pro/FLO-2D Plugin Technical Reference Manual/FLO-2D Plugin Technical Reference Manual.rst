@@ -739,13 +739,13 @@ DTHETA Dry and Normal.*
 
 After the soil layer is intersected with the landuse, DTHETA\ :sub:`parts` attributes are filled.
 DTHETA\ :sub:`wet`, DTHETA\ :sub:`normal`, and DTHETA\ :sub:`dry` attributes are filled for individual parts.
-Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a weighted average for each grid element (Eq.
-4).
+Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a weighted
+average for each grid element equation (4).
 
 .. math::
    :label:
 
-   {\overline{DTHETA}}_{\mathbf{grid}} = \l eft( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
+   {\overline{\DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{\DTHETA}_{i}}{A_{ge}} \right)
 
 Where:
 
