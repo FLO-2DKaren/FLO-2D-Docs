@@ -10226,7 +10226,7 @@ Warnings
      -
      -
      -
-     - {1}"".f ormat(e.errno, e.strerror)
+     - {1}"".format(e.errno, e.strerror)
 
    * - WARNING
      - 0603 19.1726
