@@ -9162,6 +9162,18 @@ Appendix B FLO-2D Plugin Error Codes
 Errors
 ------
 
++-------+--------------+--------------------------------------------------------+
+|  Type |     Code     |                            Message                     |
++=======+==============+========================================================+
+| ERROR | 110 618.1828 | Line 1 Could not save FLO-2D parameters!               |
+|       |              | Line 2 Could not save FLO-2D parameters!               |
++-------+--------------+--------------------------------------------------------+
+|       |              | Line 3 Could not save FLO-2D parameters!               |
++-------+--------------+--------------------------------------------------------+
+| ERROR | 110 618.1828 | Line 4 Could not save FLO-2D parameters!               |
+|       |              | Line 5 Could not save FLO-2D parameters!               |
++-------+--------------+--------------------------------------------------------+
+
 .. list-table::
    :widths: 20 20 20 20 20
    :header-rows: 0
