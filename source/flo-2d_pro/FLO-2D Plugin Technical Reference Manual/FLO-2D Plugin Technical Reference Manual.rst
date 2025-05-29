@@ -9513,85 +9513,115 @@ Warnings
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1702 | Conduit "" + name + "" is faulty!               |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1703 |  + str(no_in_out) + "" conduits have no inlet and/or outlet!               |                                       |
+| WARNING | 060319.1703 | + str(no_in_out) + "" conduits have no          |                                       |
+|         |             | inlet and/or outlet!                            |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1705 | Process failed on schematizing floodplain cross-sections!               |                                       |
+| WARNING | 060319.1705 | Process failed on schematizing floodplain       |                                       |
+|         |             | cross-sections!                                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1706 | Cell size must be positive. Change the feature attribute value in Computational Domain layer.               |                                       |
+| WARNING | 060319.1706 | Cell size must be positive. Change the feature  |                                       |
+|         |             | attribute value in Computational Domain layer.  |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1707 | Cell size must be positive. Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'               |                                       |
+| WARNING | 060319.1707 | Cell size must be positive. Change the feature  |                                       |
+|         |             | attribute value in Computational Domain layer   |                                       |
+|         |             | or default cell size in the project settings.   |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1709 | Creating grid aborted! Please check Computational Domain layer.               |                                       |
+| WARNING | 060319.1709 | Creating grid aborted! Please check             |                                       |
+|         |             | Computational Domain layer.                     |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1710 | Probing grid elevation failed! Please check your raster layer.               |                                       |
+| WARNING | 060319.1710 | Probing grid elevation failed! Please           |                                       |
+|         |             | check your raster layer.                        |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1712 | Calculating grid elevation aborted! Please check elevation points layer.               |                                       |
+| WARNING | 060319.1712 | Calculating grid elevation aborted! Please      |                                       |
+|         |             | check elevation points layer.                   |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1713 | Calculating sampling of grid field aborted! Please check grid layer or input points layer.               |                                       |
+| WARNING | 060319.1713 | Calculating sampling of grid field aborted!     |                                       |
+|         |             | Please check grid layer or input points layer.  |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1714 | Please choose at least one elevation source!               |                                       |
+| WARNING | 060319.1714 | Please choose at least one elevation source!    |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1715 | There are no roughness polygons! Please digitize them before running tool.               |                                       |
+| WARNING | 060319.1715 | There are no roughness polygons! Please         |                                       |
+|         |             | digitize them before running tool.              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1716 | Assigning roughness aborted! Please check roughness layer.               |                                       |
+| WARNING | 060319.1716 | Assigning roughness aborted! Please check       |                                       |
+|         |             |roughness layer.                                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1717 | Evaluation of spatial Froude failed! Please check your Froude Areas (Schematic layer).               |                                       |
+| WARNING | 060319.1717 | Evaluation of spatial Froude failed!            |                                       |
+|         |             | Please check your Froude Areas (Schematic layer)|                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1719 | Evaluation of spatial shallow-n failed! Please check your Shallow-n Areas (Schematic layer).               |                                       |
+| WARNING | 060319.1719 | Evaluation of spatial shallow-n failed! Please  |                                       |
+|         |             | check your Shallow-n Areas (Schematic layer).   |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1720 | Evaluation of spatial gutter failed! Please check your Gutter Areas (Schematic layer).               |                                       |
+| WARNING | 060319.1720 | Evaluation of spatial gutter failed! Please     |                                       |
+|         |             | check your Gutter Areas (Schematic layer).      |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1721 | Selection of no-exchange cells failed! Please check your No-xchange Cells (Tables layer).               |                                       |
+| WARNING | 060319.1721 | Selection of no-exchange cells failed! Please   |                                       |
+|         |             | check your No-xchange Cells (Tables layer).     |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1724 | Calculating SCS Curve Number parameters failed! Please check data in your input layers.'               |                                       |
+| WARNING | 060319.1724 | Calculating SCS Curve Number parameters failed! |                                       |
+|         |             | Please check data in your input layers.         |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1835 | Importing Rainfall Data failed! ({0})                | {1}"".format(e.errno, e.strerror)                                      |
+| WARNING | 060319.1835 | Importing Rainfall Data failed! ({0})           | {1}"".format(e.errno, e.strerror)     |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1726 | Probing grid elevation failed! Please check your raster layer.               |                                       |
+| WARNING | 060319.1726 | Probing grid elevation failed! Please check     |                                       |
+|         |             | your raster layer.                              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1727 | Cell size must be positive.                | Change the feature attribute value in Computational Domain layer.                                      |
+| WARNING | 060319.1727 | Cell size must be positive.                     | Change the feature attribute value in |
+|         |             |                                                 | Computational Domain layer.           |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1728 | Cell size must be positive.                | Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'                                      |
+| WARNING | 060319.1728 | Cell size must be positive.                     | Change the feature attribute value in |
+|         |             |                                                 | Computational Domain layer or default |
+|         |             |                                                 | cell size in the project settings.    |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1729 | SWMM input file\n               |  "" + swmm_file + ""  has no coordinates defined!                                      |
+| WARNING | 060319.1729 | SWMM input file                                 | "" + swmm_file + ""  has no           |
+|         |             |                                                 | coordinates defined!                  |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1730 | SWMM input file\n               |  "" + swmm_file + ""  has no coordinates defined!                                      |
+| WARNING | 060319.1730 | SWMM input file                                 | "" + swmm_file + ""  has no           |
+|         |             |                                                 | coordinates defined!                  |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1731 | Storm Drain point '"" + name + ""' outside domain!               |                                       |
+| WARNING | 060319.1731 | Storm Drain point '"" + name + ""' outside      |                                       |
+|         |             | domain!                                         |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1732 | The following conduit inlets were not found!\n               |  + conduit_inlets_not_found                                       |
+| WARNING | 060319.1732 | The following conduit inlets were not found!    | + conduit_inlets_not_found            |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1733 | The following conduit outlets were not found!\n               |  + conduit_outlets_not_found                                      |
+| WARNING | 060319.1733 | The following conduit outlets were not found!   | + conduit_outlets_not_found           |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1734 |  + str(no_in_out_conduits) + "" conduits have no inlet and/or outlet! The value '?' was assigned to them.\               |                                       |
+| WARNING | 060319.1734 | + str(no_in_out_conduits) + "" conduits         |                                       |
+|         |             | have no inlet and/or outlet! The value '?'      |                                       |
+|         |             | was assigned to them.                           |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1736 | Schematizing of streets aborted! Please check Street Lines layer.               |                                       |
+| WARNING | 060319.1736 | Schematizing of streets aborted! Please check   |                                       |
+|         |             | Street Lines layer.                             |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1742 | Schematizing failed while creating cross-sections!               |                                       |
+| WARNING | 060319.1742 | Schematizing failed while creating              |                                       |
+|         |             | cross-sections!                                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1743 | Schematizing failed while processing attributes!               |                                       |
+| WARNING | 060319.1743 | Schematizing failed while processing attributes!|                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1745 | Schematizing failed while preparing interpolation table!               |                                       |
+| WARNING | 060319.1745 | Schematizing failed while preparing             |                                       |
+|         |             | interpolation table!                            |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1746 | There are no user cross sections defined.               |                                       |
+| WARNING | 060319.1746 | There are no user cross sections defined.       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1747 | CHANRIGHTBANK.EXE execution is disabled!               |                                       |
+| WARNING | 060319.1747 | CHANRIGHTBANK.EXE execution is disabled!        |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1748 | Can't import channels!.\n               | CHAN.DAT doesn't exist                                      |
+| WARNING | 060319.1748 | Can't import channels!.                         | CHAN.DAT doesn't exist                |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1749 | There are no user cross sections defined!              |                                       |
+| WARNING | 060319.1749 | There are no user cross sections defined!       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1751 | Right bank cells selection failed!              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1752 | Right bank cells calculated               |                                       |
+| WARNING | 060319.1752 | Right bank cells calculated                     |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1756 | Interpolation of cross-sections values failed!               |                                       |
+| WARNING | 060319.1756 | Interpolation of cross-sections values failed!  |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1757 | Channel n-values interpolated into CHAN.DAT file!               |                                       |
+| WARNING | 060319.1757 | Channel n-values interpolated into CHAN.DAT     |                                       |
+|         |             | file!                                           |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1758 | Interpolation of channel n-values could not be performed!               |                                       |
+| WARNING | 060319.1758 | Interpolation of channel n-values could         |                                       |
+|         |             | not be performed!                               |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1759 | Interpolation of channel n-values failed!               |                                       |
+| WARNING | 060319.1759 | Interpolation of channel n-values failed!       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 
 
