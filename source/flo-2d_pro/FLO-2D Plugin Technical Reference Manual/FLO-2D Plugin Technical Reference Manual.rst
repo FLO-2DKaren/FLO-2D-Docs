@@ -573,6 +573,7 @@ A rainfall reduction value is calculated for each element in the grid system usi
 *Figure 24.
 Warped Rainfall Raster.*
 
+
 Real-time Rainfall Sampling Tool (NEXRAD Data)
 ----------------------------------------------
 
@@ -591,7 +592,7 @@ grid files to import.
 There is one file for every 5 to 15 minutes of rainfall.
 Figure 25 shows the layout of a \*.asc file and a group of files.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image24.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image26.png
 
 *Figure 25.
 NEXRAD Rainfall \*.ASC File Example.*
@@ -604,7 +605,7 @@ The plugin will export a RAINCELL.DAT file or a binary RAINCELL.HDF5 file.
 These files contain the entire rainfall event.
 Figure 26 shows an example of the rainfall data file.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image25.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image27.png
 
 *Figure 26.
 RAINCELL.DAT.*
@@ -662,7 +663,7 @@ The Calculate Green and Ampt Method intersects the landuse and soils polygons to
 from the external layers.
 Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2023.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image26.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image28.png
 
 *Figure 27.
 Compute Green-Ampt dialog (FCDMC Method 2023)*
@@ -677,7 +678,7 @@ The general calculations are as follows:
 XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
 Figure 28 shows the hydraulic conductivity of the soil layer.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image27.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image29.png
 
 *Figure 28.
 Soil layer with XKSAT.*
@@ -712,7 +713,7 @@ Where:
 
 PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image28.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image30.png
 
 *Figure 29
 Soil Layer with PSIF.*
@@ -747,7 +748,7 @@ Where:
 DTHETA is the soil moisture deficit.
 It ranges in value from zero to the effective porosity of the soil (Figure 30).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image29.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image31.png
 
 *Figure 30
 Soil Layer with DTHETA.*
@@ -756,7 +757,7 @@ DTHETA represents the soil moisture capacity for the start of a rainfall event.
 The initial soil conditions vary with respect to landuse categories like irrigation or ponded water conditions.
 Initial saturation is part of the landuse data (see Figure 31).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image30.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image32.png
 
 *Figure 31.
 Landuse with Initial Saturation Condition.*
@@ -764,7 +765,7 @@ Landuse with Initial Saturation Condition.*
 As a result, DTHETA is split into individual parts that represent the DTHETA (wet, dry or normal).
 DTHETA\ :sub:`wet` is zero, DTHETA\ :sub:`dry` and DTHETA\ :sub:`normal` are calculated for the soil layers for individual soil groups (Figure 32).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image31.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image33.png
 
 *Figure 32.
 DTHETA Dry and Normal.*
@@ -803,7 +804,7 @@ If a grid element is within by a “wet” or “saturated” polygon, the DTHET
 RTIMP is the percent impervious of the landuse (paved surfaces, buildings) and the soil (rockout).
 Figure 33 shows the rock out percentages for the landuse layer.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image32.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image34.png
 
 *Figure 33.
 Landuse with Rockout Percentages.*
@@ -900,7 +901,7 @@ The Green-Ampt parameters are printed to the spatially variable lines of the INF
 The INFIL.DAT structure is outlined in the Data Input Manual at the INFIL.DAT tab.
 More information on how FLO-2D uses the Green-Ampt method to calculate rainfall runoff is available in the FLO-2D Pro Reference Manual.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image33.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image35.png
 
 *Figure 34.
 Example INFIL.DAT file.*
@@ -911,7 +912,7 @@ VC
 VC is the vegetative cover related to the topsoil horizon.
 Figure 35 shows the vegetative cover of the landuse layer.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image34.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image36.png
 
 *Figure 35.
 Landuse with Vegetative Cover.*
@@ -956,7 +957,7 @@ IA
 IA is the initial abstraction for each grid element.
 Figure 36 shows the initial abstraction for the landuse layer.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image35.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image37.png
 
 *Figure 36.
 Landuse with Initial Abstraction.*
@@ -995,7 +996,7 @@ Green and Ampt (FCDMC Method 2018)
 The 2018 method for Green-Ampt uses a different calculator for PSIF and DTHETA.
 Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2018.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image36.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image38.png
 
 *Figure 37.
 Green-Ampt dialog (FCDMC Method 2018).*
@@ -1018,11 +1019,11 @@ Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
 For each grid element, compute volumetric soil moisture deficiency *(DTHETA)* according to the following table.
 The specific table used for DTHETA depends on the *saturation* field of the soil table (6th column).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image55.png
-
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image56.png
-
 .. image:: ../img/flo-2d-plugin-technical-reference-manual/image57.png
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image58.png
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image59.png
 
 .. _moving-window-optimization-1:
 
@@ -1034,7 +1035,7 @@ This window is a geometric bounding box that samples a small set of grid element
 The window size is 100 x 100 grid elements.
 The polygons are clipped to the window to eliminate duplicate calculations.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image58.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image60.png
 
 SCS Curve
 ~~~~~~~~~
@@ -1083,7 +1084,7 @@ channel element in a segment.
 Multiple polyline features are used to represent separate channel segments.
 Figure 38 shows a sample of the two separate layers.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image37.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image39.png
 
 *Figure 38.
 Left Bank Layers.*
@@ -1098,7 +1099,7 @@ The data can also be defined for trapezoidal or rectangular channels.
 The last data source is a variable area equation such as: A = a*d^b.
 Where the area is defined by a coefficient, depth, and exponent.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image38.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image40.png
 
 *Figure 39.
 Cross Section User Layer.*
@@ -1140,7 +1141,7 @@ The *Import HEC-RAS* tool is used to import channel data from HEC-RAS geometry f
 The RAS project must be georeferenced and in the same coordinate system as the GeoPackage.
 This system can import channel geometry, full cross sections, bank to bank cross sections, interpolated cross sections and levees.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image39.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image41.png
 
 *Figure 40.
 HEC-RAS Import.*
@@ -1154,7 +1155,7 @@ If the channel data is in the wrong order, it should be corrected before being i
 Cross sections are saved to the Cross Section layer in the order by which they were written to the geometry file.
 The cross section names are extracted from the river mile field (Figure 41).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image40.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image42.png
 
 Figure 41.
 Channel Cross Sections.*
@@ -1173,7 +1174,7 @@ are well documented in the FLO-2D Plugin User Manual and a detailed tutorial is 
 <https://documentation.flo-2d.com/Workshops/Lesson%203.html>`__.
 This document will discuss data management and important algorithms in the calculators.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image41.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image43.png
 
 *Figure 42.
 Storm Drain Layout in QGIS.*
@@ -1182,7 +1183,7 @@ The Storm Drain data files (SWMM.INP and \*.DAT files) can be developed from scr
 from shapefiles to the storm drain features.
 Figure 43 shows the *Storm Drain* dialog box.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image42.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image44.png
 
 *Figure 43.
 Storm Drain Dialog Box.*
@@ -1193,7 +1194,7 @@ more information about the required data for each component).
 If the storm drain shapefiles exist, they can be imported into the QGIS project.
 If the storm drain shapefiles do not exist, they can be digitized into *Storm Drain User Layers* (Figure 44).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image43.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image45.png
 
 *Figure 44.
 Storm Drain Shapefiles.*
@@ -1205,7 +1206,7 @@ The Storm Drain Configuration Tool (Figure 45), is the main processing tool for 
 The algorithms copy features and attributes from shapefiles into the storm drain tables and layers.
 This organizes the data in a manner that is ideal for the swmm.inp, SWMMFLO.DAT, and SWMMOUTF.DAT data files.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image44.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image46.png
 
 *Figure 45.
 Select Components from Shapefile Layer: Inlet/Junctions.*
@@ -1213,7 +1214,7 @@ Select Components from Shapefile Layer: Inlet/Junctions.*
 The data layout and organization prevent array allocation errors between FLO-2D engine and the storm drain engine.
 The features are written in the correct order from between swmm.inp and SWMMFLO.DAT.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image45.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image47.png
 
 *Figure 46.
 Data Organization Inlets.*
@@ -1222,7 +1223,7 @@ The finished tables can be validated and edited with the node and link dialog bo
 These boxes highlight and pan/zoom to the current feature and allow extra data to be assigned.
 Changes to these dialog boxes automatically update the storm drain arrays.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image46.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image48.png
 
 *Figure 47.
 Review Attributes from Storm Drain Table.*
@@ -1251,7 +1252,7 @@ An existing \*.INP file can be imported with the buttons in Figure 48 once the F
 The *Storm Drain Editor* has an option to Import SWMM.inp that can be used to read an existing \*.INP file.
 Storm drain systems created using other software can be imported if the format is compatible with EPA SWMM Version 5.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image47.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image49.png
 
 *Figure 48.
 Import Export SWMM.INP Options.*
@@ -1265,7 +1266,7 @@ Auto assign nodes
 The auto assign tool (Figure 49) scans the polyline data and finds the nodes at the upstream and downstream end.
 The node names fields from the Link tables are filled automatically.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image48.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image50.png
 
 *Figure 49.
 Auto Assign Tool.*
@@ -1278,7 +1279,7 @@ It is important that the links are digitized in the correct flow direction.
 Arrows are used in the feature style to represent the flow direction.
 Figure 50 shows the nodes next to each end of the link and the flow direction is shown by the blue arrows.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image49.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image51.png
 
 *Figure 50.
 Link Node and Flow Direction.*
@@ -1290,12 +1291,12 @@ The rating table and pump curve tools (Figure 51) can import or build tabular da
 These tools are connected to the table and plotting windows shown in Figure 52.
 These tools facilitate data assignment by automatically finding node names or link names and assigning the data with the same name.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image50.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image52.png
 
 *Figure 51.
 Rating Tables and Pump Curves.*
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image51.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image53.png
 
 *Figure 52.
 Table Editor and Plotting Window.*
@@ -1309,7 +1310,7 @@ The user must define ground elevation, water surface elevation and maximum flow 
 An adjustment factor can be applied to calculate the finished floor elevation.
 Figure 53 shows the tool requirements.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image52.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image54.png
 
 *Figure 53.
 Hazus Tool.*
@@ -1332,6 +1333,13 @@ The requirements and calculations are outlined below for each layer.
 - **Join building statistics to building polygons** – This QGIS process writes the stats back to the Buildings layer.
 
 - **Rasterize** – This QGIS process rasterizes building depth and water surface data for Hazus.
+
+
+
+
+
+
+
 
 References
 ==========
