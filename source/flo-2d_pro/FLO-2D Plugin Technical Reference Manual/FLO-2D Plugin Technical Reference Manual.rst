@@ -1019,11 +1019,11 @@ Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
 For each grid element, compute volumetric soil moisture deficiency *(DTHETA)* according to the following table.
 The specific table used for DTHETA depends on the *saturation* field of the soil table (6th column).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image57.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO056.png
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image58.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO057.png
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image59.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO058.png
 
 .. _moving-window-optimization-1:
 
