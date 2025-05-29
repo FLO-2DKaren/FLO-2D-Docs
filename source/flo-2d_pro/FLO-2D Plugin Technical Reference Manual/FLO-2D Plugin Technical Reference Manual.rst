@@ -543,30 +543,18 @@ The final RAIN\ :sub:`arf` variable is calculated as a ratio of the local rain d
 A rainfall reduction value is calculated for each element in the grid system using Eq.
 1.
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
+   {RAIN}_{arf} = \frac{{RAIN}_{grid}}{{RAIN}_{\max}}
 
-   * -
-     - ..
-       math :: {RAIN}_{arf} = \frac{{RAIN}_{grid}}{{RAIN}_{\max}}
-     - Eq.
+Where:
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+    RAIN\ :sub:`arf` = A spatially reduced rainfall value
 
+    RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
 
-..
-
-   Where:
-
-   RAIN\ :sub:`arf` = A spatially reduced rainfall value
-
-   RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
-
-   RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
+    RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
 .. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO054.png
 
@@ -1334,14 +1322,6 @@ The requirements and calculations are outlined below for each layer.
 - **Join building statistics to building polygons** – This QGIS process writes the stats back to the Buildings layer.
 
 - **Rasterize** – This QGIS process rasterizes building depth and water surface data for Hazus.
-
-
-
-
-
-
-
-
 
 
 
