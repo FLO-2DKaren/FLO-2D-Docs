@@ -9355,19 +9355,19 @@ Errors
 
    * - ERROR
      - 170 618.0704
-     - couldn't create a [XSECTIONS] group from storm drain .INP file!
+     - Couldn't create a [XSECTIONS] group from storm drain .INP file!
      -
      -
 
    * - ERROR
      - 1 70618.07
-     - couldn't create a [OUTFALLS] group from storm drain .INP file!
+     - Couldn't create a [OUTFALLS] group from storm drain .INP file!
      -
      -
 
    * - ERROR
      - 170 618.0701
-     - couldn't create a [JUNCTIONS] group from storm drain .INP file!
+     - Couldn't create a [JUNCTIONS] group from storm drain .INP file!
      -
      -
 
@@ -9387,7 +9387,7 @@ Errors
      - 051 218.2035
      - Green-Ampt infiltration failed\\n
      -
-     - while intersecting soil layer with grid.
+     - While intersecting soil layer with grid.
 
    * - ERROR
      - 51 218.2001
@@ -9409,43 +9409,43 @@ Errors
 
    * - ERROR
      - 21 019.0629
-     - update of Breach Global Data failed!
+     - Update of Breach Global Data failed!
      -
      -
 
    * - ERROR
      - 40 219.2015
-     - update of Individual Breach Data failed!"
+     - Update of Individual Breach Data failed!"
      -
      -
 
    * - ERROR
      - 130 219.0755
-     - update of fragility curves failed!
+     - Update of fragility curves failed!
      -
      -
 
    * - ERROR
      - 200 618.0707
-     - assignment of value failed!
+     - Assignment of value failed!
      -
      -
 
    * - ERROR
      - 200 618.0705
-     - assignment of value from conduits users layer failed!
+     - Assignment of value from conduits users layer failed!
      -
      -
 
    * - ERROR
      - 200 618.0631
-     - assignment of value failed!
+     - Assignment of value failed!
      -
      -
 
    * - ERROR
      - 310 718.1942
-     - error populating control variables dialog.
+     - Error populating control variables dialog.
      -
      -
 
@@ -9469,7 +9469,7 @@ Errors
 
    * - ERROR
      - 80 618.0456
-     - U niformization of field values failed!
+     - Uniformization of field values failed!
      -
      -
 
@@ -9481,31 +9481,31 @@ Errors
 
    * - ERROR
      - 80 618.0456
-     - U niformization of field values failed!
+     - Uniformization of field values failed!
      -
      -
 
    * - ERROR
      - 40 219.2015
-     - update of Individual Breach Data failed!
+     - Update of Individual Breach Data failed!
      -
      -
 
    * - ERROR
      - 20 219.0812
-     - couldn't save in lets/junction into User Storm Drain Nodes!
+     - Couldn't save in lets/junction into User Storm Drain Nodes!
      -
      -
 
    * - ERROR
      - 100 618.0846
-     - error while loading outfalls components!
+     - Error while loading outfalls components!
      -
      -
 
    * - ERROR
      - 210 618.1702
-     - error assigning outfall values!
+     - Error assigning outfall values!
      -
      -
 
@@ -9535,31 +9535,31 @@ Errors
 
    * - ERROR
      - 51 218.0601
-     - there are not defined or visible line layers to select conduits components!
+     - There are not defined or visible line layers to select conduits components!
      -
      -
 
    * - ERROR
      - 70 618.0451
-     - creation of Storm Drain Nodes (Inlets) layer failed!
+     - Creation of Storm Drain Nodes (Inlets) layer failed!
      -
      -
 
    * - ERROR
      - 70 618.0454
-     - creation of Storm Drain Nodes (Outfalls) layer failed!
+     - Creation of Storm Drain Nodes (Outfalls) layer failed!
      -
      -
 
    * - ERROR
      - 70618.05
-     - creation of Storm Drain Conduits User layer failed!
+     - Creation of Storm Drain Conduits User layer failed!
      -
      -
 
    * - ERROR
      - 290 718.1934
-     - error while displaying elevation of cell ' + fid
+     - Error while displaying elevation of cell ' + fid
      -
      -
 
@@ -9601,19 +9601,19 @@ Errors
 
    * - ERROR
      - 40 219.2004
-     - assignment of Individual Breach Data failed!
+     - Assignment of Individual Breach Data failed!
      -
      -
 
    * - ERROR
      - 210 119.0626
-     - assignment of Breach Global Data failed!
+     - Assignment of Breach Global Data failed!
      -
      -
 
    * - ERROR
      - 40 219.2004
-     - assignment of Individual Breach Data failed!
+     - Assignment of Individual Breach Data failed!
      -
      -
 
@@ -9625,19 +9625,19 @@ Errors
 
    * - ERROR
      - 100 219.0646
-     - assignment of Individual Multiple Channels Data failed!
+     - Assignment of Individual Multiple Channels Data failed!
      -
      -
 
    * - ERROR
      - 310 818.0824
-     - error populating export storm drain INP dialog.
+     - Error populating export storm drain INP dialog.
      -
      -
 
    * - ERROR
      - 80 618.0448
-     - reading SWMM input file failed!"
+     - Reading SWMM input file failed!"
      -
      -
 
