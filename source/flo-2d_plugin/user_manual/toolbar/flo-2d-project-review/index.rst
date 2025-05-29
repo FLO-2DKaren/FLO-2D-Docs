@@ -10,6 +10,7 @@ warnings or errors within the FLO-2D Project.
 
 .. toctree::
    :maxdepth: 1
+   :caption: FLO-2D Project Review Tools
 
    Hazus Tool
    Debug

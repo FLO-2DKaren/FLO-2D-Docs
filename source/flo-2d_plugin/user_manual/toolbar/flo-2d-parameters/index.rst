@@ -8,7 +8,8 @@ and running the Levee Tool.
 .. image:: ../../img/Buttons/controlparams.png
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: FLO-2D Parameters Tools
 
    Control Variables
    Mud and Sediment Transport Tool

@@ -5,6 +5,7 @@ Located under the Run FLO-2D Pro button are various FLO-2D executables/plugins, 
 
 .. toctree::
    :maxdepth: 1
+   :caption: Run FLO-2D Pro Tools
 
    FLO-2D Settings
    Quick Run FLO-2D Pro

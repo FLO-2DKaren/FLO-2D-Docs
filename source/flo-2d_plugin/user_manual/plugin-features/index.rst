@@ -26,7 +26,8 @@ Other helpful Plugins include:
 
 .. toctree::
    :hidden:
-   :maxdepth: 4
+   :maxdepth: 2
+   :caption: FLO-2D General QGIS and FLO-2D Plugin Information
 
    Data Storage
    View Options
