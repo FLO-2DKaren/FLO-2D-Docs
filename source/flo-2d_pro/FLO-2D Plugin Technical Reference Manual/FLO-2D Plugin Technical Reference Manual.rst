@@ -1035,7 +1035,7 @@ This window is a geometric bounding box that samples a small set of grid element
 The window size is 100 x 100 grid elements.
 The polygons are clipped to the window to eliminate duplicate calculations.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image60.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO058.png
 
 SCS Curve
 ~~~~~~~~~
