@@ -9390,8 +9390,47 @@ Errors
 | ERROR | 60319.1631  | Interpolation of channel n-values failed!       |                                       |
 +-------+-------------+-------------------------------------------------+---------------------------------------+
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Warnings
 --------
+
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| Type    | Code        | Message                                         | Details                               |
++=========+=============+=================================================+=======================================+
+| WARNING | 060319.1831 | Levee user lines required!                      |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 110618.1816 | Assigning values aborted! Please check          |                                       |
+|         |             | your crest elevation source layers.             |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1808 | File DEPFP.OUT is needed for the Hazus          | + project_dir                         |
+|         |             | flooding analysis.                              |                                       |
+|         |             |                                                 |                                       |
+|         |             | It is not in the current project directory:     |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1810 | Please choose at least one conversion source!   |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
 
 .. List-table::
    :Widths: 14 14 14 14 14 14 14
@@ -9407,73 +9446,19 @@ Warnings
      -
 
    * - WARNING
-     - 0603 19.1831
-     - Levee user lines required!
-     -
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1806
-     - Assigning values aborted! Please check your crest elevation source layers.
-     -
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1808
-     - File DEPFP.OUT is needed for the Hazus flooding analysis.
-       It is not in the current project directory:\\n
-     - +
-       p
-       r
-       o
-       j
-       e
-       c
-       t
-       _
-       d
-       i
-       r
-       )
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1810
-     - Please choose at least one conversion source!
-     -
-     -
-     -
-     -
-
-   * - WARNING
      - 0603 19.1811
      - Please choose at least one conversion source!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1612
      - Can't import channels!.\\n
      -
-     - C H A N.
-       D A T d o e s n ' t e x i s t .
-     -
-     -
+     - CHAN.DAT doesn't exist .
 
    * - WARNING
      - 0603 19.1632
      - Can't import channels!.\\n
      -
-     - C H A N B A N K.
-       D A T d o e s n ' t e x i s t .
+     - CHANBANK.DAT doesn't exist .
      -
      -
 
@@ -9483,8 +9468,7 @@ Warnings
        Check CHAN.DAT and CHANBANK.DAT files.
        Import channels failed!.\\n
      -
-     - M a y b e t h e n u m b e r o f l e f t b a n k a n d r i g h t b a n k c e l l s a r e d i f f e r e n t .
-     -
+     - Maybe the number of leftbank and rightbank  cells are different
      -
 
    * - WARNING
@@ -9507,150 +9491,60 @@ Warnings
    * - WARNING
      - 0603 19.1633
      - You need at least 2 cross-sections crossing left bank line!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1618
      - Error while creating schematic Left banks!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 2207 18.0741
      - Error while creating schematic Right banks!
-     -
-     -
-     -
-     -
-
-   * - WARNING
+    * - WARNING
      - 1803 19.1431
      - Schematizing of inflow aborted!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 1803 19.1434
      - Schematizing of outflows aborted!
-     -
-     -
-     -
-     -
-
-   * - WARNING
+     * - WARNING
      - 0603 19.1641
      - Element "" + elem + "" has a cross section of type 'R' without data!
-     -
-     -
-     -
-     -
-
-   * - WARNING
+      * - WARNING
      - 0603 19.1624
      - Element "" + elem + "" has a cross section of type 'V' without data!
-     -
-     -
-     -
-     -
-
-   * - WARNING
+       * - WARNING
      - 0603 19.1625
      - Element "" + elem + "" has a cross section of type 'T' without data!
-     -
-     -
-     -
-     -
-
-   * - WARNING
+       * - WARNING
      - 0603 19.1626
      - Element "" + elem + "" has a cross section of type 'N' without data!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1627
      - Probing grid elevation failed! Please check your raster layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1629
      - Cell size must be positive.
        Change the feature attribute value in Computational Domain layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1630
      - Cell size must be positive.
        Change the feature attribute value in Computational Domain layer or default cell size in the project settings.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1632
      - Assignment of building areas to building polygons.
        Not implemented yet!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1650
      - Evaluation of buildings adjustment factor failed! Please check your Building Areas (Schematic layer).
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1612
      - Please choose at least one crest elevation source!')
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1653
      - Couldn't create new database {}"".format(gpkg_path)
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1822
      - Error processing geometry of inlet/junction '"" + name
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1656
      - Inlet/junction "" + name + "" is faulty!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1657
      - The following inlets/junctions are outside the computational domain!\\n
@@ -9684,11 +9578,6 @@ Warnings
    * - WARNING
      - 0603 19.1659
      - Outfall "" + name + "" is faulty!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1700
      - The following outfalls are outside the computational domain!\\n
@@ -9733,149 +9622,61 @@ Warnings
      - 0603 19.1703
      - + str(no_in_out) + "" conduits
        have no inlet and/or outlet!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1705
      - Process failed on schematizing floodplain cross-sections!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1706
      - Cell size must be positive.
        Change the feature attribute value in Computational Domain layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1707
      - Cell size must be positive.
        Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1709
      - Creating grid aborted! Please check Computational Domain layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1710
      - Probing grid elevation failed! Please check your raster layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1712
      - Calculating grid elevation aborted! Please check elevation points layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1713
      - Calculating sampling of grid field aborted! Please check grid layer or input points layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1714
      - Please choose at least one elevation source!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1715
      - There are no roughness polygons! Please digitize them before running tool.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1716
      - Assigning roughness aborted! Please check roughness layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1717
      - Evaluation of spatial Froude failed! Please check your Froude Areas (Schematic layer).
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1719
      - Evaluation of spatial shallow-n failed! Please check your Shallow-n Areas (Schematic layer).
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1720
      - Evaluation of spatial gutter failed! Please check your Gutter Areas (Schematic layer).
-     -
-     -
-     -
-     -
-
-   * - WARNING
+    * - WARNING
      - 0603 19.1721
      - Selection of no-exchange cells failed! Please check your No-xchange Cells (Tables layer).
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1724
      - Calculating SCS Curve Number parameters failed! Please check data in your input layers.'
-     -
-     -
-     -
-     -
-
-   * - WARNING
+      * - WARNING
      - 0603 19.1835
      - Importing Rainfall Data failed! ({0})
-     -
-     -
-     -
      - {1}"".format(e.errno, e.strerror)
 
    * - WARNING
      - 0603 19.1726
      - Probing grid elevation failed! Please check your raster layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1727
      - Cell size must be positive.
@@ -9913,11 +9714,6 @@ Warnings
    * - WARNING
      - 0603 19.1731
      - Storm Drain point '"" + name + ""' outside domain!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1732
      - The following conduit inlets were not found!\\n
@@ -9966,59 +9762,25 @@ Warnings
        conduits have no inlet and/or
        outlet! The value '?' was
        assigned to them.\\
-     -
-     -
-     -
-     -
 
    * - WARNING
      - 0603 19.1736
      - Schematizing of streets aborted! Please check Street Lines layer.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1742
      - Schematizing failed while creating cross-sections!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1743
      - Schematizing failed while processing attributes!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1745
      - Schematizing failed while preparing interpolation table!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1746
      - There are no user cross sections defined.
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1747
      - CHANRIGHTBANK.EXE execution is disabled!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1748
      - Can't import channels!.\\n
@@ -10030,59 +9792,24 @@ Warnings
    * - WARNING
      - 0603 19.1749
      - There are no user cross sections defined!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1751
      - Right bank cells selection failed!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1752
      - Right bank cells calculated
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1756
      - Interpolation of cross-sections values failed!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1757
      - Channel n-values interpolated into CHAN.DAT file!
-     -
-     -
-     -
-     -
-
-   * - WARNING
+    * - WARNING
      - 0603 19.1758
      - Interpolation of channel n-values could not be performed!
-     -
-     -
-     -
-     -
-
    * - WARNING
      - 0603 19.1759
      - Interpolation of channel n-values failed!
-     -
-     -
-     -
-     -
-
 
 Info Dialogs
 ------------
