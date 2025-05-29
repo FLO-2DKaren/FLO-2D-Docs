@@ -9373,7 +9373,9 @@ Errors
 
    * - ERROR
      - 060 319.1604
-     - Evaluation of ARFs and WRFs failed! \n Please check your Blocked Areas User Layer.
+     - Evaluation of ARFs and WRFs failed!
+
+       Please check your Blocked Areas User Layer.
      -
      -
 
