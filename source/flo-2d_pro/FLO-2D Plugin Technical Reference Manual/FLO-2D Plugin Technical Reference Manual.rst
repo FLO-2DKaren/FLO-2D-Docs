@@ -9444,338 +9444,137 @@ Warnings
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1613 | Export to ""GUTTER.DAT"" failed!                |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1615 | Assignment of building areas to building polygons. Not implemented yet!'               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1633 | You need at least 2 cross-sections crossing left bank line!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1618 | Error while creating schematic Left banks!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 220718.0741 | Error while creating schematic Right banks!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 180319.1431 | Schematizing of inflow aborted!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 180319.1434 | Schematizing of outflows aborted!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1641 | Element "" + elem + "" has a cross section of type 'R' without data!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1624 | Element "" + elem + "" has a cross section of type 'V' without data!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1625 | Element "" + elem + "" has a cross section of type 'T' without data!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1626 | Element "" + elem + "" has a cross section of type 'N' without data!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1627 | Probing grid elevation failed! Please check your raster layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1629 | Cell size must be positive. Change the feature attribute value in Computational Domain layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1630 | Cell size must be positive. Change the feature attribute value in Computational Domain layer or default cell size in the project settings.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1632 | Assignment of building areas to building polygons. Not implemented yet!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1650 | Evaluation of buildings adjustment factor failed! Please check your Building Areas (Schematic layer).               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1612 | Please choose at least one crest elevation source!')               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1653 | Couldn't create new database {}"".format(gpkg_path)               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1822 | Error processing geometry of inlet/junction '"" + name                |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1656 | Inlet/junction  "" + name + ""  is faulty!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1657 | The following inlets/junctions are outside the computational domain!\n               |  + outside_inlets                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1658 | Error processing geometry of outfall'"" + name                |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1659 | Outfall  "" + name + ""  is faulty!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1700 | The following outfalls are outside the computational domain!\n               |  + outside_outfalls                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1701 | Error processing geometry of conduit '"" + conduit_name               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1702 | Conduit "" + name + "" is faulty!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1703 |  + str(no_in_out) + "" conduits have no inlet and/or outlet!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1705 | Process failed on schematizing floodplain cross-sections!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1706 | Cell size must be positive. Change the feature attribute value in Computational Domain layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1707 | Cell size must be positive. Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1709 | Creating grid aborted! Please check Computational Domain layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1710 | Probing grid elevation failed! Please check your raster layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1712 | Calculating grid elevation aborted! Please check elevation points layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1713 | Calculating sampling of grid field aborted! Please check grid layer or input points layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1714 | Please choose at least one elevation source!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1715 | There are no roughness polygons! Please digitize them before running tool.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1716 | Assigning roughness aborted! Please check roughness layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1717 | Evaluation of spatial Froude failed! Please check your Froude Areas (Schematic layer).               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1719 | Evaluation of spatial shallow-n failed! Please check your Shallow-n Areas (Schematic layer).               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1720 | Evaluation of spatial gutter failed! Please check your Gutter Areas (Schematic layer).               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1721 | Selection of no-exchange cells failed! Please check your No-xchange Cells (Tables layer).               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1724 | Calculating SCS Curve Number parameters failed! Please check data in your input layers.'               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1835 | Importing Rainfall Data failed! ({0})                | {1}"".format(e.errno, e.strerror)                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1726 | Probing grid elevation failed! Please check your raster layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1727 | Cell size must be positive.                | Change the feature attribute value in Computational Domain layer.                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1728 | Cell size must be positive.                | Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1729 | SWMM input file\n               |  "" + swmm_file + ""  has no coordinates defined!                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1730 | SWMM input file\n               |  "" + swmm_file + ""  has no coordinates defined!                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1731 | Storm Drain point '"" + name + ""' outside domain!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1732 | The following conduit inlets were not found!\n               |  + conduit_inlets_not_found                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1733 | The following conduit outlets were not found!\n               |  + conduit_outlets_not_found                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1734 |  + str(no_in_out_conduits) + "" conduits have no inlet and/or outlet! The value '?' was assigned to them.\               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1736 | Schematizing of streets aborted! Please check Street Lines layer.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1742 | Schematizing failed while creating cross-sections!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1743 | Schematizing failed while processing attributes!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1745 | Schematizing failed while preparing interpolation table!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1746 | There are no user cross sections defined.               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1747 | CHANRIGHTBANK.EXE execution is disabled!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1748 | Can't import channels!.\n               | CHAN.DAT doesn't exist                                      |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1749 | There are no user cross sections defined!              |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1751 | Right bank cells selection failed!              |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1752 | Right bank cells calculated               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1756 | Interpolation of cross-sections values failed!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1757 | Channel n-values interpolated into CHAN.DAT file!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1758 | Interpolation of channel n-values could not be performed!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1759 | Interpolation of channel n-values failed!               |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
 
-   * - WARNING
-     - 0603 19.1615
-     - Assignment of building areas to building polygons.
-       Not implemented yet!'
-     -
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1633
-     - You need at least 2 cross-sections crossing left bank line!
-   * - WARNING
-     - 0603 19.1618
-     - Error while creating schematic Left banks!
-   * - WARNING
-     - 2207 18.0741
-     - Error while creating schematic Right banks!
-    * - WARNING
-     - 1803 19.1431
-     - Schematizing of inflow aborted!
-   * - WARNING
-     - 1803 19.1434
-     - Schematizing of outflows aborted!
-     * - WARNING
-     - 0603 19.1641
-     - Element "" + elem + "" has a cross section of type 'R' without data!
-      * - WARNING
-     - 0603 19.1624
-     - Element "" + elem + "" has a cross section of type 'V' without data!
-       * - WARNING
-     - 0603 19.1625
-     - Element "" + elem + "" has a cross section of type 'T' without data!
-       * - WARNING
-     - 0603 19.1626
-     - Element "" + elem + "" has a cross section of type 'N' without data!
-   * - WARNING
-     - 0603 19.1627
-     - Probing grid elevation failed! Please check your raster layer.
-   * - WARNING
-     - 0603 19.1629
-     - Cell size must be positive.
-       Change the feature attribute value in Computational Domain layer.
-   * - WARNING
-     - 0603 19.1630
-     - Cell size must be positive.
-       Change the feature attribute value in Computational Domain layer or default cell size in the project settings.
-   * - WARNING
-     - 0603 19.1632
-     - Assignment of building areas to building polygons.
-       Not implemented yet!
-   * - WARNING
-     - 0603 19.1650
-     - Evaluation of buildings adjustment factor failed! Please check your Building Areas (Schematic layer).
-   * - WARNING
-     - 0603 19.1612
-     - Please choose at least one crest elevation source!')
-   * - WARNING
-     - 0603 19.1653
-     - Couldn't create new database {}"".format(gpkg_path)
-   * - WARNING
-     - 0603 19.1822
-     - Error processing geometry of inlet/junction '"" + name
-   * - WARNING
-     - 0603 19.1656
-     - Inlet/junction "" + name + "" is faulty!
-   * - WARNING
-     - 0603 19.1657
-     - The following inlets/junctions are outside the computational domain!\\n
-     -
-     -
-     - +
-       o
-       u
-       t
-       s
-       i
-       d
-       e
-       _
-       i
-       n
-       l
-       e
-       t
-       s
-     -
-
-   * - WARNING
-     - 0603 19.1658
-     - Error processing geometry of outfall'"" + name
-     -
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1659
-     - Outfall "" + name + "" is faulty!
-   * - WARNING
-     - 0603 19.1700
-     - The following outfalls are outside the computational domain!\\n
-     -
-     -
-     - +
-       o
-       u
-       t
-       s
-       i
-       d
-       e
-       _
-       o
-       u
-       t
-       f
-       a
-       l
-       l
-       s
-     -
-
-   * - WARNING
-     - 0603 19.1701
-     - Error processing geometry of conduit '"" + conduit_name
-     -
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1702
-     - Conduit "" + name + "" is faulty!
-     -
-     -
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1703
-     - + str(no_in_out) + "" conduits
-       have no inlet and/or outlet!
-   * - WARNING
-     - 0603 19.1705
-     - Process failed on schematizing floodplain cross-sections!
-   * - WARNING
-     - 0603 19.1706
-     - Cell size must be positive.
-       Change the feature attribute value in Computational Domain layer.
-   * - WARNING
-     - 0603 19.1707
-     - Cell size must be positive.
-       Change the feature attribute value in Computational Domain layer or default cell size in the project settings.'
-   * - WARNING
-     - 0603 19.1709
-     - Creating grid aborted! Please check Computational Domain layer.
-   * - WARNING
-     - 0603 19.1710
-     - Probing grid elevation failed! Please check your raster layer.
-   * - WARNING
-     - 0603 19.1712
-     - Calculating grid elevation aborted! Please check elevation points layer.
-   * - WARNING
-     - 0603 19.1713
-     - Calculating sampling of grid field aborted! Please check grid layer or input points layer.
-   * - WARNING
-     - 0603 19.1714
-     - Please choose at least one elevation source!
-   * - WARNING
-     - 0603 19.1715
-     - There are no roughness polygons! Please digitize them before running tool.
-   * - WARNING
-     - 0603 19.1716
-     - Assigning roughness aborted! Please check roughness layer.
-   * - WARNING
-     - 0603 19.1717
-     - Evaluation of spatial Froude failed! Please check your Froude Areas (Schematic layer).
-   * - WARNING
-     - 0603 19.1719
-     - Evaluation of spatial shallow-n failed! Please check your Shallow-n Areas (Schematic layer).
-   * - WARNING
-     - 0603 19.1720
-     - Evaluation of spatial gutter failed! Please check your Gutter Areas (Schematic layer).
-    * - WARNING
-     - 0603 19.1721
-     - Selection of no-exchange cells failed! Please check your No-xchange Cells (Tables layer).
-   * - WARNING
-     - 0603 19.1724
-     - Calculating SCS Curve Number parameters failed! Please check data in your input layers.'
-      * - WARNING
-     - 0603 19.1835
-     - Importing Rainfall Data failed! ({0})
-     - {1}"".format(e.errno, e.strerror)
-
-   * - WARNING
-     - 0603 19.1726
-     - Probing grid elevation failed! Please check your raster layer.
-   * - WARNING
-     - 0603 19.1727
-     - Cell size must be positive.
-     -
-     - C h a n g e t h e f e a t u r e a t t r i b u t e v a l u e i n C o m p u t a t i o n a l D o m a i n l a y e r .
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1728
-     - Cell size must be positive.
-     -
-     - C h a n g e t h e f e a t u r e a t t r i b u t e v a l u e i n C o m p u t a t i o n a l D o m a i n l a y e r o r d e f a u l t c e l l s i z e i n
-       t h e p r o j e c t s e t t i n g s.
-       '
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1729
-     - SWMM input file\\n
-     -
-     - " " + s w m m _ f i l e + " " h a s n o c o o r d i n a t e s d e f i n e d !
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1730
-     - SWMM input file\\n
-     -
-     -
-     -
-     - "" + swmm_file + "" has no coordinates defined!
-
-   * - WARNING
-     - 0603 19.1731
-     - Storm Drain point '"" + name + ""' outside domain!
-   * - WARNING
-     - 0603 19.1732
-     - The following conduit inlets were not found!\\n
-     -
-     - +
-       c
-       o
-       n
-       d
-       u
-       i
-       t
-       _
-       i
-       n
-       l
-       e
-       t
-       s
-       _
-       n
-       o
-       t
-       _
-       f
-       o
-       u
-       n
-       d
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1733
-     - The following conduit outlets were not found!\\n
-     -
-     -
-     -
-     - +
-       conduit_out
-       lets_not_found
-
-   * - WARNING
-     - 0603 19.1734
-     - + str(no_in_out_conduits) + ""
-       conduits have no inlet and/or
-       outlet! The value '?' was
-       assigned to them.\\
-
-   * - WARNING
-     - 0603 19.1736
-     - Schematizing of streets aborted! Please check Street Lines layer.
-   * - WARNING
-     - 0603 19.1742
-     - Schematizing failed while creating cross-sections!
-   * - WARNING
-     - 0603 19.1743
-     - Schematizing failed while processing attributes!
-   * - WARNING
-     - 0603 19.1745
-     - Schematizing failed while preparing interpolation table!
-   * - WARNING
-     - 0603 19.1746
-     - There are no user cross sections defined.
-   * - WARNING
-     - 0603 19.1747
-     - CHANRIGHTBANK.EXE execution is disabled!
-   * - WARNING
-     - 0603 19.1748
-     - Can't import channels!.\\n
-     -
-     -
-     -
-     - CHAN.DAT doesn't exist
-
-   * - WARNING
-     - 0603 19.1749
-     - There are no user cross sections defined!
-   * - WARNING
-     - 0603 19.1751
-     - Right bank cells selection failed!
-   * - WARNING
-     - 0603 19.1752
-     - Right bank cells calculated
-   * - WARNING
-     - 0603 19.1756
-     - Interpolation of cross-sections values failed!
-   * - WARNING
-     - 0603 19.1757
-     - Channel n-values interpolated into CHAN.DAT file!
-    * - WARNING
-     - 0603 19.1758
-     - Interpolation of channel n-values could not be performed!
-   * - WARNING
-     - 0603 19.1759
-     - Interpolation of channel n-values failed!
 
 Info Dialogs
 ------------
