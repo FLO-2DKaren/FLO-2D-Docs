@@ -1070,6 +1070,507 @@ The channel development tools use several methods and calculators for channel de
 A channel is composed of three polyline layers for the banks and cross sections and a point layer for confluences.
 The channel layers are defined by intersecting the left banks to the grid at the nearest centroid to the left bank.
 
+
+
+
+
+
+Real-time Rainfall Sampling Tool (NEXRAD Data)
+----------------------------------------------
+
+Interpolated rainfall data from NEXRAD is an estimation of a rainfall event over a particular region using data from the NEXRAD radar network.
+NEXRAD (Next-Generation Radar) is a network of over 150 high-resolution Doppler weather radars operated by the National Oceanic and Atmospheric
+Administration (NOAA) in the United States.
+
+The spatial and temporal resolution of the radar rainfall data is limited by the network coverage, and there are gaps and inconsistencies in the
+precipitation data.
+The NEXRAD data is post processed or interpolated to rain gage data.
+The interpolation algorithms analyze the relationship between the radar observations and the topography of the region to estimate rainfall.
+The interpolated rainfall data from NEXRAD can be used by FLO-2D to simulate real storm events.
+
+The *Real-Time Rain Interpolation Tool* requires ascii grid files \*.asc files and a catalog file \*.rtc with the rainfall heading data and list of
+grid files to import.
+There is one file for every 5 to 15 minutes of rainfall.
+Figure 25 shows the layout of a \*.asc file and a group of files.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image30.png
+
+*Figure 25.
+NEXRAD Rainfall \*.ASC File Example.*
+
+The \*.asc files are read as rasters in alphabetical order.
+Each raster file is warped to the grid and sampled at the centroid as described in the previous section.
+The grid assignment is a point sample.
+The data is not interpolated.
+The plugin will export a RAINCELL.DAT file or a binary RAINCELL.HDF5 file.
+These files contain the entire rainfall event.
+Figure 26 shows an example of the rainfall data file.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image31.png
+
+*Figure 26.
+RAINCELL.DAT.*
+
+Infiltration Development Tools
+------------------------------
+
+The *Infiltration Editor* is used to assign infiltration data globally or spatially from polygon layers.
+The Infiltration calculators can use embedded layers for infiltration or imported layers.
+The infiltration calculators intersect the infiltration polygons to each cell to calculate area weighted infiltration parameters.
+The infiltration calculator is optimized to run on large projects with millions of cells.
+The optimization process isolates blocks of polygon data and runs them individually as defined by small bounding boxes that break up the data for
+processing.
+Individual calculations are addressed below for each infiltration type.
+
+Green and Ampt
+~~~~~~~~~~~~~~
+
+There are various methods for assigning spatially variable Green and Ampt data.
+The Schematize method assigns data directly to the grid from polygons digitized to the *Infiltration Areas* layer.
+The calculator calculates data from external soils and landuse layers.
+
+Schematize Method
+^^^^^^^^^^^^^^^^^
+
+The Schematize Method samples the Infiltration Areas polygons from the grid centroid and assigns the infiltration values that are written in the Green
+Ampt fields.
+These fields are the fields that are written to the INFIL.DAT file:
+
+- green_char – green ampt character
+
+- hydc – hydraulic conductivity
+
+- soils – soil suction
+
+- dtheta – soil moisture deficit
+
+- abstrinf – initial abstraction
+
+- rtimpf – impervious percentage
+
+- soildepth – soil depth
+
+The attribute data is written to the infil_cells_green table.
+The widget uses the poly2grid processor.
+This processor uses an intersection where the grid element centroid is located within a polygon in the Infiltration Areas layer.
+The Green-Ampt attributes for the grid elements are copied to the infil_cells_green table.
+Any grid element that does not contain a polygon is not written to the table.
+That infiltration data will default to the Global Infiltration parameters.
+
+Green and Ampt (FCDMC Method 2023)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Calculate Green and Ampt Method intersects the landuse and soils polygons to the grid polygons and calculates a spatially variable infiltration
+from the external layers.
+Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2023.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image32.png
+
+*Figure 27.
+Compute Green-Ampt dialog (FCDMC Method 2023)*
+
+This method follows the guidelines in the FCDMC Hydrology Manual from 2023 (FCDMC, 2023).
+The difference between this method and the 2018 method is the Log Average of PSIF.
+The general calculations are as follows:
+
+*XKSAT*
+^^^^^^^
+
+XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
+Figure 28 shows the hydraulic conductivity of the soil layer.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image33.png
+
+*Figure 28.
+Soil layer with XKSAT.*
+
+The area weighted log average is calculated for each grid element from the soil layer (Eq.
+2).
+The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: {\overline{XKSAT}}_{grid} = 10\ \hat{}\ \left( \frac{\Sigma A_{i}*log({XKSAT}_{i})}{A_{ge}} \right)
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+Where:
+
+*XKSAT\ i* is obtained from the soil attribute table.
+
+*A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
+
+*PSIF*
+^^^^^^
+
+PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image34.png
+
+*Figure 29
+Soil Layer with PSIF.*
+
+The area weighted log average is calculated for each grid element from the soil layer (Eq.
+3).
+The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - math:: {\overline{PSIF}}_{grid} = 10\ \hat{}\ \left ( \frac{\Sigma A_{i}*log({PSIF}_{i})}{A_{ge}} \right)
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+Where:
+
+*PSIF\ i* is obtained from the soil attribute table.
+
+*A\ i* is subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* the grid element area.
+
+*DTHETA*
+^^^^^^^^
+
+DTHETA is the soil moisture deficit.
+It ranges in value from zero to the effective porosity of the soil (Figure 30).
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image35.png
+
+*Figure 30
+Soil Layer with DTHETA.*
+
+DTHETA represents the soil moisture capacity for the start of a rainfall event.
+The initial soil conditions vary with respect to landuse categories like irrigation or ponded water conditions.
+Initial saturation is part of the landuse data (see Figure 31).
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image36.png
+
+*Figure 31.
+Landuse with Initial Saturation Condition.*
+
+As a result, DTHETA is split into individual parts that represent the DTHETA (wet, dry or normal).
+DTHETA\ :sub:`wet` is zero, DTHETA\ :sub:`dry` and DTHETA\ :sub:`normal` are calculated for the soil layers for individual soil groups (Figure 32).
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image37.png
+
+*Figure 32.
+DTHETA Dry and Normal.*
+
+After the soil layer is intersected with the landuse, DTHETA\ :sub:`parts` attributes are filled.
+DTHETA\ :sub:`wet`, DTHETA\ :sub:`normal`, and DTHETA\ :sub:`dry` attributes are filled for individual parts.
+Once DTHETA\ :sub:`parts` is complete, DTHETA\ :sub:`grid` is calculated using a weighted average for each grid element (Eq.
+4).
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: {\overline{DTHETA}}_{\mathbf{grid}} = \l eft( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+Where:
+
+*DTHETA\ i* is taken from the intersected landsoil DTHETA\ :sub:`parts`.
+
+*A\ i* is the subarea intercepted by the grid element from the 3\ :sup:`rd` column of the landuse table and *A\ GE* is the grid element area.
+
+If a grid element is within by a “wet” or “saturated” polygon, the DTHETA for that grid = 0.
+
+*RTIMP*
+^^^^^^^
+
+RTIMP is the percent impervious of the landuse (paved surfaces, buildings) and the soil (rockout).
+Figure 33 shows the rock out percentages for the landuse layer.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image38.png
+
+*Figure 33.
+Landuse with Rockout Percentages.*
+
+Intersecting the landuse with the soil combines the data into a single layer (land_soil) of polygon features with attributes of RTIMP\ :sub:`land` and
+RTIMP\ :sub:`natural`.
+The RTIMP\ :sub:`max` is given by Eq.
+5.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: {RTI MP}_{\max} = \max({RTIMP}_{land,\ }{RTIMP}_{natural})
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+..
+
+   Where:
+
+   RTIMP\ :sub:`max` is the maximum impervious value of the intersection between the landuse data and the soil data.
+
+   RTIMP\ :sub:`land` is percent impervious related to buildings, paved surfaces.
+
+   RTIMP\ :sub:`natural` is percent impervious of the rock outcrop.
+
+5.
+
+RTIMP\ :sub:`grid` is the intersection of the land_soil and the grid.
+This is an area weighted average impervious decimal calculation (Eq.
+6) for each grid element.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: {RTIMP}_{grid} = \ \frac{\left( \fra c{\Sigma{RTIMP}_{\max}*(A_{i})}{A_{ge}} \right)}{100}
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+Where:
+
+RTIMP\ :sub:`grid` is the final decimal percent impervious for each grid element.
+
+RTIMP\ :sub:`max` is the maximum impervious polygon intersected from the land_soil intersection.
+
+Ai is the subarea intersected by the grid element and the RTIMP\ :sub:`max` polygon.
+
+A\ :sub:`ge` is the area of the grid element.
+
+RTIMP\ :sub:`final` is an intersection of the EFF Areas layer and the Grid.
+Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field (Eq.
+7).
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: {RTIMP }_{final} = \ \left( {RTIMP}_{grid}*(EFF*.01) \right)
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+Where:
+
+RTIMP\ :sub:`final` is the effective imperviousness of the grid element.
+
+RTIMP\ :sub:`grid` is the intersected imperviousness of the grid element.
+
+The geometric predicate is centroid within.
+
+The Green-Ampt parameters are printed to the spatially variable lines of the INFIL.DAT file (Figure 34).
+The INFIL.DAT structure is outlined in the Data Input Manual at the INFIL.DAT tab.
+More information on how FLO-2D uses the Green-Ampt method to calculate rainfall runoff is available in the FLO-2D Pro Reference Manual.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image39.png
+
+*Figure 34.
+Example INFIL.DAT file.*
+
+VC
+^^
+
+VC is the vegetative cover related to the topsoil horizon.
+Figure 35 shows the vegetative cover of the landuse layer.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image40.png
+
+*Figure 35.
+Landuse with Vegetative Cover.*
+
+It is used to adjust *XKSAT* (Eq.
+2) as a function of the vegetation cover VC (Eq.
+8) from the landuse table when XSAT < 0.4 in/hr.
+This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (Eq.
+9):
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: C_{K} = \left( \frac{{VC}_{K} - 10)}{90} \right) + 1
+     - Eq.
+
+   * -
+     -
+     -
+
+   * -
+     - ..
+       math:: XKSATC = XKSAT\ \sum_{k}^{}{P_{k}C_{k}}
+     - Eq.
+
+
+..
+
+   Where:
+
+   P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and
+
+   XKSATC for each grid element is written in the INFIL.DAT file.
+
+IA
+^^
+
+IA is the initial abstraction for each grid element.
+Figure 36 shows the initial abstraction for the landuse layer.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image41.png
+
+*Figure 36.
+Landuse with Initial Abstraction.*
+
+The intersection between the landuse and grid element gives an area weighted average for the initial abstraction (Eq.
+10):
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+   * -
+     - ..
+       math:: IABSTR\  = \lef t( \frac{\sum_{}^{}{A_{i}({IA}_{i})}}{A_{GE}} \right)
+     - Eq.
+
+.. list-table::
+   :widths: 33 33 33
+   :header-rows: 0
+
+
+..
+
+   Where:
+
+   *IA\ i* is the initial abstraction in the subarea *A\ i* intercepted by the element and is based on the 3\ :sup:`rd` column of the landuse table.
+
+   The intercepted subareas are computed using the landuse shape file and
+
+   *IABSTR* is added to the INFIL.DAT file for each element.
+
+Green and Ampt (FCDMC Method 2018)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The 2018 method for Green-Ampt uses a different calculator for PSIF and DTHETA.
+Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2018.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image42.png
+
+*Figure 37.
+Green-Ampt dialog (FCDMC Method 2018).*
+
+For each grid element, compute wetting front capillary suction PSIF according to the following regressions as a function of *XKSAT* (Generated from
+Figure 4.3 of the Maricopa County Drainage Design Manual, 2018).
+
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
+
+
+   * - XKSAT (in/hr)
+     - PSIF (in)
+
+   * - 0.01 ≤ XKSAT ≤ 1.2
+     - PSIF=EXP(0.9813-0.439*Ln(XKSAT)+0.0051(Ln(xk sat))\ :sup:`2`\ +0.0060(Ln(XKSAT))\ :sup:`3`)
+
+
+For each grid element, compute volumetric soil moisture deficiency *(DTHETA)* according to the following table.
+The specific table used for DTHETA depends on the *saturation* field of the soil table (6th column).
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image61.png
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image62.png
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image63.png
+
+.. _moving-window-optimization-1:
+
+Moving Window Optimization
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The moving window code is used to speed up the Green-Ampt infiltration calculator.
+This window is a geometric bounding box that samples a small set of grid elements at a time.
+The window size is 100 x 100 grid elements.
+The polygons are clipped to the window to eliminate duplicate calculations.
+
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image64.png
+
+SCS Curve
+~~~~~~~~~
+
+There are two methods for assigning spatially variable SCS data.
+The Schematize method assigns data directly to the grid from polygons digitized to the *Infiltration Areas* layer.
+This is the most effective method.
+
+The Calculator assigns the SCS curve number from a single external polygon.
+It can also calculate the Pima County method from a combined layer with soil, coverage density and impervious areas.
+Each method intersects the infiltration polygons to the grid and assigns an area weighted average to each grid element.
+The calculator method requires polygon layers with no geometric deficiencies and therefore is not as desirable as the Schematize method.
+
+Horton
+~~~~~~
+
+The Schematize Method assigns data directly to the grid from polygons digitized to the Infiltration Areas layer.
+The required data fields are:
+
+- fhorti – Initial infiltration rate
+
+- fhortf – Final infiltration rate
+
+- deca – Decay coefficient
+
+The schematize method intersects the Horton polygons to the grid and assigns the variables using an area weighted average.
+
+Channel Development Tools
+-------------------------
+
+The channel development tools use several methods and calculators for channel development.
+A channel is composed of three polyline layers for the banks and cross sections and a point layer for confluences.
+The channel layers are defined by intersecting the left banks to the grid at the nearest centroid to the left bank.
+
 Left Bank Layers
 ~~~~~~~~~~~~~~~~
 
@@ -1084,7 +1585,7 @@ channel element in a segment.
 Multiple polyline features are used to represent separate channel segments.
 Figure 38 shows a sample of the two separate layers.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image39.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image43.png
 
 *Figure 38.
 Left Bank Layers.*
@@ -1099,7 +1600,7 @@ The data can also be defined for trapezoidal or rectangular channels.
 The last data source is a variable area equation such as: A = a*d^b.
 Where the area is defined by a coefficient, depth, and exponent.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image40.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image44.png
 
 *Figure 39.
 Cross Section User Layer.*
@@ -1141,7 +1642,7 @@ The *Import HEC-RAS* tool is used to import channel data from HEC-RAS geometry f
 The RAS project must be georeferenced and in the same coordinate system as the GeoPackage.
 This system can import channel geometry, full cross sections, bank to bank cross sections, interpolated cross sections and levees.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image41.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image45.png
 
 *Figure 40.
 HEC-RAS Import.*
@@ -1155,7 +1656,7 @@ If the channel data is in the wrong order, it should be corrected before being i
 Cross sections are saved to the Cross Section layer in the order by which they were written to the geometry file.
 The cross section names are extracted from the river mile field (Figure 41).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image42.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image46.png
 
 Figure 41.
 Channel Cross Sections.*
@@ -1174,7 +1675,7 @@ are well documented in the FLO-2D Plugin User Manual and a detailed tutorial is 
 <https://documentation.flo-2d.com/Workshops/Lesson%203.html>`__.
 This document will discuss data management and important algorithms in the calculators.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image43.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image47.png
 
 *Figure 42.
 Storm Drain Layout in QGIS.*
@@ -1183,7 +1684,7 @@ The Storm Drain data files (SWMM.INP and \*.DAT files) can be developed from scr
 from shapefiles to the storm drain features.
 Figure 43 shows the *Storm Drain* dialog box.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image44.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image48.png
 
 *Figure 43.
 Storm Drain Dialog Box.*
@@ -1194,7 +1695,7 @@ more information about the required data for each component).
 If the storm drain shapefiles exist, they can be imported into the QGIS project.
 If the storm drain shapefiles do not exist, they can be digitized into *Storm Drain User Layers* (Figure 44).
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image45.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image49.png
 
 *Figure 44.
 Storm Drain Shapefiles.*
@@ -1206,7 +1707,7 @@ The Storm Drain Configuration Tool (Figure 45), is the main processing tool for 
 The algorithms copy features and attributes from shapefiles into the storm drain tables and layers.
 This organizes the data in a manner that is ideal for the swmm.inp, SWMMFLO.DAT, and SWMMOUTF.DAT data files.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image46.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image50.png
 
 *Figure 45.
 Select Components from Shapefile Layer: Inlet/Junctions.*
@@ -1214,7 +1715,7 @@ Select Components from Shapefile Layer: Inlet/Junctions.*
 The data layout and organization prevent array allocation errors between FLO-2D engine and the storm drain engine.
 The features are written in the correct order from between swmm.inp and SWMMFLO.DAT.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image47.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image51.png
 
 *Figure 46.
 Data Organization Inlets.*
@@ -1223,7 +1724,7 @@ The finished tables can be validated and edited with the node and link dialog bo
 These boxes highlight and pan/zoom to the current feature and allow extra data to be assigned.
 Changes to these dialog boxes automatically update the storm drain arrays.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image48.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image52.png
 
 *Figure 47.
 Review Attributes from Storm Drain Table.*
@@ -1252,7 +1753,7 @@ An existing \*.INP file can be imported with the buttons in Figure 48 once the F
 The *Storm Drain Editor* has an option to Import SWMM.inp that can be used to read an existing \*.INP file.
 Storm drain systems created using other software can be imported if the format is compatible with EPA SWMM Version 5.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image49.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image53.png
 
 *Figure 48.
 Import Export SWMM.INP Options.*
@@ -1266,7 +1767,7 @@ Auto assign nodes
 The auto assign tool (Figure 49) scans the polyline data and finds the nodes at the upstream and downstream end.
 The node names fields from the Link tables are filled automatically.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image50.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image54.png
 
 *Figure 49.
 Auto Assign Tool.*
@@ -1279,7 +1780,7 @@ It is important that the links are digitized in the correct flow direction.
 Arrows are used in the feature style to represent the flow direction.
 Figure 50 shows the nodes next to each end of the link and the flow direction is shown by the blue arrows.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image51.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image55.png
 
 *Figure 50.
 Link Node and Flow Direction.*
@@ -1291,12 +1792,12 @@ The rating table and pump curve tools (Figure 51) can import or build tabular da
 These tools are connected to the table and plotting windows shown in Figure 52.
 These tools facilitate data assignment by automatically finding node names or link names and assigning the data with the same name.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image52.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image56.png
 
 *Figure 51.
 Rating Tables and Pump Curves.*
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image53.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image57.png
 
 *Figure 52.
 Table Editor and Plotting Window.*
@@ -1310,7 +1811,7 @@ The user must define ground elevation, water surface elevation and maximum flow 
 An adjustment factor can be applied to calculate the finished floor elevation.
 Figure 53 shows the tool requirements.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image54.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/image58.png
 
 *Figure 53.
 Hazus Tool.*
