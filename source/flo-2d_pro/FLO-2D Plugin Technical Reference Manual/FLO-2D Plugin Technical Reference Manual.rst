@@ -9381,15 +9381,19 @@ Errors
 
    * - ERROR
      - 060 319.1606
-     - Evaluation of ARFs and WRFs failed! Please check your Blocked Areas User Layer.
+     - Evaluation of ARFs and WRFs failed!
+
+       Please check your Blocked Areas User Layer.
      -
      -
 
    * - ERROR
      - 051 218.2035
      - Green-Ampt infiltration failed!
+
+       While intersecting soil layer with grid.
      -
-     - While intersecting soil layer with grid.
+     -
 
    * - ERROR
      - 51 218.2001
