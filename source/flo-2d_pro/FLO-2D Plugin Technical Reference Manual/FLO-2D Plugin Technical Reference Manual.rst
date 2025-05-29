@@ -540,8 +540,7 @@ The new raster has these properties:
 The new raster (figure 24) is sampled to the grid using the centroid.
 Raster statistics determine the maximum rainfall value (RAIN\ :sub:`max`).
 The final RAIN\ :sub:`arf` variable is calculated as a ratio of the local rain depth to the max rain depth.
-A rainfall reduction value is calculated for each element in the grid system using Eq.
-1.
+A rainfall reduction value is calculated for each element in the grid system using equation (1).
 
 .. math::
    :label:
@@ -671,8 +670,7 @@ Figure 28 shows the hydraulic conductivity of the soil layer.
 *Figure 28.
 Soil layer with XKSAT.*
 
-The area weighted log average is calculated for each grid element from the soil layer (Eq.
-2).
+The area weighted log average is calculated for each grid element from the soil layer equation(2).
 The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
 
 .. math::
@@ -697,8 +695,7 @@ PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 2
 *Figure 29
 Soil Layer with PSIF.*
 
-The area weighted log average is calculated for each grid element from the soil layer (Eq.
-3).
+The area weighted log average is calculated for each grid element from the soil layer equation (3).
 The soil polygon is intersected with the grid polygon to provide the A\ :sub:`i`.
 
 .. math::
