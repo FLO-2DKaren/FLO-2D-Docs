@@ -570,9 +570,6 @@ A rainfall reduction value is calculated for each element in the grid system usi
 
 .. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO054.png
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO055.png
-
-
 *Figure 24.
 Warped Rainfall Raster.*
 
