@@ -9166,6 +9166,7 @@ Errors
 |  Type |     Code     |                            Message                     |
 +=======+==============+========================================================+
 | ERROR | 110 618.1828 | Line 1 Could not save FLO-2D parameters!               |
+|       |              |                                                        |
 |       |              | Line 2 Could not save FLO-2D parameters!               |
 +-------+--------------+--------------------------------------------------------+
 |       |              | Line 3 Could not save FLO-2D parameters!               |
