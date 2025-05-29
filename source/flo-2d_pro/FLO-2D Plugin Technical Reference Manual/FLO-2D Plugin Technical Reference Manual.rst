@@ -9424,60 +9424,26 @@ Warnings
 | WARNING | 110618.1816 | Assigning values aborted! Please check          |                                       |
 |         |             | your crest elevation source layers.             |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1808 | File DEPFP.OUT is needed for the Hazus          | + project_dir                         |
+| WARNING | 060319.1808 | File DEPFP.OUT is needed for the Hazus          | "+" project_dir                         |
 |         |             | flooding analysis.                              |                                       |
 |         |             |                                                 |                                       |
 |         |             | It is not in the current project directory:     |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1810 | Please choose at least one conversion source!   |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-
-.. List-table::
-   :Widths: 14 14 14 14 14 14 14
-   :Header-rows: 0
-
-
-   * - Type
-     - Code
-     - Message
-     -
-     - D e t a i l s
-     -
-     -
-
-   * - WARNING
-     - 0603 19.1811
-     - Please choose at least one conversion source!
-   * - WARNING
-     - 0603 19.1612
-     - Can't import channels!.\\n
-     -
-     - CHAN.DAT doesn't exist .
-
-   * - WARNING
-     - 0603 19.1632
-     - Can't import channels!.\\n
-     -
-     - CHANBANK.DAT doesn't exist .
-     -
-     -
-
-   * - WARNING
-     - 0102 19.0742
-     - Import channels failed!.
-       Check CHAN.DAT and CHANBANK.DAT files.
-       Import channels failed!.\\n
-     -
-     - Maybe the number of leftbank and rightbank  cells are different
-     -
-
-   * - WARNING
-     - 0603 19.1613
-     - Export to ""GUTTER.DAT"" failed!
-     -
-     -
-     -
-     -
+| WARNING | 060319.1811 | Please choose at least one conversion source!   |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1612 | Can't import channels!                          | CHAN.DAT doesn't exist                |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1632 | Can't import channels!                          | CHANBANK.DAT doesn't exist            |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 010219.0742 | Import channels failed!                         | Maybe the number of leftbank          |
+|         |             |                                                 | and rightbank  cells are different    |
+|         |             | Check CHAN.DAT and CHANBANK.DAT files.          |                                       |
+|         |             | Import channels failed!                         |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
+| WARNING | 060319.1613 | Export to ""GUTTER.DAT"" failed!                |                                       |
++---------+-------------+-------------------------------------------------+---------------------------------------+
 
    * - WARNING
      - 0603 19.1615
