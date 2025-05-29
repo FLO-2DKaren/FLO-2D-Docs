@@ -768,39 +768,24 @@ Landuse with Rockout Percentages.*
 
 Intersecting the landuse with the soil combines the data into a single layer (land_soil) of polygon features with attributes of RTIMP\ :sub:`land` and
 RTIMP\ :sub:`natural`.
-The RTIMP\ :sub:`max` is given by Eq.
-5.
+The RTIMP\ :sub:`max` is given by equation (5).
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
+   {RTI MP}_{\max} = \max({RTIMP}_{land,\ }{RTIMP}_{natural})
 
-   * -
-     - ..
-       math:: {RTI MP}_{\max} = \max({RTIMP}_{land,\ }{RTIMP}_{natural})
-     - Eq.
+Where:
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+    RTIMP\ :sub:`max` is the maximum impervious value of the intersection between the landuse data and the
+    soil data.
 
+    RTIMP\ :sub:`land` is percent impervious related to buildings, paved surfaces.
 
-..
+    RTIMP\ :sub:`natural` is percent impervious of the rock outcrop.
 
-   Where:
-
-   RTIMP\ :sub:`max` is the maximum impervious value of the intersection between the landuse data and the soil data.
-
-   RTIMP\ :sub:`land` is percent impervious related to buildings, paved surfaces.
-
-   RTIMP\ :sub:`natural` is percent impervious of the rock outcrop.
-
-5.
-
-RTIMP\ :sub:`grid` is the intersection of the land_soil and the grid.
-This is an area weighted average impervious decimal calculation (Eq.
-6) for each grid element.
+    RTIMP\ :sub:`grid` is the intersection of the land_soil and the grid.This is an area weighted
+    average impervious decimal calculation equation (6) for each grid element.
 
 .. list-table::
    :widths: 33 33 33
