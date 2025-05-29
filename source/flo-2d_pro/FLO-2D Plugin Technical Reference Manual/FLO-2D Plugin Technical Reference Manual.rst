@@ -9644,24 +9644,7 @@ Errors
    * - ERROR
      - 6 0319.161
      - Creating Storm Drain Nodes layer failed!\\n
-     - +
-       "
-       "Please
-       check
-       your
-       SWMM
-       input
-       data
-       .\\nAre
-       the
-       nodes
-       coor
-       dinates
-       inside
-       the
-       comput
-       ational
-       domain?
+     - "Please check your SWMM input data.\\nAre the nodes coordinates inside the computational domain?
      -
 
    * - ERROR
