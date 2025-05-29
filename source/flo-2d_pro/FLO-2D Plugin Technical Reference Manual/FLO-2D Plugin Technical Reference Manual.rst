@@ -9444,53 +9444,72 @@ Warnings
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1613 | Export to ""GUTTER.DAT"" failed!                |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1615 | Assignment of building areas to building polygons. Not implemented yet!'               |                                       |
+| WARNING | 060319.1615 | Assignment of building areas to building        |                                       |
+|         |             | polygons. Not implemented yet!'                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1633 | You need at least 2 cross-sections crossing left bank line!               |                                       |
+| WARNING | 060319.1633 | You need at least 2 cross-sections crossing     |                                       |
+|         |             | left bank line!                                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1618 | Error while creating schematic Left banks!               |                                       |
+| WARNING | 060319.1618 | Error while creating schematic Left banks!      |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 220718.0741 | Error while creating schematic Right banks!               |                                       |
+| WARNING | 220718.0741 | Error while creating schematic Right bank       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 180319.1431 | Schematizing of inflow aborted!               |                                       |
+| WARNING | 180319.1431 | Schematizing of inflow aborted!                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 180319.1434 | Schematizing of outflows aborted!               |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1641 | Element "" + elem + "" has a cross section of type 'R' without data!               |                                       |
+| WARNING | 060319.1641 | Element "" + elem + "" has a cross section      |                                       |
+|         |             | of type 'R' without data!                       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1624 | Element "" + elem + "" has a cross section of type 'V' without data!               |                                       |
+| WARNING | 060319.1624 | Element "" + elem + "" has a cross section      |                                       |
+|         |             | of type 'V' without data!                       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1625 | Element "" + elem + "" has a cross section of type 'T' without data!               |                                       |
+| WARNING | 060319.1625 | Element "" + elem + "" has a cross section      |                                       |
+|         |             | of type 'T' without data!                       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1626 | Element "" + elem + "" has a cross section of type 'N' without data!               |                                       |
+| WARNING | 060319.1626 | Element "" + elem + "" has a cross section      |                                       |
+|         |             | of type 'N' without data!                       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1627 | Probing grid elevation failed! Please check your raster layer.               |                                       |
+| WARNING | 060319.1627 | Probing grid elevation failed! Please check     |                                       |
+|         |             | your raster layer.                              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1629 | Cell size must be positive. Change the feature attribute value in Computational Domain layer.               |                                       |
+| WARNING | 060319.1629 | Cell size must be positive. Change the feature  |                                       |
+|         |             | attribute value in Computational Domain layer.  |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1630 | Cell size must be positive. Change the feature attribute value in Computational Domain layer or default cell size in the project settings.               |                                       |
+| WARNING | 060319.1630 | Cell size must be positive. Change the feature  |                                       |
+|         |             | attribute value in Computational Domain layer   |                                       |
+|         |             | or default cell size in the project settings.   |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1632 | Assignment of building areas to building polygons. Not implemented yet!               |                                       |
+| WARNING | 060319.1632 | Assignment of building areas to building        |                                       |
+|         |             |  polygons. Not implemented yet!                 |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1650 | Evaluation of buildings adjustment factor failed! Please check your Building Areas (Schematic layer).               |                                       |
+| WARNING | 060319.1650 | Evaluation of buildings adjustment factor       |                                       |
+|         |             | failed! Please check your Building Areas        |                                       |
+|         |             | (Schematic layer).                              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1612 | Please choose at least one crest elevation source!')               |                                       |
+| WARNING | 060319.1612 | Please choose at least one crest elevation      |                                       |
+|         |             | source!                                         |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1653 | Couldn't create new database {}"".format(gpkg_path)               |                                       |
+| WARNING | 060319.1653 | Couldn't create new database {}""               |                                       |
+|         |             | .format(gpkg_path)                              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1822 | Error processing geometry of inlet/junction '"" + name                |                                       |
+| WARNING | 060319.1822 | Error processing geometry of                    |                                       |
+|         |             | inlet/junction '"" + name                       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1656 | Inlet/junction  "" + name + ""  is faulty!               |                                       |
+| WARNING | 060319.1656 | Inlet/junction  "" + name + ""  is faulty!      |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1657 | The following inlets/junctions are outside the computational domain!\n               |  + outside_inlets                                      |
+| WARNING | 060319.1657 | The following inlets/junctions are              |  + outside_inlets                     |
+|         |             | outside the computational domain!               |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1658 | Error processing geometry of outfall'"" + name                |                                       |
+| WARNING | 060319.1658 | Error processing geometry of outfall'"" + name  |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1659 | Outfall  "" + name + ""  is faulty!               |                                       |
+| WARNING | 060319.1659 | Outfall  "" + name + ""  is faulty!             |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1700 | The following outfalls are outside the computational domain!\n               |  + outside_outfalls                                      |
+| WARNING | 060319.1700 | The following outfalls are outside              |  + outside_outfalls                   |
+|         |             | the computational domain!                       |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
-| WARNING | 060319.1701 | Error processing geometry of conduit '"" + conduit_name               |                                       |
+| WARNING | 060319.1701 | Error processing geometry of conduit '"" +      |                                       |
+|         |             | conduit_name                                    |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1702 | Conduit "" + name + "" is faulty!               |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
