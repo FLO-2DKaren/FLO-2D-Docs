@@ -568,9 +568,9 @@ A rainfall reduction value is calculated for each element in the grid system usi
 
    RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image53.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO054.png
 
-.. image:: ../img/flo-2d-plugin-technical-reference-manual/image54.png
+.. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO055.png
 
 
 *Figure 24.
