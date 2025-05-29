@@ -9649,55 +9649,55 @@ Errors
 
    * - ERROR
      - 50 618.1804
-     - creation of Storm Drain Conduits layer failed!
+     - Creation of Storm Drain Conduits layer failed!
      -
      -
 
    * - ERROR
      - 70 618.0851
-     - error while exporting [JUNCTIONS] to .INP file!
+     - Error while exporting [JUNCTIONS] to .INP file!
      -
      -
 
    * - ERROR
      - 70 618.1619
-     - error while exporting [OUTFALLS] to .INP file!
+     - Error while exporting [OUTFALLS] to .INP file!
      -
      -
 
    * - ERROR
      - 7 0618.162
-     - error while exporting [CONDUITS] to .INP file!
+     - Error while exporting [CONDUITS] to .INP file!
      -
      -
 
    * - ERROR
      - 70 618.1621
-     - error while exporting [XSECTIONS] to .INP file!
+     - Error while exporting [XSECTIONS] to .INP file!
      -
      -
 
    * - ERROR
      - 70 618.1622
-     - error while exporting [LOSSES] to .INP file!
+     - Error while exporting [LOSSES] to .INP file!
      -
      -
 
    * - ERROR
      - 70 618.1623
-     - error while exporting [COORDINATES] to .INP file!
+     - Error while exporting [COORDINATES] to .INP file!
      -
      -
 
    * - ERROR
      - 160 618.0634
-     - couldn't export .INP file!
+     - Couldn't export .INP file!
      -
      -
 
    * - ERROR
      - 130 718.0831
-     - schematized dialog failed to show!
+     - Schematized dialog failed to show!
      -
      -
 
@@ -9715,19 +9715,19 @@ Errors
 
    * - ERROR
      - 101 218.1607
-     - exporting XSEC.DAT failed!
+     - Exporting XSEC.DAT failed!
      -
      -
 
    * - ERROR
      - 260 618.0416
-     - couldn’t read CHANBANK.DAT or reassign right bank coordinates!
+     - Couldn’t read CHANBANK.DAT or reassign right bank coordinates!
      -
      -
 
    * - ERROR
      - 50 818.0618
-     - couldn’t process HYCHAN.OUT!
+     - Couldn’t process HYCHAN.OUT!
      -
      -
 
@@ -9739,7 +9739,7 @@ Errors
 
    * - ERROR
      - 80 618.0456
-     - couldn't update the inl ets/junctions component using [ SUBCATCHMENT] group from storm drain .INP file!
+     - Couldn't update the inl ets/junctions component using [ SUBCATCHMENT] group from storm drain .INP file!
      -
      -
 
@@ -9753,9 +9753,9 @@ Errors
 Warnings
 --------
 
-.. list-table::
-   :widths: 14 14 14 14 14 14 14
-   :header-rows: 0
+.. List-table::
+   :Widths: 14 14 14 14 14 14 14
+   :Header-rows: 0
 
 
    * - Type
