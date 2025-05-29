@@ -9385,7 +9385,7 @@ Errors
 
    * - ERROR
      - 051 218.2035
-     - Green-Ampt infiltration failed\\n
+     - Green-Ampt infiltration failed\n
      -
      - While intersecting soil layer with grid.
 
