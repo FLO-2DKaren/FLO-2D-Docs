@@ -843,36 +843,23 @@ Landuse with Vegetative Cover.*
 It is used to adjust *XKSAT* (Eq.
 2) as a function of the vegetation cover VC (Eq.
 8) from the landuse table when XSAT < 0.4 in/hr.
-This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare ground hydraulic conductivity (Eq.
-9):
+This requires a computation of the ratio of the hydraulic conductivity for the vegetative cover to the bare
+ground hydraulic conductivity equation (9):
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
+   C_{K} = \left( \frac{{VC}_{K} - 10)}{90} \right) + 1
 
-   * -
-     - ..
-       math:: C_{K} = \left( \frac{{VC}_{K} - 10)}{90} \right) + 1
-     - Eq.
+.. math::
+   :label:
 
-   * -
-     -
-     -
+   XKSATC = XKSAT\ \sum_{k}^{}{P_{k}C_{k}}
 
-   * -
-     - ..
-       math:: XKSATC = XKSAT\ \sum_{k}^{}{P_{k}C_{k}}
-     - Eq.
+Where:
 
-
-..
-
-   Where:
-
-   P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and
-
-   XKSATC for each grid element is written in the INFIL.DAT file.
+    P\ :sub:`k` is the percentage of the area within the grid element corresponding to C\ :sub:`k` and
+    XKSATC for each grid element is written in the INFIL.DAT file.
 
 IA
 ^^
