@@ -807,26 +807,16 @@ Where:
 
 Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field equation (7).
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+.. math::
+   :label:
 
-
-   * -
-     - ..
-       math:: {RTIMP }_{final} = \ \left( {RTIMP}_{grid}*(EFF*.01) \right)
-     - Eq.
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
+   {RTIMP }_{final} = \ \left( {RTIMP}_{grid}*(EFF*.01) \right)
 
 Where:
 
-RTIMP\ :sub:`final` is the effective imperviousness of the grid element.
+    RTIMP\ :sub:`final` is the effective imperviousness of the grid element.
 
-RTIMP\ :sub:`grid` is the intersected imperviousness of the grid element.
+    RTIMP\ :sub:`grid` is the intersected imperviousness of the grid element.
 
 The geometric predicate is centroid within.
 
