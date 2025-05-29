@@ -5529,7 +5529,7 @@ rtree_mult_domains_geom_rowid
      -
 
 
-:mark:`rtree_schema_md_cells_geom`
+rtree_schema_md_cells_geom
 
 .. list-table::
    :widths: 33 33 33
@@ -5561,7 +5561,7 @@ rtree_mult_domains_geom_rowid
      -
 
 
-:mark:`rtree_schema_md_cells_geom_parent`
+rtree_schema_md_cells_geom_parent
 
 .. list-table::
    :widths: 33 33 33
@@ -5572,12 +5572,8 @@ rtree_mult_domains_geom_rowid
      - Field Type
      - Description
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
 
-
-:mark:`rtree_schema_md_cells_geom_rowid`
+rtree_schema_md_cells_geom_rowid
 
 .. list-table::
    :widths: 33 33 33
