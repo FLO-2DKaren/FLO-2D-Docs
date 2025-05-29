@@ -9,7 +9,7 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: Widgets
+   :caption: Contents
 
    grid-tools/index
    pre-processing-tools/Pre-Processing Tools

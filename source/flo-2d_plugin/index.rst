@@ -2,8 +2,8 @@ FLO-2D Plugin
 =============
 
 .. toctree::
-   :maxdepth: 3
-   :caption: FLO-2D Plugin
+   :maxdepth: 2
+   :caption: Contents
 
    user_manual/index.rst
    technical_reference_manual/index.rst

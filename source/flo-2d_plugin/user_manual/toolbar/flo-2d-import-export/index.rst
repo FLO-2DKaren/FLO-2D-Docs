@@ -9,7 +9,7 @@ components, selected components, or to the \*.HDF5 file.
 
 .. toctree::
    :maxdepth: 1
-   :caption: FLO-2D Import Export Tools
+   :caption: Contents
 
    Import from Geopackage
    Import Data Files

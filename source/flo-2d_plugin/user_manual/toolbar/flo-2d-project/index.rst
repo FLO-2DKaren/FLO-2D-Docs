@@ -8,7 +8,7 @@ tool for external layer management within the user's GeoPackage.
 
 .. toctree::
    :maxdepth: 2
-   :caption: FLO-2D Project Tools
+   :caption: Contents
 
    New FLO-2D Project
    Open FLO-2D Project

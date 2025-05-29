@@ -11,7 +11,7 @@ Note that the toolbar's position may vary based on active QGIS plugins/features,
 
 .. toctree::
    :maxdepth: 2
-   :caption: FLO-2D Plugin Toolbar
+   :caption: Contents
 
    flo-2d-project/index
    flo-2d-import-export/index

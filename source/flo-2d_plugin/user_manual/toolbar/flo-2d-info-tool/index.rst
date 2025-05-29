@@ -10,7 +10,7 @@ This section covers the 3 tools.
 
 .. toctree::
    :maxdepth: 2
-   :caption: FLO-2D Info Tools
+   :caption: Contents
 
    Grid Info Tool
    FLO-2D Info Tool
