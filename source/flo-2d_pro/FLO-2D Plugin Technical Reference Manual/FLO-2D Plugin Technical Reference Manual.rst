@@ -745,7 +745,7 @@ average for each grid element equation (4).
 .. math::
    :label:
 
-   {\overline{\DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{\DTHETA}_{i}}{A_{ge}} \right)
+   {\overline{DTHETA}}_{\mathbf{grid}} = \left( \frac{\Sigma A_{i}*{DTHETA}_{i}}{A_{ge}} \right)
 
 Where:
 
