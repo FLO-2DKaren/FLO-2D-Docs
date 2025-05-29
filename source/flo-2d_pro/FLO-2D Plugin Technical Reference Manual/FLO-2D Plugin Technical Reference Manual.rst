@@ -9481,7 +9481,7 @@ Warnings
 |         |             | or default cell size in the project settings.   |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1632 | Assignment of building areas to building        |                                       |
-|         |             |  polygons. Not implemented yet!                 |                                       |
+|         |             | polygons. Not implemented yet!                  |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1650 | Evaluation of buildings adjustment factor       |                                       |
 |         |             | failed! Please check your Building Areas        |                                       |
@@ -9544,7 +9544,7 @@ Warnings
 |         |             | digitize them before running tool.              |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1716 | Assigning roughness aborted! Please check       |                                       |
-|         |             |roughness layer.                                 |                                       |
+|         |             | roughness layer.                                |                                       |
 +---------+-------------+-------------------------------------------------+---------------------------------------+
 | WARNING | 060319.1717 | Evaluation of spatial Froude failed!            |                                       |
 |         |             | Please check your Froude Areas (Schematic layer)|                                       |
