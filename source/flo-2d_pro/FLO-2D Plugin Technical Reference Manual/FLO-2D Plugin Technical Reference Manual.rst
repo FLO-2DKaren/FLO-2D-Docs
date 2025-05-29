@@ -784,37 +784,28 @@ Where:
 
     RTIMP\ :sub:`natural` is percent impervious of the rock outcrop.
 
-    RTIMP\ :sub:`grid` is the intersection of the land_soil and the grid.This is an area weighted
-    average impervious decimal calculation equation (6) for each grid element.
+    RTIMP\ :sub:`grid` is the intersection of the land_soil and the grid.
 
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
+This is an area weighted average impervious decimal calculation equation (6) for each grid element.
 
+.. math::
+   :label:
 
-   * -
-     - ..
-       math:: {RTIMP}_{grid} = \ \frac{\left( \fra c{\Sigma{RTIMP}_{\max}*(A_{i})}{A_{ge}} \right)}{100}
-     - Eq.
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
+   {RTIMP}_{grid} = \ \frac{\left( \frac{\Sigma{RTIMP}_{\max}*(A_{i})}{A_{ge}} \right)}{100}
 
 Where:
 
-RTIMP\ :sub:`grid` is the final decimal percent impervious for each grid element.
+    RTIMP\ :sub:`grid` is the final decimal percent impervious for each grid element.
 
-RTIMP\ :sub:`max` is the maximum impervious polygon intersected from the land_soil intersection.
+    RTIMP\ :sub:`max` is the maximum impervious polygon intersected from the land_soil intersection.
 
-Ai is the subarea intersected by the grid element and the RTIMP\ :sub:`max` polygon.
+    Ai is the subarea intersected by the grid element and the RTIMP\ :sub:`max` polygon.
 
-A\ :sub:`ge` is the area of the grid element.
+    A\ :sub:`ge` is the area of the grid element.
 
-RTIMP\ :sub:`final` is an intersection of the EFF Areas layer and the Grid.
-Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field (Eq.
-7).
+    RTIMP\ :sub:`final` is an intersection of the EFF Areas layer and the Grid.
+
+Any centroid within an EFF polygon is applied to an EFF or effectiveness of the impervious field equation (7).
 
 .. list-table::
    :widths: 33 33 33
