@@ -3188,6 +3188,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
 
 grid
+------
 
 Table for the Grid layer in the Schematic Layers group.
 Used to store the grid element number, n_value and elevation.
@@ -3236,6 +3237,7 @@ Data saved to topo.dat and mannings.dat.
 
 
 gutter_areas
+---------------------------
 
 The Gutter_Areas layer is used to define the spatial position of gutters.
 It also contains local variables used in gutter cells.
@@ -3275,6 +3277,7 @@ It also contains local variables used in gutter cells.
 
 
 gutter_cells
+---------------------------
 
 The gutter cells calculated from the gutter_areas.
 These are written to the GUTTER.DAT file when the project is exported.
@@ -3306,6 +3309,7 @@ These are written to the GUTTER.DAT file when the project is exported.
 
 
 gutter_globals
+---------------------------
 
 The gutter_globals layer is a table that stores the global gutter variables.
 It is exported to GUTTER.DAT when the project is exported.
@@ -3337,6 +3341,7 @@ It is exported to GUTTER.DAT when the project is exported.
 
 
 gutter_lines
+---------------------------
 
 The gutter_lines layer is a polyline layer that stores the gutter lines.
 It is exported to intersected to the gutter_cells table when the gutter calculator is applied.
@@ -3376,6 +3381,7 @@ It is exported to intersected to the gutter_cells table when the gutter calculat
 
 
 infil
+---------------------------
 
 Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
 
@@ -3474,6 +3480,7 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
 
 
 infil_cells_green
+---------------------------
 
 Tables that stores green-ampt infiltration parameters for specific grid elements.
 
