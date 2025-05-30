@@ -4247,6 +4247,7 @@ mult_domains
 
 
 mult_domains_con
+-----------------
 
 .. list-table::
    :widths: 33 33 33
@@ -4259,158 +4260,159 @@ mult_domains_con
 
    * - fid
      - INTEGER
-     -
+     - Unique identifier for the connection record.
 
    * - subdomain_name
      - TEXT
-     -
+     - Name of the primary subdomain where connections originate.
 
    * - fid_subdomain_1
      - INTEGER
-     -
+     - ID of the first connected subdomain.
 
    * - subdomain_name_1
      - TEXT
-     -
+     - Name of the first connected subdomain.
 
    * - mult_domains_1
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_1
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_2
      - INTEGER
-     -
+     - ID of the second connected subdomain.
 
    * - subdomain_name_2
      - TEXT
-     -
+     - Name of the second connected subdomain.
 
    * - mult_domains_2
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_2
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_3
      - INTEGER
-     -
+     - ID of the third connected subdomain.
 
    * - subdomain_name_3
      - TEXT
-     -
+     - Name of the third connected subdomain.
 
    * - mult_domains_3
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_3
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_4
      - INTEGER
-     -
+     - ID of the fourth connected subdomain.
 
    * - subdomain_name_4
      - TEXT
-     -
+     - Name of the fourth connected subdomain.
 
    * - mult_domains_4
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_4
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_5
      - INTEGER
-     -
+     - ID of the fifth connected subdomain.
 
    * - subdomain_name_5
      - TEXT
-     -
+     - Name of the fifth connected subdomain.
 
    * - mult_domains_5
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_5
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_6
      - INTEGER
-     -
+     - ID of the sixth connected subdomain.
 
    * - subdomain_name_6
      - TEXT
-     -
+     - Name of the sixth connected subdomain.
 
    * - mult_domains_6
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_6
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_7
      - INTEGER
-     -
+     - ID of the seventh connected subdomain.
 
    * - subdomain_name_7
      - TEXT
-     -
+     - Name of the seventh connected subdomain.
 
    * - mult_domains_7
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_7
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_8
      - INTEGER
-     -
+     - ID of the eighth connected subdomain.
 
    * - subdomain_name_8
      - TEXT
-     -
+     - Name of the eighth connected subdomain.
 
    * - mult_domains_8
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_8
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
    * - fid_subdomain_9
      - INTEGER
-     -
+     - ID of the ninth connected subdomain.
 
    * - subdomain_name_9
      - TEXT
-     -
+     - Name of the ninth connected subdomain.
 
    * - mult_domains_9
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a MULTIDOMAIN.DAT file. 0 otherwise.
 
    * - ds_file_9
      - INTEGER
-     -
+     - 1 if this subdomain was imported from a CADPTS_DSx.DAT file. 0 otherwise.
 
 
 mult_domains_methods
+----------------------
 
 .. list-table::
    :widths: 33 33 33
