@@ -3102,6 +3102,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
 
 gpkg_tile_matrix
+-------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3116,38 +3117,39 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - table_name
      - TEXT
-     -
+     - Name of the tile pyramid user data table this matrix belongs to.
 
    * - zoom_level
      - INTEGER
-     -
+     - Zoom level of the tile matrix (0 = least detailed, higher = more detail).
 
    * - matrix_width
      - INTEGER
-     -
+     - Number of tiles in the width (columns) of the matrix at this zoom level.
 
    * - matrix_height
      - INTEGER
-     -
+     - Number of tiles in the height (rows) of the matrix at this zoom level.
 
    * - tile_width
      - INTEGER
-     -
+     - Width of each tile in pixels.
 
    * - tile_height
      - INTEGER
-     -
+     - Height of each tile in pixels.
 
    * - pixel_x_size
      - DOUBLE
-     -
+     - Size of a pixel in the x direction (map units per pixel).
 
    * - pixel_y_size
      - DOUBLE
-     -
+     - Size of a pixel in the y direction (map units per pixel).
 
 
 gpkg_tile_matrix_set
+------------------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3162,7 +3164,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - table_name
      - TEXT
-     -
+     - Name of the tile user data table that this tile matrix set belongs to.
 
    * - srs_id
      - INTEGER
