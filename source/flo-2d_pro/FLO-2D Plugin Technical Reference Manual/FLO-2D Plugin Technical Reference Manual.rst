@@ -2946,6 +2946,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
 
 gpkg_geometry_columns
+----------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2960,30 +2961,31 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - table_name
      - TEXT
-     -
+     - Name of the user-defined table containing the geometry column.
 
    * - column_name
      - TEXT
-     -
+     - Name of the geometry column in the table.
 
    * - geometry_type_name
      - TEXT
-     -
+     - Type of geometry stored (e.g., 'POINT', 'LINESTRING', 'POLYGON').
 
    * - srs_id
      - INTEGER
-     - Coordinate system id.
+     - Spatial Reference System Identifier (must match an entry in gpkg_spatial_ref_sys).
 
    * - z
      - TINYINT
-     -
+     - Indicates presence of Z values: 0 = none, 1 = mandatory, 2 = optional.
 
    * - m
      - TINYINT
-     -
+     - Indicates presence of M values: 0 = none, 1 = mandatory, 2 = optional.
 
 
 gpkg_metadata
+---------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
