@@ -2851,31 +2851,31 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - table_name
      - TEXT
-     -
+     - Name of the user-defined table containing the column.
 
    * - column_name
      - TEXT
-     -
+     - Name of the column within the user-defined table.
 
    * - name
      - TEXT
-     -
+     - A human-readable name for the column.
 
    * - title
      - TEXT
-     -
+     - A short descriptive title for display purposes.
 
    * - description
      - TEXT
-     -
+     - A longer description explaining the purpose or contents of the column.
 
    * - mime_type
      - TEXT
-     -
+     - MIME type of the data in the column (e.g., 'text/plain', 'image/png').
 
    * - constraint_name
      - TEXT
-     -
+     - Optional name of the constraint from gpkg_data_column_constraints.
 
 
 gpkg_extensions
