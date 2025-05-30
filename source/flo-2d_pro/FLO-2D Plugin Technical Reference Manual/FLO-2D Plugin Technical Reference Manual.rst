@@ -4227,23 +4227,23 @@ mult_domains
 
    * - fid
      - INTEGER
-     -
+     - Unique identifier for each record (typically a primary key).
 
    * - name
      - TEXT
-     -
+     - Name of the domain or area represented by the polygon.
 
    * - domain_cellsize
      - INTEGER
-     -
+     - Cell size associated with the global domain.
 
    * - notes
      - TEXT
-     -
+     - Additional comments or descriptions related to the domain.
 
    * - geom
      - POLYGON
-     -
+     - Geometry field representing the spatial extent of the domain.
 
 
 mult_domains_con
