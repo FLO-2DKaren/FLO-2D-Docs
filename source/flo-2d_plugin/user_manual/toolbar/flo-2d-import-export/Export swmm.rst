@@ -15,4 +15,4 @@ Select the export folder.
 
 .. image:: ../../img/Import-Data-Files/exportswmm001.png
 
-The swmm.inp file and the swmm.ini file are exported to the export folder.
+The swmm.inp file and the swmm.ini file are exported to the folder.
