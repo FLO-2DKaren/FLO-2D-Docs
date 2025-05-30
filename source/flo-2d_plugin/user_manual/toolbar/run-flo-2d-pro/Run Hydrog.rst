@@ -10,7 +10,7 @@ hydrographs.
           channel cross sections, floodplain cross sections, or hydraulic structures results.
 
 .. important:: For a more powerful tool that allows you to review the results of your FLO-2D simulations, 
-   see :ref:`The FLO-2D Plugin Review Tool <flo-2d_results_tool>`.
+   see the :ref:`FLO-2D Results Tool <flo-2d_results_tool>`.
 
 The Run Hydrog button will load the Hydrog executable in the Project Folder.
 

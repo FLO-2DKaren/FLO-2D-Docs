@@ -7,7 +7,7 @@ MaxPlot is a post-processor  program  to  display  spatially  variable  results 
 perform difference calculations.
 
 .. note:: Maxplot is a simple and fast tool for plotting results.  For more comprehensive map making, use
-   MapCrafter or Rasterizor plugins.
+   :ref:`MapCrafter <run_mapcrafter>` or :ref:`Rasterizor <run_rasterizor>` plugins.
 
 
 The Run MaxPlot button will load the MaxPlot executable in the Project Folder.
