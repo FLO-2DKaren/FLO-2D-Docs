@@ -2749,43 +2749,45 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - table_name
      - TEXT
-     -
+     - Name of the table in the Geopackage.
 
    * - data_type
      - TEXT
-     -
+     - Data types include aspatial for table data, features
+       for vector data and 2d-gridded-coverage for raster data.
 
    * - identifier
      - TEXT
-     -
+     - Name of external data.
 
    * - description
      - TEXT
-     -
+     - No data available.
 
    * - last_change
      - DATETIME
-     -
+     - Last data change of table or layer.  If it’s external data,
+       the date is added date and if its GeoPackage data, the date is last saved.
 
    * - min_x
      - DOUBLE
-     -
+     - Assigned when features are added.  Left x coordinate.
 
    * - min_y
      - DOUBLE
-     -
+     - Assigned when features are added.  Bottom y coordinate.
 
    * - max_x
      - DOUBLE
-     -
+     - Assigned when features are added.  Right x coordinate.
 
    * - max_y
      - DOUBLE
-     -
+     - Assigned when features are added.  Top y coordinate.
 
    * - srs_id
      - INTEGER
-     -
+     - EPSG code.
 
 
 gpkg_data_column_constraints
