@@ -3528,6 +3528,7 @@ Tables that stores green-ampt infiltration parameters for specific grid elements
 
 
 infil_cells_horton
+---------------------------
 
 Table that stores the Horton infiltration parameters for specific grid elements.
 
@@ -3564,6 +3565,7 @@ Table that stores the Horton infiltration parameters for specific grid elements.
 
 
 infil_cells_scs
+---------------------------
 
 Tables that stores the scs curve number for specific grid elements.
 
@@ -3591,6 +3593,7 @@ Tables that stores the scs curve number for specific grid elements.
 
 
 infil_chan_elems
+---------------------------
 
 Table that stores the channel hydraulic conductivity for specific channel elements.
 
@@ -3617,6 +3620,7 @@ Table that stores the channel hydraulic conductivity for specific channel elemen
 
 
 infil_chan_seg
+---------------------------
 
 Hidden table linked to the Infiltration editor.
 Data is not available to view via a table.
@@ -3652,6 +3656,7 @@ Data is not available to view via a table.
 
 
 inflow
+---------------------------
 
 Table for Inflow layer stored in the Tables group.
 Data is stored when the boundary condition schematize button is pushed.
@@ -3699,6 +3704,7 @@ Data is stored when the boundary condition schematize button is pushed.
 
 
 inflow_cells
+---------------------------
 
 The table stores the data for Inflow Cells layer in the Tables group.
 This table joins the grid layer to the inflow layer.
@@ -3730,6 +3736,7 @@ This table joins the grid layer to the inflow layer.
 
 
 inflow_time_series
+---------------------------
 
 The table that stores the number and name of the inflow time series.
 This data is used to join the time series data to the inflow cell data and the time series tables.
@@ -3753,6 +3760,7 @@ This data is used to join the time series data to the inflow cell data and the t
 
 
 inflow_time_series_data
+---------------------------
 
 Table of the time series hydrograph data.
 
@@ -3787,6 +3795,7 @@ Table of the time series hydrograph data.
 
 
 levee_data
+---------------------------
 
 The table storing the data in the Levees layer in the Schematic Layers group.
 This data is written to the levee.dat file when the file is exported.
@@ -3826,6 +3835,7 @@ This data is written to the levee.dat file when the file is exported.
 
 
 levee_failure
+---------------------------
 
 The table that stores the data for a prescribed levee breach.
 This layer is hidden.
@@ -3885,6 +3895,7 @@ It is filled when the project is imported.
 
 
 levee_fragility
+---------------------------
 
 The table that stores the levee fragility data.
 This data is written to the hidden layer when the data is imported.
@@ -3917,6 +3928,7 @@ This table is not editable.
 
 
 levee_general
+---------------------------
 
 The hidden table that is filled when the file is imported.
 Not editable.
@@ -3953,6 +3965,7 @@ Not editable.
 
 
 mud
+-----
 
 Table of data for the sed.dat file mudflow line.
 Data is imported into this table when GDS import is used.
@@ -3997,6 +4010,7 @@ It is not editable.
 
 
 mud_areas
+---------------------------
 
 The table that stores the data for the polygons that represent a debris storage basin.
 The polygons are stored in the Mud Areas layer in the Sediment Transport group.
@@ -4025,6 +4039,7 @@ Data is for the sed.dat file.
 
 
 mud_cells
+---------------------------
 
 The table that joins the mudflow debris basin polygons to the grid.
 Data is for the SED.DAT file.
@@ -4052,6 +4067,7 @@ Data is for the SED.DAT file.
 
 
 mult
+---------------------------
 
 The table that stores the data imported from the GDS import.
 Hidden table not editable.
@@ -4108,6 +4124,7 @@ Data is for the mult.dat file.
 
 
 mult_areas
+---------------------------
 
 Table of values stored in the spatially variable multiple channel areas.
 The Multiple Channel Areas layer is part of the Schematic Layers group.
@@ -4149,6 +4166,7 @@ Data is for the mult.dat file.
 
 
 mult_cells
+---------------------------
 
 The table that joins the multiple channel areas to the grid layer.
 Data is for the mult.dat file.
@@ -4196,6 +4214,7 @@ Data is for the mult.dat file.
 
 
 mult_domains
+---------------------------
 
 .. list-table::
    :widths: 33 33 33
