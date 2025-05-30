@@ -4429,18 +4429,19 @@ mult_domains_methods
 
    * - subdomain_name
      - TEXT
-     -
+     - Name of the subdomain.
 
    * - subdomain_path
      - TEXT
-     -
+     - Path of the subdomain.
 
    * - fid_method
      - INTEGER
-     -
+     - Fid from the mult_domains_con table.
 
 
 mult_lines
+---------------------
 
 The table that joins the multiple channel lines to the grid layer.
 Data is for the mult.dat file.
@@ -4480,6 +4481,7 @@ Data is for the mult.dat file.
 
 
 noexchange_chan_cells
+-----------------------
 
 This table stores the areas that are converted into noexchange channel cells.
 
@@ -4506,6 +4508,7 @@ This table stores the areas that are converted into noexchange channel cells.
 
 
 out_hydrographs
+---------------------
 
 This is a table of polygon areas that define the outflow condition as O1 – O9.
 This table is used for schematizing the out_hydrographs_cells table.
@@ -4537,6 +4540,7 @@ This table is used for schematizing the out_hydrographs_cells table.
 
 
 out_hydrographs_cells
+------------------------
 
 This table stores the grid elements and outflow polygons that are used to write the O1 – O9 outflow hydrograph data.
 This data will be exported to the OUTFLOW.DAT file when the project is exported.
@@ -4568,6 +4572,7 @@ This data will be exported to the OUTFLOW.DAT file when the project is exported.
 
 
 outflow
+---------------------
 
 Table of data for the Outflow layer.
 This layer is part of the Tables group.
@@ -4638,6 +4643,7 @@ It is referenced in the import GDS code, schematic to user layers code and expor
 
 
 outflow_cells
+---------------------
 
 Table to join the outflow data to the grid layer.
 This layer is part of the Tables group.
@@ -4669,6 +4675,7 @@ This layer is part of the Tables group.
 
 
 outflow_time_series
+---------------------
 
 The table that lists the time series tables by name.
 
@@ -4691,6 +4698,7 @@ The table that lists the time series tables by name.
 
 
 outflow_time_series_data
+--------------------------
 
 The table that lists the time series stage-time tables by time and elevation data.
 
@@ -4721,6 +4729,7 @@ The table that lists the time series stage-time tables by time and elevation dat
 
 
 outrc
+---------------------
 
 .. list-table::
    :widths: 33 33 33
