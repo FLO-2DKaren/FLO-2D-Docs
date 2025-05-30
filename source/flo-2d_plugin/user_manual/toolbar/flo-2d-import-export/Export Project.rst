@@ -31,7 +31,7 @@ Export FLO-2D \*.DAT Files
 .. note:: It is not necessary to export all files every time.
           Export large files like INFIL.DAT or TOPO.DAT only when needed.
 
-..important::
+.. important::
    If you commonly export to the same folder, you might notice that the Remove FPLAIN.DAT, CADPTS.DAT, 
    and NEIGHBOR.DAT checkbox is active.  It's important to check the box if you made a change to the
    grid shape, size, elevation, or roughness.  FLO-2D engine will read the old files if they exist.
