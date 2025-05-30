@@ -3004,22 +3004,23 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - md_scope
      - TEXT
-     -
+     - Scope of the metadata (e.g., 'dataset', 'featureType', 'tile').
 
    * - md_standard_uri
      - TEXT
-     -
+     - URI identifying the metadata standard or profile (e.g., ISO 19115, FGDC).
 
    * - mime_type
      - TEXT
-     -
+     - MIME type of the metadata content (e.g., 'text/xml', 'text/html').
 
    * - metadata
      - TEXT
-     -
+     - The actual metadata content stored as a text string.
 
 
 gpkg_metadata_reference
+------------------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
