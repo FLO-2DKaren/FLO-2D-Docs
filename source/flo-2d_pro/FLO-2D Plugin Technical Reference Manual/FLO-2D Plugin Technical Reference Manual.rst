@@ -3168,23 +3168,23 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - srs_id
      - INTEGER
-     -
+     - Spatial reference system ID from the gpkg_spatial_ref_sys table.
 
    * - min_x
      - DOUBLE
-     -
+     - Minimum X coordinate (longitude or easting) of the tile matrix set extent.
 
    * - min_y
      - DOUBLE
-     -
+     - Minimum Y coordinate (latitude or northing) of the tile matrix set extent.
 
    * - max_x
      - DOUBLE
-     -
+     - Maximum X coordinate of the tile matrix set extent.
 
    * - max_y
      - DOUBLE
-     -
+     - Maximum Y coordinate of the tile matrix set extent.
 
 
 grid
