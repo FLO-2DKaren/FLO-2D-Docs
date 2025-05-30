@@ -3035,34 +3035,35 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - reference_scope
      - TEXT
-     -
+     - Scope of the reference: 'geopackage', 'table', 'column', 'row', 'row/col'.
 
    * - table_name
      - TEXT
-     -
+     - Name of the table the metadata refers to (nullable if reference_scope = 'geopackage').
 
    * - column_name
      - TEXT
-     -
+     - Name of the column the metadata refers to (nullable unless reference_scope includes 'column').
 
    * - row_id_value
      - INTEGER
-     -
+     - Row ID if the metadata applies to a specific row (nullable unless scope includes 'row').
 
    * - timestamp
      - DATETIME
-     -
+     - ISO 8601-formatted timestamp when the metadata reference was created.
 
    * - md_file_id
      - INTEGER
-     -
+     - Foreign key to the gpkg_metadata.id that this reference links to.
 
    * - md_parent_id
      - INTEGER
-     -
+     - Optional foreign key to a parent metadata record for hierarchical relationships.
 
 
 gpkg_spatial_ref_sys
+--------------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
