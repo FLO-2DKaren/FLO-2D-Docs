@@ -2611,11 +2611,12 @@ external_layers
 
    * - name
      - TEXT
-     -
+     - Layer name.
 
    * - type
      - TEXT
-     -
+     - A field to determine if and external layer is a user layer meaning part of the GeoPackage or
+       external layer that is not part of the GeoPackage.
 
 
 fpfroude
