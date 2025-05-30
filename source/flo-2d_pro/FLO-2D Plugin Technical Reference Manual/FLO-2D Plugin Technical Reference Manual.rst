@@ -4742,22 +4742,24 @@ outrc
 
    * - fid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Unique identifier for the record; not tied to the grid element ID.
 
    * - grid_fid
      - INTEGER
-     -
+     - Foreign key referencing a grid element.
 
    * - depthrt
      - REAL
-     -
+     - Increment flow depth for the volumetric rating table above the lowest elevation in the
+       grid element topographic database.
 
    * - volrt
      - REAL
-     -
+     - Volume for each incremental depth.
 
 
 qgis_projects
+-----------------
 
 .. list-table::
    :widths: 33 33 33
