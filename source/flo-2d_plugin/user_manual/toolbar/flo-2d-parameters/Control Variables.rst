@@ -6,7 +6,7 @@ Set Control Parameters (CONT.DAT)
 This button allows the user to set up the control variables.  The variable descriptions and instructions are available
 in the Data Input Manual.
 
-See the :ref: Data Input Manual 2025 <data_input_manual_pro> for more details.
+See the :ref: `Data Input Manual 2025 <data_input_manual_pro>` for more details.
 
 Control Parameters
 -----------------------------
@@ -82,9 +82,11 @@ Numerical stability parameters are defined on the second tab.
    used in a long time but it was maintained as a place holder.  If you have a toler.dat with a wavemax > 0.00, you
    likely have a project that is FLO-2D v2007 or earlier.  Get tech support to help identify which build was used for your project.
 
-   Contact-us_ to find the correct version of GDS or Installation.
+   |contact| to find the correct version of GDS or Installation.
 
-   .. _Contact-Us:  https://flo-2d.com/contact/
+.. |contact| raw:: html
+
+    <a href="https://flo-2d.com/contact/" target="_blank" rel="noopener">Contact us</a>
 
 2. Courant Numbers
 
