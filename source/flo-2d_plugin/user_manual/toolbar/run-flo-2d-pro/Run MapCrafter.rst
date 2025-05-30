@@ -9,7 +9,7 @@ Additionally, MapCrafter goes beyond by creating hazard maps, highlighting areas
 simulations, aiding in risk management. The plugin also streamlines the QGIS layout manager process by automatically
 generating templates for easy customization. 
 
-.. note:: MapCrafter training video playlist is available on Youtube. |mapcrafter|
+.. note:: MapCrafter / Rasterizor training video playlist is available on Youtube. |mapcrafter|
 
 .. |mapcrafter| raw:: html
 
