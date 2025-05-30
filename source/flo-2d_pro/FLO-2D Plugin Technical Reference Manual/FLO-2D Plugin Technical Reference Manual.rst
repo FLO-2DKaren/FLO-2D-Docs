@@ -10047,17 +10047,17 @@ Bar Error
 +-----------+-----------------------------------------------------------------------------------------------------+
 | Type      | Message                                                                                             |
 +===========+=====================================================================================================+
-| bar_error | ERROR 060319.1604 Cell size is 0 - something went wrong! Does TOPO.DAT file exists or is empty?                                           |
+| bar_error | ERROR 060319.1604 Cell size is 0 - something went wrong! Does TOPO.DAT file exists or is empty?     |
 +-----------+-----------------------------------------------------------------------------------------------------+
-| bar_error | {} is NOT a GeoPackage!.format(gpkg_path)                                           |
+| bar_error | {} is NOT a GeoPackage!.format(gpkg_path)                                                           |
 +-----------+-----------------------------------------------------------------------------------------------------+
-| bar_error | {} is NOT a GeoPackage!.format(self.gutils.path)                                           |
+| bar_error | {} is NOT a GeoPackage!.format(self.gutils.path)                                                    |
 +-----------+-----------------------------------------------------------------------------------------------------+
-| bar_error | ERROR while saving storm drain components from hydraulic layers!                                           |
+| bar_error | ERROR while saving storm drain components from hydraulic layers!                                    |
 +-----------+-----------------------------------------------------------------------------------------------------+
-| bar_error | ERROR 280318.0530 Cross sections interpolation dialog could not be loaded!                                           |
+| bar_error | ERROR 280318.0530 Cross sections interpolation dialog could not be loaded!                          |
 +-----------+-----------------------------------------------------------------------------------------------------+
-| bar_error | ERROR 280318.0528 Cross sections interpolation failed!                                           |
+| bar_error | ERROR 280318.0528 Cross sections interpolation failed!                                              |
 +-----------+-----------------------------------------------------------------------------------------------------+
 
 
@@ -10065,87 +10065,90 @@ Bar Error
 +----------+-----------------------------------------------------------------------------------------------------+
 | Type     | Message                                                                                             |
 +==========+=====================================================================================================+
-| bar_info | Simulation started!, dur=3                                           |
+| bar_info | Simulation started!, dur=3                                                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Loading last model cancelled, dur=3                                           |
+| bar_info | Loading last model cancelled, dur=3                                                                 |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Import cancelled, dur=3                                           |
+| bar_info | Import cancelled, dur=3                                                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Flo2D model imported, dur=3                                           |
+| bar_info | Flo2D model imported, dur=3                                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Flo2D model exported, dur=3                                           |
+| bar_info | Flo2D model exported, dur=3                                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | HEC-RAS geometry data imported!                                           |
+| bar_info | HEC-RAS geometry data imported!                                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Parameters saved!, dur=3                                           |
+| bar_info | Parameters saved!, dur=3                                                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Hazus Flooding Analysis performed                                           |
+| bar_info | Hazus Flooding Analysis performed                                                                   |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Converting Schematic Layers to User Layers finished!                                           |
+| bar_info | Converting Schematic Layers to User Layers finished!                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Not implemented...                                           |
+| bar_info | Not implemented...                                                                                  |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Channel Profile tool not implemented for selected features.                                            |
+| bar_info | Channel Profile tool not implemented for selected features.                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | There is no inflow defined in the database...                                           |
+| bar_info | There is no inflow defined in the database...                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | There is no outflow defined in the database...                                           |
+| bar_info | There is no outflow defined in the database...                                                      |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | There is no outflow defined in the database...                                           |
+| bar_info | There is no outflow defined in the database...                                                      |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Channel data saved!, dur=3                                           |
+| bar_info | Channel data saved!, dur=3                                                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | 3D levee lines data imported!                                           |
+| bar_info | 3D levee lines data imported!                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | GeoPackage {} is OK .format(gpkg_path)                                           |
+| bar_info | GeoPackage {} is OK .format(gpkg_path)                                                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | GeoPackage {} is OK .format(self.gutils.path)                                           |
+| bar_info | GeoPackage {} is OK .format(self.gutils.path)                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | No data was selected                                           |
+| bar_info | No data was selected                                                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Schematizing of infiltration finished!                                           |
+| bar_info | Schematizing of infiltration finished!                                                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | There aren t cells with levees defined                                           |
+| bar_info | There aren t cells with levees defined                                                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Individual Breach Data saved.                                           |
+| bar_info | Individual Breach Data saved.                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Saving of Individual Breach Data failed!.                                           |
+| bar_info | Saving of Individual Breach Data failed!.                                                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | There aren t individual breach cells                                           |
+| bar_info | There aren t individual breach cells                                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Individual Breach Data saved.                                           |
+| bar_info | Individual Breach Data saved.                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Saving of Individual Breach Data failed!.                                           |
+| bar_info | Saving of Individual Breach Data failed!.                                                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Fragility curve data saved.                                           |
+| bar_info | Fragility curve data saved.                                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Saving of Fragility Curve Data failed!.                                           |
+| bar_info | Saving of Fragility Curve Data failed!.                                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Individual Multiple Channels Data saved.                                           |
+| bar_info | Individual Multiple Channels Data saved.                                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Saving of Individual Multriple Channels Data failed!.                                           |
+| bar_info | Saving of Individual Multriple Channels Data failed!.                                               |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Outfalls saved to Storm Drain-Outfalls  User Layer!\n\nSchematize it before saving into SWMMOUTF.DAT.                                           |
+| bar_info | Outfalls saved to Storm Drain-Outfalls  User Layer!\n\nSchematize it before saving into             |
+|          | SWMMOUTF.DAT.                                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Conduits saved to Storm Drain-Conduits  User Layer!\n\nSchematize it before saving into SWMMOUTF.DAT.                                           |
+| bar_info | Conduits saved to Storm Drain-Conduits  User Layer!\n\nSchematize it before saving into             |
+|          | SWMMOUTF.DAT.                                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Storm drain components (inlets, outfall, and/or conduits) from hydraulic layers saved.                                           |
+| bar_info | Storm drain components (inlets, outfall, and/or conduits) from hydraulic layers saved.              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Schematizing of Storm Drains finished!                                           |
+| bar_info | Schematizing of Storm Drains finished!                                                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Recalculation of Max Depth finished!                                           |
+| bar_info | Recalculation of Max Depth finished!                                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | CHAN.DAT file exported to  + outdir, dur = 5                                           |
+| bar_info | CHAN.DAT file exported to  + outdir, dur = 5                                                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | CHAN.DAT file exported to  + outdir, dur = 5                                           |
+| bar_info | CHAN.DAT file exported to  + outdir, dur = 5                                                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | XSEC.DAT model exported to  + outdir, dur=5                                           |
+| bar_info | XSEC.DAT model exported to  + outdir, dur=5                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | xsec.dat model exported to  + outdir, dur=5                                           |
+| bar_info | xsec.dat model exported to  + outdir, dur=5                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | HYCHAN.OUT file imported. Channel Cross Sections updated with max. surface water elevations and peak discharge data.                                           |
+| bar_info | HYCHAN.OUT file imported. Channel Cross Sections updated with max. surface water elevations         |
+|          | and peak discharge data.                                                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_info | Action cancelled, dur=3                                           |
+| bar_info | Action cancelled, dur=3                                                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
 
 
