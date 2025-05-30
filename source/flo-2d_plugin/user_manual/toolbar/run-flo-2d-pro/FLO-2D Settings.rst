@@ -69,7 +69,7 @@ plugin is connected to a folder with a completed simulation, a project review sy
 .. image:: ../../img/Flo-2D-Plugin-Settings/results.png
 
 
-See more info on this system here: `FLO-2D Info and Results <../flo-2d-info-tool/FLO-2D%20Info%20Tool.html#info-tool>`__
+See more info on this system here: :ref:`FLO-2D Results <flo-2d_results_tool>`
 
 
 Start a Debug Run
