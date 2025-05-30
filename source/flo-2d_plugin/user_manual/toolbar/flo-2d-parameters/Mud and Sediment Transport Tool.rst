@@ -6,10 +6,10 @@ Mud and Sediment Transport (SED.DAT)
 .. note:: Mudflow, sediment transport, and two phase flow are complex topics,
    find resources in the FLO-2D Documentation Folder
 
-   - Data Input Manual
-   - FLO-2D Pro Reference Manual
-   - Simulating Mudflow Guidelines
-   - Two Phase Flood Routing Guidelines
+   - Data Input Manual :ref:`Data Input Manual <data_input_manual>`
+   - FLO-2D Pro Reference Manual :ref:`FLO-2D Pro Reference Manual <flo-2d_pro_reference_manual>`
+   - Simulating Mudflow Guidelines :ref:`Simulating Mudflow Guidelines <mudflow_guidelines>`
+   - Two Phase Flood Routing Guidelines :ref:`Two Phase Flood Routing Guidelines <two_phase_guidelines>`
 
 1. Click on the Mud and Sediment Transport (SED.DAT).
 
