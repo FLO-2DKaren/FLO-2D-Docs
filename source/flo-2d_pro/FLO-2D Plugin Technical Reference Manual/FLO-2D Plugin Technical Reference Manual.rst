@@ -9628,378 +9628,142 @@ Warnings
 Info Dialogs
 ------------
 
-.. _`type`:
++-----------+-----------------------------------------------------------------------------------------------------+
+| Type      | Details                                                                                             |
++===========+=====================================================================================================+
+| show_info | ("Files read by this project:\n\n" + self.files_used + "\n\nFiles not found or empty:\n\n" +        |
+|           | self.files_not_used)                                                                                |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Files exported:\n\n" + self.files_used)                                                           |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Values assigned to the Schematic Levees layer!')                                                  |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Converting User Layers to Schematic Layers finished!)                                             |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('gutter globals is empty')show_info,('gutter globals filled')show_info,('head')show_info,          |
+|           | "('globals width%, height%, n_value%'  %  (head[0], head[1], head[2] ))                             |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('after rows')                                                                                      |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('opened')                                                                                          |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("fid %s, width %s, height  %s , heign_value  %s, direction %s" % (fid, width, height, n_value,     |
+|           | direction))                                                                                         |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('next line')                                                                                       |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("WARNING 040319.0521:\n\nThe following cell(s) with inlet/junction of type 4 " +                   |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Inflows schematized!")                                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Outflows schematized!")                                                                           |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Run 0.4 min debug")                                                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Calculating elevation finished!')                                                                 |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Spatial tolerance values calculated!')                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Perform average grid elevation interception.')                                                    |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Perform elevation from shapefile.')                                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Flow depths were calculated.')                                                                    |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Perform sample from raster.')                                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Perform interpolate from DTM points.')                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Compute from area reduction factors.')                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Buildings statistics can be seen in 'Buildings Statistics' table.\n\n" +                          |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Connection!')                                                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('TABLE CHANGED in ' + str(I) + '  ' + str(J))                                                      |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("WARNING 020219.1836:\n\nThe following " + str(no_rt) +                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Connection!')                                                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('TABLE CHANGED in ' + str(I) + '  ' + str(J))                                                      |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("WARNING 020219.1836:\n\nThe following " + str(no_rt) +                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Connection!')                                                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Sampling done.')                                                                                  |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Sampling done.')                                                                                  |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Importing Storm Drain nodes and conduits data finished!\n\n" +                                    |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Importing Storm Drain conduits data finished!\n\n" +                                              |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Importing Storm Drain nodes data finished!\n\n" +                                                 |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Floodplain cross-sections schematized!")                                                          |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Grid created!')                                                                                   |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Calculating elevation finished!')                                                                 |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Sampling of grid field '" + grid_field + "' finished!")                                           |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Assigning grid elevation finished!')                                                              |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Assigning roughness finished!')                                                                   |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('ARF and WRF values calculated!')                                                                  |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Spatial tolerance values calculated!')                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Spatial Froude values calculated!')                                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Spatial shallow-n values calculated!')                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Spatial gutter values calculated!')                                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('No-exchange areas selected!')                                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("WARNING 150119.0354 Calculating Green-Ampt parameters finished, but \n"                           |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Calculating Green-Ampt parameters finished!')                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Calculating SCS Curve Number parameters finished!')                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Importing Rainfall Data finished!')                                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Exporting Rainfall Data finished!')                                                               |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Importing predefined time series finished!')                                                      |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Schematizing of Storm Drains finished!\n\n" +                                                     |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("No nodes or conduits were defined in file\n\n" + swmm_file)                                       |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Importing Storm Drain data finished!\n\n" +                                                       |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | (swmm_file + "\n\nfile saved with:\n\n" +                                                           |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Inlets saved to 'Storm Drain-Inlets' User Layer!\n\nSchematize it before saving into              |
+|           | SWMMFLO.DAT.")                                                                                      |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Streets schematized!")                                                                            |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Importing Storm Drain input data finished!')                                                      |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Updating SWMM input data finished!')                                                              |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Left Banks, Right Banks, and Cross Sections schematized!')                                        |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ("Files CHAN.DAT and XSEC.DAT saved.")                                                              |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Interpolation of cross-sections values finished!')                                                |
++-----------+-----------------------------------------------------------------------------------------------------+
+| show_info | ('Confluences schematized!')                                                                        |
++-----------+-----------------------------------------------------------------------------------------------------+
 
-type:
-
-Details
-
-.. _`show_info`:
-
-show_info:
-
-("Files read by this project:\\n\\n" + self.files_used + "\\n\\nFiles not found or empty:\\n\\n" + self.files_not_used)
-
-.. _`show_info`:
-
-show_info:
-
-("Files exported:\\n\\n" + self.files_used)
-
-.. _`show_info`:
-
-show_info:
-
-('Values assigned to the Schematic Levees layer!')
-
-.. _`show_info`:
-
-show_info:
-
-('Converting User Layers to Schematic Layers finished!)
-
-.. _`show_info`:
-
-show_info:
-
-('gutter globals is empty')show_info,('gutter globals filled')show_info,('head')show_info,"('globals width%, height%, n_value%' % (head[0], head[1],
-head[2] ))
-
-.. _`show_info`:
-
-show_info:
-
-('after rows')
-
-.. _`show_info`:
-
-show_info:
-
-('opened')
-
-.. _`show_info`:
-
-show_info:
-
-("fid %s, width %s, height %s , heign_value %s, direction %s" % (fid, width, height, n_value, direction))
-
-.. _`show_info`:
-
-show_info:
-
-('next line')
-
-.. _`show_info`:
-
-show_info:
-
-("WARNING 040319.0521:\\n\\nThe following cell(s) with inlet/junction of type 4 " +
-
-.. _`show_info`:
-
-show_info:
-
-("Inflows schematized!")
-
-.. _`show_info`:
-
-show_info:
-
-("Outflows schematized!")
-
-.. _`show_info`:
-
-show_info:
-
-("Run 0.4 min debug")
-
-.. _`show_info`:
-
-show_info:
-
-('Calculating elevation finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Spatial tolerance values calculated!')
-
-.. _`show_info`:
-
-show_info:
-
-('Perform average grid elevation interception.')
-
-.. _`show_info`:
-
-show_info:
-
-('Perform elevation from shapefile.')
-
-.. _`show_info`:
-
-show_info:
-
-('Flow depths were calculated.')
-
-.. _`show_info`:
-
-show_info:
-
-('Perform sample from raster.')
-
-.. _`show_info`:
-
-show_info:
-
-('Perform interpolate from DTM points.')
-
-.. _`show_info`:
-
-show_info:
-
-('Compute from area reduction factors.')
-
-.. _`show_info`:
-
-show_info:
-
-("Buildings statistics can be seen in 'Buildings Statistics' table.\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-('Connection!')
-
-.. _`show_info`:
-
-show_info:
-
-('TABLE CHANGED in ' + str(I) + ' ' + str(J))
-
-.. _`show_info`:
-
-show_info:
-
-("WARNING 020219.1836:\\n\\nThe following " + str(no_rt) +
-
-.. _`show_info`:
-
-show_info:
-
-('Connection!')
-
-.. _`show_info`:
-
-show_info:
-
-('Sampling done.')
-
-.. _`show_info`:
-
-show_info:
-
-('Sampling done.')
-
-.. _`show_info`:
-
-show_info:
-
-("Importing Storm Drain nodes and conduits data finished!\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-("Importing Storm Drain conduits data finished!\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-("Importing Storm Drain nodes data finished!\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-("Floodplain cross-sections schematized!")
-
-.. _`show_info`:
-
-show_info:
-
-('Grid created!')
-
-.. _`show_info`:
-
-show_info:
-
-('Calculating elevation finished!')
-
-.. _`show_info`:
-
-show_info:
-
-("Sampling of grid field '" + grid_field + "' finished!")
-
-.. _`show_info`:
-
-show_info:
-
-('Assigning grid elevation finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Assigning roughness finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('ARF and WRF values calculated!')
-
-.. _`show_info`:
-
-show_info:
-
-('Spatial tolerance values calculated!')
-
-.. _`show_info`:
-
-show_info:
-
-('Spatial Froude values calculated!')
-
-.. _`show_info`:
-
-show_info:
-
-('Spatial shallow-n values calculated!')
-
-.. _`show_info`:
-
-show_info:
-
-('Spatial gutter values calculated!')
-
-.. _`show_info`:
-
-show_info:
-
-('No-exchange areas selected!')
-
-.. _`show_info`:
-
-show_info:
-
-("WARNING 150119.0354 Calculating Green-Ampt parameters finished, but \\n"
-
-.. _`show_info`:
-
-show_info:
-
-('Calculating Green-Ampt parameters finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Calculating SCS Curve Number parameters finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Importing Rainfall Data finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Exporting Rainfall Data finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Importing predefined time series finished!')
-
-.. _`show_info`:
-
-show_info:
-
-("Schematizing of Storm Drains finished!\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-("No nodes or conduits were defined in file\\n\\n" + swmm_file)
-
-.. _`show_info`:
-
-show_info:
-
-("Importing Storm Drain data finished!\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-(swmm_file + "\\n\\nfile saved with:\\n\\n" +
-
-.. _`show_info`:
-
-show_info:
-
-("Inlets saved to 'Storm Drain-Inlets' User Layer!\\n\\nSchematize it before saving into SWMMFLO.DAT.")
-
-.. _`show_info`:
-
-show_info:
-
-("Streets schematized!")
-
-.. _`show_info`:
-
-show_info:
-
-('Importing Storm Drain input data finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Updating SWMM input data finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Left Banks, Right Banks, and Cross Sections schematized!')
-
-.. _`show_info`:
-
-show_info:
-
-("Files CHAN.DAT and XSEC.DAT saved.")
-
-.. _`show_info`:
-
-show_info:
-
-('Interpolation of cross-sections values finished!')
-
-.. _`show_info`:
-
-show_info:
-
-('Confluences schematized!')
 
 
 Bar Warning
