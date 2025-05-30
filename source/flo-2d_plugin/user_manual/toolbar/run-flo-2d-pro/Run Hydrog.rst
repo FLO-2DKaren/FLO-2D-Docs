@@ -6,11 +6,11 @@ Run Hydrog
 Hydrog is a post-processor  program  to  display  channel  and  cross  section
 hydrographs.
 
-.. note:: The project folder must have a CONT.DAT file to run Hydrog.  A complete simulation with either a channel,
-          floodplain cross sections, or hydraulic structures results.
+.. note:: The project folder must have a CONT.DAT file to run Hydrog and a complete simulation with either a channel,
+          channel cross sections, floodplain cross sections, or hydraulic structures results.
 
-.. note:: Hydrog functions are all available using the FLO-2D Plugin.
-
+.. important:: For a more powerful tool that allows you to review the results of your FLO-2D simulations, 
+   see :ref:`The FLO-2D Plugin Review Tool <flo-2d_results_tool>`.
 
 The Run Hydrog button will load the Hydrog executable in the Project Folder.
 
