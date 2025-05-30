@@ -3000,7 +3000,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - id
      - INTEGER
-     -
+     - Unique identifier for the gpkg_metadata.
 
    * - md_scope
      - TEXT
@@ -3078,27 +3078,27 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - srs_name
      - TEXT
-     - Coordinate reference system.
+     - Human-readable name of the spatial reference system.
 
    * - srs_id
      - INTEGER
-     - Coordinate reference id number.
+     - Unique identifier for the spatial reference system.
 
    * - organization
      - TEXT
-     -
+     - Name of the organization defining the coordinate system (e.g., 'EPSG').
 
    * - organization_coordsys_id
      - INTEGER
-     -
+     - The numeric ID of the coordinate system in the organization’s registry (e.g., EPSG code).
 
    * - definition
      - TEXT
-     -
+     - Well-Known Text (WKT) definition of the spatial reference system.
 
    * - description
      - TEXT
-     -
+     - Optional description of the coordinate reference system.
 
 
 gpkg_tile_matrix
