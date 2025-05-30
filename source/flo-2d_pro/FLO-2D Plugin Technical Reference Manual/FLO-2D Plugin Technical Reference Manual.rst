@@ -4772,22 +4772,19 @@ qgis_projects
 
    * - name
      - TEXT
-     - Unit fid is unique and not associated with the grid id.
+     - Project name.
 
    * - metadata
      - INTEGER
-     -
+     - A JSON object describing when and by whom the project was last modified.
 
    * - content
      - BLOB
-     -
-
-   * - volrt
-     - BLOB
-     -
+     - A ZIP file that contains a .qgs or .qgz project, auxiliary data, or embedded configuration info
 
 
 qh_params
+------------
 
 Table to store the names of features for channel outflow discharge curve.
 
