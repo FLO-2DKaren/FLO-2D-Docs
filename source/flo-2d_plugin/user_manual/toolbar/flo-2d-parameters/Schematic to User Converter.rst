@@ -4,7 +4,8 @@ Convert Schematic Layers to User Layers
 ========================================
 
 This tool will convert imported \*.dat files to editable user layers.
-Use it after performing an Import FLO-2D \*.DAT files.
+It will be called automatically during the import process.  Sometimes is necessary
+to call it manually too.
 
 
 1. Click the
