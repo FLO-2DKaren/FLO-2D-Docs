@@ -9769,816 +9769,203 @@ Info Dialogs
 Bar Warning
 -----------
 
-.. _`type`:
++----------+-----------------------------------------------------------------------------------------------------+
+| Type     | Message                                                                                             |
++==========+=====================================================================================================+
+| bar_warn | Could not run simulation under current operation system!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Running simulation failed!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not find TOPO.DAT file! Importing GDS files aborted!', dur=3                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not read HEC-RAS file!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid layer to identify.                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no schematic cross-section data to display!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no evaporation data to display!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | WARNING 060319.1809 There are not any polygon layers selected (or visible)!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not compute Hazus Flooding Analysis!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Reading coordinates from SWMM input data failed!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | No time series fid for current outflow is defined.                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Define a database connections first!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | No data series for this inflow.                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | No time series data defined for that inflow.                                                                     |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | No data series for this type of outflow.                                                                     |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Couldn't find outflow fid={} and type={}'.format(fid, typ).                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Schematized Channel Editor populated!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not save Channels data! Please check it                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no Schematized Channel Cross Sections!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no Schematized Channel Cross Sections!                                                                      |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn |                                                                       |
++----------+-----------------------------------------------------------------------------------------------------+
 
-type:
 
-Message
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not run simulation under current operation system!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Running simulation failed!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not find TOPO.DAT file! Importing GDS files aborted!', dur=3
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not read HEC-RAS file!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid layer to identify.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no schematic cross-section data to display!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no evaporation data to display!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1809 There are not any polygon layers selected (or visible)!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not compute Hazus Flooding Analysis!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Reading coordinates from SWMM input data failed!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Reading conduits from SWMM input data failed!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No time series fid for current outflow is defined.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No time series fid for rain defined.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Define a database connections first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No data series for this inflow.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No time series data defined for that inflow.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No data series for this type of outflow.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Couldn't find outflow fid={} and type={}'.format(fid, typ).
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematized Channel Editor populated!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematized Channel Segments (left bank) Layer is empty!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematized Channel Segments (left bank) Layer is empty!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not save Channels data! Please check it
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no Schematized Channel Cross Sections!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematized Channel Segments (left bank) Layer is empty!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no Schematized Channel Cross Sections!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are not any polygon layers selected (or visible)
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are not any polygon layers selected (or visible)
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no raster layers in the project!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1628 There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1631 There is no grid.
-Please, create it before evaluating the tolerance values.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No inlets defined in 'Storm Drain Nodes' User Layer!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No rating table defined!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not import 3D levee lines data!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are not any point layers selected (or visible)
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on Grid to Computational Domain conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on Grid to Roughness conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on Boundary Conditions conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on 1D Domain elements conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on Levees conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on Floodplain cross-sections conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Creating User Layers failed on Infiltration conversion!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No data was selected!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no any user floodplain cross sections!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no Computational Domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1711 There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are not any point layers selected (or visible)
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the reduction factors.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the tolerance values.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the Froude values.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1718 There is no grid.
-Please, create it before evaluating the shallow-n values.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the shallow-n values.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid.
-Please, create it before evaluating the no-exchange cells.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration parameters first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Please define global infiltration method first!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematizing of infiltration failed! Please check user infiltration layers.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Importing Rainfall Data from ASCII files failed! Please check your input data.\\nIs the .RFC file missing?
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no h5py module installed! Please install it to run export tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Exporting Rainfall Data failed! Please check your input data.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Importing predefined time series failed! Please check your input data.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Vertical inlet opening is not allowed for {}!'.format(inlet_type))
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no storm drain components (inlets/outfalls) defined in layer Storm Drain Nodes (User Layers"
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No oulets defined in 'Storm Drain Nodes' User Layer!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not save outfalls! Please check if they are correct.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No inlets defined in 'Storm Drain Nodes' User Layer!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not save Inlets! Please check if they are correct.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-User Layer ""Storm Drain Conduits"" is empty! Import components from .INP file or shapefile, or schematize Storm Drains.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not save conduits! Please check if they are correct.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-User Layer ""Storm Drain Conduits"" is empty!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no computational domain! Please digitize it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Storm drain components not saved!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No rating table defined!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no any user streets to schematize! Please digitize them before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Vertical inlet opening is not allowed for {}!'.format(inlet_type))
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Schematizing of Storm Drains failed! Please check user Storm Drains Points layer.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Recalculation of Max Depth failed!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Importing Storm Drain input data failed! Please check your SWMM input data.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Updating SWMM input data failed! Please check Storm Drain data.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-No rating table defined!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Too many columns to paste.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no User Left Bank lines! Please digitize them before running the tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no User Cross Sections! Please digitize them before running the tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no User Right Bank lines! Please digitize them before running the tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no Schematized Channel Segments (Left Banks) to export.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There are no Schematized Channel Cross Sections to export.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not run interpolation under current operation system!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not run CHANRIGHTBANK.EXE under current operation system!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-CHANRIGHTBANK.EXE failed!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1754 There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1755 There are no cross-sections! Please create them before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-Could not run 'CHAN N-VALUE INTERPOLATOR.EXE' under current operation system!
-
-.. _`bar_warn`:
-
-bar_warn:
-
-There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1801 There is no grid! Please create it before running tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1802 There are no any user left bank lines! Please digitize them before running the tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-WARNING 060319.1803 There are no any user cross sections! Please digitize them before running the tool.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-All changes to this layer can be overwritten by changes in the User Layer.
-
-.. _`bar_warn`:
-
-bar_warn:
-
-ERROR 12117.0602
-
-.. _`bar_warn`:
-
-bar_warn:
-
-ERROR 121117.0544
 
 
 Bar Error
