@@ -4216,6 +4216,9 @@ Data is for the mult.dat file.
 mult_domains
 ---------------------------
 
+This table defines user-specified Multiple Domains in the FLO-2D model.
+Each domain is repre-sented by a polygon.
+
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -4248,6 +4251,9 @@ mult_domains
 
 mult_domains_con
 -----------------
+
+This table defines the Multiple Domains connections in the FLO-2D model.
+One subdomain can be connected to 9 subdomains.
 
 .. list-table::
    :widths: 33 33 33
@@ -4413,6 +4419,9 @@ mult_domains_con
 
 mult_domains_methods
 ----------------------
+
+This table is used when importing the subdomains from a MULTIDOMAIN.DAT file or from a CADPTS_DSx.DAT files.
+The path of each subdomain is stored in the geopackage to aid on the import method.
 
 .. list-table::
    :widths: 33 33 33
@@ -4731,6 +4740,10 @@ The table that lists the time series stage-time tables by time and elevation dat
 outrc
 ---------------------
 
+This table is used to create the Surface Water Rating Tables and generate the OUTRC.DAT file.
+The Surface Water Rating Tables define variable volume as a function of flow depth instead of a cell
+having one uniform elevation. This enables the digital terrain database within to be rep-resented.
+
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -4760,6 +4773,12 @@ outrc
 
 qgis_projects
 -----------------
+
+This table stores metadata and compressed content associated with QGIS projects.
+The first column contains the project name, the second is a JSON-formatted string describing the last
+modified time and user, and the third column is a binary blob that contains a zipped project file or
+configuration snapshot. This binary can be extracted and opened with a ZIP tool to in-spect or restore
+project content.
 
 .. list-table::
    :widths: 33 33 33
@@ -4807,7 +4826,8 @@ Table to store the names of features for channel outflow discharge curve.
 
 
 qh_params_data
-
+----------
+-----------------
 Parameters for the stage-discharge curve for a channel outflow node.
 This table joins to the qh_params table to identify the name of the table and assign the data to the correct outflow node.
 The data is imported and exported to the outflow.dat file.
@@ -4843,6 +4863,7 @@ The data is imported and exported to the outflow.dat file.
 
 
 qh_table
+---------------------------
 
 Table for storing the name and id of the channel time discharge curve.
 
@@ -4865,6 +4886,7 @@ Table for storing the name and id of the channel time discharge curve.
 
 
 qh_table_data
+---------------------------
 
 Table to store the depth discharge data for channel outflow nodes and join to the qh_table data.
 Data is imported and exported for outflow.dat.
@@ -4896,6 +4918,7 @@ Data is imported and exported for outflow.dat.
 
 
 rain
+------
 
 Table of global and control rain data.
 Data is imported and exported to the rain.dat file.
@@ -4961,6 +4984,7 @@ Data is imported and exported to the rain.dat file.
 
 
 rain_arf_cells
+---------------------------
 
 The table that facilitates the join between the rain arf areas layer and the grid layer.
 Data is imported and exported to the RAIN.DAT file.
@@ -4992,6 +5016,7 @@ Data is imported and exported to the RAIN.DAT file.
 
 
 rain_time_series
+---------------------------
 
 A table that lists the names of the rainfall time series tables.
 
@@ -5014,6 +5039,7 @@ A table that lists the names of the rainfall time series tables.
 
 
 rain_time_series_data
+---------------------------
 
 Data in the rainfall time series tables.
 This date is imported and exported to the rain.dat file.
@@ -5045,6 +5071,7 @@ This date is imported and exported to the rain.dat file.
 
 
 raincell
+---------------------------
 
 Control data for the real-time rainfall data.
 This data is imported and exported to the raincell.dat or raincell binary file.
@@ -5080,6 +5107,7 @@ This data is imported and exported to the raincell.dat or raincell binary file.
 
 
 raincell_data
+---------------------------
 
 Data for the real-time rainfall event.
 This data is imported and exported to the raincell.dat file or the raincell hdf5 file.
@@ -5111,6 +5139,7 @@ This data is imported and exported to the raincell.dat file or the raincell hdf5
 
 
 rat_curves
+---------------------------
 
 Table of values for the rating curves for hydraulic structures.
 This data is imported and exported to the hystruc.dat file.
@@ -5155,6 +5184,7 @@ This data is imported and exported to the hystruc.dat file.
 
 
 rat_table
+---------------------------
 
 Table of values for the depth discharge tables for hydraulic structures.
 This data is imported and exported to the hystruc.dat file.
@@ -5190,6 +5220,7 @@ This data is imported and exported to the hystruc.dat file.
 
 
 rbank
+---------------------------
 
 Table of data linked to the Right Bank layer of the Schematic Layers group.
 
@@ -5216,6 +5247,7 @@ Table of data linked to the Right Bank layer of the Schematic Layers group.
 
 
 repl_rat_curves
+---------------------------
 
 Table of data that stores the replacement rating curve data for hydraulic structures.
 This data is saved to the HYSTRUC.DAT file.
@@ -5260,6 +5292,7 @@ This data is saved to the HYSTRUC.DAT file.
 
 
 reservoirs
+---------------------------
 
 This table stores the reservoir node data for the schematic layer.
 It writes to the R line of the INFLOW.DAT file
@@ -5316,6 +5349,7 @@ It writes to the R line of the INFLOW.DAT file
 
 
 rtree_buildings_stats_geom
+---------------------------
 
 RSTLNE.
 
@@ -5350,8 +5384,7 @@ RSTLNE.
 
 
 rtree_buildings_stats_geom_node
-
-RSTLNE.
+----------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5372,6 +5405,7 @@ RSTLNE.
 
 
 rtree_buildings_stats_geom_parent
+-----------------------------------
 
 RSTLNE.
 
