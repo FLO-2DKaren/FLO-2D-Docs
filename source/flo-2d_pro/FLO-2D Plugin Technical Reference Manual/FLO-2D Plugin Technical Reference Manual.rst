@@ -9772,197 +9772,273 @@ Bar Warning
 +----------+-----------------------------------------------------------------------------------------------------+
 | Type     | Message                                                                                             |
 +==========+=====================================================================================================+
-| bar_warn | Could not run simulation under current operation system!                                                                      |
+| bar_warn | Could not run simulation under current operation system!                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Running simulation failed!                                                                      |
+| bar_warn | Running simulation failed!                                                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Could not find TOPO.DAT file! Importing GDS files aborted!', dur=3                                                                      |
+| bar_warn | Could not find TOPO.DAT file! Importing GDS files aborted!', dur=3                                  |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Could not read HEC-RAS file!                                                                      |
+| bar_warn | Could not read HEC-RAS file!                                                                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid layer to identify.                                                                      |
+| bar_warn | There is no grid layer to identify.                                                                 |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no schematic cross-section data to display!                                                                      |
+| bar_warn | There is no schematic cross-section data to display!                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no evaporation data to display!                                                                      |
+| bar_warn | There is no evaporation data to display!                                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | WARNING 060319.1809 There are not any polygon layers selected (or visible)!                                                                      |
+| bar_warn | WARNING 060319.1809 There are not any polygon layers selected (or visible)!                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Could not compute Hazus Flooding Analysis!                                                                      |
+| bar_warn | Could not compute Hazus Flooding Analysis!                                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Reading coordinates from SWMM input data failed!                                                                      |
+| bar_warn | Reading coordinates from SWMM input data failed!                                                    |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No time series fid for current outflow is defined.                                                                      |
+| bar_warn | No time series fid for current outflow is defined.                                                  |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Define a database connections first!                                                                      |
+| bar_warn | Define a database connections first!                                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No data series for this inflow.                                                                      |
+| bar_warn | No data series for this inflow.                                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No time series data defined for that inflow.                                                                     |
+| bar_warn | No time series data defined for that inflow.                                                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No data series for this type of outflow.                                                                     |
+| bar_warn | No data series for this type of outflow.                                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Couldn't find outflow fid={} and type={}'.format(fid, typ).                                                                      |
+| bar_warn | Couldn't find outflow fid={} and type={}'.format(fid, typ).                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Schematized Channel Editor populated!                                                                      |
+| bar_warn | Schematized Channel Editor populated!                                                               |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                                                      |
+| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                                                      |
+| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Could not save Channels data! Please check it                                                                      |
+| bar_warn | Could not save Channels data! Please check it                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are no Schematized Channel Cross Sections!                                                                      |
+| bar_warn | There are no Schematized Channel Cross Sections!                                                    |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                                                      |
+| bar_warn | Schematized Channel Segments (left bank) Layer is empty!                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are no Schematized Channel Cross Sections!                                                                      |
+| bar_warn | There are no Schematized Channel Cross Sections!                                                    |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are not any polygon layers selected (or visible)                                                                      |
+| bar_warn | There are not any polygon layers selected (or visible)                                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are not any polygon layers selected (or visible)                                                                      |
+| bar_warn | There are not any polygon layers selected (or visible)                                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are no raster layers in the project!                                                                      |
+| bar_warn | There are no raster layers in the project!                                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | WARNING 060319.1628 There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | WARNING 060319.1628 There is no grid! Please create it before running tool.                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | WARNING 060319.1631 There is no grid. Please, create it before evaluating the tolerance values.                                                                      |
+| bar_warn | WARNING 060319.1631 There is no grid. Please, create it before evaluating the tolerance values.     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No inlets defined in 'Storm Drain Nodes' User Layer!                                                                      |
+| bar_warn | No inlets defined in 'Storm Drain Nodes' User Layer!                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No rating table defined!                                                                      |
+| bar_warn | No rating table defined!                                                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Could not import 3D levee lines data!                                                                      |
+| bar_warn | Could not import 3D levee lines data!                                                               |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are not any point layers selected (or visible)                                                                      |
+| bar_warn | There are not any point layers selected (or visible)                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on Grid to Computational Domain conversion!                                                                      |
+| bar_warn | Creating User Layers failed on Grid to Computational Domain conversion!                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on Grid to Roughness conversion!                                                                      |
+| bar_warn | Creating User Layers failed on Grid to Roughness conversion!                                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on Boundary Conditions conversion!                                                                      |
+| bar_warn | Creating User Layers failed on Boundary Conditions conversion!                                      |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on 1D Domain elements conversion!                                                                      |
+| bar_warn | Creating User Layers failed on 1D Domain elements conversion!                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on Levees conversion!                                                                      |
+| bar_warn | Creating User Layers failed on Levees conversion!                                                   |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on Floodplain cross-sections conversion!                                                                      |
+| bar_warn | Creating User Layers failed on Floodplain cross-sections conversion!                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Creating User Layers failed on Infiltration conversion!                                                                      |
+| bar_warn | Creating User Layers failed on Infiltration conversion!                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | No data was selected!                                                                      |
+| bar_warn | No data was selected!                                                                               |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no any user floodplain cross sections!                                                                      |
+| bar_warn | There is no any user floodplain cross sections!                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no Computational Domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no Computational Domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | WARNING 060319.1711 There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | WARNING 060319.1711 There is no grid! Please create it before running tool.                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There are not any point layers selected (or visible)                                                                      |
+| bar_warn | There are not any point layers selected (or visible)                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid. Please, create it before evaluating the reduction factors.                                                                      |
+| bar_warn | There is no grid. Please, create it before evaluating the reduction factors.                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before running tool.                                                                      |
+| bar_warn | There is no any blocking polygons in ""Blocked Areas"" layer! Please digitize them before           |
+|          | running tool.                                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid. Please, create it before evaluating the tolerance values.                                                                      |
+| bar_warn | There is no grid. Please, create it before evaluating the tolerance values.                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid. Please, create it before evaluating the Froude values.                                                                      |
+| bar_warn | There is no grid. Please, create it before evaluating the Froude values.                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | WARNING 060319.1718 There is no grid. Please, create it before evaluating the shallow-n values.                                                                      |
+| bar_warn | WARNING 060319.1718 There is no grid. Please, create it before evaluating the shallow-n values.     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid. Please, create it before evaluating the shallow-n values.                                                                      |
+| bar_warn | There is no grid. Please, create it before evaluating the shallow-n values.                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid. Please, create it before evaluating the no-exchange cells.                                                                      |
+| bar_warn | There is no grid. Please, create it before evaluating the no-exchange cells.                        |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Please define global infiltration method first!                                                                      |
+| bar_warn | Please define global infiltration method first!                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Please define global infiltration method first!                                                                      |
+| bar_warn | Please define global infiltration method first!                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Please define global infiltration parameters first!                                                                      |
+| bar_warn | Please define global infiltration parameters first!                                                 |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Please define global infiltration method first!                                                                      |
+| bar_warn | Please define global infiltration method first!                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Please define global infiltration method first!                                                                      |
+| bar_warn | Please define global infiltration method first!                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Please define global infiltration method first!                                                                      |
+| bar_warn | Please define global infiltration method first!                                                     |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Schematizing of infiltration failed! Please check user infiltration layers.                                                                      |
+| bar_warn | Schematizing of infiltration failed! Please check user infiltration layers.                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Importing Rainfall Data from ASCII files failed! Please check your input data.\nIs the .RFC file missing?                                                                      |
+| bar_warn | Importing Rainfall Data from ASCII files failed! Please check your input data.\nIs the .RFC         |
+|          | file missing?                                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no h5py module installed! Please install it to run export tool.                                                                      |
+| bar_warn | There is no h5py module installed! Please install it to run export tool.                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Exporting Rainfall Data failed! Please check your input data.                                                                      |
+| bar_warn | Exporting Rainfall Data failed! Please check your input data.                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Importing predefined time series failed! Please check your input data.                                                                      |
+| bar_warn | Importing predefined time series failed! Please check your input data.                              |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no grid! Please create it before running tool.                                                                      |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | Vertical inlet opening is not allowed for {}!'.format(inlet_type))                                                                      |
+| bar_warn | Vertical inlet opening is not allowed for {}!'.format(inlet_type))                                  |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn | There is no computational domain! Please digitize it before running tool.                                                                      |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | There are no storm drain components (inlets/outfalls) defined in layer Storm Drain Nodes            |
+|          | (User Layers)                                                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | There is no grid! Please create it before running tool.                                             |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile,           |
+|          | or schematize Storm Drains.                                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | No oulets defined in 'Storm Drain Nodes' User Layer!                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | Could not save outfalls! Please check if they are correct.                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | User Layer ""Storm Drain Nodes"" is empty! Import components from .INP file or shapefile,           |
+|          | or schematize Storm Drains.                                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | No inlets defined in 'Storm Drain Nodes' User Layer!                                                |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | Could not save Inlets! Please check if they are correct.                                            |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | User Layer ""Storm Drain Conduits"" is empty! Import components from .INP file or shapefile,        |
+|          | or schematize Storm Drains.                                                                         |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | Could not save conduits! Please check if they are correct.                                          |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | User Layer ""Storm Drain Conduits"" is empty!                                                       |
 +----------+-----------------------------------------------------------------------------------------------------+
-| bar_warn |                                                                       |
+| bar_warn | There is no computational domain! Please digitize it before running tool.                           |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Storm drain components not saved!                                                                   |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | No rating table defined!                                                                            |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no any user streets to schematize! Please digitize them before running tool.               |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Vertical inlet opening is not allowed for {}!'.format(inlet_type))                                  |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Schematizing of Storm Drains failed! Please check user Storm Drains Points layer.                   |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Recalculation of Max Depth failed!                                                                  |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Importing Storm Drain input data failed! Please check your SWMM input data.                         |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Updating SWMM input data failed! Please check Storm Drain data.                                     |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | No rating table defined!                                                                            |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Too many columns to paste.                                                                          |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no User Left Bank lines! Please digitize them before running the tool.                    |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no User Cross Sections! Please digitize them before running the tool.                     |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no User Right Bank lines! Please digitize them before running the tool.                   |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no Schematized Channel Segments (Left Banks) to export.                                   |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There are no Schematized Channel Cross Sections to export.                                          |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not run interpolation under current operation system!                                         |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not run CHANRIGHTBANK.EXE under current operation system!                                     |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | CHANRIGHTBANK.EXE failed!                                                                           |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | WARNING 060319.1754 There is no grid! Please create it before running tool.                         |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | WARNING 060319.1755 There are no cross-sections! Please create them before running tool.            |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | Could not run 'CHAN N-VALUE INTERPOLATOR.EXE' under current operation system!                       |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | There is no grid! Please create it before running tool.                                             |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | WARNING 060319.1801 There is no grid! Please create it before running tool.                         |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | WARNING 060319.1802 There are no any user left bank lines! Please digitize them before running      |
+|          | the tool.                                                                                           |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | WARNING 060319.1803 There are no any user cross sections! Please digitize them before               |
+|          | running the tool.                                                                                   |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | All changes to this layer can be overwritten by changes in the User Layer.                          |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | ERROR 12117.0602                                                                                    |
++----------+-----------------------------------------------------------------------------------------------------+
+| bar_warn | ERROR 121117.0544                                                                                   |
 +----------+-----------------------------------------------------------------------------------------------------+
 
 
