@@ -24,16 +24,17 @@ The Run FLO-2D button is used to run FLO-2D.
 
 .. image:: ../../img/Run-Flo2d/run009.png
 
-5. If batch model is used, the model will run silently and the progress is printed to the SUMMARY.OUT file.
+5. If batch mode is used, the model will run silently and the progress is printed to the SUMMARY.OUT file.
 
 .. image:: ../../img/Run-Flo2d/run006.png
 
-6. Once the run is complete, the Simulation Complete message will be displayed in the console.
+6. Once the run is complete, the Simulation Complete message will be displayed in the console.  This step is 
+   skipped if the batch mode is used.
 
 .. image:: ../../img/Run-Flo2d/run005.png
 
-7. If the activation period has expired, a message may appear indicating that the activation period has expired. 
-   and a message will be printed to the error.chk file.
+1. If the activation period has expired, a message may appear indicating that the activation period has expired. 
+   and a message will be printed to the ERROR.CHK file.
 
-8. If using the DEMO version, only two projects are allowed to run. They are the Self Help Kit and the
-   Tailings Dam Training Project. If you try to run any other project.
+2. If using the DEMO version, only two projects will run. They are the **Self Help Kit** and the
+   **Tailings Dam Training Project**. If you try to run any other project, it will not run.

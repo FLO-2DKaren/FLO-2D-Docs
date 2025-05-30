@@ -19,9 +19,13 @@ The tailings dam tool button will load the tailings dam executable in the Projec
 
 .. image:: ../../img/Run-Tailings-Dam/runtailingsdam001.png
 
-.. note:: For a full tutorial, please visit this page:
-          `Tailing Dam Tutorial <https://flo-2d.sharefile.com/d-s9c39ab769dd04b9b88481b46431bbe52>`_
+3. Get a tutorial here |tailings_tutorial|.  |contact_us| to get the data for the tutorial.
 
-          Contact-us_ to get the data for the tutorial.
+.. |tailings_tutorial| raw:: html
 
-          .. _Contact-Us:  https://flo-2d.com/contact/
+    <a href="https://flo-2d.sharefile.com/d-s9c39ab769dd04b9b88481b46431bbe52" target="_blank" rel="noopener">Tailing Dam Tutorial</a>
+
+.. |contact_us| raw:: html
+
+    <a href="https://flo-2d.com/contact/" target="_blank" rel="noopener">Contact us</a>
+    
