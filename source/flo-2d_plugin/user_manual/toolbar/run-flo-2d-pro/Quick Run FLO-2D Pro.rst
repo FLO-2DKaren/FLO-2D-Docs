@@ -22,3 +22,10 @@ eliminating the need for separate export and run steps.
 4. FLO-2D Pro will start and the simulation will run to completion.
 
 .. image:: ../../img/Quick-Run-Flo2d/quickrun003.png
+
+..important::
+   If you commonly export to the same folder, you might notice that the Remove FPLAIN.DAT, CADPTS.DAT, 
+   and NEIGHBOR.DAT checkbox is active.  It's important to check the box if you made a change to the
+   grid shape, size, elevation, or roughness.  FLO-2D engine will read the old files if they exist.
+
+.. image:: ../../img/Quick-Run-Flo2d/quickrun004.png

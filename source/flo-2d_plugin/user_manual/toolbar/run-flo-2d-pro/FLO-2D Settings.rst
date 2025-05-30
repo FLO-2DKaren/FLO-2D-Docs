@@ -66,10 +66,9 @@ Follow the same method shown in Define Simulation Path to connect the FLO-2D Plu
 Once the
 plugin is connected to a folder with a completed simulation, a project review system is activated.
 
+See more about the Results tool here: :ref:`FLO-2D Results <flo-2d_results_tool>`
+
 .. image:: ../../img/Flo-2D-Plugin-Settings/results.png
-
-
-See more info on this system here: :ref:`FLO-2D Results <flo-2d_results_tool>`
 
 
 Start a Debug Run
