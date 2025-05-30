@@ -5351,7 +5351,12 @@ It writes to the R line of the INFLOW.DAT file
 rtree_buildings_stats_geom
 ---------------------------
 
-RSTLNE.
+The rtree tables are used to index data.  They are built when the sql command is triggered.
+So there may be many tables.  The sql command:  SELECT CreateSpatialIndex('your_table_name', 'geom');
+This indexing method allows the data to be indexed on branches like a tree branch.  So if a query is within
+the bounding box of one branch, all other branches can be ignored.
+The _geom stores the bounding boxes.
+
 
 .. list-table::
    :widths: 33 33 33
