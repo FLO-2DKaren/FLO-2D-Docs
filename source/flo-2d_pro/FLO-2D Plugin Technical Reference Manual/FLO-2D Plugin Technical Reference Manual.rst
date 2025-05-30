@@ -10214,6 +10214,7 @@ Grid code or grid element number and Neighbors and fplain.dat
 .. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO068.png
 
 .. image:: ../img/flo-2d-plugin-technical-reference-manual/FLO069.png
+
 Grid
 
 X coordinate y coordinate elevation and Mannings n tables.
