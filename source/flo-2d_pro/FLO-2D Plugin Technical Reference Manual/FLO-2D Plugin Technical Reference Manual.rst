@@ -1252,6 +1252,7 @@ Appendix A GeoPackage Structure
 ===============================
 
 all_schem_bc
+--------------
 
 A table that stores the boundary condition cell data from the BC cells schematic layer.
 
@@ -1286,6 +1287,7 @@ A table that stores the boundary condition cell data from the BC cells schematic
 
 
 blocked_cells
+--------------
 
 This table lists the data stored in the ARF_WRF layer of the Schematic group.
 The ARF_WRF layer stores the data written to the ARF.DAT file.
@@ -1353,6 +1355,7 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
 
 
 breach
+--------------
 
 Individual breach data stored in the breach.dat file.
 This table works with import and export.
@@ -1506,6 +1509,7 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
 
 breach_cells
+--------------
 
 .. list-table::
    :widths: 33 33 33
@@ -1530,6 +1534,7 @@ breach_cells
 
 
 breach_fragility_curves
+-------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -1558,6 +1563,7 @@ breach_fragility_curves
 
 
 breach_global
+--------------
 
 .. list-table::
    :widths: 33 33 33
@@ -1703,6 +1709,7 @@ breach_global
 
 
 bridge_variables
+----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -1824,6 +1831,7 @@ bridge_variables
 
 
 bridge_xs
+--------------
 
 Table for bridge upstream and downstream cross section identification.
 
@@ -1858,6 +1866,7 @@ Table for bridge upstream and downstream cross section identification.
 
 
 buildings_areas
+----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -1882,6 +1891,7 @@ buildings_areas
 
 
 building_stats
+---------------
 
 .. list-table::
    :widths: 33 33 33
@@ -1970,6 +1980,7 @@ building_stats
 
 
 chan
+--------------
 
 Table for the Channel Segments (left banks) layer in the Schematic Layers group.
 This layer stores the data that is written to the chanbank.dat for each channel segment control line.
@@ -2027,6 +2038,7 @@ Channel are written in order from rank = 1 to n number of segments.
 
 
 chan_confluences
+----------------------------
 
 Table of data associated with the Channel Confluences layer in the Schematic Layers group.
 This table identifies the connecting channel cells and identifies if a confluence cell is a tributary or main channel element.
@@ -2066,6 +2078,7 @@ This table identifies the connecting channel cells and identifies if a confluenc
 
 
 chan_elems
+--------------
 
 Table associated with all Channel Cross Sections layer in the Schematic Layers group.
 This table uses several id fields to link the cross sections to the correct channel segment, left bank element, right bank element and station or
@@ -2140,6 +2153,7 @@ geometry data.
 
 
 chan_elems_interp
+----------------------------
 
 This table is used for a calculation scheme that calculates the distance between channel cross sections for the purpose of interpolation.
 The table is referenced in two python files.
@@ -2192,6 +2206,7 @@ They are Schematic_tools.py and flo2dobjects.py.
 
 
 chan_n
+--------------
 
 Table that stores the data that links natural cross-sections to left bank elements.
 
@@ -2222,6 +2237,7 @@ Table that stores the data that links natural cross-sections to left bank elemen
 
 
 chan_r
+--------------
 
 The table that stores the cross-section data for rectangular cross sections and links them to left bank elements.
 
@@ -2260,6 +2276,7 @@ The table that stores the cross-section data for rectangular cross sections and 
 
 
 chan_t
+--------------
 
 The table that stores the cross-section data for trapezoidal cross sections and links them to left bank elements.
 
@@ -2306,6 +2323,7 @@ The table that stores the cross-section data for trapezoidal cross sections and 
 
 
 chan_v
+--------------
 
 The table that stores the cross-section data for variable area regression cross sections and links them to left bank elements.
 
@@ -2392,6 +2410,7 @@ The table that stores the cross-section data for variable area regression cross 
 
 
 chan_wsel
+--------------
 
 Table connecting the initial conditions to specific channel segments.
 
@@ -2430,6 +2449,7 @@ Table connecting the initial conditions to specific channel segments.
 
 
 cont
+--------------
 
 .. list-table::
    :widths: 33 33 33
@@ -2458,6 +2478,7 @@ cont
 
 
 culvert_equations
+----------------------------
 
 The table that stores the data for the generalized culvert equations and linked to the Structures Layer.
 
@@ -2504,6 +2525,7 @@ The table that stores the data for the generalized culvert equations and linked 
 
 
 evapor
+--------------
 
 The table that stores the start time and date for the Evaporation group.
 
@@ -2537,6 +2559,7 @@ The table that stores the start time and date for the Evaporation group.
 
 
 evapor_hourly
+---------------
 
 Temporal evaporation information related to the evaporation of a specific calendar.
 
@@ -2567,6 +2590,7 @@ Temporal evaporation information related to the evaporation of a specific calend
 
 
 evapor_monthly
+----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -2595,6 +2619,7 @@ evapor_monthly
 
 
 external_layers
+----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -2620,6 +2645,7 @@ external_layers
 
 
 fpfroude
+--------------
 
 The table that lists the data for the Froude Areas layer in the User Layers group.
 This polygon layers stores the spatially variable limiting Froude data.
@@ -2647,6 +2673,7 @@ This polygon layers stores the spatially variable limiting Froude data.
 
 
 fpfroude_cells
+----------------------------
 
 A table of cells that are written to the froudefp.dat when the project is exported.
 
@@ -2673,6 +2700,7 @@ A table of cells that are written to the froudefp.dat when the project is export
 
 
 fpxsec
+--------------
 
 Table for the Floodplain Cross Sections layer in the Schematic Layers group.
 Stores the order of cross sections listed in fpxsec.dat.
@@ -2704,6 +2732,7 @@ Stores the order of cross sections listed in fpxsec.dat.
 
 
 fpxsec_cells
+--------------
 
 Table for the Floodplain Cross Sections Cells.
 Lists the cells in each floodplain cross section as written to fpxsec.dat.
@@ -2735,6 +2764,7 @@ Lists the cells in each floodplain cross section as written to fpxsec.dat.
 
 
 gpkg_contents
+--------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2791,6 +2821,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
 
 gpkg_data_column_constraints
+-----------------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2837,6 +2868,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
 
 gpkg_data_columns
+----------------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2879,6 +2911,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
 
 gpkg_extensions
+----------------------------
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2893,23 +2926,23 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - table_name
      - TEXT
-     -
+     - Name of the table to which the extension applies, or NULL if it is global.
 
    * - column_name
      - TEXT
-     -
+     - Name of the column to which the extension applies, or NULL if not specific.
 
    * - extension_name
      - TEXT
-     -
+     - Unique name of the extension (e.g., 'gpkg_rtree_index').
 
    * - definition
      - TEXT
-     -
+     - Reference URL or definition of the extension.
 
    * - scope
      - TEXT
-     -
+     - Indicates how the extension is used: 'read-write', 'write-only', or 'read-only'.
 
 
 gpkg_geometry_columns
