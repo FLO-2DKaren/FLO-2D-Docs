@@ -2805,35 +2805,35 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - constraint_name
      - TEXT
-     -
+     - Unique name for the constraint.
 
    * - constraint_type
      - TEXT
-     -
+     - Type of constraint: 'range', 'enum', or 'glob'.
 
    * - value
      - TEXT
-     -
+     - The allowed value or pattern.
 
    * - min
      - NUMERIC
-     -
+     - Minimum value for 'range' constraint.
 
    * - minIsInclusive
      - BOOLEAN
-     -
+     - 1 if the minimum is inclusive; 0 if exclusive.
 
    * - max
      - NUMERIC
-     -
+     - Maximum value for 'range' constraint.
 
    * - maxIsInclusive
      - BOOLEAN
-     -
+     - 1 if the maximum is inclusive; 0 if exclusive.
 
    * - description
      - TEXT
-     -
+     - A human-readable description of the constraint.
 
 
 gpkg_data_columns
