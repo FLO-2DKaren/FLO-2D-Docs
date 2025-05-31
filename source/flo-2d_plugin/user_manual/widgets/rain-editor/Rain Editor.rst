@@ -75,6 +75,7 @@ total rainfall depth in inches.
 |noaaatlas|
 
 .. |noaaatlas| raw:: html
+
    <a href="https://hdsc.nws.noaa.gov/hdsc/pfds/" target="_blank" rel="noopener">NOAA Atlas 14 Precipitation Frequency Data Server</a>
 
 .. image:: ../../img/Rain-Editor/rained007.png
@@ -113,7 +114,8 @@ the rainfall data to the computational grid and generates the necessary input fi
 |nexrad|
 
 .. |nexrad| raw:: html
-   <a href="https://www.ncei.noaa.gov/products/radar/next-generation-radar-nexrad" target="_blank" rel="noopener">NOAA NEXRAD Data Archive </a>
+
+   <a href="https://www.ncei.noaa.gov/products/radar/next-generation-radar-nexrad" target="_blank" rel="noopener">NOAA NEXRAD Data Archive</a>
 
 The calculator produces rainfall data in two formats:
 
