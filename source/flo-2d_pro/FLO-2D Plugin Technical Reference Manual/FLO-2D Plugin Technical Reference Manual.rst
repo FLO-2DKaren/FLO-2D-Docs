@@ -5369,23 +5369,23 @@ The _geom stores the bounding boxes.
 
    * - id
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Unique identifier for the spatial feature; matches the fid of the source table.
 
    * - minx
      - REAL
-     -
+     - Minimum X (longitude or easting) value of the bounding box.
 
    * - maxx
      - REAL
-     -
+     - Maximum X value of the bounding box.
 
    * - miny
      - REAL
-     -
+     - Minimum Y (latitude or northing) value of the bounding box.
 
    * - maxy
      - REAL
-     -
+     - Maximum Y value of the bounding box.
 
 
 rtree_buildings_stats_geom_node
