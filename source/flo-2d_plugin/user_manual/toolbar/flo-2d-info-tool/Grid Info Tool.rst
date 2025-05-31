@@ -21,3 +21,9 @@ This tool loads the FLO-2D Grid Info panel.
 
 6. If a project has spatially variable rainfall or Real Rainfall, it can be plotted on the plotting panel.
 
+.. info:: 
+
+   The rainfall data is only available if the Real Rainfall processor has be performed.
+   The :ref: `Real Rainfall Processor <real_rain_editor>` instructions are available in the Rain Editor section.
+
+.. image:: ../../img/Grid-Info-Tool/gridinfotool5.png

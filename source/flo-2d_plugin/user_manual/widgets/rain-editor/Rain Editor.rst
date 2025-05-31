@@ -63,6 +63,8 @@ This data must be assigned along with isohyetal contours that represent storm in
 Spatially Variable Rainfall NOAA Atlas 14
 ------------------------------------------
 
+.. _real_rain_editor:
+
 Spatially variable rainfall data can be set up using depth area reduction factors in the RAINFALL.DAT file.
 The data format is inches (millimeters) at a point over total rainfall in inches (millimeters).
 The point is the centroid of each cell.
