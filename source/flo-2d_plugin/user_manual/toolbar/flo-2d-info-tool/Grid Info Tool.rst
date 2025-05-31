@@ -24,6 +24,6 @@ This tool loads the FLO-2D Grid Info panel.
 .. note:: 
 
    The rainfall data is only available if the Real Rainfall processor has be performed.
-   The :ref: `Real Rainfall Processor <real_rain_editor>` instructions are available in the Rain Editor section.
+   The :ref:`Real Rainfall Processor <real_rain_editor>` instructions are available in the Rain Editor section.
 
 .. image:: ../../img/Grid-Info-Tool/gridinfotool5.png
