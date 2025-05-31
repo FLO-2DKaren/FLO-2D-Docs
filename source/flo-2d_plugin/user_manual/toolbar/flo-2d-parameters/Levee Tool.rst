@@ -246,3 +246,12 @@ Do not used levee data to define the left or right bank elevation.
 The river is the active channel and the levee is usually set back from the bank.  
 
 .. image:: ../../img/Levee-Tool/levee005.png
+
+In the United States, the US Army Corps of Engineers (USACE) maintains a levee database that can be used 
+to locate levees for specified regions. Use this link to access the USACE levee database:
+
+|levees|
+
+.. |levees| raw:: html
+
+   <a href="https://levees.sec.usace.army.mil/#/">USACE Levee Database</a> target="_blank" rel="noopener">USACE Levees</a>
