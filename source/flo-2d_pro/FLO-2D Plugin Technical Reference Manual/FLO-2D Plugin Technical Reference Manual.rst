@@ -5467,8 +5467,7 @@ Like other R-tree support tables, it is system-managed and not intended for manu
 
 
 rtree_grid_geom
-
-RSTLNE.
+--------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5501,8 +5500,7 @@ RSTLNE.
 
 
 rtree_grid_geom_node
-
-RSTLNE.
+--------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5523,8 +5521,7 @@ RSTLNE.
 
 
 rtree_grid_geom_parent
-
-RSTLNE.
+________________________
 
 .. list-table::
    :widths: 33 33 33
@@ -5545,8 +5542,7 @@ RSTLNE.
 
 
 rtree_grid_geom_rowid
-
-RSTLNE.
+-----------------------------
 
 .. list-table::
    :widths: 33 33 33
