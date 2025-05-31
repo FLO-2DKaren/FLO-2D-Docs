@@ -5827,6 +5827,8 @@ rtree_user_md_connect_lines_geom_rowid
 schema_md_cells
 -----------------------------
 
+This table relates the global grid elements to the subdomains grid elements.
+
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -5842,26 +5844,27 @@ schema_md_cells
 
    * - grid_fid
      - INTEGER
-     -
+     - Global grid number.
 
    * - domain_fid
      - INTEGER
-     -
+     - Subdomain id.
 
    * - domain_cell
      - INTEGER
-     -
+     - Subdomain grid number.
 
    * - down_domain_fid
      - INTEGER
-     -
+     - Connected subdomain id.
 
    * - geom
      - POINT
-     -
+     - Point geometry to identify connected cells, but only for grid elements sharing two or more subdomains.
 
 
 sd_fields
+-----------
 
 .. list-table::
    :widths: 33 33 33
@@ -5878,14 +5881,15 @@ sd_fields
 
    * - name
      - TEXT
-     -
+     - Name of the shapefile storm drain layer.
 
    * - field
      - TEXT
-     -
+     - Field of the shapefile storm drain layer.
 
 
 sed
+----
 
 A table of values that define like groups of sediment transport data.
 This data is written to the SED.DAT file.
@@ -5945,6 +5949,7 @@ This data is written to the SED.DAT file.
 
 
 sed_group_areas
+------------------
 
 The table used to connect the sediment transport polygons to the sediment table.
 
@@ -5971,6 +5976,7 @@ The table used to connect the sediment transport polygons to the sediment table.
 
 
 sed_group_cells
+-------------------
 
 Table and layer that joins the sediment layers to the grid layer.
 
@@ -5997,6 +6003,7 @@ Table and layer that joins the sediment layers to the grid layer.
 
 
 sed_group_frac
+--------------------
 
 This table lists the names of the sediment fragment groups.
 
@@ -6019,6 +6026,7 @@ This table lists the names of the sediment fragment groups.
 
 
 sed_group_frac_data
+--------------------
 
 This table stores the sediment data for the sediment fragment groups.
 
@@ -6049,6 +6057,7 @@ This table stores the sediment data for the sediment fragment groups.
 
 
 sed_groups
+---------------
 
 This table stores the data for sediment fraction groups like bed thickness and volumetric sediment concentration.
 
