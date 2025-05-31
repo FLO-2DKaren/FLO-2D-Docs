@@ -72,6 +72,11 @@ isohyetal contour maps provided by the NOAA Atlas series. Each raster correspond
 (e.g., 6-hour, 100-year storm). The example below shows a 100-year, 6-hour precipitation map for Arizona, with the legend indicating 
 total rainfall depth in inches.
 
+|noaaatlas|
+
+.. |noaaatlas| raw:: html
+   <a href="https://hdsc.nws.noaa.gov/hdsc/pfds/" target="_blank" rel="noopener">NOAA Atlas 14 Precipitation Frequency Data Server</a>
+
 .. image:: ../../img/Rain-Editor/rained007.png
 
 To perform the calculation, use the Area Reduction calculator.
@@ -104,6 +109,11 @@ consultants to improve accuracy.
 NEXRAD rainfall datasets, along with gage data, are available for download through NOAA’s NEXRAD Archive. These 
 datasets can be imported into the modeling environment using the Real-Time Rainfall Calculator, which interpolates 
 the rainfall data to the computational grid and generates the necessary input files.
+
+|nexrad|
+
+.. |nexrad| raw:: html
+   <a href="https://www.ncei.noaa.gov/products/radar/next-generation-radar-nexrad" target="_blank" rel="noopener">NOAA NEXRAD Data Archive </a>
 
 The calculator produces rainfall data in two formats:
 
