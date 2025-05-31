@@ -97,10 +97,10 @@ It is not necessary to average the data.
 
 .. image:: ../../img/Rain-Editor/rained008.png
 
+.. _real_rain_editor:
+
 Realtime Rainfall NEXRAD
 ------------------------
-
-.. _real_rain_editor:
 
 Real-time rainfall data can be generated from NEXRAD \*.ASC grid files. In the United States, these files are produced 
 using calibrated radar reflectivity data from the National Oceanic and Atmospheric Administration (NOAA), supplemented 
