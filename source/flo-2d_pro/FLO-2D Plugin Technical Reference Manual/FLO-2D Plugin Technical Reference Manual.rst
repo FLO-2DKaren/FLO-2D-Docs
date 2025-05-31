@@ -6386,18 +6386,19 @@ steep_slope_n_cells
 
    * - global
      - INTEGER
-     -
+     - Flag to determine scope: 1 for global application, 0 for local.
 
    * - area_fid
      - INTEGER
-     -
+     - Reference to the user steep slope polygon on the user_steep_slope_n_areas when applying locally.
 
    * - grid_fid
      - INTEGER
-     -
+     - Reference to the specific grid cell being assessed for steep slope.
 
 
 storm_drains
+---------------
 
 The table of data for simple storm drains written to the HYDROSTRUC.DAT file.
 
