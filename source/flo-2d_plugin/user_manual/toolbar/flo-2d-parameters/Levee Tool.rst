@@ -233,3 +233,16 @@ Levee from Import External 3D Levee Lines
 
 .. image:: ../../img/Levee-Tool/leveetool21.png
 
+River Levees
+=====================
+
+River levees are created in the same way as other levees, but they are
+used to define the levee position outside the river channel. 
+
+.. image:: ../../img/Levee-Tool/levee004.png
+
+Do not used levee data to define the left or right bank elevation.  
+
+The river is the active channel and the levee is usually set back from the bank.  
+
+.. image:: ../../img/Levee-Tool/levee005.png
