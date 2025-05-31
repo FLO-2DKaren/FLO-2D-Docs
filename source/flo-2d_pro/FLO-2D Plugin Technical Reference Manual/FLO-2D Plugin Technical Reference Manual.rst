@@ -5391,6 +5391,11 @@ The _geom stores the bounding boxes.
 rtree_buildings_stats_geom_node
 ----------------------------------
 
+This table is automatically created by the CreateSpatialIndex function.
+It is not intended to be edited directly and is used internally by SQLite's R-tree module to organize and
+query spatial bounding boxes efficiently. The data field encodes relationships and spatial extents used
+to navigate the tree structure.
+
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -5402,11 +5407,11 @@ rtree_buildings_stats_geom_node
 
    * - nodeno
      - INTEGER
-     -
+     - Unique identifier for this node within the R-tree.
 
    * - data
      - TEXT
-     -
+     - Encoded binary content representing bounding boxes and children of the node.
 
 
 rtree_buildings_stats_geom_parent
