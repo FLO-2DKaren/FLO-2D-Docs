@@ -5417,7 +5417,10 @@ to navigate the tree structure.
 rtree_buildings_stats_geom_parent
 -----------------------------------
 
-RSTLNE.
+This table is automatically created by the CreateSpatialIndex function. It is not intended
+to be edited directly and is used internally by SQLite’s R-tree module to organize and query
+spatial bounding boxes efficiently. The data field encodes relationships and spatial
+extents used to navigate the tree structure.
 
 .. list-table::
    :widths: 33 33 33
@@ -5430,16 +5433,20 @@ RSTLNE.
 
    * - nodeno
      - INTEGER
-     -
+     - Node number (child node) in the R-tree index structure.
 
    * - parentnode
      - TEXT
-     -
+     - Node number of the parent node that contains this child.
 
 
 rtree_buildings_stats_rowid
+-------------------------------------------
 
-RSTLNE.
+This table is automatically created when the CreateSpatialIndex function is used.
+It maps spa-tial index nodes to the actual feature rows in the source table (table_stats),
+enabling fast re-trieval of geometry data during spatial queries.
+Like other R-tree support tables, it is system-managed and not intended for manual editing.
 
 .. list-table::
    :widths: 33 33 33
@@ -5452,11 +5459,11 @@ RSTLNE.
 
    * - rowid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Row ID from the table_stats table that this spatial index entry refers to.
 
    * - nodeno
      - INTEGER
-     -
+     - Node number within the R-tree structure.
 
 
 rtree_grid_geom
