@@ -59,22 +59,18 @@ To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.
 
 .. image:: ../../img/Rain-Editor/rained006.png
-
-.. _real_rain_editor:
-
+   
 Spatially Variable Rainfall NOAA Atlas 14
 ------------------------------------------
 
-Spatially variable rainfall data can be set up using depth area reduction factors in the RAINFALL.DAT file.
-The data format is inches (millimeters) at a point over total rainfall in inches (millimeters).
-The point is the centroid of each cell.
-The total rainfall area is the computational domain.
+Spatially variable rainfall can be modeled using depth-area reduction factors in the RAINFALL.DAT file. This file defines rainfall 
+values in either inches or millimeters, where each value represents the depth at a specific point (typically the centroid of a grid element) 
+relative to the total rainfall across the computational domain.
 
-The rainfall data is obtained from precipitation rasters.
-In the United States the rasters are calculated from isohyetal contours located the NOAA precipitation prediction website (NOAA, 2017).
-One map is required for each precipitation frequency.
-The following example is a map of the 100yr 6hr storm prediction for Arizona.
-The legend represents total rainfall in inches.
+Rainfall input data are typically derived from precipitation rasters. In the United States, these rasters are generated from 
+isohyetal contour maps provided by the NOAA Atlas series. Each raster corresponds to a specific precipitation frequency and duration 
+(e.g., 6-hour, 100-year storm). The example below shows a 100-year, 6-hour precipitation map for Arizona, with the legend indicating 
+total rainfall depth in inches.
 
 .. image:: ../../img/Rain-Editor/rained007.png
 
@@ -98,15 +94,21 @@ It is not necessary to average the data.
 Realtime Rainfall NEXRAD
 ------------------------
 
-Realtime rainfall data is computed from NEXRAD \*.ASC grid files.
-In the United States, the files are derived from calibrated radar reflectivity maps from National Oceanic and
-Atmospheric Administration (NOAA) and rainfall gages in local areas.
-The data calibration is typically conducted by local agencies or consultants.
-Datasets can be downloaded directly from NOAA’s NEXRAD Archive (NOAA, 2017).
-NEXRAD rainfall data and rainfall gage data are available from NOAA.
+.. _real_rain_editor:
 
-The realtime rainfall calculator imports the \*.ASC files, interpolates them to the grid and creates the rainfall data in two formats.
-The formats are RAINCELL.DAT and RAINCELL.HD5.
+Real-time rainfall data can be generated from NEXRAD *.ASC grid files. In the United States, these files are produced 
+using calibrated radar reflectivity data from the National Oceanic and Atmospheric Administration (NOAA), supplemented 
+with rainfall gage measurements from local networks. Calibration is typically performed by regional agencies or 
+consultants to improve accuracy.
+
+NEXRAD rainfall datasets, along with gage data, are available for download through NOAA’s NEXRAD Archive. These 
+datasets can be imported into the modeling environment using the Real-Time Rainfall Calculator, which interpolates 
+the rainfall data to the computational grid and generates the necessary input files.
+
+The calculator produces rainfall data in two formats:
+
+- RAINCELL.DAT (text format for FLO-2D)
+- RAINCELL.HDF5 (HDF5 format for large datasets or time series processing)
 
 .. tip:: The RAINCELL.DAT file is a mega data file. It is not recommended to import this file into a QGIS – FLO-2D
                project when importing FLO-2D Data files. It is recommended to use a Skeleton Project with only grid data
