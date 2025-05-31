@@ -12,13 +12,9 @@ This tool also activates the Profile Tool widget.
 Layers that work with this tool:
 
 -  Channel layers
-
 -  Left bank
-
 -  Cross sections
-
 -  Structure layers
-
 -  Levee layers
 
 This tool is a toggle.  Toggle it on to activate it and toggle it off to stop using it.
