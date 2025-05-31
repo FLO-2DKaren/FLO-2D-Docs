@@ -96,7 +96,7 @@ Realtime Rainfall NEXRAD
 
 .. _real_rain_editor:
 
-Real-time rainfall data can be generated from NEXRAD *.ASC grid files. In the United States, these files are produced 
+Real-time rainfall data can be generated from NEXRAD \*.ASC grid files. In the United States, these files are produced 
 using calibrated radar reflectivity data from the National Oceanic and Atmospheric Administration (NOAA), supplemented 
 with rainfall gage measurements from local networks. Calibration is typically performed by regional agencies or 
 consultants to improve accuracy.
