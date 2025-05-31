@@ -4826,8 +4826,8 @@ Table to store the names of features for channel outflow discharge curve.
 
 
 qh_params_data
-----------
------------------
+---------------
+
 Parameters for the stage-discharge curve for a channel outflow node.
 This table joins to the qh_params table to identify the name of the table and assign the data to the correct outflow node.
 The data is imported and exported to the outflow.dat file.
@@ -5521,7 +5521,7 @@ rtree_grid_geom_node
 
 
 rtree_grid_geom_parent
-________________________
+-------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -6096,6 +6096,7 @@ This table stores the data for sediment fraction groups like bed thickness and v
 
 
 sed_rigid_areas
+-----------------
 
 This table lists the polygons that represent rigid bed areas.
 
@@ -6118,7 +6119,7 @@ This table lists the polygons that represent rigid bed areas.
 
 
 sed_rigid_cells
-
+----------------
 This table connects the rigid bed areas to the grid elements.
 
 .. list-table::
