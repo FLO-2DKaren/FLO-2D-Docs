@@ -6145,6 +6145,7 @@ This table connects the rigid bed areas to the grid elements.
 
 
 sed_supply_areas
+-----------------
 
 This table lists the sediment supply data for polygons that are used to define the location of specific local sediment supply areas.
 
@@ -6183,6 +6184,7 @@ This table lists the sediment supply data for polygons that are used to define t
 
 
 sed_supply_cells
+-------------------
 
 These are the cells that are intersected with the sed_supply_areas table.
 
@@ -6209,6 +6211,7 @@ These are the cells that are intersected with the sed_supply_areas table.
 
 
 sed_supply_frac
+--------------------
 
 A table that lists the sediment supply groups.
 
@@ -6231,6 +6234,7 @@ A table that lists the sediment supply groups.
 
 
 sed_supply_frac_data
+-------------------------
 
 A table of sediment supply data representing sediment diameter and percentage of a given diameter.
 
