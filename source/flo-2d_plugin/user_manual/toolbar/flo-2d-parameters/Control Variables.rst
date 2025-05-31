@@ -53,10 +53,10 @@ ______________________________________
 
 .. image:: ../../img/Setup-Control-Variables/cont004.png
 
+.. _time_lapse_output:
+
 Time Lapse Output
 ______________________
-
-.. _time_lapse_output:
 
 1. Time lapse output will write data to several different output files like TIMDEP.OUT.  Review the Data Input manual
    for more information.
