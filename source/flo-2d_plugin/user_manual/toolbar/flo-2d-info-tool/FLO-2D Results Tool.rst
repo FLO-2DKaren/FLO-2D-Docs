@@ -69,3 +69,15 @@ Floodplain Cross Section Results
 2. Click any floodplain cross section cell to load the results in the table and plotting panel.
 
 .. image:: ../../img/Flo-2D-Info-Tool/results009.png
+
+Grid Cell Results
+--------------------------------------
+
+Run a model with the time series results enabled to see the grid cell results. 
+
+:ref:`Run Time Series Results <time_lapse_output>`.
+
+1. Click any grid cell to load the results in the table and plotting panel.
+
+.. image:: ../../img/Flo-2D-Info-Tool/results010.png
+

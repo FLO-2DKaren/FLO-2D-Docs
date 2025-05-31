@@ -36,15 +36,7 @@ Channel Profiles
    into the table panel.
 
 .. image:: ../../img/Flo-2D-Info-Tool/Flo010.png
-
-4. Use the  
-   Profile Tool widget to select the data plot source.
-
-5. In this example, the  
-   elevation raster is the y axis and the left bank length is the x axis.
-
-.. image:: ../../img/Flo-2D-Info-Tool/Flo003.png
-
+   
 Channel User Layer Cross Sections
 --------------------------------------
 
