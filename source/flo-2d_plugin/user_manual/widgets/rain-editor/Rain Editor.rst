@@ -4,7 +4,7 @@ Rain Editor
 ===========
 
 The rainfall editor is used to set up the RAINFALL.DAT file and the RAINCELL.DAT file.
-This section will describe how to set up uniform rainfall, spatially variable depth area reduction factors, and spatially and time variable rainfall.
+This section will describe how to set up uniform rainfall, spatially variable depth reduction factors, and spatially and time variable rainfall.
 
 .. image:: ../../img/Widgets/rain.png
 
@@ -63,7 +63,7 @@ This data must be assigned along with isohyetal contours that represent storm in
 Spatially Variable Rainfall NOAA Atlas 14
 ------------------------------------------
 
-Spatially variable rainfall can be modeled using depth-area reduction factors in the RAINFALL.DAT file. This file defines rainfall 
+Spatially variable rainfall can be modeled using depth reduction factors in the RAINFALL.DAT file. This file defines rainfall 
 values in either inches or millimeters, where each value represents the depth at a specific point (typically the centroid of a grid element) 
 relative to the total rainfall across the computational domain.
 
@@ -80,12 +80,12 @@ total rainfall depth in inches.
 
 .. image:: ../../img/Rain-Editor/rained007.png
 
-To perform the calculation, use the Area Reduction calculator.
+To perform the calculation, use the Depth Reduction calculator.
 
 |rained024|\ |rained025|
 
 1. Click the
-   Area Reduction button.
+   Depth Reduction button.
 
 2. Fill the
    form and click OK.
