@@ -254,4 +254,4 @@ to locate levees for specified regions. Use this link to access the USACE levee 
 
 .. |levees| raw:: html
 
-   <a href="https://levees.sec.usace.army.mil/#/">USACE Levee Database</a> target="_blank" rel="noopener">USACE Levees</a>
+   <a href="https://levees.sec.usace.army.mil/#/">USACE Levee Database" target="_blank" rel="noopener">USACE Levees</a>
