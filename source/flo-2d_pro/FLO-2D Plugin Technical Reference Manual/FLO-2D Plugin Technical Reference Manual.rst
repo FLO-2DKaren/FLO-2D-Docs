@@ -5563,6 +5563,7 @@ rtree_grid_geom_rowid
 
 
 rtree_mult_domains_geom
+-----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5595,6 +5596,7 @@ rtree_mult_domains_geom
 
 
 rtree_mult_domains_geom_node
+-----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5615,7 +5617,7 @@ rtree_mult_domains_geom_node
 
 
 rtree_mult_domains_geom_parent
-
+-------------------------------
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -5635,6 +5637,7 @@ rtree_mult_domains_geom_parent
 
 
 rtree_mult_domains_geom_rowid
+--------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5655,6 +5658,7 @@ rtree_mult_domains_geom_rowid
 
 
 rtree_schema_md_cells_geom
+-----------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5687,6 +5691,7 @@ rtree_schema_md_cells_geom
 
 
 rtree_schema_md_cells_geom_parent
+----------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5699,6 +5704,7 @@ rtree_schema_md_cells_geom_parent
 
 
 rtree_schema_md_cells_geom_rowid
+-----------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5719,6 +5725,7 @@ rtree_schema_md_cells_geom_rowid
 
 
 rtree_user_md_connect_lines_geom
+-----------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5755,6 +5762,7 @@ rtree_user_md_connect_lines_geom
 
 
 rtree_user_md_connect_lines_geom_node
+---------------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5775,6 +5783,7 @@ rtree_user_md_connect_lines_geom_node
 
 
 rtree_user_md_connect_lines_geom_parent
+----------------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5795,6 +5804,7 @@ rtree_user_md_connect_lines_geom_parent
 
 
 rtree_user_md_connect_lines_geom_rowid
+----------------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -5815,6 +5825,7 @@ rtree_user_md_connect_lines_geom_rowid
 
 
 schema_md_cells
+-----------------------------
 
 .. list-table::
    :widths: 33 33 33
