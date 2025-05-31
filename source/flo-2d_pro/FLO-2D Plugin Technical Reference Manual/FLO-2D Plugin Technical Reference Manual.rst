@@ -6265,6 +6265,7 @@ A table of sediment supply data representing sediment diameter and percentage of
 
 
 simple_mult_cells
+-------------------
 
 A table of cells that are identified as simple mult cells by the cell id and simple mult line id.
 
@@ -6291,6 +6292,7 @@ A table of cells that are identified as simple mult cells by the cell id and sim
 
 
 simple_mult_lines
+------------------
 
 A table of cells that are identified as simple mult cells by the cell id and simple mult line id.
 
@@ -6313,6 +6315,7 @@ A table of cells that are identified as simple mult cells by the cell id and sim
 
 
 spatialshallow
+------------------
 
 A table of data that lists the polygons that have local shallow n data.
 
@@ -6339,6 +6342,7 @@ A table of data that lists the polygons that have local shallow n data.
 
 
 spatialshallow_cells
+------------------------
 
 A table that connects the spatial shallow polygons to the grid elements.
 
@@ -6365,6 +6369,7 @@ A table that connects the spatial shallow polygons to the grid elements.
 
 
 steep_slope_n_cells
+---------------------
 
 .. list-table::
    :widths: 33 33 33
