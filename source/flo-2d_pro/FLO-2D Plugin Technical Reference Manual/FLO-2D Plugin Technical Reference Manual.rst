@@ -5866,6 +5866,9 @@ This table relates the global grid elements to the subdomains grid elements.
 sd_fields
 -----------
 
+This table is used in a smart code to auto complete the name of the storm drain fields when selecting from a
+shapefile layer.
+
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -6371,6 +6374,15 @@ A table that connects the spatial shallow polygons to the grid elements.
 steep_slope_n_cells
 ---------------------
 
+This table stores the configuration used to apply Manning’s n value correction based on steep slope conditions
+in the FLO-2D model. Users can enable a global setting to allow FLO-2D to as-sess and apply corrections to all
+grid cells. Alternatively, users can define local areas where the correction is applied only to specific cells
+based on spatial assessment.
+
+When global = 1, all grid cells are evaluated for steep slope conditions. When global = 0, only the cells
+with a matching grid_fid and associated area_fid are assessed, and all other cells are ignored by the FLO-2D
+engine.
+
 .. list-table::
    :widths: 33 33 33
    :header-rows: 0
@@ -6429,6 +6441,7 @@ The table of data for simple storm drains written to the HYDROSTRUC.DAT file.
 
 
 street_elems
+-----------------
 
 The table that links local street nodes to the street segment.
 
@@ -6459,6 +6472,7 @@ The table that links local street nodes to the street segment.
 
 
 street_general
+-----------------
 
 Table of global street data assigned to each street segment.
 
@@ -6497,6 +6511,7 @@ Table of global street data assigned to each street segment.
 
 
 street_seg
+-----------------
 
 Table of local street data.
 
@@ -6539,6 +6554,7 @@ Table of local street data.
 
 
 streets
+-----------------
 
 Table of street names for individual street segments.
 
@@ -6565,6 +6581,7 @@ Table of street names for individual street segments.
 
 
 struct
+-----------------
 
 Table of values assigned to the polyline features of the hydraulic structures layer.
 This data is imported and exported to HYSTRUC.DAT.
@@ -6632,6 +6649,12 @@ This data is imported and exported to HYSTRUC.DAT.
 
 
 swmm_control
+--------------
+
+This table serves as the control record for the FLO-2D swmm.inp file.
+It stores key configuration entries such as the project title, unit system, and other global parameters
+required by the storm drain modeling system. These values correspond to entries in the [TITLE], [OPTIONS],
+and similar sections of the SWMM-formatted input file used by FLO-2D.
 
 .. list-table::
    :widths: 33 33 33
@@ -6648,10 +6671,15 @@ swmm_control
 
    * - name
      - TEXT
-     -
+     - Name of the control setting (e.g., 'TITLE', 'FLOW_UNITS', 'START_DATE').
+
+   * - value
+     - TEXT
+     - Corresponding value for the control setting (e.g., 'My Project', 'CFS', '01/01/2025').
 
 
 swmm_export
+-----------------
 
 .. list-table::
    :widths: 33 33 33
@@ -6680,6 +6708,7 @@ swmm_export
 
 
 swmm_inflow_patterns
+---------------------
 
 Table of data to represent the storm drain external inflow patterns.
 This data is written to swmm.inp.
@@ -6715,6 +6744,7 @@ This data is written to swmm.inp.
 
 
 swmm_inflows
+-----------------
 
 Schematized table of data to define the type of time series data and the location of the timeseries data file.
 This data is written to swmm.inp.
@@ -6758,9 +6788,12 @@ This data is written to swmm.inp.
 
 
 swmm_other_curves
+------------------
 
-Schematized table of data to define the type of time series data and the location of the timeseries data file.
-This data is written to swmm.inp.
+This table stores schematized curve data for use in the FLO-2D storm drain swmm.inp file.
+It is used to define non-standard or custom curve types such as control rules, rating curves, pump curves,
+or storage relationships. The table also references the curve name, type, and optional description.
+Each record includes paired X and Y values to define the curve.
 
 .. list-table::
    :widths: 33 33 33
@@ -6777,26 +6810,27 @@ This data is written to swmm.inp.
 
    * - name
      - TEXT
-     -
+     - Name of the curve, as referenced in the SWMM input file.
 
    * - type
      - TEXT
-     -
+     - Type of curve (e.g., STORAGE, PUMP, CONTROL, DIVERSION).
 
    * - description
      - TEXT
-     -
+     - Optional description of the curve or its application.
 
    * - x_value
      - REAL
-     -
+     - X-axis value of the curve point (e.g., depth, time, or inflow).
 
    * - y_value
      - REAL
-     -
+     - Y-axis value of the curve point (e.g., area, flow, or outflow).
 
 
 swmm_pump_curve_data
+------------------------------
 
 Schematized table of data to define the type pump curve.
 This data is written to swmm.inp.
@@ -6836,6 +6870,7 @@ This data is written to swmm.inp.
 
 
 swmm_tidal_curve
+--------------------
 
 Table of data to represent the storm drain tidal curve patterns.
 This data is written to swmm.inp.
@@ -6863,6 +6898,7 @@ This data is written to swmm.inp.
 
 
 swmm_tidal_curve_data
+-------------------------------------
 
 Table of tidal data for stage and time.
 
@@ -6893,6 +6929,7 @@ Table of tidal data for stage and time.
 
 
 swmm_time_series
+-----------------------------
 
 Table of data to represent the storm drain time series file or data table id.
 This data is written to swmm.inp.
@@ -6928,6 +6965,7 @@ This data is written to swmm.inp.
 
 
 swmm_time_series_data
+------------------------
 
 Table of time series data.
 This data is written to swmm.inp.
@@ -6964,6 +7002,7 @@ This data is written to swmm.inp.
 
 
 swmmflo
+-------
 
 Table of values that stores the FLO-2D parameters for storm drain inlets.
 This data is imported and exported from SWMMFLO.DAT.
@@ -7031,6 +7070,7 @@ This data is imported and exported from SWMMFLO.DAT.
 
 
 swmmflo_culvert
+----------------
 
 A table of data that joins the grid element and swmmid to the generalized culvert equation data for the SWMMFLORT.DAT file.
 
@@ -7078,6 +7118,7 @@ A table of data that joins the grid element and swmmid to the generalized culver
 
 
 swmmflort
+----------
 
 A table of data that joins the grid element and swmmid to the rating table data for the SWMMFLORT.DAT file.
 
@@ -7104,6 +7145,7 @@ A table of data that joins the grid element and swmmid to the rating table data 
 
 
 swmmflort_data
+----------------
 
 Table of data that stores the rating tables for individual inlets.
 This data is imported and exported from SWMMFLORT.DAT.
@@ -7135,6 +7177,7 @@ This data is imported and exported from SWMMFLORT.DAT.
 
 
 swmmoutf
+---------
 
 Table of data to join the storm drain outfalls to the grid element.
 This data is imported to and exported from to the SWMMOUTF.DAT.
@@ -7171,6 +7214,7 @@ This data is imported to and exported from to the SWMMOUTF.DAT.
 
 
 tailing_cells
+-----------------------
 
 Table of data that stores the rating tables for individual inlets.
 This data is imported and exported from SWMMFLORT.DAT.
@@ -7199,6 +7243,13 @@ This data is imported and exported from SWMMFLORT.DAT.
 
 
 tailing_reservoirs
+---------------------
+
+This table defines tailings reservoirs used in a FLO-2D model scenario. This is a schematic repre-sentation
+of the user_tailing_reservoirs and contains key attributes such as water surface ele-vation (WSEL), tailings
+depth or volume, and the Manning’s n value for surface resistance with-in the reservoir. These reservoirs are
+often initialized with tailings or tailings + WSE. It is used to define pre-breach or pre-event conditions in
+ dam breach or sediment transport models.
 
 .. list-table::
    :widths: 33 33 33
@@ -7215,38 +7266,39 @@ tailing_reservoirs
 
    * - user_tal_res_fid
      - INTEGER
-     -
+     - Reference to the user_tailing_reservoirs table.
 
    * - name
      - TEXT
-     -
+     - Name or label for the tailings reservoir.
 
    * - grid_fid
      - INTEGER
-     -
+     - Grid cell associated with the reservoir.
 
    * - wsel
      - REAL
-     -
+     - Water surface elevation within the reservoir (in ft or m, depending on project units).
 
    * - tailings
      - REAL
-     -
+     - Depth of tailings material within the reservoir.
 
    * - n_value
      - REAL
-     -
+     - Manning’s n value used to represent surface roughness.
 
    * - note
      - TEXT
-     -
+     - Optional description or modeling notes.
 
    * - geom
      - POLYGON
-     -
+     - Spatial polygon representing the footprint of the tailings reservoir.
 
 
 tolspatial
+-----------
 
 Table of data that stores the depth assigned to individual polygons.
 
@@ -7273,6 +7325,7 @@ Table of data that stores the depth assigned to individual polygons.
 
 
 tolspatial_cells
+---------------------
 
 Table of values that join the tolspatial polygons to grid elements.
 
@@ -7303,6 +7356,7 @@ Table of values that join the tolspatial polygons to grid elements.
 
 
 trigger_control
+----------------------------
 
 Table of data that lists a layer and sets a repaint control switch that is linked to the schematization buttons so that the layer is repainted when
 the layers are schematized.
@@ -7330,6 +7384,7 @@ the layers are schematized.
 
 
 user_1d_domain
+------------------
 
 Table of data assigned for a 1d layer.
 This table is not currently used by the plugin.
@@ -7353,6 +7408,7 @@ This table is not currently used by the plugin.
 
 
 user_bc_lines
+-------------------
 
 Table of data for the boundary control polylines in the user layers.
 Polyline features that define an inflow or outflow boundary control.
@@ -7380,6 +7436,7 @@ Polyline features that define an inflow or outflow boundary control.
 
 
 user_bc_points
+----------------------
 
 Table of data for the boundary control points in the user layers.
 Point features that define an inflow or outflow boundary control.
@@ -7408,6 +7465,7 @@ This data is schematized to the BC Cells layer.
 
 
 user_bc_polygons
+-------------------------
 
 Table of data for the boundary control polygons in the user layers.
 Polygon features that define an inflow or outflow boundary control.
@@ -7436,6 +7494,7 @@ This data is schematized to the BC Cells layer.
 
 
 user_blocked_areas
+------------------------
 
 Blocked areas table data for the Blocked Areas layer in the User Layer.
 This layer is used to calculate the Area and Width Reduction Factors.
@@ -7474,6 +7533,7 @@ The polygons in this layer are typically building outlines.
 
 
 user_chan_n
+---------------
 
 Table of data that joins a natural cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7518,6 +7578,7 @@ This table is edited by many processes:
 
 
 user_chan_r
+-------------------
 
 Table of data that stores channel geometry and joins a rectangular cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7566,6 +7627,7 @@ This table is edited by many processes:
 
 
 user_chan_t
+---------------------
 
 Table of data that stores channel geometry and joins a trapezoidal cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7622,6 +7684,7 @@ This table is edited by many processes:
 
 
 user_chan_v
+------------
 
 Table of data that stores channel geometry and joins a variable cross section to a channel element.
 The data is saved and schematized to the Channel Tables.
@@ -7718,6 +7781,7 @@ This table is edited by many processes:
 
 
 user_effective_impervious_area
+------------------------------------
 
 A polygon layer of data that is intersected to the grid when infiltration calculator FCDMC method is used.
 The EFF \* 0.01 is multiplied by the RTIMP.
@@ -7749,6 +7813,7 @@ The EFF \* 0.01 is multiplied by the RTIMP.
 
 
 user_elevation_points
+----------------------
 
 Table of data assigned to the Elevation Points layer.
 This layer is used to define elevation of levee crests or correct elevations for specific grid elements.
@@ -7791,6 +7856,7 @@ Data processing is saved to the Levee and Grid layers.
 
 
 user_elevation_polygons
+-------------------------------
 
 Table of data assigned to the Elevation Polygons layer.
 This layer is used to define elevation of levee crests or correct elevations for specific grid elements.
@@ -7833,6 +7899,7 @@ Data processing is saved to the Levee and Grid layers.
 
 
 user_fpxsec
+-------------
 
 Table of data for the floodplain cross section user layer.
 This data is schematized to the Floodplain Cross Sections and Floodplain Cross Sections Cells layers.
@@ -7864,6 +7931,7 @@ This data is schematized to the Floodplain Cross Sections and Floodplain Cross S
 
 
 user_infiltration
+---------------------------
 
 Table of data for the infiltration user layer.
 This is a polygon layer digitized by the user to define spatially Green-Ampt, SCS curve number or Horton infiltration.
@@ -7944,6 +8012,7 @@ The data from this layer is schematized to the Infiltration tables and layers.
 
 
 user_left_bank
+-------------------------
 
 Data table for the left bank line.
 This data is schematized to the Channel Segments layer.
@@ -7995,6 +8064,7 @@ This data is schematized to the Channel Segments layer.
 
 
 user_levee_lines
+----------------------
 
 Table of variables for the levee lines in the user layer.
 It is also coupled to the Elevation Points layer to create 3-D center lines of levee data.
@@ -8059,6 +8129,7 @@ Levee failure data is also contained in this table.
 
 
 user_lid_volume_areas
+--------------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -8071,22 +8142,23 @@ user_lid_volume_areas
 
    * - fid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Unique identifier for each LID volume area; not associated with grid IDs.
 
    * - volume
      - REAL
-     -
+     - Water or storage volume associated with the area (in cubic feet or meters, depending on model units).
 
    * - notes
      - TEXT
-     -
+     - Optional comments or description of the LID area or its purpose.
 
    * - geom
      - POLYGON
-     -
+     - Spatial polygon representing the extent of the LID volume area.
 
 
 user_md_connect_lines
+--------------------------
 
 .. list-table::
    :widths: 33 33 33
@@ -8103,22 +8175,23 @@ user_md_connect_lines
 
    * - up_domain_fid
      - INTEGER
-     -
+     - The upstream domain fid, defined on the mult_domains table
 
    * - down_domain_fid
      - INTEGER
-     -
+     - The downstream domain fid, defined on the mult_domains table
 
    * - notes
      - TEXT
-     -
+     - Optional comments or description.
 
    * - geom
      - LINESTRING
-     -
+     - Spatial linestring representing connectivity between two or more subdomains.
 
 
 user_model_boundary
+--------------------------
 
 Table of data assigned to the Computational Domain layer.
 Computational domain layer is used to outline the project boundary and set the cell size.
@@ -8152,6 +8225,7 @@ The numbering is by column top to bottom.
 
 
 user_noexchange_chan_areas
+-----------------------------------
 
 User polygon areas applied to left banks as no exchange channel cells.
 
@@ -8178,6 +8252,7 @@ User polygon areas applied to left banks as no exchange channel cells.
 
 
 user_reservoirs
+-----------------------
 
 Table of values that stores the data to be assigned as a reservoir node.
 This data is schematized to the Reservoirs layer.
@@ -8229,6 +8304,7 @@ This data is schematized to the Reservoirs layer.
 
 
 user_right_bank
+---------------------------
 
 A layer that can be used to create a right bank defined by a polyline.
 
@@ -8258,38 +8334,8 @@ A layer that can be used to create a right bank defined by a polyline.
      - Polyline feature used to intersect grid elements for a right bank.
 
 
-user_right_bank
-
-Data table for the right bank line.
-This data is schematized to the Channel Segments layer.
-
-.. list-table::
-   :widths: 33 33 33
-   :header-rows: 0
-
-
-   * - Field Name
-     - Field Type
-     - Description
-
-   * - fid
-     - INTEGER
-     - Unit fid is unique and not associated with the grid id.
-
-   * - chan_seg_fid
-     - REAL
-     - Identifies the left bank line but not used.
-
-   * - notes
-     - TEXT
-     - Notes
-
-   * - geom
-     - LINESTRING
-     - Geometry is a polyline.
-
-
 user_roughness
+----------------
 
 Table of data assigned to the Roughness layer.
 This layer can be used to set the roughness variable to individual cells or blocks of cells in the grid layer.
@@ -8323,6 +8369,7 @@ The tool will calculate it from any polygon layer.
 
 
 user_spatial_froude
+-----------------------
 
 A layer used to create spatially variable limiting Froude polygons.
 
@@ -8353,6 +8400,7 @@ A layer used to create spatially variable limiting Froude polygons.
 
 
 user_spatial_shallown
+----------------------
 
 A layer used to create spatially variable shallow n polygons.
 
@@ -8383,6 +8431,7 @@ A layer used to create spatially variable shallow n polygons.
 
 
 user_spatial_tolerance
+-----------------------
 
 A layer used to create spatially variable tolerance or LID polygons.
 
@@ -8413,9 +8462,12 @@ A layer used to create spatially variable tolerance or LID polygons.
 
 
 user_steep_slope_n_areas
+-------------------------
 
-Table of data used to define the global data of street segments.
-This data is schematized to the Streets layer.
+This table defines user-specified areas for applying Manning’s n value corrections related to steep slope
+conditions in the FLO-2D model. It is used to isolate specific zones where steep slope n adjustments are
+applied, rather than applying them globally across the entire grid. Each record represents a polygonal area
+where these local corrections are valid.
 
 .. list-table::
    :widths: 33 33 33
@@ -8432,18 +8484,19 @@ This data is schematized to the Streets layer.
 
    * - global
      - INTEGER
-     -
+     - Flag indicating scope of application: 1 for global correction, 0 for local area-specific correction.
 
    * - notes
      - TEXT
-     -
+     - Optional notes or description of the area or modeling assumptions.
 
    * - geom
      - POLYGON
-     -
+     - Polygon representing the area where steep slope n value corrections are applied.
 
 
 user_streets
+----------------
 
 Table of data used to define the global data of street segments.
 This data is schematized to the Streets layer.
@@ -8491,6 +8544,7 @@ This data is schematized to the Streets layer.
 
 
 user_struct
+------------------
 
 Table of data used to define hydraulic structure polylines.
 The polylines sole purpose is to define the inlet node and outlet node.
@@ -8518,6 +8572,7 @@ They are edited via the Structure Editor widget.
 
 
 user_swmm_conduits
+---------------------
 
 The user layer that stores storm drain conduit data.
 This data is written to the schematic layers.
@@ -8621,6 +8676,13 @@ This data is written to the schematic layers.
 
 
 user_swmm_inlets_junctions
+----------------------------------
+
+This table defines storm drain inlets and junctions for integration with the FLO-2D storm drain model
+(swmm.inp). Each record represents an inlet or junction feature and includes attributes related to
+physical configuration, hydraulic properties, and operational settings. These values are used to generate
+[JUNCTIONS], [OUTFALLS], and [STORAGE] sections, as well as inlet-specific parameters in the SWMM input
+file and the FLO-2D storm drain files.
 
 .. list-table::
    :widths: 33 33 33
@@ -8637,86 +8699,87 @@ user_swmm_inlets_junctions
 
    * - grid
      - INTEGER
-     -
+     - Grid element associated with this junction or inlet.
 
    * - sd_type
      - TEXT
-     -
+     - Type of storm drain structure (e.g., JUNCTION, OUTFALL, STORAGE).
 
    * - name
      - TEXT
-     -
+     - Name or label for the inlet/junction; used in swmm.inp.
 
    * - intype
      - INTEGER
-     -
+     - Inlet type code used for inlet rating curve or flow behavior.
 
    * - external_inflow
      - INTEGER
-     -
+     - Flag indicating whether external inflow is applied (1 = yes, 0 = no).
 
    * - junction_invert_elev
      - REAL
-     -
+     - Invert elevation at the junction (ft or m).
 
    * - max_depth
      - REAL
-     -
+     - Maximum depth of the junction or structure.
 
    * - init_depth
      - REAL
-     -
+     - Initial water depth at the beginning of the simulation.
 
    * - surcharge_depth
      - REAL
-     -
+     - Depth allowed above maximum depth before surcharging occurs.
 
    * - ponded_area
      - REAL
-     -
+     - Ponded surface area used if surcharging is enabled.
 
    * - swmm_length
      - REAL
-     -
+     - Physical length of inlet opening (used for inlet flow calculations).
 
    * - swmm_width
      - REAL
-     -
+     - Physical width of inlet opening.
 
    * - swmm_height
      - REAL
-     -
+     - Height of the inlet opening (if applicable).
 
    * - swmm_coeff
      - REAL
-     -
+     - Inlet or structure coefficient for rating or flow equations.
 
    * - swmm_feature
      - INTEGER
-     -
+     - Internal code for mapping inlet or junction features (FLO-2D specific).
 
    * - curbheight
      - REAL
-     -
+     - Height of the curb used in inlet calculations.
 
    * - swmm_clogging_factor
      - REAL
-     -
+     - Fraction of the inlet expected to clog over time (0–1).
 
    * - swmm_time_for_clogging
      - REAL
-     -
+     - Time duration (in hours) over which clogging occurs.
 
    * - drboxarea
      - REAL
-     -
+     - Drainage box or catch basin area associated with this inlet.
 
    * - geom
      - POINT
-     -
+     - Point geometry representing the location of the inlet or junction.
 
 
 user_swmm_orifices
+----------------------
 
 The user layer that stores storm drain orifice data.
 This data is written to the schematic layers.
@@ -8784,6 +8847,12 @@ This data is written to the schematic layers.
 
 
 user_swmm_outlets
+------------------
+
+This table defines storm drain outfalls for the FLO-2D storm drain model, corresponding to the [OUTFALLS]
+section of the swmm.inp file and the FLO-2D storm drain outfall file. Each outfall record represents a
+discharge point for the storm drain network and includes elevation, type, and optional boundary condition
+parameters such as tidal curves or time series.
 
 .. list-table::
    :widths: 33 33 33
@@ -8800,46 +8869,47 @@ user_swmm_outlets
 
    * - grid
      - INTEGER
-     -
+     - Grid element linked to this outlet location.
 
    * - name
      - TEXT
-     -
+     - Name of the outfall (used in the swmm.inp file).
 
    * - outfall_invert_elev
      - REAL
-     -
+     - Invert elevation at the outlet point (ft or m).
 
    * - outfall_type
      - TEXT
-     -
+     - Type of outfall boundary condition (FREE, NORMAL, FIXED, TIDAL, TIMESERIES).
 
    * - tidal_curve
      - TEXT
-     -
+     - Name of a tidal curve to apply if outfall_type = TIDAL.
 
    * - time_series
      - TEXT
-     -
+     - Name of a time series to apply if outfall_type = TIMESERIES.
 
    * - fixed_stage
      - REAL
-     -
+     - Water surface elevation for FIXED type outfalls.
 
    * - flapgate
      - TEXT
-     -
+     - Indicates whether a flap gate is present (YES or NO).
 
    * - swmm_allow_discharge
      - TEXT
-     -
+     - Indicates if discharge is allowed (YES or NO); controls flow routing.
 
    * - geom
      - POINT
-     -
+     - Point geometry representing the storage unit location.
 
 
 user_swmm_pumps
+---------------------
 
 The user layer that stores storm drain pump data.
 This data is written to the schematic layers.
@@ -8891,6 +8961,12 @@ This data is written to the schematic layers.
 
 
 user_swmm_storage_units
+------------------------
+
+This table defines storage units in the FLO-2D storm drain model and corresponds to the [STORAGE]
+section of the swmm.inp file. Storage units represent sumps, tanks, or other struc-tures that temporarily
+store water. Each unit can be defined using fixed geometric relationships or a named storage curve, and may
+include infiltration, evaporation, and treatment options.
 
 .. list-table::
    :widths: 33 33 33
@@ -8903,90 +8979,94 @@ user_swmm_storage_units
 
    * - fid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Unique identifier for the storage unit record; not tied to a grid ID.
 
    * - grid
      - INTEGER
-     -
+     - Grid element associated with the storage unit's location.
 
    * - name
      - TEXT
-     -
+     - Name of the storage unit (used as the ID in the swmm.inp file).
 
    * - invert_elev
      - REAL
-     -
+     - Invert elevation (bottom elevation) of the storage unit.
 
    * - max_depth
      - REAL
-     -
+     - Maximum allowable water depth in the storage unit.
 
    * - init_depth
      - REAL
-     -
+     - Initial water depth at the start of the simulation.
 
    * - external_inflow
      - TEXT
-     -
+     - Name of a time series for external inflow (if applicable).
 
    * - treatment
      - TEXT
-     -
+     - Optional pollutant treatment function name.
 
    * - ponded_area
      - REAL
-     -
+     - Surface area when water exceeds max depth and surcharges.
 
    * - evap_factor
      - REAL
-     -
+     - Factor applied to the global evaporation rate for this unit. (Not used FLO-2D)
 
    * - infiltration
      - TEXT
-     -
+     - Indicates whether infiltration is enabled (YES or NO). (Not used FLO-2D)
 
    * - infil_method
      - TEXT
-     -
+     - Infiltration method (GREEN_AMPT, HORTON, etc.) if infiltration is used. (Not used FLO-2D)
 
    * - suction_head
      - REAL
-     -
+     - Suction head parameter for infiltration (used in Green-Ampt). (Not used FLO-2D)
 
    * - conductivity
      - REAL
-     -
+     - Saturated hydraulic conductivity of the basin floor. (Not used FLO-2D)
 
    * - initial_deficit
      - REAL
-     -
+     - Initial moisture deficit of the storage unit floor.
+
+       (Not used FLO-2D)
+
 
    * - storage_curve
      - TEXT
-     -
+     - Indicates the type of curve used (DEPTH-VOLUME, DEPTH-AREA, etc.).
 
    * - coefficient
      - REAL
-     -
+     - Coefficient for empirical storage depth-volume equation.
 
    * - exponent
      - REAL
-     -
+     - Exponent used in the storage equation.
 
    * - constant
      - REAL
-     -
+     - Constant term in the storage equation.
 
    * - curve_name
      - TEXT
-     -
+     - Name of the predefined curve, if using a CURVES-based method.
 
    * - geom
      - POINT
-     -
+     - Point geometry representing the location of the storage unit
 
 
 user_swmm_weirs
+-----------------
 
 The user layer that stores storm drain weirs.
 This data is written to the schematic layers.
@@ -9062,8 +9142,11 @@ This data is written to the schematic layers.
 
 
 user_tailing_reservoirs
+------------------------
 
-User cross section data including cross section number and station elevation pairs.
+This table defines user-specified tailings reservoir locations for initializing water surface elevation,
+tailings volume, and hydraulic roughness conditions in a FLO-2D model. Each reservoir is represented by a
+point and may be used to preload tailings storage areas prior to dam breach or mudflow simulations.
 
 .. list-table::
    :widths: 33 33 33
@@ -9076,36 +9159,42 @@ User cross section data including cross section number and station elevation pai
 
    * - fid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Unique identifier for the record; not associated with the grid ID.
 
    * - name
      - TEXT
-     -
+     - Name or label of the tailings reservoir.
 
    * - wsel
      - REAL
-     -
+     - Water surface elevation (WSEL) at the reservoir location.
 
    * - tailings
      - REAL
-     -
+     - Depth or volume of tailings material to initialize at the location.
 
    * - n_value
      - REAL
-     -
+     - Manning’s n value representing surface resistance for flow over the tailings area.
 
    * - notes
      - TEXT
-     -
+     - Optional notes or description of the reservoir and its intended use.
 
    * - geom
      - POINT
-     -
+     - Point geometry representing the location of the tailings reservoir.
 
 
 user_tailings
+--------------
 
-User cross section data including cross section number and station elevation pairs.
+This table defines tailings stack areas used to initialize standing tailings and supernatant water within
+the FLO-2D model domain. Each polygon represents a defined zone where the model will apply tailings
+characteristics such as surface elevations and concentration for two-phase mudflow or sediment transport
+simulations. This table is used to spatially initialize tailings stacks in the model with known elevations
+and sediment concentrations. It supports setup for two-phase flow simulations where clear water and tailings
+material are present in distinct ver-tical layers.
 
 .. list-table::
    :widths: 33 33 33
@@ -9118,31 +9207,31 @@ User cross section data including cross section number and station elevation pai
 
    * - fid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id.
+     - Unique identifier for the record; not associated with the grid ID.
 
    * - name
      - TEXT
-     -
+     - Name or label for the tailings stack area.
 
    * - tailings_surf_elev
      - REAL
-     -
+     - Surface elevation of the tailings material (e.g., compacted tailings layer).
 
    * - water_surf_elev
      - REAL
-     -
+     - Surface elevation of the clear water (supernatant) above the tailings, if present.
 
    * - concentration
      - REAL
-     -
+     - Volumetric concentration of solids in the tailings mixture (range: 0.0–1.0).
 
    * - notes
      - TEXT
-     -
+     - Optional notes or description of the stack geometry or material.
 
    * - geom
      - POLYGON
-     -
+     - Polygon representing the spatial extent of the tailings stack.
 
 
 user_xsec_n_data
