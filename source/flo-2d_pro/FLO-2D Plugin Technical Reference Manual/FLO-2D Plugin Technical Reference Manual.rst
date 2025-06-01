@@ -7249,7 +7249,7 @@ This table defines tailings reservoirs used in a FLO-2D model scenario. This is 
 of the user_tailing_reservoirs and contains key attributes such as water surface ele-vation (WSEL), tailings
 depth or volume, and the Manning’s n value for surface resistance with-in the reservoir. These reservoirs are
 often initialized with tailings or tailings + WSE. It is used to define pre-breach or pre-event conditions in
- dam breach or sediment transport models.
+dam breach or sediment transport models.
 
 .. list-table::
    :widths: 33 33 33
