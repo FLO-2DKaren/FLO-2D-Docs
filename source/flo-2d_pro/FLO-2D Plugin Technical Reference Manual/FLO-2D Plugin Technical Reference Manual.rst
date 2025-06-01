@@ -9235,6 +9235,7 @@ material are present in distinct ver-tical layers.
 
 
 user_xsec_n_data
+-------------------------
 
 User cross section data including cross section number and station elevation pairs.
 
@@ -9265,6 +9266,7 @@ User cross section data including cross section number and station elevation pai
 
 
 user_xsections
+-------------------------
 
 Table of data assigned to Cross Sections layer.
 These cross sections are schematized to the Channel Cross Sections layer.
@@ -9305,6 +9307,7 @@ The data in this layer is used by the User Cross Sections Editor to define the l
 
 
 wstime
+-------------------------
 
 Table of data assigned to the Calibration Data layers.
 This data is imported from and exported to the WSTIME.DAT file.
@@ -9340,6 +9343,7 @@ This data is imported from and exported to the WSTIME.DAT file.
 
 
 wsurf
+-------------------------
 
 Table of data assigned to the Calibration Data layers.
 This data is imported from and exported to the WSURF.DAT file.
@@ -9371,6 +9375,7 @@ This data is imported from and exported to the WSURF.DAT file.
 
 
 xsec_n_data
+-------------------------
 
 Cross section data for the schematic data.
 This data is written to the XSEC.DAT file when the project is exported.
