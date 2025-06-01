@@ -21,7 +21,10 @@ that are part of the geopackage.  Each tool is described in this section.
 12. Gutters
 13. No-Exchange Channel Cells
 14. Water Surface and Depth for HAZUS
-
+15. Steep Slope
+16. Low Impact Development
+17. Help
+    
 .. toctree::
    :hidden:
    :maxdepth: 2
@@ -41,3 +44,6 @@ that are part of the geopackage.  Each tool is described in this section.
    Gutters
    No Exchange Channel
    Hazus Layers
+   Steep Slope
+   Low Impact Development
+   Help
