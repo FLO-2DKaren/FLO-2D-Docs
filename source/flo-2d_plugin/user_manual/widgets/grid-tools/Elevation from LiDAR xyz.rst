@@ -3,7 +3,7 @@
 4. Grid Elevation from LiDAR
 =======================================
 
-.. image:: ../../img/gridtools/Sample-Elevation-From-Points/Sample005.png
+.. image:: ../../img/gridtools/Sample-Elevation-From-Points/Sample002.png
 
 This tool is used to sample elevation from imported points layer or external LiDAR xyz files.
 
@@ -20,7 +20,7 @@ filtered from the ground data category.
 1. Click the
    Assign Elevation to Grid button to interpolate the elevation data to the grid.
 
-.. image:: ../../img/gridtools/Sample-Elevation-From-Points/Sample005.png
+.. image:: ../../img/gridtools/Sample-Elevation-From-Points/Sample002.png
 
 2. Choose the Interpolate from LiDAR files option and click OK.
 
@@ -121,7 +121,7 @@ _______________
 1. Click the Assign Elevation
    to Grid button to interpolate the elevation data to the grid.
 
-.. image:: ../../img/gridtools/Sample-Elevation-From-Points/Sample005.png
+.. image:: ../../img/gridtools/Sample-Elevation-From-Points/Sample002.png
 
 2. The sampling dialog box
    appears to select the point source, elevation field, and calculation type.

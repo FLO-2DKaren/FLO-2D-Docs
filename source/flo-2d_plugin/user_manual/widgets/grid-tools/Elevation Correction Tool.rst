@@ -133,7 +133,7 @@ This method will apply a elevation to each grid element within the polygon from 
 
 2. Click the Elevation Correction Tool and click Correct Grid Elevation
 
-.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elevat013.png
+.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elevat002.png
 
 3. Set up the Correct Grid Dialog as shown below and click OK.
 
@@ -176,7 +176,7 @@ This method will apply zonal statistics to a raster within a polygon to calculat
 
 2. Click the Elevation Correction Tool and click Correct Grid Elevation
 
-.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elevat013.png
+.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elevat002.png
 
 3. Set up the Correct Grid Dialog as shown below and click OK.
 
@@ -208,7 +208,7 @@ with a buffer of width provided by an attribute field
 
 3. Click the Elevation Correction Tool and click Correct Grid Elevation
 
-.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elevat013.png
+.. image:: ../../img/gridtools/Elevation-Correction-from-Polygons/Elevat002.png
 
 4. Set up the Correct Grid Dialog as shown below and click OK.
 
