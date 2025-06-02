@@ -1286,6 +1286,7 @@ A table that stores the boundary condition cell data from the BC cells schematic
 
 
 **blocked_cells**
+
 This table lists the data stored in the ARF_WRF layer of the Schematic group.
 The ARF_WRF layer stores the data written to the ARF.DAT file.
 
