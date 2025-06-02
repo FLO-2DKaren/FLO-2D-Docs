@@ -2490,8 +2490,7 @@ Table connecting the initial conditions to specific channel segments.
      - Notes.
 
 
-culvert_equations
-----------------------------
+**culvert_equations**
 
 The table that stores the data for the generalized culvert equations and linked to the Structures Layer.
 
@@ -2537,8 +2536,7 @@ The table that stores the data for the generalized culvert equations and linked 
      - Multiple barrels.
 
 
-evapor
---------------
+**evapor**
 
 The table that stores the start time and date for the Evaporation group.
 
@@ -2571,8 +2569,7 @@ The table that stores the start time and date for the Evaporation group.
      - Starting clock time hours.
 
 
-evapor_hourly
----------------
+**evapor_hourly**
 
 Temporal evaporation information related to the evaporation of a specific calendar.
 
@@ -2602,8 +2599,7 @@ Temporal evaporation information related to the evaporation of a specific calend
      - Evaporation rate.
 
 
-evapor_monthly
-----------------------------
+**evapor_monthly**
 
 .. list-table::
    :widths: 33 33 33
@@ -2631,8 +2627,7 @@ evapor_monthly
      -
 
 
-external_layers
-----------------------------
+**external_layers**
 
 .. list-table::
    :widths: 33 33 33
