@@ -2874,8 +2874,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - A human-readable description of the constraint.
 
 
-gpkg_data_columns
-----------------------------
+**gpkg_data_columns**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2917,8 +2916,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Optional name of the constraint from gpkg_data_column_constraints.
 
 
-gpkg_extensions
-----------------------------
+**gpkg_extensions**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2952,8 +2950,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Indicates how the extension is used: 'read-write', 'write-only', or 'read-only'.
 
 
-gpkg_geometry_columns
-----------------------
+**gpkg_geometry_columns**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2991,8 +2988,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Indicates presence of M values: 0 = none, 1 = mandatory, 2 = optional.
 
 
-gpkg_metadata
----------------
+**gpkg_metadata**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3026,8 +3022,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - The actual metadata content stored as a text string.
 
 
-gpkg_metadata_reference
-------------------------------
+**gpkg_metadata_reference**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3050,7 +3045,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - column_name
      - TEXT
-     - Name of the column the metadata refers to (nullable unless reference_scope includes 'column').
+     - Name of the column the metadata refers to
+
+       (nullable unless reference_scope includes 'column').
 
    * - row_id_value
      - INTEGER
