@@ -1729,11 +1729,15 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
    * - COEFF
      - REAL
-     - Overall bridge discharge coefficient assigned or computed (default = 0.) "C_PRIME_USER"
+     - Overall bridge discharge coefficient assigned or computed (default = 0.)
+
+       "C_PRIME_USER"
 
    * - C_PRIME_USER
      - REAL
-     - Baseline bridge discharge coefficient to be adjusted with detail coefficients "KF_COEF"
+     - Baseline bridge discharge coefficient to be adjusted with detail coefficients
+
+       "KF_COEF"
 
    * - KF_COEF
      - REAL
@@ -1749,15 +1753,21 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
    * - KY_COEF
      - REAL
-     - Coefficient associated with sloping embankments and vertical abutments (= 0.) "KX_COEF"
+     - Coefficient associated with sloping embankments and vertical abutments (= 0.)
+
+       "KX_COEF"
 
    * - KX_COEF
      - REAL
-     - Coefficient associated with sloping abutments assigned or computed (= 0.) "KJ_COEF"
+     - Coefficient associated with sloping abutments assigned or computed (= 0.)
+
+       "KJ_COEF"
 
    * - KJ_COEF
      - REAL
-     - Coefficient associated with pier and piles assigned or computer (= 0.) "BOPENING"
+     - Coefficient associated with pier and piles assigned or computer (= 0.)
+
+       "BOPENING"
 
    * - BOPENING
      - REAL
@@ -1767,15 +1777,21 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
    * - BLENGTH
      - REAL
-     - Bridge length from upstream edge to downstream abutment (ft or m) "BN_VALUE"
+     - Bridge length from upstream edge to downstream abutment (ft or m)
+
+       "BN_VALUE"
 
    * - BN_VALUE
      - REAL
-     - Bridge reach n-value (typical channel n-value for the bridge cross section) "UPLENGTH12"
+     - Bridge reach n-value (typical channel n-value for the bridge cross section)
+
+       "UPLENGTH12"
 
    * - UPLENGTH12
      - REAL
-     - Distance to upstream cross section unaffected by bridge backwater (ft or m) "LOWCHORD"
+     - Distance to upstream cross section unaffected by bridge backwater (ft or m)
+
+       "LOWCHORD"
 
    * - LOWCHORD
      - REAL
@@ -1784,7 +1800,9 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
    * - DECKHT
      - REAL
-     - Average elevation of the top of the deck railing for overtop flow (ft or m) "DECKLENGTH"
+     - Average elevation of the top of the deck railing for overtop flow (ft or m)
+
+       "DECKLENGTH"
 
    * - DECKLENGTH
      - REAL
@@ -1817,11 +1835,15 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
    * - WINGWALL_ANGLE
      - REAL
-     - Angle the wingwall makes with the abutment perpendicular to the flow PHI_ANGLE
+     - Angle the wingwall makes with the abutment perpendicular to the
+
+       flow PHI_ANGLE
 
    * - PHI_ANGLE
      - REAL
-     - Angle the flow makes with the bridge alignment perpendicular to the flow LBTOEABUT
+     - Angle the flow makes with the bridge alignment perpendicular to the
+
+       flow LBTOEABUT
 
    * - LBTOEABUT
      - REAL
