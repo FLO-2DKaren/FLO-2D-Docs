@@ -1831,8 +1831,7 @@ It can be edited in the Breach layer of the Schematic Layers group.
      - Toe elevation of the right abutment (ft or m)
 
 
-bridge_xs
---------------
+**bridge_xs**
 
 Table for bridge upstream and downstream cross section identification.
 
@@ -1866,8 +1865,7 @@ Table for bridge upstream and downstream cross section identification.
      - Distance from bridge to up cross section.
 
 
-buildings_areas
-----------------------------
+**buildings_areas**
 
 .. list-table::
    :widths: 33 33 33
@@ -1891,8 +1889,7 @@ buildings_areas
      - A layer with polygon geometry.
 
 
-building_stats
----------------
+**building_stats**
 
 .. list-table::
    :widths: 33 33 33
@@ -1980,8 +1977,7 @@ building_stats
      - Polygon geometry.
 
 
-chan
---------------
+**chan**
 
 Table for the Channel Segments (left banks) layer in the Schematic Layers group.
 This layer stores the data that is written to the chanbank.dat for each channel segment control line.
@@ -2038,8 +2034,7 @@ Channel are written in order from rank = 1 to n number of segments.
      - Polyline.
 
 
-chan_confluences
-----------------------------
+**chan_confluences**
 
 Table of data associated with the Channel Confluences layer in the Schematic Layers group.
 This table identifies the connecting channel cells and identifies if a confluence cell is a tributary or main channel element.
@@ -2055,7 +2050,9 @@ This table identifies the connecting channel cells and identifies if a confluenc
 
    * - fid
      - INTEGER
-     - Unit fid is unique and not associated with the grid id, confluence or the channel id.
+     - Unit fid is unique and not associated with the grid id,
+
+       confluence or the channel id.
 
    * - conf_fid
      - INTEGER
