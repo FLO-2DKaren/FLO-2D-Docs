@@ -4734,6 +4734,7 @@ having one uniform elevation. This enables the digital terrain database within t
    * - depthrt
      - REAL
      - Increment flow depth for the volumetric rating table above the lowest elevation in the
+
        grid element topographic database.
 
    * - volrt
