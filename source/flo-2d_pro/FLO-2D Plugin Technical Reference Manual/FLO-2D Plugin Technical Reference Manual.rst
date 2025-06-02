@@ -2648,8 +2648,9 @@ Temporal evaporation information related to the evaporation of a specific calend
 
    * - type
      - TEXT
-     - A field to determine if and external layer is a user layer meaning part of the GeoPackage or
-       external layer that is not part of the GeoPackage.
+     - A field to determine if and external layer is a user layer meaning part of the
+
+       GeoPackage or external layer that is not part of the GeoPackage.
 
 
 fpfroude
