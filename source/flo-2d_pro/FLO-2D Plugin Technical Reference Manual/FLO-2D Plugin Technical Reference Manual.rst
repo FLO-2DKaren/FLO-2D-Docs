@@ -3066,8 +3066,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Optional foreign key to a parent metadata record for hierarchical relationships.
 
 
-gpkg_spatial_ref_sys
---------------------------
+**gpkg_spatial_ref_sys**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3094,7 +3093,9 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
    * - organization_coordsys_id
      - INTEGER
-     - The numeric ID of the coordinate system in the organization’s registry (e.g., EPSG code).
+     - The numeric ID of the coordinate system in the organization’s
+
+       registry (e.g., EPSG code).
 
    * - definition
      - TEXT
