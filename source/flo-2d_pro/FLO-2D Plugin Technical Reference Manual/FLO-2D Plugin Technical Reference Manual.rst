@@ -2254,8 +2254,7 @@ Table that stores the data that links natural cross-sections to left bank elemen
      - Cross section name.
 
 
-chan_r
---------------
+**chan_r**
 
 The table that stores the cross-section data for rectangular cross sections and links them to left bank elements.
 
@@ -2293,8 +2292,7 @@ The table that stores the cross-section data for rectangular cross sections and 
      - Channel depth.
 
 
-chan_t
---------------
+**chan_t**
 
 The table that stores the cross-section data for trapezoidal cross sections and links them to left bank elements.
 
@@ -2340,8 +2338,7 @@ The table that stores the cross-section data for trapezoidal cross sections and 
      - Right bank slope.
 
 
-chan_v
---------------
+**chan_v**
 
 The table that stores the cross-section data for variable area regression cross sections and links them to left bank elements.
 
@@ -2427,8 +2424,7 @@ The table that stores the cross-section data for variable area regression cross 
      - Exponent top width (depth 2) c22.
 
 
-chan_wsel
---------------
+**chan_wsel**
 
 Table connecting the initial conditions to specific channel segments.
 
@@ -2466,8 +2462,7 @@ Table connecting the initial conditions to specific channel segments.
      - Elevation at the end.
 
 
-cont
---------------
+**cont**
 
 .. list-table::
    :widths: 33 33 33
