@@ -1286,7 +1286,6 @@ A table that stores the boundary condition cell data from the BC cells schematic
 
 
 **blocked_cells**
-
 This table lists the data stored in the ARF_WRF layer of the Schematic group.
 The ARF_WRF layer stores the data written to the ARF.DAT file.
 
@@ -1354,8 +1353,7 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
        blockage.
 
 
-breach
---------------
+**breach**
 
 Individual breach data stored in the breach.dat file.
 This table works with import and export.
@@ -1508,8 +1506,7 @@ It can be edited in the Breach layer of the Schematic Layers group.
      - Breach layer is a point layer.
 
 
-breach_cells
---------------
+**breach_cells**
 
 .. list-table::
    :widths: 33 33 33
@@ -1533,8 +1530,7 @@ breach_cells
      - Grid element id of the cell.
 
 
-breach_fragility_curves
--------------------------
+**breach_fragility_curves**
 
 .. list-table::
    :widths: 33 33 33
@@ -1562,8 +1558,7 @@ breach_fragility_curves
      - The distance below levee crest paired with the failure probability.
 
 
-breach_global
---------------
+**breach_global**
 
 .. list-table::
    :widths: 33 33 33
@@ -1708,8 +1703,7 @@ breach_global
      - Sediment gradient of the downstream upper one foot face.
 
 
-bridge_variables
-----------------------------
+**bridge_variables**
 
 .. list-table::
    :widths: 33 33 33
