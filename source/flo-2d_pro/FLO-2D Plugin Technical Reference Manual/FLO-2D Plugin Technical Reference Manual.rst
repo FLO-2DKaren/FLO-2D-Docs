@@ -2653,8 +2653,7 @@ Temporal evaporation information related to the evaporation of a specific calend
        GeoPackage or external layer that is not part of the GeoPackage.
 
 
-fpfroude
---------------
+**fpfroude**
 
 The table that lists the data for the Froude Areas layer in the User Layers group.
 This polygon layers stores the spatially variable limiting Froude data.
@@ -2681,8 +2680,7 @@ This polygon layers stores the spatially variable limiting Froude data.
      - Polygon features that outline the limiting Froude areas.
 
 
-fpfroude_cells
-----------------------------
+**fpfroude_cells**
 
 A table of cells that are written to the froudefp.dat when the project is exported.
 
@@ -2708,8 +2706,7 @@ A table of cells that are written to the froudefp.dat when the project is export
      - Grid element id of the cell.
 
 
-fpxsec
---------------
+**fpxsec**
 
 Table for the Floodplain Cross Sections layer in the Schematic Layers group.
 Stores the order of cross sections listed in fpxsec.dat.
@@ -2740,8 +2737,7 @@ Stores the order of cross sections listed in fpxsec.dat.
      - Polyline representing the exact location of the floodplain cross section.
 
 
-fpxsec_cells
---------------
+**fpxsec_cells**
 
 Table for the Floodplain Cross Sections Cells.
 Lists the cells in each floodplain cross section as written to fpxsec.dat.
@@ -2772,8 +2768,7 @@ Lists the cells in each floodplain cross section as written to fpxsec.dat.
      - Point geometry to identify the cells in each floodplain cross section.
 
 
-gpkg_contents
---------------
+**gpkg_contents**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -2793,6 +2788,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
    * - data_type
      - TEXT
      - Data types include aspatial for table data, features
+
        for vector data and 2d-gridded-coverage for raster data.
 
    * - identifier
@@ -2806,7 +2802,10 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
    * - last_change
      - DATETIME
      - Last data change of table or layer.  If it’s external data,
-       the date is added date and if its GeoPackage data, the date is last saved.
+
+       the date is added date and if its GeoPackage data, the date
+
+       is last saved.
 
    * - min_x
      - DOUBLE
@@ -2829,8 +2828,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - EPSG code.
 
 
-gpkg_data_column_constraints
------------------------------
+**gpkg_data_column_constraints**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
