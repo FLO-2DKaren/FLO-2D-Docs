@@ -1285,8 +1285,7 @@ A table that stores the boundary condition cell data from the BC cells schematic
      - Polygon of the cell.
 
 
-blocked_cells
---------------
+**blocked_cells**
 
 This table lists the data stored in the ARF_WRF layer of the Schematic group.
 The ARF_WRF layer stores the data written to the ARF.DAT file.
@@ -1350,7 +1349,9 @@ The ARF_WRF layer stores the data written to the ARF.DAT file.
 
    * - geom
      - POINT
-     - A point layer but the style of the layer is set up to look like blocked cells with 8 direction blockage.
+     - A point layer but the style of the layer is set up to look like blocked cells with 8 direction
+
+       blockage.
 
 
 breach
