@@ -1812,6 +1812,7 @@ It can be edited in the Breach layer of the Schematic Layers group.
    * - COEFFWEIRB
      - REAL
      - Weir coefficient for flow over the bridge deck.
+
        For metric: COEFFWIERB x 0.552 WINGWALL_ANGLE
 
    * - WINGWALL_ANGLE
