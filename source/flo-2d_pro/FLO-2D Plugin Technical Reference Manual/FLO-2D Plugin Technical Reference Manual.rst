@@ -2076,8 +2076,7 @@ This table identifies the connecting channel cells and identifies if a confluenc
      - Point associated with the channel cell for a tributary or main element.
 
 
-chan_elems
---------------
+**chan_elems**
 
 Table associated with all Channel Cross Sections layer in the Schematic Layers group.
 This table uses several id fields to link the cross sections to the correct channel segment, left bank element, right bank element and station or
@@ -2151,8 +2150,7 @@ geometry data.
      - Polyline.
 
 
-chan_elems_interp
-----------------------------
+**chan_elems_interp**
 
 This table is used for a calculation scheme that calculates the distance between channel cross sections for the purpose of interpolation.
 The table is referenced in two python files.
@@ -2204,8 +2202,7 @@ They are Schematic_tools.py and flo2dobjects.py.
      - Distance from right bank to center.
 
 
-chan_n
---------------
+**chan_n**
 
 Table that stores the data that links natural cross-sections to left bank elements.
 
