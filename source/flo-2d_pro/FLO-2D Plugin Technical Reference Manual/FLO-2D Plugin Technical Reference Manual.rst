@@ -4228,8 +4228,7 @@ Each domain is repre-sented by a polygon.
      - Geometry field representing the spatial extent of the domain.
 
 
-mult_domains_con
------------------
+**mult_domains_con**
 
 This table defines the Multiple Domains connections in the FLO-2D model.
 One subdomain can be connected to 9 subdomains.
