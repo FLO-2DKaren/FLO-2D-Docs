@@ -3106,8 +3106,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Optional description of the coordinate reference system.
 
 
-gpkg_tile_matrix
--------------------
+**gpkg_tile_matrix**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3153,8 +3152,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Size of a pixel in the y direction (map units per pixel).
 
 
-gpkg_tile_matrix_set
-------------------------------
+**gpkg_tile_matrix_set**
 
 OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
 
@@ -3192,8 +3190,7 @@ OGC GeoPackage Encoding Standard Table (Open Geospatial Consortium, 2017).
      - Maximum Y coordinate of the tile matrix set extent.
 
 
-grid
-------
+**grid**
 
 Table for the Grid layer in the Schematic Layers group.
 Used to store the grid element number, n_value and elevation.
@@ -3241,8 +3238,7 @@ Data saved to topo.dat and mannings.dat.
      - Polygons define the grid system based on the cells size.
 
 
-gutter_areas
----------------------------
+**gutter_areas**
 
 The Gutter_Areas layer is used to define the spatial position of gutters.
 It also contains local variables used in gutter cells.
@@ -3281,8 +3277,7 @@ It also contains local variables used in gutter cells.
      - Polygons define the grid system based on the cells size.
 
 
-gutter_cells
----------------------------
+**gutter_cells**
 
 The gutter cells calculated from the gutter_areas.
 These are written to the GUTTER.DAT file when the project is exported.
@@ -3313,8 +3308,7 @@ These are written to the GUTTER.DAT file when the project is exported.
      - Grid element id of the cell.
 
 
-gutter_globals
----------------------------
+**gutter_globals**
 
 The gutter_globals layer is a table that stores the global gutter variables.
 It is exported to GUTTER.DAT when the project is exported.
@@ -3345,8 +3339,7 @@ It is exported to GUTTER.DAT when the project is exported.
      - Global gutter n-value
 
 
-gutter_lines
----------------------------
+**gutter_lines**
 
 The gutter_lines layer is a polyline layer that stores the gutter lines.
 It is exported to intersected to the gutter_cells table when the gutter calculator is applied.
@@ -3385,8 +3378,7 @@ It is exported to intersected to the gutter_cells table when the gutter calculat
      - Polyline geometry type.
 
 
-infil
----------------------------
+**infil**
 
 Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
 
@@ -3430,8 +3422,9 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
    * - soild
      - REAL
      - Soil depth global.
-       The spatially variable soil depth will not be used unless this value is greater than zero.
-       (ft or m)
+       The spatially variable soil depth will not be used unless this value
+
+       is greater than zero (ft or m).
 
    * - infchan
      - INTEGER
@@ -3450,8 +3443,9 @@ Table of global infiltration parameters for Green-Ampt, SCS, and Horton.
    * - hydcadj
      - REAL
      - Hydraulic conductivity adjustment.
-       This variable will adjust spatially hydraulic conductivity per the conditions in the data Input Manual.
-       (no units)
+       This variable will adjust spatially hydraulic conductivity
+
+       per the conditions in the data Input Manual (no units).
 
    * - hydcxx
      - REAL
