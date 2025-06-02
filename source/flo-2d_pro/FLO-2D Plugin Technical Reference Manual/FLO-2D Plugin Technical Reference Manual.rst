@@ -1793,15 +1793,21 @@ It can be edited in the Breach layer of the Schematic Layers group.
 
    * - PIERWIDTH
      - REAL
-     - Combined pier or pile cross section width (flow blockage width in ft or m) "SLUICECOEFADJ"
+     - Combined pier or pile cross section width (flow blockage width in ft or m)
+
+       "SLUICECOEFADJ"
 
    * - SLUICECOEFADJ
      - REAL
-     - Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Yu/Z = 1.0 "ORIFICECOEFADJ"
+     - Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for
+
+       Yu/Z = 1.0 "ORIFICECOEFADJ"
 
    * - ORIFICECOEFADJ
      - REAL
-     - Adjustment factor to raise or lower the orifice flow coefficient which is 0.80 for Yu/Z = 1.0 "COEFFWEIRB"
+     - Adjustment factor to raise or lower the orifice flow coefficient which is 0.80 for
+
+        Yu/Z = 1.0 "COEFFWEIRB"
 
    * - COEFFWEIRB
      - REAL
