@@ -1,3 +1,5 @@
+.. _open_flo2d_project:
+
 Open FLO-2D Project
 ====================
 
@@ -29,13 +31,13 @@ Open an existing FLO-2D GeoPackage
 Update an outdated FLO-2D GeoPackage
 --------------------------------------
 
-5. If the GeoPackage is outdated, FLO-2D Plugin will ask the user to update it.
+1. If the GeoPackage is outdated, FLO-2D Plugin will ask the user to update it.
 
 .. image:: ../../img/Flo-2D-Project/openflo2dproject003.png
 
-6. Click Yes to update or No to cancel.
+2. Click Yes to update or No to cancel.
 
-7. The project with the updated GeoPackage will be loaded.
+3. The project with the updated GeoPackage will be loaded.
 
 .. note::  The outdated GeoPackage will not be deleted or altered. The FLO-2D auto-port functionality creates a new
            GeoPackage and adds data to it with the current FLO-2D Plugin version as suffix to the new GeoPackage.

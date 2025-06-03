@@ -1,3 +1,5 @@
+.. _cross_sections_editor:
+
 Cross Sections Editor
 ======================
 

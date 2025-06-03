@@ -1,3 +1,5 @@
+.. _infiltration_editor:
+
 Infiltration Editor
 ===================
 

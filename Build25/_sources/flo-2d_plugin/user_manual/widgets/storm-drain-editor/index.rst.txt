@@ -2,8 +2,8 @@ Storm Drain Editor
 =====================
 
 .. toctree::
-   :hidden:
-   :maxdepth: 4
+   :maxdepth: 2
+   :caption: Contents
 
    Create Storm Drain
    Processors Group

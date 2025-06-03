@@ -1,14 +1,20 @@
 FLO-2D Parameters
 ===================
 
-The FLO-2D Parameters button serves multiple functions, including setting control parameters on the CONT.DAT file,
-managing Mud and Sediment data in the SED.DAT file, converting schematized data to user layers,
-and running the Levee Tool.
+The FLO-2D Parameters button is a collection of tools that allow users to manage various aspects of 
+the FLO-2D model setup. This includes:
+
+- Setting control parameters on the CONT.DAT and TOLER.DAT files,
+- Managing the Evaporation Editor,
+- Managing the Mud and Sediment Transport Tool,
+- Converting schematized data to user layers,
+- Managing the Levee Tool.
 
 .. image:: ../../img/Buttons/controlparams.png
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
+   :caption: Contents
 
    Control Variables
    Mud and Sediment Transport Tool

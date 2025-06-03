@@ -1,3 +1,5 @@
+.. _initial_condition_editor:
+
 Initial Condition Editor
 ========================
 

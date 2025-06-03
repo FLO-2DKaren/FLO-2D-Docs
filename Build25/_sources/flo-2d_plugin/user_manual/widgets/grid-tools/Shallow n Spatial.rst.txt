@@ -1,3 +1,5 @@
+.. _shallow_n_spatial:
+
 11. Shallow n Spatial
 ==================================
 

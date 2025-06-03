@@ -1,3 +1,5 @@
+.. _import_data_files:
+
 Import data (\*.DAT) files
 ===========================
 
@@ -6,8 +8,7 @@ This tool imports existing FLO-2D \*.DAT files into the FLO-2D GeoPackage.
 Import the FLO-2D \*.DAT files into the Project
 -------------------------------------------------
 
-.. note:: Before performing this task, set up a FLO-2D Project GeoPackage using `New FLO-2D Project
-          <../flo-2d-project/New%20FLO-2D%20Project.html>`__.
+.. important:: Before performing this task, set up a :ref:`New FLO-2D Project <new_flo2d_project>`.
 
 1. Click the
    Import data (\*.DAT) files.
@@ -40,5 +41,7 @@ Import the FLO-2D \*.DAT files into the Project
 
 
 7. The final step is to convert
-   the new layers to User Layers. See
-   `Convert Schematic Layers to User Layers. <../flo-2d-parameters/Schematic%20to%20User%20Converter.html>`__
+   the new layers to User Layers. This process should be automatic. It uses this tool:
+   :ref:`Convert Schematic Layers to User Layers <convert_schematic_layers_to_user_layers>`.
+   If the conversion does not happen automatically, you can manually convert the layers by clicking on the
+   Convert Schematic Layers to User Layers button.

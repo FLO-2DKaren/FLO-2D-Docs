@@ -1,3 +1,5 @@
+.. _hazus-tool:
+
 HAZUS
 ==========
 
@@ -26,21 +28,17 @@ Building Layer
 Import Depth and Water Surface Layers
 --------------------------------------
 
-1. Add a depth
-   layer and a water surface layer.
+1. Add a depth layer and a water surface layer.
 
-2. Click Open
-   Data Source Manager button.
+2. Click Open Data Source Manager button.
 
 .. image:: ../../img/Hazus-Tool/hazustool30.png
 
-3. Fill the form as shown in
-   the following image:
+3. Fill the form as shown in the following image:
 
 .. image:: ../../img/Hazus-Tool/hazustool29.png
 
-4. Repeat this process
-   for the DEPFP.OUT file.
+4. Repeat this process for the DEPFP.OUT file.
 
 Assign Water Elevation and Depth to the Grid Layer
 --------------------------------------------------

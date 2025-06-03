@@ -1,3 +1,5 @@
+.. _ws_and_depth_for_hazus:
+
 14. Water Surface and Depth for HAZUS
 ==============================================================
 

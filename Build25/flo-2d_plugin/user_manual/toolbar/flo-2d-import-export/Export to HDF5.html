@@ -100,7 +100,7 @@
            <div itemprop="articleBody">
              
   <section id="export-to-hdf5">
-<h1>Export to HDF5<a class="headerlink" href="#export-to-hdf5" title="Link to this heading"></a></h1>
+<span id="export-hdf5"></span><h1>Export to HDF5<a class="headerlink" href="#export-to-hdf5" title="Link to this heading"></a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This tool is under construction and will not function for all data types.</p>
@@ -124,9 +124,29 @@ the export folder, set the file name, and click Save.</p></li>
 </ol>
 <img alt="../../../../_images/exporthdf5001.png" src="../../../../_images/exporthdf5001.png" />
 <ol class="arabic simple" start="3">
+<li><p>The Export to HDF5 dialog will appear.
+Select the data you want to export and click OK. A progress bar will appear while the export is in progress.</p></li>
+</ol>
+<img alt="../../../../_images/exphdf003.png" src="../../../../_images/exphdf003.png" />
+<ol class="arabic simple" start="4">
 <li><p>A message at the QGIS toolbar will show that the file was correctly exported.</p></li>
 </ol>
-<img alt="../../../../_images/exporthdf5001.png" src="../../../../_images/exporthdf5001.png" />
+<img alt="../../../../_images/exporthdf5002.png" src="../../../../_images/exporthdf5002.png" />
+</section>
+<section id="hdf5-data-structure">
+<h2>HDF5 Data Structure<a class="headerlink" href="#hdf5-data-structure" title="Link to this heading"></a></h2>
+<p>The program HDFView can be used to view the HDF5 file structure. The HDF5 file contains groups of datasets that
+flopro.exe reads to run the FLO-2D model. The datasets are organized in a way that is simpler than the original FLO-2D files, but still contains all the necessary information.</p>
+<p>The HDF5 file will expand as more tables are added.  The follwoing image shows the structure of an HDF5 with a grid and control data.</p>
+<img alt="../../../../_images/hdf001.png" src="../../../../_images/hdf001.png" />
+<p>The tables are relatively simple as you can see in the coordinates table below. The coordinates table contains the x and y coordinates of the grid nodes.</p>
+<img alt="../../../../_images/hdf002.png" src="../../../../_images/hdf002.png" />
+<p><a href="https://www.hdfgroup.org/downloads/hdfview/" target="_blank" rel="noopener">HDFView</a> can be downloaded from the HDF Group website.</p>
+<p>See the <a class="reference internal" href="../../../technical_reference_manual/techref.html#tech-ref-manual"><span class="std std-ref">Technical Reference Manual</span></a> Appendix C for more details on the HDF5 file structure.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The HDF5 file format is a binary format, so it cannot be opened in a text editor. It must be opened with a program that can read HDF5 files, such as HDFView.</p>
+</div>
 </section>
 </section>
 

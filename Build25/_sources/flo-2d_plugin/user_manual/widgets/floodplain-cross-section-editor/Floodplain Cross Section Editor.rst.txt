@@ -1,3 +1,5 @@
+.. _floodplain_cross_section_editor:
+
 Floodplain Cross Section Editor
 ================================
 

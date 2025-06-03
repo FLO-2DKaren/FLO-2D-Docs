@@ -1,3 +1,5 @@
+.. _no_echange_channel:
+
 13. No-Exchange Channel Cells
 =================================
 

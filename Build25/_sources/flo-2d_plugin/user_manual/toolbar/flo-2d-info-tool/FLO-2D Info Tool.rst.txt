@@ -1,3 +1,5 @@
+.. _flo-2d-info-tool:
+
 FLO-2D Info Tool
 ==================
 
@@ -10,13 +12,9 @@ This tool also activates the Profile Tool widget.
 Layers that work with this tool:
 
 -  Channel layers
-
 -  Left bank
-
 -  Cross sections
-
 -  Structure layers
-
 -  Levee layers
 
 This tool is a toggle.  Toggle it on to activate it and toggle it off to stop using it.
@@ -38,15 +36,7 @@ Channel Profiles
    into the table panel.
 
 .. image:: ../../img/Flo-2D-Info-Tool/Flo010.png
-
-4. Use the  
-   Profile Tool widget to select the data plot source.
-
-5. In this example, the  
-   elevation raster is the y axis and the left bank length is the x axis.
-
-.. image:: ../../img/Flo-2D-Info-Tool/Flo003.png
-
+   
 Channel User Layer Cross Sections
 --------------------------------------
 

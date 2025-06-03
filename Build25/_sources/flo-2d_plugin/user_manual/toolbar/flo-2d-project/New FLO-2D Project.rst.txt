@@ -1,3 +1,5 @@
+.. _new_flo2d_project:
+
 New FLO-2D Project
 ===================
 

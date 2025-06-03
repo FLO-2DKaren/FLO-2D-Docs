@@ -1,3 +1,5 @@
+.. _inflow_editor:
+
 Inflow Editor
 ==================
 

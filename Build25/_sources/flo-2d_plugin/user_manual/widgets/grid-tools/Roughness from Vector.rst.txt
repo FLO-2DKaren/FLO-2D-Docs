@@ -1,3 +1,5 @@
+.. _roughness_from_vector:
+
 6. Grid Roughness from Vector
 ================================
 

@@ -1,3 +1,5 @@
+.. _levee_breach_editor:
+
 Levees Breach Editor
 ====================
 

@@ -1,3 +1,5 @@
+.. _run_profiles:
+
 Run Profiles
 ===================
 

@@ -1,4 +1,10 @@
 Tech Ref Place Holder
 ------------------------
 
-The Plugin uses a `GeoPackage <http://www.GeoPackage.org/spec/>`__ for data storage.
+.. _tech_ref_manual:
+
+Install Instructions
+====================
+
+Here’s how to install the FLO-2D Plugin...
+

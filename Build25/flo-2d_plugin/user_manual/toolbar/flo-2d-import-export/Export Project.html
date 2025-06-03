@@ -21,7 +21,7 @@
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Import from HDF5" href="Import%20from%20HDF5.html" />
-    <link rel="prev" title="Import selected component files" href="Import%20Selected%20Component%20Files.html" /> 
+    <link rel="prev" title="Import Selected Component Files" href="Import%20Selected%20Component%20Files.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -100,7 +100,7 @@
            <div itemprop="articleBody">
              
   <section id="export-data-dat-files">
-<h1>Export data (*.DAT) files<a class="headerlink" href="#export-data-dat-files" title="Link to this heading"></a></h1>
+<span id="export-dat-files"></span><h1>Export data (*.DAT) files<a class="headerlink" href="#export-data-dat-files" title="Link to this heading"></a></h1>
 <p>This tool exports the FLO-2D *.DAT files.</p>
 <section id="export-flo-2d-dat-files">
 <h2>Export FLO-2D *.DAT Files<a class="headerlink" href="#export-flo-2d-dat-files" title="Link to this heading"></a></h2>
@@ -130,6 +130,13 @@ files to be exported and click OK.</p></li>
 <p>It is not necessary to export all files every time.
 Export large files like INFIL.DAT or TOPO.DAT only when needed.</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you commonly export to the same folder, you might notice that the Remove FPLAIN.DAT, CADPTS.DAT,
+and NEIGHBOR.DAT checkbox is active.  It’s important to check the box if you made a change to the
+grid shape, size, elevation, or roughness.  FLO-2D engine will read the old files if they exist.</p>
+</div>
+<img alt="../../../../_images/quickrun004.png" src="../../../../_images/quickrun004.png" />
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
@@ -145,7 +152,7 @@ polygon, or roughness raster do not cover the whole grid.  Check the grid attrib
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Import%20Selected%20Component%20Files.html" class="btn btn-neutral float-left" title="Import selected component files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Import%20Selected%20Component%20Files.html" class="btn btn-neutral float-left" title="Import Selected Component Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="Import%20from%20HDF5.html" class="btn btn-neutral float-right" title="Import from HDF5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -1,3 +1,5 @@
+.. _mult_channel_editor:
+
 Multiple Channels Editor
 ========================
 

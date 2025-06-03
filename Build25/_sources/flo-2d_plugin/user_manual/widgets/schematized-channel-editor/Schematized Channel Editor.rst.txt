@@ -1,3 +1,6 @@
+.. _schematized_channel_editor:
+
+
 Schematized Channel Editor
 ==========================
 

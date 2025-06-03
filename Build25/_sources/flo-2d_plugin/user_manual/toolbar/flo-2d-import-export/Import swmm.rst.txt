@@ -1,3 +1,5 @@
+.. _import_swmm:
+
 Import SWMM.INP
 =================
 

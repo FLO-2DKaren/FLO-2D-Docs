@@ -1,3 +1,5 @@
+.. _run_rasterizor:
+
 Run Rasterizor
 ===================
 
@@ -15,6 +17,13 @@ A brief list of files that can be used are:
 
 All FLO-2D output files are listed and described in the Chapter 5 of the Data Input Manual.
 It is installed on your computer with the software.
+
+.. note:: MapCrafter / Rasterizor training video playlist is available on Youtube. |mapcrafter|
+
+.. |mapcrafter| raw:: html
+
+   <a href="https://www.youtube.com/playlist?list=PLkT3KNZwX6zkEAJ_4qB_57r0Id_9cWgPr" target="_blank">MapCrafter Videos</a>
+
 
 
 1. Click on Run Rasterizor.

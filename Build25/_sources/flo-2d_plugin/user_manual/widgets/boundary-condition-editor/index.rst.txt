@@ -24,7 +24,7 @@ are checked. See image below.
 .. toctree::
    :hidden:
    :maxdepth: 2
-   :caption: Widgets
+   :caption: Contents
 
    Inflow
    Outflow
