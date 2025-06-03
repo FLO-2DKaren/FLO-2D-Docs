@@ -2081,7 +2081,7 @@ Low Impact Development (LID) Modeling
 Low impact development (LID) flood retention can be assessed with the FLO-2D model using a sink volume assignment
 or a spatially variable tolerance value (TOL) on individual cells.
 Sink volume is runoff or flood storage that never leaves the grid element and is assigned in the
-LID_VOLUME.DAT file by the user in ft:sup:`3` or m:sup:`3`.
+LID_VOLUME.DAT file by the user in :math:`\mathrm{ft}^3` or :math:`\mathrm{m}^3`.
 Until the sink volume is filled there is **no flow** depth on the grid element.
 The TOL parameter was originally designed to represent a flow depth below which no discharge is shared
 between two grid elements.
