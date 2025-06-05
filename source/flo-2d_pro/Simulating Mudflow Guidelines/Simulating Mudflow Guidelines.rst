@@ -297,7 +297,7 @@ where:
 
     τ\ :sub:`c` = cohesive yield stress
 
-    τ\ :sub:`mc` = Mohr-Coulomb shear stress; also τ\ :sub:`mc` = p\ :sub:`s`\ tanφ which depends on:
+    τ\ :sub:`mc` = Mohr-Coulomb shear stress; also τ\ :sub:`mc` = p\ :sub:`s`\ tanφ, which depends on:
 
         p\ :sub:`s` (the intergranular pressure)
 
