@@ -400,6 +400,13 @@ where:
 The viscous and turbulent-dispersive slope terms are written in terms of depth-averaged velocity V.
 The viscous slope can be written as:
 
+.. math::
+   :label:
+
+    S_v = \frac{K}{d} \left( \frac{V}{d} \right)
+
+where K is the resistance parameter for laminar flow and d is the flow depth.
+
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula012.png
 
 where γ\ :sub:`m` is the specific weight of the sediment mixture.
