@@ -7,3 +7,4 @@ FLO-2D Plugin
 
    user_manual/index.rst
    technical_reference_manual/index.rst
+   FLO-2D Plugin Technical Reference Manual/index
