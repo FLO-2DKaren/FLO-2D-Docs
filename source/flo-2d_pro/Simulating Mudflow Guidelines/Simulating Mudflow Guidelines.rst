@@ -254,7 +254,24 @@ The shear stress in hyperconcentrated sediment flows can be determined from the 
 The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear τ\ :sub:`mc`, the viscous shear stress τ\ :sub:`v`
 (η dv/dy), the turbulent shear stress τ\ :sub:`t`, and the dispersive shear stress τ\ :sub:`d`.
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula004.png
+.. math::
+   :label:
+
+    τ = τ_c + τ_mc + τ_v + τ_t + τ_d
+
+where:
+
+    τ\ :sub:`c` = cohesive yield stress
+
+    τ\ :sub:`mc` = Mohr-Coulomb shear stress
+
+    τ\ :sub:`v` = viscous shear stress
+
+    τ\ :sub:`t` = turbulent shear stress
+
+    τ\ :sub:`d` = dispersive shear stress.
+
+
 
 When written in terms of the shear rate (dv/dy) the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
 
