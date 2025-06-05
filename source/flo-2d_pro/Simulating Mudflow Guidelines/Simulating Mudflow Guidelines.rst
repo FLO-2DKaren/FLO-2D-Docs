@@ -477,10 +477,31 @@ The specific weight of the fluid matrix γ\ :sub:`m`, yield stress τ\ :sub:`y` 
 Unless a rheological analysis of the mudflow site depositional material is available, the following empirical relationships can be used to compute
 viscosity and yield stress:
 
-and
+.. math::
+   :label:
+
+    η = α_i \, e^{β_i \, C_v}
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula016.png
 
+and
+
+.. math::
+   :label:
+
+    \tau_y = \alpha_2 \, e^{\beta_i \, C_v}
+
+where:
+
+    τ\ :sub:`y` = yield stress
+
+    η = dynamic viscosity
+
+    γ\ :sub:`m` = specific weight of the mudflow mixture
+
+    C\ :sub:`v` = volumetric sediment concentration
+
+    α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula017.png
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
