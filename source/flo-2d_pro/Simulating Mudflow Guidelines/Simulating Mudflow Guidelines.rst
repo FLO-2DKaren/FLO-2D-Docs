@@ -346,7 +346,7 @@ Egashira et al.(1989) revised this relationship and suggested the following:
 
 where:
 
-    the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands,
+    e\ :sub:`n` is the energy restitution coefficient  after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands,
 
     α\ :sub:`I` is the average particle impact angle
 
