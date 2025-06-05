@@ -779,12 +779,22 @@ where:
 
     When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
 
-    T\ :sub:`d` = Dimensionless turbulent-dispersive ratio.
-    T\ :sub:`d` = (ρ\ :sub:`m` l\ :sup:`2`)/(a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`).
+    T\ :sub:`d` = Dimensionless turbulent-dispersive ratio, given as:
+
+    .. math::
+       :label:
+
+       T_d = \frac{(ρ_m \, l^2)}{(a \, ρ_s \, [λ_d \, d_s]^2)}
+
     When T\ :sub:`d` is large the flow is turbulent and when T\ :sub:`d` is small the flow is dispersive.
 
-    D\ :sub:`v` = Dimensionless dispersive-viscous ration.
-    D\ :sub:`v` = (a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`)/ η (du/dy).
+    D\ :sub:`v` = Dimensionless dispersive-viscous ration, given as:
+
+    .. math::
+       :label:
+
+       D_v = \frac{(a \, ρ_s \, [λ_d \, d_s]^2)}{η (du/dy)}
+
     When D\ :sub:`v` is large the flow is dispersive and when D\ :sub:`v` is small the flow is viscous.
 
 To apply these relationships the following guidelines are suggested (Julien and O’Brien, 1997):
