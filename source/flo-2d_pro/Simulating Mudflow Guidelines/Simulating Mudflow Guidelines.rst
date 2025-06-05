@@ -468,8 +468,6 @@ where:
 
     S\ :sub:`td` = turbulent-dispersive slope.
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula015.png
-
 A quadratic equation solution to the above friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the
 momentum equation.
 The estimated velocity represents the flow velocity computed across each grid or channel element boundary using the average flow depth between the
