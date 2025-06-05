@@ -405,9 +405,6 @@ The viscous slope can be written as:
 
     S_v = \frac{K \, n}{8 \, \gamma_m} \, \frac{V}{h^2}
 
-
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula012.png
-
 where
 
     γ\ :sub:`m` is the specific weight of the sediment mixture.
