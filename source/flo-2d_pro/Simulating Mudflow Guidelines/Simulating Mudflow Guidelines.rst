@@ -317,11 +317,7 @@ where:
 
     τ\ :sub:`c` is the cohesive yield strength
 
-    C = inertial shear stress coefficient, and depends on:
-        ρ\ :sub:`m`,
-        l,
-        d\ :sub:`s`
-        C\ :sub:`v`
+    C = inertial shear stress coefficient, and depends on ρ\ :sub:`m`, l, d\ :sub:`s` and C\ :sub:`v`
 
 Bagnold (1954) defined the function relationship f(ρ\ :sub:`m`, C\ :sub:`v`) as:
 
