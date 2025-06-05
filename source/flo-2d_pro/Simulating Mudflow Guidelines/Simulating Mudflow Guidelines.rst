@@ -382,6 +382,21 @@ To define the all the shear stress terms for use in the FLO-2D model, the follow
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:
 
+.. math::
+   :label:
+
+    S_f = S_y + S_v + S_{td}
+
+where:
+
+    S\ :sub:`f` = total friction slope
+
+    S\ :sub:`y` = yield slope
+
+    S\ :sub:`v` = viscous slope
+
+    S\ :sub:`td` = turbulent-dispersive slope.
+
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula011.png
 
 where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
