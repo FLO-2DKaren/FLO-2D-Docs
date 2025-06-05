@@ -9,8 +9,7 @@ The FLO-2D Plugin menu is in the Plugins drop down menu, Plugins>FLO-2D.
 If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin_step>` to install it.
 
 .. toctree::
-   :hidden:
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: FLO-2D Plugin Version 2.0.0:
 
    techref.rst
