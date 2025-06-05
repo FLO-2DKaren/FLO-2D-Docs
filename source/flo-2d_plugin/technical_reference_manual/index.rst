@@ -15,3 +15,4 @@ If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin
 
    techref.rst
    FLO-2D Plugin Technical Reference Manual/FLO-2D Plugin Technical Reference Manual
+   techtrial.rst
