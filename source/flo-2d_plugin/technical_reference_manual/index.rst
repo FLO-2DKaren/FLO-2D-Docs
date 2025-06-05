@@ -1,3 +1,5 @@
+.. _tech_ref_manual:
+
 Technical Reference Manual
 =============================
 
