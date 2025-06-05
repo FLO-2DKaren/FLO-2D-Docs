@@ -348,10 +348,13 @@ where:
 
     a\ :sub:`i` and b\ :sub:`i` are empirical coefficients.
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula009.png
+where:
 
-where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
-impact angle and ρ\ :sub:`s` is the mass density of sediment particles.
+    the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands,
+
+    α\ :sub:`I` is the average particle impact angle
+
+    ρ\ :sub:`s` is the mass density of sediment particles.
 
 The first two shear stress terms in the quadratic rheological model are referred to as the Bingham shear stresses (Figure 2).
 The sum of the yield stress and viscous stress define the total shear stress of a cohesive mudflow in a viscous flow regime.
