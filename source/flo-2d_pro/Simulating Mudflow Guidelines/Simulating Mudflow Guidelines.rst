@@ -403,7 +403,7 @@ The viscous slope can be written as:
 .. math::
    :label:
 
-    S_v = \frac{K}{d} \left( \frac{V}{d} \right)
+    S_v = \frac{K \, n}{8 \, \gamma_m} \, \frac{V}{h^2}
 
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula012.png
