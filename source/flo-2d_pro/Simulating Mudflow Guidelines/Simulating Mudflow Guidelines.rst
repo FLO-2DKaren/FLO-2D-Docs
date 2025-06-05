@@ -556,16 +556,13 @@ A. If mudflow deposit field data of the fluid matrix is collected, this analysis
    Additional soil analyses such as the Plastic Index and Liquid Limit may also be informative.
 
 3. Starting with a dry deposit sample of the fluid matrix material, re-wet the sample based on accurate measurements of the weight or volume of the
-   sediment sample and the added water to determine concentration by volume.
-   Record the observations by referencing Table
-   1.
+   sediment sample and the added water to determine concentration by volume. Record the observations by referencing Table 1.
 
 4. If it is determined that the flow was very viscous with a moderate yield stress, select a sample from Table 3 that will result in a viscosity and
-   yield stress in an appropriate range in Figures 3 and
-   4. Glenwood 4 is suggested as a typical type of flow material that will behave like wet cement.
-      Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters corresponding to a
-      sample such as the Aspen Natural Soil.
-      Compute the viscosity and yield stress for several different samples for a range of concentrations by volume and compare the results in a table.
+   yield stress in an appropriate range in Figures 3 and 4. Glenwood 4 is suggested as a typical type of flow material that will behave like wet
+   cement. Similarly, if it is assumed that the flow more resembled a mud flood with limited viscosity and yield stress, select parameters
+   corresponding to a sample such as the Aspen Natural Soil. Compute the viscosity and yield stress for several different samples for a
+   range of concentrations by volume and compare the results in a table.
 
 B. If no field data is available and only a subjective interpretation of the mudflow fluid properties will be applied, then the following approach is
    recommended.
@@ -679,7 +676,7 @@ Prentice-Hall, Englewood Cliffs, NJ.
 Hashimoto, H., 1997.
 “A comparison between gravity flows of dry sand and sand-water mixtures,” *Recent Developments on Debris Flows*, Springer,
 A. Armanini and M.
-   Michiue (eds.), NY, NY.
+Michiue (eds.), NY, NY.
 
 Johnson, A., 1970.
 *Physical Processes in Geology.* San Francisco: Freeman, Cooper & Co.
