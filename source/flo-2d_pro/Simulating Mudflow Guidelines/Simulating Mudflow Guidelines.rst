@@ -346,10 +346,6 @@ Egashira et al.(1989) revised this relationship and suggested the following:
 
 where:
 
-    a\ :sub:`i` and b\ :sub:`i` are empirical coefficients.
-
-where:
-
     the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands,
 
     α\ :sub:`I` is the average particle impact angle
