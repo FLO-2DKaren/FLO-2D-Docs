@@ -342,7 +342,7 @@ Egashira et al.(1989) revised this relationship and suggested the following:
 .. math::
    :label:
 
-   f(\rho_m, \, C_v) = a_i \rho_m \left[\left(\frac{C*}{C_v} \right)^{\frac{1}{3}} \, - \, 1 \right]^{-2} + b_i
+   f(\rho_s, C_v) = \frac{\pi}{12} \left( \frac{6}{\pi} \right)^{1/3} \sin^2 \alpha_l \, \rho_s (1 - e_n^2) \, C_v^{1/3}
 
 where:
 
