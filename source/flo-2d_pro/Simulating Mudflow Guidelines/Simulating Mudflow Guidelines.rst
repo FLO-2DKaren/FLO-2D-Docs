@@ -88,7 +88,7 @@ yield stress.
 The dominant property of a mudflow is the high viscosity which will result in slow velocities; much slower than water floods on the same slope.
 High fluid matrix density can increase the buoyancy of large sediment particles from gravel to boulders which generally are just along for the ride,
 often being transported near the flow surface.
-The yield stress, is a measure of the internal fluid resistance to flow and will effect both flow initiation and cessation.
+The yield stress, is a measure of the internal fluid resistance to flow and will affect both flow initiation and cessation.
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula002.png
 
@@ -483,24 +483,24 @@ The average sediment concentration is approximately 35% by volume with a peak co
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula021.png
 
-   Figure 5.
-   Upstream Water and Mudflow Hydrograph
+*Figure 5.
+Upstream Water and Mudflow Hydrograph*
 
-   The hydrographs were routed downstream to outflow point of the basin (about 0.5 miles).
-   Figure 6 displays the resultant channel outflow hydrographs.
-   There are several important observations can be highlighted.
-   The mudflow moves slower than a water flood; the arrival of the peak water discharge occurs 0.08 hours sooner than the mudflow peak.
-   The mudflow peak discharge at the basin outflow exceeds the bulked peak water discharge for a sediment concentration of 50% by volume (a bulking
-   factor of two).
-   This infers that if the peak discharge for a conventional water flood analysis were conservatively bulked by 50% concentration by volume at the basin
-   outflow, the design mudflow discharge would be significantly underestimated.
-   This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
-   The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
+The hydrographs were routed downstream to outflow point of the basin (about 0.5 miles).
+Figure 6 displays the resultant channel outflow hydrographs.
+There are several important observations can be highlighted.
+The mudflow moves slower than a water flood; the arrival of the peak water discharge occurs 0.08 hours sooner than the mudflow peak.
+The mudflow peak discharge at the basin outflow exceeds the bulked peak water discharge for a sediment concentration of 50% by volume (a bulking
+factor of two).
+This infers that if the peak discharge for a conventional water flood analysis were conservatively bulked by 50% concentration by volume at the basin
+outflow, the design mudflow discharge would be significantly underestimated.
+This is because the hydrograph shape has been altered by the flood routing resulting in a steeper, slower moving rising limb.
+The altered hydrograph shape results in a modified peak discharge that would exceed the bulked water hydrograph.
 
-   .. image:: ../img/Simulating_Mudflow_Guidelines/Simula022.png
+.. image:: ../img/Simulating_Mudflow_Guidelines/Simula022.png
 
-   Figure 6.
-   Channel Outflow Hydrographs
+Figure 6.
+Channel Outflow Hydrographs
 
 Surface Conditions: Topography, buildings, obstructions, channels and vegetation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
