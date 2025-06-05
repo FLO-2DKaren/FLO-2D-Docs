@@ -153,8 +153,8 @@ The distinction between these flood events depends on sediment concentration mea
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula003.png
 
-Figure 1.
-Classification of Hyperconcentrated Sediment Flows
+*Figure 1.
+Classification of Hyperconcentrated Sediment Flows.*
 
 Physical Processes of Hyperconcentrated Sediment Flows
 ------------------------------------------------------
@@ -248,8 +248,8 @@ A discussion of these stresses and their role in hyperconcentrated sediment flow
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula010.png
 
-Figure 2.
-Shear Stress as a Function of Shear Rate for Fluid Deformation Models
+*Figure 2.
+Shear Stress as a Function of Shear Rate for Fluid Deformation Models.*
 
 A mudflow model that incorporates only the Bingham stresses and ignores the inertial stresses assumes that the simulated mudflow is viscous.
 This assumption is not universally appropriate because all mud floods and some mudflows are turbulent with velocities as high as 25 fps (8 m/s).
@@ -367,13 +367,13 @@ The areal extent of mudflow inundation and the maximum flow depths and velocitie
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula019.png
 
-Figure 3.
-Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration
+*Figure 3.
+Dynamic Viscosity of Mudflow Samples Versus Volumetric Concentration.*
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula020.png
 
-Figure 4.
-Yield Stress of Mudflow Samples Versus Volumetric Concentration
+*Figure 4.
+Yield Stress of Mudflow Samples Versus Volumetric Concentration.*
 
 Practical Guidelines for Analyzing the Potential for Hyperconcentrated Sediment Flows
 -------------------------------------------------------------------------------------
@@ -484,7 +484,7 @@ The average sediment concentration is approximately 35% by volume with a peak co
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula021.png
 
 *Figure 5.
-Upstream Water and Mudflow Hydrograph*
+Upstream Water and Mudflow Hydrograph.*
 
 The hydrographs were routed downstream to outflow point of the basin (about 0.5 miles).
 Figure 6 displays the resultant channel outflow hydrographs.
@@ -499,8 +499,8 @@ The altered hydrograph shape results in a modified peak discharge that would exc
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula022.png
 
-Figure 6.
-Channel Outflow Hydrographs
+*Figure 6.
+Channel Outflow Hydrographs.*
 
 Surface Conditions: Topography, buildings, obstructions, channels and vegetation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
