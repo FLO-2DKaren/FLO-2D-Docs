@@ -421,10 +421,10 @@ For laminar and transitional flows, turbulence is suppressed and the laminar flo
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
 
-... math::
+.. math::
    :label:
 
-    n_{td} = \frac{1}{K} \left( \frac{V}{d} \right)^{1/3}
+    S_{td} = \frac{ntd^2V^2}{h^{\frac{4}{3}}}
 
 where:
 
