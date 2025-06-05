@@ -12,5 +12,4 @@ If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin
    :maxdepth: 2
    :caption: FLO-2D Plugin Version 2.0.0:
 
-   techref.rst
    FLO-2D Plugin Technical Reference Manual.rst
