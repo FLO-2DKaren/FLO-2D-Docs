@@ -251,8 +251,6 @@ Sediment concentration in a given flood event can vary dramatically and as a res
 flow surges.
 
 The shear stress in hyperconcentrated sediment flows can be determined from the summation of the five shear stress components.
-The total shear stress τ depends on the cohesive yield stress τ\ :sub:`c`, the Mohr-Coulomb shear τ\ :sub:`mc`, the viscous shear stress τ\ :sub:`v`
-(η dv/dy), the turbulent shear stress τ\ :sub:`t`, and the dispersive shear stress τ\ :sub:`d`.
 
 .. math::
    :label:
@@ -299,13 +297,15 @@ where:
 
     τ\ :sub:`c` = cohesive yield stress
 
-    τ\ :sub:`mc` = Mohr-Coulomb shear stress
+    τ\ :sub:`mc` = Mohr-Coulomb shear stress; also τ\ :sub:`mc` = p\ :sub:`s`\ tanφ which depends on:
+
+        p\ :sub:`s` (the intergranular pressure)
+
+        φ (the angle of repose of the material);
 
     η = dynamic viscosity
 
     dv/dy = velocity gradient
-
-    C = inertial shear stress coefficient
 
     ρ\ :sub:`m` = mass density of the mixture
 
@@ -313,14 +313,24 @@ where:
 
     d\ :sub:`s` = sediment size
 
-    f(ρ\ :sub:`m`, C\ :sub:`v`) = function of the volumetric sediment concentration C\ :sub:`v`
+    C\ :sub:`v` = function of the volumetric sediment concentration
 
-    τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
+    τ\ :sub:`c` is the cohesive yield strength
 
-depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
-depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
-sediment concentration C\ :sub:`v`.
+    C = inertial shear stress coefficient, and depends on:
+        ρ\ :sub:`m`,
+        l,
+        d\ :sub:`s`
+        C\ :sub:`v`
+
 Bagnold (1954) defined the function relationship f(ρ\ :sub:`m`, C\ :sub:`v`) as:
+
+.. math::
+   :label:
+
+   f(\rho_m, \, C_v) = a_i \rho_m \left[\left(\frac{C^*}{C_v} \right)^{\frac{1}{3}}\right]^{-2}
+
+.. image:: ../img/Simulating_Mudflow_Guidelines/Simula008.png
 
 where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
 It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
