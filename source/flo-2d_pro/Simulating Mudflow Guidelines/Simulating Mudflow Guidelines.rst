@@ -328,9 +328,7 @@ Bagnold (1954) defined the function relationship f(ρ\ :sub:`m`, C\ :sub:`v`) as
 .. math::
    :label:
 
-   f(\rho_m, \, C_v) = a_i \rho_m \left[\left(\frac{C^*}{C_v} \right)^{\frac{1}{3}}\right]^{-2}
-
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula008.png
+   f(\rho_m, \, C_v) = a_i \rho_m \left[\left(\frac{C^*}{C_v} \right)^{\frac{1}{3}} \, - \, 1 \right]^{-2}
 
 where
 
