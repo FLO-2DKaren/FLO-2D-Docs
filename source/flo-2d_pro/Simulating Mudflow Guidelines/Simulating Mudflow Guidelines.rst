@@ -448,9 +448,6 @@ where:
 
     m = exponent (6.0896)
 
-    C\ :sub:`v` = sediment concentration by volume.
-
-where: n\ :sub:`t` is the turbulent n-value, b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
 sediment flows as function of the ratio of the flow depth to the sediment grain size.
 
