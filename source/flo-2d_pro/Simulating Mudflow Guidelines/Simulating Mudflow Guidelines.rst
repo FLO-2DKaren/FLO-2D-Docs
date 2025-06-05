@@ -426,13 +426,6 @@ flow:
 
     S_{td} = \frac{ntd^2V^2}{h^{\frac{4}{3}}}
 
-where:
-
-    n\ :sub:`td` = equivalent Manning’s n-value for the turbulent-dispersive shear stress components
-
-    K = resistance parameter for turbulent-dispersive flow.
-
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula014.png
 
 At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
 more momentum flux to the boundary.
