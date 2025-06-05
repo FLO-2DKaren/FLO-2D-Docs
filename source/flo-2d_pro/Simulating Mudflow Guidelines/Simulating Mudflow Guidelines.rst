@@ -480,7 +480,7 @@ viscosity and yield stress:
 .. math::
    :label:
 
-    η = α_i \, e^{β_1 \, C_v}
+    η = α_1 \, e^{β_1 \, C_v}
 
 and
 
