@@ -339,6 +339,15 @@ where
 It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
 Egashira et al.(1989) revised this relationship and suggested the following:
 
+.. math::
+   :label:
+
+   f(\rho_m, \, C_v) = a_i \rho_m \left[\left(\frac{C*}{C_v} \right)^{\frac{1}{3}} \, - \, 1 \right]^{-2} + b_i
+
+where:
+
+    a\ :sub:`i` and b\ :sub:`i` are empirical coefficients.
+
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula009.png
 
 where the energy restitution coefficient e\ :sub:`n` after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands, α\ :sub:`I` is the average particle
