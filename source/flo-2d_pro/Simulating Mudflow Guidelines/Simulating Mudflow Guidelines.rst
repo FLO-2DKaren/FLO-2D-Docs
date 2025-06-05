@@ -809,7 +809,10 @@ A transition regime exists when 30 < D\ :sub:`v` < 400 in which all the quadrati
 
 The turbulent-dispersive ratio T\ :sub:`d` can be rewritten as:
 
-T\ :sub:`d` = 0.1/ η (h/d\ :sub:`s`)
+.. math::
+   :label:
+
+    T_d = \frac{0.1}{η} \left(\frac{h}{d_s} \right)
 
 where h/d\ :sub:`s` is the relative submergence of a sediment particle of grain size d\ :sub:`s`.
 This enables the following relationships to be highlighted:
