@@ -409,9 +409,13 @@ where K is the resistance parameter for laminar flow and d is the flow depth.
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula012.png
 
-where γ\ :sub:`m` is the specific weight of the sediment mixture.
-The resistance parameter K for laminar flow equals 24 for smooth wide rectangular channels but increases significantly (~ 50,000) with roughness and
-irregular cross section geometry.
+where
+
+    γ\ :sub:`m` is the specific weight of the sediment mixture.
+
+    K is the resistance parameter for laminar flow, and equals 24 for smooth wide rectangular channels but increases
+    significantly (~ 50,000) with roughness and irregular cross section geometry.
+
 In Table 2 for Kentucky Blue Grass with a slope of 0.01, K was estimated at 10,000 (Chen, 1976).
 A value of K = 2,285 was calibrated on the Rudd Creek, Utah mudflow for a residential area and has been used effectively for most urban studies.
 For laminar and transitional flows, turbulence is suppressed and the laminar flow resistance parameter K becomes important.
