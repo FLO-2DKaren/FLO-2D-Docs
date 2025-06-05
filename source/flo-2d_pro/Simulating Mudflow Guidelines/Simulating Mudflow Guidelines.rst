@@ -405,7 +405,6 @@ The viscous slope can be written as:
 
     S_v = \frac{K}{d} \left( \frac{V}{d} \right)
 
-where K is the resistance parameter for laminar flow and d is the flow depth.
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula012.png
 
