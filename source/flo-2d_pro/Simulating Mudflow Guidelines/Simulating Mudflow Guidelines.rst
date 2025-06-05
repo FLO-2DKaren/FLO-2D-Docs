@@ -424,6 +424,17 @@ For laminar and transitional flows, turbulence is suppressed and the laminar flo
 The flow resistance n\ :sub:`td` of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:
 
+... math::
+   :label:
+
+    n_{td} = \frac{1}{K} \left( \frac{V}{d} \right)^{1/3}
+
+where:
+
+    n\ :sub:`td` = equivalent Manning’s n-value for the turbulent-dispersive shear stress components
+
+    K = resistance parameter for turbulent-dispersive flow.
+
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula014.png
 
 At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n\ :sub:`td` by transferring
