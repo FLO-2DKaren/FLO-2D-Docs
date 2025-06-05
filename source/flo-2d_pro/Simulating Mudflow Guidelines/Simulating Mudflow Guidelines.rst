@@ -775,7 +775,7 @@ where:
     .. math::
        :label:
 
-       τ^* = (\frac{\tau \, - \, \tau_t}){n} \left(\frac{du}{dy} \right)
+       τ^* = \frac{(\tau \, - \, \tau_t)}{n} \left(\frac{du}{dy} \right)
 
     When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
 
