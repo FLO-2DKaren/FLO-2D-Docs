@@ -286,14 +286,14 @@ where
 .. math::
    :label:
 
-    τ_c = τ_y + τ_{mc} = τ_y + p_s \tan φ
+    τ_y = τ_ + τ_{mc}
 
 and
 
 .. math::
    :label:
 
-   C = \frac{a_i ρ_m l d_s f(ρ_m, C_v)}{d_s^2}
+   C = ρ_m l^2 d_s f(ρ_m, C_v)}{d_s^2}
 
 where:
 
