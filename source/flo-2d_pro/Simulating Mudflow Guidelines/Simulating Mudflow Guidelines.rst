@@ -113,32 +113,78 @@ and the bulking factor.
 When examining parameters related to mudflows, it is important to identify the reported sediment concentration either by weight or by volume.
 The sediment concentration by volume C\ :sub:`v` is given by:
 
-C\ :sub:`v` = volume of the sediment/(volume of water plus sediment)
+.. math::
+   :label:
+
+    C_v = \frac{volume of the sediment}{volume of water + volume of sediment}
+
 
 and C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
-C\ :sub:`v` = C\ :sub:`w` γ/{γ\ :sub:`s` - C\ :sub:`w`\ (γ\ :sub:`s` - γ)}
+.. math::
+   :label:
 
-where γ = specific weight of the water and γ\ :sub:`s` = specific weight of the sediment.
+   C_v = \frac{C_w}{\gamma_s - C_w (\gamma_s - \gamma)}
+
+where:
+
+    C\ :sub:`v` = sediment concentration by volume
+
+    C\ :sub:`w` = sediment concentration by weight
+
+    γ\ :sub:`s` = specific weight of the sediment
+
+    γ = specific weight of the water.
+
 The sediment concentration can also be expressed in parts per million (ppm) by dividing the concentration by weight C\ :sub:`w` by 10\ :sup:`6`.
 The specific weight of the mudflow mixture γ\ :sub:`m` is a function of the sediment concentration by volume:
 
-γ\ :sub:`m` = γ + C\ :sub:`v` (γ\ :sub:`s` - γ)
+.. math::
+   :label:
+
+    γ_m = γ + C_v (γ_s - γ)
+
+where:
+
+    γ\ :sub:`m` = specific weight of the mudflow mixture
+
+    γ = specific weight of water
+
+    γ\ :sub:`s` = specific weight of sediment.
+
 
 Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
-ρ\ :sub:`m` = ρ + C\ :sub:`v` (ρ\ :sub:`s` - ρ)
+... math::
+   :label:
+
+    ρ_m = ρ + C_v (ρ_s - ρ)
+
+where:
+
+    ρ\ :sub:`m` = density of the mudflow mixture
+
+    ρ = density of water
+
+    ρ\ :sub:`s` = density of sediment.
+
 
 and
+.. math::
+   :label:
 
-ρ\ :sub:`m` = γ\ :sub:`m` /g
+    ρ_m = \frac{γ_m}{g}
+
+where g is the gravitational acceleration.
+
 
 where g is gravitational acceleration.
 Finally, the volume of the total mixture of water and sediment in a mudflow can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
+.. math::
+   :label:
 
-BF = 1./(1.
-- C\ :sub:`v`)
+   BF = 1./(1.- C\ :sub:`v`)
 
 It is apparent that the bulking factor is 2.0 for a sediment concentration by volume of 50%.
 Even small volumes of sediment in a flood increase the total flood volume.
