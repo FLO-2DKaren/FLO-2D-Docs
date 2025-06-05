@@ -12,5 +12,5 @@ FLO-2D Pro
    Hydraulic Structures Guidelines/index
    Levee Dam and Wall Breach Guidelines/index
    Storm Drain Modeling Guidelines/index
-   Simulating Mudflow Guidelines.rst
+   Simulating Mudflow Guidelines/index
    Two Phase Modeling Guidelines.rst
