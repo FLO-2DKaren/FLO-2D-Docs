@@ -480,29 +480,14 @@ viscosity and yield stress:
 .. math::
    :label:
 
-    η = α_i \, e^{β_i \, C_v}
-
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula016.png
+    η = α_i \, e^{β_1 \, C_v}
 
 and
 
 .. math::
    :label:
 
-    \tau_y = \alpha_2 \, e^{\beta_i \, C_v}
-
-where:
-
-    τ\ :sub:`y` = yield stress
-
-    η = dynamic viscosity
-
-    γ\ :sub:`m` = specific weight of the mudflow mixture
-
-    C\ :sub:`v` = volumetric sediment concentration
-
-    α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula017.png
+    \tau_y = \alpha_2 \, e^{\beta_2 \, C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien, 1988).
 The viscosity and yield stress are shown to be functions of the volumetric sediment concentration C\ :sub:`v` of silts, clays and in some cases, fine
