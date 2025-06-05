@@ -184,7 +184,7 @@ The bulking factor is simply:
 .. math::
    :label:
 
-   BF = 1./(1.- C_v`)
+   BF = 1./(1.- C_v)
 
 It is apparent that the bulking factor is 2.0 for a sediment concentration by volume of 50%.
 Even small volumes of sediment in a flood increase the total flood volume.
