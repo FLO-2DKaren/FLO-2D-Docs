@@ -456,7 +456,7 @@ The friction slope components can then be combined in the following form:
 .. math::
    :label:
 
-    S_f = \frac{\tau_y}{\gamma_m \, h} + \frac{K \, n \, V}{8 \, \gamma_m \, h^2} + \frac{n_{td}^2 V^2}{h^{\frac{4}{3}}}
+    S_f = \frac{\tau_y}{\gamma_m \, h} + \frac{K \, n \, V}{8 \, \gamma_m \, h^2} + \frac{n_{td} \, ^2 V^2}{h^{\frac{4}{3}}}
 
 where:
 
