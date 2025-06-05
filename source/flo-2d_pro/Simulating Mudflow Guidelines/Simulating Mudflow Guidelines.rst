@@ -432,7 +432,23 @@ more momentum flux to the boundary.
 To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n\ :sub:`t` is increased by an exponential function
 of the sediment concentration C\ :sub:`v`.
 
-*n\ td = n\ t b e\ mCv*
+.. math::
+   :label:
+
+   n_{td} = n_t \, b \, e^{m \, C_v}
+
+
+where:
+
+    n\ :sub:`td` = turbulent n-value
+
+    n\ :sub:`t` = conventional turbulent flow resistance n-value
+
+    b = coefficient (0.0538)
+
+    m = exponent (6.0896)
+
+    C\ :sub:`v` = sediment concentration by volume.
 
 where: n\ :sub:`t` is the turbulent n-value, b is a coefficient (0.0538) and m is an exponent (6.0896).
 This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
