@@ -763,6 +763,11 @@ Granular flows that can be prescribed by the dispersive stress relationship alon
 
 Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological model:
 
+.. math::
+   :label:
+
+    τ^* = 1 + a (1 + T_d) D_v
+
 τ\ :sup:`\*` = 1 + a (1 + T\ :sub:`d`) D\ :sub:`v`
 
 where:
