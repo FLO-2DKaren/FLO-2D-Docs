@@ -784,7 +784,7 @@ where:
     .. math::
        :label:
 
-       T_d = \frac{(ρ_m \, l^2)}{(a \, ρ_s \, [λ_d \, d_s]^2)}
+       T_d = \frac{(ρ_m \, l^2)}{(a \, ρ_s \, [λ \, d_s]^2)}
 
     When T\ :sub:`d` is large the flow is turbulent and when T\ :sub:`d` is small the flow is dispersive.
 
@@ -793,7 +793,7 @@ where:
     .. math::
        :label:
 
-       D_v = \frac{(a \, ρ_s \, [λ_d \, d_s]^2)}{η (du/dy)}
+       D_v = \frac{(a \, ρ_s \, [λ \, d_s]^2)}{η (du/dy)}
 
     When D\ :sub:`v` is large the flow is dispersive and when D\ :sub:`v` is small the flow is viscous.
 
