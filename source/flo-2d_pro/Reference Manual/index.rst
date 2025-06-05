@@ -2,7 +2,7 @@
 
 .. _reference_manual:
 
-References
+Reference
 ===========
 
 .. toctree::
