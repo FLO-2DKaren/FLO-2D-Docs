@@ -453,6 +453,21 @@ sediment flows as function of the ratio of the flow depth to the sediment grain 
 
 The friction slope components can then be combined in the following form:
 
+.. math::
+   :label:
+
+    S_f = \frac{\tau_y}{\gamma_m} + \frac{K \, n}{8 \, \gamma_m} \, \frac{V}{h^2} + \frac{n_{td}^2 V^2}{h^{\frac{4}{3}}}
+
+where:
+
+    S\ :sub:`f` = total friction slope
+
+    S\ :sub:`y` = yield slope
+
+    S\ :sub:`v` = viscous slope
+
+    S\ :sub:`td` = turbulent-dispersive slope.
+
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula015.png
 
 A quadratic equation solution to the above friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the
