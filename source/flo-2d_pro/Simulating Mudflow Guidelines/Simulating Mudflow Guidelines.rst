@@ -768,21 +768,19 @@ Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological
 
     τ^* = 1 + a (1 + T_d) D_v
 
-τ\ :sup:`\*` = 1 + a (1 + T\ :sub:`d`) D\ :sub:`v`
-
 where:
 
-τ\ :sup:`\*` = Dimensionless excess shear stress.
-τ\ :sup:`\*` = (τ - τ\ :sub:`y`)/η (du/dy).
-When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
+    τ\ :sup:`\*` = Dimensionless excess shear stress.
+    τ\ :sup:`\*` = (τ - τ\ :sub:`y`)/η (du/dy).
+    When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
 
-T\ :sub:`d` = Dimensionless turbulent-dispersive ratio.
-T\ :sub:`d` = (ρ\ :sub:`m` l\ :sup:`2`)/(a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`).
-When T\ :sub:`d` is large the flow is turbulent and when T\ :sub:`d` is small the flow is dispersive.
+    T\ :sub:`d` = Dimensionless turbulent-dispersive ratio.
+    T\ :sub:`d` = (ρ\ :sub:`m` l\ :sup:`2`)/(a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`).
+    When T\ :sub:`d` is large the flow is turbulent and when T\ :sub:`d` is small the flow is dispersive.
 
-D\ :sub:`v` = Dimensionless dispersive-viscous ration.
-D\ :sub:`v` = (a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`)/ η (du/dy).
-When D\ :sub:`v` is large the flow is dispersive and when D\ :sub:`v` is small the flow is viscous.
+    D\ :sub:`v` = Dimensionless dispersive-viscous ration.
+    D\ :sub:`v` = (a ρ\ :sub:`s` [λd\ :sub:`s`]\ :sup:`2`)/ η (du/dy).
+    When D\ :sub:`v` is large the flow is dispersive and when D\ :sub:`v` is small the flow is viscous.
 
 To apply these relationships the following guidelines are suggested (Julien and O’Brien, 1997):
 
