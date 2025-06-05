@@ -118,7 +118,6 @@ The sediment concentration by volume C\ :sub:`v` is given by:
 
     C_v = \frac{\text{volume of the sediment}}{\text{volume of water} + \text{volume of sediment}}
 
-
 and C\ :sub:`v` is related to the sediment concentration by weight C\ :sub:`w` by:
 
 .. math::
@@ -168,8 +167,8 @@ where:
 
     ρ\ :sub:`s` = density of sediment.
 
-
 and
+
 .. math::
    :label:
 
@@ -181,6 +180,7 @@ where g is the gravitational acceleration.
 where g is gravitational acceleration.
 Finally, the volume of the total mixture of water and sediment in a mudflow can be determined by multiplying the water volume by the bulking factor.
 The bulking factor is simply:
+
 .. math::
    :label:
 
