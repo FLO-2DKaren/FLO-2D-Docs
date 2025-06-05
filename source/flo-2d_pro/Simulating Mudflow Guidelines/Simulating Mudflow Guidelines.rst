@@ -293,7 +293,7 @@ and
 .. math::
    :label:
 
-   C = ρ_m l^2 d_s f(ρ_m, C_v)}{d_s^2}
+   C = ρ_m \, l^2 l, + \, f(ρ_m, C_v) \, d_s^2
 
 where:
 
