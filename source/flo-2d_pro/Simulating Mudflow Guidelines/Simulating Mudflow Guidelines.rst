@@ -275,19 +275,47 @@ where:
 
 When written in terms of the shear rate (dv/dy) the following quadratic rheological model can be defined (O'Brien and Julien, 1985):
 
+.. math::
+   :label:
+
+    τ = τ_c + τ_mc + η \frac{dv}{dy} + C \left(\frac{dv}{dy}\right)^2
+
+
 where
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula005.png
+.. math::
+   :label:
+
+    τ_c = τ_y + τ_{mc} = τ_y + p_s \tan φ
 
 and
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula006.png
+.. math::
+   :label:
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula007.png
+   C = \frac{a_i ρ_m l d_s f(ρ_m, C_v)}{d_s^2}
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula008.png
+where:
 
-In these equations, η is the dynamic viscosity; τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
+    τ\ :sub:`c` = cohesive yield stress
+
+    τ\ :sub:`mc` = Mohr-Coulomb shear stress
+
+    η = dynamic viscosity
+
+    dv/dy = velocity gradient
+
+    C = inertial shear stress coefficient
+
+    ρ\ :sub:`m` = mass density of the mixture
+
+    l = Prandtl mixing length
+
+    d\ :sub:`s` = sediment size
+
+    f(ρ\ :sub:`m`, C\ :sub:`v`) = function of the volumetric sediment concentration C\ :sub:`v`
+
+ τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
 depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
 depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
 sediment concentration C\ :sub:`v`.
