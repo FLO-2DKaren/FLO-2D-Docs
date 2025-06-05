@@ -346,7 +346,7 @@ Egashira et al.(1989) revised this relationship and suggested the following:
 
 where:
 
-    e\ :sub:`n` is the energy restitution coefficient  after impact ranges 0.70 < e\ :sub:`n` < 0.85 for sands,
+    e\ :sub:`n` is the energy restitution coefficient  after impact, ranges 0.70 < e\ :sub:`n` < 0.85 for sands,
 
     α\ :sub:`I` is the average particle impact angle
 
@@ -397,10 +397,6 @@ where:
 
     S\ :sub:`td` = turbulent-dispersive slope.
 
-.. image:: ../img/Simulating_Mudflow_Guidelines/Simula011.png
-
-where the total friction slope S\ :sub:`f` is the sum of the yield slope S\ :sub:`y`, the viscous slope S\ :sub:`v`, and the turbulent-dispersive
-slope S\ :sub:`td`.
 The viscous and turbulent-dispersive slope terms are written in terms of depth-averaged velocity V.
 The viscous slope can be written as:
 
