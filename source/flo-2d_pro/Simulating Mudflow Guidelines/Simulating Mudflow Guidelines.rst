@@ -154,7 +154,7 @@ where:
 
 Similarly the density of the mudflow mixture ρ\ :sub:`m` is given by:
 
-... math::
+.. math::
    :label:
 
     ρ_m = ρ + C_v (ρ_s - ρ)
