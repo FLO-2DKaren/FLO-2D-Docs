@@ -278,7 +278,7 @@ When written in terms of the shear rate (dv/dy) the following quadratic rheologi
 .. math::
    :label:
 
-    τ = τ_c + τ_mc + η \frac{dv}{dy} + C \left(\frac{dv}{dy}\right)^2
+    τ = τ_y + η \frac{dv}{dy} + C \left(\frac{dv}{dy}\right)^2
 
 
 where
@@ -315,7 +315,8 @@ where:
 
     f(ρ\ :sub:`m`, C\ :sub:`v`) = function of the volumetric sediment concentration C\ :sub:`v`
 
- τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
+    τ\ :sub:`c` is the cohesive yield strength; the Mohr Coulomb stress τ\ :sub:`mc` = p\ :sub:`s`\ tanφ
+
 depends on the intergranular pressure p\ :sub:`s` and the angle of repose φ of the material; C denotes the inertial shear stress coefficient, which
 depends on the mass density of the mixture ρ\ :sub:`m`, the Prandtl mixing length l, the sediment size d\ :sub:`s` and a function of the volumetric
 sediment concentration C\ :sub:`v`.
