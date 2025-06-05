@@ -770,8 +770,13 @@ Julien and Lan (1991) proposed a dimensionless form of the quadratic rheological
 
 where:
 
-    τ\ :sup:`\*` = Dimensionless excess shear stress.
-    τ\ :sup:`\*` = (τ - τ\ :sub:`y`)/η (du/dy).
+    τ\ :sup:`\*` = Dimensionless excess shear stress, also given as:
+
+    .. math::
+       :label:
+
+       τ^* = (\frac{\tau \, - \, \tau_t}){n} \left(\frac{du}{dy} \right)
+
     When τ\ :sup:`\*` = 1, the flow behaves as a Bingham fluid.
 
     T\ :sub:`d` = Dimensionless turbulent-dispersive ratio.
