@@ -332,10 +332,14 @@ Bagnold (1954) defined the function relationship f(ρ\ :sub:`m`, C\ :sub:`v`) as
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula008.png
 
-where a\ :sub:`i` (~ 0.01) is an empirical coefficient and C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
+where
+
+    a\ :sub:`i` (~ 0.01) is an empirical coefficient
+
+    C\ :sub:`\*` is the maximum static volume concentration for the sediment particles.
+
 It should be noted that Takahashi (1979) found that the coefficient a\ :sub:`i` may vary over several orders of magnitude.
-Egashira et al.
-(1989) revised this relationship and suggested the following:
+Egashira et al.(1989) revised this relationship and suggested the following:
 
 .. image:: ../img/Simulating_Mudflow_Guidelines/Simula009.png
 
