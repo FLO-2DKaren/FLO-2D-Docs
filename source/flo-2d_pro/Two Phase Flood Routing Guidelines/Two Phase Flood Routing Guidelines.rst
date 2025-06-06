@@ -1260,7 +1260,9 @@ Computing the tailings dam scour is requires more data and the following dam geo
 In addition, there are dam shell (and infrequently, a potential dam core) material parameters that are required.
 These parameters have variable levels of sensitivity as presented in Table 4.
 
-|Two045|\ Simulating a tailings dam breach as a water storage reservoir
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two045.png
+
+Simulating a tailings dam breach as a water storage reservoir
 dam failure will probably result in a slower and longer duration failure
 than an instantaneous breach failure. If the tailings dam has
 significantly more water storage than tailings, it may make sense to
@@ -1286,11 +1288,10 @@ available for downloading at the FLO-2D website.
 Table 5 is presented in a descending order of priority.
 The SUMMARY.OUT (Figure 33) file reports on the initial tailings and water volumes in the tailings reservoir.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two032.png   :alt: A screenshot of a computer Description automatically generated
-   :width: 6.5in
-   :height: 1.37639in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image44.png
 
-   Summary.out Inflow Volume.
+*Figure 33.
+Summary.out Inflow Volume.*
 
 The tailings sediment is the bulked tailings minus the tailings water content (113,247 – 67,948.2 = 45,298.
 8 m3).
@@ -1305,10 +1306,7 @@ TOTAL SEDIMENT VOLUME: 45298.800
 For this example, project, the percentage of tailings that flowed through the breach is 27,250.7/45,298.8 = 60%.
 This should match the volume predicted by the Tailings Dam Tool shown in Figure 2.
 
-|Two046|
-
-
-.. _section-2:
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two046.png
 
 References
 ==========
