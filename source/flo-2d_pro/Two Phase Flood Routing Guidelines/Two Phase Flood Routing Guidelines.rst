@@ -1719,19 +1719,17 @@ and location of the water and sediment remaining on the floodplain.
 This total sediment volume should be reviewed to determine if this represents the tailings volume that flowed through the breach.
 The areal extent of mudflow inundation and the maximum flow depths and velocities are a function of the available sediment.
 
-|Two058|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two058.png
 
-Figure B.1.
-Dynamic Viscosity of Mudflow Samples vs Volumetric Concentration
+*Figure B.1.
+Dynamic Viscosity of Mudflow Samples vs Volumetric Concentration.
+(From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988).*
 
-(From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two059.png
 
-|Two059|
-
-Figure B.2.
-Yield Stress of Mudflow Samples Versus Volumetric Concentration
-
-(From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)
+*Figure B.2.
+Yield Stress of Mudflow Samples Versus Volumetric Concentration.
+(From FLO-2D White Paper ‘Simulating Mudflow Guidelines’ after O’Brien and Julien, 1988)*
 
 .. _section-4:
 
