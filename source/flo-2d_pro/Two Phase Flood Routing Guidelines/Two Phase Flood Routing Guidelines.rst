@@ -67,13 +67,13 @@ file).
 The initial tailings dam material reported in SUMMARY.OUT file (bulked volume – minus water volume) and the percentage of the impounded tailings
 deposited downstream can be compared with that predicted by the Tailings Dam Tool.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two002.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image1.png
 
 *Figure 1.
 Ajka Accident Hungary October 2010.
 (Aljazeera.com).*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two003.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image2.png
 
 *Figure 2.
 FLO-2D Tailings Dam Tool Opening Control Window.*
