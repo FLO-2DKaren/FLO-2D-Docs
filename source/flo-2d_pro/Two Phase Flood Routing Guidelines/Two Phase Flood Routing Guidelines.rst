@@ -201,8 +201,6 @@ This table was developed from actual mudflow deposits analyzed in the laboratory
 Almost all hyperconcentrated sediment flows are fully turbulent, unsteady and nonuniform and are characterized by surging, flow cessation, blockage
 and roll waves.
 
-Water
-
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image5.png
 
 
