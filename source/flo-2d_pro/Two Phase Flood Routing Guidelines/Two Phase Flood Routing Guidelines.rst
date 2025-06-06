@@ -918,18 +918,15 @@ Figure 17 and Figure 18 depict the maximum overland flow depths for the separate
 The following figures were generated using the FLO-2D MAXPLOT post processor program that was updated for the output files associated with tailings
 dam two phase flow applications.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two016.png   :width: 6.09444in
-   :height: 2.50875in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image24.png
 
-   Figure 17.
-   Maximum Fluid Phase Flow Depth.
+*Figure 17.
+Maximum Fluid Phase Flow Depth.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two017.png   :alt: A picture containing chart Description automatically generated
-   :width: 6.15in
-   :height: 2.64069in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/imae25.png
 
-   Figure 18.
-   Maximum Mudflow Phase Flow Depth.
+*Figure 18.
+Maximum Mudflow Phase Flow Depth.*
 
 Figure 17 indicates that the fluid phase flows to the grid system boundary, while Figure 18 shows the tailings material (mudflow) only flows about
 halfway to the boundary.
