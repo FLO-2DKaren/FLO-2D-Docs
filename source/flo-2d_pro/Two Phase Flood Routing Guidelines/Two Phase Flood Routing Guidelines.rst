@@ -1077,8 +1077,8 @@ equations.
 
 Mudflow Parameters
 ------------------
-
-|Two043| and |Two044|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two043.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two044.png
 
 Some practical guidelines for estimating the mudflow rheological parameters are presented in this section.
 Mudflow yield stress τ\ :sub:`y` and viscosity η vary principally with sediment concentration.
