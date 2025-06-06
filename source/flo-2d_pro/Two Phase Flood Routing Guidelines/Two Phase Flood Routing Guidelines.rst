@@ -1215,12 +1215,10 @@ This file can be imported to QGIS or opened in an ASCII file program editor (Wor
 constitute the flow source volume.
 The INFLOW.DAT is no longer necessary and can be renamed to INFLOW1.DAT or some other name.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two029.png   :alt: A yellow banana with a gray background Description
-   automatically generated
-   :width: 5.84694in
-   :height: 3.17708in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image40.png
 
-   A Tailing Facility Created by Surround the Reservoir with Levee Elements.
+*Figure 30.
+A Tailing Facility Created by Surround the Reservoir with Levee Elements.*
 
 The next step is to make a copy of the original LEVEE.DAT and then remove or delete those levee elements that will represent the tailings failure
 using QGIS or just by editing the LEVEE.DAT file.
@@ -1231,18 +1229,15 @@ for the tailings collapse simulation.
 Check the mudflow switch in CONT.DAT (MUD = 1 for mudflow or MUD = 2 for 2 phase flow), then run the model.
 The tailings stack will mobilize at the start of the simulation and begin flow downs slope rapidly (Figures 26 and 27).
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two030.png   :alt: A yellow and blue banana Description automatically generated
-   :width: 5.82292in
-   :height: 3.04583in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image41.png
 
-   The Tailings Mudflow is Mobilized at the Start of the Simulation.
+*Figure 31.
+The Tailings Mudflow is Mobilized at the Start of the Simulation.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two031.png   :alt: A pixelated cartoon of a green and blue vehicle Description
-   automatically generated with medium confidence
-   :width: 6.5in
-   :height: 3.65417in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image42.png
 
-   The Tailings Facility is Draining after 0.45 hrs.
+*Figure 32.
+The Tailings Facility is Draining after 0.45 hrs.*
 
 *Breach Erosion:* The FLO-2D breach component involves potential overtopping the dam crest, piping erosion through the dam, pipe collapse into a
 channel, and/or dam collapse as block failure.
