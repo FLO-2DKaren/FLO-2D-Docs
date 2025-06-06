@@ -35,7 +35,7 @@ Build the Global Domain
 
 2. Use the Computational Domain layer to define the boundary. 
 
-.. note:: This will result in a large grid with several million cells — that's acceptable at this stage.
+.. note:: This will result in a large grid with several million cells.  That is OK.
 
 .. image:: ../../img/multd-editor/multd002.png
 
