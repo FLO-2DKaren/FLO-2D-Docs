@@ -898,11 +898,10 @@ Various breach simulations were performed with the tailings material sediment co
 10 m.
 The figures below show the breach results for a tailings material that is saturated with a concentration by volume of 40%.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two015.png   :width: 5.56187in
-   :height: 3.20833in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image23.png
 
-   Figure 16.
-   Example Project – Reservoir Located on the Right of the Flow Domain.
+*Figure 16.
+Example Project – Reservoir Located on the Right of the Flow Domain.*
 
 The following two phase flow tailings dam breach scenarios were simulated:
 
