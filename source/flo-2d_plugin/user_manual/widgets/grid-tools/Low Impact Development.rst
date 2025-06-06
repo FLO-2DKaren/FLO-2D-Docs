@@ -32,15 +32,19 @@ Rainfall Volume for 1.2-Inch Event Over Polygon Areas
 +-----+-----------+-----------+---------+---------+
 | FID | Area (ft²)| Volume ft³| Gallons | Acre-ft |
 +=====+===========+===========+=========+=========+
-|  1  |   51436   |   5143.6  |  38476  |  0.1181 |
+|  1  |   51436   |   5143.6  |  38477  |  0.1181 |
 +-----+-----------+-----------+---------+---------+
 |  2  |   16056   |   1605.6  |  12011  |  0.0369 |
 +-----+-----------+-----------+---------+---------+
-|  3  |   15612   |   1561.2  |  11678  |  0.0358 |
+|  3  |   15612   |   1561.2  |  11679  |  0.0358 |
 +-----+-----------+-----------+---------+---------+
 |  4  |   18246   |   1824.6  |  13649  |  0.0419 |
 +-----+-----------+-----------+---------+---------+
 |  5  |   19324   |   1932.4  |  14455  |  0.0444 |
++-----+-----------+-----------+---------+---------+
+|  6  |   57399   |   5740.0  |  42924  |  0.1317 |
++-----+-----------+-----------+---------+---------+
+|SUM  |  178073   |  17807.4  | 133195  |  0.4088 |
 +-----+-----------+-----------+---------+---------+
 
 Sample Data
@@ -59,3 +63,17 @@ Sample Data
 
 3. This process
    has converted the volume from the polygon to the grid elements that intersect the polygon.
+
+Resulting Collected Volume
+--------------------------------
+
+The SUMMARY.OUT file will show the total volume collected by the LID features.
+
+.. image:: ../../img/gridtools/lid/lid004.png
+
+The calculated volume was reported as 0.408 acre-ft which is close to the SUM 
+from the table above (0.4088 acre-ft). 
+
+The processor uses a centroid point sample of the cells that are within the LID areas.
+
+.. image:: ../../img/gridtools/lid/lid005.png
