@@ -16,61 +16,70 @@ Load the Project
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-This guide outlines how to load and manage a FLO-2D project in QGIS using a GeoPackage format. It follows the step-by-step instructions covered in the video tutorial.
+Load Your FLO-2D Project
+=========================
 
-0:00 – Introduction: Why Use a GeoPackage?
---------------------------------------------
-Projects can break if files are moved and paths are lost. Storing everything in a GeoPackage allows you to move or share your QGIS project without losing linked data.
+This lesson shows how to load a FLO-2D project in QGIS, manage paths, and handle GeoPackage data. It also highlights improvements from version 0.10.115 to Build 25 regarding project portability.
 
-0:39 – Launching QGIS Efficiently
+Step 1: Launch QGIS
+-------------------
+- Open the **QGIS application**.
+- You can pin QGIS to your Start Menu for quicker access.
+
+.. tip::
+   To avoid searching for QGIS every time, right-click the QGIS icon and select **"Pin to Start."**
+
+Step 2: Open Your Project
+-------------------------
+- If QGIS opens your most recent project, simply click on it in the **Recent Projects** list.
+- If the project was moved and no longer loads:
+  - Go to **Plugins > FLO-2D > Open FLO-2D Project**.
+  - Navigate to your project `.gpkg` file (GeoPackage) and select it.
+
+.. note::
+   The GeoPackage contains your entire project, including the `.qgz` file.
+
+Step 3: Remove Data from the GeoPackage
+---------------------------------------
+- To remove data:
+  - Go to **Plugins > FLO-2D > GeoPackage Management**.
+  - Check the layer you want to remove (e.g., `mannings.dat`) and click **Delete**.
+  - Click **Cancel** if you don't want to delete anything.
+
+.. warning::
+   Do not right-click and remove layers from the Layers panel. That does **not** remove them from the GeoPackage.
+
+Step 4: Browse GeoPackage Contents
 -----------------------------------
-1. Open Windows search and type ``QGIS``.
-2. Right-click the QGIS icon and choose ``Pin to Start``.
-3. Use the Start Menu to quickly launch QGIS next time.
+- Open the **Browser** panel in QGIS.
+- If it's in an awkward location, drag it beside the Layers panel until the layout is comfortable.
 
-1:03 – Opening a Project
---------------------------
-1. When QGIS opens, you may see the last loaded project listed. Click it to reopen.
-2. If the project is missing (e.g., moved location), do the following:
-   - Click ``FLO-2D Project`` > ``Open FLO-2D Project``.
-   - If QGIS remembers the file path, select your GeoPackage and click ``OK``.
-   - Otherwise, browse manually to the ``.gpkg`` file and open it.
+.. image:: browser_panel_layout.png
+   :alt: Example layout of QGIS Layers and Browser panels side by side
 
-1:44 – Managing GeoPackage Layers
------------------------------------
-To properly remove layers embedded in the GeoPackage:
-1. Open the ``FLO-2D GeoPackage Management`` tool.
-2. Check the layer you want to delete (e.g., ``Manning data``).
-3. Click ``Delete`` to remove it from the GeoPackage.
-4. If you do not want to delete anything, click ``Cancel``.
+- Right-click on **GeoPackage** and select **New Connection**.
+- Browse to your project `.gpkg` file and open it.
+- You will now see all layers and tables contained within the GeoPackage.
 
-2:48 – Organizing the QGIS Interface
---------------------------------------
-1. Go to the ``Browser`` tab.
-2. If panels are misaligned, drag the Browser panel until the ``Layers Panel`` turns blue, then release to dock them together.
+Step 5: Understand the GeoPackage Structure
+-------------------------------------------
+- The GeoPackage is a spatial database built on SQLite.
+- It contains:
+  - Vector data (points, lines, polygons)
+  - Raster data (elevation layers)
+  - Attribute tables (e.g., `RAINCELL.DAT`, `MANNINGS_N.DAT`)
+  - The `.qgz` project file itself
 
-3:33 – Connecting to the GeoPackage
--------------------------------------
-1. In the ``Browser`` panel, right-click ``GeoPackage`` and choose ``New Connection``.
-2. Navigate to your project’s ``.gpkg`` file.
-3. Expand the connection to view all spatial and tabular layers.
+.. note::
+   In older versions like 0.10.115, the `.qgz` file was separate. In Build 25, it is embedded inside the GeoPackage for easier file sharing and portability.
 
-   Layers may include:
-   - Polygons, Points, Polylines
-   - Elevation raster
-   - Table data (non-spatial)
+Summary
+-------
+- Use the FLO-2D Plugin to open and manage your project.
+- GeoPackage management allows data cleanup without risking data loss.
+- The embedded `.qgz` file ensures seamless project transfer across devices and folders.
 
-4:33 – Embedded QGZ Project File
------------------------------------
-Earlier FLO-2D versions (e.g., v115) stored the ``.qgz`` project file externally, requiring it to be kept with the data. This created issues when transferring between folders or computers.
 
-In the current setup, the project is embedded *within* the GeoPackage:
-- Easier project portability
-- No broken data paths
-
-5:17 – Conclusion
---------------------
-This approach simplifies managing, transferring, and editing FLO-2D projects in QGIS. All data and the project file are embedded in one portable GeoPackage file.
 
 
 Assign an Inflow Node
