@@ -1025,7 +1025,9 @@ Data Collection
 This tailings dam breach data collection discussion provides an overview of potential data needs to conduct a FLO-2D two phase flow breach simulation.
 The data is cataloged as either required or optional in the following table.
 
-|Two042|\ The following component data is not required for modeling the
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two042.png
+
+The following component data is not required for modeling the
 tailings dam breach. The FLO-2D model can simulate these components if
 the downstream area of inundation of the tailings dam breach flooding is
 required.
