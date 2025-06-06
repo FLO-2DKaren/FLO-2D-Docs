@@ -37,13 +37,13 @@ Use the Computational Domain layer to define the boundary.
 
 .. note:: This will result in a large grid with several million cells — that's acceptable at this stage.
 
-.. image:: ../../img/multidomain/multd002.png
+.. image:: ../../img/multd-editor/multd002.png
 
 Step 2: Run a Short Global Simulation
 ---------------------------------------
 (Optional) Run a short simulation using a simple rainfall event (e.g., 3 inches over 6 hours). This helps to identify inter-domain flow paths and potential boundaries between subdomains.
 
-.. image:: ../../img/multidomain/multd003.png
+.. image:: ../../img/multd-editor/multd003.png
 
 Step 3: Identify Downstream Domains
 -------------------------------------
@@ -55,29 +55,29 @@ Based on engineering judgment and the results of the global simulation, identify
 
    Ensure that flow can cross the domain boundary *freely*, without interference from 1D elements. Place boundaries in areas where overland flow is dominant, and where the hydrologic and hydraulic conditions can be clearly defined on both sides.
 
-   .. image:: ../../img/multidomain/multd004.png
+   .. image:: ../../img/multd-editor/multd004.png
 
 Step 4: Create Subdomain Polygons
 -----------------------------------
 Digitize polygons for each subdomain. In this example, the `north` domain connects to both the `southeast` and `southwest` domains, and the `southeast` domain also connects to the `southwest` domain.
 
-.. image:: ../../img/multidomain/multd005.png
+.. image:: ../../img/multd-editor/multd005.png
 
 Step 5: Define Subdomain Connectivity
 ---------------------------------------
 Use the Multiple Domain Editor to define how subdomains connect to each other. Ensure that all downstream connections are specified.
 
-.. image:: ../../img/multidomain/multd006.png
+.. image:: ../../img/multd-editor/multd006.png
 
 Step 6: Schematize Each Domain
 --------------------------------
 Use the plugin tools to schematize the grid and hydraulic structures for each domain. Each domain will have its own GDS setup but must remain consistent with boundary overlaps.
 
-.. image:: ../../img/multidomain/multd007.png
+.. image:: ../../img/multd-editor/multd007.png
 
 The schematized domain looks like this:
 
-.. image:: ../../img/multidomain/multd008.png
+.. image:: ../../img/multd-editor/multd008.png
 
 Step 7: Export Multiple Domains
 ---------------------------------
@@ -85,7 +85,7 @@ Once each domain has been schematized, you can export them using the **Export Mu
 
 Click the *Export* dropdown menu from the main toolbar and select **Export multiple domains**.
 
-.. image:: ../../img/multidomain/multd009.png
+.. image:: ../../img/multd-editor/multd009.png
 
 In the export dialog that appears:
 
@@ -95,4 +95,8 @@ In the export dialog that appears:
 
 Each domain will be saved in its own subdirectory inside the export folder, using the subdomain name (e.g., `north`, `southeast`, `southwest`).
 
-.. image:: ../../img/multidomain/multd010.png
+.. image:: ../../img/multd-editor/multd010.png
+
+The exported files will look like this:
+
+.. image:: ../../img/multd-editor/multd011.png
