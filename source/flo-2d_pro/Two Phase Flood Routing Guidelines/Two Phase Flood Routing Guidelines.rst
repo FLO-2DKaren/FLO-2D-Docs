@@ -251,8 +251,7 @@ To accomplish this integration, the following tasks are completed:
    5. Sediment concentration by volume limits for both mudflow and sediment transport components are tested and the sediment exchange when the limits are
       exceeded is adjusted.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two007.png
-
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image7.png
 
 *Figure 6.
 Fluid – Mudflow Two Phase Flow Exchange for a Grid Element.*
@@ -274,7 +273,7 @@ The two phase flow computations in the FLO-2D model proceed in the following man
 The flow chart in Figure 7 depicts the component interaction within the FLO-2D simulation.
 The sediment transport and mudflow routines are discussed in more detail in the Appendices.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two008.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image8.png
 
 *Figure 7.
 Workflow for the Two Phase Fluid and Mudflow Routing in the FLO-2D Model.*
