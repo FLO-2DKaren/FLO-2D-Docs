@@ -1,4 +1,4 @@
-.. _import_mult_domains::
+.. _import_mult_domains:
 
 Import Multiple Domains
 ========================
