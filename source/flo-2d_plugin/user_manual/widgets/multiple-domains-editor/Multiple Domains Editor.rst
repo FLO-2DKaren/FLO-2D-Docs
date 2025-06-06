@@ -68,11 +68,19 @@ Create Subdomain Polygons
 -----------------------------------
 1. Digitize polygons for each subdomain. In this example, the `north` domain connects to both the `southeast` and `southwest` domains, and the `southeast` domain also connects to the `southwest` domain.
 
+.. image:: ../../img/multd-editor/multd013.png
+
+2. The polygons should be large enough to encompass the entire area of interest for each subdomain, including any necessary buffer zones to ensure connectivity.
+
 .. image:: ../../img/multd-editor/multd005.png
 
-Step 5: Define Subdomain Connectivity
+Define Subdomain Connectivity
 ---------------------------------------
-Use the Multiple Domain Editor to define how subdomains connect to each other. Ensure that all downstream connections are specified.
+1. Use the Multiple Domain Editor to define how subdomains connect to each other. 
+
+.. image:: ../../img/multd-editor/multd012.png
+
+2. Ensure that all downstream connections are specified.
 
 .. image:: ../../img/multd-editor/multd006.png
 
