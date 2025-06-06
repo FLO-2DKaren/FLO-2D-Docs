@@ -788,9 +788,9 @@ A tailings dam breach inundation area can be simulated with a downstream channel
 When the tailings debouch onto the floodplain from the breach, they will enter the channel through the channel floodplain interface.
 Overbank and return flow to the channel will be simulated.
 
-|Two040|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two040.png
 
-|Two041|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two041.png
 
 Tributary
 
