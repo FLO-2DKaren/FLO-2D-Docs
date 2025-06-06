@@ -10,7 +10,7 @@ TOL Spatial Depth is a grid-based tool used to assign spatially variable surface
 The original purpose of TOL Spatial was to prevent unwanted flow evacuation from deep ponded areas or zones prone to numerical instability during the simulation. By assigning a localized surface depression depth, flow is retained on the grid element until it exceeds the specified threshold, helping to maintain realistic water distribution and stabilize dynamic wetting and drying transitions.
 
 .. warning::
-   The use of TOL Spatial for LID modeling can produce misleading water surface elevations that alter flow paths. For modeling LID storage, see the :ref:`LID Volume Spatial tool <grid_lid>` for a more accurate and physically consistent method.
+   The use of TOL Spatial for LID modeling can produce water surface elevations that alter flow paths. For modeling LID storage, see the :ref:`LID Volume Spatial tool <grid_lid>` for a more accurate and physically consistent method.
 
 Steps to Assign TOL Spatial Depth
 ---------------------------------
