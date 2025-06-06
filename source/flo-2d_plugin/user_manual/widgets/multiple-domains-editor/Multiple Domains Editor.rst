@@ -80,38 +80,43 @@ Define Subdomain Connectivity
 
 .. image:: ../../img/multd-editor/multd012.png
 
-2. Ensure that all downstream connections are specified.
+2. Ensure that all **downstream** connections are specified for each **upstream** domain.
 
 .. image:: ../../img/multd-editor/multd006.png
 
-Step 6: Schematize Each Domain
+Schematize Each Domain
 --------------------------------
-Use the plugin tools to schematize the grid and hydraulic structures for each domain. Each domain will have its own GDS setup but must remain consistent with boundary overlaps.
+1. Use the plugin tools to schematize the grid and hydraulic structures for each domain. 
+2. Each domain will have its own GDS setup but must remain consistent with boundary overlaps.
 
 .. image:: ../../img/multd-editor/multd007.png
 
-The schematized domain looks like this:
+The schematized domains look like this:
 
 .. image:: ../../img/multd-editor/multd008.png
 
-Step 7: Export Multiple Domains
+Export Multiple Domains
 ---------------------------------
-Once each domain has been schematized, you can export them using the **Export Multiple Domains** tool.
+1. Once each domain has been schematized, you can export them using the **Export Multiple Domains** tool.
 
-Click the *Export* dropdown menu from the main toolbar and select **Export multiple domains**.
+2. Click the *Export* dropdown menu from the main toolbar and select **Export multiple domains**.
 
 .. image:: ../../img/multd-editor/multd009.png
 
-In the export dialog that appears:
+3. In the export dialog that appears:
 
 - Choose an export folder that will contain a separate subfolder for each domain.
 - Set the export method to `MULTIDOMAIN.DAT`.
 - Click **Export All** to export every defined subdomain at once.
 
-Each domain will be saved in its own subdirectory inside the export folder, using the subdomain name (e.g., `north`, `southeast`, `southwest`).
+4. Each domain will be saved in its own subdirectory inside the export folder, using the subdomain name (e.g., `north`, `southeast`, `southwest`).
 
 .. image:: ../../img/multd-editor/multd010.png
 
-The exported files will look like this:
+5. The exported files will look like this:
 
 .. image:: ../../img/multd-editor/multd011.png
+
+Under Construction
+----------------------
+At this time, the Multiple Domains tool is still under development.  All 2D parameters are complete and functional but 1D parameters are not yet implemented.  The Multiple Domains Editor will be updated in the future to include 1D parameters.  
