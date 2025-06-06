@@ -1,8 +1,9 @@
-.. _mult_domain_editor:
+.. _multd_editor:
 
 Multiple Domains Editor
 =========================
 
-.. image:: ../../img/Multiple-Domain-Editor/mult_domains001.png
+.. image:: ../../img/multd-editor/multd001.png
 
-    
+
+
