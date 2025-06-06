@@ -935,17 +935,15 @@ The reservoir tailings thickness ranges from 1 m to 5 m in Figure 18.
 
 After a 24 hr tailings dam prescribed breach simulation, the final fluid and mudflow depths are shown in Figure 19 and Figure 20 respectively.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two018.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image26.png
 
 *Figure 19.
 Final Fluid Phase Flow Depth.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two019.png   :alt: A picture containing map Description automatically generated
-   :width: 6.02222in
-   :height: 2.47323in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image27.png
 
-   Figure 20.
-   Final Mudflow Phase Flow Depth
+*Figure 20.
+Final Mudflow Phase Flow Depth.*
 
 Corresponding to the final fluid and mudflow phase depths are the final fluid and mudflow velocities in Figure 21 and Figure 22 which show that the
 final mudflow depths in Figure 20 have essentially ceased flowing.
