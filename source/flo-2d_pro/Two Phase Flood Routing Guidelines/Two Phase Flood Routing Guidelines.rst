@@ -342,12 +342,8 @@ tributary water flooding from a rainfall event.
 Significant Infiltration will generally not occur when a mud flood or mud flood progresses downstream because the bed interstitial pore space becomes
 clogged with sediment.
 
-.. _section-1:
-
 Simulating a Tailings Dam Failure
 =================================
-
-.. _general-1:
 
 General
 -------
@@ -373,7 +369,7 @@ separate models so that the tailings dam breach discharge hydrograph can be dete
 The discharge volume released through the breach reported in DAMBREACH_VOLUME.OUT can be checked against the volume estimated by the FLO-2D TAILINGS
 DAM BREACH tool.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two009.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image10.png
 
 
 *Figure 8.
