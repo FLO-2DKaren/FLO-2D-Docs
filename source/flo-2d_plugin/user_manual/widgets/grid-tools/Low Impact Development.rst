@@ -5,38 +5,30 @@
 
 .. image:: ../../img/gridtools/lid/lid001.png
 
-The spatially variable Low Impact Development parameter is a specified depth below which no discharge is shared between grid elements.
-This FLO-2D parameter represents grid element depression storage and can be used to simulate Low Impact Development
-(LID) storage such as the volume in cisterns or infiltrated volume through permeable pavers.
+This tool allows you to assign Low Impact Development (LID) sink volumes to grid elements using polygons, such as rooftops, bioswales, or basins. 
+The volume assigned to each grid element represents a fixed retention amount (in ft³ or m³) that must be filled before overland flow is exchanged.
 
+Use this tool when you want to model LID features that function primarily through volume capture, such as cisterns, planters, or retention cells.
 
-In the following example, the neighborhood collects rainwater using built-in cisterns that are attached to the gutters of the buildings.
-The cisterns have a fixed volume and there is one per building.
-The volume of each cistern is 50 gallons or 6.68 ft\ :sup:`3`.
-Divide this volume by the surface area of a grid element to determine the TOL depth value assigned to each cell.
+For a full explanation of how FLO-2D handles sink volume routing, see the LID Volume Method section in the FLO-2D Reference Manual.
 
-Digitize or Copy Data
----------------------
+Assigning Volume in QGIS
+----------------------------
 
-1. Click the Tolerance Areas layer
-   and use the editor tool to digitize the outline of the building roof area.
-   This is the area that collects water.
+1. Use a polygon layer (e.g., rooftop outlines) to select the grid elements.
 
-.. image:: ../../img/gridtools/tol/spatia002.png
+2. The polygons should represent the areas where water is collected, such as rooftops or bioswales.
 
-2. The roof polygons can be imported to a separate layer and pasted into the Tolerance Areas layer.
-   In this instance, the polygons were copied from the Blocked Areas layer.
+.. image:: ../../img/gridtools/lid/lid002.png
 
-In this example the LID TOL value is unknown and must be calculated from the cistern volume and the collection area.
-Each house has a theoretical 50-gallon rain collection cistern.
-The volume is converted to 6.68 cubic feet.
-The tolerance value is a depth in feet, so it can be applied to the roof area of each house.
-For the sake of simplicity, the assumption is that the roof area and the house polygon area are the same.
+3. In this example the LID TOL value set to 1.2 inches of rainfall per roof area so that. This is equivalent to a volume of 10 cubic feet per grid element.
 
-Define the Tolerance Attribute
-------------------------------
+:math:`expression = 1.2 inches * 1 ft / 12 inches * 10 ft * 10 ft =  10 cubic feet` 
 
-3. Open the attribute
+Define the LID Grid Element Volume
+-----------------------------------
+
+1. Open the attribute
    table of the Tolerance Areas layer.
 
 .. image:: ../../img/gridtools/tol/spatia003.png
