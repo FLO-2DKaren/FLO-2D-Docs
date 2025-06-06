@@ -1080,10 +1080,12 @@ Mudflow Parameters
 
 .. math::
    :label:
+
    \eta = \alpha_i e^{\beta_i C_v}
 
 .. math::
    :label:
+
    \tau_y = \alpha_i e^{\beta_i C_v}
 
 Some practical guidelines for estimating the mudflow rheological parameters are presented in this section.
