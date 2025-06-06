@@ -23,7 +23,8 @@ Assigning Volume in QGIS
 
 3. In this example the LID TOL value set to 1.2 inches of rainfall per roof area so that. This is equivalent to a volume of 10 cubic feet per grid element.
 
-:math:`expression = 1.2 inches * 1 ft / 12 inches * 10 ft * 10 ft =  10 cubic feet` 
+:math:`\text{expression} = 1.2\,\text{in} \times \frac{1\,\text{ft}}{12\,\text{in}} \times 10\,\text{ft} \times 10\,\text{ft} = 10\,\text{ft}^3`
+
 
 Define the LID Grid Element Volume
 -----------------------------------
