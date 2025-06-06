@@ -126,8 +126,7 @@ bias toward the uplift function.
 Essentially, it was impossible to achieve a balanced sediment exchange condition that resulted in numerical stability.
 The homogeneous approach was abandoned for the more simplistic separate flow regime method.
 In a simplified approach, the FLO-2D model has been structured to exchange sediment between the fluid portion of the flow and the mudflow as shown in
-Figure
-3.
+Figure 3.
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image3.png
 
