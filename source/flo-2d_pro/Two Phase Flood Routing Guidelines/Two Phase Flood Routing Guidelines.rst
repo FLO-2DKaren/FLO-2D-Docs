@@ -602,13 +602,12 @@ This will enable the bed coarsening or sediment deposition to be tracked in a ch
 The SED.DAT file sediment routing by size fraction data is displayed below in blue (lines Z and P) where the P-Line includes the representative
 sediment size and percent finer than.
 
-|Two037|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two037.png
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two012.png   :width: 3.80875in
-   :height: 2.48155in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image16.png
 
-   Figure 12.
-   Sediment Routing by Size Fractions and Bed Armoring.
+*Figure 12.
+Sediment Routing by Size Fractions and Bed Armoring.*
 
 The data is entered using dialog windows in the FLO-2D Plugin v.
 10.74 or higher for QGIS.
