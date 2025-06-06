@@ -923,7 +923,7 @@ dam two phase flow applications.
 *Figure 17.
 Maximum Fluid Phase Flow Depth.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/imae25.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image25.png
 
 *Figure 18.
 Maximum Mudflow Phase Flow Depth.*
@@ -935,11 +935,10 @@ The reservoir tailings thickness ranges from 1 m to 5 m in Figure 18.
 
 After a 24 hr tailings dam prescribed breach simulation, the final fluid and mudflow depths are shown in Figure 19 and Figure 20 respectively.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two018.png   :width: 6.40034in
-   :height: 2.63125in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two018.png
 
-   Figure 19.
-   Final Fluid Phase Flow Depth.
+*Figure 19.
+Final Fluid Phase Flow Depth.*
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two019.png   :alt: A picture containing map Description automatically generated
    :width: 6.02222in
