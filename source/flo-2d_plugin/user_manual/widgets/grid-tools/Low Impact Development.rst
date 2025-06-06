@@ -1,7 +1,7 @@
 .. _grid_lid:
 
-16. LID Volume Spatial
-===================================
+16. Low Impact Development (LID) Volume Spatial
+================================================
 
 .. image:: ../../img/gridtools/lid/lid001.png
 

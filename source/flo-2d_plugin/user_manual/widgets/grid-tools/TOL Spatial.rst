@@ -1,9 +1,13 @@
 .. _tol_spatial:
 
-9. LID Depth TOL Spatial
+9. TOL Spatial Depth
 ===================================
 
 .. image:: ../../img/gridtools/tol/spatia005.png
+
+.. warning::
+   If using the TOL Spatial depth method for LID, a water surface elevation may result in the incorrect distribution of water across the grid elements
+   that are assigned a TOL Spatial depth. See the LID Volume Spatial tool for a more accurate method of assigning :ref: `LID volumes <grid_lid:>'.
 
 
 
