@@ -1664,9 +1664,9 @@ Fullerton, 1983.
 B.
 Simons Symposium on Erosion and Sedimentation,
 R. M.
-   Li and P.
-   F.
-   Lagasse, eds., Colorado State University and ASCE.
+Li and P.
+F.
+Lagasse, eds., Colorado State University and ASCE.
 
 Appendix B. Tailings Dam Mudflows
 =================================
