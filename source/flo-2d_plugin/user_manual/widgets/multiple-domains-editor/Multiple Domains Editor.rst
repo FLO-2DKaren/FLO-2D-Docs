@@ -21,7 +21,7 @@ By using a modular approach, engineers can speed up development, improve model m
 
 .. important::
 
-   This project is intentionally scaled down for the sake of instruction. In practice, a model of this size would not require a multi-domain setup. The example is designed to demonstrate the workflow and connectivity logic in a simplified context.
+   This project is intentionally scaled down for the sake of instruction. In practice, a model of this size would not require a multi-domain setup.
 
 
 Setting Up Multiple Subdomains
@@ -29,25 +29,30 @@ Setting Up Multiple Subdomains
 
 This section explains how to set up multiple subdomains from a single global domain using the FLO-2D Plugin in QGIS.
 
-Step 1: Build the Global Domain
+Build the Global Domain
 ---------------------------------
-Start by building the full computational domain as you would for a standard single-domain project. This domain should cover the entire project area.
+1. Start by building the full computational domain as you would for a standard single-domain project. This domain should cover the entire project area.
 
-Use the Computational Domain layer to define the boundary. 
+2. Use the Computational Domain layer to define the boundary. 
 
 .. note:: This will result in a large grid with several million cells — that's acceptable at this stage.
 
 .. image:: ../../img/multd-editor/multd002.png
 
-Step 2: Run a Short Global Simulation
+Run a Short Global Simulation
 ---------------------------------------
-(Optional) Run a short simulation using a simple rainfall event (e.g., 3 inches over 6 hours). This helps to identify inter-domain flow paths and potential boundaries between subdomains.
+1. (Optional) Run a short simulation using a simple rainfall event (e.g., 3 inches over 6 hours). This helps to identify inter-domain flow paths and potential boundaries between subdomains.
 
 .. image:: ../../img/multd-editor/multd003.png
 
-Step 3: Identify Downstream Domains
+2. Load the simulation results into QGIS to visualize flow patterns and identify natural separations in the terrain.
+
+Identify Downstream Domains
 -------------------------------------
-Based on engineering judgment and the results of the global simulation, identify downstream areas that should be split into subdomains. Look for clear flow separations or computational efficiencies.
+1. Based on engineering judgment and the results of the global simulation, identify downstream areas that should be split into subdomains. 
+2. Look for clear flow separations that can be defined as subdomains.
+
+.. image:: ../../img/multd-editor/multd005.png
 
 .. important::
 
@@ -57,9 +62,11 @@ Based on engineering judgment and the results of the global simulation, identify
 
    .. image:: ../../img/multd-editor/multd004.png
 
-Step 4: Create Subdomain Polygons
+
+
+Create Subdomain Polygons
 -----------------------------------
-Digitize polygons for each subdomain. In this example, the `north` domain connects to both the `southeast` and `southwest` domains, and the `southeast` domain also connects to the `southwest` domain.
+1. Digitize polygons for each subdomain. In this example, the `north` domain connects to both the `southeast` and `southwest` domains, and the `southeast` domain also connects to the `southwest` domain.
 
 .. image:: ../../img/multd-editor/multd005.png
 
