@@ -208,7 +208,7 @@ Tailings Dam Failure Mudflow Merriespruit, Virginia SA Feb 1994 (tailings.info).
 
 .. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two033.png
 
- A quadratic solution to the friction slope equation was
+A quadratic solution to the friction slope equation was
 formulated for the FLO-2D model to estimate the seed mudflow velocity in
 the momentum equation. The seed velocity represents the flow computed
 across each grid element boundary using the average flow depth between
