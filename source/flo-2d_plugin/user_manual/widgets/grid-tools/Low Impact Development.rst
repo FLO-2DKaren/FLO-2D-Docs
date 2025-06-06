@@ -26,37 +26,36 @@ Assigning Volume in QGIS
 :math:`\text{expression} = 1.2\,\text{in} \times \frac{1\,\text{ft}}{12\,\text{in}} \times 10\,\text{ft} \times 10\,\text{ft} = 10\,\text{ft}^3`
 
 
-Define the LID Grid Element Volume
------------------------------------
+Rainfall Volume for 1.2-Inch Event Over Polygon Areas
+--------------------------------------------------------
 
-1. Open the attribute
-   table of the Tolerance Areas layer.
-
-.. image:: ../../img/gridtools/tol/spatia003.png
-
-
-4. On the attribute table window, click on the Toggle Editing button, change the field to TOL, add the command to set
-   the TOL depth (6.68 / $area) and click Update All.
-
-5. Save and close the editor tool and close the attribute table.
-   This process converted the volume of the cistern to a depth over the area of each polygon.
-
-
-.. image:: ../../img/gridtools/tol/spatia001.png
++-----+-----------+-----------+---------+---------+
+| FID | Area (ft²)| Volume ft³| Gallons | Acre-ft |
++=====+===========+===========+=========+=========+
+|  1  |   51436   |   5143.6  |  38476  |  0.1181 |
++-----+-----------+-----------+---------+---------+
+|  2  |   16056   |   1605.6  |  12011  |  0.0369 |
++-----+-----------+-----------+---------+---------+
+|  3  |   15612   |   1561.2  |  11678  |  0.0358 |
++-----+-----------+-----------+---------+---------+
+|  4  |   18246   |   1824.6  |  13649  |  0.0419 |
++-----+-----------+-----------+---------+---------+
+|  5  |   19324   |   1932.4  |  14455  |  0.0444 |
++-----+-----------+-----------+---------+---------+
 
 Sample Data
------------
+--------------
 
 1. Click
-   the Sample Spatial Tolerance Values button.
+   the Sample LID Volume Values button.
 
-.. image:: ../../img/gridtools/tol/spatia005.png
+.. image:: ../../img/gridtools/lid/lid001.png
 
 
 2. Once the
-   process is complete, Click OK to complete TOL the assignment.
+   process is complete, Click OK to complete LID the assignment.
 
-.. image:: ../../img/gridtools/tol/spatia006.png
+.. image:: ../../img/gridtools/lid/lid003.png
 
 3. This process
    has converted the volume from the polygon to the grid elements that intersect the polygon.
