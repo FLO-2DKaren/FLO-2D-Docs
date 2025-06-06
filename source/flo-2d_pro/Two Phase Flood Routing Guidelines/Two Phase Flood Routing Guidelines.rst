@@ -383,12 +383,12 @@ Stack Layer Tailings Facility Collapse
 
 The collapse of stacked layer tailings facility is assumed to occur as either a static or seismic failure without any water storage or flood inflow.
 It is the simplest FLO-2D option to apply and does not require the assignment of dam parameters (using the levee component).
-In this case, the dam is assumed to comprise of layered homogeneous tailings material, not separate constructed dam core and shell material (Figure
-9).
+In this case, the dam is assumed to comprise of layered homogeneous tailings material, not separate constructed dam core and shell material (Figure 9).
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two010.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image11.png
 
-   Tailings Stacks Example (source: Google Earth Historical Imagery).
+*Figure 9.
+Tailings Stacks Example (source: Google Earth Historical Imagery).*
 
 The following assumptions are applied for this tailings failure option:
 
