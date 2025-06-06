@@ -614,17 +614,15 @@ The data is entered using dialog windows in the FLO-2D Plugin v.
 Figure 13 and Figure 14 show examples of the dialog boxes.
 The data entry method for a simple prescribed breach tailings dam failure is defined in a Tailings Dam Two Phase Flow tutorial.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two013.png   :width: 6.5in
-   :height: 4.34583in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image17.png
 
-   Figure 13.
-   Two phase data entry dialog mudflow.
+*Figure 13.
+Two phase data entry dialog mudflow.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two014.png   :width: 6.5in
-   :height: 6.33056in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image18.png
 
-   Figure 14.
-   Two phase data entry dialog sediment transport.
+*Figure 14.
+Two phase data entry dialog sediment transport.*
 
 Output Files and Reviewing the Results
 ======================================
