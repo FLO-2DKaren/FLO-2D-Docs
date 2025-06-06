@@ -989,18 +989,15 @@ These MAXPLOT maps are a simple depiction of the FLO-2D results on a grid elemen
 Higher resolution maps with interpolated flow depth shapefiles can be generated with the FLO-2D QGIS plug-in tool or any CADD or GIS software program
 since the results are written to file with x- and y-coordinates in an ASCII format.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two025.png   :alt: A picture containing chart Description automatically generated
-   :width: 6.23958in
-   :height: 2.52183in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image33.png
 
-   Figure 26.
-   Final Bed Scour or Deposition.
+*Figure 26.
+Final Bed Scour or Deposition.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two026.png   :width: 6.31875in
-   :height: 2.63551in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image34.png
 
-   Figure 27.
-   Final Bed Scour or Deposition and Mudflow Cessation.
+*Figure 27.
+Final Bed Scour or Deposition and Mudflow Cessation.*
 
 If a channel exists downstream of the tailings dam breach, most of the mudflow breach discharge will enter and fill the channel.
 Figure 28 shows that the floodplain inundation with channel overbank flow is limited compared with the overland flow in Figure 16 thru Figure 18
