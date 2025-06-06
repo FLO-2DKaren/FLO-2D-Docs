@@ -1006,19 +1006,15 @@ The final bed elevation in the channel (red line) in Figure 29 shows that sedime
 Yang’s sediment transport equation was used in this FLO-2D simulation.
 Figure 29 also displays the maximum fluid or mudflow maximum surface that is higher than the top of bank elevation (cyan color).
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two027.png   :alt: Chart, diagram Description automatically generated
-   :width: 6.5in
-   :height: 3.62847in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image35.png
 
-   Figure 28.
-   Maximum Flow Depth Combined Channel and Floodplain Flow.
+*Figure 28.
+Maximum Flow Depth Combined Channel and Floodplain Flow.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two028.png   :alt: Chart Description automatically generated
-   :width: 6.5in
-   :height: 3.09236in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image36.png
 
-   Figure 29.
-   Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).
+*Figure 29.
+Channel Bed and Maximum Fluid/Mudflow Surface Profile (PROFILES Program).*
 
 Recommendations
 ===============
