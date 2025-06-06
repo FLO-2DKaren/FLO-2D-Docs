@@ -700,11 +700,11 @@ Both columns of volume conservation reported should be practically zero.
 The percent error in the volume conservation in the fourth column should be on the order of 0.000100 of one percent or less.
 Often the percent error is absolute zero as shown in the example of a partial SUMMARY.OUT file below:
 
-|Two038|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two038.png
 
 Later in the file, the sediment volume conservation is reported:
 
-|Two039|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two039.png
 
 Numerical Stability
 -------------------
