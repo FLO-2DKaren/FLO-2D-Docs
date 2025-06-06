@@ -129,7 +129,7 @@ In a simplified approach, the FLO-2D model has been structured to exchange sedim
 Figure
 3.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two004.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image3.png
 
 *Figure 3.
 FLO-2D Two Phase Flow – Fluid with Sediment Transport and Mudflow.*
@@ -173,7 +173,7 @@ Generally, it takes several computational timesteps (~1 second) to store enough 
 exceed 0.10 ft (0.03 m).
 This justifies the uncoupled sediment transport approach used in FLO-2D.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two005.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image4.png
 
 
 *Figure 4.
@@ -203,7 +203,7 @@ and roll waves.
 
 Water
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two006.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image5.png
 
 
 *Figure 5.
