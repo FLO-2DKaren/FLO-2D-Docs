@@ -1380,10 +1380,10 @@ than 0.8.
 The condition for coarse sediment incipient motion agrees well with Sheild’s criteria.
 The Ackers-White approach tends to overestimate the fine sand transport (Julien, 1995).
 
-|Two047|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two047.png
 
-Figure A.1.
-Plot of Final Scour/Deposition for the Ackers-White Equation
+*Figure A.1.
+Plot of Final Scour/Deposition for the Ackers-White Equation.*
 
 *Engelund-Hansen Method.* Bagnold’s stream power concept was applied with the similarity principle to derive a sediment transport function.
 The method involves the energy slope, velocity, bed shear stress, median particle diameter, specific weight of sediment and water, and gravitational
@@ -1391,10 +1391,10 @@ acceleration.
 In accordance with the similarity principle, the method should be applied only to flow over dune bed forms, but Engelund and Hansen (1967) determined
 that it could be effectively used in both dune bed forms and upper regime sediment transport (plane bed) for particle sizes greater than 0.15 mm.
 
-|Two048|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two048.png
 
-Figure A.2.
-Plot of Final Scour/Deposition for the Engelund-Hansen Equation
+*Figure A.2.
+Plot of Final Scour/Deposition for the Engelund-Hansen Equation.*
 
 *Karim-Kennedy Equation.* The simplified Karim-Kennedy equation (F.
 Karim, 1998) is a nonlinear multiple regression equation based on velocity, bed form, sediment size and friction factor using a large number of river
@@ -1404,10 +1404,10 @@ The data includes sediment sizes ranging from 0.08 mm to 0.40 mm (river) and 0.1
 This equation is suggested for non-uniform riverbed conditions for typical large sand and gravel bed rivers.
 It will yield results similar to Laursen’s and Toffaleti’s equations (lower sediment transport capacity).
 
-|Two049|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two049.png
 
-Figure A.3.
-Plot of Final Scour/Deposition for the Karim-Kennedy Equation
+*Figure A.3.
+Plot of Final Scour/Deposition for the Karim-Kennedy Equation.*
 
 *Laursen’s Transport Function.* The Laursen (1958) formula was developed for sediments with a specific gravity of 2.65 and had good agreement with
 field data from small rivers such as the Niobrara River near Cody, Nebraska.
@@ -1418,10 +1418,10 @@ The relationship between shear velocity and sediment particle fall velocity was 
 The shear velocity and fall velocity ratio expresses the effectiveness of the turbulence in mixing suspended sediments.
 The critical tractive force in the sediment concentration equation is given by the Shield’s diagram.
 
-|Two050|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two050.png
 
-Figure A.4.
-Plot of Final Scour/Deposition for the Laursen Equation
+*Figure A.4.
+Plot of Final Scour/Deposition for the Laursen Equation.*
 
 *MPM-Smart Equation.* This is a modified form of the Meyer-Peter-Mueller (MPM) bedload sediment transport equation (Smart, 1984) for steep channels
 ranging from 3% to 20%.
@@ -1430,10 +1430,10 @@ This equation can be used for sediment sizes greater than 0.4 mm.
 It was modified to incorporate the effects of nonuniform sediment distributions.
 It will generate sediment transport rates approaching that computed by the Engelund-Hansen equation on steep slopes.
 
-|Two051|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two051.png
 
-Figure A.5.
-Plot of Final Scour/Deposition for the MPM-Smart Equation
+*Figure A.5.
+Plot of Final Scour/Deposition for the MPM-Smart Equation.*
 
 *MPM-Woo Relationship.* For computing the bed material load in steep sloped, sand bed channels such as arroyos, washes and alluvial fans, Mussetter,
 et al.
@@ -1449,10 +1449,10 @@ The equation requires estimates of exponents and a coefficient and is applicable
 This equation provides a method for estimating high bed material load in steep, sand bed channels that are beyond the hydraulic conditions for which
 the other sediment transport equations may be applicable.
 
-|Two052|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two052.png
 
-Figure A.6.
-Plot of Final Scour/Deposition for the MPM-Woo Equation
+*Figure A.6.
+Plot of Final Scour/Deposition for the MPM-Woo Equation.*
 
 *Parker, Klingeman and McLean (1982).* This equation was derived primarily for gravel or sandy bed material load.
 It was based on Milhous (1973, 1982) sediment transport measurements at Oak Creek, Oregon.
@@ -1462,10 +1462,10 @@ sediment size fractions.
 The substrate-based equation predicts individual size fraction transport rates for channel width average conditions which are then summed to get a
 total bed load.
 
-|Two053|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two053.png
 
-Figure A.7.
-Plot of Final Scour/Deposition for the Parker, Klingeman and McClean Equation
+*Figure A.7.
+Plot of Final Scour/Deposition for the Parker, Klingeman and McClean Equation.*
 
 *Toffaleti’s Approach.* Toffaleti (1969) develop a procedure to calculate the total sediment load by estimating the unmeasured load.
 Following the Einstein approach, the bed material load is given by the sum of the bedload discharge and the suspended load in three separate zones.
@@ -1475,10 +1475,10 @@ size, energy slope and settling velocity.
 Simons and Senturk (1976) reported that Toffaleti’s total load estimated compared well with 339 river and 282 laboratory data sets.
 This equation has several empirical and poorly defined coefficients that may give poor results for highly variable conditions.
 
-|Two054|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two054.png
 
-Figure A.8.
-Plot of Final Scour/Deposition for the Toffaleti Equation
+*Figure A.8.
+Plot of Final Scour/Deposition for the Toffaleti Equation.*
 
 *Van Rijn.* This equation predicts the total sediment discharge assuming a parabolic distribution of suspended sediment in the lower half of the flow
 and a uniform distribution in the upper half of the flow.
@@ -1486,10 +1486,10 @@ The uniform sediment distribution in upper flow portion is based on the maximum 
 The bedload discharge and suspended load is computed separately and added together to derive the total sediment load.
 For a discussion between measured and predicted data for the equation using laboratory and field tests see Strum (2001).
 
-|Two055|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two055.png
 
-Figure A.9.
-Plot of Final Scour/Deposition for the Van Rijn Equation
+*Figure A.9.
+Plot of Final Scour/Deposition for the Van Rijn Equation.*
 
 *Yang’s Method.* Yang (1973) determined that the total sediment concentration was a function of the potential energy dissipation per unit weight of
 water (stream power) and the stream power was expressed as a function of velocity and slope.
@@ -1499,10 +1499,10 @@ The equations were based on measured field and flume data with sediment particle
 Most of the data was limited to medium to coarse sands and flow depths less than 3 ft (Julien, 1995).
 Yang’s equations can be applied to sand and gravel.
 
-|Two056|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two056.png
 
-Figure A.10.
-Plot of Final Scour/Deposition for the Yang’s Equation
+*Figure A.10.
+Plot of Final Scour/Deposition for the Yang’s Equation.*
 
 *Zeller-Fullerton Equation.* Zeller-Fullerton is a multiple regression sediment transport equation for a range of channel bed and alluvial floodplain
 conditions.
@@ -1513,10 +1513,10 @@ Julien (1995) reported that this equation should be accurate with 10% of the com
 The Zeller-Fullerton equation assumes that all sediment sizes are available for transport (no armoring).
 The original Einstein method is assumed to work best when the bedload constitutes a significant portion of the total load (Yang, 1996).
 
-|Two057|
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two057.png
 
-Figure A.11.
-Plot of Final Scour/Deposition for the Zeller-Fullerton Equation
+*Figure A.11.
+Plot of Final Scour/Deposition for the Zeller-Fullerton Equation.*
 
 The above comparative plots (A.1 thru A.11) reveal that Laursen, Karim-Kennedy, and Zeller-Fullerton have the smallest variation in scour/deposition
 and that Engelund-Hansen, MPM-Smart, and Parker, Klingeman & McClean are the most aggressive equations in generating a scour/deposition response.
