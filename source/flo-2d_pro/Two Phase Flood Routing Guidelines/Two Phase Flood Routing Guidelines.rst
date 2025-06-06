@@ -434,16 +434,17 @@ Appendix Table B.1, and an estimated tailings concentration by volume C\ :sub:`v
 If global mapping of the site is available, a FLO-2D static tailings stack failure can be conducted in a matter of a few hours.
 The Feijao tailings stack failure in Brumadinho, Brazil is shown in Figure 10 and Figure 11.
 This simulation was set up with FLO-2D in about 2-hrs.
-The first model run with no calibration is relatively accurate because the tailings volume modeled is close to the failure volume.\ |Two036|
+The first model run with no calibration is relatively accurate because the tailings volume modeled is close to the failure volume.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two011.png
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two036.png
 
+*Figure 10.
+Max Depth Stack Failure.*
 
-   Figure 10.
-   Max Depth Stack Failure.
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image14.png
 
-Figure 11.
-Final Depth Stack Failure.
+*Figure 11.
+Final Depth Stack Failure.*
 
 Tailings Dam Breach Failure
 ---------------------------
