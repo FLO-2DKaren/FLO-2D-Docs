@@ -134,4 +134,4 @@ Legacy Export Format
 
 Under Construction
 ----------------------
-At this time, the Multiple Domains tool is still under development.  All 2D parameters are complete and functional but 1D parameters are not yet implemented.  The Multiple Domains Editor will be updated in the future to include 1D parameters.  
+At this time, the Multiple Domains tool is still under development.  All 2D parameters are complete and functional but 1D parameters are not yet implemented.  The Multiple Domains Editor will be updated in the near future to include 1D parameters.  
