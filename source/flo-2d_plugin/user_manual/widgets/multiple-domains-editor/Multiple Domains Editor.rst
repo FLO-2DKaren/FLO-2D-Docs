@@ -117,6 +117,21 @@ Export Multiple Domains
 
 .. image:: ../../img/multd-editor/multd011.png
 
+Legacy Export Format
+----------------------
+
+.. note::
+
+   The FLO-2D Plugin still supports the legacy multi-domain export method, which required the use of `CADPTS_DS1.DAT` and `OUTFLOW.DAT` files. In that workflow, users had to define O1 lines to collect and transfer flow between domains, which added complexity to the setup process.
+
+   The updated method now uses a single `MULTIDOMAIN.DAT` file that directly connects upstream and downstream grid elements. This streamlined approach reduces setup time and eliminates the need for intermediate outflow definitions. Models created with either method can still be imported and exported using the Plugin.
+
+1. If you need to export in the legacy format that includes `cadpts_dsx.dat`, you will need to define outflow lines between domains.
+
+2. Change the export dialog to apply the legacy export method by selecting `CADPTS_DS1.DAT` and `OUTFLOW.DAT`.
+
+.. image:: ../../img/multd-editor/multd014.png
+
 Under Construction
 ----------------------
 At this time, the Multiple Domains tool is still under development.  All 2D parameters are complete and functional but 1D parameters are not yet implemented.  The Multiple Domains Editor will be updated in the future to include 1D parameters.  
