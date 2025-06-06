@@ -1,6 +1,6 @@
 .. _tol_spatial:
 
-9. TOL Spatial
+9. LID Depth TOL Spatial
 ===================================
 
 .. image:: ../../img/gridtools/tol/spatia005.png

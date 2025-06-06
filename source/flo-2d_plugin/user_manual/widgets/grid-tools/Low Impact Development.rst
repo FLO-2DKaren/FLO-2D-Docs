@@ -1,6 +1,6 @@
 .. _grid_lid:
 
-16. LID Spatial
+16. LID Volume Spatial
 ===================================
 
 .. image:: ../../img/gridtools/lid/lid001.png
