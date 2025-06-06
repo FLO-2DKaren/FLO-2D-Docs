@@ -965,25 +965,20 @@ between 50% and 56%.
 The maximum and final mudflow phase concentrations by volume (Figure 24 and Figure 25 respectively) are essentially identical because the mudflow
 ceased flowing.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two022.png   :width: 6.04167in
-   :height: 2.48767in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image30.png
 
-   Figure 23.
-   Fluid Phase Maximum Concentration by Volume.
+*Figure 23.
+Fluid Phase Maximum Concentration by Volume.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two023.png   :width: 6.1in
-   :height: 2.45303in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image31.png
 
-   Figure 24.
-   Mudflow Phase Maximum Concentration by Volume.
+*Figure 24.
+Mudflow Phase Maximum Concentration by Volume.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two024.png   :alt: A picture containing schematic Description automatically
-   generated
-   :width: 6.28481in
-   :height: 2.55556in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image32.png
 
-   Figure 25.
-   Mudflow Phase Final Concentration by Volume.
+*Figure 25.
+Mudflow Phase Final Concentration by Volume.*
 
 The scour and deposition because of the fluid phase being in contact with bed (no mudflow) on a specific grid element is shown in Figure 26.
 The occurrence of sediment transport in waves is depicted in this figure with alternating scour (blue) and deposition (red) sequences.
