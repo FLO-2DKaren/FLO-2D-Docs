@@ -948,20 +948,15 @@ Final Mudflow Phase Flow Depth.*
 Corresponding to the final fluid and mudflow phase depths are the final fluid and mudflow velocities in Figure 21 and Figure 22 which show that the
 final mudflow depths in Figure 20 have essentially ceased flowing.
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two020.png   :alt: Chart Description automatically generated with medium
-   confidence
-   :width: 5.95625in
-   :height: 2.49004in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image28.png
 
-   Figure 21.
-   Final Fluid Phase Velocity.
+*Figure 21.
+Final Fluid Phase Velocity.*
 
-.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two021.png   :alt: A picture containing text Description automatically generated
-   :width: 4.68838in
-   :height: 2.65625in
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/image29.png
 
-   Figure 22.
-   Final Mudflow Phase Velocity – Ceased Flowing.
+*Figure 22.
+Final Mudflow Phase Velocity – Ceased Flowing.*
 
 The maximum sediment concentration by volume regardless of the time of occurrence for the fluid and mudflow phases are shown in Figure 23 and Figure
 24.
