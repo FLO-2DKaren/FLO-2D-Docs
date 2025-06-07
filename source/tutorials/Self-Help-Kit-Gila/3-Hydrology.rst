@@ -54,7 +54,7 @@ Step 4: Browse GeoPackage Contents
 - Open the **Browser** panel in QGIS.
 - If it's in an awkward location, drag it beside the Layers panel until the layout is comfortable.
 
-.. image:: browser_panel_layout.png
+****Need Image Here**** browser_panel_layout.png
    :alt: Example layout of QGIS Layers and Browser panels side by side
 
 - Right-click on **GeoPackage** and select **New Connection**.
