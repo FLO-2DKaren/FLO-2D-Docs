@@ -2111,7 +2111,7 @@ to runoff.
 .. image:: ../img/References/Chapter4/image68.png
 
 *Figure 78.
-Low Impact Development Water Retention.P
+Low Impact Development Water Retention.*
 
 LID Modeling Methods
 ^^^^^^^^^^^^^^^^^^^^
