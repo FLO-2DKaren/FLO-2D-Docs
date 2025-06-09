@@ -5,7 +5,7 @@ Export Multiple Domains
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom001.png
 
-This tool will export the */.DAT files for selected or all subdomains. Once the multiple domains have been created and schematized use this button to export the domains.
+This tool will export the \*.DAT files for selected or all subdomains. Once the multiple domains have been created and schematized use this button to export the domains.
 
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom003.png
@@ -15,7 +15,7 @@ The export process has many options that are outlined below.
 Method 1 - Export using MULTDOMAIN.DAT
 -------------------------------------------
 
-Method 1 is the preferred method for exporting subdomains because it uses the simplified MULTDOMAIN.DAT connectivity file. Using the MULTDOMAIN.DAT method elimitates the need to export CADPTS_DSxx.DAT and eliminates the need to 
+Method 1 is the preferred method for exporting subdomains because it uses the simplified MULTDOMAIN.DAT connectivity file. Using the MULTDOMAIN.DAT method eliminates the need to export CADPTS_DSxx.DAT and eliminates the need to 
 create complex Boundary Conditions (BCs) for each subdomain. The MULTDOMAIN.DAT file contains the connectivity for all subdomains in a single file.
 
 
@@ -25,7 +25,7 @@ Export multiple domains button and select the MULTDOMAIN.DAT method.
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom005.png
 
-2. Select the folder to export the domains.  The folder will contain the /*.DAT files and if needed the MULTDOMAIN.DAT file.
+2. Select the folder to export the domains.  The folder will contain the \*.DAT files and if needed the MULTDOMAIN.DAT file.
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom005a.png
 
@@ -47,7 +47,7 @@ Method 3 - Export using CADPTS.DAT
 ---------------------------------------------
 
 This method will export the CADPTS_DSxx.DAT file for each subdomain.  
-This method is useful if the user wants to export the subdomains using the legacy multiple domain method.  That method requires a 
+This method is useful if the user wants to export the subdomains using the **LEGACY multiple domain method**.  That method requires a 
 CADPTS.DAT of downstream connected domains and an OUTFLOW.DAT with connecting Boundary Conditions for each upstream subdomain.
 
 1. Click the
