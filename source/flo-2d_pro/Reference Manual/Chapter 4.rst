@@ -2100,7 +2100,7 @@ Low Impact Development (LID) Modeling
 -----------------------------------------------
 
 Introduction
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Low Impact Development (LID) is a design strategy that integrates stormwater retention into the landscape of residential and commercial sites.
 FLO-2D models LID using either a volume-based sink approach or a depth-based TOL (tolerance) approach.
@@ -2114,12 +2114,12 @@ to runoff.
 Low Impact Development Water Retention.*
 
 LID Modeling Methods
-^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FLO-2D supports two main approaches to represent LID:
 
 Sink Volume Method
-^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Sink Volume Method models flood or runoff storage as a fixed volume that does not leave the grid element.
 This volume is filled before any flow appears on the cell and is defined in LID_VOLUME.DAT using units of cubic feet or cubic meters.
@@ -2127,7 +2127,7 @@ Once the assigned volume is full, additional water is routed according to standa
 The sink volume method is best for storage facilities above or below ground that do not require a flow rate but do have a known storage volume.
 
 TOL Spatial Method (not recommended)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The TOL Spatial Method uses a flow depth threshold.
 Water will not be exchanged between grid elements until the depth exceeds the TOL value.
@@ -2143,21 +2143,21 @@ FLO-2D Grid Element LID Concept – Spatially Variable LID Elements (brown).*
 (image source: http://www.lowimpactdevelopment.org)
 
 Comparison of Methods
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Below is a comparison of the two LID modeling methods in FLO-2D:
 
 .. image:: ../img/References/Chapter4/image70.png
 
 Assigning LID in FLO-2D – Case Study LID Design.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 LID data inputs are demonstrated in the following case study, which evaluates design approaches for an institutional property as part of a green
 infrastructure initiative.
 The scenario represents a pre-development conceptual modeling effort.
 
 Data Input - Sink Volume Method
-'''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The QGIS FLO-2D Plugin includes a dedicated LID Tool for assigning sink volumes to grid elements.
 Volumes are defined by selecting grid cells with a polygon.
@@ -2189,7 +2189,7 @@ Grid Element Volume
 LID Volume Tool.*
 
 Data Input - TOL Spatial Method
-'''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The main difference between the LID sink volume method and the TOL spatial method is how surface storage is represented.
 While the sink volume method uses a defined volume per grid element, the TOL spatial method applies to a surface depth value.
@@ -2231,7 +2231,7 @@ Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
 FLO-2D Plugin Spatially Variable TOL Assignment.*
 
 Data Input – Infiltration Method
-''''''''''''''''''''''''''''''''
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Bioswales are shallow, vegetated channels designed to slow, filter, and infiltrate stormwater runoff.
 When modeled in FLO-2D, bioswales can be represented using the Green-Ampt infiltration method with adjusted parameters to reflect improved
