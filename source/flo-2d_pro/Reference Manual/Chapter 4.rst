@@ -2075,181 +2075,217 @@ During the falling limb of the hydrograph when the flow depth is less than 1 ft 
 width will decrease to confine the discharge until the original width is again attained.
 The user can assign the range of slope where the multiple channel widening is computed.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Low Impact Development (LID) Modeling
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Low impact development (LID) flood retention can be assessed with the FLO-2D model using a sink volume assignment
-or a spatially variable tolerance value (TOL) on individual cells.
-Sink volume is runoff or flood storage that never leaves the grid element and is assigned in the
-LID_VOLUME.DAT file by the user in :math:`\mathrm{ft}^3` or :math:`\mathrm{m}^3`.
-Until the sink volume is filled there is **no flow** depth on the grid element.
-The TOL parameter was originally designed to represent a flow depth below which no discharge is shared
-between two grid elements.
-The primary difference between the two methods is that the TOL approach leaves a flow depth whereas the
-sink volume method does not.
-For a large flood event, typically a TOL value of 0.1 ft (0.03 m) is assigned so that there is no
-exchange discharge for negligible depths.
-For hydrology models, the TOL parameter represents the physical process of depression storage.
-Depression storage TOL is a shallow depth that remains on the grid system after the rainfall had ceased and is a
-portion of the initial abstraction (depression storage + interception) that must be filled for runoff to initiate.
-The initial abstraction cannot be more than the TOL value.
+Introduction
+^^^^^^^^^^^^
 
-The concept of LID is that a new residential or commercial site development would be required to design flood
-retention storage into the site construction.
-This may include bioretention, green roofs, rain gardens, permeable pavement, drainage disconnection, swales,
-and on-site storage (Figure 78).
-Sink volume or TOL values would be assigned to represent the composite LID techniques on a given grid element
-(Figure 79).
-Depending on the site development, multiple grid elements may represent an individual house lot or a commercial
-parking lot.
-Different grid elements may represent different LID techniques.
-The volume of on-site retention storage can be directly assigned in the LID_VOLUME.DAT file or assessed by
-multiplying the lot surface area by the retained flow depth (TOL value).
+Low Impact Development (LID) is a design strategy that integrates stormwater retention into the landscape of residential and commercial sites.
+FLO-2D models LID using either a volume-based sink approach or a depth-based TOL (tolerance) approach.
+Each method helps simulate how LID features such as rain gardens, swales, or permeable surfaces (Figure 78) retain water on-site before contributing
+to runoff.
 
-.. image:: ../img/References/Chapter4/image68.gif
+
+.. image:: ../img/References/Chapter4/image68.png
 
 *Figure 78.
-Low Impact Development Water Retention.*
+Low Impact Development Water Retention.P
 
-(Seattle Public Utilities, Rainwise Program, http://www.seattle.gov/util/MyServices/DrainageSewer/Projects/GreenStormwaterInfrastructure/RainWise)
+LID Modeling Methods
+^^^^^^^^^^^^^^^^^^^^
+
+FLO-2D supports two main approaches to represent LID:
+
+Sink Volume Method
+^^^^^^^^^^^^^^^^^^
+
+The Sink Volume Method models flood or runoff storage as a fixed volume that does not leave the grid element.
+This volume is filled before any flow appears on the cell and is defined in LID_VOLUME.DAT using units of cubic feet or cubic meters.
+Once the assigned volume is full, additional water is routed according to standard flow rules.
+The sink volume method is best for storage facilities above or below ground that do not require a flow rate but do have a known storage volume.
+
+TOL Spatial Method (not recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The TOL Spatial Method uses a flow depth threshold.
+Water will not be exchanged between grid elements until the depth exceeds the TOL value.
+This method mimics shallow surface storage like depression storage or ponding.
+The parameter is defined in TOLSPATIAL.DAT in feet or meters.
+TOL values are be assigned to represent the composite LID techniques on a given grid element (Figure 79).
 
 .. image:: ../img/References/Chapter4/image69.png
 
 *Figure 79.
-FLO-2D Grid Element LID Concept – Spatially Variable TOL Elements (brown).*
-(http://www.lowimpactdevelopment.org)
+FLO-2D Grid Element LID Concept – Spatially Variable LID Elements (brown).*
 
-FLO-2D Model LID Tools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+(image source: http://www.lowimpactdevelopment.org)
 
-LID Sink Volume Method
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Comparison of Methods
+^^^^^^^^^^^^^^^^^^^^^
 
-The sink volume can be evaluated by the flood retention feature (e.g., pond or cistern volume).
-The volume may be dictated by site development specification or regulation.
-In any case, once the flood retention volume is known, it can be assigned directly to the grid element or
-divided over several grid elements.
-No overland flow in or out of the LID cell will occur until the sink volume is exceeded.
-Either rainfall or flood inflow to the grid element will fill the sink volume.
-The sink volume can be assigned in the QGIS using a shapefile or polygon to select a cell or cells.
-The volume (ft\ :sup:`3` or m\ :sup:`3`) is saved in a LID_VOLUME.DAT file in the following format:
-
-.. image:: ../img/References/Chapter4/image139.png
-
-*Figure 80.
-File Sample LID_VOLUME.DAT.*
-
-The LID Volume method is assigned in QGIS using the Tol Spatial Tool.
-In this case, the volume per grid element must be calculated.
-Any grid element with a centroid inside a TOL Spatial polygon will be added to the data file.
-LID_VOLUME.DAT is the required data file so if QGIS writes the data to TOL_SPATIAL.DAT, rename that file.
+Below is a comparison of the two LID modeling methods in FLO-2D:
 
 .. image:: ../img/References/Chapter4/image70.png
 
-*Figure 81.
+Assigning LID in FLO-2D – Case Study LID Design.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+LID data inputs are demonstrated in the following case study, which evaluates design approaches for an institutional property as part of a green
+infrastructure initiative.
+The scenario represents a pre-development conceptual modeling effort.
+
+Data Input - Sink Volume Method
+'''''''''''''''''''''''''''''''
+
+The QGIS FLO-2D Plugin includes a dedicated LID Tool for assigning sink volumes to grid elements.
+Volumes are defined by selecting grid cells with a polygon.
+The assigned value represents the retention volume per grid element in either cubic feet (ft³) or cubic meters (m³), based on the project units.
+
+Figure 80 shows an example where 1.2 inches of rooftop rainfall is captured.
+Since each grid element is 10 ft by 10 ft, this depth translates to 10 ft³ per cell.
+The resulting values are saved in the required LID_VOLUME.DAT file in the following format:
+
+Grid Element Volume
+
+14821 10.0
+
+14822 10.0
+
+14823 10.0
+
+17601 10.0
+
+17602 10.0
+
+18258 10.0
+
+18325 10.0
+
+.. image:: ../img/References/Chapter4/image145.png
+
+*Figure 80.
 LID Volume Tool.*
 
-TOL Spatial Method
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Data Input - TOL Spatial Method
+'''''''''''''''''''''''''''''''
 
-The primary difference in the LID spatially TOL spatial method is that the surface storage is represented with a
-depth instead of a volume.
-It also has a water surface that contiguous grid element must consider when establishing flow patterns and
-discharge exchange.
-It may cause flow to go around an LID element instead of through it.
+The main difference between the LID sink volume method and the TOL spatial method is how surface storage is represented.
+While the sink volume method uses a defined volume per grid element, the TOL spatial method applies to a surface depth value.
+This depth creates a local water surface that neighboring grid elements must consider when determining flow direction and exchange.
 
-There has been no change in how the TOL value is applied in the model code.
-The TOL depression storage must be filled before flow is exchanged with a neighbor grid element (Figure 82).
-Flow depth less than or equal to the TOL value will remain on the grid element after the simulation is complete.
-The typical range for TOL when used for depression storage only is:
+This can significantly affect how flow moves through a model.
+Because TOL values contribute directly to the calculated water surface elevation, they can cause water to be redirected around LID elements rather
+than flowing through them.
+This makes the TOL spatial method less suitable for LID features expected to operate under deep flow conditions.
+Instead of allowing flow to enter and pass through an LID basin, the model may treat it as an obstruction.
 
-.. math::
-   :label:
+There has been no change in how TOL values are applied within the FLO-2D engine.
+For any grid element, the TOL value must be exceeded before water can be exchanged with adjacent cells.
+As shown in Figure 78 water depths at or below the TOL value will remain stored on the grid element at the end of the simulation.
 
-   0.004 < TOL <= 0.1
+For general depression storage, a typical TOLGLOBAL value falls within the range:
 
-The range for spatially variable TOL assignment when LID is added to depression storage for flow depths that
-may reach 5.0 ft (1.5 m) or higher.
+0.004 < TOL <= 0.1
 
 .. image:: ../img/References/Chapter4/image71.png
 
-*Figure 82.
+*Figure 81.
 Global TOL.*
 
-The global assignment of the TOL value (TOLGLOBAL) is still required in the first line (first parameter) in
-the TOLER.DAT.
-At the start of a FLO-2D model, the TOLGLOBAL value is assigned to all the grid elements.
-This value is superseded by the spatially variable TOL(i) assignment for each grid element listed in the
-file TOLSPATIAL.DAT (Figure 83).
-This file has the same format as the LID_VOLUME.DAT file.
+The global assignment of the TOL value (TOLGLOBAL) is still required in the first line (first parameter) in the TOLER.DAT.
+At the start of a FLO-2D simulation, the TOLGLOBAL value is assigned to all the grid elements.
+The QGIS FLO-2D Plugin includes a dedicated Tol Spatial tool.
+The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL value in the two columns (Figure 79).
+The grid element TOL values can be assigned by polygon selection (Figure 80).
 
-.. image:: ../img/References/Chapter4/image72.jpg
+.. image:: ../img/References/Chapter4/image146.png
 
-*Figure 83.
+*Figure 82.
 Spatially Variable TOL Value Format in TOLSPATIAL.DAT.*
 
-The grid element TOL values can be assigned by polygon selection (Figure 84) by shape file polygon in the QGIS.
-The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL value in the two columns (Figure 83).
-If there are multiple LID techniques being applied to a given element, then guidelines or a reference table could
-be developed to assess a composite
-LID TOL value.
+.. image:: ../img/References/Chapter4/image147.png
 
-.. image:: ../img/References/Chapter4/Chapte111.png
-
-*Figure 84.
+*Figure 83.
 FLO-2D Plugin Spatially Variable TOL Assignment.*
 
-Test Case and Results
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Data Input – Infiltration Method
+''''''''''''''''''''''''''''''''
 
-A FLO-2D model project was created with four areas of sink storage volume.
-The model has 4 inches of total rainfall distributed in a 2 hr storm.
-displays areas of retention with the volume (ft3) identified.
-This is volume that simulated flow into a cistern or pervious pavement or was stored in a garden pond.
+Bioswales are shallow, vegetated channels designed to slow, filter, and infiltrate stormwater runoff.
+When modeled in FLO-2D, bioswales can be represented using the Green-Ampt infiltration method with adjusted parameters to reflect improved
+infiltration capacity due to vegetation and soil amendments.
 
-.. image:: ../img/References/Chapter4/Chapte112.png
+In the example shown in , a bioswale has been assigned enhanced infiltration values:
 
-*Figure 85.
-LID Retention Volume and Depth Grid Elements.*
+- Lower suction head to reflect permeable soil
 
-The FLO-2D graphic display of rainfall on grid are shown on Figure 86 - Figure 888.
-The early results show no depth on grid for the LID cases.
+- Higher hydraulic conductivity (Ksat)
 
-.. image:: ../img/References/Chapter4/image75.png
+- Increased porosity (DTHETA) from amended soils
 
-*Figure 86.
-Early Rainfall No LID.*
+These parameters allow the model to capture the performance of the bioswale during storm events, accounting for both temporary surface storage and
+infiltration.
+The bioswale grid elements can also be assigned a small TOL value to represent surface depression, allowing initial storage before runoff occurs.
 
-.. image:: ../img/References/Chapter4/image76.png
+This approach offers a simple but effective way to simulate LID features that function through both infiltration and conveyance.
 
-*Figure 87.
-Early Rainfall with LID Volume.*
+.. image:: ../img/References/Chapter4/image148.png
 
-.. image:: ../img/References/Chapter4/image76.png
+*Figure 81.
+LID Retention Bioswale.*
 
-*Figure 88.
-Early Rainfall with TOL Spatial Depth.*
 
-The SUMMARY.OUT (Figure 88) file reveals that about 1.4 acre-ft were retained in LID storage out of a
-total of 73.6 acre-ft of rainfall volume on the project area.
-It is also noted that the TOL volume changed for the TOL Spatial Volume.
 
-.. image:: ../img/References/Chapter4/image78.png
 
-*Figure 89.
-Examples of SUMMARY.OUT File Test Cases.*
 
-Two methods for analyzing LID designs are available in the FLO-2D model: 1) A storage retention volume method;
-and 2) A surface retention depth method using spatially variable TOL values.
-Both methods are activated by a data file with the same format: LID_VOLUME.DAT and TOLSPATIAL.DAT respectively.
-No other triggers, switches or data modifications are necessary.
-The primary difference between the two methods is that the volume retention represents a sink, and the surface storage
-method inputs the volume as a flow depth and water surface elevation that is assimilated during the flood routing.
-The surface storage method may result in flow going around the LID element if the water surface is high.
-This method might be used for surface features that create ponding and the user may need to convert volume
-storage to a flow depth by dividing by the surface area.
-Both methods would have to be tested to determine the impacts on infiltration, storm drain capacity
-or downstream flooding.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Building Rainfall Runoff
 -----------------------------
