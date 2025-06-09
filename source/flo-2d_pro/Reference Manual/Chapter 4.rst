@@ -2097,10 +2097,10 @@ The user can assign the range of slope where the multiple channel widening is co
 
 
 Low Impact Development (LID) Modeling
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------
 
 Introduction
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^
 
 Low Impact Development (LID) is a design strategy that integrates stormwater retention into the landscape of residential and commercial sites.
 FLO-2D models LID using either a volume-based sink approach or a depth-based TOL (tolerance) approach.
