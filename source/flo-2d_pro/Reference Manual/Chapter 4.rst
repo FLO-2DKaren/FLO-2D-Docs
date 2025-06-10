@@ -1432,7 +1432,7 @@ following form as a dimensionless slope:
 .. math::
    :label:
 
-  S_f = S_y \, + \, S_v \, + \, S_{td}
+   S_f = S_y \, + \, S_v \, + \, S_{td}
 
 where:
 
