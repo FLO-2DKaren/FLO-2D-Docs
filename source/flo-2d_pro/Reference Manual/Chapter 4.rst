@@ -2146,7 +2146,7 @@ Figure 80 shows an example where 1.2 inches of rooftop rainfall is captured.
 Since each grid element is 10 ft by 10 ft, this depth translates to 10 ft³ per cell.
 The resulting values are saved in the required LID_VOLUME.DAT file in the following format:
 
-.. image:: ../img/References/Chapter4/image144.png
+.. image:: ../img/References/Chapter4/image149.png
 
 .. image:: ../img/References/Chapter4/image145.png
 
