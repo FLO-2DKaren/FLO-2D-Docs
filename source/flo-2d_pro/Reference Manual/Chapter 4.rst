@@ -2118,6 +2118,7 @@ TOL values are be assigned to represent the composite LID techniques on a given 
 
 *Figure 79.
 FLO-2D Grid Element LID Concept – Spatially Variable LID Elements (brown).*
+
 (image source: http://www.lowimpactdevelopment.org)
 
 Comparison of Methods
