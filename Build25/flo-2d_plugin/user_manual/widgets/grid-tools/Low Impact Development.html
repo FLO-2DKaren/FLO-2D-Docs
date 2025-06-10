@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>16. LID Spatial &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>16. Low Impact Development (LID) Volume Spatial &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=67a5d8e2" />
@@ -17,6 +17,8 @@
       <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -98,7 +100,7 @@
           <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
           <li class="breadcrumb-item"><a href="index.html">Grid Tools</a></li>
-      <li class="breadcrumb-item active">16. LID Spatial</li>
+      <li class="breadcrumb-item active">16. Low Impact Development (LID) Volume Spatial</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/grid-tools/Low Impact Development.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -108,65 +110,107 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="lid-spatial">
-<span id="grid-lid"></span><h1>16. LID Spatial<a class="headerlink" href="#lid-spatial" title="Link to this heading"></a></h1>
+  <section id="low-impact-development-lid-volume-spatial">
+<span id="grid-lid"></span><h1>16. Low Impact Development (LID) Volume Spatial<a class="headerlink" href="#low-impact-development-lid-volume-spatial" title="Link to this heading"></a></h1>
 <img alt="../../../../_images/lid001.png" src="../../../../_images/lid001.png" />
-<p>The spatially variable Low Impact Development parameter is a specified depth below which no discharge is shared between grid elements.
-This FLO-2D parameter represents grid element depression storage and can be used to simulate Low Impact Development
-(LID) storage such as the volume in cisterns or infiltrated volume through permeable pavers.</p>
-<p>In the following example, the neighborhood collects rainwater using built-in cisterns that are attached to the gutters of the buildings.
-The cisterns have a fixed volume and there is one per building.
-The volume of each cistern is 50 gallons or 6.68 ft<sup>3</sup>.
-Divide this volume by the surface area of a grid element to determine the TOL depth value assigned to each cell.</p>
-<section id="digitize-or-copy-data">
-<h2>Digitize or Copy Data<a class="headerlink" href="#digitize-or-copy-data" title="Link to this heading"></a></h2>
+<p>This tool allows you to assign Low Impact Development (LID) sink volumes to grid elements using polygons, such as rooftops, bioswales, or basins.
+The volume assigned to each grid element represents a fixed retention amount (in ft³ or m³) that must be filled before overland flow is exchanged.</p>
+<p>Use this tool when you want to model LID features that function primarily through volume capture, such as cisterns, planters, or retention cells.</p>
+<p>For a full explanation of how FLO-2D handles sink volume routing, see the LID Volume Method section in the FLO-2D Reference Manual.</p>
+<section id="assigning-volume-in-qgis">
+<h2>Assigning Volume in QGIS<a class="headerlink" href="#assigning-volume-in-qgis" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Click the Tolerance Areas layer
-and use the editor tool to digitize the outline of the building roof area.
-This is the area that collects water.</p></li>
+<li><p>Use a polygon layer (e.g., rooftop outlines) to select the grid elements.</p></li>
+<li><p>The polygons should represent the areas where water is collected, such as rooftops or bioswales.</p></li>
 </ol>
-<img alt="../../../../_images/spatia0021.png" src="../../../../_images/spatia0021.png" />
-<ol class="arabic simple" start="2">
-<li><p>The roof polygons can be imported to a separate layer and pasted into the Tolerance Areas layer.
-In this instance, the polygons were copied from the Blocked Areas layer.</p></li>
-</ol>
-<p>In this example the LID TOL value is unknown and must be calculated from the cistern volume and the collection area.
-Each house has a theoretical 50-gallon rain collection cistern.
-The volume is converted to 6.68 cubic feet.
-The tolerance value is a depth in feet, so it can be applied to the roof area of each house.
-For the sake of simplicity, the assumption is that the roof area and the house polygon area are the same.</p>
-</section>
-<section id="define-the-tolerance-attribute">
-<h2>Define the Tolerance Attribute<a class="headerlink" href="#define-the-tolerance-attribute" title="Link to this heading"></a></h2>
+<img alt="../../../../_images/lid002.png" src="../../../../_images/lid002.png" />
 <ol class="arabic simple" start="3">
-<li><p>Open the attribute
-table of the Tolerance Areas layer.</p></li>
+<li><p>In this example the LID TOL value set to 1.2 inches of rainfall per roof area so that. This is equivalent to a volume of 10 cubic feet per grid element.</p></li>
 </ol>
-<img alt="../../../../_images/spatia0031.png" src="../../../../_images/spatia0031.png" />
-<ol class="arabic simple" start="4">
-<li><p>On the attribute table window, click on the Toggle Editing button, change the field to TOL, add the command to set
-the TOL depth (6.68 / $area) and click Update All.</p></li>
-<li><p>Save and close the editor tool and close the attribute table.
-This process converted the volume of the cistern to a depth over the area of each polygon.</p></li>
-</ol>
-<img alt="../../../../_images/spatia001.png" src="../../../../_images/spatia001.png" />
+<p><span class="math notranslate nohighlight">\(\text{expression} = 1.2\,\text{in} \times \frac{1\,\text{ft}}{12\,\text{in}} \times 10\,\text{ft} \times 10\,\text{ft} = 10\,\text{ft}^3\)</span></p>
+</section>
+<section id="rainfall-volume-for-1-2-inch-event-over-polygon-areas">
+<h2>Rainfall Volume for 1.2-Inch Event Over Polygon Areas<a class="headerlink" href="#rainfall-volume-for-1-2-inch-event-over-polygon-areas" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>FID</p></th>
+<th class="head"><p>Area (ft²)</p></th>
+<th class="head"><p>Volume ft³</p></th>
+<th class="head"><p>Gallons</p></th>
+<th class="head"><p>Acre-ft</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>51436</p></td>
+<td><p>5143.6</p></td>
+<td><p>38477</p></td>
+<td><p>0.1181</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>16056</p></td>
+<td><p>1605.6</p></td>
+<td><p>12011</p></td>
+<td><p>0.0369</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>15612</p></td>
+<td><p>1561.2</p></td>
+<td><p>11679</p></td>
+<td><p>0.0358</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>18246</p></td>
+<td><p>1824.6</p></td>
+<td><p>13649</p></td>
+<td><p>0.0419</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>19324</p></td>
+<td><p>1932.4</p></td>
+<td><p>14455</p></td>
+<td><p>0.0444</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>57399</p></td>
+<td><p>5740.0</p></td>
+<td><p>42924</p></td>
+<td><p>0.1317</p></td>
+</tr>
+<tr class="row-even"><td><p>SUM</p></td>
+<td><p>178073</p></td>
+<td><p>17807.4</p></td>
+<td><p>133195</p></td>
+<td><p>0.4088</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="sample-data">
 <h2>Sample Data<a class="headerlink" href="#sample-data" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Click
-the Sample Spatial Tolerance Values button.</p></li>
+the Sample LID Volume Values button.</p></li>
 </ol>
-<img alt="../../../../_images/spatia005.png" src="../../../../_images/spatia005.png" />
+<img alt="../../../../_images/lid001.png" src="../../../../_images/lid001.png" />
 <ol class="arabic simple" start="2">
 <li><p>Once the
-process is complete, Click OK to complete TOL the assignment.</p></li>
+process is complete, Click OK to complete LID the assignment.</p></li>
 </ol>
-<img alt="../../../../_images/spatia006.png" src="../../../../_images/spatia006.png" />
+<img alt="../../../../_images/lid003.png" src="../../../../_images/lid003.png" />
 <ol class="arabic simple" start="3">
 <li><p>This process
 has converted the volume from the polygon to the grid elements that intersect the polygon.</p></li>
 </ol>
+</section>
+<section id="resulting-collected-volume">
+<h2>Resulting Collected Volume<a class="headerlink" href="#resulting-collected-volume" title="Link to this heading"></a></h2>
+<p>The SUMMARY.OUT file will show the total volume collected by the LID features.</p>
+<img alt="../../../../_images/lid004.png" src="../../../../_images/lid004.png" />
+<p>The calculated volume was reported as 0.408 acre-ft which is close to the SUM
+from the table above (0.4088 acre-ft).</p>
+<p>The processor uses a centroid point sample of the cells that are within the LID areas.</p>
+<img alt="../../../../_images/lid005.png" src="../../../../_images/lid005.png" />
 </section>
 </section>
 

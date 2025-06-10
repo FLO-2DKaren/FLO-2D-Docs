@@ -108,8 +108,138 @@
            <div itemprop="articleBody">
              
   <section id="multiple-domains-editor">
-<span id="mult-domain-editor"></span><h1>Multiple Domains Editor<a class="headerlink" href="#multiple-domains-editor" title="Link to this heading"></a></h1>
-<img alt="../../../../_images/mult_domains001.png" src="../../../../_images/mult_domains001.png" />
+<span id="multd-editor"></span><h1>Multiple Domains Editor<a class="headerlink" href="#multiple-domains-editor" title="Link to this heading"></a></h1>
+<img alt="../../../../_images/multd001.png" src="../../../../_images/multd001.png" />
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>Large-scale urban flood modeling projects often require millions of computational cells, especially when working with detailed topography and infrastructure. Once a project exceeds approximately 6 million cells, performance and workflow bottlenecks can become significant.</p>
+<p>A multiple domain setup allows engineers to break the full project area into smaller, connected subdomains. This offers several advantages:</p>
+<ul class="simple">
+<li><p><strong>Parallel Workflows</strong>: While one domain is running a simulation, other domains can be actively developed or reviewed.</p></li>
+<li><p><strong>Improved Efficiency</strong>: Smaller subsets of data are faster to schematize, troubleshoot, and re-run.</p></li>
+<li><p><strong>Simplified Review</strong>: Reviewers and collaborators can focus on a specific subdomain without loading the entire model.</p></li>
+<li><p><strong>Scalable Modeling</strong>: Each subdomain acts as a building block, making it easier to construct complex, full-urban “living models” over time.</p></li>
+</ul>
+<p>By using a modular approach, engineers can speed up development, improve model maintainability, and support collaborative workflows in large urban floodplain studies.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This project is intentionally scaled down for the sake of instruction. In practice, a model of this size would not require a multi-domain setup.</p>
+</div>
+</section>
+<section id="setting-up-multiple-subdomains">
+<h2>Setting Up Multiple Subdomains<a class="headerlink" href="#setting-up-multiple-subdomains" title="Link to this heading"></a></h2>
+<p>This section explains how to set up multiple subdomains from a single global domain using the FLO-2D Plugin in QGIS.</p>
+</section>
+<section id="build-the-global-domain">
+<h2>Build the Global Domain<a class="headerlink" href="#build-the-global-domain" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Start by building the full computational domain as you would for a standard single-domain project. This domain should cover the entire project area.</p></li>
+<li><p>Use the Computational Domain layer to define the boundary.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will result in a large grid with several million cells.  That is OK.</p>
+</div>
+<img alt="../../../../_images/multd002.png" src="../../../../_images/multd002.png" />
+</section>
+<section id="run-a-short-global-simulation">
+<h2>Run a Short Global Simulation<a class="headerlink" href="#run-a-short-global-simulation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>(Optional) Run a short simulation using a simple rainfall event (e.g., 3 inches over 6 hours). This helps to identify inter-domain flow paths and potential boundaries between subdomains.</p></li>
+</ol>
+<img alt="../../../../_images/multd003.png" src="../../../../_images/multd003.png" />
+<ol class="arabic simple" start="2">
+<li><p>Load the simulation results into QGIS to visualize flow patterns and identify natural separations in the terrain.</p></li>
+</ol>
+</section>
+<section id="identify-downstream-domains">
+<h2>Identify Downstream Domains<a class="headerlink" href="#identify-downstream-domains" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Based on engineering judgment and the results of the global simulation, identify downstream areas that should be split into subdomains.</p></li>
+<li><p>Look for clear flow separations that can be defined as subdomains.</p></li>
+</ol>
+<img alt="../../../../_images/multd005.png" src="../../../../_images/multd005.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When defining subdomain boundaries, it is critical to avoid placing them directly on or near key 1D hydraulic features such as culverts, channels, or highways. These features often control flow behavior, and splitting them across domain boundaries can lead to incorrect results or failed connectivity between domains.</p>
+<p>Ensure that flow can cross the domain boundary <em>freely</em>, without interference from 1D elements. Place boundaries in areas where overland flow is dominant, and where the hydrologic and hydraulic conditions can be clearly defined on both sides.</p>
+<img alt="../../../../_images/multd004.png" src="../../../../_images/multd004.png" />
+</div>
+</section>
+<section id="create-subdomain-polygons">
+<h2>Create Subdomain Polygons<a class="headerlink" href="#create-subdomain-polygons" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Digitize polygons for each subdomain. In this example, the <cite>north</cite> domain connects to both the <cite>southeast</cite> and <cite>southwest</cite> domains, and the <cite>southeast</cite> domain also connects to the <cite>southwest</cite> domain.</p></li>
+</ol>
+<img alt="../../../../_images/multd013.png" src="../../../../_images/multd013.png" />
+<ol class="arabic simple" start="2">
+<li><p>The polygons should be large enough to encompass the entire area of interest for each subdomain, including any necessary buffer zones to ensure connectivity.</p></li>
+</ol>
+<img alt="../../../../_images/multd005.png" src="../../../../_images/multd005.png" />
+</section>
+<section id="define-subdomain-connectivity">
+<h2>Define Subdomain Connectivity<a class="headerlink" href="#define-subdomain-connectivity" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use the Multiple Domain Editor to define how subdomains connect to each other.</p></li>
+</ol>
+<img alt="../../../../_images/multd012.png" src="../../../../_images/multd012.png" />
+<ol class="arabic simple" start="2">
+<li><p>Ensure that all <strong>downstream</strong> connections are specified for each <strong>upstream</strong> domain.</p></li>
+</ol>
+<img alt="../../../../_images/multd006.png" src="../../../../_images/multd006.png" />
+</section>
+<section id="schematize-each-domain">
+<h2>Schematize Each Domain<a class="headerlink" href="#schematize-each-domain" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use the plugin tools to schematize the grid and hydraulic structures for each domain.</p></li>
+<li><p>Each domain will have its own GDS setup but must remain consistent with boundary overlaps.</p></li>
+</ol>
+<img alt="../../../../_images/multd007.png" src="../../../../_images/multd007.png" />
+<p>The schematized domains look like this:</p>
+<img alt="../../../../_images/multd008.png" src="../../../../_images/multd008.png" />
+</section>
+<section id="export-multiple-domains">
+<h2>Export Multiple Domains<a class="headerlink" href="#export-multiple-domains" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Once each domain has been schematized, you can export them using the <strong>Export Multiple Domains</strong> tool.</p></li>
+<li><p>Click the <em>Export</em> dropdown menu from the main toolbar and select <strong>Export multiple domains</strong>.</p></li>
+</ol>
+<img alt="../../../../_images/multd009.png" src="../../../../_images/multd009.png" />
+<ol class="arabic simple" start="3">
+<li><p>In the export dialog that appears:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Choose an export folder that will contain a separate subfolder for each domain.</p></li>
+<li><p>Set the export method to <cite>MULTIDOMAIN.DAT</cite>.</p></li>
+<li><p>Click <strong>Export All</strong> to export every defined subdomain at once.</p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Each domain will be saved in its own subdirectory inside the export folder, using the subdomain name (e.g., <cite>north</cite>, <cite>southeast</cite>, <cite>southwest</cite>).</p></li>
+</ol>
+<img alt="../../../../_images/multd010.png" src="../../../../_images/multd010.png" />
+<ol class="arabic simple" start="5">
+<li><p>The exported files will look like this:</p></li>
+</ol>
+<img alt="../../../../_images/multd011.png" src="../../../../_images/multd011.png" />
+</section>
+<section id="legacy-export-format">
+<h2>Legacy Export Format<a class="headerlink" href="#legacy-export-format" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The FLO-2D Plugin still supports the legacy multi-domain export method, which required the use of <cite>CADPTS_DS1.DAT</cite> and <cite>OUTFLOW.DAT</cite> files. In that workflow, users had to define O1 lines to collect and transfer flow between domains, which added complexity to the setup process.</p>
+<p>The updated method now uses a single <cite>MULTIDOMAIN.DAT</cite> file that directly connects upstream and downstream grid elements. This streamlined approach reduces setup time and eliminates the need for intermediate outflow definitions. Models created with either method can still be imported and exported using the Plugin.</p>
+</div>
+<ol class="arabic simple">
+<li><p>If you need to export in the legacy format that includes <cite>cadpts_dsx.dat</cite>, you will need to define outflow lines between domains.</p></li>
+<li><p>Change the export dialog to apply the legacy export method by selecting <cite>CADPTS_DS1.DAT</cite> and <cite>OUTFLOW.DAT</cite>.</p></li>
+</ol>
+<img alt="../../../../_images/multd014.png" src="../../../../_images/multd014.png" />
+</section>
+<section id="under-construction">
+<h2>Under Construction<a class="headerlink" href="#under-construction" title="Link to this heading"></a></h2>
+<p>At this time, the Multiple Domains tool is still under development.  All 2D parameters are complete and functional but 1D parameters are not yet implemented.
+The Multiple Domains Editor will be updated in the for the December 2025 release to include 1D parameters.</p>
+</section>
 </section>
 
 

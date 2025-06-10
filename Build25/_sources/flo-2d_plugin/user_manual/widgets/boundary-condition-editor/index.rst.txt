@@ -22,7 +22,6 @@ are checked. See image below.
 .. image:: ../../img/Boundary-Condition-Editor/newbc001.png
 
 .. toctree::
-   :hidden:
    :maxdepth: 2
    :caption: Contents
 

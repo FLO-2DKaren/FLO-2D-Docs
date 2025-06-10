@@ -101,15 +101,79 @@
              
   <section id="export-multiple-domains">
 <span id="id1"></span><h1>Export Multiple Domains<a class="headerlink" href="#export-multiple-domains" title="Link to this heading"></a></h1>
+<img alt="../../../../_images/expmultdom001.png" src="../../../../_images/expmultdom001.png" />
+<p>This tool will export the *.DAT files for selected or all subdomains. Once the multiple domains have been created and schematized use this button to export the domains.</p>
+<img alt="../../../../_images/expmultdom003.png" src="../../../../_images/expmultdom003.png" />
+<p>The export process has many options that are outlined below.</p>
+<section id="method-1-export-using-multdomain-dat">
+<h2>Method 1 - Export using MULTDOMAIN.DAT<a class="headerlink" href="#method-1-export-using-multdomain-dat" title="Link to this heading"></a></h2>
+<p>Method 1 is the preferred method for exporting subdomains because it uses the simplified MULTDOMAIN.DAT connectivity file. Using the MULTDOMAIN.DAT method eliminates the need to export CADPTS_DSxx.DAT and eliminates the need to
+create complex Boundary Conditions (BCs) for each subdomain. The MULTDOMAIN.DAT file contains the connectivity for all subdomains in a single file.</p>
+<p>1. Click the
+Export multiple domains button and select the MULTDOMAIN.DAT method.</p>
+<img alt="../../../../_images/expmultdom005.png" src="../../../../_images/expmultdom005.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the folder to export the domains.  The folder will contain the *.DAT files and if needed the MULTDOMAIN.DAT file.</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom005a.png" src="../../../../_images/expmultdom005a.png" />
+</section>
+<section id="method-2-export-using-only-multdomain-dat">
+<h2>Method 2 - Export using ONLY MULTDOMAIN.DAT<a class="headerlink" href="#method-2-export-using-only-multdomain-dat" title="Link to this heading"></a></h2>
+<p>Use this method to export ONLY MULTDOMAIN.DAT file.  This allows the end user to review the MULTDOMAIN.DAT file without exporting the subdomains.</p>
 <ol class="arabic simple">
 <li><p>Click the
-Export multiple domains button</p></li>
+Export Only MULDOMAIN.DAT button</p></li>
 </ol>
-<img alt="../../../../_images/exportmultipledomains001.png" src="../../../../_images/exportmultipledomains001.png" />
+<img alt="../../../../_images/expmultdom009.png" src="../../../../_images/expmultdom009.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the folder to export the domains.  Notice that the folder will only contain the MULTDOMAIN.DAT files if applicable.</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom009a.png" src="../../../../_images/expmultdom009a.png" />
+</section>
+<section id="method-3-export-using-cadpts-dat">
+<h2>Method 3 - Export using CADPTS.DAT<a class="headerlink" href="#method-3-export-using-cadpts-dat" title="Link to this heading"></a></h2>
+<p>This method will export the CADPTS_DSxx.DAT file for each subdomain.
+This method is useful if the user wants to export the subdomains using the <strong>LEGACY multiple domain method</strong>.  That method requires a
+CADPTS.DAT of downstream connected domains and an OUTFLOW.DAT with connecting Boundary Conditions for each upstream subdomain.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Export CADPTS.DAT button.</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom006.png" src="../../../../_images/expmultdom006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the folder to export the domains.  Note the CADPTS_DSxx.DAT files will be exported to the selected folder.</p></li>
+<li><p>Note that the OUTFLOW.DAT files are also exported with the correct upstream Boundary Conditions for each subdomain.</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom006a.png" src="../../../../_images/expmultdom006a.png" />
+</section>
+<section id="method-4-export-using-only-cadpts-dat">
+<h2>Method 4 - Export using ONLY CADPTS.DAT<a class="headerlink" href="#method-4-export-using-only-cadpts-dat" title="Link to this heading"></a></h2>
+<p>This method will export the CADPTS_DSxx.DAT file for each subdomain.
+This method is useful if the user wants to review the CADPTS_DSxx.DAT files without exporting the subdomains.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Export Only CADPTS button</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom007.png" src="../../../../_images/expmultdom007.png" />
 <ol class="arabic simple" start="2">
 <li><p>Select the folder to export the domains.</p></li>
 </ol>
-<img alt="../../../../_images/exportmultipledomains002.png" src="../../../../_images/exportmultipledomains002.png" />
+<img alt="../../../../_images/expmultdom007a.png" src="../../../../_images/expmultdom007a.png" />
+</section>
+<section id="method-5-export-using-no-connectivity">
+<h2>Method 5 - Export using No Connectivity<a class="headerlink" href="#method-5-export-using-no-connectivity" title="Link to this heading"></a></h2>
+<p>This method will export the subdomains without any connectivity information. This is useful for exporting subdomains so that 2D or 1D
+data files can be reviewed without the need for connectivity information.</p>
+<ol class="arabic simple">
+<li><p>Click the
+Export No Connectivity button</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom008.png" src="../../../../_images/expmultdom008.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the folder to export the domains.</p></li>
+</ol>
+<img alt="../../../../_images/expmultdom008a.png" src="../../../../_images/expmultdom008a.png" />
+</section>
 </section>
 
 

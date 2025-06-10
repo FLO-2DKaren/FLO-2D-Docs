@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>9. TOL Spatial &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>9. TOL Spatial Depth &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=67a5d8e2" />
@@ -98,7 +98,7 @@
           <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
           <li class="breadcrumb-item"><a href="index.html">Grid Tools</a></li>
-      <li class="breadcrumb-item active">9. TOL Spatial</li>
+      <li class="breadcrumb-item active">9. TOL Spatial Depth</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/grid-tools/TOL Spatial.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -108,21 +108,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tol-spatial">
-<span id="id1"></span><h1>9. TOL Spatial<a class="headerlink" href="#tol-spatial" title="Link to this heading"></a></h1>
-<img alt="../../../../_images/spatia005.png" src="../../../../_images/spatia005.png" />
-<section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+  <section id="tol-spatial-depth">
+<span id="tol-spatial"></span><h1>9. TOL Spatial Depth<a class="headerlink" href="#tol-spatial-depth" title="Link to this heading"></a></h1>
+<img alt="../../../../_images/spatia001.png" src="../../../../_images/spatia001.png" />
+<p>TOL Spatial Depth is a grid-based tool used to assign spatially variable surface storage depths to specific areas in the model domain. While it has occasionally been used to simulate LID storage, this is not its intended or recommended use.</p>
+<p>The original purpose of TOL Spatial was to prevent unwanted flow evacuation from deep ponded areas or zones prone to numerical instability during the simulation. By assigning a localized surface depression depth, flow is retained on the grid element until it exceeds the specified threshold, helping to maintain realistic water distribution and stabilize dynamic wetting and drying transitions.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The use of TOL Spatial for LID modeling can produce water surface elevations that alter flow paths. For modeling LID storage, see the <a class="reference internal" href="Low%20Impact%20Development.html#grid-lid"><span class="std std-ref">LID Volume Spatial tool</span></a> for a more accurate and physically consistent method.</p>
+</div>
+<section id="steps-to-assign-tol-spatial-depth">
+<h2>Steps to Assign TOL Spatial Depth<a class="headerlink" href="#steps-to-assign-tol-spatial-depth" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
-<li><p>Create the tolerance
-polygons if they are missing from the Tolerance Areas layer.</p></li>
-<li><p>If the Grid layer
-is empty, create a grid and try again.</p></li>
-<li><p>If a Python error appears during the sampling process, the attribute table may be missing.
-Save and reload the project into QGIS and try again.</p></li>
-<li><p>If the Attribute Fields:
-collapse, calc_arf, and calc_wrf are not filled by the user, the calculation cannot be performed.</p></li>
+<li><p>Add a polygon to the Tolerance Area layer representing the region where TOL Spatial depth will be applied.</p></li>
+<li><p>In this example, the polygon defines a detention basin. The TOL value is set to 0.1 ft to retain shallow ponded water.</p></li>
 </ol>
+<img alt="../../../../_images/spatia0022.png" src="../../../../_images/spatia0022.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Sample TOL Spatial Depth Values button to apply the TOL depth to grid elements whose centroids fall within the polygon.</p></li>
+</ol>
+<img alt="../../../../_images/spatia001.png" src="../../../../_images/spatia001.png" />
+<ol class="arabic simple" start="4">
+<li><p>When the process completes, click OK to close the confirmation dialog.</p></li>
+</ol>
+<img alt="../../../../_images/spatia0032.png" src="../../../../_images/spatia0032.png" />
 </section>
 </section>
 

@@ -55,6 +55,15 @@
 <li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Hydrology</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#load-the-project">Load the Project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#load-your-flo-2d-project">Load Your FLO-2D Project</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-launch-qgis">Step 1: Launch QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-open-your-project">Step 2: Open Your Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-remove-data-from-the-geopackage">Step 3: Remove Data from the GeoPackage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-browse-geopackage-contents">Step 4: Browse GeoPackage Contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-5-understand-the-geopackage-structure">Step 5: Understand the GeoPackage Structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summary">Summary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#assign-an-inflow-node">Assign an Inflow Node</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#assign-rainfall">Assign Rainfall</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#infiltration-assign-scs-curve-number">Infiltration - Assign SCS Curve Number</a></li>
@@ -119,6 +128,90 @@
 <iframe width="560" height="315" src="https://www.youtube.com/embed/w7iFEWItUyA?si=Fyuii5QSBomqkTWH"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+</section>
+<section id="load-your-flo-2d-project">
+<h1>Load Your FLO-2D Project<a class="headerlink" href="#load-your-flo-2d-project" title="Link to this heading"></a></h1>
+<p>This lesson shows how to load a FLO-2D project in QGIS, manage paths, and handle GeoPackage data. It also highlights improvements from version 0.10.115 to Build 25 regarding project portability.</p>
+<section id="step-1-launch-qgis">
+<h2>Step 1: Launch QGIS<a class="headerlink" href="#step-1-launch-qgis" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open the <strong>QGIS application</strong>.</p></li>
+<li><p>You can pin QGIS to your Start Menu for quicker access.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To avoid searching for QGIS every time, right-click the QGIS icon and select <strong>“Pin to Start.”</strong></p>
+</div>
+</section>
+<section id="step-2-open-your-project">
+<h2>Step 2: Open Your Project<a class="headerlink" href="#step-2-open-your-project" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>If QGIS opens your most recent project, simply click on it in the <strong>Recent Projects</strong> list.</p></li>
+<li><p>If the project was moved and no longer loads:
+- Go to <strong>Plugins &gt; FLO-2D &gt; Open FLO-2D Project</strong>.
+- Navigate to your project <cite>.gpkg</cite> file (GeoPackage) and select it.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The GeoPackage contains your entire project, including the <cite>.qgz</cite> file.</p>
+</div>
+</section>
+<section id="step-3-remove-data-from-the-geopackage">
+<h2>Step 3: Remove Data from the GeoPackage<a class="headerlink" href="#step-3-remove-data-from-the-geopackage" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>To remove data:
+- Go to <strong>Plugins &gt; FLO-2D &gt; GeoPackage Management</strong>.
+- Check the layer you want to remove (e.g., <cite>mannings.dat</cite>) and click <strong>Delete</strong>.
+- Click <strong>Cancel</strong> if you don’t want to delete anything.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not right-click and remove layers from the Layers panel. That does <strong>not</strong> remove them from the GeoPackage.</p>
+</div>
+</section>
+<section id="step-4-browse-geopackage-contents">
+<h2>Step 4: Browse GeoPackage Contents<a class="headerlink" href="#step-4-browse-geopackage-contents" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open the <strong>Browser</strong> panel in QGIS.</p></li>
+<li><p>If it’s in an awkward location, drag it beside the Layers panel until the layout is comfortable.</p></li>
+</ul>
+<dl class="simple">
+<dt><strong>**Need Image Here**</strong> browser_panel_layout.png</dt><dd><dl class="field-list simple">
+<dt class="field-odd">alt<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Example layout of QGIS Layers and Browser panels side by side</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Right-click on <strong>GeoPackage</strong> and select <strong>New Connection</strong>.</p></li>
+<li><p>Browse to your project <cite>.gpkg</cite> file and open it.</p></li>
+<li><p>You will now see all layers and tables contained within the GeoPackage.</p></li>
+</ul>
+</section>
+<section id="step-5-understand-the-geopackage-structure">
+<h2>Step 5: Understand the GeoPackage Structure<a class="headerlink" href="#step-5-understand-the-geopackage-structure" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>The GeoPackage is a spatial database built on SQLite.</p></li>
+<li><p>It contains:
+- Vector data (points, lines, polygons)
+- Raster data (elevation layers)
+- Attribute tables (e.g., <cite>RAINCELL.DAT</cite>, <cite>MANNINGS_N.DAT</cite>)
+- The <cite>.qgz</cite> project file itself</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In older versions like 0.10.115, the <cite>.qgz</cite> file was separate. In Build 25, it is embedded inside the GeoPackage for easier file sharing and portability.</p>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use the FLO-2D Plugin to open and manage your project.</p></li>
+<li><p>GeoPackage management allows data cleanup without risking data loss.</p></li>
+<li><p>The embedded <cite>.qgz</cite> file ensures seamless project transfer across devices and folders.</p></li>
+</ul>
+</section>
 <section id="assign-an-inflow-node">
 <h2>Assign an Inflow Node<a class="headerlink" href="#assign-an-inflow-node" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/YoYULnJ-0U0?si=OT2AiswXQdgwaTcF"
