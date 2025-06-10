@@ -2127,7 +2127,7 @@ Once the assigned volume is full, additional water is routed according to standa
 The sink volume method is best for storage facilities above or below ground that do not require a flow rate but do have a known storage volume.
 
 TOL Spatial Method (not recommended)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The TOL Spatial Method uses a flow depth threshold.
 Water will not be exchanged between grid elements until the depth exceeds the TOL value.
