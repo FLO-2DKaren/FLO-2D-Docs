@@ -109,6 +109,7 @@ To download 3DEP DEM data, follow these steps:
 3. Create a new connection to the 3DEP WCS server.
 4. Name the Connection.  In this case the name 3DEP is used.
 5. Add the URL to the dataset: 
+   
 `https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer`
 
 .. image:: ../../img/Pre-Processing-Tools/prepro031.png
