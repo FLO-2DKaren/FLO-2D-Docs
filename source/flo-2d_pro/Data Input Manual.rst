@@ -1,4 +1,4 @@
-.. _data-input-manual:
+.. _data_input_manual:
 
 Data Input Manual
 ==================
