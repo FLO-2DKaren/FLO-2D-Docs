@@ -2075,27 +2075,6 @@ During the falling limb of the hydrograph when the flow depth is less than 1 ft 
 width will decrease to confine the discharge until the original width is again attained.
 The user can assign the range of slope where the multiple channel widening is computed.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Low Impact Development (LID) Modeling
 -----------------------------------------------
 
@@ -2139,7 +2118,6 @@ TOL values are be assigned to represent the composite LID techniques on a given 
 
 *Figure 79.
 FLO-2D Grid Element LID Concept – Spatially Variable LID Elements (brown).*
-
 (image source: http://www.lowimpactdevelopment.org)
 
 Comparison of Methods
