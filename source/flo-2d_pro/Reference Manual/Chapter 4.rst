@@ -2203,7 +2203,7 @@ Instead of allowing flow to enter and pass through an LID basin, the model may t
 
 There has been no change in how TOL values are applied within the FLO-2D engine.
 For any grid element, the TOL value must be exceeded before water can be exchanged with adjacent cells.
-As shown in Figure 78 water depths at or below the TOL value will remain stored on the grid element at the end of the simulation.
+As shown in Figure 81 water depths at or below the TOL value will remain stored on the grid element at the end of the simulation.
 
 For general depression storage, a typical TOLGLOBAL value falls within the range:
 
@@ -2217,8 +2217,8 @@ Global TOL.*
 The global assignment of the TOL value (TOLGLOBAL) is still required in the first line (first parameter) in the TOLER.DAT.
 At the start of a FLO-2D simulation, the TOLGLOBAL value is assigned to all the grid elements.
 The QGIS FLO-2D Plugin includes a dedicated Tol Spatial tool.
-The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL value in the two columns (Figure 79).
-The grid element TOL values can be assigned by polygon selection (Figure 80).
+The data is saved to TOLSPATIAL.DAT file with grid element number and a TOL value in the two columns (Figure 82).
+The grid element TOL values can be assigned by polygon selection (Figure 83).
 
 .. image:: ../img/References/Chapter4/image146.png
 
@@ -2253,7 +2253,7 @@ This approach offers a simple but effective way to simulate LID features that fu
 
 .. image:: ../img/References/Chapter4/image148.png
 
-*Figure 81.
+*Figure 84.
 LID Retention Bioswale.*
 
 
@@ -2298,14 +2298,14 @@ Buildings are represented by Area Reduction Factors (ARFs) and Width Reduction F
 ARF values remove surface area from potential water storage on a grid element.
 WRF values block flow directions between contiguous grid elements.
 The WRF values are not utilized in estimating rainfall runoff from buildings.
-Figure 90 displays buildings on a FLO-2D model with 25 ft grid elements.
+Figure 85 displays buildings on a FLO-2D model with 25 ft grid elements.
 In this figure, the buildings may occupy a portion of a grid element, the entire grid element, or multiple
 grid elements.
 The ARF and WRF values can be assigned automatically using shape file interpolation with the FLO-2D Plugin.
 
 .. image:: ../img/References/Chapter4/image79.jpg
 
-*Figure 90.
+*Figure 85.
 Buildings on a 25 ft Grid System (red lines indicate walls represented as levees).*
 
 There are two options to simulating rainfall runoff from buildings.
@@ -2341,7 +2341,7 @@ Totally blocked elements are gray (ARF = 1) and Partially Blocked elements are i
 
 .. image:: ../img/References/Chapter4/image80.png
 
-*Figure 91.
+*Figure 86.
 Assigned ARF Values to the Buildings.*
 
 There are several assumptions for the rainfall runoff from the buildings:
@@ -2364,32 +2364,32 @@ There are several assumptions for the rainfall runoff from the buildings:
 - The flow depth must exceed a TOL = 0.0042 for flow to be exchanged between interior building elements.
   This represents ponded water storage and is hard coded in the model.
 
-The following example project (Figure 92) has a large building on a steep alluvial fan slope to the north
+The following example project (Figure 87) has a large building on a steep alluvial fan slope to the north
 (top of the page).
 To simulate runoff from the building to the fan surface IRAINBUILDING = 1.
 
 .. image:: ../img/References/Chapter4/image81.jpg
 
-*Figure 92.
+*Figure 87.
 Location of a Large Building.*
 
 The rainfall results in flooding on the alluvial fan with the floodwave moving from south to north
 (towards the top of the page).
 The building is in a swale and takes a direct hit from the flooding.
-Figure 93 shows the flooding (maximum depths - dark blue grid elements) piling up on the upstream side of
+Figure 88 shows the flooding (maximum depths - dark blue grid elements) piling up on the upstream side of
 the building (south side of the building) and flowing to the west to get around the building.
 Along the building south wall, the predicted interior maximum depths are less than the tolerance value (gray cells).
 
 .. image:: ../img/References/Chapter4/image128.png
 
-*Figure 93.
+*Figure 89.
 Maximum Flow Depths Inside the Building.*
 
 The rainfall runoff flows inside the building to reach the north wall and is debouched from the building.
 The building is outlined in red.
-Figure 94 shows the maximum velocities on the alluvial fan and indicates that the flow is moving inside the building.
+Figure 90 shows the maximum velocities on the alluvial fan and indicates that the flow is moving inside the building.
 The flow is routed in the building interior based on the topography and roughness until it reaches the north side
-and then crosses to the outside of the building (Figure 95).
+and then crosses to the outside of the building (Figure 91).
 This example illustrates that the flooding outside the building will progress around the building and the rainfall
 runoff on the building roof leaves the building.
 It is possible for the flow to leave the building in any direction.
@@ -2397,47 +2397,47 @@ The building is outlined in red.
 
 .. image:: ../img/References/Chapter4/image129.png
 
-*Figure 94.
+*Figure 90.
 Maximum Flow Velocities on the Alluvial Fan.*
 
 .. image:: ../img/References/Chapter4/image130.png
 
-*Figure 95.
+*Figure 91.
 Maximum Flow Velocities.*
 
 Downspout
 ~~~~~~~~~~~~~~~~
 
-The building location selected for this project is shown in Figure 96.
+The building location selected for this project is shown in Figure 92.
 The red lines in these figures are levees and represent a parapet wall surrounding the entire building roof.
 On the project building, the levee elements encompass the blocked building (ARF = 1) elements.
 The completely blocked elements represent the building roof.
 The roof grid element elevations are usually assigned a ground elevation.
 These building elevations can be edited to represent the roof.
-The roof elements can be selected together and assigned a uniform elevation representing a flat roof (Figure 96).
+The roof elements can be selected together and assigned a uniform elevation representing a flat roof (Figure 93).
 The parapet wall is simulated by selecting the appropriate grid elements and assigning the levee grid element
-direction and crest (wall elevation) as shown in the Figure 98 levee edit dialog box.
+direction and crest (wall elevation) as shown in the Figure 94 levee edit dialog box.
 Attention must be paid to the selection of all the potential levee obstruction flow directions to completely
 contain the rainfall storage on the building roof.
-The parapet wall is shown as the red levee in Figure 96 representing the roof boundary.
+The parapet wall is shown as the red levee in Figure 92 representing the roof boundary.
 The roof elevation was assigned as approximately 20 ft higher than the ground elevation.
 This data is enough to simulate rainfall storage on a flat roof.
 This is one of the test simulations.
 
 .. image:: ../img/References/Chapter4/image85.jpg
 
-*Figure 96.
+*Figure 92.
 Project Building Location (in blue oval).*
 
 .. image:: ../img/References/Chapter4/Chapte114.jpeg
 .. image:: ../img/References/Chapter4/Chapte113.jpg
 
-*Figure 97.
+*Figure 93.
 Building Roof Element Elevation Editing.*
 
 .. image:: ../img/References/Chapter4/image88.jpg
 
-*Figure 98.
+*Figure 94.
 Grid Element Levee Crest Elevation Editing.*
 
 Adjust Roof Slope
@@ -2445,49 +2445,49 @@ Adjust Roof Slope
 
 A sloped roof can be established by modifying the roof elevations.
 Individual grid element elevations can be edited by double clicking a given cell and using the elevation
-field (Figure 99).
+field (Figure 95).
 Grid element elevations can be reset in corners and along the roof borders to establish some cornerstone
 elevations for further editing.
 
 .. image:: ../img/References/Chapter4/image131.png
 
-*Figure 99.
+*Figure 95.
 Grid Element Elevation Editing.*
 
 To establish a sloped roof, select a line of grid elements between two cornerstone elements with known roof
-elevations, then choose the street elevation editor (Figure 100).
+elevations, then choose the street elevation editor (Figure 96).
 
 .. image:: ../img/References/Chapter4/image90.jpg
 
-*Figure 100.
+*Figure 96.
 Roof Element Elevation Editing Command.*
 
-Select the *Elevation Adjustments Tab* shown in Figure 101 below.
+Select the *Elevation Adjustments Tab* shown in Figure 97 below.
 This will activate a dialog box window which will enable a linear slope interpolation between the two
-selected cornerstone elements (Figure 102).
+selected cornerstone elements (Figure 98).
 Figure 103 displays the roof element elevations prior to interpolation.
 
 .. image:: ../img/References/Chapter4/image91.jpg
 
-*Figure 101.
+*Figure 97.
 Roof Element Elevation Editing Tab.*
 
 .. image:: ../img/References/Chapter4/image132.png
 
-*Figure 102.
+*Figure 98.
 Selecting the Two Cornerstone Grid Elements to Interpolate the Roof Slope.*
 
 .. image:: ../img/References/Chapter4/image93.jpg
 
-*Figure 103.
+*Figure 99.
 Graphic Display of the Roof Element Elevations Between the Two Cornerstone Cells.*
 
 The *Assign* button will complete the interpolation of the roof cell elevations between the cornerstone
-elements and save the results as shown in Figure 104.
+elements and save the results as shown in Figure 100.
 
 .. image:: ../img/References/Chapter4/image94.jpeg
 
-*Figure 104.
+*Figure 100.
 Completed Roof Element Elevation Slope Interpolation.*
 
 Downspout Hydraulics
@@ -2518,7 +2518,7 @@ HYSTRUC.DAT file example
 
 .. image:: ../img/References/Chapter4/image140.png
 
-*Figure 105.
+*Figure 101.
 File Sample HYSTRUC.DAT.*
 
 In the S-line above, the data includes a downspout name, floodplain, or channel element (floodplain = 0),rating
@@ -2529,17 +2529,17 @@ This data can be entered graphically in the GDS.
 
 .. image:: ../img/References/Chapter4/image95.jpg
 
-*Figure 106.
+*Figure 102.
 Downspout Hydraulic Structure as Brown Elements in the Upper Right Corner.*
 
-The hydraulic structure editor dialog window for the downspout inlet and outlets shown in Figure 106
-is displayed in Figure 107.
+The hydraulic structure editor dialog window for the downspout inlet and outlets shown in Figure 102
+is displayed in Figure 103.
 Note that the downspout inlet and outlet elements do not have to be contiguous.
 Any number of downspouts can be simulated in any location on the building roof.
 
 .. image:: ../img/References/Chapter4/image96.jpg
 
-*Figure 107.
+*Figure 103.
 Hydraulic Structure Dialog Box with Entered Downspout Data.*
 
 Verification Testing of the Building Roof Runoff Enhancements
@@ -2565,7 +2565,7 @@ To focus on the building with the assigned downspout, the storm drain component 
 Only the building discussed in this document will be reviewed.
 The simulation was terminated after the rainfall ended after two hours.
 The flat roof elevation was 1280.00 and after 2 hours, the computed final roof flow depths results in a uniform
-water surface elevation of 1280.25 on all the elements since there is no outlet (Figure 108) using
+water surface elevation of 1280.25 on all the elements since there is no outlet (Figure 104) using
 the FLO-2D Maxplot map program).
 
 The sloped roof test is designed to predict the rainfall runoff flow to the downspout.
@@ -2575,21 +2575,21 @@ Most of the roof has a slope of 0.001 or 0.02 ft per 20 ft grid element.
 The slope in the final few grid elements in the NE corner of the roof are a little steeper.
 In this case, the parapet walls are one foot high and since the maximum water surface elevation does
 not exceed 1281, there is no flow overtopping the parapet walls.
-The maximum water surface elevation is shown in Figure 109.
+The maximum water surface elevation is shown in Figure 105.
 Note that all the roof maximum water surface elevations are equal, but the maximum flow depths vary with the
 roof elevation and the deepest depth is predicted at the downspout element.
 The downspout outlet element 21990 has the same water surface elevation and small depth in both simulations.
 
 .. image:: ../img/References/Chapter4/image97.png
 
-*Figure 108.
+*Figure 104.
 Total Rainfall (3 inches) Accumulated on a Flat Roof.*
 
 Cells 22365 and 21990 will be the downspout inlet and outlet, respectively.
 
 .. image:: ../img/References/Chapter4/image98.jpg
 
-*Figure 109.
+*Figure 105.
 Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
 
 (Compare the Inlet and Outlet Maximum WS Elevations)
@@ -2597,14 +2597,14 @@ Maximum Flow Depth and Water Surface Elevation on a Sloped Roof.*
 In the third simulation, the parapet wall was lowered by 0.75 ft to 1280.25 in the LEVEE.DAT file for the
 downspout inlet grid element 22365.
 During the simulation, the maximum water surface elevation exceeds the parapet wall elevation for the downspout
-inlet element (22365 NE flow direction 5) and overtops the wall (Figure 110).
-Compare this grid element maximum water surface elevation and flow depth in Figure 109 and note that they are
+inlet element (22365 NE flow direction 5) and overtops the wall (Figure 106).
+Compare this grid element maximum water surface elevation and flow depth in Figure 105 and note that they are
 lower because the parapet wall is overtopped, and some rainfall storage is discharged to the ground.
 Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.
 
 .. image:: ../img/References/Chapter4/image133.png
 
-*Figure 110.
+*Figure 106.
 Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).*
 
 The overtopping discharge is reported below from the file LEVOVERTOPMAX.OUT.
@@ -2612,17 +2612,17 @@ The discharge is reported as negative representing flow out of the grid element.
 
 .. image:: ../img/References/Chapter4/image141.png
 
-*Figure 111.
+*Figure 107.
 File Sample LEVOVERTOPMAX.OUT.*
 
 The final test simulation combines the sloped roof with a downspout in grid element 22365.
-The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 112.
+The inlet (red oval) maximum water surface is lowered by the downspout water discharge as shown in Figure 108.
 The downspout outlet element 21990 (blue oval) has an increased maximum water surface when compared with
-Figure 109 and Figure 110.
+Figure 109 and Figure 106.
 
 .. image:: ../img/References/Chapter4/image134.png
 
-*Figure 112.
+*Figure 108.
 Maximum Flow Depth and Water Surface Elevation.
 (Sloped Roof with a Downspout).*
 
@@ -2630,7 +2630,7 @@ The discharge out of the downspout is reported below from the HYDROSTRUCT.OUT fi
 
 .. image:: ../img/References/Chapter4/image142.png
 
-*Figure 113.
+*Figure 109.
 File Sample HYDROSTRUCT.OUT.*
 
 The FLO-2D model simulation of rainfall runoff from building roofs has been modified to allow parapet walls
@@ -2708,18 +2708,18 @@ n-value (SHALLOWN).
 Gutter Flow
 ~~~~~~~~~~~~~~~~~~
 
-Street gutter flow is defined in the Figure 114 where h = curb height.
+Street gutter flow is defined in the Figure 110 where h = curb height.
 
 .. image:: ../img/References/Chapter4/image101.png
 
-*Figure 114.
+*Figure 110.
 Gutter Diagram.*
 
-The gutter flow can be shared in all eight flow directions (Figure 115):
+The gutter flow can be shared in all eight flow directions (Figure 111):
 
 .. image:: ../img/References/Chapter4/image102.png
 
-*Figure 115.
+*Figure 111.
 Street and Gutter Flow Diagram.*
 
 The street elements are floodplain elements with appropriate elevations and n-values to represent street flow.
@@ -2737,7 +2737,7 @@ surface elevation, then the flow is shared from the sidewalk to the gutter.
 The flow is shared between the gutter element and the contiguous floodplain elements using the floodplain
 flow depth and the gutter element sidewalk flow depth.
 
-Flow from the gutter to the sidewalk inside the gutter element is depicted in Figure 116.
+Flow from the gutter to the sidewalk inside the gutter element is depicted in Figure 112.
 
 .. math::
    :label:
@@ -2751,10 +2751,10 @@ Flow from the gutter to the sidewalk inside the gutter element is depicted in Fi
 
 .. image:: ../img/References/Chapter4/image103.png
 
-*Figure 116.
+*Figure 112.
 Flow Distribution Street to Sidewalk.*
 
-Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 117.
+Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 113.
 
 .. math::
    :label:
@@ -2768,12 +2768,12 @@ Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depic
 
 .. image:: ../img/References/Chapter4/image104.png
 
-*Figure 117.
+*Figure 113.
 Flow Distribution Sidewalk to Street.*
 
 **Results:**
 
-In the following example (Figure 118) the gutter elements are displayed in brown.
+In the following example (Figure 114) the gutter elements are displayed in brown.
 The gutter elements are only assigned to the north side of the street in a single line along one street
 running east to west.
 Approximately two-thirds of the length of the street, the street is shifting one row to the north.
@@ -2785,7 +2785,7 @@ Buildings and walls are simulated.
 
 .. image:: ../img/References/Chapter4/image105.jpg
 
-*Figure 118.
+*Figure 114.
 Gutter Elements with Storm Drain.*
 
 The gutter flow maximum depth results shown below indicate that with the gutter the flow is confined to the
@@ -2793,18 +2793,18 @@ street elements and the volume is further
 distributed downstream.
 The flow has less spread between the street and floodplain elements along the street with the gutter flow.
 
-The results without the gutter are shown Figure 119:
+The results without the gutter are shown Figure 115:
 
 .. image:: ../img/References/Chapter4/image106.jpg
 
-*Figure 119.
+*Figure 115.
 Flow Depth without Gutter*
 
-The gutter flow results are displayed in the Figure 120.
+The gutter flow results are displayed in the Figure 116.
 
 .. image:: ../img/References/Chapter4/image107.jpg
 
-*Figure 120.
+*Figure 116.
 Flow Depth with Gutter.*
 
 Bridge Routine
@@ -2820,11 +2820,11 @@ In a FLO-2D flood simulation, the focus is to predict the discharge between two 
 distribute the flood volume.
 As such, the bridge component is a link between two grid elements (channel or floodplain) and the discharge
 through the bridge is computed by representing the various physical features of the bridge that constrict
-the flow (see Figure 121).
+the flow (see Figure 117).
 
 .. image:: ../img/References/Chapter4/image108.jpeg
 
-*Figure 121.
+*Figure 117.
 Constricted Flow through a Bridge (Tom Imbrigiotta, USGS).*
 
 The head loss or energy loss through a bridge (referred to as the afflux) is generated from three primary sources:
@@ -2854,11 +2854,11 @@ volume of water passing through bridge.
 The primary result of the FLO-2D bridge routine for unsteady flow is to assess the deviation from the approximate
 normal depth flow condition through the bridge that results in an upstream backwater effect.
 This will enable the accurate analysis of bridge constricted floodplain and river reaches that exhibit
-non-uniform and unsteady flow conditions (Figure 122).
+non-uniform and unsteady flow conditions (Figure 118).
 
 .. image:: ../img/References/Chapter4/image109.png
 
-*Figure 122.
+*Figure 118.
 Unsteady Non-Uniform Flow through a Bridge Constriction.*
 
 Bridge Flow
@@ -2877,38 +2877,38 @@ The flow may be subcritical or supercritical, although supercritical flow may be
 concrete apron or bedrock substrate.
 Subcritical flow is the most prevalent flow regime as bridge constrictions typically reduce upstream velocities
 and cause backwater effects as opposed to flow acceleration through the bridge.
-Five types of subcritical bridge flow are shown in Figure 123 though Figure 127 where the flow depth at the
+Five types of subcritical bridge flow are shown in Figure 119 though Figure 123 where the flow depth at the
 bridge Y\ :sub:`z` required to submerge the bridge opening is greater than about 1.1 \* Z
 (distance from the bed to the bridge low chord) (Chow, 1959 and Hamill, 1999).
 
 .. image:: ../img/References/Chapter4/image110.png
 
-*Figure 123.
+*Figure 119.
 Type 1 Flow: Free surface, subcritical flow.*
 
 (Z > Yu > Yd).*
 
 .. image:: ../img/References/Chapter4/image111.png
 
-*Figure 124.
+*Figure 120.
 Type 2 Flow: Inlet submerged, outlet free surface, partially full, sluice gate flow.
 (Yu > Z > Yd).*
 
 .. image:: ../img/References/Chapter4/image112.png
 
-*Figure 125.
+*Figure 121.
 Type 3 Flow: Inlet submerged, outlet submerged, opening full, sluice gate-orifice transition flow.
 (Yu > Z > Yd).*
 
 .. image:: ../img/References/Chapter4/image113.png
 
-*Figure 126.
+*Figure 122.
 Type 4 Flow: Inlet submerged, outlet submerged, orifice flow.
 (Yu > Yd > Z).*
 
 .. image:: ../img/References/Chapter4/image114.png
 
-*Figure 127.
+*Figure 123.
 Type 5 Flow: Inlet submerged, outlet submerged, deck overflow.
 (Yu > Yd > Z).*
 
@@ -2922,7 +2922,7 @@ the bridge geometry and the downstream water surface elevation is irrelevant.
 The submergence of the upstream opening may be sporadic until the upstream flow depth (Y\ :sub:`u`) is
 ten percent greater than the bridge low chord elevation.
 As the water surface level approaches the low chord, the discharge becomes highly turbulent and fluctuates rapidly,
-alternating between free surface flow and pressure flow (Type 3 flow as shown in Figure 128).
+alternating between free surface flow and pressure flow (Type 3 flow as shown in Figure 124).
 The transition between sluice gate flow and orifice flow is unique to the bridge and may be temporally
 variable with scour, deposition, or debris blockage.
 Based on project applications, sluice gate flow may persist until the upstream flow depth is 1.5 times or
@@ -2930,7 +2930,7 @@ greater than the depth to the low chord.
 
 .. image:: ../img/References/Chapter4/image115.jpeg
 
-*Figure 128.
+*Figure 124.
 Pressure Flow with the Water Surface above the Low Chord Elevation
 (M.Huard, USGS).*
 
@@ -2942,7 +2942,7 @@ Since the downstream water prevents efficient flow through the bridge, upstream 
 In this case, the discharge control is a combination of the bridge structure and the channel characteristics.
 
 When the flow begins to overtop the bridge, the discharge is the sum of the pressure flow plus the deck
-overflow (Type 5 flow, Figure 121).
+overflow (Type 5 flow, Figure 117).
 This is typically modeled as broadcrested weir flow with a coefficient in the range of 2.65 to 3.21.
 If the bridge has guard rails or debris, the selected weir coefficient should be conservatively low.
 Typically, overtopping flow is shallow, but for a long bridge the overflow discharge can be significant.
@@ -2961,7 +2961,7 @@ factors that are not limited to:
 
 .. image:: ../img/References/Chapter4/image116.jpeg
 
-*Figure 129.
+*Figure 125.
 Bridge Deck Overflow with Guardrail
 (Llano River Bridge Collapse, CBS Austin).*
 
@@ -2987,7 +2987,7 @@ The velocity (and hence the discharge) is computed at one of eight floodplain fl
 between two cells.
 Prior to the bridge routine, the discharge for the bridge (or any hydraulic structure) located between two
 cells was computed only with a rating curve or table.
-The hydraulic structure inflow and outflow elements do not have to be contiguous (Figure 130).
+The hydraulic structure inflow and outflow elements do not have to be contiguous (Figure 126).
 In the bridge flow modeling component, the free surface flow, pressure flow and deck overflow will replace the
 rating curve or table.
 The model will identify the flow condition, compute the appropriate discharge, and exchange the discharge volume
@@ -2999,7 +2999,7 @@ outflow node (or multiple nodes) are still assigned, and the two bridge cross se
 
 .. image:: ../img/References/Chapter4/image117.png
 
-*Figure 130.
+*Figure 126.
 FLO-2D Model Bridge Inflow and Outflow Elements Separated Grid Elements.*
 
 Free Surface Flow
@@ -3014,10 +3014,10 @@ This procedure was originally documented in Chow (1959) and is widely applied fo
 solution of the energy and continuity equations.
 Various bridge configurations are considered in the method which includes piers, wingwalls, flow skew, entrance
 effects, submergence and two cross sections.
-The upstream cross section should be located beyond the influence of the bridge (Xsec 1 in Figure 131).
-Cross section 2 should be located at the bridge minimum cross section flow area (Xsec 2 in Figure 131).
+The upstream cross section should be located beyond the influence of the bridge (Xsec 1 in Figure 127).
+Cross section 2 should be located at the bridge minimum cross section flow area (Xsec 2 in Figure 127).
 The USGS method assumes that the bridge constriction is a discharge-stage control given by an equation in which
-the discharge is expressed as a function of the flow area, head loss across the bridge (∆h in Figure 131),
+the discharge is expressed as a function of the flow area, head loss across the bridge (∆h in Figure 127),
 and a coefficient of contraction as discussed below.
 The complete derivation of the free surface (flow below the low chord) equation can be reviewed in either
 Hamill (1999) or Chow (1959).
@@ -3032,7 +3032,7 @@ The subcritical discharge Q through constrictions equation is given in Chow’s 
 
 where:
 
-    A\ :sub:`2` = flow area at cross section 2 (Figure 124 downstream end of bridge)
+    A\ :sub:`2` = flow area at cross section 2 (Figure 120 downstream end of bridge)
 
     h\ :sub:`f` = frictional loss
 
@@ -3074,7 +3074,7 @@ where:
 
     L\ :sub:`B` = length of contracted reach
 
-    L\ :sub:`1-2` = length of the reach from cross section 1 to cross section 2 (Figure 124)
+    L\ :sub:`1-2` = length of the reach from cross section 1 to cross section 2 (Figure 120)
 
     K\ :sub:`1` = conveyance at cross section 1 (equals 1.486/n A\ :sub:`1` R\ :sub:`1`\ :sup:`0.67`)
 
@@ -3082,13 +3082,13 @@ where:
 
     n = Manning’s n-value through the contracted reach
 
-    A\ :sub:`1` and A\ :sub:`2` = cross section flow areas (Figure 124).
+    A\ :sub:`1` and A\ :sub:`2` = cross section flow areas (Figure 120).
 
-    R\ :sub:`1` and R\ :sub:`2` =  hydraulic radiuses (Figure 124).
+    R\ :sub:`1` and R\ :sub:`2` =  hydraulic radiuses (Figure 120).
 
 .. image:: ../img/References/Chapter4/image118.png
 
-*Figure 131.
+*Figure 127.
 Conceptual Bridge Plan and Profile with River Cross Sections.*
 
 To apply this free surface flow equation, the type of bridge opening (one of four) must be selected, and the bridge
@@ -3110,7 +3110,7 @@ i. Two cross sections will be used to represent the bridge.
    For a 1-D channel, the bridge cross sections can be represented by existing channel cross sections with the
    first cross section being the bridge inflow node channel cross section.
    This cross section should represent essentially normal depth upstream of the bridge (beyond backwater effects).
-   The length between the two cross sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 131) can be adjusted and can be
+   The length between the two cross sections (UPLENGTH12 – L\ :sub:`1-2` in Figure 127) can be adjusted and can be
    longer than a grid element side length if the cell size is too short to extend to the normal flow depth conditions.
 
 ii. The bridge flow will be exchanged between the upstream inflow and downstream outflow elements
@@ -3126,7 +3126,7 @@ iii. If there is widespread floodplain flooding, the upstream cross section shou
      The cross section should not encompass the entire valley floodplain.
 
 iv. The flow depth at the bridge is defined by the upstream inflow element water surface elevation and the
-    bridge cross section thalweg in cross section 2 (Figure 131).
+    bridge cross section thalweg in cross section 2 (Figure 127).
     This is not entirely accurate, since the water surface will vary from the upstream cross section to the bridge
     cross section, but water surface elevation at the bridge is not computed directly by the model.
     Given the potential of backwater effects, however, the impact of the variable water surface elevation on
@@ -3150,7 +3150,7 @@ from the channel to the bridge and the discharge mimics a sluice gate flow (Figu
 In general, sluice gate flow applies only when the water level is on the upstream bridge face, but the highly
 turbulent transition to orifice flow is obscure with potential for drowning the downstream opening (Figure 3c).
 In a stage-discharge plot, the free surface channel flow and the bridge flow rapidly diverge as the water
-surface approaches the soffit (Figure 132).
+surface approaches the soffit (Figure 128).
 The difference between the two water surfaces is the afflux.
 The bridge flow in this figure is concave upwards above the soffit.
 Sluice gate discharge Q\ :sub:`p` (pressure flow) is described by the equation:
@@ -3178,19 +3178,19 @@ where:
 
 .. image:: ../img/References/Chapter4/image119.jpg
 
-*Figure 132.
+*Figure 128.
 Stage-Discharge Variation between Free Surface Flow and Bridge Flow (Hamill, 1999; p.53).*
 
 For subcritical flow the velocity head term V\ :sub:`u`\ :sup:`2`/2g (including the velocity coefficient) can be
 ignored and lowest flow depth Y through the bridge will vary from approximately Z/2 to the downstream tailwater
-elevation (Figure 124 and Figure 125).
-Figure 133 indicates a range of 0.27 to 0.50 for the sluice gate coefficient as a function of the low chord
+elevation (Figure 120 and Figure 121).
+Figure 129 indicates a range of 0.27 to 0.50 for the sluice gate coefficient as a function of the low chord
 submergence, however, Hamill (1999, Figure2.11, p.55) indicates that the coefficient can approach 0.6
 depending on the bridge configuration.
 
 .. image:: ../img/References/Chapter4/image120.png
 
-*Figure 133.
+*Figure 129.
 Sluice Gate Discharge Coefficient as Function of the Low Chord Submergence (FHA, 2012).*
 
 An important aspect of sluice gate flow is that there is a transition between sluice gate flow and free surface
@@ -3215,8 +3215,8 @@ over a range of flows:
 
    C = 0.445 \left(\frac{Y_u}{Z} \right)^{0.122}
 
-which is plotted as the green line in Figure 133.
-The FHA curve in Figure 133 has a regressed relationship of:
+which is plotted as the green line in Figure 129.
+The FHA curve in Figure 129 has a regressed relationship of:
 
 .. math::
    :label:
@@ -3254,14 +3254,14 @@ The orifice coefficient of discharge C, as determined by experiment, ranges from
 A value of 0.8 is recommended for a typical two- to four-lane concrete girder bridge coefficient
 (Hoggan, 1989; p.401).
 Hamill (1999) plots data from actual bridge flow and other sources to demonstrate the variation of the coefficient
-of discharge with submergence (Figure 134).
+of discharge with submergence (Figure 130).
 
 .. image:: ../img/References/Chapter4/image121.png
 
-*Figure 134.
+*Figure 130.
 Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1999).*
 
-The regressed relationship of the data in Figure 133 for Y\ :sub:`u`/Z > 1.25 is given by:
+The regressed relationship of the data in Figure 129 for Y\ :sub:`u`/Z > 1.25 is given by:
 
 .. math::
    :label:
@@ -3270,7 +3270,7 @@ The regressed relationship of the data in Figure 133 for Y\ :sub:`u`/Z > 1.25 is
 
 This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as
-shown in Figure 133.
+shown in Figure 129.
 
 Pressure Flow Plus Weir Flow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -3363,7 +3363,7 @@ A typical HYSTRUCT.DAT file for a bridge would be as follows:
 
 .. image:: ../img/References/Chapter4/image143.png
 
-*Figure 135.
+*Figure 131.
 File Sample HYSTRUCT.OUT.*
 
 These parameters are defined in Table 14 and are used to compute the coefficients for free surface flow presented
@@ -3377,11 +3377,11 @@ All the Appendix figures were digitized and are hardcoded into the model.
 The two cross sections are located: 1) Upstream of the bridge where essentially normal depth occurs (upstream of
 the bridge backwater effects); and 2) At the bridge to reflect the channel contraction and low chord.
 The cross section data is listed in the BRIDGE_XSEC.DAT file.
-The two required bridge cross sections are shown in Figure 131.
+The two required bridge cross sections are shown in Figure 127.
 This data is necessary regardless of whether there are 1-D channel cross sections or no surveyed cross sections
 associated with a bridge on the floodplain.
 The bridge cross section can be located anywhere in the bridge that defines the bridge contraction.
-The upstream cross section is located by the distance L\ :sub:`1-2` (Figure 131).
+The upstream cross section is located by the distance L\ :sub:`1-2` (Figure 127).
 The pier or pile widths are not entered in the cross section data.
 The sum of all the pier or pile widths (PIERWIDTH) is entered in the B-line data in HYSTRUC.DAT (Table 1).
 The cross section data is entered in the BRIDGE_XSEC.DAT file in the ASCII format below (data separated by spaces).
@@ -3392,7 +3392,7 @@ and the bridge station bed elevation.
 
 .. image:: ../img/References/Chapter4/image144.png
 
-*Figure 136.
+*Figure 132.
 File Sample BRIDGE_XSEC.OUT.*
 
 The bridge cross section is referenced to the upstream cross section stations.
