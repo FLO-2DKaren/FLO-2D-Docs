@@ -1520,7 +1520,7 @@ and
 .. math::
    :label:
 
-  \eta = \alpha_1 \, e^{\beta_1 \, C_v}
+   \eta = \alpha_1 \, e^{\beta_1 \, C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien,
 1988).
