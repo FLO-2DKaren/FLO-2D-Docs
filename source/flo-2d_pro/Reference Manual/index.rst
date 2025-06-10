@@ -2,7 +2,7 @@
 
 .. _reference_manual:
 
-References
+Reference
 ===========
 
 .. toctree::
@@ -14,4 +14,4 @@ References
    Chapter 3
    Chapter 4
    Chapter 5
-   References
+   Reference
