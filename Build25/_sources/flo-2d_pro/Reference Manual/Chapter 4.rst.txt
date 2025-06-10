@@ -1432,7 +1432,7 @@ following form as a dimensionless slope:
 .. math::
    :label:
 
-  S_f = S_y \, + \, S_v \, + \, S_{td}
+   S_f = S_y \, + \, S_v \, + \, S_{td}
 
 where:
 
@@ -1520,7 +1520,7 @@ and
 .. math::
    :label:
 
-  \eta = \alpha_1 \, e^{\beta_1 \, C_v}
+   \eta = \alpha_1 \, e^{\beta_1 \, C_v}
 
 where α\ :sub:`i` and β\ :sub:`i` are empirical coefficients defined by laboratory experiment (O'Brien and Julien,
 1988).

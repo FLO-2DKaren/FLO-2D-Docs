@@ -1258,8 +1258,8 @@ Shear Stress as a Function of Shear Rate for Fluid Deformation Models.</em></p>
 <p>To define all the shear stress terms for use in the FLO-2D model, the following approach was taken.
 By analogy, from the work of Meyer-Peter and Müller (1948) and Einstein (1950), the shear stress relationship is depth integrated and rewritten in the
 following form as a dimensionless slope:</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}:label:\\S_f = S_y \, + \, S_v \, + \, S_{td}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-15">
+<span class="eqno">(4.16)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-15" title="Link to this equation"></a></span>\[S_f = S_y \, + \, S_v \, + \, S_{td}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>S<sub>f</sub> is the total friction slope</p>
@@ -1269,8 +1269,8 @@ following form as a dimensionless slope:</p>
 </div></blockquote>
 <p>The viscous and turbulent-dispersive slope terms are written in terms of depth- averaged velocity V.
 The viscous slope can be written as:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-15">
-<span class="eqno">(4.16)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-15" title="Link to this equation"></a></span>\[S_v = \frac{K \, \eta}{8 \, \gamma_m} \frac{V}{h^2}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-16">
+<span class="eqno">(4.17)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-16" title="Link to this equation"></a></span>\[S_v = \frac{K \, \eta}{8 \, \gamma_m} \frac{V}{h^2}\]</div>
 <p>where;</p>
 <blockquote>
 <div><p>γ<sub>m</sub> is the specific weight of the sediment mixture.</p>
@@ -1284,14 +1284,14 @@ In the FLO-2D model if K = 0 in the SED.DAT file, the value of K is automaticall
 <img alt="../../_images/Chapte105.jpg" src="../../_images/Chapte105.jpg" />
 <p>The flow resistance n<sub>td</sub> of the turbulent and dispersive shear stress components are combined into an equivalent Manning’s n-value for the
 flow:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-16">
-<span class="eqno">(4.17)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-16" title="Link to this equation"></a></span>\[S_{td} = \frac{n_{td} \, ^2 \, V^2}{h^{\frac{4}{3}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-17">
+<span class="eqno">(4.18)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-17" title="Link to this equation"></a></span>\[S_{td} = \frac{n_{td} \, ^2 \, V^2}{h^{\frac{4}{3}}}\]</div>
 <p>At very high concentrations, the dispersive stress arising from sediment particle contact increases the flow resistance n<sub>td</sub> by transferring
 more momentum flux to the boundary.
 To estimate this increase in flow resistance, the conventional turbulent flow resistance n-value n<sub>t</sub> is increased by an exponential function
 of the sediment concentration C<sub>v</sub>:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-17">
-<span class="eqno">(4.18)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-17" title="Link to this equation"></a></span>\[n_{td} = n_t \, b \, e^{mC_v}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-18">
+<span class="eqno">(4.19)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-18" title="Link to this equation"></a></span>\[n_{td} = n_t \, b \, e^{mC_v}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>n<sub>t</sub> is the turbulent n-value</p>
@@ -1300,8 +1300,8 @@ of the sediment concentration C<sub>v</sub>:</p>
 <p>This equation was based on unpublished paper by Julien and O’Brien (1998) that relates the dispersive and turbulent resistance in hyperconcentrated
 sediment flows as function of the ratio of the flow depth to the sediment grain size.
 The friction slope components can then be combined in the following form:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-18">
-<span class="eqno">(4.19)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-18" title="Link to this equation"></a></span>\[S_f = \frac{\tau_y}{\gamma_m h} \, + \,
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-19">
+<span class="eqno">(4.20)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-19" title="Link to this equation"></a></span>\[S_f = \frac{\tau_y}{\gamma_m h} \, + \,
 \frac{K \, \eta \, V}{8 \, \gamma_m \, h^2} \, + \,
 \frac{n_{td} \, ^2 \, V^2}{h^{\frac{4}{3}}}\]</div>
 <p>A quadratic equation solution to the friction slope equation has been formulated in the FLO-2D model to estimate the velocity for use in the momentum
@@ -1312,11 +1312,11 @@ Reasonable values of K and Manning’s n-value can be assumed for the channel an
 The specific weight of the fluid matrix γ<sub>m</sub>, yield stress τ<sub>y</sub> and viscosity η vary principally with sediment concentration.
 Unless a rheological analysis of the mudflow site material is available, the following empirical relationships can be used to compute viscosity and
 yield stress:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-19">
-<span class="eqno">(4.20)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-19" title="Link to this equation"></a></span>\[\tau_y = \alpha_2 \, e^{\beta_2 C_v}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-20">
+<span class="eqno">(4.21)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-20" title="Link to this equation"></a></span>\[\tau_y = \alpha_2 \, e^{\beta_2 C_v}\]</div>
 <p>and</p>
-<div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}:label:\\\eta = \alpha_1 \, e^{\beta_1 \, C_v}\end{aligned}\end{align} \]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-21">
+<span class="eqno">(4.22)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-21" title="Link to this equation"></a></span>\[\eta = \alpha_1 \, e^{\beta_1 \, C_v}\]</div>
 <p>where α<sub>i</sub> and β<sub>i</sub> are empirical coefficients defined by laboratory experiment (O’Brien and Julien,
 1988).
 The viscosity (dynes-s/cm<sup>2</sup>) and yield stress (dynes/cm<sup>2</sup>) are shown to be exponential functions
@@ -1371,8 +1371,8 @@ The maximum specific energy is reported to the file SPECENERGY.OUT by grid eleme
 The user can then multiply the impact pressure by the structure length within the grid element to get a maximum impact force on the structure.
 Impact force is a function of fluid density, structure materials, angle of impact, and several other variables.
 To conservatively estimate the impact pressure, the equation for water taken from Deng (1996):</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-20">
-<span class="eqno">(4.21)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-20" title="Link to this equation"></a></span>\[P_i = k \, \rho_f \, V^2\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-22">
+<span class="eqno">(4.23)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-22" title="Link to this equation"></a></span>\[P_i = k \, \rho_f \, V^2\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>P<sub>i</sub> is the impact pressure</p>
@@ -1384,16 +1384,16 @@ To conservatively estimate the impact pressure, the equation for water taken fro
 concentration by volume.
 The coefficient k is based on a regressed relationship as a function of sediment concentration from the data presented in Deng (1996).
 This relationship is given by,</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-21">
-<span class="eqno">(4.22)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-21" title="Link to this equation"></a></span>\[k = 1.261 \, e^{C_w}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-23">
+<span class="eqno">(4.24)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-23" title="Link to this equation"></a></span>\[k = 1.261 \, e^{C_w}\]</div>
 <p>where Cw = sediment concentration by weight.
 The impact pressure is reported in the file IMPACT.OUT.</p>
 <p>The static pressure P<sub>s</sub> for each grid element is also expressed as a force per unit length.
 It is given by the maximum flow depth to the center of gravity ĥ times the specific weight of the fluid.
 The static pressure is then multiplied by the flow depth to compute the static force per unit length of structure (assumes surface area A = l x d).
 The maximum static pressure is written to the STATICPRESS.OUT file.</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-22">
-<span class="eqno">(4.23)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-22" title="Link to this equation"></a></span>\[P_s = \gamma \hat{h}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-24">
+<span class="eqno">(4.25)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-24" title="Link to this equation"></a></span>\[P_s = \gamma \hat{h}\]</div>
 </section>
 <section id="floodway-delineation">
 <h2><span class="section-number">4.18. </span>Floodway Delineation<a class="headerlink" href="#floodway-delineation" title="Link to this heading"></a></h2>
@@ -2034,8 +2034,8 @@ Completed Roof Element Elevation Slope Interpolation.</em></p>
 <p>The downspout discharge can be simulated as a hydraulic structure identifying the inlet node on the roof
 and the outlet node on the ground and assigning an inlet control rating table.
 The inlet control rating table can be based on orifice flow using the equation:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-23">
-<span class="eqno">(4.24)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-23" title="Link to this equation"></a></span>\[Q = C \, ^* \, A \, ^* \, \left(2.^*g^*DEPTH \right)^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-25">
+<span class="eqno">(4.26)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-25" title="Link to this equation"></a></span>\[Q = C \, ^* \, A \, ^* \, \left(2.^*g^*DEPTH \right)^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = coefficient that ranges from 0.62 to 0.72</p>
@@ -2162,8 +2162,8 @@ The Dept.
 of Transportation Urban Drainage Design Manual (revised 2013) presents a gutter flow capacity equation
 that is used for computing flow in triangular channels.
 DOT Equation 4.2 is given as:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-24">
-<span class="eqno">(4.25)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-24" title="Link to this equation"></a></span>\[Q = \left(\frac{K_u}{n} \right) \, S_X \, ^{1.67} \, S_L \, ^{0.5} \, T^{2.67}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-26">
+<span class="eqno">(4.27)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-26" title="Link to this equation"></a></span>\[Q = \left(\frac{K_u}{n} \right) \, S_X \, ^{1.67} \, S_L \, ^{0.5} \, T^{2.67}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>K<sub>u</sub> = 0.56 in English units</p>
@@ -2175,8 +2175,8 @@ DOT Equation 4.2 is given as:</p>
 </div></blockquote>
 <p>This DOT equation is Mannings equation for normal flow depth (steady, uniform flow) with an additional
 coefficient of 0.188:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-25">
-<span class="eqno">(4.26)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-25" title="Link to this equation"></a></span>\[Q = VA = \left(\frac{1.486}{n} \right) \, d^{0.67} \, S_L \, ^{0.5} \, A^{0.188}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-27">
+<span class="eqno">(4.28)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-27" title="Link to this equation"></a></span>\[Q = VA = \left(\frac{1.486}{n} \right) \, d^{0.67} \, S_L \, ^{0.5} \, A^{0.188}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>A = flow area = 0.5 d T (ft<sup>2</sup>) area of a triangle</p>
@@ -2211,18 +2211,18 @@ surface elevation, then the flow is shared from the sidewalk to the gutter.
 The flow is shared between the gutter element and the contiguous floodplain elements using the floodplain
 flow depth and the gutter element sidewalk flow depth.</p>
 <p>Flow from the gutter to the sidewalk inside the gutter element is depicted in Figure 112.</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-26">
-<span class="eqno">(4.27)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-26" title="Link to this equation"></a></span>\[Gutter WSE = FPE + d\]</div>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-27">
-<span class="eqno">(4.28)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-27" title="Link to this equation"></a></span>\[Sidewalk elevation = FPE + H\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-28">
+<span class="eqno">(4.29)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-28" title="Link to this equation"></a></span>\[Gutter WSE = FPE + d\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-29">
+<span class="eqno">(4.30)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-29" title="Link to this equation"></a></span>\[Sidewalk elevation = FPE + H\]</div>
 <img alt="../../_images/image103.png" src="../../_images/image103.png" />
 <p><em>Figure 112.
 Flow Distribution Street to Sidewalk.</em></p>
 <p>Flow from the sidewalk to the gutter inside the gutter element Sidewalk is depicted in Figure 113.</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-28">
-<span class="eqno">(4.29)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-28" title="Link to this equation"></a></span>\[WSE = FPE + h + FPD\]</div>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-29">
-<span class="eqno">(4.30)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-29" title="Link to this equation"></a></span>\[Gutter WSE = FPE + d\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-30">
+<span class="eqno">(4.31)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-30" title="Link to this equation"></a></span>\[WSE = FPE + h + FPD\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-31">
+<span class="eqno">(4.32)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-31" title="Link to this equation"></a></span>\[Gutter WSE = FPE + d\]</div>
 <img alt="../../_images/image104.png" src="../../_images/image104.png" />
 <p><em>Figure 113.
 Flow Distribution Sidewalk to Street.</em></p>
@@ -2429,8 +2429,8 @@ The complete derivation of the free surface (flow below the low chord) equation 
 Hamill (1999) or Chow (1959).</p>
 <p>The subcritical discharge Q through constrictions equation is given in Chow’s (1959) book <em>Open Channel Flow</em> (p.
 479, Eqn 17-15) as:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-30">
-<span class="eqno">(4.31)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-30" title="Link to this equation"></a></span>\[Q = C \, A_2 \{2g (\Delta h \, - \, h_f \, + \, \alpha_1 \frac{V_1 \, ^2}{2g})\}^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-32">
+<span class="eqno">(4.33)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-32" title="Link to this equation"></a></span>\[Q = C \, A_2 \{2g (\Delta h \, - \, h_f \, + \, \alpha_1 \frac{V_1 \, ^2}{2g})\}^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>A<sub>2</sub> = flow area at cross section 2 (Figure 120 downstream end of bridge)</p>
@@ -2453,8 +2453,8 @@ Hamill (1999) or Chow (1959).</p>
 </div></blockquote>
 <p>The terms can be combined and expanded to yield Eqn 17-20 in Chow (1959,
 p. 490) in English units:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-31">
-<span class="eqno">(4.32)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-31" title="Link to this equation"></a></span>\[Q = 8.02 \, C \, A_2 \left(\frac{\alpha h}{\beta} \right)^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-33">
+<span class="eqno">(4.34)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-33" title="Link to this equation"></a></span>\[Q = 8.02 \, C \, A_2 \left(\frac{\alpha h}{\beta} \right)^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>β = 1 - α<sub>1</sub> C<sup>2</sup> (A<sub>2</sub> /A<sub>1</sub>)
@@ -2526,8 +2526,8 @@ surface approaches the soffit (Figure 128).
 The difference between the two water surfaces is the afflux.
 The bridge flow in this figure is concave upwards above the soffit.
 Sluice gate discharge Q<sub>p</sub> (pressure flow) is described by the equation:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-32">
-<span class="eqno">(4.33)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-32" title="Link to this equation"></a></span>\[Q_p = CA_b \, (2g \Delta H)^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-34">
+<span class="eqno">(4.35)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-34" title="Link to this equation"></a></span>\[Q_p = CA_b \, (2g \Delta H)^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = coefficient of discharge (0.3 to 0.6 dimensionless, Figure 125)</p>
@@ -2535,8 +2535,8 @@ Sluice gate discharge Q<sub>p</sub> (pressure flow) is described by the equation
 <p>g = gravitational acceleration</p>
 <p>∆H = energy gradient from upstream to tailwater elevation Y<sub>c</sub> given by (see Figure 117):</p>
 </div></blockquote>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-33">
-<span class="eqno">(4.34)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-33" title="Link to this equation"></a></span>\[Y_u \, - \, Y \, + \, \frac{V_u ^2}{2g}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-35">
+<span class="eqno">(4.36)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-35" title="Link to this equation"></a></span>\[Y_u \, - \, Y \, + \, \frac{V_u ^2}{2g}\]</div>
 <img alt="../../_images/image119.jpg" src="../../_images/image119.jpg" />
 <p><em>Figure 128.
 Stage-Discharge Variation between Free Surface Flow and Bridge Flow (Hamill, 1999; p.53).</em></p>
@@ -2564,12 +2564,12 @@ For the vertical sluice gate case, the assumed discharge is a function of the sq
 between upstream uniform flow depth and some percentage of the gate opening.
 Oskuyi and Salmasi (2012) presented a vertical sluice gate coefficient relationship with limited variability
 over a range of flows:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-34">
-<span class="eqno">(4.35)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-34" title="Link to this equation"></a></span>\[C = 0.445 \left(\frac{Y_u}{Z} \right)^{0.122}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-36">
+<span class="eqno">(4.37)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-36" title="Link to this equation"></a></span>\[C = 0.445 \left(\frac{Y_u}{Z} \right)^{0.122}\]</div>
 <p>which is plotted as the green line in Figure 129.
 The FHA curve in Figure 129 has a regressed relationship of:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-35">
-<span class="eqno">(4.36)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-35" title="Link to this equation"></a></span>\[C = 0.341 \left(\frac{Y_u}{Z} \right)^{0.931}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-37">
+<span class="eqno">(4.38)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-37" title="Link to this equation"></a></span>\[C = 0.341 \left(\frac{Y_u}{Z} \right)^{0.931}\]</div>
 <p>with a correlation coefficient R<sup>2</sup> = 0.61.
 This equation is used in the FLO-2D model.</p>
 </section>
@@ -2579,8 +2579,8 @@ This equation is used in the FLO-2D model.</p>
 water surface elevations are above the low chord (Y<sub>u</sub> &gt; Z, Y<sub>d</sub> &gt; Z) indicating a drowned
 opening (Figure 3d).
 The orifice equation for discharge is:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-36">
-<span class="eqno">(4.37)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-36" title="Link to this equation"></a></span>\[Q_p = CA_b (2g \Delta H)^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-38">
+<span class="eqno">(4.39)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-38" title="Link to this equation"></a></span>\[Q_p = CA_b (2g \Delta H)^{0.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Coefficient of discharge</p>
@@ -2599,8 +2599,8 @@ of discharge with submergence (Figure 130).</p>
 <p><em>Figure 130.
 Orifice Coefficient of Discharge as Function of Low Chord Submergence (Hamill, 1999).</em></p>
 <p>The regressed relationship of the data in Figure 129 for Y<sub>u</sub>/Z &gt; 1.25 is given by:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-37">
-<span class="eqno">(4.38)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-37" title="Link to this equation"></a></span>\[C = 0.80 \left(\frac{Y_u}{Z} \right)^{-0.184}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-39">
+<span class="eqno">(4.40)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-39" title="Link to this equation"></a></span>\[C = 0.80 \left(\frac{Y_u}{Z} \right)^{-0.184}\]</div>
 <p>This equation is used in the FLO-2D model and results in a coefficient variability in the range of 0.7 to 0.8.
 This is compared with the sluice gate flow discharge coefficient, which ranges from about 0.4 to 0.5 as
 shown in Figure 129.</p>
@@ -2610,11 +2610,11 @@ shown in Figure 129.</p>
 <h4><span class="section-number">4.24.2.2. </span>Pressure Flow Plus Weir Flow<a class="headerlink" href="#pressure-flow-plus-weir-flow" title="Link to this heading"></a></h4>
 <p>Once the flow is above the deck, then the total discharge through bridge Q<sub>T</sub> is the sum of the pressure
 flow (sluice gate or orifice flow) plus the weir flow over the bridge deck:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-38">
-<span class="eqno">(4.39)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-38" title="Link to this equation"></a></span>\[Q_T = Q_p \, + \, Q_w\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-40">
+<span class="eqno">(4.41)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-40" title="Link to this equation"></a></span>\[Q_T = Q_p \, + \, Q_w\]</div>
 <p>Broadcrested weir flow is generally used to represent flow over a bridge deck as given by:</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-39">
-<span class="eqno">(4.40)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-39" title="Link to this equation"></a></span>\[Q_w = C \, L_c \Delta H^{1.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-41">
+<span class="eqno">(4.42)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-41" title="Link to this equation"></a></span>\[Q_w = C \, L_c \Delta H^{1.5}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C = Broadcrested weir discharge coefficient which varies from 2.6 to 3.1</p>
@@ -2637,8 +2637,8 @@ broadcrested weir coefficient.</p>
 <p>It is important to note the difference between the weir coefficient C and a discharge coefficient C<sub>q</sub>.
 The weir coefficient is a lumped parameter that is based on the weir’s characteristics and includes the discharge
 coefficient.</p>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-40">
-<span class="eqno">(4.41)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-40" title="Link to this equation"></a></span>\[C = \frac{2}{3} \, C_g(2g)^{0.5}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-42">
+<span class="eqno">(4.43)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-42" title="Link to this equation"></a></span>\[C = \frac{2}{3} \, C_g(2g)^{0.5}\]</div>
 <p>The discharge coefficient C<sub>q</sub> is same in both English and SI (metric) units and is dimensionless.
 The weir coefficient, however, is not dimensionless since it is a function of the gravitational acceleration
 g (ft/s<sup>2</sup> or m/s<sup>2</sup>).
@@ -2740,8 +2740,8 @@ associated with contraction, nonuniform
 distribution of the velocity, and nonhydrostatic pressure distribution all contributed to the afflux.
 The discharge coefficient is defined as:</p>
 </div></blockquote>
-<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-41">
-<span class="eqno">(4.42)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-41" title="Link to this equation"></a></span>\[C = C^ {\text '} K_i\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-reference-manual-chapter-4-43">
+<span class="eqno">(4.44)<a class="headerlink" href="#equation-flo-2d-pro-reference-manual-chapter-4-43" title="Link to this equation"></a></span>\[C = C^ {\text '} K_i\]</div>
 <p>where:</p>
 <blockquote>
 <div><p>C’ (C_PRIME_USER) is the standard value of the coefficient of discharge for given bridge type of constriction.</p>
