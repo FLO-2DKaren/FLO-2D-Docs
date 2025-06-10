@@ -570,12 +570,7 @@ For two phase flow both the sediment transport and mudflow variables have to be 
 There are no specific data changes to the SED.DAT file other than both the M-Line and C-Line are read together in the file.
 A typical SED.DAT file for two phase flow may be as follows:
 
-   M 0.0538 14.5 2.72 10.4 2.65 0.0
-
-   C 9 0 0.576 3.71 2.65 14700.
-   0.0778 0 7362
-
-   E 3.0
+.. image:: ../img/Two_Phase_Flood_Routing_Guidelines/Two61.png
 
 Refer to the FLO-2D Data Input Manual to review each variable.
 A few highlights are mentioned below:
