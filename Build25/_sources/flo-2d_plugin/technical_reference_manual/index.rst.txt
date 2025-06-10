@@ -1,3 +1,5 @@
+.. _tech_ref_manual:
+
 Technical Reference Manual
 =============================
 
@@ -10,7 +12,7 @@ If the Plugin is not listed, follow the :ref:`Install Instructions <flo2d_plugin
 
 .. toctree::
    :hidden:
-   :maxdepth: 4
+   :maxdepth: 1
    :caption: FLO-2D Plugin Version 2.0.0:
 
-   techref.rst
+   FLO-2D Plugin Technical Reference Manual.rst

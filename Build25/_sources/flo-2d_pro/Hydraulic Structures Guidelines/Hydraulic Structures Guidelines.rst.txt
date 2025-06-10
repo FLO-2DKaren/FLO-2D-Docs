@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-1 Overview
+Overview
 --------------------
 
 Hydraulic structures can include bridges, culverts, weirs, spillways, pumps or any facility that controls

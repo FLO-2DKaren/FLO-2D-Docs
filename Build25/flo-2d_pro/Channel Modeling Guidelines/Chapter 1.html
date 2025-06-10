@@ -51,7 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Data%20Input%20Manual.html">Data Input Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">Reference</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Channel Modeling Guidelines</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">1. Chapter 1</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#channel-overview">1.1. Channel Overview</a></li>
@@ -69,8 +69,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Modeling%20Guidelines.html">Two Phase Flood Routing Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -258,10 +258,10 @@ For flow depths above this the cross section is extended vertically.
 This data constitutes a channel geometry rating table for each cross section.
 The cross section data in the XSEC.DAT file can be automatically assigned from a GEO-RAS geometry file
 using the GDS.</p>
-<img alt="../../_images/image41.png" src="../../_images/image41.png" />
+<img alt="../../_images/image42.png" src="../../_images/image42.png" />
 <p><em>Figure 4.
 Natural Channel Cross Section Data.</em></p>
-<img alt="../../_images/image51.png" src="../../_images/image51.png" />
+<img alt="../../_images/image510.png" src="../../_images/image510.png" />
 <p><em>Figure 5.
 Natural Shape Cross Section Geometry.</em></p>
 <p>Natural river cross sections should be spaced to represent a uniform river reach that may encompass any
@@ -280,7 +280,7 @@ with the bank floodplain elements to share discharge to the floodplain.
 Each bank element can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel
 into two elements even if the channel would fit into one grid element.</p>
-<img alt="../../_images/image6.png" src="../../_images/image6.png" />
+<img alt="../../_images/image61.png" src="../../_images/image61.png" />
 <p><em>Figure 6.
 Channel Extension over Several Grid Elements.</em></p>
 <p>There are three options for establishing the channel bank elevation to bed elevation relationship:</p>
@@ -316,7 +316,7 @@ For channel flow to occur through a reach of river, the channel elements must be
 Using the background image or elevation data, a polyline can be drawn along the left and right banks and
 then the individual cross sections can be identified with the appropriate channel bank element (Figure 7).
 This process is completely automated if a GEO-RAS geometry file can be imported with the cross section data.</p>
-<img alt="../../_images/image7.png" src="../../_images/image7.png" />
+<img alt="../../_images/image71.png" src="../../_images/image71.png" />
 <p><em>Figure 7.
 Channel Delineation.</em></p>
 </section>
@@ -329,7 +329,7 @@ In the QGIS, the sampled or surveyed cross sections are assigned to correspondin
 are located, the rest of the channel elements have an interpolated cross section assigned (Figure 8).
 A shapefile of cross section locations can be used to help identify the cross section to channel element
 placement.</p>
-<img alt="../../_images/image8.png" src="../../_images/image8.png" />
+<img alt="../../_images/image81.png" src="../../_images/image81.png" />
 <p><em>Figure 8.
 Cross Section Assignment.</em></p>
 </section>
@@ -364,7 +364,7 @@ Re-interpolating the bed slope can be accomplished in the Profiles program for l
 <h3><span class="section-number">1.3.5. </span>Channel bank alignment<a class="headerlink" href="#channel-bank-alignment" title="Link to this heading"></a></h3>
 <p>Once the channel geometry has been assigned and interpolated, the left and right bank alignment can be
 adjusted using QGIS and the FLO-2D Plugin (Figure 10).</p>
-<img alt="../../_images/image11.png" src="../../_images/image11.png" />
+<img alt="../../_images/image111.png" src="../../_images/image111.png" />
 <p><em>Figure 10.
 Right Bank Assignment and Realignment.</em></p>
 </section>
@@ -373,14 +373,14 @@ Right Bank Assignment and Realignment.</em></p>
 <p>The channel length within each grid element is initially estimated as a straight line for a half grid
 element and is reported in the Schematized Channel Data.
 The length can be adjusted using QGIS table editor and a field centerline measuring tool (Figure 11).</p>
-<img alt="../../_images/image12.png" src="../../_images/image12.png" />
+<img alt="../../_images/image121.png" src="../../_images/image121.png" />
 <p><em>Figure 11.
 Channel Segment Length.</em></p>
 <p>This value is based on the position of each grid element with respect to its contiguous upstream and
 downstream neighbors.
 The length is the sum half the length of the grid element from the center of the node to the edge or
 corner closest to the upstream or downstream node (Figure 12).</p>
-<img alt="../../_images/image13.png" src="../../_images/image13.png" />
+<img alt="../../_images/image131.png" src="../../_images/image131.png" />
 <p><em>Figure 12.
 Channel Length for 3 Channel Elements.</em></p>
 <p>The total channel length in the dialog box represents the sum of the individual grid element channel lengths.
@@ -394,7 +394,7 @@ Adjusting the channel element lengths to have an accurate total channel volume w
 between the flood volume in the channel and the flood volume on the floodplain.
 Figure 13 shows the total distance of the channel in the QGIS channel tables and the isolated channel
 lengths in the CHAN.DAT file.</p>
-<img alt="../../_images/image14.png" src="../../_images/image14.png" />
+<img alt="../../_images/image141.png" src="../../_images/image141.png" />
 <p><em>Figure 13.
 Channel Length.</em></p>
 </section>
@@ -451,7 +451,7 @@ or by using depth variable n-value adjustment or both.</p>
 Low Flow vs. Bank Full Discharge.</em></p>
 <p>A channel roughness adjustment can be assigned in the CHAN.DAT file to estimate the n-value at depths
 below bankfull discharge (Figure 15 – red box).</p>
-<img alt="../../_images/image16.png" src="../../_images/image16.png" />
+<img alt="../../_images/image161.png" src="../../_images/image161.png" />
 <p><em>Figure 15.
 Channel Control Variables.</em></p>
 <p>The n-value assigned in CHAN.DAT should represent the flow roughness near bankfull flow.
@@ -540,7 +540,7 @@ The slope is given by path length (a function of the available floodplain surfac
 between the floodplain water surface elevation and the top of bank elevation.
 Overbank discharge or return flow to the channel is computed using the floodplain assigned roughness.
 The overland flow can enter a previously dry channel.</p>
-<img alt="../../_images/image20.png" src="../../_images/image20.png" />
+<img alt="../../_images/image201.png" src="../../_images/image201.png" />
 <p><em>Figure 19.
 Channel Floodplain Flow Exchange.</em></p>
 <p>Channel flow is exchanged with the floodplain grid elements in a separate routine after the channel and
@@ -582,7 +582,7 @@ The channel routing is like the HEC-RAS assessment of channel cross sections.
 It does not significantly change the potential for overbank discharge exchange with the floodplain.
 It only slightly increases the flow area for channel hydraulic computations.
 The channel conveyance flow area for a natural channel is increased by the green space in Figure 20.</p>
-<img alt="../../_images/image27.png" src="../../_images/image27.png" />
+<img alt="../../_images/image271.png" src="../../_images/image271.png" />
 <p><em>Figure 20.
 Vertical Extension of the Lowest Top of Bank to the Highest Top of Bank.</em></p>
 </section>
@@ -665,7 +665,7 @@ The HYDROG program plotted hydrographs (Figure 21) can also reveal channel surgi
 Typically, steep rising hydrographs and small channel storage cause the most frequent surging
 issues (Figure 22).
 The rate of change in the discharge flux (ΔQ/Δt) is the culprit.</p>
-<img alt="../../_images/image22.png" src="../../_images/image22.png" />
+<img alt="../../_images/image221.png" src="../../_images/image221.png" />
 <p><em>Figure 21.
 Surging Observed in a Channel Element Hydrograph.</em></p>
 <img alt="../../_images/image23.jpg" src="../../_images/image23.jpg" />
@@ -814,7 +814,7 @@ SUMMARY.OUT Example.</em></p>
 Usually if there is a volume conservation error it is in the channel and both CHVOLUME.OUT and SUMMARY.OUT
 will report the same error.
 CHVOLUME.OUT (Figure 25) is listed below:</p>
-<img alt="../../_images/image26.png" src="../../_images/image26.png" />
+<img alt="../../_images/image261.png" src="../../_images/image261.png" />
 <p><em>Figure 25.
 CHVOLUME.OUT Example.</em></p>
 <p>Channel data issues that might lead to a volume conservation error include:</p>

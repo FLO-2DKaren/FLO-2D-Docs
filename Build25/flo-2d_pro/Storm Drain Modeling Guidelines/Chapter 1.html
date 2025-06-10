@@ -51,7 +51,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Data%20Input%20Manual.html">Data Input Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">Reference</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
@@ -81,8 +81,8 @@
 <li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">7. Chapter 7: Porting a SWMM Model to the FLO-2D Storm Drain System</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Modeling%20Guidelines.html">Two Phase Flood Routing Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -144,14 +144,14 @@ This inlet-controlled discharge will then be routed as storm drain conduit disch
 The storm drain return flow to the surface water system is exchanged through storm drain inlets/outlets
 and outfalls.
 The complete conceptualized flood routing system is shown in Figure 1.</p>
-<img alt="../../_images/image115.png" src="../../_images/image115.png" />
+<img alt="../../_images/image116.png" src="../../_images/image116.png" />
 <p><em>Figure 1.
 Conceptualized FLO-2D Model System with a Storm Drain Component.</em></p>
 <p>The FLO-2D storm drain component can be visualized in layers.
 The surficial layer represents all the surface water flood movement which is connected to the
 subsurface pipe layer through the pipe junctions defined as inlets (or outfalls).
 Figure 2 illustrates the layered system.</p>
-<img alt="../../_images/image212.png" src="../../_images/image212.png" />
+<img alt="../../_images/image214.png" src="../../_images/image214.png" />
 <p><em>Figure 2.
 Volume Exchange between the Surface Water and Storm Drain System.</em></p>
 <p>The FLO-2D storm drain component can be applied to a variety of different storm water projects including:</p>
@@ -170,7 +170,7 @@ Once the storm drain system is built and the run switch is set, the flow into an
 system is simulated automatically when the FLO-2D model is started.
 Following a successful simulation, the storm drain results can be reviewed in QGIS or in the EPA SWMM GUI.
 Figure 3 shows an example of a storm drain integrated with a surface model on a QGIS map.</p>
-<img alt="../../_images/image34.png" src="../../_images/image34.png" />
+<img alt="../../_images/image313.png" src="../../_images/image313.png" />
 <p><em>Figure 3.
 A Typical Storm Drain System as Viewed in QGIS .</em></p>
 </section>
@@ -293,7 +293,7 @@ through Figure 7:</p>
 <li><p>The conduit is not full.</p></li>
 <li><p>No return flow.</p></li>
 </ul>
-<img alt="../../_images/image410.png" src="../../_images/image410.png" />
+<img alt="../../_images/image414.png" src="../../_images/image414.png" />
 <p><em>Figure 4.
 Inlet No Return Flow.</em></p>
 </section>
@@ -304,7 +304,7 @@ Inlet No Return Flow.</em></p>
 <li><p>The conduit capacity is full.</p></li>
 <li><p>No return flow.</p></li>
 </ul>
-<img alt="../../_images/image55.png" src="../../_images/image55.png" />
+<img alt="../../_images/image516.png" src="../../_images/image516.png" />
 <p><em>Figure 5.
 No Return Flow No Inlet Flow</em></p>
 </section>
@@ -316,7 +316,7 @@ No Return Flow No Inlet Flow</em></p>
 <li><p>Return flow is exchanged to the surface.</p></li>
 <li><p>Water leaves the storm drain system and it is added to the surface grid cell.</p></li>
 </ul>
-<img alt="../../_images/image68.png" src="../../_images/image68.png" />
+<img alt="../../_images/image610.png" src="../../_images/image610.png" />
 <p><em>Figure 6.
 Inlet with Return Flow</em></p>
 </section>
@@ -331,7 +331,7 @@ depth plus FLO-2D water depth (see Figure 7).</p>
 <li><p>Manhole cap is removed, and the manhole converts to a type 3 inlet that collects discharge from the
 surface.</p></li>
 </ul>
-<img alt="../../_images/image74.png" src="../../_images/image74.png" />
+<img alt="../../_images/image75.png" src="../../_images/image75.png" />
 <p><em>Figure 7.
 Manhole under Pressure with Return Flow.</em></p>
 </section>
@@ -399,7 +399,7 @@ ground elevation is not assigned to the outfall node and only the FLO-2D WSE is 
 entire simulation.
 When the model runs, the inflow may be added to either the outfall grid element or the upstream storm
 drain conduit network and the flow can go either in or out of the outfall pipe based on the pressure head.</p>
-<img alt="../../_images/image84.png" src="../../_images/image84.png" />
+<img alt="../../_images/image85.png" src="../../_images/image85.png" />
 <p><em>Figure 8.
 Initial Condition for an Underground (Underwater) Storm Drain Outfall</em></p>
 <p>Typically, an outfall has an invert elevation equal to or greater than the floodplain, channel, or
@@ -536,19 +536,19 @@ This example shows how the pressure head calculation is affected for three diffe
 when the pressure head exceeds the soffit elevation.
 The selected method allows the pressure head to be exponentially reduced over to entire drop box to the
 RIM elevation.</p>
-<img alt="../../_images/image146.png" src="../../_images/image146.png" />
+<img alt="../../_images/image1412.png" src="../../_images/image1412.png" />
 <p><em>Figure 12.
 Water Elevation Profile at 03:17:00.</em></p>
-<img alt="../../_images/image154.png" src="../../_images/image154.png" />
+<img alt="../../_images/image155.png" src="../../_images/image155.png" />
 <p><em>Figure 13.
 Inlet Pressure Head - No Pressure Head Dampening is Applied</em></p>
-<img alt="../../_images/image166.png" src="../../_images/image166.png" />
+<img alt="../../_images/image167.png" src="../../_images/image167.png" />
 <p><em>Figure 14.
 Water Elevation Profile at 03:18:00.</em></p>
-<img alt="../../_images/image175.png" src="../../_images/image175.png" />
+<img alt="../../_images/image176.png" src="../../_images/image176.png" />
 <p><em>Figure 15.
 Inlet Pressure Head with Dampening up to 1.25 Times the Lateral Pipe Diameter.</em></p>
-<img alt="../../_images/image186.png" src="../../_images/image186.png" />
+<img alt="../../_images/image187.png" src="../../_images/image187.png" />
 <p><em>Figure 16.
 Water Elevation Profile at 03:18:00.</em></p>
 <img alt="../../_images/Chapte024.png" src="../../_images/Chapte024.png" />
@@ -575,10 +575,10 @@ The inlet discharge is calculated and then reduced using the clogging factor in 
 Transportation and the cities of Denver and Las Vegas.
 Figure 18 and Figure 19 show the reduced discharge for a Type 2 inlet using a clogging factor of 50%
 at time 0.5 hrs.</p>
-<img alt="../../_images/image193.png" src="../../_images/image193.png" />
+<img alt="../../_images/image194.png" src="../../_images/image194.png" />
 <p><em>Figure 18.
 Type 2 Inlet Discharge versus Time.</em></p>
-<img alt="../../_images/image204.png" src="../../_images/image204.png" />
+<img alt="../../_images/image205.png" src="../../_images/image205.png" />
 <p><em>Figure 19.
 Type 2 Inlet Discharge versus Time Using a Clogging Factor of 50% at Time 0.5 hrs.</em></p>
 <p>It is noted that the Flood Control District of Maricopa County (FCDMC) in Phoenix, Arizona recommends
@@ -604,7 +604,7 @@ The energy loss for a contraction in pressure flow can be calculated from the fo
 <p>V = velocity downstream of transition</p>
 <p>G = acceleration due to gravity 9.81 m/s<sup>2</sup> (32.2 ft/s<sup>2</sup>)</p>
 </div></blockquote>
-<img alt="../../_images/image241.png" src="../../_images/image241.png" />
+<img alt="../../_images/image242.png" src="../../_images/image242.png" />
 </section>
 <section id="storm-drain-model-governing-equations">
 <h2><span class="section-number">1.12. </span>Storm Drain Model Governing Equations<a class="headerlink" href="#storm-drain-model-governing-equations" title="Link to this heading"></a></h2>

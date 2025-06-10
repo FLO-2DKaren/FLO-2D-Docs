@@ -111,7 +111,63 @@
   <section id="lid-spatial">
 <span id="grid-lid"></span><h1>16. LID Spatial<a class="headerlink" href="#lid-spatial" title="Link to this heading"></a></h1>
 <img alt="../../../../_images/lid001.png" src="../../../../_images/lid001.png" />
-<p>rstlne</p>
+<p>The spatially variable Low Impact Development parameter is a specified depth below which no discharge is shared between grid elements.
+This FLO-2D parameter represents grid element depression storage and can be used to simulate Low Impact Development
+(LID) storage such as the volume in cisterns or infiltrated volume through permeable pavers.</p>
+<p>In the following example, the neighborhood collects rainwater using built-in cisterns that are attached to the gutters of the buildings.
+The cisterns have a fixed volume and there is one per building.
+The volume of each cistern is 50 gallons or 6.68 ft<sup>3</sup>.
+Divide this volume by the surface area of a grid element to determine the TOL depth value assigned to each cell.</p>
+<section id="digitize-or-copy-data">
+<h2>Digitize or Copy Data<a class="headerlink" href="#digitize-or-copy-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click the Tolerance Areas layer
+and use the editor tool to digitize the outline of the building roof area.
+This is the area that collects water.</p></li>
+</ol>
+<img alt="../../../../_images/spatia0021.png" src="../../../../_images/spatia0021.png" />
+<ol class="arabic simple" start="2">
+<li><p>The roof polygons can be imported to a separate layer and pasted into the Tolerance Areas layer.
+In this instance, the polygons were copied from the Blocked Areas layer.</p></li>
+</ol>
+<p>In this example the LID TOL value is unknown and must be calculated from the cistern volume and the collection area.
+Each house has a theoretical 50-gallon rain collection cistern.
+The volume is converted to 6.68 cubic feet.
+The tolerance value is a depth in feet, so it can be applied to the roof area of each house.
+For the sake of simplicity, the assumption is that the roof area and the house polygon area are the same.</p>
+</section>
+<section id="define-the-tolerance-attribute">
+<h2>Define the Tolerance Attribute<a class="headerlink" href="#define-the-tolerance-attribute" title="Link to this heading"></a></h2>
+<ol class="arabic simple" start="3">
+<li><p>Open the attribute
+table of the Tolerance Areas layer.</p></li>
+</ol>
+<img alt="../../../../_images/spatia0031.png" src="../../../../_images/spatia0031.png" />
+<ol class="arabic simple" start="4">
+<li><p>On the attribute table window, click on the Toggle Editing button, change the field to TOL, add the command to set
+the TOL depth (6.68 / $area) and click Update All.</p></li>
+<li><p>Save and close the editor tool and close the attribute table.
+This process converted the volume of the cistern to a depth over the area of each polygon.</p></li>
+</ol>
+<img alt="../../../../_images/spatia001.png" src="../../../../_images/spatia001.png" />
+</section>
+<section id="sample-data">
+<h2>Sample Data<a class="headerlink" href="#sample-data" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Click
+the Sample Spatial Tolerance Values button.</p></li>
+</ol>
+<img alt="../../../../_images/spatia005.png" src="../../../../_images/spatia005.png" />
+<ol class="arabic simple" start="2">
+<li><p>Once the
+process is complete, Click OK to complete TOL the assignment.</p></li>
+</ol>
+<img alt="../../../../_images/spatia006.png" src="../../../../_images/spatia006.png" />
+<ol class="arabic simple" start="3">
+<li><p>This process
+has converted the volume from the polygon to the grid elements that intersect the polygon.</p></li>
+</ol>
+</section>
 </section>
 
 

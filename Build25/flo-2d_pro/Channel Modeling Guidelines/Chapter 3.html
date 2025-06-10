@@ -49,7 +49,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../Data%20Input%20Manual.html">Data Input Manual</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">Reference</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Channel Modeling Guidelines</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2</a></li>
@@ -82,8 +82,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines.html">Simulating Mudflow Guidelines</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Modeling%20Guidelines.html">Two Phase Flood Routing Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Plugin</a></li>
@@ -124,7 +124,7 @@
 It covers issues such as boundary conditions, check files, volume conservation, instability, and data errors.
 The Reviewer’s checklist is an Excel workbook that lists every *.dat and *.out file required for a FLO-2D Project review.
 This section will focus on the Channels tab as shown in Figure 73.</p>
-<img alt="../../_images/image1.png" src="../../_images/image1.png" />
+<img alt="../../_images/image110.png" src="../../_images/image110.png" />
 <p><em>Figure 73.
 Reviewer’s checklist.</em></p>
 </section>
@@ -139,10 +139,10 @@ If returning to an old project, good documentation helps future reviewers to und
 Return to the inflow section for more details regarding channel inflow boundary.
 Figure 74 and Figure 75 show examples of the upstream and downstream boundary points and nodes.
 The points are user data, and the nodes are Schematized data.</p>
-<img alt="../../_images/image28.png" src="../../_images/image28.png" />
+<img alt="../../_images/image210.png" src="../../_images/image210.png" />
 <p><em>Figure 74.
 Upstream Channel Boundary with an Inflow Node.</em></p>
-<img alt="../../_images/image31.png" src="../../_images/image31.png" />
+<img alt="../../_images/image310.png" src="../../_images/image310.png" />
 <p><em>Figure 75.
 Downstream Channel Boundary with an Outflow Node.</em></p>
 </section>
@@ -151,11 +151,11 @@ Downstream Channel Boundary with an Outflow Node.</em></p>
 <p>Check the cross section placement.
 Note any locations where more cross sections are required such as the top half of Figure 76.
 The bottom half shows a channel with good cross section placement to represent the transition from an urban channel to a natural channel.</p>
-<img alt="../../_images/image46.png" src="../../_images/image46.png" />
+<img alt="../../_images/image412.png" src="../../_images/image412.png" />
 <p><em>Figure 76.
 Cross Sections wih a Bad Transition and a Good Transition.</em></p>
 <p>Check each cross section plot for accuracy using the cross section geometry table and plot as shown in Figure 77.</p>
-<img alt="../../_images/image53.png" src="../../_images/image53.png" />
+<img alt="../../_images/image513.png" src="../../_images/image513.png" />
 <p><em>Figure 77.
 Review a Cross Section Shape.</em></p>
 </section>
@@ -163,12 +163,12 @@ Review a Cross Section Shape.</em></p>
 <h2><span class="section-number">3.5. </span>Profiles<a class="headerlink" href="#profiles" title="Link to this heading"></a></h2>
 <p>Click the Profile button and then click the left bank channel line with the FLO-2D plugin to scan each channel profile.
 Figure 78 shows how to check the profile.</p>
-<img alt="../../_images/image62.png" src="../../_images/image62.png" />
+<img alt="../../_images/image63.png" src="../../_images/image63.png" />
 <p><em>Figure 78.
 Check Chanel Profile.</em></p>
 <p>Check for unreasonable breaks in slope or bank elevations.
 Figure 79 shows some channel profiles.</p>
-<img alt="../../_images/image72.png" src="../../_images/image72.png" />
+<img alt="../../_images/image73.png" src="../../_images/image73.png" />
 <p><em>Figure 79.
 Channel Profile Examples.</em></p>
 <p>For more information and example usage,
@@ -179,7 +179,7 @@ see <a class="reference external" href="https://documentation.flo-2d.com/Plugin1
 <p>Review the change in cross section area, width, and wetted perimeter for each cross section.
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file (Figure 80) or by using the Profiles.exe program.</p>
-<img alt="../../_images/image82.png" src="../../_images/image82.png" />
+<img alt="../../_images/image83.png" src="../../_images/image83.png" />
 <p><em>Figure 80.
 XSECAREA.OUT Example.</em></p>
 </section>
@@ -190,7 +190,7 @@ Check for left or right bank cells that are more than one grid element width off
 Make sure the banks are inside levees.
 Make sure the banks do not share with any components that have a high conflict rating.
 The advanced channel lesson has a good section on how to align channels to the banks correctly.</p>
-<img alt="../../_images/image91.png" src="../../_images/image91.png" />
+<img alt="../../_images/image92.png" src="../../_images/image92.png" />
 <p><em>Figure 81.
 Channel with Good Alignment.</em></p>
 </section>
@@ -199,11 +199,11 @@ Channel with Good Alignment.</em></p>
 <p>Check summary.out (Figure 82) and chvolume.out (Figure 83) for volume errors.
 Volume Conservation (VC) errors exist if the Percent of Inflow column is higher than 0.001 percent.</p>
 <p>If VC errors occur, review the Channel Optimization training videos and the Channel Guidelines document.</p>
-<img alt="../../_images/image101.png" src="../../_images/image101.png" />
+<img alt="../../_images/image102.png" src="../../_images/image102.png" />
 <p><em>Figure 82.
 Summary.out Example.</em></p>
 <p>If summary.out has a volume error but chvolume.out does not, the error is on the floodplain and not attributed to the channel data.</p>
-<img alt="../../_images/image112.png" src="../../_images/image112.png" />
+<img alt="../../_images/image113.png" src="../../_images/image113.png" />
 <p><em>Figure 83.
 CHVolume.out Example.</em></p>
 </section>
@@ -233,7 +233,7 @@ Lower the Channel Courant to 0.4, 0.3, or 0.2.</p></li>
 </ul>
 </li>
 </ul>
-<img alt="../../_images/image122.png" src="../../_images/image122.png" />
+<img alt="../../_images/image123.png" src="../../_images/image123.png" />
 <p><em>Figure 84.
 Veltimec.out Example.</em></p>
 </section>
@@ -250,7 +250,7 @@ the grid element size is small. If an unreasonable number of timestep decrements
 channel node, it may not be fixable. This is OK so long as the channel is stable and volume conservation
 is observed.</p>
 </div>
-<img alt="../../_images/image132.png" src="../../_images/image132.png" />
+<img alt="../../_images/image133.png" src="../../_images/image133.png" />
 <p><em>Figure 85.
 Time.out Example.</em></p>
 </section>
@@ -263,22 +263,22 @@ This short segment shows how to load these nodes into QGIS for an inspection.
 The main purpose of this illustration is to show users how to perform a table join.
 Table joins are a very helpful tool for many different types of data analysis.</p>
 <p>Load the file CHAN_INTERIOR_NODES.OUT (Figure 86) as a delimited text file into QGIS (Figure 87).</p>
-<img alt="../../_images/image142.png" src="../../_images/image142.png" />
+<img alt="../../_images/image143.png" src="../../_images/image143.png" />
 <p><em>Figure 86.
 Chan_Interior_Nodes.out Example.</em></p>
-<img alt="../../_images/image151.png" src="../../_images/image151.png" />
+<img alt="../../_images/image152.png" src="../../_images/image152.png" />
 <p><em>Figure 87.
 Load Delimited Text.</em></p>
 <p>Join the new data to the Grid layer (Figure 88).</p>
-<img alt="../../_images/image162.png" src="../../_images/image162.png" />
+<img alt="../../_images/image163.png" src="../../_images/image163.png" />
 <p><em>Figure 88.
 Join Delimited Text to Grid.</em></p>
 <p>Add a symbology rule to the Grid layer (Figure 89).</p>
-<img alt="../../_images/image171.png" src="../../_images/image171.png" />
+<img alt="../../_images/image172.png" src="../../_images/image172.png" />
 <p><em>Figure 89.
 Rule-based Grid Symbology.</em></p>
 <p>Review the interior grid elements (Figure 90).</p>
-<img alt="../../_images/image181.png" src="../../_images/image181.png" />
+<img alt="../../_images/image182.png" src="../../_images/image182.png" />
 <p><em>Figure 90.
 Interior Channel Nodes Example.</em></p>
 </section>
@@ -286,7 +286,7 @@ Interior Channel Nodes Example.</em></p>
 <h2><span class="section-number">3.12. </span>Check files<a class="headerlink" href="#check-files" title="Link to this heading"></a></h2>
 <p>ChanBankEl.chk (Figure 91) lists the differences between the channel cross section and the left or right bank grid elevation.
 If major elevation differences are listed, please review them, and see if corrections are required.</p>
-<img alt="../../_images/image191.png" src="../../_images/image191.png" />
+<img alt="../../_images/image192.png" src="../../_images/image192.png" />
 <p><em>Figure 91.
 ChanBankEl.chk Example.</em></p>
 <div class="admonition note">
@@ -296,19 +296,19 @@ It is better to open the filewith the Debug tool.</p>
 </div>
 <p>Create a new group called Debug (Figure 92).
 Select the Group and run the debug tool.</p>
-<img alt="../../_images/image202.png" src="../../_images/image202.png" />
+<img alt="../../_images/image203.png" src="../../_images/image203.png" />
 <p><em>Figure 92.
 Create Debug Group.</em></p>
 <p>Click the Load Debug tool (Figure 93) and click OK to load the debug data.</p>
-<img alt="../../_images/image211.png" src="../../_images/image211.png" />
+<img alt="../../_images/image212.png" src="../../_images/image212.png" />
 <p><em>Figure 93.
 Import Debug Data Tool.</em></p>
 <p>Data location: QGIS Tutorials/QGIS Lesson 2/Lesson 2/Advanced Debug Run (Figure 94).</p>
-<img alt="../../_images/image222.png" src="../../_images/image222.png" />
+<img alt="../../_images/image223.png" src="../../_images/image223.png" />
 <p><em>Figure 94.
 Example Debug Output Files.</em></p>
 <p>Click Yes to load both extra error check files (Figure 95).</p>
-<img alt="../../_images/image231.png" src="../../_images/image231.png" />
+<img alt="../../_images/image232.png" src="../../_images/image232.png" />
 <p><em>Figure 95.
 Additional Debug Files Loaded.</em></p>
 <p>Double click the Channel Bank Elevation Differences layer and set the symbology properties (Figure 96).</p>
@@ -345,11 +345,11 @@ The AdvancedChannel training module did not write the file because no convergenc
 Let’s pretend that the grid element listed is 35368.
 This is one fromthe training module so it can be inspected.</p>
 </div>
-<img alt="../../_images/image262.png" src="../../_images/image262.png" />
+<img alt="../../_images/image263.png" src="../../_images/image263.png" />
 <p><em>Figure 98.
 *Channel_Convergence.out Example.</em></p>
 <p>Type 35368 into the FLO-2D grid info box (Figure 99) and click the eye button.</p>
-<img alt="../../_images/image272.png" src="../../_images/image272.png" />
+<img alt="../../_images/image273.png" src="../../_images/image273.png" />
 <p><em>Figure 99.
 Grid Info Tool.</em></p>
 <p>Assume that this channel element and cross section are not able to converge for depths greater than 1ft.
@@ -408,7 +408,7 @@ It may be written for sediment transport or mudflow in channels.</p>
 A V-shaped channel might result in evacuated timesteps.
 JS O’Brien has modified the channel flow so they do not share flow until 0.1ft or 0.03m of depth.
 This has eliminated most evacuated channel reporting.</p>
-<img alt="../../_images/image291.png" src="../../_images/image291.png" />
+<img alt="../../_images/image292.png" src="../../_images/image292.png" />
 <p><em>Figure 101.
 EvacuatedChan.out Example.</em></p>
 </section>
@@ -420,7 +420,7 @@ There are many ways to check this.
 Here are two easy ones.</p>
 <p>HYDROG.EXE shows that the hydrograph at the end of the channel should be about finished.
 This one still has some residual rainfall.</p>
-<img alt="../../_images/image301.png" src="../../_images/image301.png" />
+<img alt="../../_images/image302.png" src="../../_images/image302.png" />
 <p><em>Figure 102.
 Channel Hydrograph Hydrog Example.</em></p>
 <p>PROFILES.EXE show that the flow channel is almost empty (Figure 103).</p>
@@ -435,7 +435,7 @@ It specifically asks the user to check this data for bad cross sections.</p>
 <p>Review the change in cross section area, width, and wetted perimeter for each cross section (Figure 104).
 Check for changes in these values that indicate the channel is transitioning too quickly for the model to remain numerically stable.
 Find this in the XSECAREA.OUT file or by using the Profiles.exe program.</p>
-<img alt="../../_images/image82.png" src="../../_images/image82.png" />
+<img alt="../../_images/image83.png" src="../../_images/image83.png" />
 <p><em>Figure 104.
 XsecArea.out Example.</em></p>
 </section>
@@ -445,7 +445,7 @@ XsecArea.out Example.</em></p>
 Review this file for anomalies.
 Instability and volume conservation error can sometimes be traced back to cross sections with discharge values that are too high or discharge values
 that do not align with the water surface elevation and the time.</p>
-<img alt="../../_images/image32.png" src="../../_images/image32.png" />
+<img alt="../../_images/image321.png" src="../../_images/image321.png" />
 <p><em>Figure 105.
 ChanMax.out Example.</em></p>
 </section>
