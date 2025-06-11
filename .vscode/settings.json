@@ -2,8 +2,10 @@
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python-envs.pythonProjects": [],
     "cSpell.words": [
+        "hydrographs",
         "isohyetal",
         "multd",
+        "newbc",
         "NOAA",
         "rubberband"
     ]
