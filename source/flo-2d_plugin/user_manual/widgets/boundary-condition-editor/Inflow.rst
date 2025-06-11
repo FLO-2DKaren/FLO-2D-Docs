@@ -10,9 +10,15 @@ even the 1-D street component. This represents a flood inflow to the flow domain
 
 .. |bctraining| raw:: html
 
-    <a href="https://flo-2d.com/contact/" target="_blank" rel="noopener">BC Training Package</a>
+    <a href="https://flo-2d.com/product/boundary-conditions/" target="_blank" rel="noopener">BC Training Package</a>
 
 .. note:: Get a |bctraining| to learn how to correctly define boundaries for FLO-2D projects.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
+
+   Inflow
 
 Create Inflow Data - Point
 -----------------------------

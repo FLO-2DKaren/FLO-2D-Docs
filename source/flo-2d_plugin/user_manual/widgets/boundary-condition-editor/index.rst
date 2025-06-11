@@ -21,6 +21,13 @@ are checked. See image below.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc001.png
 
+
+.. |bctraining| raw:: html
+
+    <a href="https://flo-2d.com/product/boundary-conditions/" target="_blank" rel="noopener">BC Training Package</a>
+
+.. note:: Get a |bctraining| to learn how to correctly define boundaries for FLO-2D projects.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents
