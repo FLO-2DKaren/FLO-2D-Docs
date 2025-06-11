@@ -17,8 +17,7 @@ even the 1-D street component. This represents a flood inflow to the flow domain
 .. contents::
    :local: 
    :depth: 2
-   :contents: Contents
-
+   :caption: Contents
 
 Create Inflow Data - Point
 -----------------------------
