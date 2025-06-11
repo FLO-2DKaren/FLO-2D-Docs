@@ -20,11 +20,9 @@ These conditions define how the channel or floodplain discharge enters or leaves
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc003.png
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents
-
-   Outflow
+.. contents::
+   :local: 
+   :depth: 2
 
 Normal
 ------------

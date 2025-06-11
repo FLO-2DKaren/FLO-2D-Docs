@@ -14,11 +14,10 @@ even the 1-D street component. This represents a flood inflow to the flow domain
 
 .. note:: Get a |bctraining| to learn how to correctly define boundaries for FLO-2D projects.
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents
+.. contents::
+   :local: 
+   :depth: 2
 
-   Inflow
 
 Create Inflow Data - Point
 -----------------------------
