@@ -530,9 +530,9 @@ A rainfall reduction value is calculated for each element in the grid system usi
 
 Where:
 
-    RAIN\ :sub:`arf` = A spatially reduced rainfall value
-    RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
-    RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
+    - RAIN\ :sub:`arf` = A spatially reduced rainfall value
+    - RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
+    - RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO054.png
 
