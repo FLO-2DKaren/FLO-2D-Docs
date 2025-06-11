@@ -20,11 +20,10 @@ These conditions define how the channel or floodplain discharge enters or leaves
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc003.png
 
-.. contents::
+.. contents:: Contents
    :local: 
    :depth: 2
-   :caption: Contents
-
+   :backlinks: entry
 
 Normal
 ------------
