@@ -35,9 +35,10 @@ Create Inflow Data - Point
 Create Inflow Data - Line
 -----------------------------
 
-.. important:: The Inflow Boundary Condition Line has been modified.  The hydrograph is now distributed
+.. warning:: The Inflow Boundary Condition Line has been modified.  The hydrograph is now distributed
    to the cells that are intersected by the line.  Previously, the hydrograph was assigned to each cell
-   intersected by the line.  
+   intersected by the line.  The hydrograph will be distributed by dividing the discharge cells by the 
+   number of cells intersected by the line.
 
 1. To create a line of inflow, click the Add Line BC button on the Boundary Condition
    Editor widget.
