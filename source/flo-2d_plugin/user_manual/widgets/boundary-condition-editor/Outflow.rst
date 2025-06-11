@@ -23,6 +23,7 @@ These conditions define how the channel or floodplain discharge enters or leaves
 .. contents::
    :local: 
    :depth: 2
+   :contents: Contents
 
 Normal
 ------------
