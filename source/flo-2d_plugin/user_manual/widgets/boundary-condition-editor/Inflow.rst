@@ -8,6 +8,12 @@ even the 1-D street component. This represents a flood inflow to the flow domain
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc002.png
 
+.. |bctraining| raw:: html
+
+    <a href="https://flo-2d.com/contact/" target="_blank" rel="noopener">BC Training Package</a>
+
+.. note:: Get a |bctraining| to learn how to correctly define boundaries for FLO-2D projects.
+
 Create Inflow Data - Point
 -----------------------------
 
