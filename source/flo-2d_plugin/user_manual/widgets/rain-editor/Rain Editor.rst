@@ -3,21 +3,26 @@
 Rain Editor
 ===========
 
-The rainfall editor is used to set up the RAINFALL.DAT file and the RAINCELL.DAT file.
-This section will describe how to set up uniform rainfall, spatially variable depth reduction factors, and spatially and time variable rainfall.
+The Rain Editor is a user interface for creating and editing rainfall data used in FLO-2D simulations. 
+This tool allows you to define uniform or spatial rainfall events, set rainfall durations and intensities, and import or export rainfall time series files.
+
+.. contents:: Contents
+   :local:
+   :depth: 2
+   :backlinks: entry
+
 
 .. image:: ../../img/Widgets/rain.png
 
 Uniform Rainfall
 ----------------
 
-Uniform rainfall requires the total rain in inches or millimeters and a rainfall distribution.
-In this example, the total rainfall is 3 inches.
-To find Total Storm Rainfall, zoom to Rainfall raster with Computational Domain layer, check Identify Features button, clicks within the Computational
-Domain to find highest derived value.
-The Building Rain switch is selected so that rain on totally blocked ARF cells will allow rain to run from the blocked areas.
-The initial abstraction is default of zero inches.
-The rainfall distribution is imported from a data file.
+Uniform rainfall requires specifying the total storm rainfall in inches or millimeters, along with a rainfall distribution. 
+In this example, the total rainfall is 3 inches. To determine the total storm rainfall, zoom to the rainfall raster with the 
+Computational Domain layer visible, enable the Identify Features tool, and click within the domain to find the highest 
+derived value. The Building Rain option is selected so that rainfall on fully blocked ARF cells will still generate runoff 
+from those areas. The initial abstraction is set to the default of 0.00 inches. The rainfall distribution can be imported 
+from a data file or manually defined using the Table tools.
 
 .. image:: ../../img/Rain-Editor/rained002.png
 
@@ -29,7 +34,7 @@ The rainfall distribution is imported from a data file.
 2. Import the rainfall distribution file from a set of predefined files.
 
 .. note:: The files are installed in the FLO-2D Documentation folder:
-          C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions
 
 .. image:: ../../img/Rain-Editor/rained003.png
 

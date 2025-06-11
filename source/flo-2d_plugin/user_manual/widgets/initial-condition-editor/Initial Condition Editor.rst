@@ -106,6 +106,8 @@ and fill any grid elements that are lower than the reservoir elevation.
 Check the reservoir containment by running the FLO-2D simulation for short duration of 0.01 hours.
 The reservoir will be filled and display any leaks in the maximum depth output files.
 
+The following images illustrate the reservoir failing due to low bank elevation.
+
 .. image:: ../../img/Initial-Condition-Editor/filltest2.png
 
 
