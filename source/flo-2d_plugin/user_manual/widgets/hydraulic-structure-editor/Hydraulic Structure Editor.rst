@@ -33,10 +33,7 @@ Culvert Types
 Channel to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Culvert Type:
-
 -  Channel to Channel
-
 -  Generalized Culvert Equation
 
 This structure will simulate discharge through a box culvert.
@@ -61,7 +58,6 @@ The channel segments are split up to allow for the width of the roadway.
    Culverts are only assigned to the left bank nodes.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/addchanculv.gif
-
 
 6. Click
    Save.
@@ -89,10 +85,7 @@ The channel segments are split up to allow for the width of the roadway.
 Floodplain to Floodplain Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Culvert Type:
-
 -  Floodplain to Floodplain
-
 -  Rating Table
 
 This example will model a culvert system between two floodplain nodes.
@@ -116,17 +109,14 @@ The invert elevation of the inlet node is set by the grid element elevation.
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau010.png
 
 
-4. Click
-   Save.
+4. Click Save.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau011.png
 
 
-5. Fill in the data
-   on the Structure Editor and the Table Editor.
+5. Fill in the data on the Structure Editor and the Table Editor.
 
-6. No need for culvert
-   geometry because this culvert uses a rating table.
+6. No need for culvert geometry because this culvert uses a rating table.
 
 7. No need for reference
    elevation because this culvert discharge starts when the water enters the upstream grid element.
@@ -134,8 +124,7 @@ The invert elevation of the inlet node is set by the grid element elevation.
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau012.png
 
 
-8. Fill the
-   rating table.
+8. Fill the rating table.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau013.png
 
@@ -148,6 +137,9 @@ The invert elevation of the inlet node is set by the grid element elevation.
 
 Floodplain to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Floodplain to Channel
+-  Culvert equation
 
 This example shows a culvert that connects a basin to a channel.
 
@@ -205,23 +197,17 @@ This example shows a culvert that connects a basin to a channel.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
 
-Bridge
-----------------
+Channel to Floodplain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Bridge parameters can be defined for a structure.
+-  Channel to Floodplain
+-  Culvert equation
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau020.png
-
-
-The USGS bridge tables are used to define the flow though a bridge with bridge geometry and discharge coefficients.
-
-.. note:: See `Bridge tutorial and Bridge guidelines <https://documentation.flo-2d.com/Advanced-Lessons/Module%202%20Part%203.html>`__ for a detailed guide.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau021.png
-
-
-Import Rating Tables
+Rating Tables
 --------------------------
+
+Rating tables are used to define the relationship between stage and discharge for a hydraulic structure.  They can 
+represent culverts, bridges, pumps, weirs or drop structures.
 
 1. Click the
    Import Rating Tables button.
@@ -307,3 +293,17 @@ Table: Entrance Loss Coefficients (HDS-5 Third Edition)
 +---------------------------------------------------------------+---------------+
 
 .. source:: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
+
+Bridge
+----------------
+
+Bridge parameters can be defined for a structure.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau020.png
+
+
+The USGS bridge tables are used to define the flow though a bridge with bridge geometry and discharge coefficients.
+
+.. note:: See `Bridge tutorial and Bridge guidelines <https://documentation.flo-2d.com/Advanced-Lessons/Module%202%20Part%203.html>`__ for a detailed guide.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau021.png
