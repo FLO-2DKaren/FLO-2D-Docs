@@ -5,7 +5,7 @@ Export Multiple Domains
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom001.png
 
-This tool will export the \*.DAT files for selected or all subdomains. Once the multiple domains have been created and schematized use this button to export the domains.
+This tool will export the ``*.DAT`` files for selected or all subdomains. Once the multiple domains have been created and schematized use this button to export the domains.
 
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom003.png
@@ -25,7 +25,7 @@ Export multiple domains button and select the MULTDOMAIN.DAT method.
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom005.png
 
-2. Select the folder to export the domains.  The folder will contain the \*.DAT files and if needed the MULTDOMAIN.DAT file.
+2. Select the folder to export the domains.  The folder will contain the ``*.DAT`` files and if needed the MULTDOMAIN.DAT file.
 
 .. image:: ../../img/Export-Multiple-Domains/expmultdom005a.png
 

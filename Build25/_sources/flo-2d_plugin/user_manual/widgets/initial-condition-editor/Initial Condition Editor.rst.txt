@@ -100,9 +100,15 @@ Reservoir Troubleshooting
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The most common issue encountered with this tool is low reservoir bank elevation surrounding the reservoir.
-If the confining reservoir bank element is lower than the reservoir elevation, the water will spill out of the cell.
+If the confining reservoir bank element is lower than the reservoir elevation, the water will spill out of the cell
+and fill any grid elements that are lower than the reservoir elevation.
+
 Check the reservoir containment by running the FLO-2D simulation for short duration of 0.01 hours.
 The reservoir will be filled and display any leaks in the maximum depth output files.
+
+The following images illustrate the reservoir failing due to low bank elevation.
+
+.. image:: ../../img/Initial-Condition-Editor/filltest2.png
 
 
 Tailings Overview

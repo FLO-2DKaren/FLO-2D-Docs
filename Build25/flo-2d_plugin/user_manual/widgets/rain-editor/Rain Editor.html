@@ -46,10 +46,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Gila for QGIS: User Manual</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
@@ -74,10 +74,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">Technical Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
 </ul>
 
         </div>
@@ -94,8 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin</a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS: User Manual</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
       <li class="breadcrumb-item active">Rain Editor</li>
       <li class="wy-breadcrumbs-aside">
@@ -109,18 +109,30 @@
              
   <section id="rain-editor">
 <span id="id1"></span><h1>Rain Editor<a class="headerlink" href="#rain-editor" title="Link to this heading"></a></h1>
-<p>The rainfall editor is used to set up the RAINFALL.DAT file and the RAINCELL.DAT file.
-This section will describe how to set up uniform rainfall, spatially variable depth reduction factors, and spatially and time variable rainfall.</p>
+<p>The Rain Editor is a user interface for creating and editing rainfall data used in FLO-2D simulations.
+This tool allows you to define uniform or spatial rainfall events, set rainfall durations and intensities, and import or export rainfall time series files.</p>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#uniform-rainfall" id="id2">Uniform Rainfall</a></p></li>
+<li><p><a class="reference internal" href="#moving-storm" id="id3">Moving Storm</a></p></li>
+<li><p><a class="reference internal" href="#spatially-variable-rainfall-noaa-atlas-14" id="id4">Spatially Variable Rainfall NOAA Atlas 14</a></p></li>
+<li><p><a class="reference internal" href="#realtime-rainfall-nexrad" id="id5">Realtime Rainfall NEXRAD</a></p></li>
+<li><p><a class="reference internal" href="#rainfall-catalog" id="id6">Rainfall Catalog</a></p></li>
+<li><p><a class="reference internal" href="#setup-import-options" id="id7">Setup Import Options</a></p></li>
+<li><p><a class="reference internal" href="#import-realtime-rainfall" id="id8">Import Realtime Rainfall</a></p></li>
+<li><p><a class="reference internal" href="#export-the-rainfall-data" id="id9">Export the rainfall data</a></p></li>
+</ul>
+</nav>
 <img alt="../../../../_images/rain.png" src="../../../../_images/rain.png" />
 <section id="uniform-rainfall">
-<h2>Uniform Rainfall<a class="headerlink" href="#uniform-rainfall" title="Link to this heading"></a></h2>
-<p>Uniform rainfall requires the total rain in inches or millimeters and a rainfall distribution.
-In this example, the total rainfall is 3 inches.
-To find Total Storm Rainfall, zoom to Rainfall raster with Computational Domain layer, check Identify Features button, clicks within the Computational
-Domain to find highest derived value.
-The Building Rain switch is selected so that rain on totally blocked ARF cells will allow rain to run from the blocked areas.
-The initial abstraction is default of zero inches.
-The rainfall distribution is imported from a data file.</p>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Uniform Rainfall</a><a class="headerlink" href="#uniform-rainfall" title="Link to this heading"></a></h2>
+<p>Uniform rainfall requires specifying the total storm rainfall in inches or millimeters, along with a rainfall distribution.
+In this example, the total rainfall is 3 inches. To determine the total storm rainfall, zoom to the rainfall raster with the
+Computational Domain layer visible, enable the Identify Features tool, and click within the domain to find the highest
+derived value. The Building Rain option is selected so that rainfall on fully blocked ARF cells will still generate runoff
+from those areas. The initial abstraction is set to the default of 0.00 inches. The rainfall distribution can be imported
+from a data file or manually defined using the Table tools.</p>
 <img alt="../../../../_images/rained002.png" src="../../../../_images/rained002.png" />
 <ol class="arabic simple">
 <li><p>Select the rainfall
@@ -152,13 +164,13 @@ series data set.</p></li>
 </ol>
 </section>
 <section id="moving-storm">
-<h2>Moving Storm<a class="headerlink" href="#moving-storm" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Moving Storm</a><a class="headerlink" href="#moving-storm" title="Link to this heading"></a></h2>
 <p>To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.</p>
 <img alt="../../../../_images/rained006.png" src="../../../../_images/rained006.png" />
 </section>
 <section id="spatially-variable-rainfall-noaa-atlas-14">
-<h2>Spatially Variable Rainfall NOAA Atlas 14<a class="headerlink" href="#spatially-variable-rainfall-noaa-atlas-14" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Spatially Variable Rainfall NOAA Atlas 14</a><a class="headerlink" href="#spatially-variable-rainfall-noaa-atlas-14" title="Link to this heading"></a></h2>
 <p>Spatially variable rainfall can be modeled using depth reduction factors in the RAINFALL.DAT file. This file defines rainfall
 values in either inches or millimeters, where each value represents the depth at a specific point (typically the centroid of a grid element)
 relative to the total rainfall across the computational domain.</p>
@@ -184,7 +196,7 @@ It is not necessary to average the data.</p>
 <img alt="../../../../_images/rained008.png" src="../../../../_images/rained008.png" />
 </section>
 <section id="realtime-rainfall-nexrad">
-<span id="real-rain-editor"></span><h2>Realtime Rainfall NEXRAD<a class="headerlink" href="#realtime-rainfall-nexrad" title="Link to this heading"></a></h2>
+<span id="real-rain-editor"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink">Realtime Rainfall NEXRAD</a><a class="headerlink" href="#realtime-rainfall-nexrad" title="Link to this heading"></a></h2>
 <p>Real-time rainfall data can be generated from NEXRAD *.ASC grid files. In the United States, these files are produced
 using calibrated radar reflectivity data from the National Oceanic and Atmospheric Administration (NOAA), supplemented
 with rainfall gage measurements from local networks. Calibration is typically performed by regional agencies or
@@ -206,7 +218,7 @@ and no other components loaded to perform the RAINCELL.DAT or RAINCELL.HDF5 data
 </div>
 </section>
 <section id="rainfall-catalog">
-<h2>Rainfall Catalog<a class="headerlink" href="#rainfall-catalog" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Rainfall Catalog</a><a class="headerlink" href="#rainfall-catalog" title="Link to this heading"></a></h2>
 <p>The project directory must contain all the rainfall *.asc files and a catalog file *.rtc.
 Both filetypes are text files.
 The *.asc files are rainfall coverage for the project area at a specified time interval.
@@ -229,7 +241,7 @@ The rainfall data will interpolate from time = 0 rainfall = 0 to the first inter
 <img alt="../../../../_images/rained011.png" src="../../../../_images/rained011.png" />
 </section>
 <section id="setup-import-options">
-<h2>Setup Import Options<a class="headerlink" href="#setup-import-options" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Setup Import Options</a><a class="headerlink" href="#setup-import-options" title="Link to this heading"></a></h2>
 <p>The rainfall data does not have a specific coordinate reference system (CRS).</p>
 <ol class="arabic simple">
 <li><p>Set the import options for QGIS to automatically assign all imported data with no knows CRS to the Project CRS.</p></li>
@@ -242,7 +254,7 @@ The rainfall data will interpolate from time = 0 rainfall = 0 to the first inter
 <img alt="../../../../_images/rained013.png" src="../../../../_images/rained013.png" />
 </section>
 <section id="import-realtime-rainfall">
-<h2>Import Realtime Rainfall<a class="headerlink" href="#import-realtime-rainfall" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Import Realtime Rainfall</a><a class="headerlink" href="#import-realtime-rainfall" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To interpolate realtime rainfall data, activate the Realtime Rainfall Editor.</p></li>
 <li><p>Click the Import Real Time Rainfall ASCII files.</p></li>
@@ -259,7 +271,7 @@ The rainfall data will interpolate from time = 0 rainfall = 0 to the first inter
 <img alt="../../../../_images/rained016.png" src="../../../../_images/rained016.png" />
 </section>
 <section id="export-the-rainfall-data">
-<h2>Export the rainfall data<a class="headerlink" href="#export-the-rainfall-data" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Export the rainfall data</a><a class="headerlink" href="#export-the-rainfall-data" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Click Export the Realtime Rainfall Data.  There are 3 Options.  The recommended option is hdf5 due to the size
 differences in the data files.</p></li>

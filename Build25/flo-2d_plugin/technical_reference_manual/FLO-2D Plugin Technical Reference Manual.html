@@ -22,8 +22,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tutorials" href="../../tutorials/index.html" />
-    <link rel="prev" title="Technical Reference Manual" href="index.html" /> 
+    <link rel="next" title="FLO-2D Gila Tutorials" href="../../tutorials/index.html" />
+    <link rel="prev" title="FLO-2D Gila for QGIS: Technical Reference" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,11 +48,11 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../user_manual/index.html">FLO-2D Plugin Gila</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Technical Reference Manual</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila for QGIS: Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../user_manual/index.html">FLO-2D Gila for QGIS: User Manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Gila for QGIS: Technical Reference</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Overview</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-file-structure">Data File Structure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#geopackage-file">GeoPackage File</a></li>
@@ -222,7 +222,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
 </ul>
 
         </div>
@@ -239,8 +239,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Plugin</a></li>
-          <li class="breadcrumb-item"><a href="index.html">Technical Reference Manual</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
       <li class="breadcrumb-item active">Overview</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_plugin/technical_reference_manual/FLO-2D Plugin Technical Reference Manual.rst.txt" rel="nofollow"> View page source</a>
@@ -308,14 +308,14 @@ The code is stored in the flo2d directory of the qgis/python/plugins folder (Fig
 Plugin Folder.</em></p>
 <p>The code can be viewed, queried and edited with any text editor including UltraEdit, Notepad++ or Textpad.
 The files include the following:</p>
-<blockquote>
-<div><p>*.png – icon files</p>
-<p>*.py – python code files</p>
-<p>*.qml – QGIS layer styles</p>
-<p>*.svg – icon files</p>
-<p>*.sql – SQL code relational database information</p>
-<p>*.ui – QT Creator window editor</p>
-</div></blockquote>
+<ul class="simple">
+<li><p>*.png – icon files</p></li>
+<li><p>*.py – python code files</p></li>
+<li><p>*.qml – QGIS layer styles</p></li>
+<li><p>*.svg – icon files</p></li>
+<li><p>*.sql – SQL code relational database information</p></li>
+<li><p>*.ui – QT Creator window editor</p></li>
+</ul>
 <p>The plugin is organized into utility-based directories for plugin files that perform specific functions.
 For example, there is a folder for the toolbar and one for the sidebar widgets.
 The plugin code is built with Pycharm, and Eclipse.
@@ -631,23 +631,19 @@ The octagonal sides are intersected to the polygons in the <em>Blocked Areas</em
 <p><em>Figure 19.
 Area and Width Reduction Factors.</em></p>
 <p>The QGIS and GDS have slight differences in calculators.</p>
-<ol class="arabic simple">
-<li><p>The Plugin will reset ARF = 1 for any cell greater than 0.90 ARF.
+<p>QGIS Method -  The Plugin will reset ARF = 1 for any cell greater than 0.90 ARF.
 This can be seen in the following image.
-GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).</p></li>
-</ol>
+GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).</p>
 <img alt="../../_images/image20.png" src="../../_images/image20.png" />
 <p><em>Figure 20.
 ARF GDS / QGIS Comparison.</em></p>
-<ol class="arabic simple" start="2">
-<li><p>The GDS inserts redundant WRFs for cells that would otherwise be empty.
-This makes the GDS WRFs look more conservative, but it isn’t necessary.
-GDS on the left and QGIS on the right (Figure 21).</p></li>
-</ol>
+<p>GDS Method - The GDS inserts redundant WRFs for cells that would otherwise be empty.
+This is not necessary and ultimately uses more data.
+GDS on the left and QGIS on the right (Figure 21).</p>
 <img alt="../../_images/image21.png" src="../../_images/image21.png" />
 <p><em>Figure 21.
 WRF Redundancy GDS / QGIS Comparison.</em></p>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple">
 <li><p>QGIS calculator is more accurate on cells that have partial WRFs.
 The GDS WRF on the left is calculated as 0.98.
 The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).</p></li>
@@ -679,9 +675,11 @@ A rainfall reduction value is calculated for each element in the grid system usi
 <span class="eqno">(33)<a class="headerlink" href="#equation-flo-2d-plugin-technical-reference-manual-flo-2d-plugin-technical-reference-manual-0" title="Link to this equation"></a></span>\[{RAIN}_{arf} = \frac{{RAIN}_{grid}}{{RAIN}_{\max}}\]</div>
 <p>Where:</p>
 <blockquote>
-<div><p>RAIN<sub>arf</sub> = A spatially reduced rainfall value</p>
-<p>RAIN<sub>grid</sub> = The rainfall sampled from the centroid of the grid element.</p>
-<p>RAIN<sub>max</sub> = The maximum rainfall for the raster in the project area.</p>
+<div><ul class="simple">
+<li><p>RAIN<sub>arf</sub> = A spatially reduced rainfall value</p></li>
+<li><p>RAIN<sub>grid</sub> = The rainfall sampled from the centroid of the grid element.</p></li>
+<li><p>RAIN<sub>max</sub> = The maximum rainfall for the raster in the project area.</p></li>
+</ul>
 </div></blockquote>
 <img alt="../../_images/FLO054.png" src="../../_images/FLO054.png" />
 <p><em>Figure 24.
@@ -11155,8 +11153,8 @@ and peak discharge data.</p></td>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Technical Reference Manual" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../tutorials/index.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="FLO-2D Gila for QGIS: Technical Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../tutorials/index.html" class="btn btn-neutral float-right" title="FLO-2D Gila Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

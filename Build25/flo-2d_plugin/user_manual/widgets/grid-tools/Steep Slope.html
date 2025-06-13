@@ -46,10 +46,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Gila for QGIS: User Manual</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
@@ -74,10 +74,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">Technical Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
 </ul>
 
         </div>
@@ -94,8 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin</a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS: User Manual</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
           <li class="breadcrumb-item"><a href="index.html">Grid Tools</a></li>
       <li class="breadcrumb-item active">15. Steep Slope</li>
@@ -111,7 +111,29 @@
   <section id="steep-slope">
 <span id="id1"></span><h1>15. Steep Slope<a class="headerlink" href="#steep-slope" title="Link to this heading"></a></h1>
 <img alt="../../../../_images/steepslope001.png" src="../../../../_images/steepslope001.png" />
-<p>RSTLNE</p>
+<p>The steep slope n-value method provides a way to assign more realistic Manning’s roughness values in steep terrain by applying
+slope-based adjustments the the grid element n-value. This helps improve the accuracy and stability of flood simulations in
+high-gradient watersheds.  the user can apply a global or spatially variable steep slope n-value adjustment to the grid elements.</p>
+<section id="global-method">
+<h2>Global Method<a class="headerlink" href="#global-method" title="Link to this heading"></a></h2>
+<p>The global method is the easiest way to apply the steep slope calculator.  Turning on the Global Switch will
+allow the FLO-2D engine to assess grid elements and apply the steep slope calculator to all grid elements that meet the criteria.</p>
+<ol class="arabic simple">
+<li><p>Open the Areas Editor and select the Steep Slope area type.</p></li>
+<li><p>Click the Global Switch to turn it on.</p></li>
+</ol>
+<img alt="../../../../_images/steepslope002.png" src="../../../../_images/steepslope002.png" />
+</section>
+<section id="spatially-variable-method">
+<h2>Spatially Variable Method<a class="headerlink" href="#spatially-variable-method" title="Link to this heading"></a></h2>
+<p>Use the Areas Editor to create a local area for the steep slope calculator.
+1. Open the Areas Editor and select the Steep Slope area type.
+2. Use the polygon tool to draw a polygon around the steep slope area.
+3. Click the polygon tool again to save the edits.
+4. Click the Global Switch to turn it off if necessary.
+5. Click the Schematize button to apply the steep slope calculator to the selected area.</p>
+<img alt="../../../../_images/steepslope003.png" src="../../../../_images/steepslope003.png" />
+</section>
 </section>
 
 

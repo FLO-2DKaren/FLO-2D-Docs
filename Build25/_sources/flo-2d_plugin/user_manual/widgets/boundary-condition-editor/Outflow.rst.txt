@@ -8,11 +8,22 @@ Boundary outflow conditions include:
 -  Normal Depth Control
 -  Time Stage Control
 -  Discharge Stage Control
--  Multiple Domain Exchange
+-  Multiple Domain Exchange  
+
+.. |bctraining| raw:: html
+
+    <a href="https://flo-2d.com/product/boundary-conditions/" target="_blank" rel="noopener">BC Training Package</a>
+
+.. note:: Get a |bctraining| to learn how to correctly define boundaries for FLO-2D projects.
 
 These conditions define how the channel or floodplain discharge enters or leaves the FLO-2D model domain.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc003.png
+
+.. contents:: Contents
+   :local: 
+   :depth: 2
+   :backlinks: entry
 
 Normal
 ------------

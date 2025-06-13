@@ -46,10 +46,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Gila for QGIS: User Manual</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
@@ -74,10 +74,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">Technical Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
 </ul>
 
         </div>
@@ -94,8 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin</a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS: User Manual</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
       <li class="breadcrumb-item active">Pre-Processing Tools</li>
       <li class="wy-breadcrumbs-aside">
@@ -109,7 +109,7 @@
              
   <section id="pre-processing-tools">
 <span id="id1"></span><h1>Pre-Processing Tools<a class="headerlink" href="#pre-processing-tools" title="Link to this heading"></a></h1>
-<p>The Pre-Processing Tools is a set of tools designed to modify Digital Elevation Models (DEMs) for various applications.
+<p>The Pre-Processing Tools are tools designed to modify Digital Elevation Models (DEMs) for various applications.
 These tools provide efficient pre-processing solutions for removing artificial barriers such as dams, bridges, and
 levees, allowing users to create more realistic and valuable terrain representations.</p>
 <img alt="../../../../_images/preprocessing.png" src="../../../../_images/preprocessing.png" />
@@ -142,9 +142,8 @@ representation of dams or artificial barriers within the elevation data.</p>
 <li><p>Click on Estimate Reservoir.</p></li>
 </ol>
 <img alt="../../../../_images/Prepro005.png" src="../../../../_images/Prepro005.png" />
-</section>
 <section id="downstream-of-dam">
-<h2>Downstream of Dam<a class="headerlink" href="#downstream-of-dam" title="Link to this heading"></a></h2>
+<h3>Downstream of Dam<a class="headerlink" href="#downstream-of-dam" title="Link to this heading"></a></h3>
 <p>Open a path for the water to leave the dam on the downstream edge of the dam.  Lower the elevation using the channel
 polygon.</p>
 <ol class="arabic simple" start="6">
@@ -159,25 +158,86 @@ polygon.</p>
 <li><p>Click on Save channel.</p></li>
 </ol>
 <img alt="../../../../_images/Prepro008.png" src="../../../../_images/Prepro008.png" />
-<ol class="arabic simple" start="8">
+<ol class="arabic simple" start="9">
 <li><p>Select the Input Raster.</p></li>
 </ol>
 <img alt="../../../../_images/Prepro009.png" src="../../../../_images/Prepro009.png" />
-<ol class="arabic simple" start="9">
+<ol class="arabic simple" start="10">
 <li><p>Click on Remove Dam and save or not the intermediate calculation shapefiles (Dam Area &amp; Channel).</p></li>
 </ol>
 <img alt="../../../../_images/Prepro010.png" src="../../../../_images/Prepro010.png" />
-<ol class="arabic simple" start="10">
+<ol class="arabic simple" start="11">
 <li><p>Check the modified DEM for any bad data and redo the process until the DEM is satisfactory.</p></li>
 </ol>
 <img alt="../../../../_images/Prepro011.png" src="../../../../_images/Prepro011.png" />
 </section>
-<section id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="dam-removal-troubleshooting">
+<h3>Dam Removal Troubleshooting<a class="headerlink" href="#dam-removal-troubleshooting" title="Link to this heading"></a></h3>
 <p>Estimate the side slopes based on the dam banks or design data.
 The connection between the channel and the reservoir is usually steep, check for potential bad data there.
 Check the area and the volume removed from the DEM to match the design volume.
 The number of intervals equal 10 is a good estimation, but it can be modified.</p>
+</section>
+</section>
+<section id="raster-unit-converter">
+<h2>Raster Unit Converter<a class="headerlink" href="#raster-unit-converter" title="Link to this heading"></a></h2>
+<p>The unit converter was developed to convert the USGS elevation data from meters to ft. Download the USGS DEM data
+from a 3DEP layer and convert it to feet using the unit converter.</p>
+<ol class="arabic simple">
+<li><p>Click on the Raster Converter editor.</p></li>
+<li><p>Load the raster file.</p></li>
+<li><p>Define the file name and path to save the converted file.</p></li>
+<li><p>Click the convert button.</p></li>
+</ol>
+<img alt="../../../../_images/prepro030.png" src="../../../../_images/prepro030.png" />
+<ol class="arabic simple" start="5">
+<li><p>The new layer will be added to the map with the converted data.</p></li>
+</ol>
+<img alt="../../../../_images/prepro031.png" src="../../../../_images/prepro031.png" />
+</section>
+<section id="download-3dep-dem-data">
+<h2>Download 3DEP DEM Data<a class="headerlink" href="#download-3dep-dem-data" title="Link to this heading"></a></h2>
+<p>The 3DEP (3D Elevation Program) provides high-resolution elevation data for the United States.
+To download 3DEP DEM data, follow these steps:</p>
+<ol class="arabic simple">
+<li><p>Open the Data Source Manager.</p></li>
+<li><p>Load the WCS tab.</p></li>
+</ol>
+<img alt="../../../../_images/prepro031.png" src="../../../../_images/prepro031.png" />
+<ol class="arabic simple" start="3">
+<li><p>Create a new connection to the 3DEP WCS server.</p></li>
+<li><p>Name the Connection.  In this case the name 3DEP is used.</p></li>
+<li><p>Add the URL to the dataset:</p></li>
+</ol>
+<p><cite>https://elevation.nationalmap.gov/arcgis/services/3DEPElevation/ImageServer/WCSServer</cite></p>
+<img alt="../../../../_images/prepro031.png" src="../../../../_images/prepro031.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click connect to connect to the server.</p></li>
+<li><p>Select the first layer in the list.</p></li>
+<li><p>Click the Add button to add the layer to the map.</p></li>
+</ol>
+<img alt="../../../../_images/prepro031.png" src="../../../../_images/prepro031.png" />
+<ol class="arabic simple" start="9">
+<li><p>The downloaded layer may have a broken link.</p></li>
+<li><p>Right click the layer and click Repair Data Source.</p></li>
+</ol>
+<img alt="../../../../_images/prepro034.png" src="../../../../_images/prepro034.png" />
+<ol class="arabic simple" start="11">
+<li><p>Use the dialog to fix the data source as shown below.</p></li>
+</ol>
+<img alt="../../../../_images/prepro034.png" src="../../../../_images/prepro034.png" />
+<ol class="arabic simple" start="12">
+<li><p>Once the layer loads, uncheck it so the data won’t load every time the map is refreshed.</p></li>
+</ol>
+<img alt="../../../../_images/prepro036.png" src="../../../../_images/prepro036.png" />
+<ol class="arabic simple" start="13">
+<li><p>To use the data, download a raster file by Exporting the layer.</p></li>
+</ol>
+<img alt="../../../../_images/prepro037.png" src="../../../../_images/prepro037.png" />
+<ol class="arabic simple" start="14">
+<li><p>Don’t forget to set the layer extent to the area of interest.</p></li>
+</ol>
+<img alt="../../../../_images/prepro038.png" src="../../../../_images/prepro038.png" />
 </section>
 </section>
 

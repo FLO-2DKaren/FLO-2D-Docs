@@ -1,5 +1,5 @@
-Tutorials
-=========
+FLO-2D Gila Tutorials
+=========================
 
 .. toctree::
    :maxdepth: 1

@@ -71,17 +71,12 @@ Plugin Folder.*
 The code can be viewed, queried and edited with any text editor including UltraEdit, Notepad++ or Textpad.
 The files include the following:
 
-   \*.png – icon files
-
-   \*.py – python code files
-
-   \*.qml – QGIS layer styles
-
-   \*.svg – icon files
-
-   \*.sql – SQL code relational database information
-
-   \*.ui – QT Creator window editor
+- \*.png – icon files
+- \*.py – python code files
+- \*.qml – QGIS layer styles
+- \*.svg – icon files
+- \*.sql – SQL code relational database information
+- \*.ui – QT Creator window editor
 
 The plugin is organized into utility-based directories for plugin files that perform specific functions.
 For example, there is a folder for the toolbar and one for the sidebar widgets.
@@ -102,27 +97,16 @@ The Plugin includes all the tools to digitize, import, view, edit and export FLO
 The processes include:
 
 - Import/export tools
-
 - Elevation interpolation and adjustment tools
-
 - Levee calculation
-
 - Sampling spatial data
-
 - Schematization
-
 - Rainfall interpolation
-
 - Infiltration interpolation
-
 - Storm drain import, export, digitize
-
 - Storm drain SWMM.inp development tools
-
 - Channel development tools
-
 - Sediment transport and mudflow development tools
-
 - HAZUS development tools
 
 Grid System
@@ -488,25 +472,25 @@ Area and Width Reduction Factors.*
 
 The QGIS and GDS have slight differences in calculators.
 
-1. The Plugin will reset ARF = 1 for any cell greater than 0.90 ARF.
-   This can be seen in the following image.
-   GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).
+QGIS Method -  The Plugin will reset ARF = 1 for any cell greater than 0.90 ARF.
+This can be seen in the following image.
+GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/image20.png
 
 *Figure 20.
 ARF GDS / QGIS Comparison.*
 
-2. The GDS inserts redundant WRFs for cells that would otherwise be empty.
-   This makes the GDS WRFs look more conservative, but it isn’t necessary.
-   GDS on the left and QGIS on the right (Figure 21).
+GDS Method - The GDS inserts redundant WRFs for cells that would otherwise be empty.
+This is not necessary and ultimately uses more data.
+GDS on the left and QGIS on the right (Figure 21).
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/image21.png
 
 *Figure 21.
 WRF Redundancy GDS / QGIS Comparison.*
 
-3. QGIS calculator is more accurate on cells that have partial WRFs.
+1. QGIS calculator is more accurate on cells that have partial WRFs.
    The GDS WRF on the left is calculated as 0.98.
    The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
 
@@ -530,11 +514,8 @@ The interpolation processor performs a GDAL *Warp* function to build a rasternam
 The new raster has these properties:
 
 - Reprojected CRS = Project CRS.
-
 - Pixel size = grid element size.
-
 - Clipped to Grid layer extent.
-
 - Aligned to the grid.
 
 The new raster (figure 24) is sampled to the grid using the centroid.
@@ -549,11 +530,9 @@ A rainfall reduction value is calculated for each element in the grid system usi
 
 Where:
 
-    RAIN\ :sub:`arf` = A spatially reduced rainfall value
-
-    RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
-
-    RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
+    - RAIN\ :sub:`arf` = A spatially reduced rainfall value
+    - RAIN\ :sub:`grid` = The rainfall sampled from the centroid of the grid element.
+    - RAIN\ :sub:`max` = The maximum rainfall for the raster in the project area.
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO054.png
 

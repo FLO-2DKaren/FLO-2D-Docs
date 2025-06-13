@@ -34,8 +34,8 @@ Follow these instructions to set up QGIS.
 
 .. _flo2d_plugin_step:
 
-Step 2: FLO-2D Plugin
-----------------------
+Step 2: FLO-2D Gila Plugin
+--------------------------------
 With QGIS installed it is time to add the FLO-2D plugin and a few other handy plugins.
 
 1. Navigate to the plugin manager.
@@ -77,7 +77,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: img/Instructions/image9.png
 
 QGIS Server Installer Method
-----------------------------
+------------------------------
 
 If you need to import or export hdf5 files, please use this method for installing QGIS.
 

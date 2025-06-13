@@ -46,10 +46,10 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation &amp; Setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Plugin</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Plugin Gila</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">FLO-2D Gila for QGIS: User Manual</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../../plugin-features/index.html">Plugin Features</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../toolbar/index.html">Toolbar</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">Widgets</a><ul class="current">
@@ -74,10 +74,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../../post-development-grid-modification/index.html">Grid Modification</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">Technical Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../technical_reference_manual/index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
 </ul>
 
         </div>
@@ -94,8 +94,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Plugin</a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Plugin Gila</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS: User Manual</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
           <li class="breadcrumb-item"><a href="index.html">Boundary Condition Editor</a></li>
       <li class="breadcrumb-item active">Inflow Editor</li>
@@ -113,8 +113,24 @@
 <p>Any number of inflow hydrographs to the FLO-2D model can be assigned to channel, floodplain or
 even the 1-D street component. This represents a flood inflow to the flow domain from an off-site source.</p>
 <img alt="../../../../_images/newbc002.png" src="../../../../_images/newbc002.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Get a <a href="https://flo-2d.com/product/boundary-conditions/" target="_blank" rel="noopener">BC Training Package</a> to learn how to correctly define boundaries for FLO-2D projects.</p>
+</div>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#create-inflow-data-point" id="id2">Create Inflow Data - Point</a></p></li>
+<li><p><a class="reference internal" href="#create-inflow-data-line" id="id3">Create Inflow Data - Line</a></p></li>
+<li><p><a class="reference internal" href="#load-inflow-data" id="id4">Load Inflow Data</a></p></li>
+<li><p><a class="reference internal" href="#assign-attributes-and-flow-data-to-the-inflow-boundary-conditions" id="id5">Assign Attributes and Flow Data to the Inflow Boundary Conditions</a></p></li>
+<li><p><a class="reference internal" href="#delete-selected-inflow-boundary-condition" id="id6">Delete Selected Inflow Boundary Condition</a></p></li>
+<li><p><a class="reference internal" href="#schematize-the-data" id="id7">Schematize the data</a></p></li>
+<li><p><a class="reference internal" href="#delete-schematized-data" id="id8">Delete Schematized data</a></p></li>
+</ul>
+</nav>
 <section id="create-inflow-data-point">
-<h2>Create Inflow Data - Point<a class="headerlink" href="#create-inflow-data-point" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Create Inflow Data - Point</a><a class="headerlink" href="#create-inflow-data-point" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To create a point of inflow, click the Add Point BC button on the Boundary Condition
 Editor widget.</p></li>
@@ -138,30 +154,46 @@ to load the data into the editor.</p></li>
 <img alt="../../../../_images/newbc008.png" src="../../../../_images/newbc008.png" />
 </section>
 <section id="create-inflow-data-line">
-<h2>Create Inflow Data - Line<a class="headerlink" href="#create-inflow-data-line" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Create Inflow Data - Line</a><a class="headerlink" href="#create-inflow-data-line" title="Link to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Inflow Boundary Condition Line has been modified.  The hydrograph is now distributed
+to the cells that are intersected by the line.  Previously, the hydrograph was assigned to each cell
+intersected by the line.  The hydrograph will be distributed by dividing the discharge cells by the
+number of cells intersected by the line.</p>
+</div>
 <ol class="arabic simple">
 <li><p>To create a line of inflow, click the Add Line BC button on the Boundary Condition
 Editor widget.</p></li>
 </ol>
-<img alt="../../../../_images/newbc004.png" src="../../../../_images/newbc004.png" />
+<img alt="../../../../_images/newbc004a.png" src="../../../../_images/newbc004a.png" />
 <ol class="arabic simple" start="2">
 <li><p>Digitize the line by left clicking the start of the line on the map. Continue to left click
 the line to finish it.  Right click to close the line.</p></li>
 </ol>
-<img alt="../../../../_images/newbc005.png" src="../../../../_images/newbc005.png" />
+<img alt="../../../../_images/newbc005a.png" src="../../../../_images/newbc005a.png" />
 <ol class="arabic simple" start="3">
-<li><p>Click the Add Line button again to save the feature and load the data.</p></li>
+<li><p>Click the Add <strong>Line</strong> button again to save the feature and load the data.</p></li>
 </ol>
-<img alt="../../../../_images/newbc006.png" src="../../../../_images/newbc006.png" />
+<img alt="../../../../_images/newbc006a.png" src="../../../../_images/newbc006a.png" />
 <ol class="arabic simple" start="4">
-<li><p>Click Yes to save the feature and
-to load the data into the editor.</p></li>
+<li><p>Click the Schematize button to create the schematized data.</p></li>
 </ol>
-<img alt="../../../../_images/newbc008.png" src="../../../../_images/newbc008.png" />
+<img alt="../../../../_images/newbc007a.png" src="../../../../_images/newbc007a.png" />
 </section>
 <section id="load-inflow-data">
-<h2>Load Inflow Data<a class="headerlink" href="#load-inflow-data" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Load Inflow Data</a><a class="headerlink" href="#load-inflow-data" title="Link to this heading"></a></h2>
+<p>This button allows the user to load an INFLOW.DAT file into the Boundary Condition Editor.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This process may take an unusually long time.  To prevent this, use the Delete Schematized Inflow Boundary Condition button
+to delete the schematized data before loading the INFLOW.DAT file.  This will speed up the import process.</p>
+</div>
 <ol class="arabic simple">
+<li><p>Start by clicking the Delete Schematized Inflow Boundary Condition button to delete the schematized data.</p></li>
+</ol>
+<img alt="../../../../_images/newbc007b.png" src="../../../../_images/newbc007b.png" />
+<ol class="arabic simple" start="2">
 <li><p>To load an INFLOW.DAT file, click on the Open INFLOW.DAT button.</p></li>
 </ol>
 <img alt="../../../../_images/newbc014.png" src="../../../../_images/newbc014.png" />
@@ -173,6 +205,9 @@ to load the data into the editor.</p></li>
 <li><p>A message on the QGIS toolbar will appear, indicating that the importing was successful.</p></li>
 </ol>
 <img alt="../../../../_images/newbc016.png" src="../../../../_images/newbc016.png" />
+<ol class="arabic simple" start="4">
+<li><p>Finish the process by clicking the Schematize button to create the schematized data.</p></li>
+</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Loading the INFLOW.DAT file into the project appends data to the Boundary Condition layers/table,
@@ -181,13 +216,10 @@ updating cells if already defined with a Boundary Condition.</p>
 <p>Delete the schematized data before loading the INFLOW.DAT file to speed up the import process / schematization process.</p>
 </div>
 </section>
-<section id="assign-conditions-to-the-inflow-boundary-conditions">
-<h2>Assign Conditions to the Inflow Boundary Conditions<a class="headerlink" href="#assign-conditions-to-the-inflow-boundary-conditions" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Assign the conditions to the inflow node as seen in the following image. This example the
-inflow node will have a steady hydrograph with 100 cfs assigned to Cave Creek inflow node.</p></li>
-</ol>
-<img alt="../../../../_images/newbc009.png" src="../../../../_images/newbc009.png" />
+<section id="assign-attributes-and-flow-data-to-the-inflow-boundary-conditions">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Assign Attributes and Flow Data to the Inflow Boundary Conditions</a><a class="headerlink" href="#assign-attributes-and-flow-data-to-the-inflow-boundary-conditions" title="Link to this heading"></a></h2>
+<p>1. Assign the conditions to the inflow node as seen in the following image.
+.. image:: ../../img/Boundary-Condition-Editor/newbc009.png</p>
 <ol class="arabic simple" start="2">
 <li><p>The time series inflow hydrograph is assigned in the table editor where time is in hours and discharge is cfs or cms.
 This is a clear water inflow hydrograph and no sediment concentration is assigned.</p></li>
@@ -205,7 +237,7 @@ Use the Add data series/table for current BC button to create a new hydrograph.<
 </div>
 </section>
 <section id="delete-selected-inflow-boundary-condition">
-<h2>Delete Selected Inflow Boundary Condition<a class="headerlink" href="#delete-selected-inflow-boundary-condition" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Delete Selected Inflow Boundary Condition</a><a class="headerlink" href="#delete-selected-inflow-boundary-condition" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To delete an Inflow Boundary Condition, click on the Delete Inflow Boundary Condition button.</p></li>
 </ol>
@@ -215,7 +247,7 @@ Use the Add data series/table for current BC button to create a new hydrograph.<
 </ol>
 </section>
 <section id="schematize-the-data">
-<h2>Schematize the data<a class="headerlink" href="#schematize-the-data" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Schematize the data</a><a class="headerlink" href="#schematize-the-data" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Use the Schematize button to save the data to the Schematic Layers and click Yes to overwrite the layers.</p></li>
 </ol>
@@ -223,7 +255,7 @@ Use the Add data series/table for current BC button to create a new hydrograph.<
 <img alt="../../../../_images/newbc013.png" src="../../../../_images/newbc013.png" />
 </section>
 <section id="delete-schematized-data">
-<h2>Delete Schematized data<a class="headerlink" href="#delete-schematized-data" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Delete Schematized data</a><a class="headerlink" href="#delete-schematized-data" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To delete all schematized Inflow Boundary Conditions, click on the Delete Schematized Inflow Boundary Condition button
 and click Yes to delete all schematized Inflow Boundary Conditions.</p></li>
