@@ -125,8 +125,8 @@ Delete Selected Inflow Boundary Condition
 
     .. image:: ../../img/Boundary-Condition-Editor/newbc017.png
 
-Delete Selected Inflow Boundary Condition
------------------------------------------
+Zoom and Pan to Inflow Boundary Condition
+--------------------------------------------
 
 1. To delete an Inflow Boundary Condition, click on the Delete Inflow Boundary Condition button.
 
