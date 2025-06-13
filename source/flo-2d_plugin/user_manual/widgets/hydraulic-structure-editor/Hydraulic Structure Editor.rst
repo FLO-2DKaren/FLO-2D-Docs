@@ -6,18 +6,24 @@ Structures Editor
 The structures editor is used to set up the data for the HYSTRUCT.DAT file.
 This section will describe how to set up each of the different types of hydraulic structures.
 
+.. image:: ../../img/Widgets/structures.png
+
+.. contents:: Contents
+   :local: 
+   :depth: 2
+   :backlinks: entry
+
+
 .. note:: An advanced tutorial for modeling hydraulic structures and culverts is available on the Gila Self-Help Tutorials.
 
           |tut|
 
 .. |tut| raw:: html
 
-   <a href ="https://youtube.com/playlist?list=PLkT3KNZwX6zkkfrM5Pcdvt7WqZuHWYU4c&feature=shared" target="_blank">Gila Self-Help Tutorials</a>
-
-.. image:: ../../img/Widgets/structures.png
+   <a href ="https://youtu.be/ebIFoGUuQcI?feature=shared" target="_blank">Gila Self-Help Tutorials - Hydraulic Structures</a>
 
 Channel to Channel Structure
-----------------------------
+-------------------------------
 
 Culvert Type:
 
@@ -46,7 +52,7 @@ The channel segments are split up to allow for the width of the roadway.
 5. Do not use a structure on the magenta right bank lines.
    Culverts are only assigned to the left bank nodes.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau004.png
+.. image:: ../../img/Hydraulic-Structure-Editor/addchanculv.gif
 
 
 6. Click
@@ -229,6 +235,67 @@ Import Rating Tables
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
 
-Culvert Equation
-----------------------
+Culvert Type and Entrance Configurations
+=========================================
 
+Culvert Type Switch
+--------------------
+
+The culvert type is controlled by the variable ``TYPEC(I)``:
+
+- ``1`` = box culvert
+- ``2`` = pipe culvert
+
+.. note:: Set ``TYPEC(I) = 1`` for a box culvert and ``TYPEC(I) = 2`` for a pipe culvert.
+
+Entrance Types
+--------------
+
+**BOX Entrance Types**
+
+- **Type 1**: Wingwall flare 30° to 75°
+- **Type 2**: Wingwall flare 90° or 15°
+- **Type 3**: Wingwall flare 0°
+
+**PIPE Entrance Types**
+
+- **Type 1**: Square edge with headwall
+- **Type 2**: Socket end with headwall
+- **Type 3**: Socket end projecting
+
+Entrance Loss Coefficients
+===========================
+
+The entrance loss for a culvert under outlet control is computed as:
+
+.. math::
+
+   H_e = K_e \left( \frac{v^2}{2g} \right)
+
+Where:
+- ``H_e`` is the entrance head loss (ft or m)
+- ``K_e`` is the entrance loss coefficient
+- ``v`` is the velocity (ft/s or m/s)
+- ``g`` is gravitational acceleration
+
+Table: Entrance Loss Coefficients (HDS-5 Third Edition)
+--------------------------------------------------------
+
++---------------------------------------------------------------+---------------+
+| Type of Structure and Design of Entrance                      | Coef K_e      |
++===============================================================+===============+
+| **Pipe, Concrete**                                            |               |
++---------------------------------------------------------------+---------------+
+| Projecting from fill, socket end (groove-end)                 | 0.2           |
+| Projecting from fill, square cut end                          | 0.5           |
+| Headwall or headwall and wingwalls                            | 0.2           |
+| Socket end of pipe (groove-end)                               | 0.2           |
+| **Square-edge**                                               | 0.5           |
+| Rounded (radius = D/12)                                       | 0.2           |
+| Mitered to conform to fill slope                              | 0.7           |
+| End-section conforming to fill slope                          | 0.5           |
+| Beveled edges, 33.7° or 45° bevels                            | 0.2           |
+| Side- or slope-tapered inlet                                  | 0.2           |
++---------------------------------------------------------------+---------------+
+
+.. source:: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
