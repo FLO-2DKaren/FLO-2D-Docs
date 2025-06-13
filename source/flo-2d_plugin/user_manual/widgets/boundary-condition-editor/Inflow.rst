@@ -39,8 +39,7 @@ Create Inflow Data - Point
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc006.png
 
-4. Click Yes to save the feature and
-   to load the data into the editor.
+4. The data is now updated in the editor.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc008.png
 
@@ -75,8 +74,8 @@ Load Inflow Data
 
 This button allows the user to load an INFLOW.DAT file into the Boundary Condition Editor.
 
-.. warning:: This process may take an unusually long time.  To prevent this, use the Delete Schematized Inflow Boundary Condition button
-   to delete the schematized data before loading the INFLOW.DAT file.  This will speed up the import process.
+.. warning:: This process may take an unusually long time.  To prevent this, use the Delete Schematized Inflow Boundary 
+   Condition button to delete the schematized data before loading the INFLOW.DAT file.  This will speed up the import process.
 
 1. Start by clicking the Delete Schematized Inflow Boundary Condition button to delete the schematized data.
 
@@ -107,6 +106,7 @@ Assign Attributes and Flow Data to the Inflow Boundary Conditions
 ---------------------------------------------------------------------
 
 1. Assign the conditions to the inflow node as seen in the following image. 
+
 .. image:: ../../img/Boundary-Condition-Editor/newbc009.png
 
 2. The time series inflow hydrograph is assigned in the table editor where time is in hours and discharge is cfs or cms.
@@ -133,7 +133,7 @@ Delete Selected Inflow Boundary Condition
 2. Click the Schematize button to update the schematized data.
 
 
-Schematize the data
+Schematize the Data
 ---------------------
 
 1. Use the Schematize button to save the data to the Schematic Layers and click Yes to overwrite the layers.
@@ -143,7 +143,7 @@ Schematize the data
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc013.png
 
-Delete Schematized data
+Delete Schematized Data
 ------------------------
 
 1. To delete all schematized Inflow Boundary Conditions, click on the Delete Schematized Inflow Boundary Condition button
