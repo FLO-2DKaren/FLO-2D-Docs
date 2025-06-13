@@ -169,7 +169,7 @@ use GDS or Mapper and you get missing dll failures or struggle to use GDS proces
 
 3. GDS might give an error message when the user tries to set up a new project using Define Working Region....
    A path correction will fix this fault.  When a new project doesn't have a project path, it tries to write data
-   to the C:\\Program Filex(x86)\\FLO-2D Pro path.  This path is protected by Admin Rights.
+   to the C:\\Program Files (x86)\\FLO-2D Pro path.  This path is protected by Admin Rights.
 
 .. image:: img/Instructions/gdsfault03.png
 

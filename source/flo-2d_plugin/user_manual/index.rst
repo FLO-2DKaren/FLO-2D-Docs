@@ -1,5 +1,5 @@
-FLO-2D Plugin Gila
-=============================
+FLO-2D Gila for QGIS: User Manual
+=====================================
 
 Continuous enhancements and refinements are in progress for the FLO-2D Plugin.
 

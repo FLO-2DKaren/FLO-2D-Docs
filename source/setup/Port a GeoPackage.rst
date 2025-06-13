@@ -1,9 +1,14 @@
-Port a GeoPackage
-======================
+Convert a GeoPackage to the New Schema
+=================================================
 
-As the FLO-2D Plugin evolves, the GeoPackage file structure changes.  If loading an older project, use these video
-tutorials.  FLO-2D Plugin v0.10.115 uses a manual import method to update a geopacakge.  FLO-2D Plugin v1.0.0 uses an
-automated method to update a geopackage.
+When working with the FLO-2D Gila Plugin, you may encounter projects created with older versions of the plugin that require a GeoPackage update. This guide provides instructions on how to port a GeoPackage to the new schema used by the FLO-2D Gila Plugin.
+
+As the FLO-2D Gila Plugin evolves, the structure of the GeoPackage database is periodically updated to support new tools and features. When opening a project created with an older version of the plugin, the GeoPackage may need to be updated to match the current schema.
+
+Use the video tutorials below to guide the update process based on your plugin version:
+
+- FLO-2D Plugin v0.10.115: Uses a manual import method to transfer data into the updated GeoPackage structure.
+- FLO-2D Plugin v1.0.0 and later: Provides an automated GeoPackage conversion tool to streamline the update process.
 
 Porting GeoPackage FLO-2D Plugin v0.10.115
 ---------------------------------------------

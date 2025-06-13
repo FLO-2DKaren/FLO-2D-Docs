@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.abspath("..."))
 
 # -- Project information -----------------------------------------------------
 project = 'FLO-2D Pro Documentation'
-copyright = "2025, Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
+copyright = "2004 - Present, FLO-2D Software, Inc."
 author = "Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 html_logo = "FLO-2D Transparent.png"
 

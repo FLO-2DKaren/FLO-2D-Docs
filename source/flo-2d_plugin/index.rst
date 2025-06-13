@@ -1,5 +1,5 @@
-FLO-2D Plugin
-=============
+FLO-2D Gila for QGIS: Documentation
+=====================================
 
 .. toctree::
    :maxdepth: 2

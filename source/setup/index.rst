@@ -1,4 +1,4 @@
-FLO-2D Installation \& Setup
+FLO-2D Installation and Setup
 =============================
 
 Welcome to the FLO-2D setup page. Get a computer ready for FLO-2D with:
