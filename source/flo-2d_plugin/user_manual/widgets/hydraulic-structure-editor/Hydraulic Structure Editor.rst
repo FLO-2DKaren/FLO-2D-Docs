@@ -14,6 +14,9 @@ This section will describe how to set up each of the different types of hydrauli
    :backlinks: entry
 
 
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr001.png
+
+
 .. note:: An advanced tutorial for modeling hydraulic structures and culverts is available on the Gila Self-Help Tutorials.
 
           |tut|
@@ -22,8 +25,13 @@ This section will describe how to set up each of the different types of hydrauli
 
    <a href ="https://youtu.be/ebIFoGUuQcI?feature=shared" target="_blank">Gila Self-Help Tutorials - Hydraulic Structures</a>
 
-Channel to Channel Structure
+Culvert Types
 -------------------------------
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr001.png
+
+Channel to Channel Structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Culvert Type:
 
@@ -79,7 +87,7 @@ The channel segments are split up to allow for the width of the roadway.
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
 
 Floodplain to Floodplain Structure
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Culvert Type:
 
@@ -139,7 +147,7 @@ The invert elevation of the inlet node is set by the grid element elevation.
 
 
 Floodplain to Channel Structure
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This example shows a culvert that connects a basin to a channel.
 
@@ -198,7 +206,7 @@ This example shows a culvert that connects a basin to a channel.
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
 
 Bridge
-------
+----------------
 
 Bridge parameters can be defined for a structure.
 
@@ -213,7 +221,7 @@ The USGS bridge tables are used to define the flow though a bridge with bridge g
 
 
 Import Rating Tables
---------------------
+--------------------------
 
 1. Click the
    Import Rating Tables button.
@@ -236,10 +244,10 @@ Import Rating Tables
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
 
 Culvert Type and Entrance Configurations
-=========================================
+----------------------------------------------
 
 Culvert Type Switch
---------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The culvert type is controlled by the variable ``TYPEC(I)``:
 
@@ -249,7 +257,7 @@ The culvert type is controlled by the variable ``TYPEC(I)``:
 .. note:: Set ``TYPEC(I) = 1`` for a box culvert and ``TYPEC(I) = 2`` for a pipe culvert.
 
 Entrance Types
---------------
+~~~~~~~~~~~~~~~~~~~
 
 **BOX Entrance Types**
 
@@ -264,7 +272,7 @@ Entrance Types
 - **Type 3**: Socket end projecting
 
 Entrance Loss Coefficients
-===========================
+-------------------------------
 
 The entrance loss for a culvert under outlet control is computed as:
 
@@ -279,7 +287,7 @@ Where:
 - ``g`` is gravitational acceleration
 
 Table: Entrance Loss Coefficients (HDS-5 Third Edition)
---------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 +---------------------------------------------------------------+---------------+
 | Type of Structure and Design of Entrance                      | Coef K_e      |
