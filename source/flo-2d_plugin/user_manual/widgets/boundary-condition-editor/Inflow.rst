@@ -118,14 +118,15 @@ Assign Inflow Attributes Hydrographs
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc011.png
 
-Delete Selected Inflow Boundary Condition
+Zoom and Pan to Inflow Boundary Condition
 -----------------------------------------
 
 1. Use they eye button to pan and zoom to the selected Inflow Boundary Condition.
 
-    .. image:: ../../img/Boundary-Condition-Editor/newbc017.png
+.. image:: ../../img/Boundary-Condition-Editor/newbc017.png
 
-Zoom and Pan to Inflow Boundary Condition
+
+Delete Selected Inflow Boundary Condition
 --------------------------------------------
 
 1. To delete an Inflow Boundary Condition, click on the Delete Inflow Boundary Condition button.
