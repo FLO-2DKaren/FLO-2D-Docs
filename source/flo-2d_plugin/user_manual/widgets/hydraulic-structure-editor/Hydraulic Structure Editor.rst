@@ -334,10 +334,11 @@ Where:
 Entrance Loss Coefficient Table (HDS-5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+**Pipe, Concrete**
+
 +---------------------------------------------------------------+-------------+
 | Type of Structure and Design of Entrance                      | K_e         |
 +---------------------------------------------------------------+-------------+
-| **Pipe, Concrete**                                            |             |
 | Projecting from fill, socket end (groove-end)                 | 0.2         |
 | Projecting from fill, square cut end                          | 0.5         |
 | Headwall or headwall and wingwalls                            | 0.2         |
