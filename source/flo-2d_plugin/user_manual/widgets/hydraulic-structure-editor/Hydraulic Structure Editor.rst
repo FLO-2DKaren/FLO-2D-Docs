@@ -228,8 +228,27 @@ represent culverts, bridges, pumps, weirs or drop structures.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
 
+Tailwater Control
+------------------
+
+Tailwater control settings determine how downstream water levels affect culvert discharge. These options are used to simulate varying degrees of backwater influence or flow reversal at the culvert outlet:
+
+- **No tail water effect – discharge based on headwater**  
+  Assumes free outfall conditions. Discharge is computed solely from upstream headwater elevation. No upstream flow allowed.
+
+- **Reduced discharge and NO upstream flow allowed**  
+  Simulates partial submergence. Discharge is reduced based on downstream conditions, but reverse flow from outlet to inlet is not permitted. 
+  This condition is similar to a flap gate.
+
+- **Reduced discharge and upstream flow allowed**  
+  Allows for backflow into the upstream system under high tailwater conditions. Discharge is still reduced due to submergence.
+
+.. note::  
+   Use these settings to reflect the hydraulic behavior at the downstream end of the culvert, especially in urban drainage systems where backwater or surcharge can occur.
+
+
 Culvert Equation Data
-=============================
+---------------------------
 
 Culvert equations define flow through a culvert based on geometric and hydraulic properties. This information is entered in the **Structures Editor** and the **FLO-2D Table Editor**, as shown below.
 
