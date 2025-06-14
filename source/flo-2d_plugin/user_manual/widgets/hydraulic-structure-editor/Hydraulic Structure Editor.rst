@@ -17,7 +17,7 @@ Overview
 
 The Hydraulic Structure Editor provides a graphical user interface for defining and managing hydraulic structures within the FLO-2D Plugin. These structures control the movement of water between grid elements and are essential for simulating culverts, bridges, weirs, storm drains, and pumps in both floodplain and channel systems.
 
-This editor generates the `HYSTRUC.DAT` input file automatically, allowing users to focus on setting realistic structure parameters without manually editing text files. The editor supports all structure types and configurations available in FLO-2D, including:
+The editor supports all structure types and configurations available in FLO-2D, including:
 
 - Floodplain-to-floodplain culverts using rating curves or culvert equations
 - Channel-to-channel hydraulic structures with optional replacement curves
@@ -78,7 +78,7 @@ Structure Editor Control
 Structure Parameters I
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr004.png
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr005.png
 
 - **Name**  
   Enter or select the name of the structure. This identifies the outflow boundary condition in the project.
@@ -100,13 +100,15 @@ Structure Parameters I
   Use this button to rename the selected structure. The name is alpha-numeric with 30 ascii characters and no spaces.
 
 - **Locate**  
-  Click the locate (eye) button to zoom and center the map on the selected structure.
+  Click the locate (eye) toggle button to zoom and center the map on the selected structure.
 
 Structure Hydraulic Control
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr007.png
 
+
+**Hydraulic Control**
 
 Select the hydraulic control method that governs flow through the structure. The options correspond to different modeling approaches in FLO-2D:
 
@@ -116,8 +118,9 @@ Select the hydraulic control method that governs flow through the structure. The
 4. **Bridge routine** – Applies a specialized bridge flow routine based on physical dimensions and flow coefficients.
 
 
-- **Load Rating Tables**  
-  Click the **Import Rating Tables** button to load pre-defined rating data into the model.
+**Load Rating Tables**  
+
+Click the **Import Rating Tables** button to load pre-defined rating data into the model.
 
 Tailwater Control
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,7 +175,7 @@ These parameters are used when defining culvert or conduit characteristics for h
 
   **Culvert Equation**
   
-  Defines the total length of the culvert (feet or meters). Apply this length when using the **culvert equation** method.
+  Defines the total length of the culvert (ft or m). Apply this length when using the **culvert equation** method.
 
   **Long Culvert**
 
@@ -182,37 +185,110 @@ These parameters are used when defining culvert or conduit characteristics for h
    - The **flow area** must be defined (using `ATABLE` or related variables).
    - Long culverts simulate **storage** and **travel time**, unlike other structures that convey flow instantaneously.
 
-- **Circular Diameter or Box Culvert Height**  
-  Specifies the size of the structure. For circular culverts, enter the internal diameter. For box culverts, enter the internal height. 
-  This value is critical for determining capacity and flow behavior.
+**Circular Diameter or Box Culvert Height**
 
+If the structure does not use a long culvert or culvert equation, enter **0.0** for both length and diameter.
+
+Defines the internal size of the culvert (ft or m).
+
+**Culvert Equation**
+
+- For **circular culverts**, enter the **internal diameter**.
+- For **box culverts**, enter the **internal height**.
+
+**Long Culvert**
+
+- Use **diameter only** for flow area calculations.
+- Must be paired with **culvert length** and **area table**.
+- Only compatible with **rating table** structures.
 
 Table Editor and Plot
 -------------------------------
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr010.png
 
-**Rating Curve**
+The Table Editor and Plot section defines the rating relationships or hydraulic parameters associated with the selected structure type. Each configuration corresponds to variables in the `HYSTRUC.DAT` input file.
+
+**Rating Curve Table Editor**
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr011.png
 
-**Replacement Curve**
+The Rating Curve Table Editor is used to define the structure’s flow behavior using headwater-dependent equations. Each column corresponds to a variable in the `HYSTRUC.DAT` file. These parameters are described in detail in the Data Input Manual and are used in combinations based on the selected structure type.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr012.png
+.. list-table:: Rating Curve Table Columns
+   :widths: 20 80
+   :header-rows: 1
+
+   * - Variable
+     - Description
+   * - HDEPEXC
+     - Maximum headwater depth valid for the rating curve.
+   * - COEFQ, EXPQ
+     - Discharge equation: Q = COEFQ * depth^EXPQ
+   * - COEFA, EXPA
+     - Area equation for long culverts: A = COEFA * depth^EXPA
+   * - REPDEP
+     - Depth at which to switch to a replacement curve.
+   * - RQCOEF, RQEXP
+     - Discharge equation for replacement curve.
+   * - RACOEF, RAEXP
+     - Area equation for replacement curve (long culverts only).
+
+See the :ref:`HYSTRUC.DAT <data_input_manual>` section of the Data Input Manual for complete parameter descriptions and valid input ranges.
 
 **Rating Table**
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr013.png
 
+The rating table method defines flow through the structure using headwater depth (`HDEPTH`) and corresponding discharge (`QTABLE`). 
+FLO-2D applies linear interpolation between rows to estimate the flow rate for any given depth during the simulation.
+
+- `HDEPTH` – Headwater depth above the structure reference elevation (ft or m).
+- `QTABLE` – Discharge value associated with each headwater depth (cfs or cms).
+- `ATABLE` – (Optional) Cross-sectional flow area vs depth (ft\ :sup:`2` or m\ :sup:`2`) used in volume routing for long culverts. Enter **0.0** if not applicable.
+
+The adjacent plot updates automatically and displays the rating curve graphically as depth vs. discharge. 
+Ensure the first entry begins with `HDEPTH = 0.0` and `QTABLE = 0.0` to allow proper interpolation between the first two rows.
+
+.. tip::
+   This method is commonly used for culverts, weirs, and other structures where detailed hydraulic calculations have already been performed externally or measured in the field.
+
 **Culvert Equation**
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr014.png
+
+The culvert equation method computes flow using geometric and frictional parameters defined by the U.S. Department of Transportation equations. This table allows input of the following:
+
+- `TYPEC` – Culvert shape: 1 = box, 2 = pipe  
+- `TYPEEN` – Entrance configuration (1–3 based on shape)  
+- `CULVERTN` – Manning’s n-value for internal culvert roughness  
+- `KE` – Entrance loss coefficient  
+- `CUBASE` – Width of the box culvert or set to 0 for circular culverts  
+- `MULTBARRELS` – Number of identical culvert barrels or cells
+
+These parameters are used to estimate flow under both inlet and outlet control conditions. For additional guidance on selecting values and entrance types, refer to the :ref:`Culvert Equation Data <culvert_equation_data>` section.
+
 
 **Bridge Routine**
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr015.png
 
-The table editor is used to define the upstream and downstream cross sections for the bridge routine.
+The bridge routine provides a detailed method for modeling flow through bridge openings using upstream and downstream cross sections and coefficient-based flow equations derived from U.S. Geological Survey (USGS) research.
+
+This configuration allows input of:
+
+This table defines the upstream and downstream cross sections used in the bridge routine. Cross section geometry is entered as station-elevation points along the bridge profile:
+
+- `XUP`, `YUP` – Station of each cross section point
+- `YUP` – Elevation of the upstream cross section.
+- `YB` – Elevation of the corresponding downstream point at the same station
+
+The table must define a continuous profile across the full bridge opening, including abutments, channel bed, and any roadway or deck geometry. The plotted cross section provides a visual check of the entered values.
+
+These cross sections are used by the bridge routine in conjunction with flow coefficients and structure parameters (e.g., pier width, low chord elevation) to compute flow through the bridge.
+
+.. note::
+   For a complete example showing how to use this table along with the bridge coefficients and geometry fields, refer to the :ref:`Bridge Example <bridge_example>` in the Examples section.
 
 Example Configurations
 ---------------------------
@@ -547,8 +623,9 @@ Entrance Loss Coefficient Table (HDS-5)
 
 .. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in outlet control flow calculations.
 
+.. _bridge_example:
 
-Bridge
+Bridge Example
 ----------------
 
 Bridge parameters can be defined for a structure.
