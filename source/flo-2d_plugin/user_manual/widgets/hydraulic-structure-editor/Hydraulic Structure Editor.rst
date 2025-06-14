@@ -266,7 +266,8 @@ The culvert equation method computes flow using geometric and frictional paramet
 - `CUBASE` – Width of the box culvert or set to 0 for circular culverts  
 - `MULTBARRELS` – Number of identical culvert barrels or cells
 
-These parameters are used to estimate flow under both inlet and outlet control conditions. For additional guidance on selecting values and entrance types, refer to the :ref:`Culvert Equation Data <culvert_equation_data>` section.
+These parameters are used to estimate flow under both inlet and outlet control conditions. 
+For additional guidance on selecting values and entrance types, refer to the :ref:`Culvert Equation Data <culvert_equation_data>` section.
 
 
 **Bridge Routine**
@@ -492,8 +493,7 @@ represent culverts, bridges, pumps, weirs or drop structures.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
 
-
-
+.. _culvert_equation_data:
 
 Culvert Equation Data
 ---------------------------
@@ -625,7 +625,7 @@ Entrance Loss Coefficient Table (HDS-5)
 
 .. _bridge_example:
 
-Bridge Example
+Bridge Data
 ----------------
 
 Bridge parameters can be defined for a structure.
