@@ -342,23 +342,45 @@ Entrance Loss Coefficient Table (HDS-5)
 | 1.0       | 1.0      | 0.0180    | 0.4    | 8.0    | 1.0         |
 +-----------+----------+-----------+--------+--------+-------------+
 
-+---------------------------------------------------------------+-------------+
-| Type of Structure and Design of Entrance                      | K_e         |
-+===============================================================+=============+
-| Projecting from fill, socket end (groove-end)                 | 0.2         |
-| Projecting from fill, square cut end                          | 0.5         |
-| Headwall or headwall and wingwalls                            | 0.2         |
-| Socket end of pipe (groove-end)                               | 0.2         |
-| Square-edge                                                   | 0.5         |
-| Rounded (radius = D/12)                                       | 0.2         |
-| Mitered to conform to fill slope                              | 0.7         |
-| End-section conforming to fill slope                          | 0.5         |
-| Beveled edges, 33.7° or 45° bevels                            | 0.2         |
-| Side- or slope-tapered inlet                                  | 0.2         |
-+---------------------------------------------------------------+-------------+
+.. list-table:: Entrance Loss Coefficients (HDS-5 – Third Edition)
+   :widths: 67 33
+   :header-rows: 1
 
+   * - Type of Structure and Design of Entrance
+     - K\ :sub:`e`
 
-source: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
+   * - Projecting from fill, socket end (groove-end)
+     - 0.2
+
+   * - Projecting from fill, square cut end
+     - 0.5
+
+   * - Headwall or headwall and wingwalls
+     - 0.2
+
+   * - Socket end of pipe (groove-end)
+     - 0.2
+
+   * - Square-edge
+     - 0.5
+
+   * - Rounded (radius = D/12)
+     - 0.2
+
+   * - Mitered to conform to fill slope
+     - 0.7
+
+   * - End-section conforming to fill slope
+     - 0.5
+
+   * - Beveled edges, 33.7° or 45° bevels
+     - 0.2
+
+   * - Side- or slope-tapered inlet
+     - 0.2
+
+.. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in outlet control flow calculations.
+
 
 Bridge
 ----------------
