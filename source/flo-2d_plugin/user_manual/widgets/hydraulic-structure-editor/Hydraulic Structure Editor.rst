@@ -259,7 +259,7 @@ Culvert equations define flow through a culvert based on geometric and hydraulic
    :alt: FLO-2D Culvert Table Editor
 
 Structures Editor Fields
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following fields are available in the **Structures Editor**:
 
@@ -272,7 +272,7 @@ The following fields are available in the **Structures Editor**:
 - **Culvert Diameter or Box Height** – Inside diameter for pipes or height for box culverts (ft)
 
 Culvert Geometry Table
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The **FLO-2D Table Editor** stores additional culvert equation variables:
 
@@ -292,7 +292,7 @@ The **FLO-2D Table Editor** stores additional culvert equation variables:
 - **MULTBARRELS** – Number of barrels (1.0 for single-barrel)
 
 Culvert Type Switch
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The culvert shape is defined using the `TYPEC(I)` variable:
 
@@ -302,7 +302,7 @@ The culvert shape is defined using the `TYPEC(I)` variable:
 .. note:: Box culverts are defined by height and width. Pipe culverts are defined by circular diameter.
 
 Entrance Type Codes
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Box Entrance Types (TYPEEN)**
 
@@ -317,7 +317,7 @@ Entrance Type Codes
 - ``3`` – Socket end projecting
 
 Entrance Loss Coefficients
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The entrance head loss is calculated using the following equation:
 
