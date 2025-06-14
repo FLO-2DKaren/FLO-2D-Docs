@@ -24,7 +24,7 @@ different types of hydraulic structures.
 
    <a href ="https://youtu.be/ebIFoGUuQcI?feature=shared" target="_blank">Gila Self-Help Tutorials - Hydraulic Structures</a>
 
-Culvert Types
+Structure Types
 -------------------------------
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydr001.png
@@ -336,9 +336,8 @@ Entrance Loss Coefficient Table (HDS-5)
 
 +---------------------------------------------------------------+-------------+
 | Type of Structure and Design of Entrance                      | K_e         |
-+===============================================================+=============+
-| **Pipe, Concrete**                                            |             |
 +---------------------------------------------------------------+-------------+
+| **Pipe, Concrete**                                            |             |
 | Projecting from fill, socket end (groove-end)                 | 0.2         |
 | Projecting from fill, square cut end                          | 0.5         |
 | Headwall or headwall and wingwalls                            | 0.2         |
@@ -350,6 +349,7 @@ Entrance Loss Coefficient Table (HDS-5)
 | Beveled edges, 33.7° or 45° bevels                            | 0.2         |
 | Side- or slope-tapered inlet                                  | 0.2         |
 +---------------------------------------------------------------+-------------+
+
 
 source: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
 
