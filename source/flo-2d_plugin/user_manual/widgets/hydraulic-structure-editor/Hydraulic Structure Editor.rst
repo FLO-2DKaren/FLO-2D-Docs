@@ -4,7 +4,9 @@ Structures Editor
 ==========================
 
 The structures editor is used to set up the data for the HYSTRUCT.DAT file.
-This section will describe how to set up each of the different types of hydraulic structures.
+
+This section will outline the tools in the Structure Editor by describing how to set up
+different types of hydraulic structures.
 
 .. image:: ../../img/Widgets/structures.png
 
@@ -12,9 +14,6 @@ This section will describe how to set up each of the different types of hydrauli
    :local: 
    :depth: 2
    :backlinks: entry
-
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr001.png
 
 
 .. note:: An advanced tutorial for modeling hydraulic structures and culverts is available on the Gila Self-Help Tutorials.
@@ -229,68 +228,109 @@ represent culverts, bridges, pumps, weirs or drop structures.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
 
-Culvert Type and Entrance Configurations
-----------------------------------------------
+Culvert Equation Data
+=============================
+
+Culvert equations define flow through a culvert based on geometric and hydraulic properties. This information is entered in the **Structures Editor** and the **FLO-2D Table Editor**, as shown below.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr003.png
+   :alt: Structures Editor Interface
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr002.png
+   :alt: FLO-2D Culvert Table Editor
+
+Structures Editor Fields
+------------------------------
+
+The following fields are available in the **Structures Editor**:
+
+- **Structure** – Name of the culvert structure (e.g., CULV_122)
+- **Type** – Designation of the culvert as *Floodplain* or *Storm Drain*
+- **Rating** – Select *Culvert Equation* or import from a rating table
+- **Tailwater Control** – Choose how downstream water levels are handled
+- **Reference Elevation** – Elevation for the inlet headwater (ft)
+- **Culvert Length** – Total length of the culvert barrel (ft)
+- **Culvert Diameter or Box Height** – Inside diameter for pipes or height for box culverts (ft)
+
+Culvert Geometry Table
+------------------------------
+
+The **FLO-2D Table Editor** stores additional culvert equation variables:
+
++-----------+----------+-----------+--------+--------+-------------+
+| TYPEC     | TYPEEN   | CULVERTN  | KE     | CUBASE | MULTBARRELS |
++===========+==========+===========+========+========+=============+
+| 1.0       | 1.0      | 0.0180    | 0.4    | 8.0    | 1.0         |
++-----------+----------+-----------+--------+--------+-------------+
+
+**Field Descriptions:**
+
+- **TYPEC** – Culvert shape: `1` = box, `2` = pipe
+- **TYPEEN** – Entrance type (see below)
+- **CULVERTN** – Manning's n value for the culvert
+- **KE** – Entrance loss coefficient
+- **CUBASE** – Culvert width (for box) or diameter (for pipe)
+- **MULTBARRELS** – Number of barrels (1.0 for single-barrel)
 
 Culvert Type Switch
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
-The culvert type is controlled by the variable ``TYPEC(I)``:
+The culvert shape is defined using the `TYPEC(I)` variable:
 
-- ``1`` = box culvert
-- ``2`` = pipe culvert
+- ``1`` = Box culvert
+- ``2`` = Pipe culvert
 
-.. note:: Set ``TYPEC(I) = 1`` for a box culvert and ``TYPEC(I) = 2`` for a pipe culvert.
+.. note:: Box culverts are defined by height and width. Pipe culverts are defined by circular diameter.
 
-Entrance Types
-~~~~~~~~~~~~~~~~~~~
+Entrance Type Codes
+-----------------------
 
-**BOX Entrance Types**
+**Box Entrance Types (TYPEEN)**
 
-- **Type 1**: Wingwall flare 30° to 75°
-- **Type 2**: Wingwall flare 90° or 15°
-- **Type 3**: Wingwall flare 0°
+- ``1`` – Wingwall flare 30° to 75°
+- ``2`` – Wingwall flare 90° or 15°
+- ``3`` – Wingwall flare 0°
 
-**PIPE Entrance Types**
+**Pipe Entrance Types (TYPEEN)**
 
-- **Type 1**: Square edge with headwall
-- **Type 2**: Socket end with headwall
-- **Type 3**: Socket end projecting
+- ``1`` – Square edge with headwall
+- ``2`` – Socket end with headwall
+- ``3`` – Socket end projecting
 
 Entrance Loss Coefficients
--------------------------------
+------------------------------
 
-The entrance loss for a culvert under outlet control is computed as:
+The entrance head loss is calculated using the following equation:
 
 .. math::
 
    H_e = K_e \left( \frac{v^2}{2g} \right)
 
 Where:
-- ``H_e`` is the entrance head loss (ft or m)
+- ``H_e`` is entrance head loss (ft or m)
 - ``K_e`` is the entrance loss coefficient
-- ``v`` is the velocity (ft/s or m/s)
-- ``g`` is gravitational acceleration
+- ``v`` is velocity in the culvert barrel (ft/s or m/s)
+- ``g`` is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)
 
-Table: Entrance Loss Coefficients (HDS-5 Third Edition)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Entrance Loss Coefficient Table (HDS-5)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+---------------------------------------------------------------+---------------+
-| Type of Structure and Design of Entrance                      | Coef K_e      |
-+===============================================================+===============+
-| **Pipe, Concrete**                                            |               |
-+---------------------------------------------------------------+---------------+
-| Projecting from fill, socket end (groove-end)                 | 0.2           |
-| Projecting from fill, square cut end                          | 0.5           |
-| Headwall or headwall and wingwalls                            | 0.2           |
-| Socket end of pipe (groove-end)                               | 0.2           |
-| **Square-edge**                                               | 0.5           |
-| Rounded (radius = D/12)                                       | 0.2           |
-| Mitered to conform to fill slope                              | 0.7           |
-| End-section conforming to fill slope                          | 0.5           |
-| Beveled edges, 33.7° or 45° bevels                            | 0.2           |
-| Side- or slope-tapered inlet                                  | 0.2           |
-+---------------------------------------------------------------+---------------+
++---------------------------------------------------------------+-------------+
+| Type of Structure and Design of Entrance                      | K_e         |
++===============================================================+=============+
+| **Pipe, Concrete**                                            |             |
++---------------------------------------------------------------+-------------+
+| Projecting from fill, socket end (groove-end)                 | 0.2         |
+| Projecting from fill, square cut end                          | 0.5         |
+| Headwall or headwall and wingwalls                            | 0.2         |
+| Socket end of pipe (groove-end)                               | 0.2         |
+| Square-edge                                                   | 0.5         |
+| Rounded (radius = D/12)                                       | 0.2         |
+| Mitered to conform to fill slope                              | 0.7         |
+| End-section conforming to fill slope                          | 0.5         |
+| Beveled edges, 33.7° or 45° bevels                            | 0.2         |
+| Side- or slope-tapered inlet                                  | 0.2         |
++---------------------------------------------------------------+-------------+
 
 .. source:: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
 
