@@ -372,10 +372,10 @@ The entrance head loss is calculated using the following equation:
    H_e = K_e \left( \frac{v^2}{2g} \right)
 
 Where:
-- ``H_e`` is entrance head loss (ft or m)
-- ``K_e`` is the entrance loss coefficient
-- ``v`` is velocity in the culvert barrel (ft/s or m/s)
-- ``g`` is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)
+   - ``H_e`` is entrance head loss (ft or m)
+   - ``K_e`` is the entrance loss coefficient
+   - ``v`` is velocity in the culvert barrel (ft/s or m/s)
+   - ``g`` is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)
 
 Entrance Loss Coefficient Table (HDS-5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
