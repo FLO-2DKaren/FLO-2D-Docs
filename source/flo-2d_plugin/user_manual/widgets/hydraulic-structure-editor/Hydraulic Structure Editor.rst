@@ -291,6 +291,152 @@ These cross sections are used by the bridge routine in conjunction with flow coe
 .. note::
    For a complete example showing how to use this table along with the bridge coefficients and geometry fields, refer to the :ref:`Bridge Example <bridge_example>` in the Examples section.
 
+.. _culvert_equation_data:
+
+Culvert Equation Data
+---------------------------
+
+Culvert equations define flow through a culvert based on geometric and hydraulic properties. This information is entered in the **Structures Editor** and the **FLO-2D Table Editor**, as shown below.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr003.png
+   :alt: Structures Editor Interface
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr002.png
+   :alt: FLO-2D Culvert Table Editor
+
+Structures Editor Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following fields are available in the **Structures Editor**:
+
+- **Structure** – Name of the culvert structure (e.g., CULV_122)
+- **Type** – Designation of the culvert as *Floodplain* or *Storm Drain*
+- **Rating** – Select *Culvert Equation* or import from a rating table
+- **Tailwater Control** – Choose how downstream water levels are handled
+- **Reference Elevation** – Elevation for the inlet headwater (ft)
+- **Culvert Length** – Total length of the culvert barrel (ft)
+- **Culvert Diameter or Box Height** – Inside diameter for pipes or height for box culverts (ft)
+
+Culvert Geometry Table
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The **FLO-2D Table Editor** stores additional culvert equation variables:
+
++-----------+----------+-----------+--------+--------+-------------+
+| TYPEC     | TYPEEN   | CULVERTN  | KE     | CUBASE | MULTBARRELS |
++===========+==========+===========+========+========+=============+
+| 1.0       | 1.0      | 0.0180    | 0.4    | 8.0    | 1.0         |
++-----------+----------+-----------+--------+--------+-------------+
+
+**Field Descriptions:**
+
+- **TYPEC** – Culvert shape: `1` = box, `2` = pipe
+- **TYPEEN** – Entrance type (see below)
+- **CULVERTN** – Manning's n value for the culvert
+- **KE** – Entrance loss coefficient
+- **CUBASE** – Culvert width (for box) or diameter (for pipe)
+- **MULTBARRELS** – Number of barrels (1.0 for single-barrel)
+
+Culvert Type Switch
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The culvert shape is defined using the `TYPEC(I)` variable:
+
+- ``1`` = Box culvert
+- ``2`` = Pipe culvert
+
+.. note:: Box culverts are defined by height and width. Pipe culverts are defined by circular diameter.
+
+Entrance Type Codes
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Box Entrance Types (TYPEEN)**
+
+- ``1`` – Wingwall flare 30° to 75°
+- ``2`` – Wingwall flare 90° or 15°
+- ``3`` – Wingwall flare 0°
+
+**Pipe Entrance Types (TYPEEN)**
+
+- ``1`` – Square edge with headwall
+- ``2`` – Socket end with headwall
+- ``3`` – Socket end projecting
+
+Entrance Loss Coefficients
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The entrance head loss is calculated using the following equation:
+
+.. math::
+
+   H_e = K_e \left( \frac{v^2}{2g} \right)
+
+Where:
+- ``H_e`` is entrance head loss (ft or m)
+- ``K_e`` is the entrance loss coefficient
+- ``v`` is velocity in the culvert barrel (ft/s or m/s)
+- ``g`` is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)
+
+Entrance Loss Coefficient Table (HDS-5)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Pipe, Concrete**
+
+.. list-table:: Entrance Loss Coefficients (HDS-5 – Third Edition)
+   :widths: 67 33
+   :header-rows: 1
+
+   * - Type of Structure and Design of Entrance
+     - K\ :sub:`e`
+
+   * - Projecting from fill, socket end (groove-end)
+     - 0.2
+
+   * - Projecting from fill, square cut end
+     - 0.5
+
+   * - Headwall or headwall and wingwalls
+     - 0.2
+
+   * - Socket end of pipe (groove-end)
+     - 0.2
+
+   * - Square-edge
+     - 0.5
+
+   * - Rounded (radius = D/12)
+     - 0.2
+
+   * - Mitered to conform to fill slope
+     - 0.7
+
+   * - End-section conforming to fill slope
+     - 0.5
+
+   * - Beveled edges, 33.7° or 45° bevels
+     - 0.2
+
+   * - Side- or slope-tapered inlet
+     - 0.2
+
+.. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in outlet control flow calculations.
+
+.. _bridge_example:
+
+Bridge Data
+----------------
+
+Bridge parameters can be defined for a structure.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau020.png
+
+
+The USGS bridge tables are used to define the flow though a bridge with bridge geometry and discharge coefficients.
+
+.. note:: See `Bridge tutorial and Bridge guidelines <https://documentation.flo-2d.com/Advanced-Lessons/Module%202%20Part%203.html>`__ for a detailed guide.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau021.png
+
 Example Configurations
 ---------------------------
 
@@ -467,174 +613,3 @@ Channel to Floodplain
 -  Channel to Floodplain
 -  Culvert equation
 
-Rating Tables
---------------------------
-
-Rating tables are used to define the relationship between stage and discharge for a hydraulic structure.  They can 
-represent culverts, bridges, pumps, weirs or drop structures.
-
-1. Click the
-   Import Rating Tables button.
-
-2. Select all of the
-   rating table files and open them.
-
-3. The files must
-   have the same name as the structure.
-
-4. The rating table data is
-   Depth (ft or m) and Discharge (cfs or cms).
-
-5. The columns
-   can be space or tab delimited.
-
-6. Do not put
-   a header in the rating table data file.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
-
-.. _culvert_equation_data:
-
-Culvert Equation Data
----------------------------
-
-Culvert equations define flow through a culvert based on geometric and hydraulic properties. This information is entered in the **Structures Editor** and the **FLO-2D Table Editor**, as shown below.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr003.png
-   :alt: Structures Editor Interface
-
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr002.png
-   :alt: FLO-2D Culvert Table Editor
-
-Structures Editor Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The following fields are available in the **Structures Editor**:
-
-- **Structure** – Name of the culvert structure (e.g., CULV_122)
-- **Type** – Designation of the culvert as *Floodplain* or *Storm Drain*
-- **Rating** – Select *Culvert Equation* or import from a rating table
-- **Tailwater Control** – Choose how downstream water levels are handled
-- **Reference Elevation** – Elevation for the inlet headwater (ft)
-- **Culvert Length** – Total length of the culvert barrel (ft)
-- **Culvert Diameter or Box Height** – Inside diameter for pipes or height for box culverts (ft)
-
-Culvert Geometry Table
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The **FLO-2D Table Editor** stores additional culvert equation variables:
-
-+-----------+----------+-----------+--------+--------+-------------+
-| TYPEC     | TYPEEN   | CULVERTN  | KE     | CUBASE | MULTBARRELS |
-+===========+==========+===========+========+========+=============+
-| 1.0       | 1.0      | 0.0180    | 0.4    | 8.0    | 1.0         |
-+-----------+----------+-----------+--------+--------+-------------+
-
-**Field Descriptions:**
-
-- **TYPEC** – Culvert shape: `1` = box, `2` = pipe
-- **TYPEEN** – Entrance type (see below)
-- **CULVERTN** – Manning's n value for the culvert
-- **KE** – Entrance loss coefficient
-- **CUBASE** – Culvert width (for box) or diameter (for pipe)
-- **MULTBARRELS** – Number of barrels (1.0 for single-barrel)
-
-Culvert Type Switch
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The culvert shape is defined using the `TYPEC(I)` variable:
-
-- ``1`` = Box culvert
-- ``2`` = Pipe culvert
-
-.. note:: Box culverts are defined by height and width. Pipe culverts are defined by circular diameter.
-
-Entrance Type Codes
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Box Entrance Types (TYPEEN)**
-
-- ``1`` – Wingwall flare 30° to 75°
-- ``2`` – Wingwall flare 90° or 15°
-- ``3`` – Wingwall flare 0°
-
-**Pipe Entrance Types (TYPEEN)**
-
-- ``1`` – Square edge with headwall
-- ``2`` – Socket end with headwall
-- ``3`` – Socket end projecting
-
-Entrance Loss Coefficients
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The entrance head loss is calculated using the following equation:
-
-.. math::
-
-   H_e = K_e \left( \frac{v^2}{2g} \right)
-
-Where:
-- ``H_e`` is entrance head loss (ft or m)
-- ``K_e`` is the entrance loss coefficient
-- ``v`` is velocity in the culvert barrel (ft/s or m/s)
-- ``g`` is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)
-
-Entrance Loss Coefficient Table (HDS-5)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Pipe, Concrete**
-
-.. list-table:: Entrance Loss Coefficients (HDS-5 – Third Edition)
-   :widths: 67 33
-   :header-rows: 1
-
-   * - Type of Structure and Design of Entrance
-     - K\ :sub:`e`
-
-   * - Projecting from fill, socket end (groove-end)
-     - 0.2
-
-   * - Projecting from fill, square cut end
-     - 0.5
-
-   * - Headwall or headwall and wingwalls
-     - 0.2
-
-   * - Socket end of pipe (groove-end)
-     - 0.2
-
-   * - Square-edge
-     - 0.5
-
-   * - Rounded (radius = D/12)
-     - 0.2
-
-   * - Mitered to conform to fill slope
-     - 0.7
-
-   * - End-section conforming to fill slope
-     - 0.5
-
-   * - Beveled edges, 33.7° or 45° bevels
-     - 0.2
-
-   * - Side- or slope-tapered inlet
-     - 0.2
-
-.. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in outlet control flow calculations.
-
-.. _bridge_example:
-
-Bridge Data
-----------------
-
-Bridge parameters can be defined for a structure.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau020.png
-
-
-The USGS bridge tables are used to define the flow though a bridge with bridge geometry and discharge coefficients.
-
-.. note:: See `Bridge tutorial and Bridge guidelines <https://documentation.flo-2d.com/Advanced-Lessons/Module%202%20Part%203.html>`__ for a detailed guide.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau021.png
