@@ -351,7 +351,7 @@ Entrance Loss Coefficient Table (HDS-5)
 | Side- or slope-tapered inlet                                  | 0.2         |
 +---------------------------------------------------------------+-------------+
 
-.. source:: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
+source: Hydraulic Design of Highway Culverts – HDS-5 – Third Edition
 
 Bridge
 ----------------
