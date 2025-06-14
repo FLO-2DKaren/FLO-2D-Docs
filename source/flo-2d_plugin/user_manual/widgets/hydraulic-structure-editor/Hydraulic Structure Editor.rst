@@ -5,9 +5,6 @@ Structures Editor
 
 The structures editor is used to set up the data for the HYSTRUCT.DAT file.
 
-This section will outline the tools in the Structure Editor by describing how to set up
-different types of hydraulic structures.
-
 .. image:: ../../img/Widgets/structures.png
 
 .. contents:: Contents
@@ -15,6 +12,31 @@ different types of hydraulic structures.
    :depth: 2
    :backlinks: entry
 
+Overview
+--------
+
+The Hydraulic Structure Editor provides a graphical user interface for defining and managing hydraulic structures within the FLO-2D Plugin. These structures control the movement of water between grid elements and are essential for simulating culverts, bridges, weirs, storm drains, and pumps in both floodplain and channel systems.
+
+This editor generates the `HYSTRUC.DAT` input file automatically, allowing users to focus on setting realistic structure parameters without manually editing text files. The editor supports all structure types and configurations available in FLO-2D, including:
+
+- Floodplain-to-floodplain culverts using rating curves or culvert equations
+- Channel-to-channel hydraulic structures with optional replacement curves
+- Floodplain-to-channel and channel-to-floodplain interactions
+- Complex bridge hydraulics using detailed coefficient tables
+- Pump systems and simplified storm drain configurations
+
+Purpose
+~~~~~~~~~
+
+Hydraulic structures simulate the effect of physical features that convey, restrict, or redirect flow between nodes. The purpose of the editor is to simplify the process of:
+
+- Assigning node connections (inlet and outlet)
+- Specifying flow control methods (rating curve, culvert routine, bridge routine, etc.)
+- Entering reference elevations, coefficients, and geometric dimensions
+- Configuring optional features such as tailwater effects, structure blockage, or deck overtopping
+- Previewing structure behavior using visual layout and tooltip guidance
+
+By using the editor, users can ensure structure inputs are consistent with FLO-2D model requirements and avoid common mistakes like mismatched node types or incomplete variable assignments. Each structure is validated in the UI before being saved to the `HYSTRUC.DAT` file, improving simulation reliability and workflow efficiency.
 
 .. note:: An advanced tutorial for modeling hydraulic structures and culverts is available on the Gila Self-Help Tutorials.
 
@@ -24,10 +46,176 @@ different types of hydraulic structures.
 
    <a href ="https://youtu.be/ebIFoGUuQcI?feature=shared" target="_blank">Gila Self-Help Tutorials - Hydraulic Structures</a>
 
-Structure Types
+Structure Editor Layout
+----------------------------
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr000.png
+
+Structure Editor Control
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr004.png
+
+
+- **New Structure**  
+  Create a new structure. Click the button to add a new polyline to connect the upstream and downstream side of a structure.
+
+- **Save Structure**  
+  Save the current structure and load the structure into the editor.
+
+- **Revert Changes**  
+  Undo any unsaved edits and revert to the last saved condition.
+
+- **Delete Structure**  
+  Permanently remove the selected structure from the project. Use with caution as this action cannot be undone.
+
+- **Schematize**  
+  Process and convert the structure into FLO-2D ready data.
+
+- **User Manual**  
+  Open the plugin's user manual to view additional help documentation for hydraulic structures.
+
+Structure Parameters I
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr004.png
+
+- **Name**  
+  Enter or select the name of the structure. This identifies the outflow boundary condition in the project.
+
+- **Type**  
+  Choose the type of structure from the dropdown list. Options include:
+  
+  1. **Floodplain** – Connect a structure between two floodplain grid elements.    
+  2. **Channel** – Connect a structure between two left bank channel elements.  
+  3. **Floodplain to Channel** – Connect a structure from a floodplain grid element into a left bank channel element.  
+  4. **Channel to Floodplain** – Connect a structure from a left bank channel element to a floodplain grid element.
+
+.. note:: 
+   Use the **left bank** channel element to connect the inlet or outlet of a structure. This is required 
+   to ensure the structure connects to the appropriate channel cross section.
+
+
+- **Rename**  
+  Use this button to rename the selected structure. The name is alpha-numeric with 30 ascii characters and no spaces.
+
+- **Locate**  
+  Click the locate (eye) button to zoom and center the map on the selected structure.
+
+Structure Hydraulic Control
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr007.png
+
+
+Select the hydraulic control method that governs flow through the structure. The options correspond to different modeling approaches in FLO-2D:
+
+1. **Rating curve** – Defines flow using a depth vs. discharge equation.
+2. **Rating table** – Defines flow using a depth vs. discharge table.
+3. **Culvert equation** – Uses empirical culvert equations to calculate flow based on geometry and headwater conditions.
+4. **Bridge routine** – Applies a specialized bridge flow routine based on physical dimensions and flow coefficients.
+
+
+- **Load Rating Tables**  
+  Click the **Import Rating Tables** button to load pre-defined rating data into the model.
+
+Tailwater Control
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr006.png
+
+Tailwater control settings determine how downstream water levels affect culvert discharge. These options are used to simulate varying degrees of backwater influence or flow reversal at the culvert outlet:
+
+- **No tail water effect – discharge based on headwater**  
+  Assumes free outfall conditions. Discharge is computed solely from upstream headwater elevation. No upstream flow allowed.
+
+- **Reduced discharge and NO upstream flow allowed**  
+  Simulates partial submergence. Discharge is reduced based on downstream conditions, but reverse flow from outlet to inlet is not permitted. 
+  This condition is similar to a flap gate.
+
+- **Reduced discharge and upstream flow allowed**  
+  Allows for backflow into the upstream system under high tailwater conditions. Discharge is still reduced due to submergence.
+
+.. note::  
+   Tailwater settings simulate how downstream conditions influence flow through the structure. 
+   Use these controls when submergence or flow reversal is expected due to backwater conditions, 
+   particularly in urban or complex drainage systems.
+
+Simple Storm Drain
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr008.png
+
+.. warning:: Use this option sparingly. The hierarchy of flow through this system is not applied appropriately for use on more than 2 or 3 inlets.
+
+**Storm Drain Capacity**  
+
+- This tool provides a simplified method for linking multiple inlets to a single outlet using a maximum discharge threshold.
+- Only compatible with rating table structures.
+- Not intended to model full pipe networks. It is useful when detailed storm drain routing is unavailable or unnecessary.
+- The capacity value (cfs or cms) sets the maximum allowable flow. If inflow exceeds this value, excess water will pond at the inlet(s).
+
+Structure Parameters II
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr009.png
+
+These parameters are used when defining culvert or conduit characteristics for hydraulic rating calculations:
+
+- **Reference Elevation for Headwater**  
+  Specifies the minimum upstream water elevation required to initiate flow through the structure. 
+  Flow will not occur until the water level reaches this elevation.
+
+- **Culvert or Conduit Length**  
+
+  If the structure does not use a long culvert or culvert equation, enter **0.0** for length and diameter.
+
+  **Culvert Equation**
+  
+  Defines the total length of the culvert (feet or meters). Apply this length when using the **culvert equation** method.
+
+  **Long Culvert**
+
+   If the structure length exceeds 500 ft (150 m), it is considered a *long culvert*. In this case:
+
+   - A **rating table** must be used.
+   - The **flow area** must be defined (using `ATABLE` or related variables).
+   - Long culverts simulate **storage** and **travel time**, unlike other structures that convey flow instantaneously.
+
+- **Circular Diameter or Box Culvert Height**  
+  Specifies the size of the structure. For circular culverts, enter the internal diameter. For box culverts, enter the internal height. 
+  This value is critical for determining capacity and flow behavior.
+
+
+Table Editor and Plot
 -------------------------------
 
-.. image:: ../../img/Hydraulic-Structure-Editor/hydr001.png
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr010.png
+
+**Rating Curve**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr011.png
+
+**Replacement Curve**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr012.png
+
+**Rating Table**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr013.png
+
+**Culvert Equation**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr014.png
+
+**Bridge Routine**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydr015.png
+
+The table editor is used to define the upstream and downstream cross sections for the bridge routine.
+
+Example Configurations
+---------------------------
 
 Channel to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -228,23 +416,7 @@ represent culverts, bridges, pumps, weirs or drop structures.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau022.png
 
-Tailwater Control
-------------------
 
-Tailwater control settings determine how downstream water levels affect culvert discharge. These options are used to simulate varying degrees of backwater influence or flow reversal at the culvert outlet:
-
-- **No tail water effect – discharge based on headwater**  
-  Assumes free outfall conditions. Discharge is computed solely from upstream headwater elevation. No upstream flow allowed.
-
-- **Reduced discharge and NO upstream flow allowed**  
-  Simulates partial submergence. Discharge is reduced based on downstream conditions, but reverse flow from outlet to inlet is not permitted. 
-  This condition is similar to a flap gate.
-
-- **Reduced discharge and upstream flow allowed**  
-  Allows for backflow into the upstream system under high tailwater conditions. Discharge is still reduced due to submergence.
-
-.. note::  
-   Use these settings to reflect the hydraulic behavior at the downstream end of the culvert, especially in urban drainage systems where backwater or surcharge can occur.
 
 
 Culvert Equation Data
@@ -335,12 +507,6 @@ Entrance Loss Coefficient Table (HDS-5)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Pipe, Concrete**
-
-+-----------+----------+-----------+--------+--------+-------------+
-| TYPEC     | TYPEEN   | CULVERTN  | KE     | CUBASE | MULTBARRELS |
-+===========+==========+===========+========+========+=============+
-| 1.0       | 1.0      | 0.0180    | 0.4    | 8.0    | 1.0         |
-+-----------+----------+-----------+--------+--------+-------------+
 
 .. list-table:: Entrance Loss Coefficients (HDS-5 – Third Edition)
    :widths: 67 33
