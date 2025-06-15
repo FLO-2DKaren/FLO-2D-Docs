@@ -449,20 +449,21 @@ Floodplain to Floodplain Structure
 -  Rating Table
 
 This example will model a culvert system between two floodplain nodes.
-The invert elevation of the inlet node is set by the grid element elevation.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau008.png
 
-
 The floodplain structure uses the grid element elevation as it's inlet and outlet invert elevations.
+In this case the inlet invert is 177.24 ft and the outlet invert is 174.13 ft.
 
+.. note:: Because culverts have a headwall, the grid elevation may need an adjustment down to the invert.  The advanced
+   culvert tutorial in the Self Help Kit shows how to make that elevation correction.  :ref:`Self Help Tutorials <correct_elevation>` 
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau010.png
 
-The structure is a floodplain to floodplain that uses a rating table with headwater control.  It does not have a 
-reference elevation for headwater so the flow starts at the invert elevation.  It's not considered a long culvert
-so the lenght and diameter are both "0.00".
-
+- This structure is a floodplain to floodplain culvert that uses a rating table.
+- It has a headwater control so the Tailwater switch is set to "0" or No tailwater effect.  
+- It does not have a reference elevation for headwater so the flow starts at the invert elevation.  
+- It's not considered a long culvert so the length and diameter are both "0.00".
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau012.png
 
@@ -470,8 +471,6 @@ so the lenght and diameter are both "0.00".
 The rating table is a headwater control rating table.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau013.png
-
-
 
 Channel to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -592,4 +591,48 @@ Channel to Floodplain Structure
 -  Channel to Floodplain
 -  Culvert equation
 
+This example has a channel to floodplain box culvert on the downstream side and a floodplain to channel 
+circular culvert on the upstream side.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex001.png
+
+The channel to floodplain culvert is a box culvert with a sedimentation weir on the upstream side.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex003.png
+
+
+- This structure is a channel to floodplain culvert that uses a culvert equation.
+- It has a headwater control so the tailwater switch is set to "0" or No tailwater effect.  
+- It has a sedimentation weir so the reference elevation for headwater is 1396.63.  
+- It needs a culvert length 100.00 ft and a culvert height 5.00 ft because it uses the culvert equation.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex002.png
+
+The remaining culvert parameters are defined in the Table Editor.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex004.png
+
+- **TYPEC** =  1 (box) 
+- **TYPEEN** = 1 (wingwall flare)
+- **CULVERTN** = 0.018
+- **KE** 0.4 (wingwall and square edge)
+- **CUBASE** = 8 ft (width)
+- **MULTBARRELS** = 1 (single-barrel)
+
+**Culvert Type Switch**
+
+The culvert shape is defined using the `TYPEC(I)` variable:
+
+- ``1`` = Box culvert
+- ``2`` = Pipe culvert
+
+**Box Entrance Types (TYPEEN)**
+
+- ``1`` – Wingwall flare 30° to 75°
+- ``2`` – Wingwall flare 90° or 15°
+- ``3`` – Wingwall flare 0°
+
+**Box Losses**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex005.png
 
