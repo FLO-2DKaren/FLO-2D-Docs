@@ -532,58 +532,37 @@ Floodplain to Channel Structure
 
 This example shows a culvert that connects a basin to a channel.
 
-1. Click the Add
-   Structure button.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau009.png
-
-2. Digitize a culvert by clicking on two cells closest to the inlet and outlet on the map.
-   The outlet should be assigned to a blue channel node.
-
-3. Use the grid
-   elevation values and channel invert to make sure that the invert elevations are correct.
-
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau014.png
 
-4. The culvert is assigned to the channel cross section.
-   That is why the feature must be applied to a left bank channel node.
+The culvert is assigned to the channel cross section.
+That is why the feature must be applied to a left bank channel node.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau015.png
 
-5. Click Save.
+In this case the stage of the water in the channel may cause submergence.
+The tailwater switch should be set to Reduced Discharge and upstream flow allowed.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau011.png
+The culvert length is 118ft.
 
-6. In this case the stage of the water in the channel may cause submergence.
-   The tailwater switch should be set to Reduced Discharge and upstream flow allowed.
-
-7. The culvert length is 118ft.
-
-8. This is a pedestrian crossing so the culvert height must be at least 8 ft.
+This is a pedestrian crossing so the culvert height must be at least 8 ft.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau016.png
 
-9.  The width
-    of the structure is approximately 12 ft.
+The width of the structure is approximately 12 ft.
 
-10. There are
-    30-degree wingwalls.
+There are 30-degree wingwalls.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau017.png
 
-11. Fill the table form.
+Fill the table form.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau018.png
 
-12. Fill in
-    Rating Table data.
+Fill in Rating Table data.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau019.png
 
-13. Click Schematize to
-    write the data to the schematic layers.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
 
 Channel to Floodplain Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -591,8 +570,8 @@ Channel to Floodplain Structure
 -  Channel to Floodplain
 -  Culvert equation
 
-This example has a channel to floodplain box culvert on the downstream side and a floodplain to channel 
-circular culvert on the upstream side.
+This example has a channel to floodplain box culvert on the downstream side. 
+The example will not outline the the floodplain to channel circular culvert on the upstream side.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/hydex001.png
 
