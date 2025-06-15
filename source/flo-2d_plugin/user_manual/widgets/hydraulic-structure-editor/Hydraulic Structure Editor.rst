@@ -482,47 +482,18 @@ This structure will simulate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
 The channel segments are split up to allow for the width of the roadway.
 
-1. Click the Add
-   Structure button.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau003.png
-
-2. Digitize a culvert
-   by clicking on the two blue left bank elements that represent the beginning and end of the hydraulic structure.
-
-3. Click upstream first and downstream second.
-   There are small arrows on the channel that show the flow direction.
-
-4. The structure line
-   also has an arrow to show flow direction.
-
-5. Do not use a structure on the magenta right bank lines.
-   Culverts are only assigned to the left bank nodes.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/addchanculv.gif
 
-6. Click
-   Save.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau005.png
-
-7. Fill the
-   widget form.
-
-8. In the generalized
-   culvert equation, conduit with is used to represent the culvert height or diameter.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau002.png
 
-9. Fill the
-   table.
+Table
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau006.png
 
-10. Click Schematize
-    button to write the data to the schematic layers.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
    
 Floodplain to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -557,11 +528,33 @@ This example shows a culvert that connects a basin to a channel laterally.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau018.png
 
-Table Editor data
+The remaining culvert parameters are defined in the Table Editor.
 
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau019.png
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex004.png
 
+- **TYPEC** =  1 (box) 
+- **TYPEEN** = 1 (wingwall flare)
+- **CULVERTN** = 0.020
+- **KE** 0.5 (wingwall and square edge)
+- **CUBASE** = 12 ft (width)
+- **MULTBARRELS** = 1 (single-barrel)
 
+**Culvert Type Switch**
+
+The culvert shape is defined using the `TYPEC(I)` variable:
+
+- ``1`` = Box culvert
+- ``2`` = Pipe culvert
+
+**Box Entrance Types (TYPEEN)**
+
+- ``1`` – Wingwall flare 30° to 75°
+- ``2`` – Wingwall flare 90° or 15°
+- ``3`` – Wingwall flare 0°
+
+**Box Losses**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex005.png
 
 Channel to Floodplain Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
