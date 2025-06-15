@@ -503,7 +503,7 @@ The remaining culvert parameters are defined in the Table Editor.
 - **TYPEC** =  1 (box) 
 - **TYPEEN** = 1 (wingwall flare)
 - **CULVERTN** = 0.018
-- **KE** 0.5 (wingwall and square edge)
+- **KE** 0.4 (wingwall and square edge)
 - **CUBASE** = 20 ft (width)
 - **MULTBARRELS** = 3 (multi-barrel)
 
@@ -563,8 +563,8 @@ The remaining culvert parameters are defined in the Table Editor.
 
 - **TYPEC** =  1 (box) 
 - **TYPEEN** = 1 (wingwall flare)
-- **CULVERTN** = 0.020
-- **KE** 0.5 (wingwall and square edge)
+- **CULVERTN** = 0.018
+- **KE** 0.4 (wingwall and square edge)
 - **CUBASE** = 12 ft (width)
 - **MULTBARRELS** = 1 (single-barrel)
 
