@@ -530,35 +530,34 @@ Floodplain to Channel Structure
 -  Floodplain to Channel
 -  Culvert equation
 
-This example shows a culvert that connects a basin to a channel.
+This example shows a culvert that connects a basin to a channel laterally.
+
+.. important:: The structure always connects to left bank of a channel regardless of which bank the structure is positioned on.  
+   This is because the structure connects to the cross section and the reference point is always the left bank grid element number.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau014.png
 
-The culvert is assigned to the channel cross section.
-That is why the feature must be applied to a left bank channel node.
+- The culvert is assigned to the channel cross section.
+- That is why the feature must be applied to a left bank channel node.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau015.png
 
-In this case the stage of the water in the channel may cause submergence.
-The tailwater switch should be set to Reduced Discharge and upstream flow allowed.
-
-The culvert length is 118ft.
-
-This is a pedestrian crossing so the culvert height must be at least 8 ft.
+- The culvert length is 118ft.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau016.png
 
-The width of the structure is approximately 12 ft.
-
-There are 30-degree wingwalls.
+- This is a pedestrian crossing so the culvert height must be at least 8 ft.
+- The width of the structure is approximately 12 ft.
+- There are 30-degree wingwalls.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau017.png
 
-Fill the table form.
+- The stage of the water in the channel will result in a tailwater control.
+- The tailwater switch should be set to Reduced Discharge and upstream flow allowed.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau018.png
 
-Fill in Rating Table data.
+Table Editor data
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau019.png
 
