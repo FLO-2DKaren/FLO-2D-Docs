@@ -280,13 +280,10 @@ This configuration allows input of:
 
 This table defines the upstream and downstream cross sections used in the bridge routine. Cross section geometry is entered as station-elevation points along the bridge profile:
 
-- `XUP`, `YUP` – Station of each cross section point
-- `YUP` – Elevation of the upstream cross section.
-- `YB` – Elevation of the corresponding downstream point at the same station
+- `XUP` – Station of each cross section point.
+- `YUP` – Elevation of the corresponding upstream cross section.
+- `YB` – Elevation of the corresponding downstream point at the same station.
 
-The table must define a continuous profile across the full bridge opening, including abutments, channel bed, and any roadway or deck geometry. The plotted cross section provides a visual check of the entered values.
-
-These cross sections are used by the bridge routine in conjunction with flow coefficients and structure parameters (e.g., pier width, low chord elevation) to compute flow through the bridge.
 
 .. note::
    For a complete example showing how to use this table along with the bridge coefficients and geometry fields, refer to the :ref:`Bridge Example <bridge_example>` in the Examples section.
@@ -310,7 +307,7 @@ Structures Editor Fields
 The following fields are available in the **Structures Editor**:
 
 - **Structure** – Name of the culvert structure (e.g., CULV_122)
-- **Type** – Designation of the culvert as *Floodplain* or *Storm Drain*
+- **Type** – Designation of the culvert as *Floodplain* or *Channel*
 - **Rating** – Select *Culvert Equation* or import from a rating table
 - **Tailwater Control** – Choose how downstream water levels are handled
 - **Reference Elevation** – Elevation for the inlet headwater (ft)
