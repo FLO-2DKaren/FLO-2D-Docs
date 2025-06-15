@@ -1,3 +1,5 @@
+.. _structure_example:
+
 Hydraulic Structures - Culverts
 ==================================
 

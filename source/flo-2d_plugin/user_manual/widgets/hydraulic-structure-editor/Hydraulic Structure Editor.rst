@@ -419,7 +419,7 @@ Entrance Loss Coefficient Table (HDS-5)
    * - Side- or slope-tapered inlet
      - 0.2
 
-.. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in outlet control flow calculations.
+.. note:: These values are based on the *Hydraulic Design of Highway Culverts – HDS-5 – Third Edition* and used in inlet control flow calculations.
 
 .. _bridge_example:
 
@@ -437,8 +437,41 @@ The USGS bridge tables are used to define the flow though a bridge with bridge g
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau021.png
 
-Example Configurations
----------------------------
+Example Hydraulic Structures
+--------------------------------
+
+.. note:: These examples show the final configuration only.  For step by step instructions see the :ref:`Self Help Tutorials <structure_example>` 
+
+Floodplain to Floodplain Structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Floodplain to Floodplain
+-  Rating Table
+
+This example will model a culvert system between two floodplain nodes.
+The invert elevation of the inlet node is set by the grid element elevation.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau008.png
+
+
+The floodplain structure uses the grid element elevation as it's inlet and outlet invert elevations.
+
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau010.png
+
+The structure is a floodplain to floodplain that uses a rating table with headwater control.  It does not have a 
+reference elevation for headwater so the flow starts at the invert elevation.  It's not considered a long culvert
+so the lenght and diameter are both "0.00".
+
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau012.png
+
+
+The rating table is a headwater control rating table.
+
+.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau013.png
+
+
 
 Channel to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -491,60 +524,7 @@ The channel segments are split up to allow for the width of the roadway.
     button to write the data to the schematic layers.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
-
-Floodplain to Floodplain Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
--  Floodplain to Floodplain
--  Rating Table
-
-This example will model a culvert system between two floodplain nodes.
-The invert elevation of the inlet node is set by the grid element elevation.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau008.png
-
-
-1. Click the Add
-   Structure button.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau009.png
-
-
-2. Digitize a culvert
-   by clicking on two cells closest to the inlet and outlet on the map.
-
-3. Use the elevation
-   values to make sure that the invert elevations are correct.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau010.png
-
-
-4. Click Save.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau011.png
-
-
-5. Fill in the data on the Structure Editor and the Table Editor.
-
-6. No need for culvert geometry because this culvert uses a rating table.
-
-7. No need for reference
-   elevation because this culvert discharge starts when the water enters the upstream grid element.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau012.png
-
-
-8. Fill the rating table.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau013.png
-
-
-9. Click Schematize
-   to write the data to the schematic layers.
-
-.. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
-
-
+   
 Floodplain to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -571,8 +551,7 @@ This example shows a culvert that connects a basin to a channel.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau015.png
 
-5. Click
-   Save.
+5. Click Save.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau011.png
 
@@ -607,9 +586,10 @@ This example shows a culvert that connects a basin to a channel.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau007.png
 
-Channel to Floodplain
+Channel to Floodplain Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Channel to Floodplain
 -  Culvert equation
+
 
