@@ -482,19 +482,48 @@ This structure will simulate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
 The channel segments are split up to allow for the width of the roadway.
 
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex007.png
 
-.. image:: ../../img/Hydraulic-Structure-Editor/addchanculv.gif
+When setting up a channel with a culvert, it is important to set the cross sections so they can 
+represent the expansion and contraction of the channel leading up to and away from the channel.
 
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex006.png
 
+- This structure is a channel to channel culvert that uses a culvert equation.
+- It has a headwater control so the Tailwater switch is set to "0" or No tailwater effect.  
+- It does not have a reference elevation for headwater so the flow starts at the upstream channel invert elevation.  
+- It is a culvert equation so the culvert length is 90 ft and the box height is 8 ft.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau002.png
 
-Table
+The remaining culvert parameters are defined in the Table Editor.
 
 .. image:: ../../img/Hydraulic-Structure-Editor/Hydrau006.png
 
+- **TYPEC** =  1 (box) 
+- **TYPEEN** = 1 (wingwall flare)
+- **CULVERTN** = 0.018
+- **KE** 0.5 (wingwall and square edge)
+- **CUBASE** = 20 ft (width)
+- **MULTBARRELS** = 3 (multi-barrel)
 
-   
+**Culvert Type Switch**
+
+The culvert shape is defined using the `TYPEC(I)` variable:
+
+- ``1`` = Box culvert
+- ``2`` = Pipe culvert
+
+**Box Entrance Types (TYPEEN)**
+
+- ``1`` – Wingwall flare 30° to 75°
+- ``2`` – Wingwall flare 90° or 15°
+- ``3`` – Wingwall flare 0°
+
+**Box Losses**
+
+.. image:: ../../img/Hydraulic-Structure-Editor/hydex005.png
+
 Floodplain to Channel Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
