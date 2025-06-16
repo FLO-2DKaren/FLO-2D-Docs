@@ -770,22 +770,37 @@ The following discussion was sourced from the EPA SWMM documentation (Rossman et
 
 The flow equation solved for each conduit is given by:
 
-.. math:: Q_{t + \mathrm{\Delta}t} = \frac{Q_{t} + \mathrm{\Delta}Q_{gravity} +
-   \mathrm{\Delta}Q_{inertial}}{1 + \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \
+.. math::
+   :label:
+
+   Q_{t + \mathrm{\Delta}t} = \frac{Q_{t} + \mathrm{\Delta}Q_{gravity} +
+   \mathrm{\Delta}Q_{inertial}}{1 + \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
 The :math:`\mathrm{\Delta}Q` in each conduit corresponds to the different force terms expressed as:
 
-.. math:: \mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
-   \frac{\mathrm{\Delta}t}{L\ }\ \ \ \ \
+.. math::
+   :label:
 
-.. math:: \mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
+   \mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
+   \frac{\mathrm{\Delta}t}{L\ }
+
+.. math::
+   :label:
+
+   \mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
    \frac{+ {\overline{V}}^{2}\left( A_{2} - A_{1} \right)\mathrm{\Delta}t}{L}
 
-.. math:: \mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
-   \right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}\ \ \
+.. math::
+   :label:
 
-.. math:: \mathrm{\Delta}Q_{losses} = \frac{\sum_{i}^{}{K_{i}\left| V_{i}
-   right|\mathrm{\Delta}t}}{2L}\ \ \
+   \mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
+   \right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}
+
+.. math::
+   :label:
+
+   \mathrm{\Delta}Q_{losses} = \frac{\sum_{i}^{}{K_{i}\left| V_{i}
+   right|\mathrm{\Delta}t}}{2L}
 
 where:
 
