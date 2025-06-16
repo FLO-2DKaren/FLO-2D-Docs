@@ -903,6 +903,9 @@ The solution algorithm involves the following steps:
    A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous
    estimate Q\ :sub:`last` to generate a new Q\ :sub:`new` according to the equation:
 
+.. math::
+   :label:
+
    Q\ :sub:`new` = (1−Ω) Q\ :sub:`last` +Ω Q\ :sub:`new`
 
 4. The equation for :math:`H_{t + \mathrm{\Delta}t}`\ is solved again for heads using Q\ :sub:`new`.
