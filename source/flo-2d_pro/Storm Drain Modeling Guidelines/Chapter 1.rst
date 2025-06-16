@@ -958,8 +958,9 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
 - Flow continuity condition is enforced Min the form of a perturbation equation:
 
-.. math:: \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  =
-   \ 0\ \
+.. math::
+   :label:
+   \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = \ 0
 
 where:
 
@@ -973,6 +974,7 @@ Solving for :math:`\mathrm{\Delta}H`:
    \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}
 
 where:
+
 .. math::
    :label:
 
