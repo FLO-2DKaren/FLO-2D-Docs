@@ -723,7 +723,7 @@ head and it can be expressed as:
 .. math::
    :label:
 
-   .. math:: h_{L} = \frac{KV^{2}\ }{2gL}
+   h_{L} = \frac{KV^{2}\ }{2gL}
 
 where:
 
