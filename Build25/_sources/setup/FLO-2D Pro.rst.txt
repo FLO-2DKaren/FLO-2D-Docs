@@ -1,5 +1,5 @@
-FLO-2D Pro Install Instructions
-=================================
+FLO-2D Pro Installation Instructions
+======================================
 
 FLO-2D is a flood routing model that simulates river, alluvial fan, urban and coastal flooding. The model
 can tackle any diverse flooding problem including:

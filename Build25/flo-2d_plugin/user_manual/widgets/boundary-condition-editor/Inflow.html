@@ -20,7 +20,7 @@
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Outflow Editor" href="Outflow.html" />
+    <link rel="next" title="Outflow Boundary Editor" href="Outflow.html" />
     <link rel="prev" title="Boundary Condition Editor" href="index.html" /> 
 </head>
 
@@ -110,8 +110,8 @@
              
   <section id="inflow-editor">
 <span id="id1"></span><h1>Inflow Editor<a class="headerlink" href="#inflow-editor" title="Link to this heading"></a></h1>
-<p>Any number of inflow hydrographs to the FLO-2D model can be assigned to channel, floodplain or
-even the 1-D street component. This represents a flood inflow to the flow domain from an off-site source.</p>
+<p>Any number of inflow hydrographs can be assigned to the channel, floodplain, or 1D street components
+in the FLO-2D model. These hydrographs represent off-site flood inflows entering the simulation domain.</p>
 <img alt="../../../../_images/newbc002.png" src="../../../../_images/newbc002.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -120,17 +120,18 @@ even the 1-D street component. This represents a flood inflow to the flow domain
 <nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#create-inflow-data-point" id="id2">Create Inflow Data - Point</a></p></li>
-<li><p><a class="reference internal" href="#create-inflow-data-line" id="id3">Create Inflow Data - Line</a></p></li>
-<li><p><a class="reference internal" href="#load-inflow-data" id="id4">Load Inflow Data</a></p></li>
-<li><p><a class="reference internal" href="#assign-attributes-and-flow-data-to-the-inflow-boundary-conditions" id="id5">Assign Attributes and Flow Data to the Inflow Boundary Conditions</a></p></li>
-<li><p><a class="reference internal" href="#delete-selected-inflow-boundary-condition" id="id6">Delete Selected Inflow Boundary Condition</a></p></li>
-<li><p><a class="reference internal" href="#schematize-the-data" id="id7">Schematize the data</a></p></li>
-<li><p><a class="reference internal" href="#delete-schematized-data" id="id8">Delete Schematized data</a></p></li>
+<li><p><a class="reference internal" href="#create-inflow-point" id="id2">Create Inflow Point</a></p></li>
+<li><p><a class="reference internal" href="#create-inflow-line" id="id3">Create Inflow Line</a></p></li>
+<li><p><a class="reference internal" href="#import-an-inflow-data-file" id="id4">Import an Inflow Data File</a></p></li>
+<li><p><a class="reference internal" href="#assign-inflow-attributes-hydrographs" id="id5">Assign Inflow Attributes Hydrographs</a></p></li>
+<li><p><a class="reference internal" href="#zoom-and-pan-to-inflow-boundary-condition" id="id6">Zoom and Pan to Inflow Boundary Condition</a></p></li>
+<li><p><a class="reference internal" href="#delete-selected-inflow-boundary-condition" id="id7">Delete Selected Inflow Boundary Condition</a></p></li>
+<li><p><a class="reference internal" href="#schematize-the-data" id="id8">Schematize the Data</a></p></li>
+<li><p><a class="reference internal" href="#delete-schematized-data" id="id9">Delete Schematized Data</a></p></li>
 </ul>
 </nav>
-<section id="create-inflow-data-point">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Create Inflow Data - Point</a><a class="headerlink" href="#create-inflow-data-point" title="Link to this heading"></a></h2>
+<section id="create-inflow-point">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Create Inflow Point</a><a class="headerlink" href="#create-inflow-point" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To create a point of inflow, click the Add Point BC button on the Boundary Condition
 Editor widget.</p></li>
@@ -148,13 +149,12 @@ Click OK to create the feature.</p></li>
 </ol>
 <img alt="../../../../_images/newbc006.png" src="../../../../_images/newbc006.png" />
 <ol class="arabic simple" start="4">
-<li><p>Click Yes to save the feature and
-to load the data into the editor.</p></li>
+<li><p>The data is now updated in the editor.</p></li>
 </ol>
 <img alt="../../../../_images/newbc008.png" src="../../../../_images/newbc008.png" />
 </section>
-<section id="create-inflow-data-line">
-<h2><a class="toc-backref" href="#id3" role="doc-backlink">Create Inflow Data - Line</a><a class="headerlink" href="#create-inflow-data-line" title="Link to this heading"></a></h2>
+<section id="create-inflow-line">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Create Inflow Line</a><a class="headerlink" href="#create-inflow-line" title="Link to this heading"></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The Inflow Boundary Condition Line has been modified.  The hydrograph is now distributed
@@ -181,20 +181,20 @@ the line to finish it.  Right click to close the line.</p></li>
 </ol>
 <img alt="../../../../_images/newbc007a.png" src="../../../../_images/newbc007a.png" />
 </section>
-<section id="load-inflow-data">
-<h2><a class="toc-backref" href="#id4" role="doc-backlink">Load Inflow Data</a><a class="headerlink" href="#load-inflow-data" title="Link to this heading"></a></h2>
-<p>This button allows the user to load an INFLOW.DAT file into the Boundary Condition Editor.</p>
+<section id="import-an-inflow-data-file">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Import an Inflow Data File</a><a class="headerlink" href="#import-an-inflow-data-file" title="Link to this heading"></a></h2>
+<p>This button allows the user to load an INFLOW.DAT file into the Boundary Condition layers and add it to a project.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>This process may take an unusually long time.  To prevent this, use the Delete Schematized Inflow Boundary Condition button
-to delete the schematized data before loading the INFLOW.DAT file.  This will speed up the import process.</p>
+<p>Importing the INFLOW.DAT file may take longer than expected if schematized inflow boundary data already exists.
+To speed up the process, click the Delete Schematized Inflow Boundary Condition button before loading the file.</p>
 </div>
 <ol class="arabic simple">
 <li><p>Start by clicking the Delete Schematized Inflow Boundary Condition button to delete the schematized data.</p></li>
 </ol>
 <img alt="../../../../_images/newbc007b.png" src="../../../../_images/newbc007b.png" />
 <ol class="arabic simple" start="2">
-<li><p>To load an INFLOW.DAT file, click on the Open INFLOW.DAT button.</p></li>
+<li><p>Click on the Open INFLOW.DAT button.</p></li>
 </ol>
 <img alt="../../../../_images/newbc014.png" src="../../../../_images/newbc014.png" />
 <ol class="arabic simple" start="2">
@@ -210,16 +210,17 @@ to delete the schematized data before loading the INFLOW.DAT file.  This will sp
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Loading the INFLOW.DAT file into the project appends data to the Boundary Condition layers/table,
-updating cells if already defined with a Boundary Condition.</p>
-<p>Additionally, all data added using this tool will be included in the Boundary Conditions Points User Layer.</p>
-<p>Delete the schematized data before loading the INFLOW.DAT file to speed up the import process / schematization process.</p>
+<p>When you load the INFLOW.DAT file, the data is appended to the Boundary Condition layers and tables. If any cells already have boundary conditions assigned, they will be updated.</p>
+<p>All imported data is also added to the Boundary Condition Points User Layer.</p>
+<p>To speed up the import and schematization process, delete any existing schematized data before loading the INFLOW.DAT file.</p>
 </div>
 </section>
-<section id="assign-attributes-and-flow-data-to-the-inflow-boundary-conditions">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Assign Attributes and Flow Data to the Inflow Boundary Conditions</a><a class="headerlink" href="#assign-attributes-and-flow-data-to-the-inflow-boundary-conditions" title="Link to this heading"></a></h2>
-<p>1. Assign the conditions to the inflow node as seen in the following image.
-.. image:: ../../img/Boundary-Condition-Editor/newbc009.png</p>
+<section id="assign-inflow-attributes-hydrographs">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Assign Inflow Attributes Hydrographs</a><a class="headerlink" href="#assign-inflow-attributes-hydrographs" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Assign the conditions to the inflow node as seen in the following image.</p></li>
+</ol>
+<img alt="../../../../_images/newbc009.png" src="../../../../_images/newbc009.png" />
 <ol class="arabic simple" start="2">
 <li><p>The time series inflow hydrograph is assigned in the table editor where time is in hours and discharge is cfs or cms.
 This is a clear water inflow hydrograph and no sediment concentration is assigned.</p></li>
@@ -230,14 +231,16 @@ This is a clear water inflow hydrograph and no sediment concentration is assigne
 Use the Add data series/table for current BC button to create a new hydrograph.</p></li>
 </ol>
 <img alt="../../../../_images/newbc011.png" src="../../../../_images/newbc011.png" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Click on the eye button to center the map on the selected inflow feature.</p>
+</section>
+<section id="zoom-and-pan-to-inflow-boundary-condition">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Zoom and Pan to Inflow Boundary Condition</a><a class="headerlink" href="#zoom-and-pan-to-inflow-boundary-condition" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Use they eye button to pan and zoom to the selected Inflow Boundary Condition.</p></li>
+</ol>
 <img alt="../../../../_images/newbc017.png" src="../../../../_images/newbc017.png" />
-</div>
 </section>
 <section id="delete-selected-inflow-boundary-condition">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink">Delete Selected Inflow Boundary Condition</a><a class="headerlink" href="#delete-selected-inflow-boundary-condition" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Delete Selected Inflow Boundary Condition</a><a class="headerlink" href="#delete-selected-inflow-boundary-condition" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To delete an Inflow Boundary Condition, click on the Delete Inflow Boundary Condition button.</p></li>
 </ol>
@@ -247,7 +250,7 @@ Use the Add data series/table for current BC button to create a new hydrograph.<
 </ol>
 </section>
 <section id="schematize-the-data">
-<h2><a class="toc-backref" href="#id7" role="doc-backlink">Schematize the data</a><a class="headerlink" href="#schematize-the-data" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Schematize the Data</a><a class="headerlink" href="#schematize-the-data" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Use the Schematize button to save the data to the Schematic Layers and click Yes to overwrite the layers.</p></li>
 </ol>
@@ -255,7 +258,7 @@ Use the Add data series/table for current BC button to create a new hydrograph.<
 <img alt="../../../../_images/newbc013.png" src="../../../../_images/newbc013.png" />
 </section>
 <section id="delete-schematized-data">
-<h2><a class="toc-backref" href="#id8" role="doc-backlink">Delete Schematized data</a><a class="headerlink" href="#delete-schematized-data" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Delete Schematized Data</a><a class="headerlink" href="#delete-schematized-data" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>To delete all schematized Inflow Boundary Conditions, click on the Delete Schematized Inflow Boundary Condition button
 and click Yes to delete all schematized Inflow Boundary Conditions.</p></li>
@@ -263,7 +266,7 @@ and click Yes to delete all schematized Inflow Boundary Conditions.</p></li>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>This button removes all schematized Inflow Boundary Conditions data. It will not delete the time series data.
-Use this button if you import the INFLOW.DAT file.  It will speed up the import and schematization process.</p>
+Use this button if before importing the INFLOW.DAT file.  It will speed up the import and schematization process.</p>
 </div>
 <img alt="../../../../_images/newbc019.png" src="../../../../_images/newbc019.png" />
 <img alt="../../../../_images/newbc020.png" src="../../../../_images/newbc020.png" />
@@ -275,7 +278,7 @@ Use this button if you import the INFLOW.DAT file.  It will speed up the import 
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Boundary Condition Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Outflow.html" class="btn btn-neutral float-right" title="Outflow Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Outflow.html" class="btn btn-neutral float-right" title="Outflow Boundary Editor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

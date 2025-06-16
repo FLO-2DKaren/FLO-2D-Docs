@@ -17,6 +17,8 @@
       <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>window.MathJax = {"tex": {"tags": "none", "useLabelIds": true}, "options": {"displayAlign": "right"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
@@ -109,166 +111,445 @@
              
   <section id="structures-editor">
 <span id="id1"></span><h1>Structures Editor<a class="headerlink" href="#structures-editor" title="Link to this heading"></a></h1>
-<p>The structures editor is used to set up the data for the HYSTRUCT.DAT file.
-This section will describe how to set up each of the different types of hydraulic structures.</p>
+<p>The structures editor is used to set up the data for the HYSTRUCT.DAT file.</p>
+<img alt="../../../../_images/structures.png" src="../../../../_images/structures.png" />
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id5">Overview</a></p>
+<ul>
+<li><p><a class="reference internal" href="#purpose" id="id6">Purpose</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#structure-editor-layout" id="id7">Structure Editor Layout</a></p>
+<ul>
+<li><p><a class="reference internal" href="#structure-editor-control" id="id8">Structure Editor Control</a></p></li>
+<li><p><a class="reference internal" href="#structure-parameters-i" id="id9">Structure Parameters I</a></p></li>
+<li><p><a class="reference internal" href="#structure-hydraulic-control" id="id10">Structure Hydraulic Control</a></p></li>
+<li><p><a class="reference internal" href="#tailwater-control" id="id11">Tailwater Control</a></p></li>
+<li><p><a class="reference internal" href="#simple-storm-drain" id="id12">Simple Storm Drain</a></p></li>
+<li><p><a class="reference internal" href="#structure-parameters-ii" id="id13">Structure Parameters II</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#table-editor-and-plot" id="id14">Table Editor and Plot</a></p></li>
+<li><p><a class="reference internal" href="#culvert-equation-data" id="id15">Culvert Equation Data</a></p>
+<ul>
+<li><p><a class="reference internal" href="#structures-editor-fields" id="id16">Structures Editor Fields</a></p></li>
+<li><p><a class="reference internal" href="#culvert-geometry-table" id="id17">Culvert Geometry Table</a></p></li>
+<li><p><a class="reference internal" href="#culvert-type-switch" id="id18">Culvert Type Switch</a></p></li>
+<li><p><a class="reference internal" href="#entrance-type-codes" id="id19">Entrance Type Codes</a></p></li>
+<li><p><a class="reference internal" href="#entrance-loss-coefficients" id="id20">Entrance Loss Coefficients</a></p></li>
+<li><p><a class="reference internal" href="#entrance-loss-coefficient-table-hds-5" id="id21">Entrance Loss Coefficient Table (HDS-5)</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#bridge-data" id="id22">Bridge Data</a></p></li>
+<li><p><a class="reference internal" href="#example-hydraulic-structures" id="id23">Example Hydraulic Structures</a></p>
+<ul>
+<li><p><a class="reference internal" href="#floodplain-to-floodplain-structure" id="id24">Floodplain to Floodplain Structure</a></p></li>
+<li><p><a class="reference internal" href="#channel-to-channel-structure" id="id25">Channel to Channel Structure</a></p></li>
+<li><p><a class="reference internal" href="#floodplain-to-channel-structure" id="id26">Floodplain to Channel Structure</a></p></li>
+<li><p><a class="reference internal" href="#channel-to-floodplain-structure" id="id27">Channel to Floodplain Structure</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="overview">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Hydraulic Structure Editor provides a graphical user interface for defining and managing hydraulic structures within the FLO-2D Plugin. These structures control the movement of water between grid elements and are essential for simulating culverts, bridges, weirs, storm drains, and pumps in both floodplain and channel systems.</p>
+<p>The editor supports all structure types and configurations available in FLO-2D, including:</p>
+<ul class="simple">
+<li><p>Floodplain-to-floodplain culverts using rating curves or culvert equations</p></li>
+<li><p>Channel-to-channel hydraulic structures with optional replacement curves</p></li>
+<li><p>Floodplain-to-channel and channel-to-floodplain interactions</p></li>
+<li><p>Complex bridge hydraulics using detailed coefficient tables</p></li>
+<li><p>Pump systems and simplified storm drain configurations</p></li>
+</ul>
+<section id="purpose">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Purpose</a><a class="headerlink" href="#purpose" title="Link to this heading"></a></h3>
+<p>Hydraulic structures simulate the effect of physical features that convey, restrict, or redirect flow between nodes. The purpose of the editor is to simplify the process of:</p>
+<ul class="simple">
+<li><p>Assigning node connections (inlet and outlet)</p></li>
+<li><p>Specifying flow control methods (rating curve, culvert routine, bridge routine, etc.)</p></li>
+<li><p>Entering reference elevations, coefficients, and geometric dimensions</p></li>
+<li><p>Configuring optional features such as tailwater effects, structure blockage, or deck overtopping</p></li>
+<li><p>Previewing structure behavior using visual layout and tooltip guidance</p></li>
+</ul>
+<p>By using the editor, users can ensure structure inputs are consistent with FLO-2D model requirements and avoid common mistakes like mismatched node types or incomplete variable assignments. Each structure is validated in the UI before being saved to the <cite>HYSTRUC.DAT</cite> file, improving simulation reliability and workflow efficiency.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>An advanced tutorial for modeling hydraulic structures and culverts is available on the Gila Self-Help Tutorials.</p>
-<p><a href ="https://youtube.com/playlist?list=PLkT3KNZwX6zkkfrM5Pcdvt7WqZuHWYU4c&feature=shared" target="_blank">Gila Self-Help Tutorials</a></p>
+<p><a href ="https://youtu.be/ebIFoGUuQcI?feature=shared" target="_blank">Gila Self-Help Tutorials - Hydraulic Structures</a></p>
 </div>
-<img alt="../../../../_images/structures.png" src="../../../../_images/structures.png" />
-<section id="channel-to-channel-structure">
-<h2>Channel to Channel Structure<a class="headerlink" href="#channel-to-channel-structure" title="Link to this heading"></a></h2>
-<p>Culvert Type:</p>
+</section>
+</section>
+<section id="structure-editor-layout">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Structure Editor Layout</a><a class="headerlink" href="#structure-editor-layout" title="Link to this heading"></a></h2>
+<img alt="../../../../_images/hydr000.png" src="../../../../_images/hydr000.png" />
+<section id="structure-editor-control">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Structure Editor Control</a><a class="headerlink" href="#structure-editor-control" title="Link to this heading"></a></h3>
+<img alt="../../../../_images/hydr004.png" src="../../../../_images/hydr004.png" />
 <ul class="simple">
-<li><p>Channel to Channel</p></li>
-<li><p>Generalized Culvert Equation</p></li>
+<li><p><strong>New Structure</strong>
+Create a new structure. Click the button to add a new polyline to connect the upstream and downstream side of a structure.</p></li>
+<li><p><strong>Save Structure</strong>
+Save the current structure and load the structure into the editor.</p></li>
+<li><p><strong>Revert Changes</strong>
+Undo any unsaved edits and revert to the last saved condition.</p></li>
+<li><p><strong>Delete Structure</strong>
+Permanently remove the selected structure from the project. Use with caution as this action cannot be undone.</p></li>
+<li><p><strong>Schematize</strong>
+Process and convert the structure into FLO-2D ready data.</p></li>
+<li><p><strong>User Manual</strong>
+Open the plugin’s user manual to view additional help documentation for hydraulic structures.</p></li>
 </ul>
-<p>This structure will simulate discharge through a box culvert.
-This example has a box culvert that is longer than the grid element.
-The channel segments are split up to allow for the width of the roadway.</p>
-<ol class="arabic simple">
-<li><p>Click the Add
-Structure button.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau003.png" src="../../../../_images/Hydrau003.png" />
-<ol class="arabic simple" start="2">
-<li><p>Digitize a culvert
-by clicking on the two blue left bank elements that represent the beginning and end of the hydraulic structure.</p></li>
-<li><p>Click upstream first and downstream second.
-There are small arrows on the channel that show the flow direction.</p></li>
-<li><p>The structure line
-also has an arrow to show flow direction.</p></li>
-<li><p>Do not use a structure on the magenta right bank lines.
-Culverts are only assigned to the left bank nodes.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau004.png" src="../../../../_images/Hydrau004.png" />
-<ol class="arabic simple" start="6">
-<li><p>Click
-Save.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau005.png" src="../../../../_images/Hydrau005.png" />
-<ol class="arabic simple" start="7">
-<li><p>Fill the
-widget form.</p></li>
-<li><p>In the generalized
-culvert equation, conduit with is used to represent the culvert height or diameter.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau002.png" src="../../../../_images/Hydrau002.png" />
-<ol class="arabic simple" start="9">
-<li><p>Fill the
-table.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau006.png" src="../../../../_images/Hydrau006.png" />
-<ol class="arabic simple" start="10">
-<li><p>Click Schematize
-button to write the data to the schematic layers.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau007.png" src="../../../../_images/Hydrau007.png" />
 </section>
-<section id="floodplain-to-floodplain-structure">
-<h2>Floodplain to Floodplain Structure<a class="headerlink" href="#floodplain-to-floodplain-structure" title="Link to this heading"></a></h2>
-<p>Culvert Type:</p>
+<section id="structure-parameters-i">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Structure Parameters I</a><a class="headerlink" href="#structure-parameters-i" title="Link to this heading"></a></h3>
+<img alt="../../../../_images/hydr005.png" src="../../../../_images/hydr005.png" />
 <ul class="simple">
-<li><p>Floodplain to Floodplain</p></li>
-<li><p>Rating Table</p></li>
+<li><p><strong>Name</strong>
+Enter or select the name of the structure. This identifies the outflow boundary condition in the project.</p></li>
+<li><p><strong>Type</strong>
+Choose the type of structure from the dropdown list. Options include:</p>
+<ol class="arabic simple">
+<li><p><strong>Floodplain</strong> – Connect a structure between two floodplain grid elements.</p></li>
+<li><p><strong>Channel</strong> – Connect a structure between two left bank channel elements.</p></li>
+<li><p><strong>Floodplain to Channel</strong> – Connect a structure from a floodplain grid element into a left bank channel element.</p></li>
+<li><p><strong>Channel to Floodplain</strong> – Connect a structure from a left bank channel element to a floodplain grid element.</p></li>
+</ol>
+</li>
 </ul>
-<p>This example will model a culvert system between two floodplain nodes.
-The invert elevation of the inlet node is set by the grid element elevation.</p>
-<img alt="../../../../_images/Hydrau008.png" src="../../../../_images/Hydrau008.png" />
-<ol class="arabic simple">
-<li><p>Click the Add
-Structure button.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau009.png" src="../../../../_images/Hydrau009.png" />
-<ol class="arabic simple" start="2">
-<li><p>Digitize a culvert
-by clicking on two cells closest to the inlet and outlet on the map.</p></li>
-<li><p>Use the elevation
-values to make sure that the invert elevations are correct.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau010.png" src="../../../../_images/Hydrau010.png" />
-<ol class="arabic simple" start="4">
-<li><p>Click
-Save.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau011.png" src="../../../../_images/Hydrau011.png" />
-<ol class="arabic simple" start="5">
-<li><p>Fill in the data
-on the Structure Editor and the Table Editor.</p></li>
-<li><p>No need for culvert
-geometry because this culvert uses a rating table.</p></li>
-<li><p>No need for reference
-elevation because this culvert discharge starts when the water enters the upstream grid element.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau012.png" src="../../../../_images/Hydrau012.png" />
-<ol class="arabic simple" start="8">
-<li><p>Fill the
-rating table.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau013.png" src="../../../../_images/Hydrau013.png" />
-<ol class="arabic simple" start="9">
-<li><p>Click Schematize
-to write the data to the schematic layers.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau007.png" src="../../../../_images/Hydrau007.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the <strong>left bank</strong> channel element to connect the inlet or outlet of a structure. This is required
+to ensure the structure connects to the appropriate channel cross section.</p>
+</div>
+<ul class="simple">
+<li><p><strong>Rename</strong>
+Use this button to rename the selected structure. The name is alpha-numeric with 30 ascii characters and no spaces.</p></li>
+<li><p><strong>Locate</strong>
+Click the locate (eye) toggle button to zoom and center the map on the selected structure.</p></li>
+</ul>
 </section>
-<section id="floodplain-to-channel-structure">
-<h2>Floodplain to Channel Structure<a class="headerlink" href="#floodplain-to-channel-structure" title="Link to this heading"></a></h2>
-<p>This example shows a culvert that connects a basin to a channel.</p>
+<section id="structure-hydraulic-control">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Structure Hydraulic Control</a><a class="headerlink" href="#structure-hydraulic-control" title="Link to this heading"></a></h3>
+<img alt="../../../../_images/hydr007.png" src="../../../../_images/hydr007.png" />
+<p><strong>Hydraulic Control</strong></p>
+<p>Select the hydraulic control method that governs flow through the structure. The options correspond to different modeling approaches in FLO-2D:</p>
 <ol class="arabic simple">
-<li><p>Click the Add
-Structure button.</p></li>
+<li><p><strong>Rating curve</strong> – Defines flow using a depth vs. discharge equation.</p></li>
+<li><p><strong>Rating table</strong> – Defines flow using a depth vs. discharge table.</p></li>
+<li><p><strong>Culvert equation</strong> – Uses empirical culvert equations to calculate flow based on geometry and headwater conditions.</p></li>
+<li><p><strong>Bridge routine</strong> – Applies a specialized bridge flow routine based on physical dimensions and flow coefficients.</p></li>
 </ol>
-<img alt="../../../../_images/Hydrau009.png" src="../../../../_images/Hydrau009.png" />
-<ol class="arabic simple" start="2">
-<li><p>Digitize a culvert by clicking on two cells closest to the inlet and outlet on the map.
-The outlet should be assigned to a blue channel node.</p></li>
-<li><p>Use the grid
-elevation values and channel invert to make sure that the invert elevations are correct.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau014.png" src="../../../../_images/Hydrau014.png" />
-<ol class="arabic simple" start="4">
-<li><p>The culvert is assigned to the channel cross section.
-That is why the feature must be applied to a left bank channel node.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau015.png" src="../../../../_images/Hydrau015.png" />
-<ol class="arabic simple" start="5">
-<li><p>Click
-Save.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau011.png" src="../../../../_images/Hydrau011.png" />
-<ol class="arabic simple" start="6">
-<li><p>In this case the stage of the water in the channel may cause submergence.
-The tailwater switch should be set to Reduced Discharge and upstream flow allowed.</p></li>
-<li><p>The culvert length is 118ft.</p></li>
-<li><p>This is a pedestrian crossing so the culvert height must be at least 8 ft.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau016.png" src="../../../../_images/Hydrau016.png" />
-<ol class="arabic simple" start="9">
-<li><p>The width
-of the structure is approximately 12 ft.</p></li>
-<li><p>There are
-30-degree wingwalls.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau017.png" src="../../../../_images/Hydrau017.png" />
-<ol class="arabic simple" start="11">
-<li><p>Fill the table form.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau018.png" src="../../../../_images/Hydrau018.png" />
-<ol class="arabic simple" start="12">
-<li><p>Fill in
-Rating Table data.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau019.png" src="../../../../_images/Hydrau019.png" />
-<ol class="arabic simple" start="13">
-<li><p>Click Schematize to
-write the data to the schematic layers.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau007.png" src="../../../../_images/Hydrau007.png" />
+<p><strong>Load Rating Tables</strong></p>
+<p>Click the <strong>Import Rating Tables</strong> button to load pre-defined rating data into the model.</p>
 </section>
-<section id="bridge">
-<h2>Bridge<a class="headerlink" href="#bridge" title="Link to this heading"></a></h2>
+<section id="tailwater-control">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Tailwater Control</a><a class="headerlink" href="#tailwater-control" title="Link to this heading"></a></h3>
+<img alt="../../../../_images/hydr006.png" src="../../../../_images/hydr006.png" />
+<p>Tailwater control settings determine how downstream water levels affect culvert discharge. These options are used to simulate varying degrees of backwater influence or flow reversal at the culvert outlet:</p>
+<ul class="simple">
+<li><p><strong>No tail water effect – discharge based on headwater</strong>
+Assumes free outfall conditions. Discharge is computed solely from upstream headwater elevation. No upstream flow allowed.</p></li>
+<li><p><strong>Reduced discharge and NO upstream flow allowed</strong>
+Simulates partial submergence. Discharge is reduced based on downstream conditions, but reverse flow from outlet to inlet is not permitted.
+This condition is similar to a flap gate.</p></li>
+<li><p><strong>Reduced discharge and upstream flow allowed</strong>
+Allows for backflow into the upstream system under high tailwater conditions. Discharge is still reduced due to submergence.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Tailwater settings simulate how downstream conditions influence flow through the structure.
+Use these controls when submergence or flow reversal is expected due to backwater conditions,
+particularly in urban or complex drainage systems.</p>
+</div>
+</section>
+<section id="simple-storm-drain">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Simple Storm Drain</a><a class="headerlink" href="#simple-storm-drain" title="Link to this heading"></a></h3>
+<img alt="../../../../_images/hydr008.png" src="../../../../_images/hydr008.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Use this option sparingly. The hierarchy of flow through this system is not applied appropriately for use on more than 2 or 3 inlets.</p>
+</div>
+<p><strong>Storm Drain Capacity</strong></p>
+<ul class="simple">
+<li><p>This tool provides a simplified method for linking multiple inlets to a single outlet using a maximum discharge threshold.</p></li>
+<li><p>Only compatible with rating table structures.</p></li>
+<li><p>Not intended to model full pipe networks. It is useful when detailed storm drain routing is unavailable or unnecessary.</p></li>
+<li><p>The capacity value (cfs or cms) sets the maximum allowable flow. If inflow exceeds this value, excess water will pond at the inlet(s).</p></li>
+</ul>
+</section>
+<section id="structure-parameters-ii">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Structure Parameters II</a><a class="headerlink" href="#structure-parameters-ii" title="Link to this heading"></a></h3>
+<img alt="../../../../_images/hydr009.png" src="../../../../_images/hydr009.png" />
+<p>These parameters are used when defining culvert or conduit characteristics for hydraulic rating calculations:</p>
+<ul>
+<li><p><strong>Reference Elevation for Headwater</strong>
+Specifies the minimum upstream water elevation required to initiate flow through the structure.
+Flow will not occur until the water level reaches this elevation.</p></li>
+<li><p><strong>Culvert or Conduit Length</strong></p>
+<p>If the structure does not use a long culvert or culvert equation, enter <strong>0.0</strong> for length and diameter.</p>
+<p><strong>Culvert Equation</strong></p>
+<p>Defines the total length of the culvert (ft or m). Apply this length when using the <strong>culvert equation</strong> method.</p>
+<p><strong>Long Culvert</strong></p>
+<blockquote>
+<div><p>If the structure length exceeds 500 ft (150 m), it is considered a <em>long culvert</em>. In this case:</p>
+<ul class="simple">
+<li><p>A <strong>rating table</strong> must be used.</p></li>
+<li><p>The <strong>flow area</strong> must be defined (using <cite>ATABLE</cite> or related variables).</p></li>
+<li><p>Long culverts simulate <strong>storage</strong> and <strong>travel time</strong>, unlike other structures that convey flow instantaneously.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Circular Diameter or Box Culvert Height</strong></p>
+<p>If the structure does not use a long culvert or culvert equation, enter <strong>0.0</strong> for both length and diameter.</p>
+<p>Defines the internal size of the culvert (ft or m).</p>
+<p><strong>Culvert Equation</strong></p>
+<ul class="simple">
+<li><p>For <strong>circular culverts</strong>, enter the <strong>internal diameter</strong>.</p></li>
+<li><p>For <strong>box culverts</strong>, enter the <strong>internal height</strong>.</p></li>
+</ul>
+<p><strong>Long Culvert</strong></p>
+<ul class="simple">
+<li><p>Use <strong>diameter only</strong> for flow area calculations.</p></li>
+<li><p>Must be paired with <strong>culvert length</strong> and <strong>area table</strong>.</p></li>
+<li><p>Only compatible with <strong>rating table</strong> structures.</p></li>
+</ul>
+</section>
+</section>
+<section id="table-editor-and-plot">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Table Editor and Plot</a><a class="headerlink" href="#table-editor-and-plot" title="Link to this heading"></a></h2>
+<img alt="../../../../_images/hydr010.png" src="../../../../_images/hydr010.png" />
+<p>The Table Editor and Plot section defines the rating relationships or hydraulic parameters associated with the selected structure type. Each configuration corresponds to variables in the <cite>HYSTRUC.DAT</cite> input file.</p>
+<p><strong>Rating Curve Table Editor</strong></p>
+<img alt="../../../../_images/hydr011.png" src="../../../../_images/hydr011.png" />
+<p>The Rating Curve Table Editor is used to define the structure’s flow behavior using headwater-dependent equations. Each column corresponds to a variable in the <cite>HYSTRUC.DAT</cite> file. These parameters are described in detail in the Data Input Manual and are used in combinations based on the selected structure type.</p>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Rating Curve Table Columns</span><a class="headerlink" href="#id3" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 20.0%" />
+<col style="width: 80.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>HDEPEXC</p></td>
+<td><p>Maximum headwater depth valid for the rating curve.</p></td>
+</tr>
+<tr class="row-odd"><td><p>COEFQ, EXPQ</p></td>
+<td><p>Discharge equation: Q = COEFQ * depth^EXPQ</p></td>
+</tr>
+<tr class="row-even"><td><p>COEFA, EXPA</p></td>
+<td><p>Area equation for long culverts: A = COEFA * depth^EXPA</p></td>
+</tr>
+<tr class="row-odd"><td><p>REPDEP</p></td>
+<td><p>Depth at which to switch to a replacement curve.</p></td>
+</tr>
+<tr class="row-even"><td><p>RQCOEF, RQEXP</p></td>
+<td><p>Discharge equation for replacement curve.</p></td>
+</tr>
+<tr class="row-odd"><td><p>RACOEF, RAEXP</p></td>
+<td><p>Area equation for replacement curve (long culverts only).</p></td>
+</tr>
+</tbody>
+</table>
+<p>See the <a class="reference internal" href="../../../../flo-2d_pro/Data%20Input%20Manual.html#data-input-manual"><span class="std std-ref">HYSTRUC.DAT</span></a> section of the Data Input Manual for complete parameter descriptions and valid input ranges.</p>
+<p><strong>Rating Table</strong></p>
+<img alt="../../../../_images/hydr013.png" src="../../../../_images/hydr013.png" />
+<p>The rating table method defines flow through the structure using headwater depth (<cite>HDEPTH</cite>) and corresponding discharge (<cite>QTABLE</cite>).
+FLO-2D applies linear interpolation between rows to estimate the flow rate for any given depth during the simulation.</p>
+<ul class="simple">
+<li><p><cite>HDEPTH</cite> – Headwater depth above the structure reference elevation (ft or m).</p></li>
+<li><p><cite>QTABLE</cite> – Discharge value associated with each headwater depth (cfs or cms).</p></li>
+<li><p><cite>ATABLE</cite> – (Optional) Cross-sectional flow area vs depth (ft<sup>2</sup> or m<sup>2</sup>) used in volume routing for long culverts. Enter <strong>0.0</strong> if not applicable.</p></li>
+</ul>
+<p>The adjacent plot updates automatically and displays the rating curve graphically as depth vs. discharge.
+Ensure the first entry begins with <cite>HDEPTH = 0.0</cite> and <cite>QTABLE = 0.0</cite> to allow proper interpolation between the first two rows.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This method is commonly used for culverts, weirs, and other structures where detailed hydraulic calculations have already been performed externally or measured in the field.</p>
+</div>
+<p><strong>Culvert Equation</strong></p>
+<img alt="../../../../_images/hydr014.png" src="../../../../_images/hydr014.png" />
+<p>The culvert equation method computes flow using geometric and frictional parameters defined by the U.S. Department of Transportation equations. This table allows input of the following:</p>
+<ul class="simple">
+<li><p><cite>TYPEC</cite> – Culvert shape: 1 = box, 2 = pipe</p></li>
+<li><p><cite>TYPEEN</cite> – Entrance configuration (1–3 based on shape)</p></li>
+<li><p><cite>CULVERTN</cite> – Manning’s n-value for internal culvert roughness</p></li>
+<li><p><cite>KE</cite> – Entrance loss coefficient</p></li>
+<li><p><cite>CUBASE</cite> – Width of the box culvert or set to 0 for circular culverts</p></li>
+<li><p><cite>MULTBARRELS</cite> – Number of identical culvert barrels or cells</p></li>
+</ul>
+<p>These parameters are used to estimate flow under both inlet and outlet control conditions.
+For additional guidance on selecting values and entrance types, refer to the <a class="reference internal" href="#culvert-equation-data"><span class="std std-ref">Culvert Equation Data</span></a> section.</p>
+<p><strong>Bridge Routine</strong></p>
+<img alt="../../../../_images/hydr015.png" src="../../../../_images/hydr015.png" />
+<p>The bridge routine provides a detailed method for modeling flow through bridge openings using upstream and downstream cross sections and coefficient-based flow equations derived from U.S. Geological Survey (USGS) research.</p>
+<p>This configuration allows input of:</p>
+<p>This table defines the upstream and downstream cross sections used in the bridge routine. Cross section geometry is entered as station-elevation points along the bridge profile:</p>
+<ul class="simple">
+<li><p><cite>XUP</cite> – Station of each cross section point.</p></li>
+<li><p><cite>YUP</cite> – Elevation of the corresponding upstream cross section.</p></li>
+<li><p><cite>YB</cite> – Elevation of the corresponding downstream point at the same station.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For a complete example showing how to use this table along with the bridge coefficients and geometry fields, refer to the <a class="reference internal" href="#bridge-example"><span class="std std-ref">Bridge Example</span></a> in the Examples section.</p>
+</div>
+</section>
+<section id="culvert-equation-data">
+<span id="id2"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink">Culvert Equation Data</a><a class="headerlink" href="#culvert-equation-data" title="Link to this heading"></a></h2>
+<p>Culvert equations define flow through a culvert based on geometric and hydraulic properties. This information is entered in the <strong>Structures Editor</strong> and the <strong>FLO-2D Table Editor</strong>, as shown below.</p>
+<img alt="Structures Editor Interface" src="../../../../_images/hydr003.png" />
+<img alt="FLO-2D Culvert Table Editor" src="../../../../_images/hydr002.png" />
+<section id="structures-editor-fields">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Structures Editor Fields</a><a class="headerlink" href="#structures-editor-fields" title="Link to this heading"></a></h3>
+<p>The following fields are available in the <strong>Structures Editor</strong>:</p>
+<ul class="simple">
+<li><p><strong>Structure</strong> – Name of the culvert structure (e.g., CULV_122)</p></li>
+<li><p><strong>Type</strong> – Designation of the culvert as <em>Floodplain</em> or <em>Channel</em></p></li>
+<li><p><strong>Rating</strong> – Select <em>Culvert Equation</em> or import from a rating table</p></li>
+<li><p><strong>Tailwater Control</strong> – Choose how downstream water levels are handled</p></li>
+<li><p><strong>Reference Elevation</strong> – Elevation for the inlet headwater (ft)</p></li>
+<li><p><strong>Culvert Length</strong> – Total length of the culvert barrel (ft)</p></li>
+<li><p><strong>Culvert Diameter or Box Height</strong> – Inside diameter for pipes or height for box culverts (ft)</p></li>
+</ul>
+</section>
+<section id="culvert-geometry-table">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Culvert Geometry Table</a><a class="headerlink" href="#culvert-geometry-table" title="Link to this heading"></a></h3>
+<p>The <strong>FLO-2D Table Editor</strong> stores additional culvert equation variables:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>TYPEC</p></th>
+<th class="head"><p>TYPEEN</p></th>
+<th class="head"><p>CULVERTN</p></th>
+<th class="head"><p>KE</p></th>
+<th class="head"><p>CUBASE</p></th>
+<th class="head"><p>MULTBARRELS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1.0</p></td>
+<td><p>1.0</p></td>
+<td><p>0.0180</p></td>
+<td><p>0.4</p></td>
+<td><p>8.0</p></td>
+<td><p>1.0</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Field Descriptions:</strong></p>
+<ul class="simple">
+<li><p><strong>TYPEC</strong> – Culvert shape: <cite>1</cite> = box, <cite>2</cite> = pipe</p></li>
+<li><p><strong>TYPEEN</strong> – Entrance type (see below)</p></li>
+<li><p><strong>CULVERTN</strong> – Manning’s n value for the culvert</p></li>
+<li><p><strong>KE</strong> – Entrance loss coefficient</p></li>
+<li><p><strong>CUBASE</strong> – Culvert width (for box) or diameter (for pipe)</p></li>
+<li><p><strong>MULTBARRELS</strong> – Number of barrels (1.0 for single-barrel)</p></li>
+</ul>
+</section>
+<section id="culvert-type-switch">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">Culvert Type Switch</a><a class="headerlink" href="#culvert-type-switch" title="Link to this heading"></a></h3>
+<p>The culvert shape is defined using the <cite>TYPEC(I)</cite> variable:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = Box culvert</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = Pipe culvert</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Box culverts are defined by height and width. Pipe culverts are defined by circular diameter.</p>
+</div>
+</section>
+<section id="entrance-type-codes">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink">Entrance Type Codes</a><a class="headerlink" href="#entrance-type-codes" title="Link to this heading"></a></h3>
+<p><strong>Box Entrance Types (TYPEEN)</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> – Wingwall flare 30° to 75°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> – Wingwall flare 90° or 15°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> – Wingwall flare 0°</p></li>
+</ul>
+<p><strong>Pipe Entrance Types (TYPEEN)</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> – Square edge with headwall</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> – Socket end with headwall</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> – Socket end projecting</p></li>
+</ul>
+</section>
+<section id="entrance-loss-coefficients">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink">Entrance Loss Coefficients</a><a class="headerlink" href="#entrance-loss-coefficients" title="Link to this heading"></a></h3>
+<p>The entrance head loss is calculated using the following equation:</p>
+<div class="math notranslate nohighlight">
+\[H_e = K_e \left( \frac{v^2}{2g} \right)\]</div>
+<dl class="simple">
+<dt>Where:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">H_e</span></code> is entrance head loss (ft or m)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">K_e</span></code> is the entrance loss coefficient</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code> is velocity in the culvert barrel (ft/s or m/s)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">g</span></code> is gravitational acceleration (32.2 ft/s² or 9.81 m/s²)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="entrance-loss-coefficient-table-hds-5">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Entrance Loss Coefficient Table (HDS-5)</a><a class="headerlink" href="#entrance-loss-coefficient-table-hds-5" title="Link to this heading"></a></h3>
+<p><strong>Pipe, Concrete</strong></p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Entrance Loss Coefficients (HDS-5 – Third Edition)</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 67.0%" />
+<col style="width: 33.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Type of Structure and Design of Entrance</p></th>
+<th class="head"><p>K<sub>e</sub></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Projecting from fill, socket end (groove-end)</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Projecting from fill, square cut end</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Headwall or headwall and wingwalls</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Socket end of pipe (groove-end)</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Square-edge</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Rounded (radius = D/12)</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>Mitered to conform to fill slope</p></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>End-section conforming to fill slope</p></td>
+<td><p>0.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Beveled edges, 33.7° or 45° bevels</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>Side- or slope-tapered inlet</p></td>
+<td><p>0.2</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These values are based on the <em>Hydraulic Design of Highway Culverts – HDS-5 – Third Edition</em> and used in inlet control flow calculations.</p>
+</div>
+</section>
+</section>
+<section id="bridge-data">
+<span id="bridge-example"></span><h2><a class="toc-backref" href="#id22" role="doc-backlink">Bridge Data</a><a class="headerlink" href="#bridge-data" title="Link to this heading"></a></h2>
 <p>Bridge parameters can be defined for a structure.</p>
 <img alt="../../../../_images/Hydrau020.png" src="../../../../_images/Hydrau020.png" />
 <p>The USGS bridge tables are used to define the flow though a bridge with bridge geometry and discharge coefficients.</p>
@@ -278,26 +559,184 @@ write the data to the schematic layers.</p></li>
 </div>
 <img alt="../../../../_images/Hydrau021.png" src="../../../../_images/Hydrau021.png" />
 </section>
-<section id="import-rating-tables">
-<h2>Import Rating Tables<a class="headerlink" href="#import-rating-tables" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Click the
-Import Rating Tables button.</p></li>
-<li><p>Select all of the
-rating table files and open them.</p></li>
-<li><p>The files must
-have the same name as the structure.</p></li>
-<li><p>The rating table data is
-Depth (ft or m) and Discharge (cfs or cms).</p></li>
-<li><p>The columns
-can be space or tab delimited.</p></li>
-<li><p>Do not put
-a header in the rating table data file.</p></li>
-</ol>
-<img alt="../../../../_images/Hydrau022.png" src="../../../../_images/Hydrau022.png" />
+<section id="example-hydraulic-structures">
+<h2><a class="toc-backref" href="#id23" role="doc-backlink">Example Hydraulic Structures</a><a class="headerlink" href="#example-hydraulic-structures" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These examples show the final configuration only.  For step by step instructions see the <a class="reference internal" href="../../../../tutorials/Self-Help-Kit-Gila/8-Hydraulic.html#structure-example"><span class="std std-ref">Self Help Tutorials</span></a></p>
+</div>
+<section id="floodplain-to-floodplain-structure">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">Floodplain to Floodplain Structure</a><a class="headerlink" href="#floodplain-to-floodplain-structure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Floodplain to Floodplain</p></li>
+<li><p>Rating Table</p></li>
+</ul>
+<p>This example will model a culvert system between two floodplain nodes.</p>
+<img alt="../../../../_images/Hydrau008.png" src="../../../../_images/Hydrau008.png" />
+<p>The floodplain structure uses the grid element elevation as it’s inlet and outlet invert elevations.
+In this case the inlet invert is 177.24 ft and the outlet invert is 174.13 ft.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because culverts have a headwall, the grid elevation may need an adjustment down to the invert.  The advanced
+culvert tutorial in the Self Help Kit shows how to make that elevation correction.  <a class="reference internal" href="../../../../tutorials/Self-Help-Kit-Gila/8-Hydraulic.html#correct-elevation"><span class="std std-ref">Self Help Tutorials</span></a></p>
+</div>
+<img alt="../../../../_images/Hydrau010.png" src="../../../../_images/Hydrau010.png" />
+<ul class="simple">
+<li><p>This structure is a floodplain to floodplain culvert that uses a rating table.</p></li>
+<li><p>It has a headwater control so the Tailwater switch is set to “0” or No tailwater effect.</p></li>
+<li><p>It does not have a reference elevation for headwater so the flow starts at the invert elevation.</p></li>
+<li><p>It’s not considered a long culvert so the length and diameter are both “0.00”.</p></li>
+</ul>
+<img alt="../../../../_images/Hydrau012.png" src="../../../../_images/Hydrau012.png" />
+<p>The rating table is a headwater control rating table.</p>
+<img alt="../../../../_images/Hydrau013.png" src="../../../../_images/Hydrau013.png" />
 </section>
-<section id="culvert-equation">
-<h2>Culvert Equation<a class="headerlink" href="#culvert-equation" title="Link to this heading"></a></h2>
+<section id="channel-to-channel-structure">
+<h3><a class="toc-backref" href="#id25" role="doc-backlink">Channel to Channel Structure</a><a class="headerlink" href="#channel-to-channel-structure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Channel to Channel</p></li>
+<li><p>Generalized Culvert Equation</p></li>
+</ul>
+<p>This structure will simulate discharge through a box culvert.
+This example has a box culvert that is longer than the grid element.
+The channel segments are split up to allow for the width of the roadway.</p>
+<img alt="../../../../_images/hydex007.png" src="../../../../_images/hydex007.png" />
+<p>When setting up a channel with a culvert, it is important to set the cross sections so they can
+represent the expansion and contraction of the channel leading up to and away from the channel.</p>
+<img alt="../../../../_images/hydex006.png" src="../../../../_images/hydex006.png" />
+<ul class="simple">
+<li><p>This structure is a channel to channel culvert that uses a culvert equation.</p></li>
+<li><p>It has a headwater control so the Tailwater switch is set to “0” or No tailwater effect.</p></li>
+<li><p>It does not have a reference elevation for headwater so the flow starts at the upstream channel invert elevation.</p></li>
+<li><p>It is a culvert equation so the culvert length is 90 ft and the box height is 8 ft.</p></li>
+</ul>
+<img alt="../../../../_images/Hydrau002.png" src="../../../../_images/Hydrau002.png" />
+<p>The remaining culvert parameters are defined in the Table Editor.</p>
+<img alt="../../../../_images/Hydrau006.png" src="../../../../_images/Hydrau006.png" />
+<ul class="simple">
+<li><p><strong>TYPEC</strong> =  1 (box)</p></li>
+<li><p><strong>TYPEEN</strong> = 1 (wingwall flare)</p></li>
+<li><p><strong>CULVERTN</strong> = 0.018</p></li>
+<li><p><strong>KE</strong> 0.4 (wingwall and square edge)</p></li>
+<li><p><strong>CUBASE</strong> = 20 ft (width)</p></li>
+<li><p><strong>MULTBARRELS</strong> = 3 (multi-barrel)</p></li>
+</ul>
+<p><strong>Culvert Type Switch</strong></p>
+<p>The culvert shape is defined using the <cite>TYPEC(I)</cite> variable:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = Box culvert</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = Pipe culvert</p></li>
+</ul>
+<p><strong>Box Entrance Types (TYPEEN)</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> – Wingwall flare 30° to 75°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> – Wingwall flare 90° or 15°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> – Wingwall flare 0°</p></li>
+</ul>
+<p><strong>Box Losses</strong></p>
+<img alt="../../../../_images/hydex005.png" src="../../../../_images/hydex005.png" />
+</section>
+<section id="floodplain-to-channel-structure">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Floodplain to Channel Structure</a><a class="headerlink" href="#floodplain-to-channel-structure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Floodplain to Channel</p></li>
+<li><p>Culvert equation</p></li>
+</ul>
+<p>This example shows a culvert that connects a basin to a channel laterally.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The structure always connects to left bank of a channel regardless of which bank the structure is positioned on.
+This is because the structure connects to the cross section and the reference point is always the left bank grid element number.</p>
+</div>
+<img alt="../../../../_images/Hydrau014.png" src="../../../../_images/Hydrau014.png" />
+<ul class="simple">
+<li><p>The culvert is assigned to the channel cross section.</p></li>
+<li><p>That is why the feature must be applied to a left bank channel node.</p></li>
+</ul>
+<img alt="../../../../_images/Hydrau015.png" src="../../../../_images/Hydrau015.png" />
+<ul class="simple">
+<li><p>The culvert length is 118ft.</p></li>
+</ul>
+<img alt="../../../../_images/Hydrau016.png" src="../../../../_images/Hydrau016.png" />
+<ul class="simple">
+<li><p>This is a pedestrian crossing so the culvert height must be at least 8 ft.</p></li>
+<li><p>The width of the structure is approximately 12 ft.</p></li>
+<li><p>There are 30-degree wingwalls.</p></li>
+</ul>
+<img alt="../../../../_images/Hydrau017.png" src="../../../../_images/Hydrau017.png" />
+<ul class="simple">
+<li><p>The stage of the water in the channel will result in a tailwater control.</p></li>
+<li><p>The tailwater switch should be set to Reduced Discharge and upstream flow allowed.</p></li>
+</ul>
+<img alt="../../../../_images/Hydrau018.png" src="../../../../_images/Hydrau018.png" />
+<p>The remaining culvert parameters are defined in the Table Editor.</p>
+<img alt="../../../../_images/hydex004.png" src="../../../../_images/hydex004.png" />
+<ul class="simple">
+<li><p><strong>TYPEC</strong> =  1 (box)</p></li>
+<li><p><strong>TYPEEN</strong> = 1 (wingwall flare)</p></li>
+<li><p><strong>CULVERTN</strong> = 0.018</p></li>
+<li><p><strong>KE</strong> 0.4 (wingwall and square edge)</p></li>
+<li><p><strong>CUBASE</strong> = 12 ft (width)</p></li>
+<li><p><strong>MULTBARRELS</strong> = 1 (single-barrel)</p></li>
+</ul>
+<p><strong>Culvert Type Switch</strong></p>
+<p>The culvert shape is defined using the <cite>TYPEC(I)</cite> variable:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = Box culvert</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = Pipe culvert</p></li>
+</ul>
+<p><strong>Box Entrance Types (TYPEEN)</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> – Wingwall flare 30° to 75°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> – Wingwall flare 90° or 15°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> – Wingwall flare 0°</p></li>
+</ul>
+<p><strong>Box Losses</strong></p>
+<img alt="../../../../_images/hydex005.png" src="../../../../_images/hydex005.png" />
+</section>
+<section id="channel-to-floodplain-structure">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Channel to Floodplain Structure</a><a class="headerlink" href="#channel-to-floodplain-structure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Channel to Floodplain</p></li>
+<li><p>Culvert equation</p></li>
+</ul>
+<p>This example has a channel to floodplain box culvert on the downstream side.
+The example will not outline the the floodplain to channel circular culvert on the upstream side.</p>
+<img alt="../../../../_images/hydex001.png" src="../../../../_images/hydex001.png" />
+<p>The channel to floodplain culvert is a box culvert with a sedimentation weir on the upstream side.</p>
+<img alt="../../../../_images/hydex003.png" src="../../../../_images/hydex003.png" />
+<ul class="simple">
+<li><p>This structure is a channel to floodplain culvert that uses a culvert equation.</p></li>
+<li><p>It has a headwater control so the tailwater switch is set to “0” or No tailwater effect.</p></li>
+<li><p>It has a sedimentation weir so the reference elevation for headwater is 1396.63.</p></li>
+<li><p>It needs a culvert length 100.00 ft and a culvert height 5.00 ft because it uses the culvert equation.</p></li>
+</ul>
+<img alt="../../../../_images/hydex002.png" src="../../../../_images/hydex002.png" />
+<p>The remaining culvert parameters are defined in the Table Editor.</p>
+<img alt="../../../../_images/hydex004.png" src="../../../../_images/hydex004.png" />
+<ul class="simple">
+<li><p><strong>TYPEC</strong> =  1 (box)</p></li>
+<li><p><strong>TYPEEN</strong> = 1 (wingwall flare)</p></li>
+<li><p><strong>CULVERTN</strong> = 0.018</p></li>
+<li><p><strong>KE</strong> 0.4 (wingwall and square edge)</p></li>
+<li><p><strong>CUBASE</strong> = 8 ft (width)</p></li>
+<li><p><strong>MULTBARRELS</strong> = 1 (single-barrel)</p></li>
+</ul>
+<p><strong>Culvert Type Switch</strong></p>
+<p>The culvert shape is defined using the <cite>TYPEC(I)</cite> variable:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> = Box culvert</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> = Pipe culvert</p></li>
+</ul>
+<p><strong>Box Entrance Types (TYPEEN)</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">1</span></code> – Wingwall flare 30° to 75°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2</span></code> – Wingwall flare 90° or 15°</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">3</span></code> – Wingwall flare 0°</p></li>
+</ul>
+<p><strong>Box Losses</strong></p>
+<img alt="../../../../_images/hydex005.png" src="../../../../_images/hydex005.png" />
+</section>
 </section>
 </section>
 

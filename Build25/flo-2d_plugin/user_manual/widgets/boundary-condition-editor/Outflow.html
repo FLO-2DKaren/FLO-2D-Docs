@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Outflow Editor &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>Outflow Boundary Editor &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/custom.css?v=67a5d8e2" />
@@ -98,7 +98,7 @@
           <li class="breadcrumb-item"><a href="../../index.html">FLO-2D Gila for QGIS: User Manual</a></li>
           <li class="breadcrumb-item"><a href="../index.html">Widgets</a></li>
           <li class="breadcrumb-item"><a href="index.html">Boundary Condition Editor</a></li>
-      <li class="breadcrumb-item active">Outflow Editor</li>
+      <li class="breadcrumb-item active">Outflow Boundary Editor</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../../../_sources/flo-2d_plugin/user_manual/widgets/boundary-condition-editor/Outflow.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -108,53 +108,45 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="outflow-editor">
-<span id="id1"></span><h1>Outflow Editor<a class="headerlink" href="#outflow-editor" title="Link to this heading"></a></h1>
-<p>Boundary outflow conditions include:</p>
-<ul class="simple">
-<li><p>Normal Depth Control</p></li>
-<li><p>Time Stage Control</p></li>
-<li><p>Discharge Stage Control</p></li>
-<li><p>Multiple Domain Exchange</p></li>
-</ul>
+  <section id="outflow-boundary-editor">
+<span id="outflow-editor"></span><h1>Outflow Boundary Editor<a class="headerlink" href="#outflow-boundary-editor" title="Link to this heading"></a></h1>
+<p>These conditions define how the channel or floodplain discharge enters or leaves the FLO-2D model domain.</p>
+<img alt="../../../../_images/newbc003.png" src="../../../../_images/newbc003.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Get a <a href="https://flo-2d.com/product/boundary-conditions/" target="_blank" rel="noopener">BC Training Package</a> to learn how to correctly define boundaries for FLO-2D projects.</p>
 </div>
-<p>These conditions define how the channel or floodplain discharge enters or leaves the FLO-2D model domain.</p>
-<img alt="../../../../_images/newbc003.png" src="../../../../_images/newbc003.png" />
 <nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#normal" id="id2">Normal</a></p>
+<li><p><a class="reference internal" href="#normal-depth-boundary" id="id1">Normal Depth Boundary</a></p>
 <ul>
-<li><p><a class="reference internal" href="#outflow-floodplain" id="id3">Outflow Floodplain</a></p></li>
-<li><p><a class="reference internal" href="#outflow-channel" id="id4">Outflow Channel</a></p></li>
+<li><p><a class="reference internal" href="#outflow-floodplain" id="id2">Outflow Floodplain</a></p></li>
+<li><p><a class="reference internal" href="#outflow-channel" id="id3">Outflow Channel</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#time-stage-control" id="id5">Time Stage Control</a></p>
+<li><p><a class="reference internal" href="#time-stage-boundary" id="id4">Time-Stage Boundary</a></p>
 <ul>
-<li><p><a class="reference internal" href="#outflow-with-time-stage-hydrograph-for-floodplain" id="id6">Outflow with Time Stage Hydrograph for Floodplain</a></p></li>
-<li><p><a class="reference internal" href="#outflow-with-time-stage-hydrograph-for-channel" id="id7">Outflow with Time  Stage Hydrograph for Channel</a></p></li>
-<li><p><a class="reference internal" href="#time-stage-for-floodplain-and-free-floodplain-and-channel" id="id8">Time-Stage for Floodplain and Free Floodplain and Channel</a></p></li>
-<li><p><a class="reference internal" href="#time-stage-for-channel-and-free-floodplain-and-channel" id="id9">Time-Stage for Channel and Free Floodplain and Channel</a></p></li>
+<li><p><a class="reference internal" href="#floodplain-time-stage-table" id="id5">Floodplain Time-Stage Table</a></p></li>
+<li><p><a class="reference internal" href="#channel-time-stage-table" id="id6">Channel Time-Stage Table</a></p></li>
+<li><p><a class="reference internal" href="#time-stage-for-combined-floodplain-and-channel" id="id7">Time-Stage for Combined Floodplain and Channel</a></p></li>
+<li><p><a class="reference internal" href="#time-stage-for-floodplain-and-channel-free" id="id8">Time-Stage for Floodplain and Channel (Free)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#discharge-stage-control" id="id10">Discharge Stage Control</a></p>
+<li><p><a class="reference internal" href="#stage-discharge-boundary" id="id9">Stage-Discharge Boundary</a></p>
 <ul>
-<li><p><a class="reference internal" href="#channel-stage-discharge-parameters" id="id11">Channel Stage-Discharge Parameters</a></p></li>
-<li><p><a class="reference internal" href="#channel-stage-discharge-q-h-table" id="id12">Channel Stage-Discharge (Q(h) table)</a></p></li>
+<li><p><a class="reference internal" href="#stage-discharge-channel" id="id10">Stage-Discharge Channel</a></p></li>
+<li><p><a class="reference internal" href="#stage-discharge-channel-q-h-table" id="id11">Stage-Discharge Channel (Q(h) table)</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#multiple-domain-system" id="id13">Multiple Domain System</a></p></li>
-<li><p><a class="reference internal" href="#troubleshooting" id="id14">Troubleshooting</a></p></li>
+<li><p><a class="reference internal" href="#multiple-domain-boundary" id="id12">Multiple Domain Boundary</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting-outflow-boundaries" id="id13">Troubleshooting Outflow Boundaries</a></p></li>
 </ul>
 </nav>
-<section id="normal">
-<h2><a class="toc-backref" href="#id2" role="doc-backlink">Normal</a><a class="headerlink" href="#normal" title="Link to this heading"></a></h2>
+<section id="normal-depth-boundary">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Normal Depth Boundary</a><a class="headerlink" href="#normal-depth-boundary" title="Link to this heading"></a></h2>
 <section id="outflow-floodplain">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">Outflow Floodplain</a><a class="headerlink" href="#outflow-floodplain" title="Link to this heading"></a></h3>
-<p>Normal depth boundary</p>
+<h3><a class="toc-backref" href="#id2" role="doc-backlink">Outflow Floodplain</a><a class="headerlink" href="#outflow-floodplain" title="Link to this heading"></a></h3>
 <p>This is an outflow condition where the flow leaves the domain without effecting the upstream water surface elevation,
 select the outflow nodes along the downstream boundary or along the edge of a grid system.</p>
 <ol class="arabic simple">
@@ -202,7 +194,7 @@ the whole boundary grid cells are defined as normal depth.</p>
 </div>
 </section>
 <section id="outflow-channel">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">Outflow Channel</a><a class="headerlink" href="#outflow-channel" title="Link to this heading"></a></h3>
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Outflow Channel</a><a class="headerlink" href="#outflow-channel" title="Link to this heading"></a></h3>
 <p>For channel outflow at a normal depth condition, use the channel outflow node on the downstream boundary
 or channel segment terminus.</p>
 <ol class="arabic simple">
@@ -234,10 +226,10 @@ for the channel to 3. Floodplain and channel outflow (no hydrograph).</p></li>
 <img alt="../../../../_images/newbc034.png" src="../../../../_images/newbc034.png" />
 </section>
 </section>
-<section id="time-stage-control">
-<h2><a class="toc-backref" href="#id5" role="doc-backlink">Time Stage Control</a><a class="headerlink" href="#time-stage-control" title="Link to this heading"></a></h2>
-<section id="outflow-with-time-stage-hydrograph-for-floodplain">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">Outflow with Time Stage Hydrograph for Floodplain</a><a class="headerlink" href="#outflow-with-time-stage-hydrograph-for-floodplain" title="Link to this heading"></a></h3>
+<section id="time-stage-boundary">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Time-Stage Boundary</a><a class="headerlink" href="#time-stage-boundary" title="Link to this heading"></a></h2>
+<section id="floodplain-time-stage-table">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Floodplain Time-Stage Table</a><a class="headerlink" href="#floodplain-time-stage-table" title="Link to this heading"></a></h3>
 <p>To represent variable time-stage boundary conditions such as:</p>
 <ul class="simple">
 <li><p>Tides</p></li>
@@ -245,7 +237,7 @@ for the channel to 3. Floodplain and channel outflow (no hydrograph).</p></li>
 <li><p>Tsunamis</p></li>
 <li><p>Flooding from a large river</p></li>
 </ul>
-<p>The timestage relationship can be synchronized with rainfall and upstream watershed flooding.
+<p>The time-stage relationship can be synchronized with rainfall and upstream watershed flooding.
 Select the outflow nodes along the downstream boundary with a polygon.</p>
 <ol class="arabic simple">
 <li><p>Click
@@ -271,8 +263,8 @@ This water can fill the downstream area up to the stage.</p></li>
 </ol>
 <img alt="../../../../_images/newbc039.png" src="../../../../_images/newbc039.png" />
 </section>
-<section id="outflow-with-time-stage-hydrograph-for-channel">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">Outflow with Time  Stage Hydrograph for Channel</a><a class="headerlink" href="#outflow-with-time-stage-hydrograph-for-channel" title="Link to this heading"></a></h3>
+<section id="channel-time-stage-table">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Channel Time-Stage Table</a><a class="headerlink" href="#channel-time-stage-table" title="Link to this heading"></a></h3>
 <p>Like the time-stage condition for the floodplain select this option to represent ocean tide, storm surge,
 tsunamis, or flooding from a large river
 control in a channel terminus.
@@ -291,8 +283,8 @@ fill the Time Series table.</p></li>
 <img alt="../../../../_images/newbc040.png" src="../../../../_images/newbc040.png" />
 <img alt="../../../../_images/bounda017.png" src="../../../../_images/bounda017.png" />
 </section>
-<section id="time-stage-for-floodplain-and-free-floodplain-and-channel">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">Time-Stage for Floodplain and Free Floodplain and Channel</a><a class="headerlink" href="#time-stage-for-floodplain-and-free-floodplain-and-channel" title="Link to this heading"></a></h3>
+<section id="time-stage-for-combined-floodplain-and-channel">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">Time-Stage for Combined Floodplain and Channel</a><a class="headerlink" href="#time-stage-for-combined-floodplain-and-channel" title="Link to this heading"></a></h3>
 <p>Use this option to set the stage of a downstream elevation control.
 This node will allow water to collect on the boundary until it can exceed the stage at the boundary.
 It can be used for two purposes.</p>
@@ -304,8 +296,8 @@ same method described in the previous two sections.</p></li>
 </ol>
 <img alt="../../../../_images/newbc041.png" src="../../../../_images/newbc041.png" />
 </section>
-<section id="time-stage-for-channel-and-free-floodplain-and-channel">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">Time-Stage for Channel and Free Floodplain and Channel</a><a class="headerlink" href="#time-stage-for-channel-and-free-floodplain-and-channel" title="Link to this heading"></a></h3>
+<section id="time-stage-for-floodplain-and-channel-free">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Time-Stage for Floodplain and Channel (Free)</a><a class="headerlink" href="#time-stage-for-floodplain-and-channel-free" title="Link to this heading"></a></h3>
 <p>This option is the same as option 7 with the condition that the stage time table is assigned to the channel instead of the floodplain.</p>
 <ol class="arabic simple">
 <li><p>Set this up with
@@ -314,10 +306,10 @@ the same method described in the previous two sections.</p></li>
 <img alt="../../../../_images/newbc042.png" src="../../../../_images/newbc042.png" />
 </section>
 </section>
-<section id="discharge-stage-control">
-<h2><a class="toc-backref" href="#id10" role="doc-backlink">Discharge Stage Control</a><a class="headerlink" href="#discharge-stage-control" title="Link to this heading"></a></h2>
-<section id="channel-stage-discharge-parameters">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">Channel Stage-Discharge Parameters</a><a class="headerlink" href="#channel-stage-discharge-parameters" title="Link to this heading"></a></h3>
+<section id="stage-discharge-boundary">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Stage-Discharge Boundary</a><a class="headerlink" href="#stage-discharge-boundary" title="Link to this heading"></a></h2>
+<section id="stage-discharge-channel">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Stage-Discharge Channel</a><a class="headerlink" href="#stage-discharge-channel" title="Link to this heading"></a></h3>
 <p>This outflow option defines the discharge from a channel based on the stage using rating curve.
 Several rating curves can be assigned for multiple limiting depths.
 This system is used when there is a control or a gage at the channel with a known stage-discharge relationship.</p>
@@ -333,8 +325,8 @@ Q(h) parameters table.</p></li>
 <img alt="../../../../_images/newbc043.png" src="../../../../_images/newbc043.png" />
 <img alt="../../../../_images/newbc044.png" src="../../../../_images/newbc044.png" />
 </section>
-<section id="channel-stage-discharge-q-h-table">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">Channel Stage-Discharge (Q(h) table)</a><a class="headerlink" href="#channel-stage-discharge-q-h-table" title="Link to this heading"></a></h3>
+<section id="stage-discharge-channel-q-h-table">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Stage-Discharge Channel (Q(h) table)</a><a class="headerlink" href="#stage-discharge-channel-q-h-table" title="Link to this heading"></a></h3>
 <p>The final outflow option is used to define the downstream boundary with a stage-discharge table.</p>
 <ol class="arabic simple">
 <li><p>Select the stage-discharge
@@ -349,8 +341,8 @@ table.</p></li>
 <img alt="../../../../_images/newbc046.png" src="../../../../_images/newbc046.png" />
 </section>
 </section>
-<section id="multiple-domain-system">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink">Multiple Domain System</a><a class="headerlink" href="#multiple-domain-system" title="Link to this heading"></a></h2>
+<section id="multiple-domain-boundary">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Multiple Domain Boundary</a><a class="headerlink" href="#multiple-domain-boundary" title="Link to this heading"></a></h2>
 <p>Use this option with any floodplain boundary that will transfer flow between two domains.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -375,8 +367,8 @@ and set the boundary Outflow type conditions as Outflow with Hydrograph.</p></li
 </ol>
 <img alt="../../../../_images/newbc036.png" src="../../../../_images/newbc036.png" />
 </section>
-<section id="troubleshooting">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="troubleshooting-outflow-boundaries">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Troubleshooting Outflow Boundaries</a><a class="headerlink" href="#troubleshooting-outflow-boundaries" title="Link to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>The most common problems
 with creating outflow.dat data is caused by

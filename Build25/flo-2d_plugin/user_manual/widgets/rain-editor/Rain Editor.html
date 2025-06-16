@@ -167,6 +167,12 @@ series data set.</p></li>
 <h2><a class="toc-backref" href="#id3" role="doc-backlink">Moving Storm</a><a class="headerlink" href="#moving-storm" title="Link to this heading"></a></h2>
 <p>To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This moving storm method is not commonly used in FLO-2D simulations.
+It was replaced with the Real Time Spatially Variable Rainfall method, which allows for more flexibility and accuracy in modeling
+rainfall across a computational domain.</p>
+</div>
 <img alt="../../../../_images/rained006.png" src="../../../../_images/rained006.png" />
 </section>
 <section id="spatially-variable-rainfall-noaa-atlas-14">
@@ -204,7 +210,7 @@ consultants to improve accuracy.</p>
 <p>NEXRAD rainfall datasets, along with gage data, are available for download through NOAA’s NEXRAD Archive. These
 datasets can be imported into the modeling environment using the Real-Time Rainfall Calculator, which interpolates
 the rainfall data to the computational grid and generates the necessary input files.</p>
-<p><a href="https://www.ncei.noaa.gov/products/radar/next-generation-radar-nexrad" target="_blank" rel="noopener">NOAA NEXRAD Data Archive</a></p>
+<p><a href="https://www.ncei.noaa.gov/products/radar/next-generation-weather-radar" target="_blank" rel="noopener">NOAA NEXRAD Data Archive</a></p>
 <p>The calculator produces rainfall data in two formats:</p>
 <ul class="simple">
 <li><p>RAINCELL.DAT (text format for FLO-2D)</p></li>

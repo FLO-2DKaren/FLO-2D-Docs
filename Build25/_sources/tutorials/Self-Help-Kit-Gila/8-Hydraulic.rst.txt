@@ -1,3 +1,5 @@
+.. _structure_example:
+
 Hydraulic Structures - Culverts
 ==================================
 
@@ -27,6 +29,7 @@ Set-up Culvert Structures
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+.. _correct_elevation:
 
 Correct Elevation
 ---------------------------------

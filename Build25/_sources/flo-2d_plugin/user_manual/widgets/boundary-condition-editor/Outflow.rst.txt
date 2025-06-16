@@ -1,14 +1,11 @@
 .. _outflow_editor:
 
-Outflow Editor
+Outflow Boundary Editor
 ===============================
 
-Boundary outflow conditions include:
+These conditions define how the channel or floodplain discharge enters or leaves the FLO-2D model domain.
 
--  Normal Depth Control
--  Time Stage Control
--  Discharge Stage Control
--  Multiple Domain Exchange  
+.. image:: ../../img/Boundary-Condition-Editor/newbc003.png
 
 .. |bctraining| raw:: html
 
@@ -16,23 +13,16 @@ Boundary outflow conditions include:
 
 .. note:: Get a |bctraining| to learn how to correctly define boundaries for FLO-2D projects.
 
-These conditions define how the channel or floodplain discharge enters or leaves the FLO-2D model domain.
-
-.. image:: ../../img/Boundary-Condition-Editor/newbc003.png
-
 .. contents:: Contents
    :local: 
    :depth: 2
    :backlinks: entry
 
-Normal
-------------
+Normal Depth Boundary
+------------------------
 
 Outflow Floodplain
-____________________
-
-Normal depth boundary
-
+~~~~~~~~~~~~~~~~~~~~~~
 
 This is an outflow condition where the flow leaves the domain without effecting the upstream water surface elevation,
 select the outflow nodes along the downstream boundary or along the edge of a grid system.
@@ -89,7 +79,7 @@ select the outflow nodes along the downstream boundary or along the edge of a gr
     the whole boundary grid cells are defined as normal depth.
 
 Outflow Channel
-____________________
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 For channel outflow at a normal depth condition, use the channel outflow node on the downstream boundary
 or channel segment terminus.
@@ -119,12 +109,11 @@ or channel segment terminus.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc034.png
 
-Time Stage Control
-----------------------
+Time-Stage Boundary
+---------------------------------
 
-
-Outflow with Time Stage Hydrograph for Floodplain
-___________________________________________________________
+Floodplain Time-Stage Table
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To represent variable time-stage boundary conditions such as:
 
@@ -133,7 +122,7 @@ To represent variable time-stage boundary conditions such as:
 -  Tsunamis
 -  Flooding from a large river
 
-The timestage relationship can be synchronized with rainfall and upstream watershed flooding.
+The time-stage relationship can be synchronized with rainfall and upstream watershed flooding.
 Select the outflow nodes along the downstream boundary with a polygon.
 
 1. Click
@@ -162,8 +151,8 @@ Select the outflow nodes along the downstream boundary with a polygon.
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc039.png
 
-Outflow with Time  Stage Hydrograph for Channel
-_______________________________________________________
+Channel Time-Stage Table
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Like the time-stage condition for the floodplain select this option to represent ocean tide, storm surge,
 tsunamis, or flooding from a large river
@@ -188,8 +177,8 @@ The time stage relationship can be synchronized to rainfall and watershed floodi
 
 .. image:: ../../img/Boundary-Condition-Editor/bounda017.png
 
-Time-Stage for Floodplain and Free Floodplain and Channel
-_____________________________________________________________
+Time-Stage for Combined Floodplain and Channel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use this option to set the stage of a downstream elevation control.
 This node will allow water to collect on the boundary until it can exceed the stage at the boundary.
@@ -204,8 +193,8 @@ Set the elevation for matching the water surface elevation of an existing FEMA m
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc041.png
 
-Time-Stage for Channel and Free Floodplain and Channel
-______________________________________________________________
+Time-Stage for Floodplain and Channel (Free)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This option is the same as option 7 with the condition that the stage time table is assigned to the channel instead of the floodplain.
 
@@ -214,11 +203,11 @@ This option is the same as option 7 with the condition that the stage time table
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc042.png
 
-Discharge Stage Control
+Stage-Discharge Boundary
 ---------------------------
 
-Channel Stage-Discharge Parameters
-_______________________________________
+Stage-Discharge Channel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This outflow option defines the discharge from a channel based on the stage using rating curve.
 Several rating curves can be assigned for multiple limiting depths.
@@ -239,8 +228,8 @@ This system is used when there is a control or a gage at the channel with a know
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc044.png
 
-Channel Stage-Discharge (Q(h) table)
-___________________________________________
+Stage-Discharge Channel (Q(h) table)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The final outflow option is used to define the downstream boundary with a stage-discharge table.
 
@@ -259,7 +248,7 @@ The final outflow option is used to define the downstream boundary with a stage-
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc046.png
 
-Multiple Domain System
+Multiple Domain Boundary
 --------------------------
 
 Use this option with any floodplain boundary that will transfer flow between two domains.
@@ -292,8 +281,8 @@ Use this option with any floodplain boundary that will transfer flow between two
 
 .. image:: ../../img/Boundary-Condition-Editor/newbc036.png
 
-Troubleshooting
-----------------
+Troubleshooting Outflow Boundaries
+--------------------------------------
 
 1. The most common problems
    with creating outflow.dat data is caused by

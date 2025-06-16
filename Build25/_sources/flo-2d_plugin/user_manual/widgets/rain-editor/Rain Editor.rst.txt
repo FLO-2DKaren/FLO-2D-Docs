@@ -63,10 +63,14 @@ Moving Storm
 To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.
 
+.. note:: This moving storm method is not commonly used in FLO-2D simulations. 
+   It was replaced with the Real Time Spatially Variable Rainfall method, which allows for more flexibility and accuracy in modeling 
+   rainfall across a computational domain.
+
 .. image:: ../../img/Rain-Editor/rained006.png
    
 Spatially Variable Rainfall NOAA Atlas 14
-------------------------------------------
+---------------------------------------------
 
 Spatially variable rainfall can be modeled using depth reduction factors in the RAINFALL.DAT file. This file defines rainfall 
 values in either inches or millimeters, where each value represents the depth at a specific point (typically the centroid of a grid element) 
@@ -120,7 +124,7 @@ the rainfall data to the computational grid and generates the necessary input fi
 
 .. |nexrad| raw:: html
 
-   <a href="https://www.ncei.noaa.gov/products/radar/next-generation-radar-nexrad" target="_blank" rel="noopener">NOAA NEXRAD Data Archive</a>
+   <a href="https://www.ncei.noaa.gov/products/radar/next-generation-weather-radar" target="_blank" rel="noopener">NOAA NEXRAD Data Archive</a>
 
 The calculator produces rainfall data in two formats:
 
