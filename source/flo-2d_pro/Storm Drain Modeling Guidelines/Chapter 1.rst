@@ -847,7 +847,7 @@ critical depth and the normal flow depth for the conduit flow.
 The equation to calculate the head adjustment term for each timestep at each node is:
 
 .. math::
-    :label:
+   :label:
 
    H_{t + \mathrm{\Delta}t} = H_{t} + \frac{\mathrm{\Delta}Vol}{\left( A_{store} +
    \sum_{}^{}A_{s} \right)_{t + \mathrm{\Delta}t}}
