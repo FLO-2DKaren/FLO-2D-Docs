@@ -1305,11 +1305,20 @@ the side of the upstream node.
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-- When fully submerged the classical orifice equation is used: :math:`{Q_{w} = C}_{d}A\sqrt{2gh}`.
+- When fully submerged the classical orifice equation is used:
+
+.. math::
+    :label:
+
+    Q_{w} = C_{d}A\sqrt{2gH}
+
 
 - A partially submerged orifice applies the modified weir equation:
 
-  :math:`{Q_{w} = C}_{d}A\sqrt{2gDh}f^{1.5}`.
+.. math::
+   :label:
+
+   Q_{w} = C_{d}A\sqrt{2gDh}f^{1.5}
 
 - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the
   depth of water in the orifice.
