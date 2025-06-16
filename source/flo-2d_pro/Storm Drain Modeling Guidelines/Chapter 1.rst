@@ -799,8 +799,8 @@ The :math:`\mathrm{\Delta}Q` in each conduit corresponds to the different force 
 .. math::
    :label:
 
-   \mathrm{\Delta}Q_{losses} = \frac{\sum_{i}^{}{K_{i}\left| V_{i}
-   right|\mathrm{\Delta}t}}{2L}}
+   \mathrm{\Delta}Q_{losses} = \frac{\sum_{i}^{K_{i}\left| V_{i}
+   right|\mathrm{\Delta}t}}{2L}
 
 where:
 
