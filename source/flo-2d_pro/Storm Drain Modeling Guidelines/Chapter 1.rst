@@ -855,8 +855,11 @@ The equation to calculate the head adjustment term for each timestep at each nod
 where ∆Vol is the net volume flowing through the node over the timestep.
 The net volume is computed as:
 
-.. math:: \mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
-   \left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t\ \
+.. math::
+   :label:
+
+   \mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
+   \left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
