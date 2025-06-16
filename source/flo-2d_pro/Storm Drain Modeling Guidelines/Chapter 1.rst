@@ -702,47 +702,56 @@ the essential accuracy of the fully dynamic solution at sub-critical flow condit
 
 The friction slope component S\ :sub:`f` is based on Manning’s equation:
 
-.. math:: S_{f} = \frac{n^{2}V|V|}{k^{2}R^{\frac{4}{3}}}\ \ \ \
+.. math::
+   :label:
+
+   S_{f} = \frac{n^{2}V|V|}{k^{2}R^{\frac{4}{3}}}
 
 where:
 
-n = Manning roughness coefficient
+    n = Manning roughness coefficient
 
-V = average flow velocity (:math:`\frac{Q}{A}`)
+    V = average flow velocity (:math:`\frac{Q}{A}`)
 
-R = hydraulic radius
+    R = hydraulic radius
 
-k = 1.486 for English units or 1.0 for metric units
+    k = 1.486 for English units or 1.0 for metric units
 
 The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity
 head and it can be expressed as:
 
-.. math:: h_{L} = \frac{KV^{2}\ }{2gL}\ \
+.. math::
+   :label:
+
+   h_{L} = \frac{KV^{2}\ }{2gL}
 
 where:
 
-K = loss coefficient for each pipe
+    K = loss coefficient for each pipe
 
-V = velocity
+    V = velocity
 
-L = conduit length
+    L = conduit length
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
 To calculate the change in pressure head at each node that connects two or more conduits an additional
 equation is necessary (Figure 20):
 
-.. math:: \frac{\partial H}{\partial t} = \frac{\sum_{}^{}Q}{A_{store} + \sum_{}^{}{As}}\ \
+.. math::
+   :label:
+
+   \frac{\partial H}{\partial t} = \frac{\sum_{}^{}Q}{A_{store} + \sum_{}^{}{As}}
 
 where:
 
-H = flow depth (difference between the node head and the pipe invert elevation)
+    H = flow depth (difference between the node head and the pipe invert elevation)
 
-A\ :sub:`store` = node surface area
+    A\ :sub:`store` = node surface area
 
-:math:`\sum_{}^{}{As}` = surface area contributed by the conduits connected to the node.
+    :math:`\sum_{}^{}{As}` = surface area contributed by the conduits connected to the node.
 
-:math:`\sum_{}^{}Q` = net flow at Node J contributed by all connected conduits plus external inflows
+    :math:`\sum_{}^{}Q` = net flow at Node J contributed by all connected conduits plus external inflows
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter1/image25.png
 
@@ -761,22 +770,36 @@ The following discussion was sourced from the EPA SWMM documentation (Rossman et
 
 The flow equation solved for each conduit is given by:
 
-.. math:: Q_{t + \mathrm{\Delta}t} = \frac{Q_{t} + \mathrm{\Delta}Q_{gravity} +
-   \mathrm{\Delta}Q_{inertial}}{1 + \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \
+.. math::
+   :label:
+
+   Q_{t + \mathrm{\Delta}t} = \frac{Q_{t} + \mathrm{\Delta}Q_{gravity} +
+   \mathrm{\Delta}Q_{inertial}}{1 + \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
 The :math:`\mathrm{\Delta}Q` in each conduit corresponds to the different force terms expressed as:
 
-.. math:: \mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
-   \frac{\mathrm{\Delta}t}{L\ }\ \ \ \ \
+.. math::
+   :label:
 
-.. math:: \mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
+   \mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
+   \frac{\mathrm{\Delta}t}{L\ }
+
+.. math::
+   :label:
+
+   \mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
    \frac{+ {\overline{V}}^{2}\left( A_{2} - A_{1} \right)\mathrm{\Delta}t}{L}
 
-.. math:: \mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
-   \right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}\ \ \
+.. math::
+   :label:
 
-.. math:: \mathrm{\Delta}Q_{losses} = \frac{\sum_{i}^{}{K_{i}\left| V_{i}
-   right|\mathrm{\Delta}t}}{2L}\ \ \
+   \mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
+   \right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}
+
+.. math::
+   :label:
+
+   \Delta Q_{\text{losses}} = \frac{\sum_i K_i \left| V_i \right| \Delta t}{2L}
 
 where:
 
@@ -824,6 +847,7 @@ critical depth and the normal flow depth for the conduit flow.
 The equation to calculate the head adjustment term for each timestep at each node is:
 
 .. math::
+   :label:
 
    H_{t + \mathrm{\Delta}t} = H_{t} + \frac{\mathrm{\Delta}Vol}{\left( A_{store} +
    \sum_{}^{}A_{s} \right)_{t + \mathrm{\Delta}t}}
@@ -831,8 +855,11 @@ The equation to calculate the head adjustment term for each timestep at each nod
 where ∆Vol is the net volume flowing through the node over the timestep.
 The net volume is computed as:
 
-.. math:: \mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
-   \left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t\ \
+.. math::
+   :label:
+
+   \mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
+   \left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t
 
 The conduit surface area (A\ :sub:`store`) depends on the flow condition within the conduit as follows:
 
@@ -876,13 +903,19 @@ The solution algorithm involves the following steps:
    A relaxation factor Ω is used to combine the new flow estimate Q\ :sub:`new` with the previous
    estimate Q\ :sub:`last` to generate a new Q\ :sub:`new` according to the equation:
 
-   Q\ :sub:`new` = (1−Ω) Q\ :sub:`last` +Ω Q\ :sub:`new`
+.. math::
+   :label:
+
+   Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}
 
 4. The equation for :math:`H_{t + \mathrm{\Delta}t}`\ is solved again for heads using Q\ :sub:`new`.
    As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to
    produce an updated estimate for heads:
 
-   H\ :sub:`new` = (1−Ω) H\ :sub:`last` +Ω H\ :sub:`new`
+.. math::
+   :label:
+
+   H_{new} = (1−Ω) H_{last} +Ω H_{new}
 
 5. If H\ :sub:`new` is close enough to H\ :sub:`last` then the process stops with Q\ :sub:`new`
    and H\ :sub:`new` as the solution for time t + Δt.
@@ -925,8 +958,10 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
 - Flow continuity condition is enforced Min the form of a perturbation equation:
 
-.. math:: \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  =
-   \ 0\ \
+.. math::
+   :label:
+
+   \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = 0
 
 where:
 
@@ -934,16 +969,23 @@ where:
 
 Solving for :math:`\mathrm{\Delta}H`:
 
-.. math:: \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}\ \
+.. math::
+   :label:
+
+   \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}
 
 where:
 
-.. math:: \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
-   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \
+.. math::
+   :label:
+
+   \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
+   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
 :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
 :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
 node is positive.
+
 If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total
 node adjustment for the successive approximation scheme.
 
@@ -962,37 +1004,42 @@ The following equations (Johnson and Fred, 1984) are used:
 
 Weir Flow:
 
-   :math:`Q_{w} = CLH^{m}`
+.. math::
+   :label:
 
-   where:
+   Q_{w} = CLH^{m}
 
-:math:`Q_{w}` = weir discharge
+where:
 
-C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
+    :math:`Q_{w}` = weir discharge
 
-L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
+    C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
 
-H = FLO-2D grid element water depth that contains the inlet structure
+    L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
 
-m = 1.5 for a broad crested weir.
-This is hardcoded.
+    H = FLO-2D grid element water depth that contains the inlet structure
+
+    m = 1.5 for a broad crested weir. This is hardcoded.
 
 Orifice Flow:
 
-   :math:`Q_{o} = \ C_{d}A\sqrt{2gH}`
+.. math::
+   :label:
 
-   where:
+   Q_{o} = \ C_{d}A\sqrt{2gH}
 
-:math:`Q_{o}` = orifice flow rate at depth H
+where:
 
-C\ :sub:`d`  = discharge coefficient hardcoded to 0.67
+    :math:`Q_{o}` = orifice flow rate at depth H
 
-A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
-(h) fields in the SWMMFLO.DAT
+    C\ :sub:`d`  = discharge coefficient hardcoded to 0.67
 
-g = gravitational acceleration
+    A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
+    (h) fields in the SWMMFLO.DAT
 
-H = FLO-2D grid element water depth that contains the inlet structure
+    g = gravitational acceleration
+
+    H = FLO-2D grid element water depth that contains the inlet structure
 
 The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for
 a given timestep and the smaller of the two discharges is used in the surface water exchange to the
@@ -1258,28 +1305,37 @@ the side of the upstream node.
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:
 
-- When fully submerged the classical orifice equation is used: :math:`{Q_{w} = C}_{d}A\sqrt{2gh}`.
+- When fully submerged the classical orifice equation is used:
+
+.. math::
+    :label:
+
+    Q_{w} = C_{d}A\sqrt{2gH}
+
 
 - A partially submerged orifice applies the modified weir equation:
 
-  :math:`{Q_{w} = C}_{d}A\sqrt{2gDh}f^{1.5}`.
+.. math::
+   :label:
+
+   Q_{w} = C_{d}A\sqrt{2gDh}f^{1.5}
 
 - An orifice surface area contribution to the outlet is based on the equivalent pipe length and the
   depth of water in the orifice.
 
 where:
 
-A = orifice open area (may be an irregular shape)
+    A = orifice open area (may be an irregular shape)
 
-D = height of the full orifice opening
+    D = height of the full orifice opening
 
-h = hydraulic head on the orifice
+    h = hydraulic head on the orifice
 
-Cd = discharge coefficient hardcoded to 0.67
+    C\ :sub:`d` = discharge coefficient hardcoded to 0.67
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
-*f* = fraction of the orifice that is submerged
+    *f* = fraction of the orifice that is submerged
 
 The parameters of an orifice in the storm drain system are:
 
@@ -1313,20 +1369,23 @@ The weir calculations are based on the following criteria:
 
 - Weirs do not contribute any surface area to their end nodes.
 
-- The general weir equation :math:`Q = C\ L\ h^{m}\ ` is used to compute the discharge as a function
-  of head *h* across the weir when the weir is not
-  fully submerged.
+- The general weir equation;
+
+.. math::
+   :label:
+
+   Q = C\ L\ h^{m}
+
+is used to compute the discharge as a function of head *h* across the weir when the weir is not fully submerged.
 
 where:
 
-C = the weir coefficient
+    C = the weir coefficient
 
-L = the crest length
+    L = the crest length
 
-m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch
-, or trapezoidal.
-Typically, m = 1.5 for a lateral weir.
-This exponent is hardcoded in the FLO-2D storm drain model.
+    m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch
+    , or trapezoidal. Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.
 
 The parameters of an orifice in the storm drain system are:
 
