@@ -664,31 +664,37 @@ The Froude number is calculated at the midpoint depth in the conduit.
 This solution (DAMPEN) produces more stable results around the critical stage of the flow but retains
 the essential accuracy of the fully dynamic solution at sub-critical flow conditions.</p>
 <p>The friction slope component S<sub>f</sub> is based on Manning’s equation:</p>
-<div class="math notranslate nohighlight">
-\[S_{f} = \frac{n^{2}V|V|}{k^{2}R^{\frac{4}{3}}}\ \ \ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3">
+<span class="eqno">(1.13)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-3" title="Link to this equation"></a></span>\[S_{f} = \frac{n^{2}V|V|}{k^{2}R^{\frac{4}{3}}}\]</div>
 <p>where:</p>
-<p>n = Manning roughness coefficient</p>
+<blockquote>
+<div><p>n = Manning roughness coefficient</p>
 <p>V = average flow velocity (<span class="math notranslate nohighlight">\(\frac{Q}{A}\)</span>)</p>
 <p>R = hydraulic radius</p>
 <p>k = 1.486 for English units or 1.0 for metric units</p>
+</div></blockquote>
 <p>The local head loss term h<sub>L</sub> is caused by an energy loss that is proportional to the velocity
 head and it can be expressed as:</p>
-<div class="math notranslate nohighlight">
-\[h_{L} = \frac{KV^{2}\ }{2gL}\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4">
+<span class="eqno">(1.14)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-4" title="Link to this equation"></a></span>\[h_{L} = \frac{KV^{2}\ }{2gL}\]</div>
 <p>where:</p>
-<p>K = loss coefficient for each pipe</p>
+<blockquote>
+<div><p>K = loss coefficient for each pipe</p>
 <p>V = velocity</p>
 <p>L = conduit length</p>
 <p>g = gravitational acceleration</p>
+</div></blockquote>
 <p>To calculate the change in pressure head at each node that connects two or more conduits an additional
 equation is necessary (Figure 20):</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial H}{\partial t} = \frac{\sum_{}^{}Q}{A_{store} + \sum_{}^{}{As}}\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5">
+<span class="eqno">(1.15)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-5" title="Link to this equation"></a></span>\[\frac{\partial H}{\partial t} = \frac{\sum_{}^{}Q}{A_{store} + \sum_{}^{}{As}}\]</div>
 <p>where:</p>
-<p>H = flow depth (difference between the node head and the pipe invert elevation)</p>
+<blockquote>
+<div><p>H = flow depth (difference between the node head and the pipe invert elevation)</p>
 <p>A<sub>store</sub> = node surface area</p>
 <p><span class="math notranslate nohighlight">\(\sum_{}^{}{As}\)</span> = surface area contributed by the conduits connected to the node.</p>
 <p><span class="math notranslate nohighlight">\(\sum_{}^{}Q\)</span> = net flow at Node J contributed by all connected conduits plus external inflows</p>
+</div></blockquote>
 <img alt="../../_images/image253.png" src="../../_images/image253.png" />
 <p><em>Figure 20.
 Node-Link Representation of a Drainage System (Roesner et al, 1992).</em></p>
@@ -702,22 +708,21 @@ Explicit schemes for these types of solutions are limited to minor steps by stri
 criteria.
 The following discussion was sourced from the EPA SWMM documentation (Rossman et al, 2005).</p>
 <p>The flow equation solved for each conduit is given by:</p>
-<div class="math notranslate nohighlight">
-\[Q_{t + \mathrm{\Delta}t} = \frac{Q_{t} + \mathrm{\Delta}Q_{gravity} +
-\mathrm{\Delta}Q_{inertial}}{1 + \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6">
+<span class="eqno">(1.16)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-6" title="Link to this equation"></a></span>\[Q_{t + \mathrm{\Delta}t} = \frac{Q_{t} + \mathrm{\Delta}Q_{gravity} +
+\mathrm{\Delta}Q_{inertial}}{1 + \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\]</div>
 <p>The <span class="math notranslate nohighlight">\(\mathrm{\Delta}Q\)</span> in each conduit corresponds to the different force terms expressed as:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
-\frac{\mathrm{\Delta}t}{L\ }\ \ \ \ \\]</div>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7">
+<span class="eqno">(1.17)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-7" title="Link to this equation"></a></span>\[\mathrm{\Delta}Q_{gravity} = g\overline{A}\left( H_{1} - H_{2} \right)
+\frac{\mathrm{\Delta}t}{L\ }\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8">
+<span class="eqno">(1.18)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-8" title="Link to this equation"></a></span>\[\mathrm{\Delta}Q_{inertial} = 2\overline{V}\left( \overline{A} - A_{t} \right)
 \frac{+ {\overline{V}}^{2}\left( A_{2} - A_{1} \right)\mathrm{\Delta}t}{L}\]</div>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
-\right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}\ \ \\]</div>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}Q_{losses} = \frac{\sum_{i}^{}{K_{i}\left| V_{i}
-right|\mathrm{\Delta}t}}{2L}\ \ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9">
+<span class="eqno">(1.19)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-9" title="Link to this equation"></a></span>\[\mathrm{\Delta}Q_{friction} = \frac{gn^{2}\left| \overline{V}
+\right|\mathrm{\Delta}t}{k^{2}{\overline{R}}^{\frac{4}{3}}}\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10">
+<span class="eqno">(1.20)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-10" title="Link to this equation"></a></span>\[\Delta Q_{\text{losses}} = \frac{\sum_i K_i \left| V_i \right| \Delta t}{2L}\]</div>
 <p>where:</p>
 <blockquote>
 <div><p><span class="math notranslate nohighlight">\(\overline{A}\)</span> = conduit average cross-sectional flow area</p>
@@ -748,14 +753,14 @@ Consequently, the velocity cannot be higher than 50 ft/sec.</p>
 conduit for the node below the invert elevation of the conduit is set equal to the smaller of the
 critical depth and the normal flow depth for the conduit flow.
 The equation to calculate the head adjustment term for each timestep at each node is:</p>
-<div class="math notranslate nohighlight">
-\[H_{t + \mathrm{\Delta}t} = H_{t} + \frac{\mathrm{\Delta}Vol}{\left( A_{store} +
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11">
+<span class="eqno">(1.21)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-11" title="Link to this equation"></a></span>\[H_{t + \mathrm{\Delta}t} = H_{t} + \frac{\mathrm{\Delta}Vol}{\left( A_{store} +
 \sum_{}^{}A_{s} \right)_{t + \mathrm{\Delta}t}}\]</div>
 <p>where ∆Vol is the net volume flowing through the node over the timestep.
 The net volume is computed as:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
-\left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12">
+<span class="eqno">(1.22)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-12" title="Link to this equation"></a></span>\[\mathrm{\Delta}Vol = 0.5\left\lbrack \left( \sum_{}^{}Q \right)_{t} +
+\left( \sum_{}^{}Q \right)_{t + \mathrm{\Delta}t} \right\rbrack\mathrm{\Delta}t\]</div>
 <p>The conduit surface area (A<sub>store</sub>) depends on the flow condition within the conduit as follows:</p>
 <ol class="arabic simple">
 <li><p>Under normal conditions the pipe surface area equals half of the conduit length times the average
@@ -792,14 +797,18 @@ The results are denoted as:</p>
 <li><p>The equation <span class="math notranslate nohighlight">\(Q_{t + \mathrm{\Delta}t}\)</span> is solved once again, using the head, area, and
 velocity based on the Q<sub>last</sub> and H<sub>last</sub> values just computed.
 A relaxation factor Ω is used to combine the new flow estimate Q<sub>new</sub> with the previous
-estimate Q<sub>last</sub> to generate a new Q<sub>new</sub> according to the equation:</p>
-<p>Q<sub>new</sub> = (1−Ω) Q<sub>last</sub> +Ω Q<sub>new</sub></p>
-</li>
+estimate Q<sub>last</sub> to generate a new Q<sub>new</sub> according to the equation:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13">
+<span class="eqno">(1.23)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-13" title="Link to this equation"></a></span>\[Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}\]</div>
+<ol class="arabic simple" start="4">
 <li><p>The equation for <span class="math notranslate nohighlight">\(H_{t + \mathrm{\Delta}t}\)</span>is solved again for heads using Q<sub>new</sub>.
 As with discharge, this new solution for head, H<sub>new</sub> is weighted with H<sub>last</sub> to
-produce an updated estimate for heads:</p>
-<p>H<sub>new</sub> = (1−Ω) H<sub>last</sub> +Ω H<sub>new</sub></p>
-</li>
+produce an updated estimate for heads:</p></li>
+</ol>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14">
+<span class="eqno">(1.24)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-14" title="Link to this equation"></a></span>\[H_{new} = (1−Ω) H_{last} +Ω H_{new}\]</div>
+<ol class="arabic simple" start="5">
 <li><p>If H<sub>new</sub> is close enough to H<sub>last</sub> then the process stops with Q<sub>new</sub>
 and H<sub>new</sub> as the solution for time t + Δt.
 Otherwise H<sub>last</sub> and Q<sub>last</sub> are replaced with H<sub>new</sub> and Q<sub>new</sub>,
@@ -834,22 +843,21 @@ flow, and it is insufficient to update nodal heads at the new time step.</p></li
 no guarantee that the condition will hold at the surcharged nodes after a flow solution is reached.</p></li>
 <li><p>Flow continuity condition is enforced Min the form of a perturbation equation:</p></li>
 </ul>
-<div class="math notranslate nohighlight">
-\[\Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  =
-\ 0\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15">
+<span class="eqno">(1.25)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-15" title="Link to this equation"></a></span>\[\Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = 0\]</div>
 <p>where:</p>
 <p><span class="math notranslate nohighlight">\(\mathrm{\Delta}H\)</span> = node head that must be made to achieve flow continuity.</p>
 <p>Solving for <span class="math notranslate nohighlight">\(\mathrm{\Delta}H\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16">
+<span class="eqno">(1.26)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-16" title="Link to this equation"></a></span>\[\mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}\]</div>
 <p>where:</p>
-<div class="math notranslate nohighlight">
-\[\frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
-\mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \\]</div>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17">
+<span class="eqno">(1.27)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-17" title="Link to this equation"></a></span>\[\frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
+\mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\]</div>
 <p><span class="math notranslate nohighlight">\(\frac{\partial Q}{\partial H}\ \)</span> has a negative sign because when evaluating
 <span class="math notranslate nohighlight">\(\sum_{}^{}Q\)</span> because the flow directed out of a node is considered negative while flow into the
-node is positive.
-If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total
+node is positive.</p>
+<p>If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total
 node adjustment for the successive approximation scheme.</p>
 </section>
 <section id="boundary-conditions-flo-2d-inlet-discharge">
@@ -864,27 +872,28 @@ The inlet discharge is imposed as surface water boundary conditions (BC) and is 
 drain layer for routing.
 The following equations (Johnson and Fred, 1984) are used:</p>
 <p>Weir Flow:</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(Q_{w} = CLH^{m}\)</span></p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18">
+<span class="eqno">(1.28)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-18" title="Link to this equation"></a></span>\[Q_{w} = CLH^{m}\]</div>
 <p>where:</p>
-</div></blockquote>
-<p><span class="math notranslate nohighlight">\(Q_{w}\)</span> = weir discharge</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Q_{w}\)</span> = weir discharge</p>
 <p>C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT</p>
 <p>L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT</p>
 <p>H = FLO-2D grid element water depth that contains the inlet structure</p>
-<p>m = 1.5 for a broad crested weir.
-This is hardcoded.</p>
-<p>Orifice Flow:</p>
-<blockquote>
-<div><p><span class="math notranslate nohighlight">\(Q_{o} = \ C_{d}A\sqrt{2gH}\)</span></p>
-<p>where:</p>
+<p>m = 1.5 for a broad crested weir. This is hardcoded.</p>
 </div></blockquote>
-<p><span class="math notranslate nohighlight">\(Q_{o}\)</span> = orifice flow rate at depth H</p>
+<p>Orifice Flow:</p>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-19">
+<span class="eqno">(1.29)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-19" title="Link to this equation"></a></span>\[Q_{o} = \ C_{d}A\sqrt{2gH}\]</div>
+<p>where:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\(Q_{o}\)</span> = orifice flow rate at depth H</p>
 <p>C<sub>d</sub>  = discharge coefficient hardcoded to 0.67</p>
 <p>A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
 (h) fields in the SWMMFLO.DAT</p>
 <p>g = gravitational acceleration</p>
 <p>H = FLO-2D grid element water depth that contains the inlet structure</p>
+</div></blockquote>
 <p>The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for
 a given timestep and the smaller of the two discharges is used in the surface water exchange to the
 storm drain system.
@@ -1097,21 +1106,29 @@ They can be either circular or rectangular in shape and can be located either at
 the side of the upstream node.
 They can have a flap gate to prevent backflow.
 Orifice flow is based on the following criteria:</p>
-<ul>
-<li><p>When fully submerged the classical orifice equation is used: <span class="math notranslate nohighlight">\({Q_{w} = C}_{d}A\sqrt{2gh}\)</span>.</p></li>
-<li><p>A partially submerged orifice applies the modified weir equation:</p>
-<p><span class="math notranslate nohighlight">\({Q_{w} = C}_{d}A\sqrt{2gDh}f^{1.5}\)</span>.</p>
-</li>
+<ul class="simple">
+<li><p>When fully submerged the classical orifice equation is used:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-20">
+<span class="eqno">(1.30)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-20" title="Link to this equation"></a></span>\[Q_{w} = C_{d}A\sqrt{2gH}\]</div>
+<ul class="simple">
+<li><p>A partially submerged orifice applies the modified weir equation:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-21">
+<span class="eqno">(1.31)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-21" title="Link to this equation"></a></span>\[Q_{w} = C_{d}A\sqrt{2gDh}f^{1.5}\]</div>
+<ul class="simple">
 <li><p>An orifice surface area contribution to the outlet is based on the equivalent pipe length and the
 depth of water in the orifice.</p></li>
 </ul>
 <p>where:</p>
-<p>A = orifice open area (may be an irregular shape)</p>
+<blockquote>
+<div><p>A = orifice open area (may be an irregular shape)</p>
 <p>D = height of the full orifice opening</p>
 <p>h = hydraulic head on the orifice</p>
-<p>Cd = discharge coefficient hardcoded to 0.67</p>
+<p>C<sub>d</sub> = discharge coefficient hardcoded to 0.67</p>
 <p>g = gravitational acceleration</p>
 <p><em>f</em> = fraction of the orifice that is submerged</p>
+</div></blockquote>
 <p>The parameters of an orifice in the storm drain system are:</p>
 <ul class="simple">
 <li><p>Names of the inlet and outlet nodes</p></li>
@@ -1135,17 +1152,18 @@ The weir calculations are based on the following criteria:</p>
 <li><p>When the weir becomes completely submerged, the model switches to the orifice equation to predict
 flow as a function of the head.</p></li>
 <li><p>Weirs do not contribute any surface area to their end nodes.</p></li>
-<li><p>The general weir equation <span class="math notranslate nohighlight">\(Q = C\ L\ h^{m}\ \)</span> is used to compute the discharge as a function
-of head <em>h</em> across the weir when the weir is not
-fully submerged.</p></li>
+<li><p>The general weir equation;</p></li>
 </ul>
+<div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-22">
+<span class="eqno">(1.32)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-1-22" title="Link to this equation"></a></span>\[Q = C\ L\ h^{m}\]</div>
+<p>is used to compute the discharge as a function of head <em>h</em> across the weir when the weir is not fully submerged.</p>
 <p>where:</p>
-<p>C = the weir coefficient</p>
+<blockquote>
+<div><p>C = the weir coefficient</p>
 <p>L = the crest length</p>
 <p>m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch
-, or trapezoidal.
-Typically, m = 1.5 for a lateral weir.
-This exponent is hardcoded in the FLO-2D storm drain model.</p>
+, or trapezoidal. Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.</p>
+</div></blockquote>
 <p>The parameters of an orifice in the storm drain system are:</p>
 <ul class="simple">
 <li><p>Names of the inlet and outlet nodes</p></li>
