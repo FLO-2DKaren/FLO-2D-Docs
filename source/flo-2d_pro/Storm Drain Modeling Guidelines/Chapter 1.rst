@@ -702,17 +702,20 @@ the essential accuracy of the fully dynamic solution at sub-critical flow condit
 
 The friction slope component S\ :sub:`f` is based on Manning’s equation:
 
-.. math:: S_{f} = \frac{n^{2}V|V|}{k^{2}R^{\frac{4}{3}}}\ \ \ \
+.. math::
+   :label:
+
+   S_{f} = \frac{n^{2}V|V|}{k^{2}R^{\frac{4}{3}}}\ \ \ \
 
 where:
 
-n = Manning roughness coefficient
+    n = Manning roughness coefficient
 
-V = average flow velocity (:math:`\frac{Q}{A}`)
+    V = average flow velocity (:math:`\frac{Q}{A}`)
 
-R = hydraulic radius
+    R = hydraulic radius
 
-k = 1.486 for English units or 1.0 for metric units
+    k = 1.486 for English units or 1.0 for metric units
 
 The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity
 head and it can be expressed as:
