@@ -985,6 +985,7 @@ where:
 :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
 :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
 node is positive.
+
 If surcharge (return flow to the surface water) is computed, the pressure head is considered in the total
 node adjustment for the successive approximation scheme.
 
@@ -1003,20 +1004,22 @@ The following equations (Johnson and Fred, 1984) are used:
 
 Weir Flow:
 
-   :math:`Q_{w} = CLH^{m}`
+.. math::
+   :label:
 
-   where:
+   Q_{w} = CLH^{m}
 
-:math:`Q_{w}` = weir discharge
+where:
 
-C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
+    :math:`Q_{w}` = weir discharge
 
-L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
+    C = weir coefficient, enter in the “Inlet Weir Coeff.” field in the SWMMFLO.DAT
 
-H = FLO-2D grid element water depth that contains the inlet structure
+    L = crest length; enter in the “Length (1 or 2)” field in the SWMMFLO.DAT
 
-m = 1.5 for a broad crested weir.
-This is hardcoded.
+    H = FLO-2D grid element water depth that contains the inlet structure
+
+    m = 1.5 for a broad crested weir. This is hardcoded.
 
 Orifice Flow:
 
