@@ -1369,12 +1369,12 @@ The weir calculations are based on the following criteria:
 
 - Weirs do not contribute any surface area to their end nodes.
 
-- The general weir equation
+- The general weir equation;
 
 .. math::
    :label:
 
-   Q = C\ L\ h^{m}\
+   Q = C\ L\ h^{m}
 
 is used to compute the discharge as a function of head *h* across the weir when the weir is not fully submerged.
 
