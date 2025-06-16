@@ -960,7 +960,8 @@ To implement the flow continuity condition, a perturbation equation form is enfo
 
 .. math::
    :label:
-   \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = \ 0
+
+   \Sigma\left\lbrack Q + \frac{\partial Q}{\partial H}\mathrm{\Delta}H \right\rbrack\  = 0
 
 where:
 
@@ -979,7 +980,7 @@ where:
    :label:
 
    \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
-   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \
+   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
 :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
 :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
