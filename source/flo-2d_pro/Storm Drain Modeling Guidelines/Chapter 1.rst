@@ -977,7 +977,7 @@ where:
    :label:
 
    \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
-   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \
+   \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}
 
 :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
 :math:`\sum_{}^{}Q` because the flow directed out of a node is considered negative while flow into the
