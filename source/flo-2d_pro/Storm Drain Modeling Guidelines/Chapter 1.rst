@@ -1023,20 +1023,23 @@ where:
 
 Orifice Flow:
 
-   :math:`Q_{o} = \ C_{d}A\sqrt{2gH}`
+.. math::
+   :label:
 
-   where:
+   Q_{o} = \ C_{d}A\sqrt{2gH}
 
-:math:`Q_{o}` = orifice flow rate at depth H
+where:
 
-C\ :sub:`d`  = discharge coefficient hardcoded to 0.67
+    :math:`Q_{o}` = orifice flow rate at depth H
 
-A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
-(h) fields in the SWMMFLO.DAT
+    C\ :sub:`d`  = discharge coefficient hardcoded to 0.67
 
-g = gravitational acceleration
+    A = Lh; cross-sectional orifice area, computed from inlet opening length (L) and inlet opening height
+    (h) fields in the SWMMFLO.DAT
 
-H = FLO-2D grid element water depth that contains the inlet structure
+    g = gravitational acceleration
+
+    H = FLO-2D grid element water depth that contains the inlet structure
 
 The discharges are calculated based on the physical behavior of the inlet as a weir or an orifice for
 a given timestep and the smaller of the two discharges is used in the surface water exchange to the
