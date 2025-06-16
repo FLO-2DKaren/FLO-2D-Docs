@@ -1325,17 +1325,17 @@ Orifice flow is based on the following criteria:
 
 where:
 
-A = orifice open area (may be an irregular shape)
+    A = orifice open area (may be an irregular shape)
 
-D = height of the full orifice opening
+    D = height of the full orifice opening
 
-h = hydraulic head on the orifice
+    h = hydraulic head on the orifice
 
-Cd = discharge coefficient hardcoded to 0.67
+    C\ :sub:`d` = discharge coefficient hardcoded to 0.67
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
-*f* = fraction of the orifice that is submerged
+    *f* = fraction of the orifice that is submerged
 
 The parameters of an orifice in the storm drain system are:
 
@@ -1369,20 +1369,23 @@ The weir calculations are based on the following criteria:
 
 - Weirs do not contribute any surface area to their end nodes.
 
-- The general weir equation :math:`Q = C\ L\ h^{m}\ ` is used to compute the discharge as a function
-  of head *h* across the weir when the weir is not
-  fully submerged.
+- The general weir equation
+
+.. math::
+   :label:
+
+   Q = C\ L\ h^{m}\
+
+is used to compute the discharge as a function of head *h* across the weir when the weir is not fully submerged.
 
 where:
 
-C = the weir coefficient
+    C = the weir coefficient
 
-L = the crest length
+    L = the crest length
 
-m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch
-, or trapezoidal.
-Typically, m = 1.5 for a lateral weir.
-This exponent is hardcoded in the FLO-2D storm drain model.
+    m = an exponent that depends on the type of weir being modeled: lateral, transverse, side-flow, V-notch
+    , or trapezoidal. Typically, m = 1.5 for a lateral weir. This exponent is hardcoded in the FLO-2D storm drain model.
 
 The parameters of an orifice in the storm drain system are:
 
