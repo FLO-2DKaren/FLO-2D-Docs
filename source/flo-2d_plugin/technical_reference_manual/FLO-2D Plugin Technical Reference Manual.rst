@@ -10051,22 +10051,20 @@ cont.dat parameters and toler.dat parameters.
 Grid
 ----
 
-Grid code or grid element number and Neighbors and fplain.dat
+X coordinate, y coordinate, elevation, mannings n, and neighbors tables 
+
+TOPO.DAT
+MANNINGS_N.DAT
+CADPTS.DAT
+FPLAIN.DAT
+NEIGHBORS.DAT
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO068.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO069.png
+Floodplain Cross Section
+-------------------------
 
-Grid
-
-X coordinate y coordinate elevation and Mannings n tables.
-
-Topo, manning and cadpts
-
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO070.png
-
-Floodplain
-----------
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO073.png
 
 Gutter
 ------
@@ -10089,8 +10087,6 @@ Rating Curve
 Culvert Equations
 ~~~~~~~~~~~~~~~~~
 
-Name
-~~~~
 
 Infiltration
 ------------
@@ -10101,18 +10097,44 @@ Method
 Green Ampt
 ~~~~~~~~~~
 
+**Global**
+
+**Spatial**
+
+
+.. _scs_hdf:
+
 SCS Curve Number
 ~~~~~~~~~~~~~~~~
 
-.. _horton-1:
+**Global**
+
+**Spatial**
+
+.. _horton_hdf:
 
 Horton
 ~~~~~~
 
+**Global**
+
+**Spatial**
+
 Levee
 -----
 
+LEVEE.DAT
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO071.png
+
+Levee Failure Prescribed
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Levee Failure Breach
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Levee Failure Curve
+~~~~~~~~~~~~~~~~~~~~~~
 
 Rainfall
 --------
@@ -10134,3 +10156,21 @@ Spatially Variable
 ------------------
 
 Storm Drain
+
+
+Multiple Channel
+-----------------
+
+
+~~~~~~~~~~~~
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO074.png
+
+
+Blocked Cells
+------------------
+
+ARF / WRF
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO075.png
+
