@@ -720,32 +720,38 @@ where:
 The local head loss term h\ :sub:`L` is caused by an energy loss that is proportional to the velocity
 head and it can be expressed as:
 
-.. math:: h_{L} = \frac{KV^{2}\ }{2gL}\ \
+.. math::
+   :label:
+
+.. math:: h_{L} = \frac{KV^{2}\ }{2gL}
 
 where:
 
-K = loss coefficient for each pipe
+    K = loss coefficient for each pipe
 
-V = velocity
+    V = velocity
 
-L = conduit length
+    L = conduit length
 
-g = gravitational acceleration
+    g = gravitational acceleration
 
 To calculate the change in pressure head at each node that connects two or more conduits an additional
 equation is necessary (Figure 20):
 
-.. math:: \frac{\partial H}{\partial t} = \frac{\sum_{}^{}Q}{A_{store} + \sum_{}^{}{As}}\ \
+.. math::
+   :label:
+
+   \frac{\partial H}{\partial t} = \frac{\sum_{}^{}Q}{A_{store} + \sum_{}^{}{As}}
 
 where:
 
-H = flow depth (difference between the node head and the pipe invert elevation)
+    H = flow depth (difference between the node head and the pipe invert elevation)
 
-A\ :sub:`store` = node surface area
+    A\ :sub:`store` = node surface area
 
-:math:`\sum_{}^{}{As}` = surface area contributed by the conduits connected to the node.
+    :math:`\sum_{}^{}{As}` = surface area contributed by the conduits connected to the node.
 
-:math:`\sum_{}^{}Q` = net flow at Node J contributed by all connected conduits plus external inflows
+    :math:`\sum_{}^{}Q` = net flow at Node J contributed by all connected conduits plus external inflows
 
 .. image:: ../img/Storm_Drain_Modeling_Guidelines/Chapter1/image25.png
 
