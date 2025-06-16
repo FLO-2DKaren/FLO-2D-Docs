@@ -906,7 +906,7 @@ The solution algorithm involves the following steps:
 .. math::
    :label:
 
-   Q\ :sub:`new` = (1−Ω) Q\ :sub:`last` +Ω Q\ :sub:`new`
+   Q_{new} = (1−Ω) Q_{last} +Ω Q_{new}
 
 4. The equation for :math:`H_{t + \mathrm{\Delta}t}`\ is solved again for heads using Q\ :sub:`new`.
    As with discharge, this new solution for head, H\ :sub:`new` is weighted with H\ :sub:`last` to
