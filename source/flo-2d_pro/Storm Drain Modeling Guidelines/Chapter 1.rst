@@ -967,11 +967,16 @@ where:
 
 Solving for :math:`\mathrm{\Delta}H`:
 
-.. math:: \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}\ \
+.. math::
+   :label:
+
+   \mathrm{\Delta}H = \frac{- \sum_{}^{}Q}{\sum_{}^{}\frac{\partial Q}{\partial H}}
 
 where:
+.. math::
+   :label:
 
-.. math:: \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
+   \frac{\partial Q}{\partial H} = \frac{- g\overline{A}\frac{\mathrm{\Delta}t}{L}}{1 +
    \mathrm{\Delta}Q_{friction} + \mathrm{\Delta}Q_{losses}}\ \
 
 :math:`\frac{\partial Q}{\partial H}\ ` has a negative sign because when evaluating
