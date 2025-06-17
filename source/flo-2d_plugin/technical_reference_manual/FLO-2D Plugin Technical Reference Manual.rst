@@ -10166,8 +10166,6 @@ Multiple Channel
 -----------------
 
 
-~~~~~~~~~~~~
-
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO074.png
 
 
