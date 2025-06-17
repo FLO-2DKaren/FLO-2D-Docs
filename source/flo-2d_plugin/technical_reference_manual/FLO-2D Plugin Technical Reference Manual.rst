@@ -10147,6 +10147,7 @@ Global
 ~~~~~~
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO079.png
+
 Spatial
 ~~~~~~~
 
