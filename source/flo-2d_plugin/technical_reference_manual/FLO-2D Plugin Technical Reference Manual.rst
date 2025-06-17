@@ -10097,9 +10097,7 @@ Method
 Green Ampt
 ~~~~~~~~~~
 
-**Global**
-
-**Spatial**
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO076.png
 
 
 .. _scs_hdf:
@@ -10111,6 +10109,8 @@ SCS Curve Number
 
 **Spatial**
 
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO077.png
+
 .. _horton_hdf:
 
 Horton
@@ -10119,6 +10119,8 @@ Horton
 **Global**
 
 **Spatial**
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO078.png
 
 Levee
 -----
@@ -10144,10 +10146,11 @@ Rainfall
 Global
 ~~~~~~
 
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO079.png
 Spatial
 ~~~~~~~
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO072.png
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO080.png
 
 Reduction Factors
 -----------------
