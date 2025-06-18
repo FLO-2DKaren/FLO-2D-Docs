@@ -41,10 +41,15 @@ Channel Natural
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO065.png
 
-Channel Trapezoidal Rectangular
+Channel Trapezoidal 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO066.png
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO083.png
+
+Channel Rectangular
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO084.png
 
 NoExchange
 ~~~~~~~~~~
