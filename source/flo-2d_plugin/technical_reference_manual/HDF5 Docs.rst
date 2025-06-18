@@ -14,15 +14,19 @@ Reservoir
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060A.png
 
-Outflow Grid ID
+Outflow 
 ~~~~~~~~~~~~~~~
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO061.png
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO085.png
 
-Outflow Time Series
-~~~~~~~~~~~~~~~~~~~
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO086.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO02.png
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO087.png
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO088.png
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO090.png
+
 
 Channels
 --------
@@ -67,7 +71,7 @@ cont.dat parameters and toler.dat parameters.
 Grid
 ----
 
-X coordinate, y coordinate, elevation, mannings n, and neighbors tables 
+x coordinate, y coordinate, elevation, mannings n, and neighbors tables 
 
 TOPO.DAT
 MANNINGS_N.DAT
