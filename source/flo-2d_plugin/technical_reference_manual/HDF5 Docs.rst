@@ -9,7 +9,7 @@ Inflow
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060.png
 
-Reservoir
+Reservoirs
 ~~~~~~~~~~~~
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060A.png
@@ -17,13 +17,28 @@ Reservoir
 Outflow 
 ~~~~~~~~~~~~~~~
 
+
+**Floodplain normal depth**
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO085.png
+
+**Channel normal depth**
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO086.png
 
+**Floodplain time state**
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO087.png
 
+**Floodplain and channel time stage**
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO088.png
+
+**Channel time stage**
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO089.png
+
+**Floodplain and channel time stage and free**
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO090.png
 
