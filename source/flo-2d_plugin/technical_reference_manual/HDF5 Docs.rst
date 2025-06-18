@@ -42,6 +42,17 @@ Outflow
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO090.png
 
+**Channel time stage and normal**
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO091.png
+
+**Channel depth discharge power regression**
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO092.png
+
+**Channel depth discharge table**
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO093.png
 
 Channels
 --------
