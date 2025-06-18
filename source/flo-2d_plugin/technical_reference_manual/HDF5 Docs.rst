@@ -181,6 +181,7 @@ Uniform rainfall
 RAIN.DAT
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO079.png
+
 Spatial
 ~~~~~~~
 
@@ -206,9 +207,6 @@ Storm Drain
 
 Multiple Channel
 -----------------
-
-
-~~~~~~~~~~~~
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO074.png
 
