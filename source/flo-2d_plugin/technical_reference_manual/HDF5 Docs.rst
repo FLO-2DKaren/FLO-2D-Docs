@@ -9,6 +9,11 @@ Inflow
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060.png
 
+Reservoir
+~~~~~~~~~~~~
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060A.png
+
 Outflow Grid ID
 ~~~~~~~~~~~~~~~
 
@@ -132,16 +137,29 @@ Rainfall
 
 .. _global-1:
 
-Global
-~~~~~~
+Uniform rainfall
+~~~~~~~~~~~~~~~~~~
+
+RAIN.DAT
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO079.png
 Spatial
 ~~~~~~~
 
+RAIN.DAT
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO080.png
 
+Realtime Rainfall
+~~~~~~~~~~~~~~~~~~~~
 
+RAIN.DAT
+RAINCELL.DAT
+
+Realtime rainfall does not follow the RAINCELL.DAT file exactly.  The table IRAINDUM is organized by grid element columns vs 
+time interval rows.  The rainfall data is in inches or milimeters within each cell of the table.
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO081.png
 
 
 Storm Drain
@@ -163,4 +181,8 @@ Blocked Cells
 ARF / WRF
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO075.png
+
+QGIS
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO082.png
 
