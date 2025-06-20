@@ -164,8 +164,22 @@ LEVEE.DAT
 Levee Failure Prescribed
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Levee Failure Breach
-~~~~~~~~~~~~~~~~~~~~~~~~~
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO096.png
+
+Levee Failure Breach Erosion
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+BREACH.DAT HDF5 tables are complex so these images are accompanied by the 
+Breach Dialog box images so the variables can be mapped between the hdf5, data input manual, 
+and the FLO-2D Plugin.
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO097a.png
+
+BREACH.DAT HDF5 tables are complex so these images are accompanied by the 
+Breach Dialog box images so the variables can be mapped between the hdf5, data input manual, 
+and the FLO-2D Plugin.
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO098.png
 
 Levee Failure Curve
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -219,6 +233,11 @@ ARF / WRF
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO075.png
 
 QGIS
+----------
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO082.png
 
+Tailings
+-----------
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO095.png
