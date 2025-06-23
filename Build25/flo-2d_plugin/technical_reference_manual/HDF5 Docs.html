@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appendix C FLO-2D HDF5 Data Structure &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=67a5d8e2" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="FLO-2D Gila Tutorials" href="../../tutorials/index.html" />
+    <link rel="prev" title="Overview" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_pro/index.html">FLO-2D Pro Resource Center</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila for QGIS: Documentation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../user_manual/index.html">FLO-2D Gila for QGIS: User Manual</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">FLO-2D Gila for QGIS: Technical Reference</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#data-file-structure">Data File Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#flo-2d-plugin">FLO-2D Plugin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#plugin-processes">Plugin Processes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#appendix-a-geopackage-structure">Appendix A GeoPackage Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#appendix-b-flo-2d-plugin-error-codes">Appendix B FLO-2D Plugin Error Codes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#appendix-c-flo-2d-hdf5-data-structure">Appendix C FLO-2D HDF5 Data Structure</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Appendix C FLO-2D HDF5 Data Structure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#control-parameters">Control Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grid">Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#floodplain-cross-section">Floodplain Cross Section</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gutter">Gutter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hydraulic-structures">Hydraulic Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#infiltration">Infiltration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#levee">Levee</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rainfall">Rainfall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storm-drain">Storm Drain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiple-channel">Multiple Channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#reduction-factors">Reduction Factors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis">QGIS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tailings">Tailings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+          <li class="breadcrumb-item"><a href="index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
+      <li class="breadcrumb-item active">Appendix C FLO-2D HDF5 Data Structure</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_plugin/technical_reference_manual/HDF5 Docs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="appendix-c-flo-2d-hdf5-data-structure">
+<h1>Appendix C FLO-2D HDF5 Data Structure<a class="headerlink" href="#appendix-c-flo-2d-hdf5-data-structure" title="Link to this heading"></a></h1>
+<section id="boundary-conditions">
+<h2>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h2>
+<section id="inflow">
+<h3>Inflow<a class="headerlink" href="#inflow" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO060.png" src="../../_images/FLO060.png" />
+</section>
+<section id="reservoirs">
+<h3>Reservoirs<a class="headerlink" href="#reservoirs" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO060A.png" src="../../_images/FLO060A.png" />
+</section>
+<section id="outflow">
+<h3>Outflow<a class="headerlink" href="#outflow" title="Link to this heading"></a></h3>
+<p><strong>Floodplain normal depth</strong></p>
+<img alt="../../_images/FLO085.png" src="../../_images/FLO085.png" />
+<p><strong>Channel normal depth</strong></p>
+<img alt="../../_images/FLO086.png" src="../../_images/FLO086.png" />
+<p><strong>Floodplain time state</strong></p>
+<img alt="../../_images/FLO087.png" src="../../_images/FLO087.png" />
+<p><strong>Floodplain and channel time stage</strong></p>
+<img alt="../../_images/FLO088.png" src="../../_images/FLO088.png" />
+<p><strong>Channel time stage</strong></p>
+<img alt="../../_images/FLO089.png" src="../../_images/FLO089.png" />
+<p><strong>Floodplain and channel time stage and free</strong></p>
+<img alt="../../_images/FLO090.png" src="../../_images/FLO090.png" />
+<p><strong>Channel time stage and normal</strong></p>
+<img alt="../../_images/FLO091.png" src="../../_images/FLO091.png" />
+<p><strong>Channel depth discharge power regression</strong></p>
+<img alt="../../_images/FLO092.png" src="../../_images/FLO092.png" />
+<p><strong>Channel depth discharge table</strong></p>
+<img alt="../../_images/FLO093.png" src="../../_images/FLO093.png" />
+</section>
+</section>
+<section id="channels">
+<h2>Channels<a class="headerlink" href="#channels" title="Link to this heading"></a></h2>
+<section id="global">
+<h3>Global<a class="headerlink" href="#global" title="Link to this heading"></a></h3>
+<p>Global parameters and banks</p>
+<img alt="../../_images/FLO063.png" src="../../_images/FLO063.png" />
+<img alt="../../_images/FLO064.png" src="../../_images/FLO064.png" />
+</section>
+<section id="channel-natural">
+<h3>Channel Natural<a class="headerlink" href="#channel-natural" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO065.png" src="../../_images/FLO065.png" />
+</section>
+<section id="channel-trapezoidal">
+<h3>Channel Trapezoidal<a class="headerlink" href="#channel-trapezoidal" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO083.png" src="../../_images/FLO083.png" />
+</section>
+<section id="channel-rectangular">
+<h3>Channel Rectangular<a class="headerlink" href="#channel-rectangular" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO084.png" src="../../_images/FLO084.png" />
+</section>
+<section id="noexchange">
+<h3>NoExchange<a class="headerlink" href="#noexchange" title="Link to this heading"></a></h3>
+</section>
+<section id="confluence">
+<h3>Confluence<a class="headerlink" href="#confluence" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="control-parameters">
+<h2>Control Parameters<a class="headerlink" href="#control-parameters" title="Link to this heading"></a></h2>
+<p>cont.dat parameters and toler.dat parameters.</p>
+<img alt="../../_images/FLO067.png" src="../../_images/FLO067.png" />
+</section>
+<section id="grid">
+<h2>Grid<a class="headerlink" href="#grid" title="Link to this heading"></a></h2>
+<p>x coordinate, y coordinate, elevation, mannings n, and neighbors tables</p>
+<p>TOPO.DAT
+MANNINGS_N.DAT
+CADPTS.DAT
+FPLAIN.DAT
+NEIGHBORS.DAT</p>
+<img alt="../../_images/FLO068.png" src="../../_images/FLO068.png" />
+</section>
+<section id="floodplain-cross-section">
+<h2>Floodplain Cross Section<a class="headerlink" href="#floodplain-cross-section" title="Link to this heading"></a></h2>
+<img alt="../../_images/FLO073.png" src="../../_images/FLO073.png" />
+</section>
+<section id="gutter">
+<h2>Gutter<a class="headerlink" href="#gutter" title="Link to this heading"></a></h2>
+</section>
+<section id="hydraulic-structures">
+<h2>Hydraulic Structures<a class="headerlink" href="#hydraulic-structures" title="Link to this heading"></a></h2>
+</section>
+<section id="infiltration">
+<h2>Infiltration<a class="headerlink" href="#infiltration" title="Link to this heading"></a></h2>
+<section id="method">
+<h3>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h3>
+</section>
+<section id="green-ampt">
+<h3>Green Ampt<a class="headerlink" href="#green-ampt" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO076.png" src="../../_images/FLO076.png" />
+</section>
+<section id="scs-curve-number">
+<span id="scs-hdf"></span><h3>SCS Curve Number<a class="headerlink" href="#scs-curve-number" title="Link to this heading"></a></h3>
+<p><strong>Global</strong></p>
+<p><strong>Spatial</strong></p>
+<img alt="../../_images/FLO077.png" src="../../_images/FLO077.png" />
+</section>
+<section id="horton">
+<span id="horton-hdf"></span><h3>Horton<a class="headerlink" href="#horton" title="Link to this heading"></a></h3>
+<p><strong>Global</strong></p>
+<p><strong>Spatial</strong></p>
+<img alt="../../_images/FLO078.png" src="../../_images/FLO078.png" />
+</section>
+</section>
+<section id="levee">
+<h2>Levee<a class="headerlink" href="#levee" title="Link to this heading"></a></h2>
+<p>LEVEE.DAT</p>
+<img alt="../../_images/FLO071.png" src="../../_images/FLO071.png" />
+<section id="levee-failure-prescribed">
+<h3>Levee Failure Prescribed<a class="headerlink" href="#levee-failure-prescribed" title="Link to this heading"></a></h3>
+<img alt="../../_images/FLO096.png" src="../../_images/FLO096.png" />
+</section>
+<section id="levee-failure-breach-erosion">
+<h3>Levee Failure Breach Erosion<a class="headerlink" href="#levee-failure-breach-erosion" title="Link to this heading"></a></h3>
+<p>BREACH.DAT HDF5 tables are complex so these images are accompanied by the
+Breach Dialog box images so the variables can be mapped between the hdf5, data input manual,
+and the FLO-2D Plugin.</p>
+<img alt="../../_images/FLO097a.png" src="../../_images/FLO097a.png" />
+<p>BREACH.DAT HDF5 tables are complex so these images are accompanied by the
+Breach Dialog box images so the variables can be mapped between the hdf5, data input manual,
+and the FLO-2D Plugin.</p>
+<img alt="../../_images/FLO098.png" src="../../_images/FLO098.png" />
+</section>
+<section id="levee-failure-curve">
+<h3>Levee Failure Curve<a class="headerlink" href="#levee-failure-curve" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="rainfall">
+<h2>Rainfall<a class="headerlink" href="#rainfall" title="Link to this heading"></a></h2>
+<section id="uniform-rainfall">
+<span id="global-1"></span><h3>Uniform rainfall<a class="headerlink" href="#uniform-rainfall" title="Link to this heading"></a></h3>
+<p>RAIN.DAT</p>
+<img alt="../../_images/FLO079.png" src="../../_images/FLO079.png" />
+</section>
+<section id="spatial">
+<h3>Spatial<a class="headerlink" href="#spatial" title="Link to this heading"></a></h3>
+<p>RAIN.DAT</p>
+<img alt="../../_images/FLO080.png" src="../../_images/FLO080.png" />
+</section>
+<section id="realtime-rainfall">
+<h3>Realtime Rainfall<a class="headerlink" href="#realtime-rainfall" title="Link to this heading"></a></h3>
+<p>RAIN.DAT
+RAINCELL.DAT</p>
+<p>Realtime rainfall does not follow the RAINCELL.DAT file exactly.  The table IRAINDUM is organized by grid element columns vs
+time interval rows.  The rainfall data is in inches or milimeters within each cell of the table.</p>
+<img alt="../../_images/FLO081.png" src="../../_images/FLO081.png" />
+</section>
+</section>
+<section id="storm-drain">
+<h2>Storm Drain<a class="headerlink" href="#storm-drain" title="Link to this heading"></a></h2>
+</section>
+<section id="multiple-channel">
+<h2>Multiple Channel<a class="headerlink" href="#multiple-channel" title="Link to this heading"></a></h2>
+<img alt="../../_images/FLO074.png" src="../../_images/FLO074.png" />
+</section>
+<section id="reduction-factors">
+<h2>Reduction Factors<a class="headerlink" href="#reduction-factors" title="Link to this heading"></a></h2>
+<p>ARF / WRF</p>
+<img alt="../../_images/FLO075.png" src="../../_images/FLO075.png" />
+</section>
+<section id="qgis">
+<h2>QGIS<a class="headerlink" href="#qgis" title="Link to this heading"></a></h2>
+<img alt="../../_images/FLO082.png" src="../../_images/FLO082.png" />
+</section>
+<section id="tailings">
+<h2>Tailings<a class="headerlink" href="#tailings" title="Link to this heading"></a></h2>
+<img alt="../../_images/FLO095.png" src="../../_images/FLO095.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../tutorials/index.html" class="btn btn-neutral float-right" title="FLO-2D Gila Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jimmy O&#39;Brien, Noemi Gonzalez-Ramirez, Karen O&#39;Brien, Robson Pachaly.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="HDF5 Docs.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build23/index.html">
+                    
+                    Build23
+                    
+                </a></dd>
+            
+            <dd><a href="../../../Build21/index.html">
+                    
+                    Build21
+                    
+                </a></dd>
+            
+            <dd><a href="../../../main/index.html">
+                    
+                    dev
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
