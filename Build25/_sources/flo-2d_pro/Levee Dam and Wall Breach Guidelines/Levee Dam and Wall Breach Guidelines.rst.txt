@@ -12,7 +12,7 @@ discussing breach failure.
 Levees may represent river levees, highway or railroad embankments, berms, drainage canal spoil piles,
 urban floodwalls, highway sound walls, neighborhood or lot privacy walls, or any horizontal feature that
 will obstruct the flood flow.
-In FLO-2D, levees are designated as blockage of one of more of the grid element boundaries (Figure 1).
+In FLO-2D, levees are designated as blockage of one or more of the grid element boundaries (Figure 1).
 Levees connect the sides of contiguous floodplain elements.
 If a levee runs through the center of a grid element, the FLO-2D QGIS Plugin positions the levee to
 one or more of the eight grid element boundaries.
