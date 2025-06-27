@@ -186,6 +186,86 @@ Assign Rainfall
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+In this lesson, we assign rainfall to a FLO-2D project. You will learn how to use the **Rain Editor**, apply **uniform rainfall**, and optionally sample **spatially variable rainfall** from NOAA Atlas data.
+
+Step 1: Open the Rain Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Collapse all QGIS dock widgets to reduce clutter.
+- Go to **Plugins > FLO-2D > Rain Editor**.
+- Check **Simulate Rainfall**.
+- Set the **Total Rainfall Depth** to ``2.65 in`` (this example uses a 6-hour, 100-year event).
+- Check **Apply Building Rain**.
+
+.. note::
+   Leave **Rainfall Abstraction** at ``0.0`` for now. This is set elsewhere.
+
+Step 2: Add a Storm Pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click **Open** next to the storm pattern.
+- Navigate to the **FLO-2D documentation folder** and find the **6-hour event distribution**.
+- Choose the **first pattern** from the list.
+- Confirm the time-percent curve was imported correctly.
+
+.. important::
+   The rainfall distribution table has:
+   - **Time (hours)** on the left
+   - **Cumulative rainfall (0–1)** on the right  
+   The percent values must **start at time = 0 and rainfall = 0**.
+
+Step 3: Understanding Rain on Grid
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Rainfall is applied **uniformly** across all grid elements.
+- Every element receives **2.65 inches** following the selected pattern.
+- This is called **"rain on grid"**, and it is different from assigning rainfall to subcatchments.
+
+.. tip::
+   Rain on grid works well for small projects. For large areas, use **spatial variability** (see below).
+
+Step 4: Sample a Rainfall Raster (Optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable rainfall**.
+
+- Drag your **24-hour rainfall raster** into QGIS.
+- Right-click the layer > **Zoom to Layer**.
+- Check the data: it should be in inches and match your coordinate system.
+
+To apply the raster:
+- Go to the **Rain Editor**.
+- Check **Sample from Raster**.
+- Select your raster file.
+- Leave **"Fill NoData"** unchecked if not needed.
+- Click **OK** and confirm.
+- QGIS will now **sample rainfall values** from the raster to each grid element based on spatial location.
+
+.. note::
+   The sampling uses the centroid of each grid element and computes a **point reduction factor** based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based** rainfall adjustment.
+
+Step 5: Export Rainfall Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Go to **Plugins > FLO-2D > Export DAT Files**.
+- This will generate a ``RAIN.DAT`` file in your export folder.
+
+Check `Control Parameters`:
+- The rainfall switch is turned on automatically when you check **Simulate Rainfall**.
+
+.. tip::
+   If ``RAIN.DAT`` is missing an asterisk, your data has been successfully exported.
+
+Inside the ``RAIN.DAT`` file:
+- ``0`` = uniform rainfall  
+- ``1`` = rain-on-building (not used here)  
+- Total rainfall is listed  
+- A distribution pattern is defined  
+- Each grid element gets a **reduction factor** based on the raster (e.g., ``0.999``)
+
+.. note::
+   Raster values are sampled, warped to match the grid, and averaged by pixel intersection. A **ratio** is calculated between each grid cell's rainfall and the maximum value, generating a point reduction factor.
+
+Wrap-up
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+You’ve now assigned both **uniform** and **spatially variable** rainfall to your project. When ready, run your model to simulate rainfall input across the grid.
+
+
 Infiltration - Assign SCS Curve Number
 -------------------------------------------
 
