@@ -73,7 +73,7 @@ Step 5: Understand the GeoPackage Structure
    In older versions like 0.10.115, the `.qgz` file was separate. In Build 25, it is embedded inside the GeoPackage for easier file sharing and portability.
 
 Summary
-~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the FLO-2D Plugin to open and manage your project.
 - GeoPackage management allows data cleanup without risking data loss.
 - The embedded `.qgz` file ensures seamless project transfer across devices and folders.
@@ -112,16 +112,16 @@ Step 2: Add an Inflow Node
 
 Step 3: Rename the Inflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Rename**, and enter::
+- Click **Rename**, and enter:
 
-  Grover Basin Inflow
+  `Grover Basin Inflow`
 
 Step 4: Create a Time Series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Time Series Editor**.
-- Click **New**, and name it::
+- Click **New**, and name it:
 
-  GroverIn_100yr_6hr
+  `GroverIn_100yr_6hr`
 
 - This is a 100-year, 6-hour inflow hydrograph taken from the original larger project.
 - Set the **Type** to: `Floodplain`
