@@ -91,6 +91,117 @@ Assign an Inflow Node
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+Set a Boundary Condition with an Inflow Node
+This lesson covers how to define an upstream inflow boundary condition at the edge of your grid, using Cave Creek as an example. The inflow point corresponds to a culvert outfall structure at the edge of the basin.
+
+Step 1: Navigate to the Boundary Location
+Use the mouse scroll wheel to zoom in and out.
+
+Click and hold the scroll wheel to pan across the map.
+
+.. note::
+This navigation method is similar to Civil 3D, ArcGIS, and Google Earth.
+
+Step 2: Open the Boundary Editor
+Collapse other plugin tools to reduce clutter.
+
+Open the Boundary Editor from the FLO-2D plugin.
+
+Select Inflow Node.
+
+Click Add Point, then click on the map at the outlet location.
+
+.. image:: boundary_add_point.png
+:alt: Adding an inflow point to the map
+
+Click OK to place the inflow node.
+
+Click the Save icon.
+
+Step 3: Name the Inflow Point
+Click Rename and set the name to:
+
+.. code-block::
+
+Grover Basin Inflow
+
+Step 4: Create Time Series Data
+Open the Time Series Editor.
+
+Click New and name the time series:
+
+.. code-block::
+
+GroverIn_100y6h
+
+This is a 100-year, 6-hour inflow hydrograph from a previous project.
+
+Set the inflow type to Floodplain.
+
+.. note::
+Use Floodplain for storm drain or basin flows. Use Channel for stream-based inflows.
+
+Step 5: Paste Hydrograph Data
+Open the lesson data file for hydrographs.
+
+Choose the 100y_6hr inflow file.
+
+.. tip::
+Use Ctrl + A to select all, Ctrl + C to copy, and Ctrl + W to close the file.
+
+In the time series editor:
+
+Click the first cell.
+
+Paste using Ctrl + V.
+
+.. image:: paste_hydrograph_data.png
+:alt: Time-discharge data pasted into FLO-2D plugin
+
+Time is in hours, discharge is in cubic feet per second (cfs).
+
+Step 6: Schematize the Inflow
+Click Schematize to convert the time series to FLO-2D format.
+
+This creates the necessary internal format for simulation.
+
+Step 7: Export the Inflow Data
+Right-click the project folder and select Export Data.
+
+Select only the Inflow Element option.
+
+Choose your Export Folder.
+
+.. image:: export_inflow.png
+:alt: Exporting inflow element to .DAT file
+
+Open INFLOW.DAT in Notepad++ to review the structure:
+
+F indicates floodplain inflow.
+
+Grid element ID is listed.
+
+Data is in graphical mode format.
+
+Starts at time 0 with discharge 0.
+
+.. code-block::
+
+F 1562
+h 0.00 0.00
+h 0.10 4.50
+...
+
+.. tip::
+Always start hydrographs at zero discharge. Ramp up over 0.1 to 0.5 hours for realistic transition.
+
+Summary
+You created an inflow boundary at the project edge.
+
+You imported and schematized a time series hydrograph.
+
+You exported it to the INFLOW.DAT file for FLO-2D simulation.
+
 Assign Rainfall
 -----------------
 
