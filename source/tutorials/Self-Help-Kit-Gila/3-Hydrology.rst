@@ -561,3 +561,46 @@ Save Export and Run
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+This lesson covers the final steps before running your FLO-2D simulation. You will learn how to save your project, export model data, and run the simulation using the **Quick Run** tool.
+
+Step 1: Save Your Project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Remove unneeded scratch layers:
+  - Right-click any temporary layers you no longer need and select **Remove**.
+- Click the **Save Project** button.
+- When prompted, click **Yes** to save scratch layers into the **GeoPackage**.
+  - This ensures they are committed and safely stored with your project file.
+
+.. tip::
+   Scratch layers must be saved to preserve your data across sessions.
+
+Step 2: Export Data Using Quick Run
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use **Quick Run** to export and simulate in one step.
+- Quick Run is only available **if your project does not include storm drains**.
+
+To use Quick Run:
+- Click **Quick Run** from the FLO-2D toolbar.
+- Create a new folder (e.g., ``quick_run``) for the export.
+- Select this folder when prompted.
+
+The plugin will:
+- Export all required `.DAT` files
+- Automatically launch the simulation upon successful export
+
+Step 3: Wait for Simulation to Start
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Once data is exported, the model will begin running.
+- Watch for early rainfall values in the results window.
+  - Rainfall accumulation (e.g., ~0.1 in) will appear first.
+  - Ponded water will start appearing on the grid.
+  - Water will flow down streets and terrain according to the grid and infiltration settings.
+
+.. note::
+   Simulation results should show flow routing from rainfall across your modeled surface and toward low-lying areas.
+
+Wrap-up
+----------
+You’ve now saved your project, exported model inputs, and initiated a run using **Quick Run**. The next lesson will guide you through reviewing and visualizing your simulation results.
+
