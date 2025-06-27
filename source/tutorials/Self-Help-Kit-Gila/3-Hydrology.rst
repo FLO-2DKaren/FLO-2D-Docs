@@ -470,6 +470,87 @@ Infiltration - Assign Green and Ampt
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+   This lesson walks through the **Green-Ampt infiltration method** in FLO-2D, including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method. You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
+
+Step 1: Set Global Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the **Global Infiltration** tool.
+- Check **Green-Ampt**.
+- Recommended default values (inches/hour, inches):
+  - Initial Abstraction: ``0``
+  - Porosity: ``0.4``
+  - Hydraulic Conductivity: ``0.1``
+  - Initial Saturation: ``0.3``
+  - Final Saturation: ``1.0``
+  - Soil Suction: ``4``
+  - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
+- Click **OK**.
+
+Step 2: Load Land Use and Soil Shapefiles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Add land use and soil shapefiles (e.g., 2018 or 2023 Maricopa County).
+- Inspect attributes such as:
+  - ``initial abstraction``, ``impervious``, ``initial saturation``
+  - ``hydraulic conductivity (XKsat)``, ``soil depth``
+  - ``DTheta dry``, ``DTheta normal``, ``Psif``
+
+Step 3: Use the 2018 Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Run **Green-Ampt Calculator** (2018 version).
+- Input Fields:
+  - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
+  - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+- Leave ``Vegetative Cover`` unchecked.
+- Click **OK** to calculate.
+
+Step 4: Review the 2018 Manual Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
+- Uses area-weighted averages (no log scaling).
+- Global and local infiltration data will be stored in ``INFIL.DAT``.
+
+Step 5: Export Infiltration Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Ensure **Infiltration Switch** is ON in **Control Parameters**.
+- Click **Export DAT Files**.
+- Export only ``INFILTRATION`` and ``CONT.DAT``.
+
+Step 6: Use the 2023 Method
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Switch calculator to use 2023 soil shapefile.
+- Input Fields:
+  - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``, ``DTheta Normal``, ``DTheta Dry``, ``Psif``
+  - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+- Leave ``Vegetative Cover`` unchecked.
+- 2023 method uses:
+  - Log area average for XKsat and Psif
+  - Intersected DTheta from land use-soil overlay
+  - Maximum impervious value from both layers
+
+Step 7: Use SERGO and OpenStreetMap Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use **SERGO Downloader** to get soil components:
+  - Horizon, Fragmentation, Component layers
+- Use **OSM Downloader** to generate land use polygons:
+  - Raster images are vectorized based on color mapping.
+- Calculator reads attributes:
+  - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
+  - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
+
+Step 8: Verify Infiltration Attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Enable **Advanced Layers** in **FLO-2D Settings**.
+- Review attributes in **infiltration_results**:
+  - ``Hydraulic Conductivity``
+  - ``Soil Suction``
+  - ``DTheta``
+  - ``Initial Abstraction``
+  - ``Impervious``
+  - ``Soil Depth``
+
+.. note::
+   Always **re-sort by FID** before export to avoid misaligned data rows.
+
 Save Export and Run
 -----------------------
 
