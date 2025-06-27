@@ -222,7 +222,7 @@ Step 3: Understanding Rain on Grid
    Rain on grid works well for small projects. For large areas, use **spatial variability** (see below).
 
 Step 4: Sample a Rainfall Raster (Optional)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable rainfall**.
 
 - Drag your **24-hour rainfall raster** into QGIS.
