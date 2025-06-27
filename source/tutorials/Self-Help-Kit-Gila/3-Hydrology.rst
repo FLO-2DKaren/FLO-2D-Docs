@@ -269,8 +269,14 @@ You’ve now assigned both **uniform** and **spatially variable** rainfall to yo
 Infiltration - Assign SCS Curve Number
 -------------------------------------------
 
-Curve Number Infiltration Method
-=================================
+.. Important:: FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
+   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D. You will learn how to pull Curve Number values from land cover and soil data, manipulate those values, and apply them to your grid using either vector or raster formats.
 
@@ -358,14 +364,6 @@ You now know two ways to assign Curve Number infiltration data:
 
 Only one method is needed for your project.
 
-
-.. Important:: FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 Infiltration - Assign Horton
 -----------------------------------------------
