@@ -470,7 +470,8 @@ Infiltration - Assign Green and Ampt
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   This lesson walks through the **Green-Ampt infiltration method** in FLO-2D, including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method. You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
+
+This lesson walks through the **Green-Ampt infiltration method** in FLO-2D, including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method. You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
 
 Step 1: Set Global Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
