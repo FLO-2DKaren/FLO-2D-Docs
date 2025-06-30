@@ -87,7 +87,8 @@ Download Building Polygons
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
+   
+This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
 
 Step 1: Install the OSM Downloader Plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -181,6 +182,69 @@ Review and Assign Walls
    <iframe width="560" height="315" src="https://www.youtube.com/embed/EZGEPQZEs6A?si=RiECh45qLXuRhdHO"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This lesson reviews check files and model behavior after a full simulation including walls and buildings.
+We focus on understanding outputs and interpreting any warnings or adjustments made by FLO-2D after the simulation.
+
+Check File Review
+-----------------------------
+
+After running the model:
+
+- Check for the presence of updated `error.check` files. Some older ones may persist if not overwritten.
+- Confirm that levies are correctly defined. Messages in the check files may warn of adjustments or missing values.
+
+.. note::
+   If a `.check` file was not updated with a current timestamp, it's likely outdated.
+
+Review of Specific Files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**rf.dat**:
+- T-lines indicate total blockage by walls or buildings.
+- Reduction factor warnings may appear if `RIMP` (imperviousness) is less than the area reduction factor (ARF).
+  FLO-2D will adjust this internally to avoid instability.
+
+**levy.doap**:
+- Warns if grid elevation differences across walls or levies exceed 1 ft.
+- Often not critical unless you're modeling shallow Overland flow.
+
+**levy.fail**:
+- Lists grid elements where levies failed.
+- Failure can result from water depth exceeding threshold on a wall cell.
+
+**evacuated_fp.out**:
+- Identifies cells that dried out completely over time steps.
+- Check surrounding slope and surface conditions. May require adjusting Manning's `n` or assigning a spatial tolerance.
+
+**chan.elevation.check**:
+- Shows mismatches between bank elevation and floodplain elevation.
+- Positive values: channel bank is higher.
+- Negative values: floodplain is higher (may indicate perched banks).
+
+Interpreting Failures
+-----------------------------
+
+- Failures near project boundaries often result from unrealistic collection of water in corners or poorly placed walls.
+- Review in QGIS using the FLO-2D profile tool to inspect cross-sections.
+- Use street view if necessary to confirm if structures are above ground or have relief features.
+
+Tips
+~~~~~~~
+
+- Walls along the boundary may fail due to limited discharge options. Consider removing or adjusting them.
+- Buildings sitting higher than surrounding terrain (due to lidar artifacts) may affect wall performance.
+- Use elevation profile plots to determine validity of outliers.
+- Check the `levy_deficit.it.out` and `levy_do.out` for failure times and flow conditions.
+- The model may self-correct minor inconsistencies during runtime.
+
+.. tip::
+   Only take corrective action if errors are persistent or affect flood routing.
+
+Next Steps
+----------------
+
+We now move on to the **Mapping** lesson where simulation outputs like maximum depth and velocity vectors are imported and analyzed.
 
 Save Export and Run
 ------------------------
