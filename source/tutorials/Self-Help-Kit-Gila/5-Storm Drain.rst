@@ -86,7 +86,7 @@ Step 3: Documentation and Learning Resources
   - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
 
 
-  Step 4: Contact Support
+Step 4: Contact Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you get stuck
