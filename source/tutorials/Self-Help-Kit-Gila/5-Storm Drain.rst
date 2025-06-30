@@ -296,8 +296,8 @@ The following fields should be configured in the conduit shapefile:
 | `name`                 | String         | Unique identifier                           |
 | `inletoffset`          | Float          | Offset from upstream node                   |
 | `outletoffset`         | Float          | Offset from downstream node                 |
-| `shape`                | String (ALLCAPS)| Closed RECTANGLE, CIRCULAR, etc.           |
-| `barrels`             | Integer        | Number of parallel conduits                 |
+| `shape`                | String         | Closed RECTANGLE, CIRCULAR, etc.            |
+| `barrels`              | Integer        | Number of parallel conduits                 |
 | `geom1`                | Float          | Max depth (or diameter)                     |
 | `geom2`                | Float          | Width or other geometry parameter           |
 | `geom3`                | Float          | Side slope 1 (if applicable)                |
