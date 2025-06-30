@@ -271,12 +271,15 @@ Step 3: Add Inflow Hydrograph
 - Choose **"Add Inflow Time Series"**.
 
 You have two options:
-- **Steady Flow (Stepped) Hydrograph**
-  - Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).
-  - Sample time steps at 0.5-hr intervals until 10 hours.
-- **Imported Hydrograph**
-  - Copy a 6-hour inflow from your project folder (e.g., ``lesson2``).
-  - Paste values directly into the hydrograph table.
+
+- **Steady Flow (Stepped) Hydrograph**  
+  Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).  
+  Sample time steps at 0.5-hr intervals until 10 hours.
+
+- **Imported Hydrograph**  
+  Copy a 6-hour inflow from your project folder (e.g., ``lesson2``).  
+  Paste values directly into the hydrograph table.
+
 
 .. tip::
    Swap between hydrographs quickly by selecting a different record and **schematizing**.
