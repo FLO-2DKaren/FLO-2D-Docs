@@ -16,6 +16,32 @@ Backup and Reload
    <iframe width="560" height="315" src="https://www.youtube.com/embed/XrEn2obremk?si=NEYQSLH6de5jA-rT"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.
+
+Step 1: Backup Your Project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Save and close your **QGIS** project.
+- Navigate to your project directory.
+- Zip your GeoPackage project file.
+
+.. tip::
+   Name the backup descriptively.  
+   Example: ``backup_ready_for_channel.zip``
+
+- Move the backup into your **Backup Folder** for safekeeping.
+
+.. note::
+   This backup will be reused throughout the channel lessons:
+   - First example: **Importing from RAS**
+   - Second example: **Building channels manually**
+
+Step 2: Plugin Version Note
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- If you're using **FLO-2D Plugin 1.1.5**, skip this lesson and proceed directly to the RAS import lesson.
+
+Next Steps
+----------
+Now that your project is backed up and saved, you’re ready to begin importing **HEC-RAS** channel data in the next lesson.
 
 Build Channel and Schematize
 ----------------------------------
