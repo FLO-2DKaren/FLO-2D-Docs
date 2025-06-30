@@ -290,25 +290,28 @@ Key Fields and Attributes
 -------------------------
 The following fields should be configured in the conduit shapefile:
 
-+------------------------+----------------+----------------------------------+
-| Field Name             | Type           | Description                      |
-+========================+================+==================================+
-| `name`                | String         | Unique identifier                |
-| `inletoffset`         | Float          | Offset from upstream node        |
-| `outletoffset`        | Float          | Offset from downstream node      |
-| `shape`               | String (ALLCAPS)| Closed RECTANGLE, CIRCULAR, etc. |
-| `barrels`             | Integer        | Number of parallel conduits      |
-| `geom1`               | Float          | Max depth (or diameter)          |
-| `geom2`, `geom3`, etc.| Float          | Width, side slopes, etc.         |
-| `length`              | Float          | Length in feet or meters         |
-| `n_manning`           | Float          | Manning’s roughness coefficient  |
-| `initial_flow`        | Float          | Optional initial flow            |
-| `max_flow`            | Float          | Optional max flow                |
-| `entrance_loss`       | Float          | Entry loss coefficient           |
-| `exit_loss`           | Float          | Exit loss coefficient            |
-| `avg_loss`            | Float          | Average loss coefficient         |
-| `flapgate`            | Integer        | 0 (no flap) or 1 (with flap)     |
-+------------------------+----------------+----------------------------------+
++------------------------+----------------+---------------------------------------------+
+| Field Name             | Type           | Description                                 |
++========================+================+=============================================+
+| `name`                 | String         | Unique identifier                           |
+| `inletoffset`          | Float          | Offset from upstream node                   |
+| `outletoffset`         | Float          | Offset from downstream node                 |
+| `shape`                | String (ALLCAPS)| Closed RECTANGLE, CIRCULAR, etc.           |
+| `barrels`             | Integer        | Number of parallel conduits                 |
+| `geom1`                | Float          | Max depth (or diameter)                     |
+| `geom2`                | Float          | Width or other geometry parameter           |
+| `geom3`                | Float          | Side slope 1 (if applicable)                |
+| `geom4`                | Float          | Side slope 2 (if applicable)                |
+| `length`               | Float          | Length in feet or meters                    |
+| `n_manning`            | Float          | Manning’s roughness coefficient             |
+| `initial_flow`         | Float          | Optional initial flow                       |
+| `max_flow`             | Float          | Optional max flow                           |
+| `entrance_loss`        | Float          | Entry loss coefficient                      |
+| `exit_loss`            | Float          | Exit loss coefficient                       |
+| `avg_loss`             | Float          | Average loss coefficient                    |
+| `flapgate`             | Integer        | 0 (no flap) or 1 (with flap)                |
++------------------------+----------------+---------------------------------------------+
+
 
 .. note::
    Use the **Storm Drain Editor manual** or **SWMM GUI Help** to reference proper field definitions and recommended values.
