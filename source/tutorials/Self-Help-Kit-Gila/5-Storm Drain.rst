@@ -88,7 +88,7 @@ Step 3: Documentation and Learning Resources
 
   Step 4: Contact Support
 ~~~~~~~~~~~~~~~~~~~~~~~
-If you get stuck:
+If you get stuck
 
 - Contact FLO-2D support directly
 - Email format: ``<firstname>@flowtwd.com`` (e.g., karen@flowtwd.com or contact@flowtwd.com)
