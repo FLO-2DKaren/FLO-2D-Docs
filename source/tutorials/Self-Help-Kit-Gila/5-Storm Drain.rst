@@ -87,7 +87,8 @@ Step 3: Documentation and Learning Resources
 
 
   Step 4: Contact Support
-~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If you get stuck
 
 - Contact FLO-2D support directly
