@@ -275,6 +275,97 @@ Link Overview - Conduit
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+This lesson focuses on configuring **conduits** in the storm drain system. Conduits are polylines that connect nodes (e.g., inlets, junctions, outfalls), and are fully stored in the `.inp` file without an associated FLO-2D file.
+
+Open and Review the Conduit Attribute Table
+-------------------------------------------
+1. In QGIS, right-click on the **Conduits** layer and choose **Open Attribute Table**.
+2. Dock the table to work alongside the map.
+3. Note that conduits:
+   - Do not generate `.dat` files like `SWMMFLOW.DAT` or `SWMMOUTF.DAT`.
+   - Are entirely represented in the **SWMM .inp file**.
+
+Key Fields and Attributes
+-------------------------
+The following fields should be configured in the conduit shapefile:
+
++------------------------+----------------+----------------------------------+
+| Field Name             | Type           | Description                      |
++========================+================+==================================+
+| `name`                | String         | Unique identifier                |
+| `inletoffset`         | Float          | Offset from upstream node        |
+| `outletoffset`        | Float          | Offset from downstream node      |
+| `shape`               | String (ALLCAPS)| Closed RECTANGLE, CIRCULAR, etc. |
+| `barrels`             | Integer        | Number of parallel conduits      |
+| `geom1`               | Float          | Max depth (or diameter)          |
+| `geom2`, `geom3`, etc.| Float          | Width, side slopes, etc.         |
+| `length`              | Float          | Length in feet or meters         |
+| `n_manning`           | Float          | Manning’s roughness coefficient  |
+| `initial_flow`        | Float          | Optional initial flow            |
+| `max_flow`            | Float          | Optional max flow                |
+| `entrance_loss`       | Float          | Entry loss coefficient           |
+| `exit_loss`           | Float          | Exit loss coefficient            |
+| `avg_loss`            | Float          | Average loss coefficient         |
+| `flapgate`            | Integer        | 0 (no flap) or 1 (with flap)     |
++------------------------+----------------+----------------------------------+
+
+.. note::
+   Use the **Storm Drain Editor manual** or **SWMM GUI Help** to reference proper field definitions and recommended values.
+
+Tips on Flow Direction
+----------------------
+- Flow direction is determined by the digitized order of the polyline.
+- Use the **Advanced Digitizing Toolbar** in QGIS to flip flow direction with the **Reverse Line** tool.
+- Turn on **arrow symbology** to visualize flow direction:
+  - Right-click layer > Symbology > Line Symbol > Arrow
+
+.. tip::
+   Reversing a line also reverses all internal vertices, keeping topology intact.
+
+Checking Profiles and Connectivity
+----------------------------------
+Use the **Profile Tool** to visualize elevation and connectivity:
+1. Select a starting node and ending node.
+2. Plot the conduit profile.
+3. Observe invert elevations and slope direction.
+4. Check for backward conduits or improper connections.
+
+Minimum Length Guidelines
+-------------------------
+To maintain model stability:
+- The **minimum conduit length** should match or exceed the grid cell size.
+- For urban grids (typically 20 to 30 ft), no conduit should be shorter than the grid resolution.
+
+.. code-block:: python
+
+   # Example: Reset all conduits with length < 20 to 20
+   length < 20 → update to 20
+
+Setting Styles by Attributes
+----------------------------
+To visually inspect your network:
+- Use graduated symbology on conduit `length` or `geom1` (diameter).
+- Classify using color ramps for clearer mapping.
+
+Loss Coefficients and Flap Gates
+--------------------------------
+- Reference **SWMM GUI Help > Losses** for entrance/exit coefficient ranges.
+- **Flap Gate** set to 1 prevents backflow.
+
+.. important::
+   Entry/exit losses are applied to simulate energy loss at junctions and transitions.
+
+Final Notes
+-----------
+- Conduits form the backbone of your storm drain system.
+- Digitizing accuracy and attribute completeness are critical.
+- Double-check names, flow directions, and invert elevations.
+
+Next Lesson
+-----------
+The next video will cover: **Pumps, Orifices, and Weirs**
+
 Link Overview - Pump, Orifice, Weir
 ------------------------------------------
 
