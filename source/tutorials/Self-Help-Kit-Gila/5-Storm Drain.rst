@@ -378,7 +378,7 @@ Link Overview - Pump, Orifice, Weir
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   This lesson explains the setup and attributes for **pumps**, **orifices**, and **weirs** in the storm drain system using QGIS and the EPA SWMM interface.
+This lesson explains the setup and attributes for **pumps**, **orifices**, and **weirs** in the storm drain system using QGIS and the EPA SWMM interface.
 
 Pumps
 -----
@@ -471,6 +471,72 @@ Create a Storm Drain from Shapefiles
    <iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+
+This lesson walks through building an entire storm drain system from shapefiles, defining rating tables, storage units, and pump curves, and then running the simulation.
+
+Step 1: Load Shapefiles
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the **Advanced Storm Drain Layers** folder.
+- Drag and drop the appropriate shapefiles into QGIS.
+- Do **not** add them to the GeoPackage. Keep them in the User Layers.
+- Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
+
+Step 2: Assign Shapefile Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
+
+- Point layers like inlets, outfalls, and storage units will show up in the dropdown.
+- Assign each required field from the shapefile attributes:
+  - Example: `Inlet Name` → `name`, `Type` → `type`, etc.
+- Turn off unused or null-value fields to avoid unnecessary entries.
+
+Step 3: Assign Nodes to Links
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click the **Auto-Assign Links and Nodes** button.
+
+- This assigns start and end nodes to each conduit.
+- Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.
+
+.. warning::
+   - Make sure conduit directions are correct using the **Reverse Line Tool** in the **Advanced Digitizing Toolbar**.
+   - Use the **Snapping Tool** to ensure precise vertex-node connections.
+
+Step 4: Add Type 4 Rating Tables and Culverts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Go to the **Type 4 Table Editor**.
+- Import rating tables or culvert equations for each type 4 inlet.
+- File names must match inlet names (e.g., ``41.txt`` for inlet 41).
+- Format for rating tables: Depth on the left, Discharge on the right.
+
+Step 5: Add Pump Curve Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Add a pump curve via the Pump Table interface.
+- Name it to match the pump (e.g., ``P1``).
+- Enter a depth-discharge pair (e.g., ``1,10``, ``2,20``).
+- Data is saved automatically when you click off the cell.
+
+Step 6: Add Storage Unit Curves
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open **Storage Units** attribute table.
+- Use the **FLO-2D Info Tool** to open the storage curve editor.
+- Import a tab-delimited text file or paste Excel values.
+
+Step 7: Set Storm Drain Control Parameters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Set the **start and end time** of your simulation (e.g., 10 hours).
+- Ensure it matches any time series used.
+- Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
+- Leave advanced defaults unless needed.
+
+Step 8: Schematize and Run
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
+- Click **Quick Run** to simulate.
+- Output files will populate your designated folder.
+
+.. tip::
+   If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
 
 Summary and Review Results
 ---------------------------
