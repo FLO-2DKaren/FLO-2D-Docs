@@ -34,7 +34,7 @@ Data and Resources
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.
+This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.
 
 Step 1: Import Storm Drain Shapefiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,6 +108,85 @@ Node Overview - Inlet, Junction
    <iframe width="560" height="315" src="https://www.youtube.com/embed/KzIdcyYZKpQ?si=a3u6R2X0fQH_HiuQ"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
+
+Step 1: Storm Drain Feature Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
+- **Polyline features** (links): conduits, pumps, orifices
+
+Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
+
+Step 2: Documentation References
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Storm Drain Editor Manual** (Chapter 2) to understand inlet types:
+  - Type 0: Junction (no interaction with surface)
+  - Type 1: Curb opening
+  - Type 2: Curb with gutter
+  - Type 3: Grate
+  - Type 4: Unique (e.g. headwall)
+  - Type 5: Manhole
+
+Step 3: Reviewing Node Attributes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Open the shapefile table for inlets and junctions in QGIS.
+
+- **Required attributes** (vary by type):
+  - ``Name``: Must start with "I" for inlets
+  - ``Type``: Integer (0 to 5)
+  - ``Elevation``: Invert elevation
+  - ``Max Depth``: From surface to invert
+  - ``Length``, ``Width``, ``Perimeter``, ``Area``, ``Height``: As required per type
+  - ``Weir Coefficient``
+  - ``Feature Switch``: 0 (rim), 1 (invert), or 2 (special conditions)
+  - Optional: ``Curb Height``, ``Clog Factor``, ``Clog Time``, ``Dropbox Area``
+
+Step 4: Understanding Specific Types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Type 0: Junction**
+- No surface interaction
+- Requires only invert elevation and max depth
+
+**Type 1: Curb Opening**
+- Requires: Length, Height, Weir Coefficient
+- Does not include sag or width
+
+**Type 2: Curb with Gutter**
+- Requires: Length, Width (sag), Height, Weir Coefficient
+- Optional: Curb Height, Dropbox Area
+
+**Type 3: Grate**
+- Requires: Perimeter, Area, Sag (optional), Weir Coefficient
+- Often used in depressed road areas
+
+**Type 4: Unique (Headwall)**
+- Requires: Invert Elevation, Max Depth
+- ``Feature Switch = 1`` sets grid elevation to invert
+- Used for channel interfaces or direct inflow control
+
+**Type 5: Manhole**
+- Requires: Invert Elevation, Max Depth, Perimeter, Area, Surcharge Depth, Weir Coefficient
+- Acts like a junction until surcharge pops the lid
+- Allows bidirectional flow once popped
+
+Step 5: Visualization Tips
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use **categorized symbology** to color nodes by inlet type
+- Use **Zoom to Feature** and satellite imagery to verify node alignment
+- Position nodes carefully relative to grid elements for accurate simulation
+
+Step 6: Unit Notes
+~~~~~~~~~~~~~~~~~~~~~~~~
+- All dimensions in **feet**
+- Clogging factor is a **percentage (0-1)**
+- Clogging time is in **hours**
+
+Wrap-up
+-------
+This lesson focused on how to interpret and verify inlet and junction attributes using shapefile data. Proper definition ensures realistic storm drain and surface flow interactions.
 
 Node Overview - Outfall, Storage Unit
 ------------------------------------------
