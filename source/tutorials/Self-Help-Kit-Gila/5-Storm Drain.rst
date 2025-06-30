@@ -378,6 +378,91 @@ Link Overview - Pump, Orifice, Weir
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+   This lesson explains the setup and attributes for **pumps**, **orifices**, and **weirs** in the storm drain system using QGIS and the EPA SWMM interface.
+
+Pumps
+-----
+
+To view and configure pump data:
+
+1. Right-click the **Pumps** layer and select **Open Attribute Table**.
+2. Dock the table for easier viewing.
+
+Pump fields:
+
++-------------------+----------+----------------------------------------+
+| Field             | Type     | Description                            |
++===================+==========+========================================+
+| `name`            | String   | Unique pump name                       |
+| `init_status`     | String   | "ON" or "OFF"                          |
+| `start_depth`     | Float    | Starting water depth to activate pump  |
+| `shutoff_depth`   | Float    | Depth to stop pump                     |
+| `curve_name`      | String   | Name of the associated pump curve      |
+| `pump_type`       | String   | Type of pump: IDEAL, TYPE1-4           |
++-------------------+----------+----------------------------------------+
+
+Pump types:
+- **IDEAL**: Transfers all flow from inlet to outlet (design only).
+- **TYPE 1**: Offline, staged, requires wet well.
+- **TYPE 2**: Inline, stepped flow.
+- **TYPE 3**: Head/flow differential.
+- **TYPE 4**: Flow-depth, continuous.
+
+.. note::
+   Set up the pump in the storm drain editor first, then assign the curve data in the **Pump Curves** table.
+
+Orifices
+--------
+
+Orifices are typically underground restrictions connected to manholes or other subsurface elements.
+
++-----------------------+----------+------------------------------------------------+
+| Field                 | Type     | Description                                    |
++=======================+=========+=================================================+
+| `name`                | String   | Unique orifice name                            |
+| `type`                | String   | "SIDE" or "BOTTOM"                             |
+| `shape`               | String   | "CIRCULAR" or "RECTANGULAR"                    |
+| `height`              | Float    | Height of orifice opening                      |
+| `width`               | Float    | Width of opening (for RECTANGULAR)             |
+| `inlet_offset`        | Float    | Distance from invert to orifice opening        |
+| `q_coeff`             | Float    | Discharge coefficient                          |
+| `flap_gate`           | Integer  | 0 or 1 (flap gate on/off)                      |
+| `open_close_time`     | Float    | Optional: time to open or close in hours       |
++-----------------------+----------+------------------------------------------------+
+
+Weirs
+-----
+
+Weirs are usually surface-connected structures (rare underground). Always verify usage.
+
++-----------------------+----------+------------------------------------------------+
+| Field                 | Type     | Description                                    |
++========================+==========+===============================================+
+| `name`                | String   | Unique weir name                               |
+| `type`                | String   | TRANSVERSE, SIDEFLOW, V-NOTCH, TRAPEZOIDAL     |
+| `height`              | Float    | Height of opening                              |
+| `length`              | Float    | Length of weir opening                         |
+| `side_slope`          | Float    | Slope of trapezoidal shape                     |
+| `inlet_offset`        | Float    | Elevation offset from structure invert         |
+| `q_coeff`             | Float    | Discharge coefficient                          |
+| `flap_gate`           | Integer  | 0 or 1 (flap gate status)                      |
+| `contraction_coeff`   | Float    | Optional contraction coefficient               |
++-----------------------+----------+------------------------------------------------+
+
+.. caution::
+   Weirs are typically not used in FLO-2D storm drain systems. If one appears in an `.inp` file, confirm its purpose. May need to be removed if inherited from surface modeling software.
+
+Review Tips
+-----------
+- Use the **EPA SWMM GUI** to preview expected inputs and verify how fields work together.
+- Field types and required formats should follow SWMM rules.
+- Curves (for pumps and orifices) are configured in a separate step.
+
+Next Step
+---------
+Continue with the next lesson: **Setting Up Storm Drain Curves**
+
+
 Create a Storm Drain from Shapefiles
 ------------------------------------
 
