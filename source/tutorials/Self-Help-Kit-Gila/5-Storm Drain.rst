@@ -34,6 +34,72 @@ Data and Resources
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+   This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.
+
+Step 1: Import Storm Drain Shapefiles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Load storm drain shapefiles into your project.
+- Sort files by type and select those labeled as **shapefiles**.
+- Drag and drop into a **Storm Drain** group in your QGIS layer panel.
+
+Step 2: Understanding FLO-2D Storm Drain Logic
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- FLO-2D handles most drainage through the **surface model**:
+  - Channels and detention basins are modeled at the surface.
+  - Inlets and outfalls interface with the surface system.
+
+.. note::
+   You do **not** need subcatchments, rain gauges, or separate infiltration models like in SWMM.
+
+- Storm drains receive water from:
+  - Streets and inlets (inflow)
+  - Outfalls discharge to channels or basins (outflow)
+
+Step 3: Documentation and Learning Resources
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- FLO-2D provides built-in documentation:
+
+  **Storm Drain Editor Manual**
+  - Located in the installation directory under ``FLO-2D > Manuals`` or via the **book icon** in the editor.
+  - Key Chapters:
+    - Chapter 2: Inlet data types
+    - Chapter 3: Output file structure
+    - Chapter 4: Setup guidelines
+    - Chapter 5: Troubleshooting
+    - Chapter 6: How to review your storm drain model
+
+  **Advanced Tutorial**
+  - Found on YouTube under the *New Self-Help Kit* playlist
+
+  **EPA SWMM GUI**
+  - Installed alongside FLO-2D
+  - Use for pump setups, advanced SWMM elements, and additional documentation
+
+  **OpenSWMM.org**
+  - A knowledge base and community forum with examples, questions, and shared resources.
+
+  **ChatGPT**
+  - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
+  - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
+
+Step 4: Contact Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you get stuck:
+- Contact FLO-2D support directly
+- Email format: ``<firstname>@flowtwd.com``  
+  (e.g., karen@flowtwd.com or contact@flowtwd.com)
+- Use the **Contact Form** on the FLO-2D website for additional help
+
+Wrap-up
+-------
+In this lesson, you’ve:
+- Imported storm drain shapefiles
+- Reviewed the role of inlets and outfalls
+- Accessed documentation and training resources
+
+Next lesson: Review and edit storm drain shape file attributes.
+
+
 Node Overview - Inlet, Junction
 ----------------------------------
 
