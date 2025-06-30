@@ -251,6 +251,68 @@ Add a Boundary Control
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+In this lesson, you’ll assign **inflow and outflow boundary conditions** to your FLO-2D channel model using both steady and time-series hydrographs.
+
+Step 1: Turn Off Unused Layers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Turn off user layers to reduce visual clutter.
+- Focus on your **schematized cross-sections** and channel grid.
+
+Step 2: Create Upstream Inflow Point
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the **Boundary Editor** and click **Create**.
+- Select the upstream grid element at the head of your channel.
+- Click **OK**, then click the new boundary marker again to save.
+
+Step 3: Add Inflow Hydrograph
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Set the boundary type to **Channel**.
+- Choose **"Add Inflow Time Series"**.
+
+You have two options:
+- **Steady Flow (Stepped) Hydrograph**:
+  - Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).
+  - Sample time steps at 0.5-hr intervals until 10 hours.
+- **Imported Hydrograph**:
+  - Copy a 6-hour inflow from your project folder (e.g., ``lesson2``).
+  - Paste values directly into the hydrograph table.
+
+.. tip::
+   Swap between hydrographs quickly by selecting a different record and **schematizing**.
+
+Step 4: Create Downstream Outflow Point
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click the **Boundary Editor** again and select the **last grid element**.
+- Click to confirm, then click the marker again to save.
+
+- Name the boundary (e.g., ``Greenway_out``).
+- Set type to **Floodplain and Channel Outflow**.
+- No hydrograph is required.
+
+Step 5: Schematize and Export
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click **Schematize** to generate boundary files.
+- Use **Export DAT Files** to save your project.
+
+Files updated:
+- ``INFLOW.DAT``: now includes the new stepped hydrograph.
+- ``CHAN.DAT``, ``CHANBANK.DAT``, ``CHANCOND.DAT``, ``CHANROUGH.DAT``: standard channel outputs.
+
+Step 6: Run a Simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click **Run FLO-2D** to test the boundary setup.
+- If the simulation starts successfully, your boundary conditions are valid.
+
+.. note::
+   Water enters the channel from the upstream **cross-section**, not the grid element.  
+   If the flow overtops the channel, it will exit via floodplain outflow.
+
+Wrap-up
+-------
+You’ve now defined channel inflow and outflow conditions. You’re ready to move on to adding hydraulic structures in the next lesson.
+
+
 Add Culverts
 -------------------
 
