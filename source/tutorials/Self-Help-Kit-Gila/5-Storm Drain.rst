@@ -343,7 +343,7 @@ To maintain model stability:
 .. code-block:: python
 
    # Example: Reset all conduits with length < 20 to 20
-   length < 20 → update to 20
+   length < 20 = update to 20
 
 Setting Styles by Attributes
 ----------------------------
