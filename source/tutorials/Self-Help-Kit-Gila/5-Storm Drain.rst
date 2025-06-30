@@ -203,6 +203,69 @@ Node Overview - Outfall, Storage Unit
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+
+This lesson explains how to review and configure outfalls and storage units in your storm drain shapefiles.
+
+Outfalls
+--------
+
+Outfalls are point features representing discharge points from the storm drain network. To open the outfall data:
+
+- Right-click the **Outfalls** layer and select **Open Attribute Table**.
+- Dock the table for convenience.
+
+Key Attributes for Outfalls:
+
+- **Name**: Should begin with "O" (e.g., `O1`, `O2`) for clarity.
+- **Invert Elevation**: Elevation where flow exits.
+- **Flap Gate**: `True` or `False`. Controls whether backflow is allowed.
+- **Allow Q**: `1` = yes, interfaces with FLO-2D; `0` = no interface.
+- **Outfall Type**: Options include:
+  - `FREE`: Free discharge
+  - `NORMAL`: Controlled by downstream conditions
+  - `FIXED`: Fixed stage elevation
+  - `TIDAL_CURVE`: Elevation changes with time
+  - `TIME_SERIES`: Stage varies over time
+
+.. note::
+   When connecting an outfall to a channel, always assign it to the **left bank looking downstream**, even if physically placed on the right.
+
+Examples:
+- Outfalls located outside the grid should have `Allow Q` set to `0`.
+- Tidal or fixed outfalls must define a corresponding elevation, curve, or time series.
+
+Storage Units
+-------------
+
+Storage units in FLO-2D are used for **closed systems** like tanks or underground vaults.
+
+Open the **Storage Units** layer:
+- Right-click and select **Open Attribute Table**
+- Dock the table for visibility
+
+Valid Attributes for Storage Units:
+
+- **Name**: Unique identifier
+- **Invert Elevation**: Bottom elevation of the storage unit
+- **Max Depth**: Maximum storage depth
+- **Initial Depth** *(optional)*
+- **Storage Curve**: Define a depth-volume relationship (tabular curve only)
+
+Unsupported Features:
+
+- No **infiltration**, **evaporation**, or **ponded area**
+- These values must exist in the `.inp` file but can be left blank or zero
+
+.. note::
+   FLO-2D does not support surface ponding or infiltration via storage units. Use the grid system for those interactions.
+
+Where to Learn More
+-------------------
+
+- Check the **Storm Drain Manual** for outfall and storage unit setup
+- Use the **EPA SWMM GUI** to understand field definitions
+- FLO-2D only uses closed storage systems in the storm drain module
+
 Link Overview - Conduit
 -----------------------------
 
