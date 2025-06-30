@@ -16,7 +16,9 @@ Backup and Reload
    <iframe width="560" height="315" src="https://www.youtube.com/embed/XrEn2obremk?si=NEYQSLH6de5jA-rT"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.
+   
+   
+This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.
 
 Step 1: Backup Your Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -188,6 +190,57 @@ Bank Align and Interpolate
    <iframe width="560" height="315" src="https://www.youtube.com/embed/ManhJIY0_1A?si=pqqV0H79lHIeTHg9"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+In this lesson, you’ll learn how to refine your left and right bank channel alignments and perform a test simulation to validate your model setup.
+
+Step 1: Review Bank Alignment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Vertex Tool** to adjust left and right bank lines.
+- Goals:
+  - Avoid backyards and buildings
+  - Ensure the channel spans **at least three grid elements**
+  - Maintain **crossing lines** between left and right banks
+
+.. tip::
+   Keep banks away from grid edges and channel transitions if possible.
+
+Step 2: Schematize and Interpolate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click **Schematize Channel** to commit updated geometry.
+- Then use the **Interpolate Channel** tool to regenerate elevation stations between cross-sections.
+
+.. note::
+   If a cross-section has fewer than 6 stations, an error will appear.
+
+Step 3: Use the Geometry Checker
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- After interpolation, click **Check Channel Geometry**:
+  - It will verify minimum spacing and floodplain surface area.
+  - Click error messages to locate problematic cross-sections or elements.
+
+- Adjust vertex positions as needed to resolve errors.
+- Re-schematize and interpolate again.
+
+Step 4: Final Save and Verification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Save both the **bank lines** and **cross-section layers**.
+- Verify that your cross-sections still contain elevation data.
+
+Step 5: Export and Run Test Simulation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Export DAT files using **Export DAT Files** tool.
+- Overwrite the files in your test folder if needed.
+- Launch **FLO-2D Pro** to run the simulation.
+
+.. tip::
+   You’re only validating **channel geometry**, not full model results.
+   A successful run here indicates channel alignment and schematization passed.
+
+Wrap-up
+-------
+With a successful test run, your channels are now aligned, interpolated, and validated. You’re ready to move on to **boundary conditions** and **culverts** in the next lesson.
+
 
 Add a Boundary Control
 ----------------------------
