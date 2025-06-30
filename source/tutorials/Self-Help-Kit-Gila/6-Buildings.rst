@@ -254,3 +254,56 @@ Save Export and Run
    <iframe width="560" height="315" src="https://www.youtube.com/embed/gdzmKSlocsE?si=uyVPzthJHeAiQ6iS"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+   This lesson walks through saving the FLO-2D project, exporting the required data, troubleshooting errors, and running the simulation.
+
+Step 1: Clean the Map
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Right-click and remove temporary or unused layers before saving.
+- If data hasn’t been committed to the GeoPackage, you can remove it by **Right-click > Remove Group**.
+
+Step 2: Save Your Project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click the **Save Project** button to preserve edits and store current data in the `.gpkg`.
+
+.. note::
+   If you already saved the project earlier, some data might already be in the GeoPackage.
+
+Step 3: Export and Run the Model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. **Export the Project Data**
+   - Click the **Export** button.
+   - Confirm export of the **IMP** file when prompted.
+
+2. **Run the Model**
+   - After export, the path should be set automatically.
+   - Click **Run** to begin simulation.
+
+.. warning::
+   If you receive an error on run, open the `error.check` files to investigate.
+
+Step 4: Troubleshoot Errors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Example Error: “Channel extends through a levy at Bank 5528”
+- Solution:
+  1. Use the **Vertex Editor** to reposition the levy line so it does not overlap the channel.
+  2. Click **Save**.
+  3. Recalculate the levy using the **Levy Tool**.
+
+Step 5: Re-export and Rerun
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Use **Export > Select only Levy data** to replace the corrected `.dat` file.
+- Click **Run** again to verify the error is resolved.
+
+.. tip::
+   Once the model runs successfully, you can proceed to the summary and data review steps.
+
+Final Notes
+-----------------------------
+- This step completes the build-and-run process for the current project.
+- Always check `.check` files if errors occur.
+- Focus first on correcting spatial data (like levies or channels) rather than complex rebuilds.
