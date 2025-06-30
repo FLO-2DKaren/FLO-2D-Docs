@@ -87,6 +87,91 @@ Download Building Polygons
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+   This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
+
+Step 1: Install the OSM Downloader Plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Go to **Plugins > Manage and Install Plugins**.
+- Search for **OSM Downloader**.
+- Click **Install**.
+
+.. tip::
+   The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.
+
+Step 2: Prepare the Layer Group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Right-click in the Layers panel and **Add Group**.
+- Name it ``osm_download``.
+
+Step 3: Download Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Activate the **OSM Downloader tool**.
+- Draw a rectangle around your project area.
+- Save the file with a clear name like ``osm_file.geojson``.
+- The data is downloaded in EPSG:4326 and will be reprojected later.
+
+Step 4: Export Polygons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Turn off unnecessary OSM sublayers (e.g., roads).
+- Right-click the **polygons** layer > **Export > Save Features As...**
+- Save as ``osm_buildings``.
+- Change the CRS to your project CRS (e.g., EPSG:2223).
+- Remove irrelevant fields before exporting.
+
+Step 5: Filter for Buildings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the attribute table.
+- Sort by the ``building`` field.
+- Select rows where ``building`` is null or empty and delete them.
+- Save your edits.
+
+Step 6: Crop to Project Boundary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use **Select by Location**:
+  - Select features from ``osm_buildings``.
+  - Where the feature is **within** the computational domain layer.
+- Delete unselected features (those outside your project area).
+
+Step 7: Clean Building Types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Review building types.
+- Delete features such as ``carports``, ``gas islands``, etc., which don’t obstruct flow.
+
+Step 8: Add Required Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Add the following integer fields:
+  - ``collapse``
+  - ``ARF`` (Area Reduction Factor)
+  - ``WORF`` (Width Reduction Factor)
+- Use the **Field Calculator** to:
+  - Set ``collapse = 0``
+  - Set ``ARF = 1``
+  - Set ``WORF = 0``
+
+Step 9: Fill in Missing Buildings (Optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Turn on a satellite basemap (e.g., Google Satellite).
+- Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
+  - Digitize missing buildings.
+  - Use ``Rectangle from Extent`` for fast creation.
+  - Use ``Digitize with Segment`` for complex shapes.
+
+Step 10: Export the Final Building Layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Save your edited buildings as a new layer if desired.
+- This layer can now be used with the **Grid Tools > Assign Buildings** tool.
+
+Step 11: Review the `ARF.DAT` File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- After exporting building reductions, open ``arf.dat`` in Notepad++.
+- Key sections:
+  - ``G`` line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
+  - ``T`` lines: fully blocked cells.
+  - ``P`` lines: partial blocks with ARF values < 1.0.
+
+.. tip::
+   The model will automatically convert cells with high ARF values (e.g., > 0.95) to fully blocked.
+
 
 Review and Assign Walls
 ------------------------
