@@ -51,7 +51,7 @@ Build Channel and Schematize
    <iframe width="560" height="315" src="https://www.youtube.com/embed/x1QEP2ggYT0?si=j14aMbvgx_k7jmTq"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-   
+
    
 This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data. You will digitize channel banks and cross-sections, schematize them, and validate the geometry.
 
@@ -120,6 +120,65 @@ Sample Elevation and Schematize
    <iframe width="560" height="315" src="https://www.youtube.com/embed/5zbBC4WX69Y?si=5htZE_KO2zimBE5a"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+   
+This lesson walks through how to sample and refine elevation data for your FLO-2D cross-sections after schematizing your channel geometry.
+
+Step 1: Backup Your Channel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Create a backup of your project before making changes.
+- Example: ``backup_ready_to_sample_channel_elevation.zip``
+
+Step 2: Rename Cross-Sections by Segment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the **Attribute Table** of the cross-section layer.
+- Use the **Field Calculator** to concatenate names:
+  - Format: ``G1-0``, ``G2-1``, etc.
+- Assign each set to a unique segment (G1, G2, G3).
+
+.. note::
+   Use the plugin’s **Save** button to commit changes — **not** the QGIS save button.
+
+Step 3: Sample Elevation Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the cross-section editor.
+- Select **Sample All** to gather elevation data from the grid DEM.
+- Elevation is sampled from the **first to last vertex** of each cross-section.
+
+Step 4: Review Cross-Section Profiles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **scroll wheel** to cycle through each profile.
+- Look for elevation anomalies or errors (jagged shapes, false dips).
+- Adjust vertices using the **Vertex Tool**:
+  - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
+  - Click **Sample Single** to resample after adjustment.
+
+.. tip::
+   Use Enter to confirm sampling instead of clicking "Yes" repeatedly.
+
+Step 5: Repair Bad Cross-Sections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- If a cross-section samples poor data:
+  - Move the vertex away from overlapping features (like inlets or retaining walls).
+  - Resample and check again.
+
+- Keep cross-sections **perpendicular** and well-positioned.
+- Avoid overlapping nearby features or boundary limits.
+
+Step 6: Add Missing Cross-Sections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- If a **transition is missing**, add a cross-section manually:
+  - Use the **Cross-Section Tool**
+  - Draw a new line and click **Save**
+  - Rename it (e.g., “new”) before schematizing
+  - Run **Schematize** to properly place it in order
+
+.. note::
+   You can delete schema data before re-schematizing if needed.
+
+Wrap-up
+-------
+Your cross-sections are now properly named, sampled, and refined with correct elevation data. All issues (placement, sampling anomalies, missing transitions) should be resolved before continuing.
 
 Bank Align and Interpolate
 ----------------------------
