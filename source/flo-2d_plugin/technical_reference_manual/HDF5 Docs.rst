@@ -220,7 +220,7 @@ Dynamic breach using Fread BREACH method.
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO097a.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO098.png
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO097.png
 
 Levee Failure Curve
 ~~~~~~~~~~~~~~~~~~~
@@ -229,7 +229,6 @@ User-defined breach progression using curve data.
 Rainfall
 --------
 
-.. _global-1:
 
 Uniform Rainfall
 ~~~~~~~~~~~~~~~~
@@ -321,7 +320,7 @@ Used for advanced mud/debris flow simulations.
 Spatially Variable
 -------------------
 
-The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding *.DAT file in the Data Input Manual.
+The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding \*.DAT file in the Data Input Manual.
 
 **FPFROUDE**  
 *Corresponds to:* `FPFROUDE.DAT`
