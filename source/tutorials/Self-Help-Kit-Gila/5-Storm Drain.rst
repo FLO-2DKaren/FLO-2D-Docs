@@ -59,14 +59,17 @@ Step 3: Documentation and Learning Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - FLO-2D provides built-in documentation:
 
-  **Storm Drain Editor Manual**
-  - Located in the installation directory under ``FLO-2D > Manuals`` or via the **book icon** in the editor.
-  - Key Chapters:
-    - Chapter 2: Inlet data types
-    - Chapter 3: Output file structure
-    - Chapter 4: Setup guidelines
-    - Chapter 5: Troubleshooting
-    - Chapter 6: How to review your storm drain model
+
+    **Storm Drain Editor Manual**
+
+- Located in the installation directory under ``FLO-2D > Manuals`` or via the **book icon** in the editor.
+- Key Chapters:
+  - Chapter 2: Inlet data types
+  - Chapter 3: Output file structure
+  - Chapter 4: Setup guidelines
+  - Chapter 5: Troubleshooting
+  - Chapter 6: How to review your storm drain model
+
 
   **Advanced Tutorial**
   - Found on YouTube under the *New Self-Help Kit* playlist
@@ -82,13 +85,15 @@ Step 3: Documentation and Learning Resources
   - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
   - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
 
-Step 4: Contact Support
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Step 4: Contact Support
+~~~~~~~~~~~~~~~~~~~~~~~
 If you get stuck:
+
 - Contact FLO-2D support directly
-- Email format: ``<firstname>@flowtwd.com``  
-  (e.g., karen@flowtwd.com or contact@flowtwd.com)
+- Email format: ``<firstname>@flowtwd.com`` (e.g., karen@flowtwd.com or contact@flowtwd.com)
 - Use the **Contact Form** on the FLO-2D website for additional help
+
 
 Wrap-up
 -------
