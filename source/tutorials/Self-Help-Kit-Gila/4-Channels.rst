@@ -51,6 +51,66 @@ Build Channel and Schematize
    <iframe width="560" height="315" src="https://www.youtube.com/embed/x1QEP2ggYT0?si=j14aMbvgx_k7jmTq"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   
+   
+This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data. You will digitize channel banks and cross-sections, schematize them, and validate the geometry.
+
+Step 1: Load Guidance Layers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Import reference layers (left bank, right bank, cross-sections).
+- Use these layers as **visual guides only**.
+- Update colors for visibility:
+  - Left Bank: Cyan
+  - Right Bank: Magenta
+  - Cross-Sections: Navy
+
+Step 2: Draw Left and Right Banks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Activate editing on the **channel bank** layer.
+- Use **"Add Line Feature"** and set to **Digitize with Segment**.
+- Draw each channel segment **Upstream to Downstream**.
+- Typical limiters: ``0.9`` (supercritical), ``0.2`` (width).
+
+.. tip::
+   Use satellite imagery and elevation contours to align your lines.
+   Use consistent start and end locations across segments.
+
+Step 3: Save and Review Bank Lines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Save frequently during edits.
+- Check that both **Left** and **Right** banks are aligned and positioned properly.
+
+Step 4: Add Cross-Sections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Cross-Section Editor**.
+- Digitize cross-sections from **Left to Right bank**.
+- Ensure both ends and the crossing lie within the same grid element.
+
+.. note::
+   You only need ~6 cross-sections per channel segment in uniform channels.
+
+Step 5: Save and Schematize
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Cross-Section Save Button** (not the QGIS save button) to trigger correct processing.
+- Cross-sections will initially have placeholder elevation data.
+
+Click **Schematize Channel** to validate geometry:
+- Errors such as "bank and cross-section not in same grid cell" will be reported.
+- Adjust vertex positions with the **Vertex Tool** to fix errors.
+
+Step 6: Review Schematic Summary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Open the **Log Messages Panel**.
+- You’ll see a count of cross-sections per segment and interpolated ones added.
+
+.. tip::
+   Fix spacing and other geometry refinements in the next step.
+
+Wrap-up
+-------
+You’ve now digitized bank lines and cross-sections and successfully schematized your FLO-2D channel.
+
+Next up: Assign elevation data to your cross-sections.
 
 Sample Elevation and Schematize
 -------------------------------------
