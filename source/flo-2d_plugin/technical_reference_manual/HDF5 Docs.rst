@@ -258,14 +258,31 @@ Note: IRAINDUM table is organized by grid columns x time rows.
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO081.png
 
 Storm Drain
------------
+----------------
 
-[Add table references when available.]
+The storm drain data for HDF5 can be cross referenced to the storm drain files in the Data Input Manual.   All other data is saved to the SWMM.INP and
+SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following tables:
+
+*Corresponds to:* `SWMMFLO.DAT`, `SWMMOUTF.DAT`, `SWMMRT.DAT`, `SWMMFLODROPBOX.DAT`, `SDCLOGGING.DAT`
+
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO101.png
+
+SWMMFLO.DAT
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO100.png
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO102.png
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO104.png
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO103.png
+
 
 Multiple Channel
 ----------------
 
-Defines interactions for multi-channel domains.
+*Corresponds to:* `MULT.DAT`, `SIMPLE_MULT.DAT`
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO074.png
 
@@ -290,4 +307,36 @@ Tailings
 
 Used for advanced mud/debris flow simulations.
 
+**TAILINGS**  
+*Corresponds to:* `TAILINGS.DAT`
+
+**TAILINGS_CV**  
+*Corresponds to:* `TAILINGS_CV.DAT`
+
+**TAILINGS_STACK_DEPTH**  
+*Corresponds to:* `TAILINGS_STACK_DEPTH.DAT`
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO095.png
+
+Spatially Variable
+-------------------
+
+The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding *.DAT file in the Data Input Manual.
+
+**FPFROUDE**  
+*Corresponds to:* `FPFROUDE.DAT`
+
+**LID_VOLUME**  
+*Corresponds to:* `LID_VOLUME.DAT`
+
+**SHALLOWN_SPATIAL**  
+*Corresponds to:* `SHALLOWN_SPATIAL.DAT`
+
+**STEEPSLOPEN**  
+*Corresponds to:* `STEEP_SLOPEN.DAT`
+
+**TOLSPATIAL**  
+*Corresponds to:* `TOLSPATIAL.DAT`
+
+.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO094.png
+
