@@ -203,7 +203,7 @@ Review of Specific Files
 **rf.dat**:
 - T-lines indicate total blockage by walls or buildings.
 - Reduction factor warnings may appear if `RIMP` (imperviousness) is less than the area reduction factor (ARF).
-  FLO-2D will adjust this internally to avoid instability.
+- FLO-2D will adjust this internally to avoid instability.
 
 **levy.doap**:
 - Warns if grid elevation differences across walls or levies exceed 1 ft.
@@ -256,7 +256,7 @@ Save Export and Run
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This lesson walks through saving the FLO-2D project, exporting the required data, troubleshooting errors, and running the simulation.
+This lesson walks through saving the FLO-2D project, exporting the required data, troubleshooting errors, and running the simulation.
 
 Step 1: Clean the Map
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
