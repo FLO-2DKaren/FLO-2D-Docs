@@ -169,8 +169,7 @@ Hydraulic Structures
 
 *Corresponds to:* `HYSTRUC.DAT`
 
-These two tables are the control table, rating table for depth and discharge, and the culvert equation table.
-They are the most commonly used hydraulic structures in FLO-2D.
+Control tables and name tables.
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO106.png
 
@@ -178,7 +177,11 @@ Depth Discharge Tables and Culvert Equation Tables
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO107.png
 
+Rating curve and replacement curve tables.
+
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO108.png
+
+Bridge tables.
 
 .. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO109.png
 
