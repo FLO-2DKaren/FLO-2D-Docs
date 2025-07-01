@@ -254,6 +254,45 @@ Save Export and Run Pre Elevation Change
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
+This short lesson walks through saving hydraulic structures, exporting the data, and running the model. It is part of the final steps for preparing your model.
+
+Step 1: Save the Project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Click the **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+
+.. note::
+   You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.
+
+Step 2: Export Data Files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Go to the **Import/Export** button.
+- Select **Option 3** to export data files.
+- Create a new folder inside your ``lesson6`` directory called:
+
+  ::
+
+    pre-elevation-change
+
+  This helps distinguish the export prior to making elevation corrections.
+
+- First, the D-series data files are exported.
+- Then, the Storm Drain files are exported.
+- You should now see a complete set of exported files inside the folder.
+
+Step 3: Run the Model
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Click **Run FLO-2D** to initiate the simulation.
+
+.. note::
+   If there is **no error.check** file generated, it means your data was set up correctly.
+
+.. warning::
+   Although the model runs, the results may still be inaccurate due to elevation issues. These will be addressed in the next lesson.
+
+What's Next?
+----------------------------
+Now that we have run the model using the current elevations, we will compare it to a corrected version. Proceed to the next video to apply **elevation corrections** and re-run the model.
+
 
 Create Culverts with Culvert Equations
 ----------------------------------------
