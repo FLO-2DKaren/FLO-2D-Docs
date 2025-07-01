@@ -65,8 +65,7 @@ Labeling Hydraulic Structures
 - Choose the field ``structure_name`` to display.
 - Adjust font size and color for better visibility.
 
-.. image:: /images/hydraulic_structures_labels.png
-   :alt: Example of labeled hydraulic structures with arrows.
+**Put Image Here**
 
 Understanding Structure Types
 -----------------------------
@@ -183,6 +182,66 @@ Correct Elevation
    <iframe width="560" height="315" src="https://www.youtube.com/embed/u41PNLBt8mk?si=0f7P3iE_7gwMFfuu"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+This lesson covers how to make elevation corrections for hydraulic structures, set up minimum elevations, apply levees, and prepare the model for export and run.
+
+Step 1: Copy Elevation Values
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Identify Features** tool to get the elevation at the required location.
+- Right-click the value in the Identify panel and choose **Copy Attribute Value**.
+
+Step 2: Create Elevation Polygons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Go to the **Elevation Polygons** layer.
+- Start editing and click **Add Polygon**.
+- Draw a polygon around the **centroid** of the grid element you want to modify.
+- Set the elevation using the previously copied value.
+- Set the correction method to ``grid`` and give the polygon a name like ``head wall``.
+
+Step 3: Setup Minimum Elevation Polygons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- For complex corrections, select multiple grid cells and draw a polygon.
+- Set the name to ``min from elev raster`` or similar.
+- Set method to ``grid``; leave other values ``null``.
+
+Step 4: Apply a Levy
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Levy Line** tool to draw a line where flow should be restricted.
+- Assign the crest elevation based on sampled raster value (e.g., 1396.5).
+- Reprocess the levies using:
+  ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levy Lines`` checked only.
+
+Step 5: Adjust Hydraulic Structure Endpoints
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
+- After adjustment, save and **Schematize** the structure lines to update the schema.
+
+Step 6: Apply Grid Element Corrections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- For polygons with assigned elevation values:
+  - Use **Grid Element Correction Tool**
+  - Select: ``Elevation polygon attributes``
+  - Check: ``Only selected polygons``
+
+- For polygons pulling from raster values:
+  - Use **External Layer Mode**
+  - Set layer: ``Elevation Polygons``
+  - Check: ``Centroids within polygons``
+  - Select: ``Statistics from raster``
+  - Choose ``Minimum elevation``
+  - Check: ``Statistics per grid element`` and ``Only selected features``
+
+Step 7: Export and Run
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Export DAT files with a name like: ``post_elevation_change_and_correction.dat``
+- Run the model.
+
+.. note::
+   These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.
+
+.. tip::
+   After corrections, verify grid elevations with the Identify tool to confirm changes.
 
 
 Save Export and Run Pre Elevation Change
