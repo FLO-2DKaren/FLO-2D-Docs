@@ -181,9 +181,13 @@ Rating curve and replacement curve tables.
 
 .. image:: ./img/hdf5/FLO108.png
 
-Bridge tables.
+Bridge tables parameters and cross section data.
+
+.. image:: ./img/hdf5/FLO111.png
 
 .. image:: ./img/hdf5/FLO109.png
+
+.. image:: ./img/hdf5/FLO110.png
 
 Infiltration
 ------------
