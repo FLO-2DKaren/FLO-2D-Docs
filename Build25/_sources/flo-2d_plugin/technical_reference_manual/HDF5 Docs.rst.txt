@@ -1,58 +1,88 @@
-Appendix C FLO-2D HDF5 Data Structure
-=====================================
+Appendix C: FLO-2D HDF5 Data Structure
+======================================
+
+Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in the Data Input 
+Manual, while those in **green** are internal cross-reference or ID fields used by the HDF5 structure.
 
 Boundary Conditions
 -------------------
 
 Inflow
 ~~~~~~
+Defines the location and time series for inflow hydrographs.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060.png
+*Corresponds to:* `INFLOW.DAT`
+
+.. image:: ./img/hdf5/FLO060.png
 
 Reservoirs
-~~~~~~~~~~~~
+~~~~~~~~~~
+Specifies the reservoir nodes, elevations and a manning's n value corrector.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO060A.png
+*Corresponds to:* `INFLOW.DAT`
 
-Outflow 
-~~~~~~~~~~~~~~~
+.. image:: ./img/hdf5/FLO060A.png
+
+Outflow
+~~~~~~~
+
+**Floodplain Normal Depth**
+
+*Corresponds to:* `OUTFLOW.DAT`
+
+Defines rating curve or normal depth outflow control for floodplain cells.
+
+.. image:: ./img/hdf5/FLO085.png
+
+**Channel Normal Depth**
+
+Normal depth outflow control for channels.
+
+.. image:: ./img/hdf5/FLO086.png
+
+**Floodplain Time Stage**
+
+Time-series stage boundary for floodplain grid cells.
 
 
-**Floodplain normal depth**
+.. image:: ./img/hdf5/FLO087.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO085.png
+**Floodplain and Channel Time Stage**
 
-**Channel normal depth**
+Combined time-stage outflow control affecting both domains.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO086.png
+.. image:: ./img/hdf5/FLO088.png
 
-**Floodplain time state**
+**Channel Time Stage**
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO087.png
+Time-stage boundary applied to channel outflows.
 
-**Floodplain and channel time stage**
+.. image:: ./img/hdf5/FLO089.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO088.png
+**Floodplain and Channel Time Stage and Free**
 
-**Channel time stage**
+Free outflow combined with a time-stage control.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO089.png
+.. image:: ./img/hdf5/FLO090.png
 
-**Floodplain and channel time stage and free**
+**Channel Time Stage and Normal**
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO090.png
+Combines stage-based control with a normal depth fallback.
 
-**Channel time stage and normal**
+.. image:: ./img/hdf5/FLO091.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO091.png
+**Channel Depth-Discharge Power Regression**
 
-**Channel depth discharge power regression**
+Defines outflow using regression coefficients.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO092.png
 
-**Channel depth discharge table**
+.. image:: ./img/hdf5/FLO092.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO093.png
+**Channel Depth-Discharge Table**
+
+Tabulated depth-discharge pairs for outflow control.
+
+.. image:: ./img/hdf5/FLO093.png
 
 Channels
 --------
@@ -60,184 +90,268 @@ Channels
 Global
 ~~~~~~
 
-Global parameters and banks
+Channel control and bank data.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO063.png
+*Corresponds to:* `CHAN.DAT`, `CHANBANK.DAT`
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO064.png
+.. image:: ./img/hdf5/FLO063.png
 
 Channel Natural
 ~~~~~~~~~~~~~~~
+Channel and cross section station elevation data.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO065.png
+*Corresponds to:* `CHAN.DAT`, `XSEC.DAT`
 
-Channel Trapezoidal 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. image:: ./img/hdf5/FLO065.png
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO083.png
+Channel Trapezoidal
+~~~~~~~~~~~~~~~~~~~
+Defines trapezoidal cross sections using base width, depth, and side slope.
+
+*Corresponds to:* `CHAN.DAT`
+
+.. image:: ./img/hdf5/FLO083.png
 
 Channel Rectangular
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+Defines simple rectangular cross sections using base width and depth.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO084.png
+*Corresponds to:* `CHAN.DAT`
 
-NoExchange
-~~~~~~~~~~
+.. image:: ./img/hdf5/FLO084.png
 
-Confluence
-~~~~~~~~~~~~~
+NoExchange / Confluence
+~~~~~~~~~~~~~~~~~~~~~~~~
+Reserved for special conditions like confluence or split flow.
+
+*Corresponds to:* `CHAN.DAT`
+
+[missing image]
 
 Control Parameters
 ------------------
 
-cont.dat parameters and toler.dat parameters.
+Contains global control data and switches and numerical tolerances.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO067.png
+*Corresponds to:* `CONT.DAT`, `TOLER.DAT`
+
+.. image:: ./img/hdf5/FLO067.png
 
 Grid
 ----
 
-x coordinate, y coordinate, elevation, mannings n, and neighbors tables 
+Defines spatial layout and surface properties.
 
-TOPO.DAT
-MANNINGS_N.DAT
-CADPTS.DAT
-FPLAIN.DAT
-NEIGHBORS.DAT
+*Corresponds to:* `TOPO.DAT`, `MANNINGS_N.DAT`, `CADPTS.DAT`, `FPLAIN.DAT`, `NEIGHBORS.DAT`
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO068.png
+.. image:: ./img/hdf5/FLO068.png
 
 Floodplain Cross Section
 -------------------------
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO073.png
+Specifies cross section grid elements that are reported to cross section output files.
+
+*Corresponds to:* `FPXSEC.DAT`
+
+.. image:: ./img/hdf5/FLO073.png
 
 Gutter
 ------
 
+Describes gutter system routing. [Add reference when applicable.]
+
+*Corresponds to:* `GUTTER.DAT`
+
 Hydraulic Structures
 --------------------
 
+[Awaiting description. Placeholder.]
 
+*Corresponds to:* `HYSTRUC.DAT`
+
+Control tables and name tables.
+
+.. image:: ./img/hdf5/FLO106.png
+
+Depth Discharge Tables and Culvert Equation Tables
+
+.. image:: ./img/hdf5/FLO107.png
+
+Rating curve and replacement curve tables.
+
+.. image:: ./img/hdf5/FLO108.png
+
+Bridge tables.
+
+.. image:: ./img/hdf5/FLO109.png
 
 Infiltration
 ------------
 
+*Corresponds to:* `INFIL.DAT`
+
 Method
 ~~~~~~
+Defines the selected infiltration method: Green-Ampt, SCS, or Horton.
 
 Green Ampt
 ~~~~~~~~~~
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO076.png
-
+.. image:: ./img/hdf5/FLO076.png
 
 .. _scs_hdf:
 
 SCS Curve Number
 ~~~~~~~~~~~~~~~~
+Defines curve number by grid or globally.
 
-**Global**
-
-**Spatial**
-
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO077.png
+.. image:: ./img/hdf5/FLO077.png
 
 .. _horton_hdf:
 
 Horton
 ~~~~~~
+Horton infiltration parameters spatially or globally defined.
 
-**Global**
-
-**Spatial**
-
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO078.png
+.. image:: ./img/hdf5/FLO078.png
 
 Levee
 -----
 
-LEVEE.DAT
+*Corresponds to:* `LEVEE.DAT`
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO071.png
+.. image:: ./img/hdf5/FLO071.png
 
 Levee Failure Prescribed
-~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
+Time-based breach with user-defined data.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO096.png
+.. image:: ./img/hdf5/FLO096.png
 
 Levee Failure Breach Erosion
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Dynamic breach using Fread BREACH method.
 
-BREACH.DAT HDF5 tables are complex so these images are accompanied by the 
-Breach Dialog box images so the variables can be mapped between the hdf5, data input manual, 
-and the FLO-2D Plugin.
+*Corresponds to:* `BREACH.DAT`
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO097a.png
+.. image:: ./img/hdf5/FLO097a.png
 
-BREACH.DAT HDF5 tables are complex so these images are accompanied by the 
-Breach Dialog box images so the variables can be mapped between the hdf5, data input manual, 
-and the FLO-2D Plugin.
-
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO098.png
+.. image:: ./img/hdf5/FLO097.png
 
 Levee Failure Curve
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
+User-defined breach progression using curve data.
 
 Rainfall
 --------
 
-.. _global-1:
 
-Uniform rainfall
-~~~~~~~~~~~~~~~~~~
+Uniform Rainfall
+~~~~~~~~~~~~~~~~
+Applies rainfall uniformly across all grid cells.
 
-RAIN.DAT
+*Corresponds to:* `RAIN.DAT`
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO079.png
+.. image:: ./img/hdf5/FLO079.png
 
-Spatial
-~~~~~~~
+Spatial Rainfall
+~~~~~~~~~~~~~~~~
+Applies rainfall using spatial rainfall depth distribution.
 
-RAIN.DAT
+*Corresponds to:* `RAIN.DAT`
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO080.png
+.. image:: ./img/hdf5/FLO080.png
 
 Realtime Rainfall
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+Uses real-time precipitation from gridded time series.
 
-RAIN.DAT
-RAINCELL.DAT
+*Corresponds to:* `RAIN.DAT`, `RAINCELL.DAT`
 
-Realtime rainfall does not follow the RAINCELL.DAT file exactly.  The table IRAINDUM is organized by grid element columns vs 
-time interval rows.  The rainfall data is in inches or milimeters within each cell of the table.
+Note: IRAINDUM table is organized by grid columns x time rows.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO081.png
-
+.. image:: ./img/hdf5/FLO081.png
 
 Storm Drain
----------------
+----------------
+
+The storm drain data for HDF5 can be cross referenced to the storm drain files in the Data Input Manual.   All other data is saved to the SWMM.INP and
+SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following tables:
+
+*Corresponds to:* `SWMMFLO.DAT`, `SWMMOUTF.DAT`, `SWMMRT.DAT`, `SWMMFLODROPBOX.DAT`, `SDCLOGGING.DAT`
+
+
+.. image:: ./img/hdf5/FLO101.png
+
+SWMMFLO.DAT
+
+.. image:: ./img/hdf5/FLO100.png
+
+.. image:: ./img/hdf5/FLO102.png
+
+.. image:: ./img/hdf5/FLO104.png
+
+.. image:: ./img/hdf5/FLO103.png
 
 
 Multiple Channel
------------------
+----------------
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO074.png
+*Corresponds to:* `MULT.DAT`, `SIMPLE_MULT.DAT`
 
+.. image:: ./img/hdf5/FLO074.png
 
 Reduction Factors
-------------------
+-----------------
 
-ARF / WRF
+Defines areal and watershed reduction factors.
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO075.png
+*Corresponds to:* `ARF.DAT`
+
+.. image:: ./img/hdf5/FLO075.png
 
 QGIS
-----------
+----
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO082.png
+Data related to plugin-based preprocessing or export functions.
+
+.. image:: ./img/hdf5/FLO082.png
 
 Tailings
------------
+--------
 
-.. image:: ./img/flo-2d-plugin-technical-reference-manual/FLO095.png
+Used for advanced mud/debris flow simulations.
+
+**TAILINGS**  
+*Corresponds to:* `TAILINGS.DAT`
+
+**TAILINGS_CV**  
+*Corresponds to:* `TAILINGS_CV.DAT`
+
+**TAILINGS_STACK_DEPTH**  
+*Corresponds to:* `TAILINGS_STACK_DEPTH.DAT`
+
+.. image:: ./img/hdf5/FLO095.png
+
+Spatially Variable
+-------------------
+
+The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding \*.DAT file in the Data Input Manual.
+
+**FPFROUDE**  
+*Corresponds to:* `FPFROUDE.DAT`
+
+**LID_VOLUME**  
+*Corresponds to:* `LID_VOLUME.DAT`
+
+**SHALLOWN_SPATIAL**  
+*Corresponds to:* `SHALLOWN_SPATIAL.DAT`
+
+**STEEPSLOPEN**  
+*Corresponds to:* `STEEP_SLOPEN.DAT`
+
+**TOLSPATIAL**  
+*Corresponds to:* `TOLSPATIAL.DAT`
+
+.. image:: ./img/hdf5/FLO094.png
+

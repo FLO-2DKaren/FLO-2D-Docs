@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appendix C FLO-2D HDF5 Data Structure &mdash; FLO-2D Pro Documentation  documentation</title>
+  <title>Appendix C: FLO-2D HDF5 Data Structure &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=67a5d8e2" />
@@ -58,8 +58,7 @@
 <li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#references">References</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#appendix-a-geopackage-structure">Appendix A GeoPackage Structure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#appendix-b-flo-2d-plugin-error-codes">Appendix B FLO-2D Plugin Error Codes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="FLO-2D%20Plugin%20Technical%20Reference%20Manual.html#appendix-c-flo-2d-hdf5-data-structure">Appendix C FLO-2D HDF5 Data Structure</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Appendix C FLO-2D HDF5 Data Structure</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Appendix C: FLO-2D HDF5 Data Structure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#control-parameters">Control Parameters</a></li>
@@ -75,6 +74,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#reduction-factors">Reduction Factors</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#qgis">QGIS</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#tailings">Tailings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatially-variable">Spatially Variable</a></li>
 </ul>
 </li>
 </ul>
@@ -100,7 +100,7 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">FLO-2D Gila for QGIS: Documentation</a></li>
           <li class="breadcrumb-item"><a href="index.html">FLO-2D Gila for QGIS: Technical Reference</a></li>
-      <li class="breadcrumb-item active">Appendix C FLO-2D HDF5 Data Structure</li>
+      <li class="breadcrumb-item active">Appendix C: FLO-2D HDF5 Data Structure</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/flo-2d_plugin/technical_reference_manual/HDF5 Docs.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -111,36 +111,52 @@
            <div itemprop="articleBody">
              
   <section id="appendix-c-flo-2d-hdf5-data-structure">
-<h1>Appendix C FLO-2D HDF5 Data Structure<a class="headerlink" href="#appendix-c-flo-2d-hdf5-data-structure" title="Link to this heading"></a></h1>
+<h1>Appendix C: FLO-2D HDF5 Data Structure<a class="headerlink" href="#appendix-c-flo-2d-hdf5-data-structure" title="Link to this heading"></a></h1>
+<p>Use this reference as a structural map of the <cite>input.hdf5</cite> file. Variables shown in <strong>red</strong> correspond to entries in the Data Input
+Manual, while those in <strong>green</strong> are internal cross-reference or ID fields used by the HDF5 structure.</p>
 <section id="boundary-conditions">
 <h2>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h2>
 <section id="inflow">
 <h3>Inflow<a class="headerlink" href="#inflow" title="Link to this heading"></a></h3>
+<p>Defines the location and time series for inflow hydrographs.</p>
+<p><em>Corresponds to:</em> <cite>INFLOW.DAT</cite></p>
 <img alt="../../_images/FLO060.png" src="../../_images/FLO060.png" />
 </section>
 <section id="reservoirs">
 <h3>Reservoirs<a class="headerlink" href="#reservoirs" title="Link to this heading"></a></h3>
+<p>Specifies the reservoir nodes, elevations and a manning’s n value corrector.</p>
+<p><em>Corresponds to:</em> <cite>INFLOW.DAT</cite></p>
 <img alt="../../_images/FLO060A.png" src="../../_images/FLO060A.png" />
 </section>
 <section id="outflow">
 <h3>Outflow<a class="headerlink" href="#outflow" title="Link to this heading"></a></h3>
-<p><strong>Floodplain normal depth</strong></p>
+<p><strong>Floodplain Normal Depth</strong></p>
+<p><em>Corresponds to:</em> <cite>OUTFLOW.DAT</cite></p>
+<p>Defines rating curve or normal depth outflow control for floodplain cells.</p>
 <img alt="../../_images/FLO085.png" src="../../_images/FLO085.png" />
-<p><strong>Channel normal depth</strong></p>
+<p><strong>Channel Normal Depth</strong></p>
+<p>Normal depth outflow control for channels.</p>
 <img alt="../../_images/FLO086.png" src="../../_images/FLO086.png" />
-<p><strong>Floodplain time state</strong></p>
+<p><strong>Floodplain Time Stage</strong></p>
+<p>Time-series stage boundary for floodplain grid cells.</p>
 <img alt="../../_images/FLO087.png" src="../../_images/FLO087.png" />
-<p><strong>Floodplain and channel time stage</strong></p>
+<p><strong>Floodplain and Channel Time Stage</strong></p>
+<p>Combined time-stage outflow control affecting both domains.</p>
 <img alt="../../_images/FLO088.png" src="../../_images/FLO088.png" />
-<p><strong>Channel time stage</strong></p>
+<p><strong>Channel Time Stage</strong></p>
+<p>Time-stage boundary applied to channel outflows.</p>
 <img alt="../../_images/FLO089.png" src="../../_images/FLO089.png" />
-<p><strong>Floodplain and channel time stage and free</strong></p>
+<p><strong>Floodplain and Channel Time Stage and Free</strong></p>
+<p>Free outflow combined with a time-stage control.</p>
 <img alt="../../_images/FLO090.png" src="../../_images/FLO090.png" />
-<p><strong>Channel time stage and normal</strong></p>
+<p><strong>Channel Time Stage and Normal</strong></p>
+<p>Combines stage-based control with a normal depth fallback.</p>
 <img alt="../../_images/FLO091.png" src="../../_images/FLO091.png" />
-<p><strong>Channel depth discharge power regression</strong></p>
+<p><strong>Channel Depth-Discharge Power Regression</strong></p>
+<p>Defines outflow using regression coefficients.</p>
 <img alt="../../_images/FLO092.png" src="../../_images/FLO092.png" />
-<p><strong>Channel depth discharge table</strong></p>
+<p><strong>Channel Depth-Discharge Table</strong></p>
+<p>Tabulated depth-discharge pairs for outflow control.</p>
 <img alt="../../_images/FLO093.png" src="../../_images/FLO093.png" />
 </section>
 </section>
@@ -148,58 +164,77 @@
 <h2>Channels<a class="headerlink" href="#channels" title="Link to this heading"></a></h2>
 <section id="global">
 <h3>Global<a class="headerlink" href="#global" title="Link to this heading"></a></h3>
-<p>Global parameters and banks</p>
+<p>Channel control and bank data.</p>
+<p><em>Corresponds to:</em> <cite>CHAN.DAT</cite>, <cite>CHANBANK.DAT</cite></p>
 <img alt="../../_images/FLO063.png" src="../../_images/FLO063.png" />
-<img alt="../../_images/FLO064.png" src="../../_images/FLO064.png" />
 </section>
 <section id="channel-natural">
 <h3>Channel Natural<a class="headerlink" href="#channel-natural" title="Link to this heading"></a></h3>
+<p>Channel and cross section station elevation data.</p>
+<p><em>Corresponds to:</em> <cite>CHAN.DAT</cite>, <cite>XSEC.DAT</cite></p>
 <img alt="../../_images/FLO065.png" src="../../_images/FLO065.png" />
 </section>
 <section id="channel-trapezoidal">
 <h3>Channel Trapezoidal<a class="headerlink" href="#channel-trapezoidal" title="Link to this heading"></a></h3>
+<p>Defines trapezoidal cross sections using base width, depth, and side slope.</p>
+<p><em>Corresponds to:</em> <cite>CHAN.DAT</cite></p>
 <img alt="../../_images/FLO083.png" src="../../_images/FLO083.png" />
 </section>
 <section id="channel-rectangular">
 <h3>Channel Rectangular<a class="headerlink" href="#channel-rectangular" title="Link to this heading"></a></h3>
+<p>Defines simple rectangular cross sections using base width and depth.</p>
+<p><em>Corresponds to:</em> <cite>CHAN.DAT</cite></p>
 <img alt="../../_images/FLO084.png" src="../../_images/FLO084.png" />
 </section>
-<section id="noexchange">
-<h3>NoExchange<a class="headerlink" href="#noexchange" title="Link to this heading"></a></h3>
-</section>
-<section id="confluence">
-<h3>Confluence<a class="headerlink" href="#confluence" title="Link to this heading"></a></h3>
+<section id="noexchange-confluence">
+<h3>NoExchange / Confluence<a class="headerlink" href="#noexchange-confluence" title="Link to this heading"></a></h3>
+<p>Reserved for special conditions like confluence or split flow.</p>
+<p><em>Corresponds to:</em> <cite>CHAN.DAT</cite></p>
+<p>[missing image]</p>
 </section>
 </section>
 <section id="control-parameters">
 <h2>Control Parameters<a class="headerlink" href="#control-parameters" title="Link to this heading"></a></h2>
-<p>cont.dat parameters and toler.dat parameters.</p>
+<p>Contains global control data and switches and numerical tolerances.</p>
+<p><em>Corresponds to:</em> <cite>CONT.DAT</cite>, <cite>TOLER.DAT</cite></p>
 <img alt="../../_images/FLO067.png" src="../../_images/FLO067.png" />
 </section>
 <section id="grid">
 <h2>Grid<a class="headerlink" href="#grid" title="Link to this heading"></a></h2>
-<p>x coordinate, y coordinate, elevation, mannings n, and neighbors tables</p>
-<p>TOPO.DAT
-MANNINGS_N.DAT
-CADPTS.DAT
-FPLAIN.DAT
-NEIGHBORS.DAT</p>
+<p>Defines spatial layout and surface properties.</p>
+<p><em>Corresponds to:</em> <cite>TOPO.DAT</cite>, <cite>MANNINGS_N.DAT</cite>, <cite>CADPTS.DAT</cite>, <cite>FPLAIN.DAT</cite>, <cite>NEIGHBORS.DAT</cite></p>
 <img alt="../../_images/FLO068.png" src="../../_images/FLO068.png" />
 </section>
 <section id="floodplain-cross-section">
 <h2>Floodplain Cross Section<a class="headerlink" href="#floodplain-cross-section" title="Link to this heading"></a></h2>
+<p>Specifies cross section grid elements that are reported to cross section output files.</p>
+<p><em>Corresponds to:</em> <cite>FPXSEC.DAT</cite></p>
 <img alt="../../_images/FLO073.png" src="../../_images/FLO073.png" />
 </section>
 <section id="gutter">
 <h2>Gutter<a class="headerlink" href="#gutter" title="Link to this heading"></a></h2>
+<p>Describes gutter system routing. [Add reference when applicable.]</p>
+<p><em>Corresponds to:</em> <cite>GUTTER.DAT</cite></p>
 </section>
 <section id="hydraulic-structures">
 <h2>Hydraulic Structures<a class="headerlink" href="#hydraulic-structures" title="Link to this heading"></a></h2>
+<p>[Awaiting description. Placeholder.]</p>
+<p><em>Corresponds to:</em> <cite>HYSTRUC.DAT</cite></p>
+<p>Control tables and name tables.</p>
+<img alt="../../_images/FLO106.png" src="../../_images/FLO106.png" />
+<p>Depth Discharge Tables and Culvert Equation Tables</p>
+<img alt="../../_images/FLO107.png" src="../../_images/FLO107.png" />
+<p>Rating curve and replacement curve tables.</p>
+<img alt="../../_images/FLO108.png" src="../../_images/FLO108.png" />
+<p>Bridge tables.</p>
+<img alt="../../_images/FLO109.png" src="../../_images/FLO109.png" />
 </section>
 <section id="infiltration">
 <h2>Infiltration<a class="headerlink" href="#infiltration" title="Link to this heading"></a></h2>
+<p><em>Corresponds to:</em> <cite>INFIL.DAT</cite></p>
 <section id="method">
 <h3>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h3>
+<p>Defines the selected infiltration method: Green-Ampt, SCS, or Horton.</p>
 </section>
 <section id="green-ampt">
 <h3>Green Ampt<a class="headerlink" href="#green-ampt" title="Link to this heading"></a></h3>
@@ -207,80 +242,111 @@ NEIGHBORS.DAT</p>
 </section>
 <section id="scs-curve-number">
 <span id="scs-hdf"></span><h3>SCS Curve Number<a class="headerlink" href="#scs-curve-number" title="Link to this heading"></a></h3>
-<p><strong>Global</strong></p>
-<p><strong>Spatial</strong></p>
+<p>Defines curve number by grid or globally.</p>
 <img alt="../../_images/FLO077.png" src="../../_images/FLO077.png" />
 </section>
 <section id="horton">
 <span id="horton-hdf"></span><h3>Horton<a class="headerlink" href="#horton" title="Link to this heading"></a></h3>
-<p><strong>Global</strong></p>
-<p><strong>Spatial</strong></p>
+<p>Horton infiltration parameters spatially or globally defined.</p>
 <img alt="../../_images/FLO078.png" src="../../_images/FLO078.png" />
 </section>
 </section>
 <section id="levee">
 <h2>Levee<a class="headerlink" href="#levee" title="Link to this heading"></a></h2>
-<p>LEVEE.DAT</p>
+<p><em>Corresponds to:</em> <cite>LEVEE.DAT</cite></p>
 <img alt="../../_images/FLO071.png" src="../../_images/FLO071.png" />
 <section id="levee-failure-prescribed">
 <h3>Levee Failure Prescribed<a class="headerlink" href="#levee-failure-prescribed" title="Link to this heading"></a></h3>
+<p>Time-based breach with user-defined data.</p>
 <img alt="../../_images/FLO096.png" src="../../_images/FLO096.png" />
 </section>
 <section id="levee-failure-breach-erosion">
 <h3>Levee Failure Breach Erosion<a class="headerlink" href="#levee-failure-breach-erosion" title="Link to this heading"></a></h3>
-<p>BREACH.DAT HDF5 tables are complex so these images are accompanied by the
-Breach Dialog box images so the variables can be mapped between the hdf5, data input manual,
-and the FLO-2D Plugin.</p>
+<p>Dynamic breach using Fread BREACH method.</p>
+<p><em>Corresponds to:</em> <cite>BREACH.DAT</cite></p>
 <img alt="../../_images/FLO097a.png" src="../../_images/FLO097a.png" />
-<p>BREACH.DAT HDF5 tables are complex so these images are accompanied by the
-Breach Dialog box images so the variables can be mapped between the hdf5, data input manual,
-and the FLO-2D Plugin.</p>
-<img alt="../../_images/FLO098.png" src="../../_images/FLO098.png" />
+<img alt="../../_images/FLO097.png" src="../../_images/FLO097.png" />
 </section>
 <section id="levee-failure-curve">
 <h3>Levee Failure Curve<a class="headerlink" href="#levee-failure-curve" title="Link to this heading"></a></h3>
+<p>User-defined breach progression using curve data.</p>
 </section>
 </section>
 <section id="rainfall">
 <h2>Rainfall<a class="headerlink" href="#rainfall" title="Link to this heading"></a></h2>
 <section id="uniform-rainfall">
-<span id="global-1"></span><h3>Uniform rainfall<a class="headerlink" href="#uniform-rainfall" title="Link to this heading"></a></h3>
-<p>RAIN.DAT</p>
+<h3>Uniform Rainfall<a class="headerlink" href="#uniform-rainfall" title="Link to this heading"></a></h3>
+<p>Applies rainfall uniformly across all grid cells.</p>
+<p><em>Corresponds to:</em> <cite>RAIN.DAT</cite></p>
 <img alt="../../_images/FLO079.png" src="../../_images/FLO079.png" />
 </section>
-<section id="spatial">
-<h3>Spatial<a class="headerlink" href="#spatial" title="Link to this heading"></a></h3>
-<p>RAIN.DAT</p>
+<section id="spatial-rainfall">
+<h3>Spatial Rainfall<a class="headerlink" href="#spatial-rainfall" title="Link to this heading"></a></h3>
+<p>Applies rainfall using spatial rainfall depth distribution.</p>
+<p><em>Corresponds to:</em> <cite>RAIN.DAT</cite></p>
 <img alt="../../_images/FLO080.png" src="../../_images/FLO080.png" />
 </section>
 <section id="realtime-rainfall">
 <h3>Realtime Rainfall<a class="headerlink" href="#realtime-rainfall" title="Link to this heading"></a></h3>
-<p>RAIN.DAT
-RAINCELL.DAT</p>
-<p>Realtime rainfall does not follow the RAINCELL.DAT file exactly.  The table IRAINDUM is organized by grid element columns vs
-time interval rows.  The rainfall data is in inches or milimeters within each cell of the table.</p>
+<p>Uses real-time precipitation from gridded time series.</p>
+<p><em>Corresponds to:</em> <cite>RAIN.DAT</cite>, <cite>RAINCELL.DAT</cite></p>
+<p>Note: IRAINDUM table is organized by grid columns x time rows.</p>
 <img alt="../../_images/FLO081.png" src="../../_images/FLO081.png" />
 </section>
 </section>
 <section id="storm-drain">
 <h2>Storm Drain<a class="headerlink" href="#storm-drain" title="Link to this heading"></a></h2>
+<p>The storm drain data for HDF5 can be cross referenced to the storm drain files in the Data Input Manual.   All other data is saved to the SWMM.INP and
+SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following tables:</p>
+<p><em>Corresponds to:</em> <cite>SWMMFLO.DAT</cite>, <cite>SWMMOUTF.DAT</cite>, <cite>SWMMRT.DAT</cite>, <cite>SWMMFLODROPBOX.DAT</cite>, <cite>SDCLOGGING.DAT</cite></p>
+<img alt="../../_images/FLO101.png" src="../../_images/FLO101.png" />
+<p>SWMMFLO.DAT</p>
+<img alt="../../_images/FLO100.png" src="../../_images/FLO100.png" />
+<img alt="../../_images/FLO102.png" src="../../_images/FLO102.png" />
+<img alt="../../_images/FLO104.png" src="../../_images/FLO104.png" />
+<img alt="../../_images/FLO103.png" src="../../_images/FLO103.png" />
 </section>
 <section id="multiple-channel">
 <h2>Multiple Channel<a class="headerlink" href="#multiple-channel" title="Link to this heading"></a></h2>
+<p><em>Corresponds to:</em> <cite>MULT.DAT</cite>, <cite>SIMPLE_MULT.DAT</cite></p>
 <img alt="../../_images/FLO074.png" src="../../_images/FLO074.png" />
 </section>
 <section id="reduction-factors">
 <h2>Reduction Factors<a class="headerlink" href="#reduction-factors" title="Link to this heading"></a></h2>
-<p>ARF / WRF</p>
+<p>Defines areal and watershed reduction factors.</p>
+<p><em>Corresponds to:</em> <cite>ARF.DAT</cite></p>
 <img alt="../../_images/FLO075.png" src="../../_images/FLO075.png" />
 </section>
 <section id="qgis">
 <h2>QGIS<a class="headerlink" href="#qgis" title="Link to this heading"></a></h2>
+<p>Data related to plugin-based preprocessing or export functions.</p>
 <img alt="../../_images/FLO082.png" src="../../_images/FLO082.png" />
 </section>
 <section id="tailings">
 <h2>Tailings<a class="headerlink" href="#tailings" title="Link to this heading"></a></h2>
+<p>Used for advanced mud/debris flow simulations.</p>
+<p><strong>TAILINGS</strong>
+<em>Corresponds to:</em> <cite>TAILINGS.DAT</cite></p>
+<p><strong>TAILINGS_CV</strong>
+<em>Corresponds to:</em> <cite>TAILINGS_CV.DAT</cite></p>
+<p><strong>TAILINGS_STACK_DEPTH</strong>
+<em>Corresponds to:</em> <cite>TAILINGS_STACK_DEPTH.DAT</cite></p>
 <img alt="../../_images/FLO095.png" src="../../_images/FLO095.png" />
+</section>
+<section id="spatially-variable">
+<h2>Spatially Variable<a class="headerlink" href="#spatially-variable" title="Link to this heading"></a></h2>
+<p>The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding *.DAT file in the Data Input Manual.</p>
+<p><strong>FPFROUDE</strong>
+<em>Corresponds to:</em> <cite>FPFROUDE.DAT</cite></p>
+<p><strong>LID_VOLUME</strong>
+<em>Corresponds to:</em> <cite>LID_VOLUME.DAT</cite></p>
+<p><strong>SHALLOWN_SPATIAL</strong>
+<em>Corresponds to:</em> <cite>SHALLOWN_SPATIAL.DAT</cite></p>
+<p><strong>STEEPSLOPEN</strong>
+<em>Corresponds to:</em> <cite>STEEP_SLOPEN.DAT</cite></p>
+<p><strong>TOLSPATIAL</strong>
+<em>Corresponds to:</em> <cite>TOLSPATIAL.DAT</cite></p>
+<img alt="../../_images/FLO094.png" src="../../_images/FLO094.png" />
 </section>
 </section>
 

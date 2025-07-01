@@ -268,7 +268,7 @@ The channel interacts with the bank elements to share discharge to the floodplai
 Each bank can have a unique elevation.
 If the two bank elevations are different in the CHAN.DAT file, the model automatically splits the channel into
 two elements even if the channel would fit into one grid element.</p>
-<img alt="../../_images/image514.png" src="../../_images/image514.png" />
+<img alt="../../_images/image54.png" src="../../_images/image54.png" />
 <p><em>Figure 38.
 Channel Extension Over Several Grid Elements.</em></p>
 <p>There are three options for establishing the bank elevation in relationship to the channel bed elevation (thalweg) and the floodplain elevation in the
@@ -340,7 +340,7 @@ weir flow equation.
 Weir flow occurs until the tailwater depth is 85% of the headwater depth above and then at higher flows, the
 water is exchanged across the levees using the difference in water surface elevation.
 Levee overtopping will not cause levee failure unless the failure or breach option is invoked.</p>
-<img alt="../../_images/image65.png" src="../../_images/image65.png" />
+<img alt="../../_images/image64.png" src="../../_images/image64.png" />
 <p><em>Figure 39.
 Levees are Depicted in Red and the River in Blue in the GDS Program.</em></p>
 <p>The levee output files include LEVEE.OUT, LEVOVERTOP.OUT and LEVEEDEFIC.OUT.
@@ -581,7 +581,7 @@ Each section has a length of one-half the grid element side or diagonal.
 A grid element may contain one or more streets and the streets may intersect.
 Street roughness values, street widths, elevations and curb heights can be modified on a grid element or street
 section basis in the GDS program.</p>
-<img alt="../../_images/image145.png" src="../../_images/image145.png" />
+<img alt="../../_images/image144.png" src="../../_images/image144.png" />
 <p><em>Figure 47.
 Streets Depicted in Green in the GDS Program.</em></p>
 </section>
@@ -615,16 +615,16 @@ assigned ARF that leave only a small percentage of the grid element are reset at
 ARF = 1 (blocked) according to criteria outlined in Table 4.</p>
 <img alt="../../_images/Chapte089.jpg" src="../../_images/Chapte089.jpg" />
 <p>A grid element of 10 ft will thereby have at least 15 square ft of surface area.</p>
-<img alt="../../_images/image165.png" src="../../_images/image165.png" />
+<img alt="../../_images/image164.png" src="../../_images/image164.png" />
 <p><em>Figure 48.
 ARF Assignments for Buildings with Walls, Storm Drain and Background Image.</em></p>
-<img alt="../../_images/image174.png" src="../../_images/image174.png" />
+<img alt="../../_images/image173.png" src="../../_images/image173.png" />
 <p><em>Figure 49.
 Color Depiction of ARF and WRF Factors.</em></p>
 <p>Two building options are rainfall runoff from building roofs and building collapse.
 Rainfall can collect on building roofs using levees to represent parapet walls and be routed to downspouts
 represented by hydraulic structure rating curves (Figure 50 and Figure 51).</p>
-<img alt="../../_images/image185.png" src="../../_images/image185.png" />
+<img alt="../../_images/image184.png" src="../../_images/image184.png" />
 <p><em>Figure 50.
 Roof Rainfall Runoff Routed to a Downspout.</em></p>
 <img alt="../../_images/image191.jpg" src="../../_images/image191.jpg" />
@@ -637,7 +637,7 @@ to zero enabling the flow to go through the grid element and fill it with flood 
 The building collapse routine is triggered by assigning grid element building vulnerability curves in
 BUILDING_COLLAPSE.DAT or by assigning a negative ARF values for either a totally blocked or partially blocked
 grid element.</p>
-<img alt="../../_images/image204.png" src="../../_images/image204.png" />
+<img alt="../../_images/image203.png" src="../../_images/image203.png" />
 <p><em>Figure 52.
 Building Collapse Vulnerability Curves.</em></p>
 </section>
@@ -945,7 +945,7 @@ To avoid excessive scouring downstream of the inflow node additional rigid grid 
 (R-lines in the SED.DAT file).
 These may be positioned for an alluvial fan simulation so that sediment transport equilibrium is achieved at
 or near the apex.</p>
-<img alt="../../_images/image304.png" src="../../_images/image304.png" />
+<img alt="../../_images/image303.png" src="../../_images/image303.png" />
 <p><em>Figure 57.
 Inflow Node Locations.</em></p>
 <p>The size fraction percentage is tracked separately in the exchange layer and the rest of the channel bed.
@@ -1476,10 +1476,10 @@ outline only the floodway area.</p>
 <p>The primary objective in creating the FLO-2D floodway routine was to automate the floodway routine and remove
 the subjectivity that is necessary with the HEC-RAS floodway delineation.
 Nevertheless, some judgment may still be required when delineating the final floodway boundary.</p>
-<img alt="../../_images/image1241.png" src="../../_images/image1241.png" />
+<img alt="../../_images/image124.png" src="../../_images/image124.png" />
 <p><em>Figure 62.
 Floodway Schematic Flow Chart.</em></p>
-<img alt="../../_images/image515.png" src="../../_images/image515.png" />
+<img alt="../../_images/image512.png" src="../../_images/image512.png" />
 <p><em>Figure 63.
 Flood Delineation Comparison.</em></p>
 <img alt="../../_images/image522.png" src="../../_images/image522.png" />
@@ -1672,7 +1672,7 @@ The first part of the analysis is to identify the locations for channel overtopp
 channel and the first-level branch channels for 100-year flood where the point of avulsion is the
 first-level bifurcation point.
 The FLO-2D model will be used to estimate the channel overtopping locations.</p>
-<img alt="../../_images/image651.png" src="../../_images/image651.png" />
+<img alt="../../_images/image65.png" src="../../_images/image65.png" />
 <p><em>Figure 75.
 Alluvial Fan Distributary Channel Definition for Avulsion Analysis (from FCDMC, 2014).</em></p>
 <p>In the conceptual outline, it was acknowledged that the dependency of channel avulsion on sediment
@@ -1819,7 +1819,7 @@ The assigned value represents the retention volume per grid element in either cu
 Since each grid element is 10 ft by 10 ft, this depth translates to 10 ft³ per cell.
 The resulting values are saved in the required LID_VOLUME.DAT file in the following format:</p>
 <img alt="../../_images/image149.png" src="../../_images/image149.png" />
-<img alt="../../_images/image1451.png" src="../../_images/image1451.png" />
+<img alt="../../_images/image145.png" src="../../_images/image145.png" />
 <p><em>Figure 80.
 LID Volume Tool.</em></p>
 </section>
@@ -2111,7 +2111,7 @@ inlet element (22365 NE flow direction 5) and overtops the wall (Figure 106).
 Compare this grid element maximum water surface elevation and flow depth in Figure 105 and note that they are
 lower because the parapet wall is overtopped, and some rainfall storage is discharged to the ground.
 Any number of parapet wall cells (levee elements and the blocked direction) can be overtopped.</p>
-<img alt="../../_images/image1331.png" src="../../_images/image1331.png" />
+<img alt="../../_images/image133.png" src="../../_images/image133.png" />
 <p><em>Figure 106.
 Maximum Flow Depth (Sloped Roof with Parapet wall Being Overtopped).</em></p>
 <p>The overtopping discharge is reported below from the file LEVOVERTOPMAX.OUT.
@@ -2193,7 +2193,7 @@ n-value (SHALLOWN).</p>
 <p><em>Figure 110.
 Gutter Diagram.</em></p>
 <p>The gutter flow can be shared in all eight flow directions (Figure 111):</p>
-<img alt="../../_images/image1021.png" src="../../_images/image1021.png" />
+<img alt="../../_images/image102.png" src="../../_images/image102.png" />
 <p><em>Figure 111.
 Street and Gutter Flow Diagram.</em></p>
 <p>The street elements are floodplain elements with appropriate elevations and n-values to represent street flow.
@@ -2331,7 +2331,7 @@ Type 3 Flow: Inlet submerged, outlet submerged, opening full, sluice gate-orific
 <p><em>Figure 122.
 Type 4 Flow: Inlet submerged, outlet submerged, orifice flow.
 (Yu &gt; Yd &gt; Z).</em></p>
-<img alt="../../_images/image1141.png" src="../../_images/image1141.png" />
+<img alt="../../_images/image114.png" src="../../_images/image114.png" />
 <p><em>Figure 123.
 Type 5 Flow: Inlet submerged, outlet submerged, deck overflow.
 (Yu &gt; Yd &gt; Z).</em></p>

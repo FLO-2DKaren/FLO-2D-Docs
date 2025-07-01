@@ -22,7 +22,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Appendix C FLO-2D HDF5 Data Structure" href="HDF5%20Docs.html" />
+    <link rel="next" title="Appendix C: FLO-2D HDF5 Data Structure" href="HDF5%20Docs.html" />
     <link rel="prev" title="FLO-2D Gila for QGIS: Technical Reference" href="index.html" /> 
 </head>
 
@@ -203,24 +203,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#bar-info">Bar Info</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#appendix-c-flo-2d-hdf5-data-structure">Appendix C FLO-2D HDF5 Data Structure</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#boundary-conditions">Boundary Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#channels">Channels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#control-parameters">Control Parameters</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#grid">Grid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#floodplain-cross-section">Floodplain Cross Section</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#gutter">Gutter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#hydraulic-structures">Hydraulic Structures</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#infiltration">Infiltration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#levee">Levee</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rainfall">Rainfall</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#reduction-factors">Reduction Factors</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#spatially-variable">Spatially Variable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#multiple-channel">Multiple Channel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#blocked-cells">Blocked Cells</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="HDF5%20Docs.html">Appendix C FLO-2D HDF5 Data Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="HDF5%20Docs.html">Appendix C: FLO-2D HDF5 Data Structure</a></li>
 </ul>
 </li>
 </ul>
@@ -280,7 +263,7 @@ Plugin tools process and store data within the project GeoPackage.
 FLO-2D uses *.dat or *.hdf5 files.
 These files are exported from the *.gpkg database.
 Figure 1 shows the layout of the layers and tables in QGIS that are used by the FLO-2D Plugin.</p>
-<img alt="../../_images/image1.png" src="../../_images/image1.png" />
+<img alt="../../_images/ref001.png" src="../../_images/ref001.png" />
 <p><em>Figure 1.
 Overview of the QGIS Layout and Layer Structure.</em></p>
 </section>
@@ -306,7 +289,7 @@ the FLO-2D QGIS Plugin tools.</p>
 <p>The FLO-2D Plugin is built with python code.
 The code is open source and available for any programmer to review or edit.
 The code is stored in the flo2d directory of the qgis/python/plugins folder (Figure 2).</p>
-<img alt="../../_images/image2.png" src="../../_images/image2.png" />
+<img alt="../../_images/ref002.png" src="../../_images/ref002.png" />
 <p><em>Figure 2.
 Plugin Folder.</em></p>
 <p>The code can be viewed, queried and edited with any text editor including UltraEdit, Notepad++ or Textpad.
@@ -358,13 +341,13 @@ The bounding box aligned to the upper and lower left extent of the computational
 The cells of the grid are individual polygons ordered by row and column.
 Only polygons that intersect the <em>Computation Domain</em> layer are created.
 The default numbering system is in order of row and then column (Figure 3).</p>
-<img alt="../../_images/image3.png" src="../../_images/image3.png" />
+<img alt="../../_images/ref003.png" src="../../_images/ref003.png" />
 <p><em>Figure 3.
 Grid Numbering Scheme.</em></p>
 <p>The Number Units and Coordinate Reference System (CRS) are established when the project GeoPackage is developed using the <em>FLO-2D Plugin Settings</em>
 Tool.
 The grid alignment is generally set to the extent of the computational domain, but it can be aligned to the raster as well as shown in Figure 4.</p>
-<img alt="../../_images/image4.png" src="../../_images/image4.png" />
+<img alt="../../_images/ref004.png" src="../../_images/ref004.png" />
 <p><em>Figure 5.
 Grid Element Alignment.</em></p>
 </section>
@@ -381,7 +364,7 @@ The external raster layer does not need to have the same coordinates as the proj
 The warp will transform the new raster into the grid coordinate system.
 If the elevation layer has the wrong units i.e., meters vs ft, convert the raster to the correct units with the raster calculator before running the
 elevation from raster processing tool.</p>
-<img alt="../../_images/image5.png" src="../../_images/image5.png" />
+<img alt="../../_images/ref005.png" src="../../_images/ref005.png" />
 <p><em>Figure 5.
 Raster Elevation Dialog Box.</em></p>
 <p>The GDAL warp method is modified so that only the raw input resolution of the raster is applied.
@@ -392,7 +375,7 @@ It is slower than using the ORV data.</p>
 <h2>Elevation from LiDAR<a class="headerlink" href="#elevation-from-lidar" title="Link to this heading"></a></h2>
 <p>The <em>Elevation from LiDAR</em> calculator uses a direct average of the points within each cell.
 (Figure 6).</p>
-<img alt="../../_images/image6.png" src="../../_images/image6.png" />
+<img alt="../../_images/ref006.png" src="../../_images/ref006.png" />
 <p><em>Figure 6.
 Point Elevation Dialog Box.</em></p>
 <blockquote>
@@ -404,11 +387,11 @@ The LiDAR processing tool will identify how many iterations are required to fill
 Please remember that there are many excellent LiDAR processing tools available, and this tool is fast and accurate so long as there aren’t too many
 very large buildings, overpasses, or bridges.</p>
 </div></blockquote>
-<img alt="../../_images/image7.png" src="../../_images/image7.png" />
+<img alt="../../_images/ref007.png" src="../../_images/ref007.png" />
 <p><em>Figure 7.
 Interpolate Empty Cells Dialog.</em></p>
 <p>Figure 8 shows the elevation interpolation before the missing cell correction, after the missing cell correction and the raster warp.</p>
-<img alt="../../_images/image8.png" src="../../_images/image8.png" />
+<img alt="../../_images/ref008.png" src="../../_images/ref008.png" />
 <p><em>Figure 8.
 Results Test Case 5.</em></p>
 </section>
@@ -429,7 +412,7 @@ The <em>Grid Elevation Adjustment</em> tool uses several unique processes to red
 <li><p>Elevation polygons attributes</p></li>
 <li><p>Grid statistics within blocked areas</p></li>
 </ul>
-<img alt="../../_images/image9.png" src="../../_images/image9.png" />
+<img alt="../../_images/ref009.png" src="../../_images/ref009.png" />
 <p><em>Figure 9.
 Correct Elevation Dialog Box.</em></p>
 </section>
@@ -464,7 +447,7 @@ Each cell within the polygon will be assigned the same elevation.</p>
 <p>The grid element correction from <em>External Layers Mode</em> offers several methods to correct or edit elevations in the <em>Grid</em> layer from polygon layers
 that can be imported into the FLO-2D Project in QGIS (Figure 10).
 The tool uses the same correction calculations discussed above in the <em>User Layers Mode</em> but applies them to imported polygon layers.</p>
-<img alt="../../_images/image10.png" src="../../_images/image10.png" />
+<img alt="../../_images/ref010.png" src="../../_images/ref010.png" />
 <p><em>Figure 10.
 Correct Grid Elevation Dialog Box.</em></p>
 <p>The <strong>polygon layer</strong> is any polygon layer in the layers list.
@@ -476,7 +459,7 @@ This could be a ditch or a levee or a gutter.
 If the buffer width is less than the width of one grid element, the grid element width is sufficient as a buffer width.
 The polyline can be placed at the center of a feature that needs an adjustment like the ones in Figure 11.
 The polyline layer is essentially a polygon with the line as a center.</p>
-<img alt="../../_images/image11.png" src="../../_images/image11.png" />
+<img alt="../../_images/ref011.png" src="../../_images/ref011.png" />
 <p><em>Figure 11.
 Polyline with Buffer.</em></p>
 <p>The <strong>geometric predicate</strong> is the intersection method that identifies which grid elements will be adjusted.
@@ -499,7 +482,7 @@ The checkbox should be used in most cases unless a single elevation is desired f
 <section id="levee-tool">
 <h2>Levee Tool<a class="headerlink" href="#levee-tool" title="Link to this heading"></a></h2>
 <p>The <em>Levee</em> <em>Elevation Tool</em> sees the grid as a set of octagonal sides at a specified distance from the node (Figure 12).</p>
-<img alt="../../_images/image12.png" src="../../_images/image12.png" />
+<img alt="../../_images/ref012.png" src="../../_images/ref012.png" />
 <p><em>Figure 12.
 Grid Centroid and Octagonal Sides.</em></p>
 <p>The <em>Levee Elevation Tool</em> uses polylines (<em>Levee Lines</em>) and crest elevation points (<em>Elevation Points</em>) to calculate and digitize the sides of the
@@ -507,7 +490,7 @@ grid to the <em>Levees</em> layer as “cutoff directions”.
 The tool uses a combination of polyline to polygon intersection and point to point interpolation to establish the levee position and crest elevation.
 It intersects each side of the octagon with the <em>Levee Line</em> and a buffer to create individual polylines for each levee cutoff direction as shown in
 Figure 13.</p>
-<img alt="../../_images/image13.png" src="../../_images/image13.png" />
+<img alt="../../_images/ref013.png" src="../../_images/ref013.png" />
 <p><em>Figure 13.
 Levee Cutoff Directions.</em></p>
 </section>
@@ -542,7 +525,7 @@ max grid element + the wall height.</p></li>
 </li>
 </ul>
 <p>Figure 14 shows the relationship between a NULL elevation field and a wall height applied to the correction field.</p>
-<img alt="../../_images/image14.png" src="../../_images/image14.png" />
+<img alt="../../_images/ref014.png" src="../../_images/ref014.png" />
 <p><em>Figure 14.
 Wall Height vs Wall Elevation.</em></p>
 </section>
@@ -563,7 +546,7 @@ Wall failure is complicated due to elevation differences across grid elements.
 The Levee Tool evaluates the ground elevation on each side of the levee and applies the Failure Depth to the highest grid element.
 The failure elevation is calculated by adding the failure depth to the highest elevation on either side of the grid element.
 This condition can be seen on the right-hand side of Figure 15.</p>
-<img alt="../../_images/image15.png" src="../../_images/image15.png" />
+<img alt="../../_images/ref015.png" src="../../_images/ref015.png" />
 <p><em>Figure 15.
 Grid Element Elevation and Wall Failure.</em></p>
 </section>
@@ -576,7 +559,7 @@ The window size is 100 x 100 grid elements.
 The levee lines are clipped to the window to eliminate duplicate calculations.
 Figure 16 shows an example of a grid system split into a bounding box.
 Each box in the figure is isolated and calculated individually.</p>
-<img alt="../../_images/image16.png" src="../../_images/image16.png" />
+<img alt="../../_images/ref016.png" src="../../_images/ref016.png" />
 <p><em>Figure 16.
 Levee and Wall Moving Window Example.</em></p>
 <p>The final step is to identify and remove duplicates.
@@ -609,7 +592,7 @@ The processor will intersect the pink area to each grid element and extract the 
 In some instances, the intersection is not necessary.
 A point sample that represents the center of each grid element is used to sample the polygon and extract the data of a known point based on the grid
 element ID.</p>
-<img alt="../../_images/image17.png" src="../../_images/image17.png" />
+<img alt="../../_images/ref017.png" src="../../_images/ref017.png" />
 <p><em>Figure 17.
 Spatially Variable Data.</em></p>
 </section>
@@ -622,7 +605,7 @@ If the grid is totally blocked, the ARF = 1.
 If the blockage is greater than 0.9, the ARF is reset to 1.
 If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
 Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.</p>
-<img alt="../../_images/image18.png" src="../../_images/image18.png" />
+<img alt="../../_images/ref018.png" src="../../_images/ref018.png" />
 <p><em>Figure 18.
 Area Reduction Intersection.</em></p>
 <p>The WRF calculator intersects the <em>Blocked Areas</em> polygon to grid element.
@@ -630,20 +613,20 @@ It is different in that it intersects the building to the octagonal side of the 
 The WRF calculator uses the grid centroid, half width and a Lambda function (Python, 2018) to define the grid octagon.
 The Lambda function defines the position of the octagon sides.
 The octagonal sides are intersected to the polygons in the <em>Blocked Areas</em> layer to calculate the width reduction factor (Figure 19).</p>
-<img alt="../../_images/image19.png" src="../../_images/image19.png" />
+<img alt="../../_images/ref019.png" src="../../_images/ref019.png" />
 <p><em>Figure 19.
 Area and Width Reduction Factors.</em></p>
 <p>The QGIS and GDS have slight differences in calculators.</p>
 <p>QGIS Method -  The Plugin will reset ARF = 1 for any cell greater than 0.90 ARF.
 This can be seen in the following image.
 GDS left ARF = 0.94 and QGIS Right ARF = 1 (Figure 20).</p>
-<img alt="../../_images/image20.png" src="../../_images/image20.png" />
+<img alt="../../_images/ref020.png" src="../../_images/ref020.png" />
 <p><em>Figure 20.
 ARF GDS / QGIS Comparison.</em></p>
 <p>GDS Method - The GDS inserts redundant WRFs for cells that would otherwise be empty.
 This is not necessary and ultimately uses more data.
 GDS on the left and QGIS on the right (Figure 21).</p>
-<img alt="../../_images/image21.png" src="../../_images/image21.png" />
+<img alt="../../_images/ref021.png" src="../../_images/ref021.png" />
 <p><em>Figure 21.
 WRF Redundancy GDS / QGIS Comparison.</em></p>
 <ol class="arabic simple">
@@ -651,7 +634,7 @@ WRF Redundancy GDS / QGIS Comparison.</em></p>
 The GDS WRF on the left is calculated as 0.98.
 The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).</p></li>
 </ol>
-<img alt="../../_images/image22.png" src="../../_images/image22.png" />
+<img alt="../../_images/ref022.png" src="../../_images/ref022.png" />
 <p><em>Figure 22.
 WRF Calculator GDS / QGIS Comparison.</em></p>
 </section>
@@ -659,13 +642,13 @@ WRF Calculator GDS / QGIS Comparison.</em></p>
 <h2>Rainfall Interpolation Tool<a class="headerlink" href="#rainfall-interpolation-tool" title="Link to this heading"></a></h2>
 <p>The <em>Rainfall Interpolation Tool</em> uses rainfall depth rasters like those provided by NOAA Atlas 14.
 The original raster resolution is on the order of 2000 by 2000 ft pixels (<strong>Error! Reference source not found.</strong>).</p>
-<img alt="../../_images/image23.png" src="../../_images/image23.png" />
+<img alt="../../_images/ref023.png" src="../../_images/ref023.png" />
 <p><em>Figure 23.
 Rainfall 24hr 100yr NOAA Atlas 14.</em></p>
 <p>The interpolation processor performs a GDAL <em>Warp</em> function to build a rastername_interp.tif.
 The new raster has these properties:</p>
 <ul class="simple">
-<li><p>Reprojected CRS = Project CRS.</p></li>
+<li><p>Re-projected CRS = Project CRS.</p></li>
 <li><p>Pixel size = grid element size.</p></li>
 <li><p>Clipped to Grid layer extent.</p></li>
 <li><p>Aligned to the grid.</p></li>
@@ -684,7 +667,7 @@ A rainfall reduction value is calculated for each element in the grid system usi
 <li><p>RAIN<sub>max</sub> = The maximum rainfall for the raster in the project area.</p></li>
 </ul>
 </div></blockquote>
-<img alt="../../_images/FLO054.png" src="../../_images/FLO054.png" />
+<img alt="../../_images/ref059.png" src="../../_images/ref059.png" />
 <p><em>Figure 24.
 Warped Rainfall Raster.</em></p>
 </section>
@@ -702,7 +685,7 @@ The interpolated rainfall data from NEXRAD can be used by FLO-2D to simulate rea
 grid files to import.
 There is one file for every 5 to 15 minutes of rainfall.
 Figure 25 shows the layout of a *.asc file and a group of files.</p>
-<img alt="../../_images/image26.png" src="../../_images/image26.png" />
+<img alt="../../_images/ref026.png" src="../../_images/ref026.png" />
 <p><em>Figure 25.
 NEXRAD Rainfall *.ASC File Example.</em></p>
 <p>The *.asc files are read as rasters in alphabetical order.
@@ -712,7 +695,7 @@ The data is not interpolated.
 The plugin will export a RAINCELL.DAT file or a binary RAINCELL.HDF5 file.
 These files contain the entire rainfall event.
 Figure 26 shows an example of the rainfall data file.</p>
-<img alt="../../_images/image27.png" src="../../_images/image27.png" />
+<img alt="../../_images/ref027.png" src="../../_images/ref027.png" />
 <p><em>Figure 26.
 RAINCELL.DAT.</em></p>
 </section>
@@ -756,9 +739,9 @@ That infiltration data will default to the Global Infiltration parameters.</p>
 <p>The Calculate Green and Ampt Method intersects the landuse and soils polygons to the grid polygons and calculates a spatially variable infiltration
 from the external layers.
 Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2023.</p>
-<img alt="../../_images/image28.png" src="../../_images/image28.png" />
+<img alt="../../_images/ref028.png" src="../../_images/ref028.png" />
 <p><em>Figure 27.
-Compute Green-Ampt dialog (FCDMC Method 2023)</em></p>
+Compute Green-Ampt dialog (Log Average Method 2023)</em></p>
 <p>This method follows the guidelines in the FCDMC Hydrology Manual from 2023 (FCDMC, 2023).
 The difference between this method and the 2018 method is the Log Average of PSIF.
 The general calculations are as follows:</p>
@@ -767,7 +750,7 @@ The general calculations are as follows:</p>
 <h4><em>XKSAT</em><a class="headerlink" href="#xksat" title="Link to this heading"></a></h4>
 <p>XKXAT is the hydraulic conductivity in in/hr or mm/hr of the soil layer.
 Figure 28 shows the hydraulic conductivity of the soil layer.</p>
-<img alt="../../_images/image29.png" src="../../_images/image29.png" />
+<img alt="../../_images/ref029.png" src="../../_images/ref029.png" />
 <p><em>Figure 28.
 Soil layer with XKSAT.</em></p>
 <p>The area weighted log average is calculated for each grid element from the soil layer equation(2).
@@ -783,7 +766,7 @@ The soil polygon is intersected with the grid polygon to provide the A<sub>i</su
 <section id="psif">
 <h4><em>PSIF</em><a class="headerlink" href="#psif" title="Link to this heading"></a></h4>
 <p>PSIF is the wetting front capillary suction in or mm of the soil layer (Figure 29).</p>
-<img alt="../../_images/image30.png" src="../../_images/image30.png" />
+<img alt="../../_images/ref030.png" src="../../_images/ref030.png" />
 <p><em>Figure 29
 Soil Layer with PSIF.</em></p>
 <p>The area weighted log average is calculated for each grid element from the soil layer equation (3).
@@ -800,18 +783,18 @@ The soil polygon is intersected with the grid polygon to provide the A<sub>i</su
 <h4><em>DTHETA</em><a class="headerlink" href="#dtheta" title="Link to this heading"></a></h4>
 <p>DTHETA is the soil moisture deficit.
 It ranges in value from zero to the effective porosity of the soil (Figure 30).</p>
-<img alt="../../_images/image31.png" src="../../_images/image31.png" />
+<img alt="../../_images/ref031.png" src="../../_images/ref031.png" />
 <p><em>Figure 30
 Soil Layer with DTHETA.</em></p>
 <p>DTHETA represents the soil moisture capacity for the start of a rainfall event.
 The initial soil conditions vary with respect to landuse categories like irrigation or ponded water conditions.
 Initial saturation is part of the landuse data (see Figure 31).</p>
-<img alt="../../_images/image32.png" src="../../_images/image32.png" />
+<img alt="../../_images/ref032.png" src="../../_images/ref032.png" />
 <p><em>Figure 31.
 Landuse with Initial Saturation Condition.</em></p>
 <p>As a result, DTHETA is split into individual parts that represent the DTHETA (wet, dry or normal).
 DTHETA<sub>wet</sub> is zero, DTHETA<sub>dry</sub> and DTHETA<sub>normal</sub> are calculated for the soil layers for individual soil groups (Figure 32).</p>
-<img alt="../../_images/image33.png" src="../../_images/image33.png" />
+<img alt="../../_images/ref033.png" src="../../_images/ref033.png" />
 <p><em>Figure 32.
 DTHETA Dry and Normal.</em></p>
 <p>After the soil layer is intersected with the landuse, DTHETA<sub>parts</sub> attributes are filled.
@@ -829,7 +812,7 @@ average for each grid element equation (4).</p>
 <h4><em>RTIMP</em><a class="headerlink" href="#rtimp" title="Link to this heading"></a></h4>
 <p>RTIMP is the percent impervious of the landuse (paved surfaces, buildings) and the soil (rockout).
 Figure 33 shows the rock out percentages for the landuse layer.</p>
-<img alt="../../_images/image34.png" src="../../_images/image34.png" />
+<img alt="../../_images/ref034.png" src="../../_images/ref034.png" />
 <p><em>Figure 33.
 Landuse with Rockout Percentages.</em></p>
 <p>Intersecting the landuse with the soil combines the data into a single layer (land_soil) of polygon features with attributes of RTIMP<sub>land</sub> and
@@ -868,7 +851,7 @@ soil data.</p>
 <p>The Green-Ampt parameters are printed to the spatially variable lines of the INFIL.DAT file (Figure 34).
 The INFIL.DAT structure is outlined in the Data Input Manual at the INFIL.DAT tab.
 More information on how FLO-2D uses the Green-Ampt method to calculate rainfall runoff is available in the FLO-2D Pro Reference Manual.</p>
-<img alt="../../_images/image35.png" src="../../_images/image35.png" />
+<img alt="../../_images/ref035.png" src="../../_images/ref035.png" />
 <p><em>Figure 34.
 Example INFIL.DAT file.</em></p>
 </section>
@@ -876,7 +859,7 @@ Example INFIL.DAT file.</em></p>
 <h4>VC<a class="headerlink" href="#vc" title="Link to this heading"></a></h4>
 <p>VC is the vegetative cover related to the topsoil horizon.
 Figure 35 shows the vegetative cover of the landuse layer.</p>
-<img alt="../../_images/image36.png" src="../../_images/image36.png" />
+<img alt="../../_images/ref036.png" src="../../_images/ref036.png" />
 <p><em>Figure 35.
 Landuse with Vegetative Cover.</em></p>
 <p>It is used to adjust <em>XKSAT</em> (Eq.
@@ -898,7 +881,7 @@ XKSATC for each grid element is written in the INFIL.DAT file.</p>
 <h4>IA<a class="headerlink" href="#ia" title="Link to this heading"></a></h4>
 <p>IA is the initial abstraction for each grid element.
 Figure 36 shows the initial abstraction for the landuse layer.</p>
-<img alt="../../_images/image37.png" src="../../_images/image37.png" />
+<img alt="../../_images/ref037.png" src="../../_images/ref037.png" />
 <p><em>Figure 36.
 Landuse with Initial Abstraction.</em></p>
 <p>The intersection between the landuse and grid element gives an area weighted average for the initial
@@ -917,7 +900,7 @@ is based on the 3<sup>rd</sup> column of the landuse table.</p>
 <h4>Green and Ampt (FCDMC Method 2018)<a class="headerlink" href="#green-and-ampt-fcdmc-method-2018" title="Link to this heading"></a></h4>
 <p>The 2018 method for Green-Ampt uses a different calculator for PSIF and DTHETA.
 Figure 27 shows the Compute Green-Ampt dialog for the FCDMC Method 2018.</p>
-<img alt="../../_images/image38.png" src="../../_images/image38.png" />
+<img alt="../../_images/ref038.png" src="../../_images/ref038.png" />
 <p><em>Figure 37.
 Green-Ampt dialog (FCDMC Method 2018).</em></p>
 <p>For each grid element, compute wetting front capillary suction PSIF according to the following regressions as
@@ -938,9 +921,9 @@ a function of <em>XKSAT</em> (Generated from Figure 4.3 of the Maricopa County D
 </table>
 <p>For each grid element, compute volumetric soil moisture deficiency <em>(DTHETA)</em> according to the following table.
 The specific table used for DTHETA depends on the <em>saturation</em> field of the soil table (6th column).</p>
-<img alt="../../_images/FLO056.png" src="../../_images/FLO056.png" />
-<img alt="../../_images/FLO057.png" src="../../_images/FLO057.png" />
-<img alt="../../_images/FLO058.png" src="../../_images/FLO058.png" />
+<img alt="../../_images/ref060.png" src="../../_images/ref060.png" />
+<img alt="../../_images/ref061.png" src="../../_images/ref061.png" />
+<img alt="../../_images/ref062.png" src="../../_images/ref062.png" />
 </section>
 <section id="moving-window-optimization-1">
 <span id="id1"></span><h4>Moving Window Optimization<a class="headerlink" href="#moving-window-optimization-1" title="Link to this heading"></a></h4>
@@ -948,7 +931,7 @@ The specific table used for DTHETA depends on the <em>saturation</em> field of t
 This window is a geometric bounding box that samples a small set of grid elements at a time.
 The window size is 100 x 100 grid elements.
 The polygons are clipped to the window to eliminate duplicate calculations.</p>
-<img alt="../../_images/FLO059.png" src="../../_images/FLO059.png" />
+<img alt="../../_images/ref063.png" src="../../_images/ref063.png" />
 </section>
 </section>
 <section id="scs-curve">
@@ -989,7 +972,7 @@ polyline.</p>
 channel element in a segment.
 Multiple polyline features are used to represent separate channel segments.
 Figure 38 shows a sample of the two separate layers.</p>
-<img alt="../../_images/image43.png" src="../../_images/image43.png" />
+<img alt="../../_images/ref043.png" src="../../_images/ref043.png" />
 <p><em>Figure 38.
 Left Bank Layers.</em></p>
 </section>
@@ -1001,7 +984,7 @@ The station elevation data is obtained from several sources including survey dat
 The data can also be defined for trapezoidal or rectangular channels.
 The last data source is a variable area equation such as: A = a*d^b.
 Where the area is defined by a coefficient, depth, and exponent.</p>
-<img alt="../../_images/image44.png" src="../../_images/image44.png" />
+<img alt="../../_images/ref044.png" src="../../_images/ref044.png" />
 <p><em>Figure 39.
 Cross Section User Layer.</em></p>
 </section>
@@ -1036,7 +1019,7 @@ The data is reloaded into the Plugin <em>Schematic Layers</em> with the interpol
 <p>The <em>Import HEC-RAS</em> tool is used to import channel data from HEC-RAS geometry files.
 The RAS project must be georeferenced and in the same coordinate system as the GeoPackage.
 This system can import channel geometry, full cross sections, bank to bank cross sections, interpolated cross sections and levees.</p>
-<img alt="../../_images/image45.png" src="../../_images/image45.png" />
+<img alt="../../_images/ref045.png" src="../../_images/ref045.png" />
 <p><em>Figure 40.
 HEC-RAS Import.</em></p>
 <p>Upon import, the HEC-RAS channels are saved to the <em>User Layers</em> (Figure 40).
@@ -1046,7 +1029,7 @@ The channels are imported as segment 1 being the first data set and segment 2 is
 If the channel data is in the wrong order, it should be corrected before being imported.</p>
 <p>Cross sections are saved to the Cross Section layer in the order by which they were written to the geometry file.
 The cross section names are extracted from the river mile field (Figure 41).</p>
-<img alt="../../_images/image46.png" src="../../_images/image46.png" />
+<img alt="../../_images/ref046.png" src="../../_images/ref046.png" />
 <p>Figure 41.
 Channel Cross Sections.*</p>
 </section>
@@ -1061,13 +1044,13 @@ The storm drain engine then routes the flow in the pipe network and calculates p
 <p>The <a class="reference external" href="https://flo-2dsoftware.github.io/qgis-flo-2d-plugin/widgets/storm-drainer-editor/Storm%20Drain.html">Storm Drain Editor</a> application and setup
 are well documented in the FLO-2D Plugin User Manual and a detailed tutorial is available <a class="reference external" href="https://documentation.flo-2d.com/Workshops/Lesson%203.html">online</a>.
 This document will discuss data management and important algorithms in the calculators.</p>
-<img alt="../../_images/image47.png" src="../../_images/image47.png" />
+<img alt="../../_images/ref047.png" src="../../_images/ref047.png" />
 <p><em>Figure 42.
 Storm Drain Layout in QGIS.</em></p>
 <p>The Storm Drain data files (SWMM.INP and *.DAT files) can be developed from scratch in the FLO-2D <em>Plugin Storm Drain Editor</em> by assigning the data
 from shapefiles to the storm drain features.
 Figure 43 shows the <em>Storm Drain</em> dialog box.</p>
-<img alt="../../_images/image48.png" src="../../_images/image48.png" />
+<img alt="../../_images/ref048.png" src="../../_images/ref048.png" />
 <p><em>Figure 43.
 Storm Drain Dialog Box.</em></p>
 <p>QGIS can be used to create the storm drain shapefiles for Inlets/Junctions, Outfalls and Conduits.
@@ -1075,7 +1058,7 @@ These shapefiles contain all the required data to fill the Storm Drain data file
 more information about the required data for each component).
 If the storm drain shapefiles exist, they can be imported into the QGIS project.
 If the storm drain shapefiles do not exist, they can be digitized into <em>Storm Drain User Layers</em> (Figure 44).</p>
-<img alt="../../_images/image49.png" src="../../_images/image49.png" />
+<img alt="../../_images/ref049.png" src="../../_images/ref049.png" />
 <p><em>Figure 44.
 Storm Drain Shapefiles.</em></p>
 <section id="storm-drain-components">
@@ -1083,18 +1066,18 @@ Storm Drain Shapefiles.</em></p>
 <p>The Storm Drain Configuration Tool (Figure 45), is the main processing tool for storm drain development.
 The algorithms copy features and attributes from shapefiles into the storm drain tables and layers.
 This organizes the data in a manner that is ideal for the swmm.inp, SWMMFLO.DAT, and SWMMOUTF.DAT data files.</p>
-<img alt="../../_images/image50.png" src="../../_images/image50.png" />
+<img alt="../../_images/ref050.png" src="../../_images/ref050.png" />
 <p><em>Figure 45.
 Select Components from Shapefile Layer: Inlet/Junctions.</em></p>
 <p>The data layout and organization prevent array allocation errors between FLO-2D engine and the storm drain engine.
 The features are written in the correct order from between swmm.inp and SWMMFLO.DAT.</p>
-<img alt="../../_images/image51.png" src="../../_images/image51.png" />
+<img alt="../../_images/ref051.png" src="../../_images/ref051.png" />
 <p><em>Figure 46.
 Data Organization Inlets.</em></p>
 <p>The finished tables can be validated and edited with the node and link dialog boxes (Figure 47).
 These boxes highlight and pan/zoom to the current feature and allow extra data to be assigned.
 Changes to these dialog boxes automatically update the storm drain arrays.</p>
-<img alt="../../_images/image52.png" src="../../_images/image52.png" />
+<img alt="../../_images/ref052.png" src="../../_images/ref052.png" />
 <p><em>Figure 47.
 Review Attributes from Storm Drain Table.</em></p>
 </section>
@@ -1117,7 +1100,7 @@ The Storm Drain component needs to be turned ON in the FLO-2D Control and Tolera
 <p>An existing *.INP file can be imported with the buttons in Figure 48 once the FLO-2D surface model has been already created.
 The <em>Storm Drain Editor</em> has an option to Import SWMM.inp that can be used to read an existing *.INP file.
 Storm drain systems created using other software can be imported if the format is compatible with EPA SWMM Version 5.</p>
-<img alt="../../_images/image53.png" src="../../_images/image53.png" />
+<img alt="../../_images/ref053.png" src="../../_images/ref053.png" />
 <p><em>Figure 48.
 Import Export SWMM.INP Options.</em></p>
 <p>The storm drain features will be read from the *.INP file and the <em>Inlets/Junctions, Outfalls</em> and <em>Conduits</em> tables in the components section in the
@@ -1127,7 +1110,7 @@ Import Export SWMM.INP Options.</em></p>
 <h3>Auto assign nodes<a class="headerlink" href="#auto-assign-nodes" title="Link to this heading"></a></h3>
 <p>The auto assign tool (Figure 49) scans the polyline data and finds the nodes at the upstream and downstream end.
 The node names fields from the Link tables are filled automatically.</p>
-<img alt="../../_images/image54.png" src="../../_images/image54.png" />
+<img alt="../../_images/ref054.png" src="../../_images/ref054.png" />
 <p><em>Figure 49.
 Auto Assign Tool.</em></p>
 <p>The algorithm uses a loop to read the xy coordinate of each end of the polyline using the xat,yat vertex(1) and xat,yat vertex (-1).
@@ -1137,7 +1120,7 @@ If a node is within the buffer, it is assigned to the InNode or OutNode table fo
 It is important that the links are digitized in the correct flow direction.
 Arrows are used in the feature style to represent the flow direction.
 Figure 50 shows the nodes next to each end of the link and the flow direction is shown by the blue arrows.</p>
-<img alt="../../_images/image55.png" src="../../_images/image55.png" />
+<img alt="../../_images/ref055.png" src="../../_images/ref055.png" />
 <p><em>Figure 50.
 Link Node and Flow Direction.</em></p>
 </section>
@@ -1146,10 +1129,10 @@ Link Node and Flow Direction.</em></p>
 <p>The rating table and pump curve tools (Figure 51) can import or build tabular data for type 4 inlets and pumps.
 These tools are connected to the table and plotting windows shown in Figure 52.
 These tools facilitate data assignment by automatically finding node names or link names and assigning the data with the same name.</p>
-<img alt="../../_images/image56.png" src="../../_images/image56.png" />
+<img alt="../../_images/ref056.png" src="../../_images/ref056.png" />
 <p><em>Figure 51.
 Rating Tables and Pump Curves.</em></p>
-<img alt="../../_images/image57.png" src="../../_images/image57.png" />
+<img alt="../../_images/ref057.png" src="../../_images/ref057.png" />
 <p><em>Figure 52.
 Table Editor and Plotting Window.</em></p>
 </section>
@@ -1161,7 +1144,7 @@ The required layers include building shape files, grid cell elevations, grid cel
 The user must define ground elevation, water surface elevation and maximum flow depth for each building.
 An adjustment factor can be applied to calculate the finished floor elevation.
 Figure 53 shows the tool requirements.</p>
-<img alt="../../_images/image58.png" src="../../_images/image58.png" />
+<img alt="../../_images/ref058.png" src="../../_images/ref058.png" />
 <p><em>Figure 53.
 Hazus Tool.</em></p>
 <p>The process to generate a Hazus raster is outlined in the User’s Manual.
@@ -11035,154 +11018,13 @@ and peak discharge data.</p></td>
 </table>
 </section>
 </section>
-<section id="appendix-c-flo-2d-hdf5-data-structure">
-<h1>Appendix C FLO-2D HDF5 Data Structure<a class="headerlink" href="#appendix-c-flo-2d-hdf5-data-structure" title="Link to this heading"></a></h1>
-<section id="boundary-conditions">
-<h2>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Link to this heading"></a></h2>
-<section id="inflow">
-<h3>Inflow<a class="headerlink" href="#inflow" title="Link to this heading"></a></h3>
-<img alt="../../_images/FLO060.png" src="../../_images/FLO060.png" />
-</section>
-<section id="outflow-grid-id">
-<h3>Outflow Grid ID<a class="headerlink" href="#outflow-grid-id" title="Link to this heading"></a></h3>
-<img alt="flo-2d_plugin/technical_reference_manual/img/flo-2d-plugin-technical-reference-manual/FLO061.png" src="flo-2d_plugin/technical_reference_manual/img/flo-2d-plugin-technical-reference-manual/FLO061.png" />
-</section>
-<section id="outflow-time-series">
-<h3>Outflow Time Series<a class="headerlink" href="#outflow-time-series" title="Link to this heading"></a></h3>
-<img alt="../../_images/FLO02.png" src="../../_images/FLO02.png" />
-</section>
-</section>
-<section id="channels">
-<h2>Channels<a class="headerlink" href="#channels" title="Link to this heading"></a></h2>
-<section id="global">
-<h3>Global<a class="headerlink" href="#global" title="Link to this heading"></a></h3>
-<p>Global parameters and banks</p>
-<img alt="../../_images/FLO063.png" src="../../_images/FLO063.png" />
-<img alt="../../_images/FLO064.png" src="../../_images/FLO064.png" />
-</section>
-<section id="channel-natural">
-<h3>Channel Natural<a class="headerlink" href="#channel-natural" title="Link to this heading"></a></h3>
-<img alt="../../_images/FLO065.png" src="../../_images/FLO065.png" />
-</section>
-<section id="channel-trapezoidal-rectangular">
-<h3>Channel Trapezoidal Rectangular<a class="headerlink" href="#channel-trapezoidal-rectangular" title="Link to this heading"></a></h3>
-<img alt="flo-2d_plugin/technical_reference_manual/img/flo-2d-plugin-technical-reference-manual/FLO066.png" src="flo-2d_plugin/technical_reference_manual/img/flo-2d-plugin-technical-reference-manual/FLO066.png" />
-</section>
-<section id="noexchange">
-<h3>NoExchange<a class="headerlink" href="#noexchange" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="control-parameters">
-<h2>Control Parameters<a class="headerlink" href="#control-parameters" title="Link to this heading"></a></h2>
-<p>cont.dat parameters and toler.dat parameters.</p>
-<img alt="../../_images/FLO067.png" src="../../_images/FLO067.png" />
-</section>
-<section id="grid">
-<h2>Grid<a class="headerlink" href="#grid" title="Link to this heading"></a></h2>
-<p>X coordinate, y coordinate, elevation, mannings n, and neighbors tables</p>
-<p>TOPO.DAT
-MANNINGS_N.DAT
-CADPTS.DAT
-FPLAIN.DAT
-NEIGHBORS.DAT</p>
-<img alt="../../_images/FLO068.png" src="../../_images/FLO068.png" />
-</section>
-<section id="floodplain-cross-section">
-<h2>Floodplain Cross Section<a class="headerlink" href="#floodplain-cross-section" title="Link to this heading"></a></h2>
-<img alt="../../_images/FLO073.png" src="../../_images/FLO073.png" />
-</section>
-<section id="gutter">
-<h2>Gutter<a class="headerlink" href="#gutter" title="Link to this heading"></a></h2>
-</section>
-<section id="hydraulic-structures">
-<h2>Hydraulic Structures<a class="headerlink" href="#hydraulic-structures" title="Link to this heading"></a></h2>
-<section id="control">
-<h3>Control<a class="headerlink" href="#control" title="Link to this heading"></a></h3>
-</section>
-<section id="rating-table">
-<h3>Rating Table<a class="headerlink" href="#rating-table" title="Link to this heading"></a></h3>
-</section>
-<section id="storm-drain">
-<h3>Storm Drain<a class="headerlink" href="#storm-drain" title="Link to this heading"></a></h3>
-</section>
-<section id="rating-curve">
-<h3>Rating Curve<a class="headerlink" href="#rating-curve" title="Link to this heading"></a></h3>
-</section>
-<section id="culvert-equations">
-<h3>Culvert Equations<a class="headerlink" href="#culvert-equations" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="infiltration">
-<h2>Infiltration<a class="headerlink" href="#infiltration" title="Link to this heading"></a></h2>
-<section id="method">
-<h3>Method<a class="headerlink" href="#method" title="Link to this heading"></a></h3>
-</section>
-<section id="green-ampt">
-<h3>Green Ampt<a class="headerlink" href="#green-ampt" title="Link to this heading"></a></h3>
-<img alt="../../_images/FLO076.png" src="../../_images/FLO076.png" />
-</section>
-<section id="scs-curve-number">
-<span id="scs-hdf"></span><h3>SCS Curve Number<a class="headerlink" href="#scs-curve-number" title="Link to this heading"></a></h3>
-<p><strong>Global</strong></p>
-<p><strong>Spatial</strong></p>
-<img alt="../../_images/FLO077.png" src="../../_images/FLO077.png" />
-</section>
-<section id="horton-hdf">
-<span id="id2"></span><h3>Horton<a class="headerlink" href="#horton-hdf" title="Link to this heading"></a></h3>
-<p><strong>Global</strong></p>
-<p><strong>Spatial</strong></p>
-<img alt="../../_images/FLO078.png" src="../../_images/FLO078.png" />
-</section>
-</section>
-<section id="levee">
-<h2>Levee<a class="headerlink" href="#levee" title="Link to this heading"></a></h2>
-<p>LEVEE.DAT</p>
-<img alt="../../_images/FLO071.png" src="../../_images/FLO071.png" />
-<section id="levee-failure-prescribed">
-<h3>Levee Failure Prescribed<a class="headerlink" href="#levee-failure-prescribed" title="Link to this heading"></a></h3>
-</section>
-<section id="levee-failure-breach">
-<h3>Levee Failure Breach<a class="headerlink" href="#levee-failure-breach" title="Link to this heading"></a></h3>
-</section>
-<section id="levee-failure-curve">
-<h3>Levee Failure Curve<a class="headerlink" href="#levee-failure-curve" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="rainfall">
-<h2>Rainfall<a class="headerlink" href="#rainfall" title="Link to this heading"></a></h2>
-<section id="global-1">
-<span id="id3"></span><h3>Global<a class="headerlink" href="#global-1" title="Link to this heading"></a></h3>
-<img alt="../../_images/FLO079.png" src="../../_images/FLO079.png" />
-</section>
-<section id="spatial">
-<h3>Spatial<a class="headerlink" href="#spatial" title="Link to this heading"></a></h3>
-<img alt="../../_images/FLO080.png" src="../../_images/FLO080.png" />
-</section>
-</section>
-<section id="reduction-factors">
-<h2>Reduction Factors<a class="headerlink" href="#reduction-factors" title="Link to this heading"></a></h2>
-</section>
-<section id="spatially-variable">
-<h2>Spatially Variable<a class="headerlink" href="#spatially-variable" title="Link to this heading"></a></h2>
-<p>Storm Drain</p>
-</section>
-<section id="multiple-channel">
-<h2>Multiple Channel<a class="headerlink" href="#multiple-channel" title="Link to this heading"></a></h2>
-<img alt="../../_images/FLO074.png" src="../../_images/FLO074.png" />
-</section>
-<section id="blocked-cells">
-<h2>Blocked Cells<a class="headerlink" href="#blocked-cells" title="Link to this heading"></a></h2>
-<p>ARF / WRF</p>
-<img alt="../../_images/FLO075.png" src="../../_images/FLO075.png" />
-</section>
-</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="FLO-2D Gila for QGIS: Technical Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="HDF5%20Docs.html" class="btn btn-neutral float-right" title="Appendix C FLO-2D HDF5 Data Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="HDF5%20Docs.html" class="btn btn-neutral float-right" title="Appendix C: FLO-2D HDF5 Data Structure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
