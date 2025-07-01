@@ -19,7 +19,7 @@ Import and Review Culvert Data
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   In this lesson, we begin setting up hydraulic structures (culverts, weirs) in the FLO-2D project using QGIS. The workflow involves importing a shapefile, adjusting symbology, verifying flow direction, and preparing the geometry and elevation data.
+In this lesson, we begin setting up hydraulic structures (culverts, weirs) in the FLO-2D project using QGIS. The workflow involves importing a shapefile, adjusting symbology, verifying flow direction, and preparing the geometry and elevation data.
 
 Add the Hydraulic Structures Layer
 ----------------------------------
@@ -94,6 +94,83 @@ Set-up Culvert Structures
    <iframe width="560" height="315" src="https://www.youtube.com/embed/WKjd-FG0ZUM?si=VVumLcmUz5gq9NSg"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+This part of the lesson shows how to import and configure hydraulic structures in your FLO-2D project using QGIS.
+
+.. note::
+   Covert (culvert) data rarely comes as pre-formatted GIS line features. Most often, site surveys or as-built drawings are needed.
+
+Step 1: Import the Hydraulic Structure Templates
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Open **QGIS Lesson 6** project.
+- Drag and drop the ``hydraulic_structures.shp`` file from the lesson data folder onto the map.
+- Change symbology:
+  - Set to **Arrow symbol** to show flow direction.
+  - Optionally brighten the line color.
+
+.. tip::
+   The arrowhead marks the **Outlet**, and the first vertex is the **Inlet**.
+
+Step 2: Copy from Template Layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Select features from the template layer:
+  - Use **Select Features** tool or ``Ctrl+A``.
+  - Copy with ``Ctrl+C``.
+- Activate the **Structure** layer from the **FLO-2D widget** editor.
+  - Ensure editing mode is on.
+  - Paste with ``Ctrl+V``.
+- Save the edits.
+
+Step 3: Name and Review Each Structure
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Use the **Center on structure** button to step through.
+- Rename each one based on the provided naming convention (e.g., ``CLV001`` to ``CLV012``).
+- Set labels to ``structure_name`` field with 12pt font for visibility.
+
+Step 4: Assign Structure Type
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Identify structure types:
+  - **Floodplain to Floodplain**
+  - **Floodplain to Channel** (must be on a **Left Bank node**)
+  - **Channel to Channel** (usually already handled in the channel lesson)
+- Set the type to **Rating Table** using the drop-down menu.
+
+.. note::
+   For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
+
+Step 5: Schematic Correction and Recheck
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- After assigning types:
+  - Save and click **Schematize** to update geometry.
+  - Check and re-validate structure assignments one more time.
+  - Use the Center button to cycle through and verify again.
+
+Step 6: Import Rating Tables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- From the ``ct_tables`` folder, select all files and import.
+- Only rating tables that match existing structure names will be applied.
+
+Step 7: Manually Modify a Rating Table
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Example: reduce max headwater for ``129A``, ``129B``, ``129C`` to approx. 3 feet.
+- Delete rows from 3.0+ ft.
+- Copy and paste modified table to the other two structures.
+
+.. note::
+   Use ``Ctrl+C`` and ``Ctrl+V`` or **Copy/Paste** buttons.
+
+Next Step
+---------
+
+The next step is to **Save, Export, and Run** the model. This is covered in the following video.
 
 
 .. _correct_elevation:
