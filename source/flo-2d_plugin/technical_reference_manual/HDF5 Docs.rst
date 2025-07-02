@@ -4,6 +4,11 @@ Appendix C: FLO-2D HDF5 Data Structure
 Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in the Data Input 
 Manual, while those in **green** are internal cross-reference or ID fields used by the HDF5 structure.
 
+.. contents:: Contents
+   :local: 
+   :depth: 1
+   :backlinks: entry
+
 Boundary Conditions
 -------------------
 
@@ -89,8 +94,7 @@ Channels
 
 Global
 ~~~~~~
-
-Channel control and bank data.
+All 1D channel data will have a control data and bank data.
 
 *Corresponds to:* `CHAN.DAT`, `CHANBANK.DAT`
 
@@ -98,7 +102,7 @@ Channel control and bank data.
 
 Channel Natural
 ~~~~~~~~~~~~~~~
-Channel and cross section station elevation data.
+Channel cross reference and and cross section station elevation data.
 
 *Corresponds to:* `CHAN.DAT`, `XSEC.DAT`
 
@@ -114,7 +118,7 @@ Defines trapezoidal cross sections using base width, depth, and side slope.
 
 Channel Rectangular
 ~~~~~~~~~~~~~~~~~~~
-Defines simple rectangular cross sections using base width and depth.
+Defines rectangular cross sections using base width and depth.
 
 *Corresponds to:* `CHAN.DAT`
 
@@ -124,13 +128,12 @@ NoExchange / Confluence
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Reserved for special conditions like confluence or split flow.
 
-*Corresponds to:* `CHAN.DAT`
+*Corresponds to:* `CHAN.DAT` 
 
-[missing image]
+.. image:: ./img/hdf5/FLO084a.png
 
 Control Parameters
 ------------------
-
 Contains global control data and switches and numerical tolerances.
 
 *Corresponds to:* `CONT.DAT`, `TOLER.DAT`
@@ -139,7 +142,6 @@ Contains global control data and switches and numerical tolerances.
 
 Grid
 ----
-
 Defines spatial layout and surface properties.
 
 *Corresponds to:* `TOPO.DAT`, `MANNINGS_N.DAT`, `CADPTS.DAT`, `FPLAIN.DAT`, `NEIGHBORS.DAT`
@@ -148,7 +150,6 @@ Defines spatial layout and surface properties.
 
 Floodplain Cross Section
 -------------------------
-
 Specifies cross section grid elements that are reported to cross section output files.
 
 *Corresponds to:* `FPXSEC.DAT`
@@ -157,17 +158,15 @@ Specifies cross section grid elements that are reported to cross section output 
 
 Gutter
 ------
-
-Describes gutter system routing. [Add reference when applicable.]
+Describes gutter system routing. 
 
 *Corresponds to:* `GUTTER.DAT`
 
 Hydraulic Structures
 --------------------
-
 Hdf5 data for hydraulic structures is organized into several tables, each corresponding to a specific structure type or function.
 
-*Corresponds to:* `HYSTRUC.DAT`
+*Corresponds to:* `HYSTRUC.DAT`, BRIDGE_XSEC.DAT
 
 Control tables and name tables.
 
@@ -191,6 +190,7 @@ Bridge tables parameters and cross section data.
 
 Infiltration
 ------------
+Infiltration data is organized into several tables, each corresponding to a specific infiltration method or parameter set.
 
 *Corresponds to:* `INFIL.DAT`
 
@@ -200,6 +200,7 @@ Defines the selected infiltration method: Green-Ampt, SCS, or Horton.
 
 Green Ampt
 ~~~~~~~~~~
+Defines Green-Ampt infiltration parameters spatially or globally.
 
 .. image:: ./img/hdf5/FLO076.png
 
@@ -207,7 +208,7 @@ Green Ampt
 
 SCS Curve Number
 ~~~~~~~~~~~~~~~~
-Defines curve number by grid or globally.
+Defines SCS curve number infiltration parameters spatially or globally.
 
 .. image:: ./img/hdf5/FLO077.png
 
@@ -215,12 +216,13 @@ Defines curve number by grid or globally.
 
 Horton
 ~~~~~~
-Horton infiltration parameters spatially or globally defined.
+Defines Horton infiltration parameters spatially or globally.
 
 .. image:: ./img/hdf5/FLO078.png
 
 Levee
 -----
+Defines levee parameters and levee and breach failure parameters.
 
 *Corresponds to:* `LEVEE.DAT`
 
@@ -228,7 +230,7 @@ Levee
 
 Levee Failure Prescribed
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Time-based breach with user-defined data.
+Prescribed levee failure using time of breach and prescribed vertical and horizontal levee failure rates.
 
 .. image:: ./img/hdf5/FLO096.png
 
