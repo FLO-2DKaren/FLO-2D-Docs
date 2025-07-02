@@ -51,22 +51,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit Gila</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html#load-your-flo-2d-project">Load Your FLO-2D Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4-Channels.html">Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Project Review and Mapping</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#load-results-and-maps">Load Results and Maps</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#review-a-project-run">Review a Project Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-1-download-the-workshop-data">Step 1: Download the Workshop Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-2-install-the-workshop">Step 2: Install the Workshop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-3-understand-the-folder-structure">Step 3: Understand the Folder Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-4-use-the-demo-engine">Step 4: Use the Demo Engine</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#step-5-set-up-qgis-to-use-the-demo-engine">Step 5: Set Up QGIS to Use the Demo Engine</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4-Channels.html">Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Project Review and Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
@@ -118,7 +120,93 @@
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ebIFoGUuQcI?si=XMiARpQIkzIPD5Es"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson introduces the setup of hydraulic structures in FLO-2D using QGIS. It includes visual styling, elevation considerations, and labeling, preparing the dataset for modeling.</p>
+<section id="step-1-load-hydraulic-structures">
+<h3>Step 1: Load Hydraulic Structures<a class="headerlink" href="#step-1-load-hydraulic-structures" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Load the <strong>hydraulic_structures.shp</strong> shapefile into your QGIS project.</p></li>
+<li><p>Modify the layer style:
+- Change the symbol to an <strong>arrow line</strong> for visualizing flow direction.
+- Adjust the <strong>color</strong> to make structures more visible.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arrows indicate the direction of flow: inlet is the first vertex, outlet is the last.</p>
+</div>
+</section>
+<section id="step-2-understand-elevation-requirements">
+<h3>Step 2: Understand Elevation Requirements<a class="headerlink" href="#step-2-understand-elevation-requirements" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Each hydraulic structure must move flow from an <strong>inlet</strong> to an <strong>outlet</strong> grid element.</p></li>
+<li><p>Elevations must match the <strong>invert elevations</strong> of culverts and connected features.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use the <strong>Identify Features</strong> tool on your elevation raster and grid layers to find elevation mismatches.</p>
+</div>
+</section>
+<section id="common-adjustments">
+<h3>Common adjustments:<a class="headerlink" href="#common-adjustments" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Move</strong> the inlet/outlet point to the nearest correct elevation cell.</p></li>
+<li><p>Use <strong>elevation correction polygons</strong> where necessary to model invert slopes and street flow paths.</p></li>
+<li><p>Consider <strong>stilling basins</strong> or <strong>weirs</strong> where sediment control is necessary.</p></li>
+</ul>
+</section>
+<section id="step-3-examples-of-flow-adjustments">
+<h3>Step 3: Examples of Flow Adjustments<a class="headerlink" href="#step-3-examples-of-flow-adjustments" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Evaluate upstream/downstream cells:
+- Example: Move from a 1428 ft grid cell to a 1425 ft cell to match invert.</p></li>
+<li><p>Ensure continuity along <strong>trapezoidal channels</strong> feeding culverts.</p></li>
+</ul>
+</section>
+<section id="step-4-assign-structures-to-cross-sections">
+<h3>Step 4: Assign Structures to Cross-Sections<a class="headerlink" href="#step-4-assign-structures-to-cross-sections" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>For culverts connecting to channels:
+- Always assign outlet to the <strong>left bank</strong> of the cross-section.
+- FLO-2D exchanges discharge to cross-sections, not grid elements.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Right bank assignments can cause ambiguity. Use left bank consistently.</p>
+</div>
+</section>
+<section id="step-5-label-the-hydraulic-structures">
+<h3>Step 5: Label the Hydraulic Structures<a class="headerlink" href="#step-5-label-the-hydraulic-structures" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Open <strong>Layer Properties &gt; Labels</strong> tab.</p></li>
+<li><p>Label each structure with the <strong>structure_name</strong> field.</p></li>
+<li><p>Recommended settings:
+- Font size: <strong>12 pt</strong>
+- Font color: <strong>white</strong> or a visible contrast color</p></li>
+</ul>
+</section>
+<section id="step-6-check-attribute-table-fields">
+<h3>Step 6: Check Attribute Table Fields<a class="headerlink" href="#step-6-check-attribute-table-fields" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Ensure the attribute table contains:
+- <code class="docutils literal notranslate"><span class="pre">structure_name</span></code>
+- <code class="docutils literal notranslate"><span class="pre">structure_type</span></code> (floodplain-to-floodplain, floodplain-to-channel, etc.)
+- <code class="docutils literal notranslate"><span class="pre">tailwater_switch</span></code> (default = 0)
+- <code class="docutils literal notranslate"><span class="pre">head_reference_elevation</span></code>
+- Additional culvert parameters (used in the advanced setup)</p></li>
+</ul>
+</section>
+<section id="structure-types">
+<h3>Structure Types:<a class="headerlink" href="#structure-types" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Floodplain to Floodplain</strong>: Flow between two grid cells</p></li>
+<li><p><strong>Floodplain to Channel</strong>: Connect to left bank of a cross-section</p></li>
+<li><p><strong>Channel to Channel</strong>: Set up previously in the Channel lesson</p></li>
+</ul>
+</section>
+</section>
+<section id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Link to this heading"></a></h2>
+<p>In the next lesson, you’ll learn how to define hydraulic structure parameters in the layer attribute table and export your model data.</p>
+</section>
 <section id="review-a-project-run">
 <h2>Review a Project Run<a class="headerlink" href="#review-a-project-run" title="Link to this heading"></a></h2>
 <div class="admonition note">
@@ -127,7 +215,84 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </div>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ebIFoGUuQcI?si=XMiARpQIkzIPD5Es"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, we begin working with <strong>hydraulic structures</strong> in FLO-2D. This is the first part of a two-part lesson focusing on how to display and prepare culvert data for modeling using rating tables. The second, more advanced lesson will cover converting culverts to use the <strong>Generalized Culvert Equation (CT)</strong>.</p>
+<section id="step-1-add-the-hydraulic-structures-layer">
+<h3>Step 1: Add the Hydraulic Structures Layer<a class="headerlink" href="#step-1-add-the-hydraulic-structures-layer" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Drag and drop the hydraulic structure shapefile onto your QGIS map canvas.</p></li>
+<li><p>The default symbology may be muted. You should:
+- Change the line style to <strong>arrow</strong> to indicate flow direction.
+- Apply a brighter fill color for better visibility.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arrow symbology in QGIS applies an arrowhead at the last vertex of the polyline. This means:
+- <strong>First vertex</strong> = Inlet
+- <strong>Second vertex</strong> = Outlet</p>
+</div>
+</section>
+<section id="step-2-understand-flow-direction">
+<h3>Step 2: Understand Flow Direction<a class="headerlink" href="#step-2-understand-flow-direction" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>FLO-2D hydraulic structures move water <strong>from inlet to outlet</strong>.</p></li>
+<li><p>Even when reverse flow (e.g. tailwater conditions) is possible, always define flow in the expected direction.</p></li>
+</ul>
+</section>
+<section id="step-3-elevation-considerations">
+<h3>Step 3: Elevation Considerations<a class="headerlink" href="#step-3-elevation-considerations" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Grid cell elevations are averages of underlying raster pixels.</p></li>
+<li><p>Culverts often require <strong>invert elevations</strong>, not average elevations.</p></li>
+<li><p>Use the <strong>Identify Features</strong> tool on the elevation raster to get correct values.</p></li>
+<li><p>You may need to modify grid cell elevations at the <strong>inlet</strong>, <strong>outlet</strong>, and along small channels leading to the structures.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use elevation correction polygons to modify grid cell elevations to match actual invert elevations.</p>
+</div>
+</section>
+<section id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>One culvert shows 1409 (grid cell average) while the actual invert is 1405.</p></li>
+<li><p>Another structure has a weir at elevation 1396.5 to separate trash from flow before it enters a stilling basin.</p></li>
+</ul>
+</section>
+<section id="step-4-label-hydraulic-structures">
+<h3>Step 4: Label Hydraulic Structures<a class="headerlink" href="#step-4-label-hydraulic-structures" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Open the attribute table and confirm each structure has a valid name.</p></li>
+<li><p>Use the <cite>structure_name</cite> field to label structures on the map.</p></li>
+<li><p>Adjust label font size and color for clarity.</p></li>
+</ul>
+</section>
+<section id="step-5-classify-structure-types">
+<h3>Step 5: Classify Structure Types<a class="headerlink" href="#step-5-classify-structure-types" title="Link to this heading"></a></h3>
+<p>Hydraulic structures can connect:</p>
+<ul class="simple">
+<li><p>Floodplain to floodplain</p></li>
+<li><p>Floodplain to channel (assign to <strong>Left Bank</strong> only)</p></li>
+<li><p>Channel to channel</p></li>
+</ul>
+<p>Make sure structure types and flow paths are clearly identified.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>FLO-2D links structures to <strong>cross-sections</strong>, not banks. Always connect to the <strong>Left Bank</strong> when targeting channels.</p>
+</div>
+</section>
+<section id="step-6-next-steps">
+<h3>Step 6: Next Steps<a class="headerlink" href="#step-6-next-steps" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>All structures are initially set up with <strong>rating tables</strong>.</p></li>
+<li><p>The tailwater switch is typically left at <cite>0</cite> (inlet-controlled flow).</p></li>
+<li><p>More parameters (head reference, n-value, etc.) will be discussed before data export.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The second part of this lesson will cover converting culverts to <strong>CT structures</strong> using the Generalized Culvert Equation.</p>
+</div>
+</section>
+</section>
 </section>
 
 

@@ -51,26 +51,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit Gila</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html#load-your-flo-2d-project">Load Your FLO-2D Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4-Channels.html">Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
-<li class="toctree-l3"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
-<li class="toctree-l3"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Hydraulic Structures - Culverts</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#import-and-review-culvert-data">Import and Review Culvert Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#set-up-culvert-structures">Set-up Culvert Structures</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#correct-elevation">Correct Elevation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#save-export-and-run-pre-elevation-change">Save Export and Run Pre Elevation Change</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#create-culverts-with-culvert-equations">Create Culverts with Culvert Equations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#summary-and-review-project">Summary and Review Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-1-download-the-workshop-data">Step 1: Download the Workshop Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-2-install-the-workshop">Step 2: Install the Workshop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-3-understand-the-folder-structure">Step 3: Understand the Folder Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-4-use-the-demo-engine">Step 4: Use the Demo Engine</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#step-5-set-up-qgis-to-use-the-demo-engine">Step 5: Set Up QGIS to Use the Demo Engine</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4-Channels.html">Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
+<li class="toctree-l4"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Hydraulic Structures - Culverts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
@@ -118,32 +116,460 @@
 <h2>Import and Review Culvert Data<a class="headerlink" href="#import-and-review-culvert-data" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ebIFoGUuQcI?si=XMiARpQIkzIPD5Es"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, we begin setting up hydraulic structures (culverts, weirs) in the FLO-2D project using QGIS. The workflow involves importing a shapefile, adjusting symbology, verifying flow direction, and preparing the geometry and elevation data.</p>
+</section>
+<section id="add-the-hydraulic-structures-layer">
+<h2>Add the Hydraulic Structures Layer<a class="headerlink" href="#add-the-hydraulic-structures-layer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Drag the <code class="docutils literal notranslate"><span class="pre">hydraulic_structures.shp</span></code> into the QGIS map.</p></li>
+<li><p>Change the symbology to <strong>arrow</strong> style to visualize the flow direction.</p></li>
+<li><p>Optionally, change the fill color for visibility.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The arrow is drawn from the first to last vertex of each polyline—first is <strong>inlet</strong>, last is <strong>outlet</strong>.</p>
+</div>
+</section>
+<section id="flow-direction-and-invert-elevation">
+<h2>Flow Direction and Invert Elevation<a class="headerlink" href="#flow-direction-and-invert-elevation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Each hydraulic structure moves flow from inlet to outlet.</p></li>
+<li><p>Verify and correct elevation to reflect true invert elevation of the structure.</p></li>
+<li><p>Use <strong>ID tool</strong> to check elevation of individual grid cells and surrounding terrain.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The grid cell elevation is an average, but for culverts we need the <strong>lowest</strong> point (invert) for both inlet and outlet.</p>
+</div>
+<section id="elevation-correction-examples">
+<h3>Elevation Correction Examples<a class="headerlink" href="#elevation-correction-examples" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Example 1:
+- Upstream: 1409 → Invert needed: 1405
+- Use elevation correction tools to align DEM with true invert.</p></li>
+<li><p>Example 2:
+- A weir is used to filter sediment before reaching a stilling basin.
+- Identify inlet (1390) and downstream invert (1385) and correct grid elevation accordingly.</p></li>
+</ul>
+</section>
+</section>
+<section id="scuppers-and-elevation-transitions">
+<h2>Scuppers and Elevation Transitions<a class="headerlink" href="#scuppers-and-elevation-transitions" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Some inlets capture runoff from streets via scuppers.</p></li>
+<li><p>Adjust elevation across roadways and localized channel segments so water reaches inlets correctly.</p></li>
+</ul>
+</section>
+<section id="shared-culverts-between-floodplain-and-channels">
+<h2>Shared Culverts Between Floodplain and Channels<a class="headerlink" href="#shared-culverts-between-floodplain-and-channels" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>When flow is routed to a <strong>channel</strong>, always assign the <strong>left bank</strong>.</p></li>
+<li><p>This ensures proper mapping to the <strong>cross-section</strong>, not just the bank cell.</p></li>
+<li><p>Right banks can contain multiple grid cells, which may lead to ambiguity.</p></li>
+</ul>
+</section>
+<section id="labeling-hydraulic-structures">
+<h2>Labeling Hydraulic Structures<a class="headerlink" href="#labeling-hydraulic-structures" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Open layer properties and go to <strong>Labels</strong>.</p></li>
+<li><p>Choose the field <code class="docutils literal notranslate"><span class="pre">structure_name</span></code> to display.</p></li>
+<li><p>Adjust font size and color for better visibility.</p></li>
+</ul>
+<p><strong>Put Image Here</strong></p>
+</section>
+<section id="understanding-structure-types">
+<h2>Understanding Structure Types<a class="headerlink" href="#understanding-structure-types" title="Link to this heading"></a></h2>
+<p>Each structure is categorized by flow type:
+- <strong>Floodplain to Floodplain</strong>
+- <strong>Floodplain to Channel</strong> (requires assignment to left bank)
+- <strong>Channel to Channel</strong> (handled earlier in the channel lesson)</p>
+</section>
+<section id="switches-and-advanced-setup">
+<h2>Switches and Advanced Setup<a class="headerlink" href="#switches-and-advanced-setup" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Set all structures initially to use a <strong>rating table</strong>.</p></li>
+<li><p>Tailwater switch: set to <code class="docutils literal notranslate"><span class="pre">0</span></code> by default, unless needed otherwise.</p></li>
+<li><p>Head reference elevation and geometry parameters will be handled in the advanced culvert setup.</p></li>
+</ul>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>In the next video, we’ll learn how to assign hydraulic structure attributes into the project database.</p>
+</section>
 <section id="set-up-culvert-structures">
 <h2>Set-up Culvert Structures<a class="headerlink" href="#set-up-culvert-structures" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WKjd-FG0ZUM?si=VVumLcmUz5gq9NSg"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This part of the lesson shows how to import and configure hydraulic structures in your FLO-2D project using QGIS.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Covert (culvert) data rarely comes as pre-formatted GIS line features. Most often, site surveys or as-built drawings are needed.</p>
+</div>
+<section id="step-1-import-the-hydraulic-structure-templates">
+<h3>Step 1: Import the Hydraulic Structure Templates<a class="headerlink" href="#step-1-import-the-hydraulic-structure-templates" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Open <strong>QGIS Lesson 6</strong> project.</p></li>
+<li><p>Drag and drop the <code class="docutils literal notranslate"><span class="pre">hydraulic_structures.shp</span></code> file from the lesson data folder onto the map.</p></li>
+<li><p>Change symbology:
+- Set to <strong>Arrow symbol</strong> to show flow direction.
+- Optionally brighten the line color.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The arrowhead marks the <strong>Outlet</strong>, and the first vertex is the <strong>Inlet</strong>.</p>
+</div>
+</section>
+<section id="step-2-copy-from-template-layer">
+<h3>Step 2: Copy from Template Layer<a class="headerlink" href="#step-2-copy-from-template-layer" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Select features from the template layer:
+- Use <strong>Select Features</strong> tool or <code class="docutils literal notranslate"><span class="pre">Ctrl+A</span></code>.
+- Copy with <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code>.</p></li>
+<li><p>Activate the <strong>Structure</strong> layer from the <strong>FLO-2D widget</strong> editor.
+- Ensure editing mode is on.
+- Paste with <code class="docutils literal notranslate"><span class="pre">Ctrl+V</span></code>.</p></li>
+<li><p>Save the edits.</p></li>
+</ul>
+</section>
+<section id="step-3-name-and-review-each-structure">
+<h3>Step 3: Name and Review Each Structure<a class="headerlink" href="#step-3-name-and-review-each-structure" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use the <strong>Center on structure</strong> button to step through.</p></li>
+<li><p>Rename each one based on the provided naming convention (e.g., <code class="docutils literal notranslate"><span class="pre">CLV001</span></code> to <code class="docutils literal notranslate"><span class="pre">CLV012</span></code>).</p></li>
+<li><p>Set labels to <code class="docutils literal notranslate"><span class="pre">structure_name</span></code> field with 12pt font for visibility.</p></li>
+</ul>
+</section>
+<section id="step-4-assign-structure-type">
+<h3>Step 4: Assign Structure Type<a class="headerlink" href="#step-4-assign-structure-type" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Identify structure types:
+- <strong>Floodplain to Floodplain</strong>
+- <strong>Floodplain to Channel</strong> (must be on a <strong>Left Bank node</strong>)
+- <strong>Channel to Channel</strong> (usually already handled in the channel lesson)</p></li>
+<li><p>Set the type to <strong>Rating Table</strong> using the drop-down menu.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For grouped culverts (e.g., simple storm drain systems), assign a <strong>storm drain capacity</strong> in CFS.</p>
+</div>
+</section>
+<section id="step-5-schematic-correction-and-recheck">
+<h3>Step 5: Schematic Correction and Recheck<a class="headerlink" href="#step-5-schematic-correction-and-recheck" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>After assigning types:
+- Save and click <strong>Schematize</strong> to update geometry.
+- Check and re-validate structure assignments one more time.
+- Use the Center button to cycle through and verify again.</p></li>
+</ul>
+</section>
+<section id="step-6-import-rating-tables">
+<h3>Step 6: Import Rating Tables<a class="headerlink" href="#step-6-import-rating-tables" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>From the <code class="docutils literal notranslate"><span class="pre">ct_tables</span></code> folder, select all files and import.</p></li>
+<li><p>Only rating tables that match existing structure names will be applied.</p></li>
+</ul>
+</section>
+<section id="step-7-manually-modify-a-rating-table">
+<h3>Step 7: Manually Modify a Rating Table<a class="headerlink" href="#step-7-manually-modify-a-rating-table" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Example: reduce max headwater for <code class="docutils literal notranslate"><span class="pre">129A</span></code>, <code class="docutils literal notranslate"><span class="pre">129B</span></code>, <code class="docutils literal notranslate"><span class="pre">129C</span></code> to approx. 3 feet.</p></li>
+<li><p>Delete rows from 3.0+ ft.</p></li>
+<li><p>Copy and paste modified table to the other two structures.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> and <code class="docutils literal notranslate"><span class="pre">Ctrl+V</span></code> or <strong>Copy/Paste</strong> buttons.</p>
+</div>
+</section>
+</section>
+<section id="next-step">
+<h2>Next Step<a class="headerlink" href="#next-step" title="Link to this heading"></a></h2>
+<p>The next step is to <strong>Save, Export, and Run</strong> the model. This is covered in the following video.</p>
+</section>
 <section id="correct-elevation">
 <span id="id1"></span><h2>Correct Elevation<a class="headerlink" href="#correct-elevation" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/u41PNLBt8mk?si=0f7P3iE_7gwMFfuu"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson covers how to make elevation corrections for hydraulic structures, set up minimum elevations, apply levees, and prepare the model for export and run.</p>
+<section id="step-1-copy-elevation-values">
+<h3>Step 1: Copy Elevation Values<a class="headerlink" href="#step-1-copy-elevation-values" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use the <strong>Identify Features</strong> tool to get the elevation at the required location.</p></li>
+<li><p>Right-click the value in the Identify panel and choose <strong>Copy Attribute Value</strong>.</p></li>
+</ul>
+</section>
+<section id="step-2-create-elevation-polygons">
+<h3>Step 2: Create Elevation Polygons<a class="headerlink" href="#step-2-create-elevation-polygons" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Go to the <strong>Elevation Polygons</strong> layer.</p></li>
+<li><p>Start editing and click <strong>Add Polygon</strong>.</p></li>
+<li><p>Draw a polygon around the <strong>centroid</strong> of the grid element you want to modify.</p></li>
+<li><p>Set the elevation using the previously copied value.</p></li>
+<li><p>Set the correction method to <code class="docutils literal notranslate"><span class="pre">grid</span></code> and give the polygon a name like <code class="docutils literal notranslate"><span class="pre">head</span> <span class="pre">wall</span></code>.</p></li>
+</ul>
+</section>
+<section id="step-3-setup-minimum-elevation-polygons">
+<h3>Step 3: Setup Minimum Elevation Polygons<a class="headerlink" href="#step-3-setup-minimum-elevation-polygons" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>For complex corrections, select multiple grid cells and draw a polygon.</p></li>
+<li><p>Set the name to <code class="docutils literal notranslate"><span class="pre">min</span> <span class="pre">from</span> <span class="pre">elev</span> <span class="pre">raster</span></code> or similar.</p></li>
+<li><p>Set method to <code class="docutils literal notranslate"><span class="pre">grid</span></code>; leave other values <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+</ul>
+</section>
+<section id="step-4-apply-a-levy">
+<h3>Step 4: Apply a Levy<a class="headerlink" href="#step-4-apply-a-levy" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use the <strong>Levy Line</strong> tool to draw a line where flow should be restricted.</p></li>
+<li><p>Assign the crest elevation based on sampled raster value (e.g., 1396.5).</p></li>
+<li><p>Reprocess the levies using:
+<code class="docutils literal notranslate"><span class="pre">Plugins</span> <span class="pre">&gt;</span> <span class="pre">FLO-2D</span> <span class="pre">&gt;</span> <span class="pre">Create</span> <span class="pre">Schematic</span> <span class="pre">Layers</span> <span class="pre">from</span> <span class="pre">User</span> <span class="pre">Layers</span></code> with <code class="docutils literal notranslate"><span class="pre">Levy</span> <span class="pre">Lines</span></code> checked only.</p></li>
+</ul>
+</section>
+<section id="step-5-adjust-hydraulic-structure-endpoints">
+<h3>Step 5: Adjust Hydraulic Structure Endpoints<a class="headerlink" href="#step-5-adjust-hydraulic-structure-endpoints" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use the <strong>Vertex Tool</strong> to move hydraulic structure endpoints to correct elevations or grid elements.</p></li>
+<li><p>After adjustment, save and <strong>Schematize</strong> the structure lines to update the schema.</p></li>
+</ul>
+</section>
+<section id="step-6-apply-grid-element-corrections">
+<h3>Step 6: Apply Grid Element Corrections<a class="headerlink" href="#step-6-apply-grid-element-corrections" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>For polygons with assigned elevation values:
+- Use <strong>Grid Element Correction Tool</strong>
+- Select: <code class="docutils literal notranslate"><span class="pre">Elevation</span> <span class="pre">polygon</span> <span class="pre">attributes</span></code>
+- Check: <code class="docutils literal notranslate"><span class="pre">Only</span> <span class="pre">selected</span> <span class="pre">polygons</span></code></p></li>
+<li><p>For polygons pulling from raster values:
+- Use <strong>External Layer Mode</strong>
+- Set layer: <code class="docutils literal notranslate"><span class="pre">Elevation</span> <span class="pre">Polygons</span></code>
+- Check: <code class="docutils literal notranslate"><span class="pre">Centroids</span> <span class="pre">within</span> <span class="pre">polygons</span></code>
+- Select: <code class="docutils literal notranslate"><span class="pre">Statistics</span> <span class="pre">from</span> <span class="pre">raster</span></code>
+- Choose <code class="docutils literal notranslate"><span class="pre">Minimum</span> <span class="pre">elevation</span></code>
+- Check: <code class="docutils literal notranslate"><span class="pre">Statistics</span> <span class="pre">per</span> <span class="pre">grid</span> <span class="pre">element</span></code> and <code class="docutils literal notranslate"><span class="pre">Only</span> <span class="pre">selected</span> <span class="pre">features</span></code></p></li>
+</ul>
+</section>
+<section id="step-7-export-and-run">
+<h3>Step 7: Export and Run<a class="headerlink" href="#step-7-export-and-run" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Export DAT files with a name like: <code class="docutils literal notranslate"><span class="pre">post_elevation_change_and_correction.dat</span></code></p></li>
+<li><p>Run the model.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>After corrections, verify grid elevations with the Identify tool to confirm changes.</p>
+</div>
+</section>
+</section>
 <section id="save-export-and-run-pre-elevation-change">
 <h2>Save Export and Run Pre Elevation Change<a class="headerlink" href="#save-export-and-run-pre-elevation-change" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oPha4GTRnQ0?si=e3hM3dhDYahu69bN"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This short lesson walks through saving hydraulic structures, exporting the data, and running the model. It is part of the final steps for preparing your model.</p>
+<section id="step-1-save-the-project">
+<h3>Step 1: Save the Project<a class="headerlink" href="#step-1-save-the-project" title="Link to this heading"></a></h3>
+<p>Click the <strong>Save</strong> button to commit your hydraulic structures to the layer in the GeoPackage.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.</p>
+</div>
+</section>
+<section id="step-2-export-data-files">
+<h3>Step 2: Export Data Files<a class="headerlink" href="#step-2-export-data-files" title="Link to this heading"></a></h3>
+<ul>
+<li><p>Go to the <strong>Import/Export</strong> button.</p></li>
+<li><p>Select <strong>Option 3</strong> to export data files.</p></li>
+<li><p>Create a new folder inside your <code class="docutils literal notranslate"><span class="pre">lesson6</span></code> directory called:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pre</span><span class="o">-</span><span class="n">elevation</span><span class="o">-</span><span class="n">change</span>
+</pre></div>
+</div>
+<p>This helps distinguish the export prior to making elevation corrections.</p>
+</li>
+<li><p>First, the D-series data files are exported.</p></li>
+<li><p>Then, the Storm Drain files are exported.</p></li>
+<li><p>You should now see a complete set of exported files inside the folder.</p></li>
+</ul>
+</section>
+<section id="step-3-run-the-model">
+<h3>Step 3: Run the Model<a class="headerlink" href="#step-3-run-the-model" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Click <strong>Run FLO-2D</strong> to initiate the simulation.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If there is <strong>no error.check</strong> file generated, it means your data was set up correctly.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Although the model runs, the results may still be inaccurate due to elevation issues. These will be addressed in the next lesson.</p>
+</div>
+</section>
+</section>
+<section id="what-s-next">
+<h2>What’s Next?<a class="headerlink" href="#what-s-next" title="Link to this heading"></a></h2>
+<p>Now that we have run the model using the current elevations, we will compare it to a corrected version. Proceed to the next video to apply <strong>elevation corrections</strong> and re-run the model.</p>
+</section>
 <section id="create-culverts-with-culvert-equations">
 <h2>Create Culverts with Culvert Equations<a class="headerlink" href="#create-culverts-with-culvert-equations" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rACaKUlcFKU?si=yJCouGxFaV-GE5CI"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson walks through how to convert culverts from rating tables to generalized culvert equations (GCE) in FLO-2D, and then run the model to compare the results.</p>
+</section>
+<section id="convert-a-culvert-to-gce">
+<h2>Convert a Culvert to GCE<a class="headerlink" href="#convert-a-culvert-to-gce" title="Link to this heading"></a></h2>
+<p>We are updating culvert <strong>CL-009</strong> from a rating table to a generalized culvert equation.</p>
+<ol class="arabic simple">
+<li><p><strong>Change the Structure Type</strong>:
+- Open the structure editor.
+- Set type to <cite>Culvert Equation</cite>.</p></li>
+<li><p><strong>Set GCE Parameters</strong>:
+- Diameter: 48 in (convert to 4 ft).
+- Barrels: 3
+- Conduit Length: Measured to be 250 ft (headwall to headwall).
+- Entrance Type: 1 (square edge with headwall)
+- Culvert Type (CType): 2 (circular)
+- Manning’s n: 0.018
+- Entrance Loss Coefficient (K): 0.5
+- Base: 0</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.</p>
+</div>
+</section>
+<section id="convert-another-culvert-to-gce">
+<h2>Convert Another Culvert to GCE<a class="headerlink" href="#convert-another-culvert-to-gce" title="Link to this heading"></a></h2>
+<p>Now convert <strong>CL-122</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Update Parameters</strong>:
+- Set to <cite>Culvert Equation</cite>
+- Height: 5 ft (Box Culvert)
+- Length: 100–110 ft
+- Entrance Type: 1 (wing wall 30°–75°)
+- Culvert Type: 1 (box)
+- Barrels: 1
+- Base: 8 ft
+- Manning’s n: 0.018
+- Entrance Loss Coefficient (K): 0.4</p></li>
+<li><p><strong>Justification</strong>:
+- From highway design manuals and HY-8 documentation
+- Image review confirms structure shape and inlet type</p></li>
+</ol>
+</section>
+<section id="apply-and-export">
+<h2>Apply and Export<a class="headerlink" href="#apply-and-export" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click <strong>Schematize</strong> to update the structure layer.</p></li>
+<li><p>Verify values are correctly saved.</p></li>
+<li><p>Save and close prior runs if necessary.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Export Files</strong>:
+- Go to <strong>Import/Export &gt; Export .DAT files</strong>
+- Create new folder
+- Create new folder named <code class="docutils literal notranslate"><span class="pre">Generalized</span> <span class="pre">CT</span> <span class="pre">with</span> <span class="pre">Elevation</span> <span class="pre">Correction</span></code></p></li>
+</ol>
+</section>
+<section id="run-the-model">
+<h2>Run the Model<a class="headerlink" href="#run-the-model" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click <strong>Run FLO-2D</strong></p></li>
+<li><p>Ensure no errors are reported.</p></li>
+<li><p>Compare results with earlier model using rating tables.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Always back up your project after making changes.</p>
+</div>
+</section>
+<section id="id2">
+<h2>Next Steps<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>Proceed to the <strong>Summary</strong> lesson, where the differences between rating tables and generalized culvert equation results will be reviewed.</p>
+</section>
 <section id="summary-and-review-project">
 <h2>Summary and Review Project<a class="headerlink" href="#summary-and-review-project" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Guo0N85qZlk?si=oQcqSHB5RVxrgQm5"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson walks through how to convert culverts from rating tables to generalized culvert equations (GCE) in FLO-2D, and then run the model to compare the results.</p>
+</section>
+<section id="id3">
+<h2>Convert a Culvert to GCE<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>We are updating culvert <strong>CL-009</strong> from a rating table to a generalized culvert equation.</p>
+<ol class="arabic simple">
+<li><p><strong>Change the Structure Type</strong>:
+- Open the structure editor.
+- Set type to <cite>Culvert Equation</cite>.</p></li>
+<li><p><strong>Set GCE Parameters</strong>:
+- Diameter: 48 in (convert to 4 ft).
+- Barrels: 3
+- Conduit Length: Measured to be 250 ft (headwall to headwall).
+- Entrance Type: 1 (square edge with headwall)
+- Culvert Type (CType): 2 (circular)
+- Manning’s n: 0.018
+- Entrance Loss Coefficient (K): 0.5
+- Base: 0</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.</p>
+</div>
+</section>
+<section id="id4">
+<h2>Convert Another Culvert to GCE<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>Now convert <strong>CL-122</strong>:</p>
+<ol class="arabic simple">
+<li><p><strong>Update Parameters</strong>:
+- Set to <cite>Culvert Equation</cite>
+- Height: 5 ft (Box Culvert)
+- Length: 100–110 ft
+- Entrance Type: 1 (wing wall 30°–75°)
+- Culvert Type: 1 (box)
+- Barrels: 1
+- Base: 8 ft
+- Manning’s n: 0.018
+- Entrance Loss Coefficient (K): 0.4</p></li>
+<li><p><strong>Justification</strong>:
+- From highway design manuals and HY-8 documentation
+- Image review confirms structure shape and inlet type</p></li>
+</ol>
+</section>
+<section id="id5">
+<h2>Apply and Export<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click <strong>Schematize</strong> to update the structure layer.</p></li>
+<li><p>Verify values are correctly saved.</p></li>
+<li><p>Save and close prior runs if necessary.</p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p><strong>Export Files</strong>:</p>
+<ul class="simple">
+<li><p>Go to <strong>Import/Export &gt; Export .DAT files</strong></p></li>
+<li><p>Create new folder:
+<code class="docutils literal notranslate"><span class="pre">Generalized</span> <span class="pre">CT</span> <span class="pre">with</span> <span class="pre">Elevation</span> <span class="pre">Correction</span></code></p></li>
+<li><p>Export project and storm drain layers</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h2>Run the Model<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Click <strong>Run FLO-2D</strong></p></li>
+<li><p>Ensure no errors are reported.</p></li>
+<li><p>Compare results with earlier model using rating tables.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Always back up your project after making changes.</p>
+</div>
+</section>
+<section id="id7">
+<h2>Next Steps<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<p>Proceed to the <strong>Summary</strong> lesson, where the differences between rating tables and generalized culvert equation results will be reviewed.</p>
+</section>
 </section>
 
 

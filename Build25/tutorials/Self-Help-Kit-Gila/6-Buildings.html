@@ -51,24 +51,24 @@
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit Gila</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html#load-your-flo-2d-project">Load Your FLO-2D Project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="4-Channels.html">Channels</a></li>
-<li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Buildings and Walls</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#load-and-assign-data">Load and Assign Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#download-building-polygons">Download Building Polygons</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#review-and-assign-walls">Review and Assign Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#save-export-and-run">Save Export and Run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-1-download-the-workshop-data">Step 1: Download the Workshop Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-2-install-the-workshop">Step 2: Install the Workshop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-3-understand-the-folder-structure">Step 3: Understand the Folder Structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#step-4-use-the-demo-engine">Step 4: Use the Demo Engine</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#step-5-set-up-qgis-to-use-the-demo-engine">Step 5: Set Up QGIS to Use the Demo Engine</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="4-Channels.html">Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Buildings and Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
+<li class="toctree-l4"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
-<li class="toctree-l3"><a class="reference internal" href="8-Hydraulic.html">Hydraulic Structures - Culverts</a></li>
-<li class="toctree-l3"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>
@@ -116,22 +116,323 @@
 <h2>Load and Assign Data<a class="headerlink" href="#load-and-assign-data" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lljO4niOWdQ?si=zBzN_ocXETMYlLGd"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson explains how to import and assign buildings in your FLO-2D model, including visualization tips and parameter configurations.</p>
+<section id="step-1-import-building-data">
+<h3>Step 1: Import Building Data<a class="headerlink" href="#step-1-import-building-data" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Locate the <strong>buildings</strong> shapefile from the <strong>Lesson 4 Tutorial</strong> folder.</p></li>
+<li><p>Drag and drop the shapefile onto the map canvas in QGIS.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Move the buildings layer into the <strong>External Layers</strong> group for better organization.</p>
+</div>
+</section>
+<section id="step-2-change-building-appearance">
+<h3>Step 2: Change Building Appearance<a class="headerlink" href="#step-2-change-building-appearance" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Double-click the <strong>buildings</strong> layer.</p></li>
+<li><p>To remove the black outline:
+- Set the <strong>Stroke style</strong> to <strong>No Pen</strong>.</p></li>
+<li><p>Change the fill color (e.g., Violet) for visibility.</p></li>
+</ul>
+</section>
+<section id="step-3-check-building-attribute-table">
+<h3>Step 3: Check Building Attribute Table<a class="headerlink" href="#step-3-check-building-attribute-table" title="Link to this heading"></a></h3>
+<p>Open the attribute table to confirm the following required fields:
+- <code class="docutils literal notranslate"><span class="pre">collapse</span></code>: whether a building collapses during simulation (used in dam breach or large river simulations).
+- <code class="docutils literal notranslate"><span class="pre">ARF</span></code> (Area Reduction Factor): adjusts flow for shallow overland flow.
+- <code class="docutils literal notranslate"><span class="pre">WRF</span></code> (Width Reduction Factor): adjusts channel width for flow routing (rarely used).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For urban simulations, only <code class="docutils literal notranslate"><span class="pre">ARF</span></code> is typically required.</p>
+</div>
+</section>
+<section id="step-4-assign-buildings-using-grid-tools">
+<h3>Step 4: Assign Buildings Using Grid Tools<a class="headerlink" href="#step-4-assign-buildings-using-grid-tools" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Open <strong>Grid Tools</strong>.</p></li>
+<li><p>Click the <strong>Assign Buildings</strong> button.</p></li>
+<li><p>Set the following parameters:
+- <strong>Layer</strong>: buildings
+- <strong>Collapse Field</strong>: <code class="docutils literal notranslate"><span class="pre">collapse</span></code>
+- <strong>Area Reduction Field</strong>: <code class="docutils literal notranslate"><span class="pre">ARF</span></code>
+- <strong>Width Reduction Field</strong>: <code class="docutils literal notranslate"><span class="pre">WRF</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p>Click <strong>OK</strong> to apply.</p></li>
+</ul>
+<p>This process will:
+- Create a blocked areas layer representing building footprints.
+- Update the <strong>schematized data</strong> to reflect buildings in the model.</p>
+</section>
+<section id="step-5-building-rain-switch">
+<h3>Step 5: Building Rain Switch<a class="headerlink" href="#step-5-building-rain-switch" title="Link to this heading"></a></h3>
+<p>Ensure your rainfall setup includes the <strong>Building Rain Switch</strong>.
+This makes rain that falls on buildings flow into the grid per assigned elevation.</p>
+<ul class="simple">
+<li><p>Turn on the <strong>Building Switch</strong> (ARF switch) in the FLO-2D Controls.</p></li>
+<li><p>Click <strong>Save Components</strong>.</p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If you forget to activate the building switch, buildings may act as sinks instead of obstructions.</p>
+</div>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Buildings are assigned as blocked areas.</p></li>
+<li><p>The ARF forces water to flow around buildings.</p></li>
+<li><p>Turn on building-related switches in the control parameters.</p></li>
+</ul>
+</section>
 <section id="download-building-polygons">
 <h2>Download Building Polygons<a class="headerlink" href="#download-building-polygons" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h-mN4m8rJnw?si=ieWhEVt5BZDst-AM"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.</p>
+<section id="step-1-install-the-osm-downloader-plugin">
+<h3>Step 1: Install the OSM Downloader Plugin<a class="headerlink" href="#step-1-install-the-osm-downloader-plugin" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Go to <strong>Plugins &gt; Manage and Install Plugins</strong>.</p></li>
+<li><p>Search for <strong>OSM Downloader</strong>.</p></li>
+<li><p>Click <strong>Install</strong>.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.</p>
+</div>
+</section>
+<section id="step-2-prepare-the-layer-group">
+<h3>Step 2: Prepare the Layer Group<a class="headerlink" href="#step-2-prepare-the-layer-group" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Right-click in the Layers panel and <strong>Add Group</strong>.</p></li>
+<li><p>Name it <code class="docutils literal notranslate"><span class="pre">osm_download</span></code>.</p></li>
+</ul>
+</section>
+<section id="step-3-download-data">
+<h3>Step 3: Download Data<a class="headerlink" href="#step-3-download-data" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Activate the <strong>OSM Downloader tool</strong>.</p></li>
+<li><p>Draw a rectangle around your project area.</p></li>
+<li><p>Save the file with a clear name like <code class="docutils literal notranslate"><span class="pre">osm_file.geojson</span></code>.</p></li>
+<li><p>The data is downloaded in EPSG:4326 and will be reprojected later.</p></li>
+</ul>
+</section>
+<section id="step-4-export-polygons">
+<h3>Step 4: Export Polygons<a class="headerlink" href="#step-4-export-polygons" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Turn off unnecessary OSM sublayers (e.g., roads).</p></li>
+<li><p>Right-click the <strong>polygons</strong> layer &gt; <strong>Export &gt; Save Features As…</strong></p></li>
+<li><p>Save as <code class="docutils literal notranslate"><span class="pre">osm_buildings</span></code>.</p></li>
+<li><p>Change the CRS to your project CRS (e.g., EPSG:2223).</p></li>
+<li><p>Remove irrelevant fields before exporting.</p></li>
+</ul>
+</section>
+<section id="step-5-filter-for-buildings">
+<h3>Step 5: Filter for Buildings<a class="headerlink" href="#step-5-filter-for-buildings" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Open the attribute table.</p></li>
+<li><p>Sort by the <code class="docutils literal notranslate"><span class="pre">building</span></code> field.</p></li>
+<li><p>Select rows where <code class="docutils literal notranslate"><span class="pre">building</span></code> is null or empty and delete them.</p></li>
+<li><p>Save your edits.</p></li>
+</ul>
+</section>
+<section id="step-6-crop-to-project-boundary">
+<h3>Step 6: Crop to Project Boundary<a class="headerlink" href="#step-6-crop-to-project-boundary" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use <strong>Select by Location</strong>:
+- Select features from <code class="docutils literal notranslate"><span class="pre">osm_buildings</span></code>.
+- Where the feature is <strong>within</strong> the computational domain layer.</p></li>
+<li><p>Delete unselected features (those outside your project area).</p></li>
+</ul>
+</section>
+<section id="step-7-clean-building-types">
+<h3>Step 7: Clean Building Types<a class="headerlink" href="#step-7-clean-building-types" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Review building types.</p></li>
+<li><p>Delete features such as <code class="docutils literal notranslate"><span class="pre">carports</span></code>, <code class="docutils literal notranslate"><span class="pre">gas</span> <span class="pre">islands</span></code>, etc., which don’t obstruct flow.</p></li>
+</ul>
+</section>
+<section id="step-8-add-required-fields">
+<h3>Step 8: Add Required Fields<a class="headerlink" href="#step-8-add-required-fields" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Add the following integer fields:
+- <code class="docutils literal notranslate"><span class="pre">collapse</span></code>
+- <code class="docutils literal notranslate"><span class="pre">ARF</span></code> (Area Reduction Factor)
+- <code class="docutils literal notranslate"><span class="pre">WORF</span></code> (Width Reduction Factor)</p></li>
+<li><p>Use the <strong>Field Calculator</strong> to:
+- Set <code class="docutils literal notranslate"><span class="pre">collapse</span> <span class="pre">=</span> <span class="pre">0</span></code>
+- Set <code class="docutils literal notranslate"><span class="pre">ARF</span> <span class="pre">=</span> <span class="pre">1</span></code>
+- Set <code class="docutils literal notranslate"><span class="pre">WORF</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
+</ul>
+</section>
+<section id="step-9-fill-in-missing-buildings-optional">
+<h3>Step 9: Fill in Missing Buildings (Optional)<a class="headerlink" href="#step-9-fill-in-missing-buildings-optional" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Turn on a satellite basemap (e.g., Google Satellite).</p></li>
+<li><p>Use the <strong>Add Polygon tool</strong> or <strong>Shape Digitizing Toolbar</strong> to:
+- Digitize missing buildings.
+- Use <code class="docutils literal notranslate"><span class="pre">Rectangle</span> <span class="pre">from</span> <span class="pre">Extent</span></code> for fast creation.
+- Use <code class="docutils literal notranslate"><span class="pre">Digitize</span> <span class="pre">with</span> <span class="pre">Segment</span></code> for complex shapes.</p></li>
+</ul>
+</section>
+<section id="step-10-export-the-final-building-layer">
+<h3>Step 10: Export the Final Building Layer<a class="headerlink" href="#step-10-export-the-final-building-layer" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Save your edited buildings as a new layer if desired.</p></li>
+<li><p>This layer can now be used with the <strong>Grid Tools &gt; Assign Buildings</strong> tool.</p></li>
+</ul>
+</section>
+<section id="step-11-review-the-arf-dat-file">
+<h3>Step 11: Review the <cite>ARF.DAT</cite> File<a class="headerlink" href="#step-11-review-the-arf-dat-file" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>After exporting building reductions, open <code class="docutils literal notranslate"><span class="pre">arf.dat</span></code> in Notepad++.</p></li>
+<li><p>Key sections:
+- <code class="docutils literal notranslate"><span class="pre">G</span></code> line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
+- <code class="docutils literal notranslate"><span class="pre">T</span></code> lines: fully blocked cells.
+- <code class="docutils literal notranslate"><span class="pre">P</span></code> lines: partial blocks with ARF values &lt; 1.0.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The model will automatically convert cells with high ARF values (e.g., &gt; 0.95) to fully blocked.</p>
+</div>
+</section>
+</section>
 <section id="review-and-assign-walls">
 <h2>Review and Assign Walls<a class="headerlink" href="#review-and-assign-walls" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EZGEPQZEs6A?si=RiECh45qLXuRhdHO"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson reviews check files and model behavior after a full simulation including walls and buildings.
+We focus on understanding outputs and interpreting any warnings or adjustments made by FLO-2D after the simulation.</p>
+</section>
+<section id="check-file-review">
+<h2>Check File Review<a class="headerlink" href="#check-file-review" title="Link to this heading"></a></h2>
+<p>After running the model:</p>
+<ul class="simple">
+<li><p>Check for the presence of updated <cite>error.check</cite> files. Some older ones may persist if not overwritten.</p></li>
+<li><p>Confirm that levies are correctly defined. Messages in the check files may warn of adjustments or missing values.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a <cite>.check</cite> file was not updated with a current timestamp, it’s likely outdated.</p>
+</div>
+<section id="review-of-specific-files">
+<h3>Review of Specific Files<a class="headerlink" href="#review-of-specific-files" title="Link to this heading"></a></h3>
+<p><strong>rf.dat</strong>:
+- T-lines indicate total blockage by walls or buildings.
+- Reduction factor warnings may appear if <cite>RIMP</cite> (imperviousness) is less than the area reduction factor (ARF).
+- FLO-2D will adjust this internally to avoid instability.</p>
+<p><strong>levy.doap</strong>:
+- Warns if grid elevation differences across walls or levies exceed 1 ft.
+- Often not critical unless you’re modeling shallow Overland flow.</p>
+<p><strong>levy.fail</strong>:
+- Lists grid elements where levies failed.
+- Failure can result from water depth exceeding threshold on a wall cell.</p>
+<p><strong>evacuated_fp.out</strong>:
+- Identifies cells that dried out completely over time steps.
+- Check surrounding slope and surface conditions. May require adjusting Manning’s <cite>n</cite> or assigning a spatial tolerance.</p>
+<p><strong>chan.elevation.check</strong>:
+- Shows mismatches between bank elevation and floodplain elevation.
+- Positive values: channel bank is higher.
+- Negative values: floodplain is higher (may indicate perched banks).</p>
+</section>
+</section>
+<section id="interpreting-failures">
+<h2>Interpreting Failures<a class="headerlink" href="#interpreting-failures" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Failures near project boundaries often result from unrealistic collection of water in corners or poorly placed walls.</p></li>
+<li><p>Review in QGIS using the FLO-2D profile tool to inspect cross-sections.</p></li>
+<li><p>Use street view if necessary to confirm if structures are above ground or have relief features.</p></li>
+</ul>
+<section id="tips">
+<h3>Tips<a class="headerlink" href="#tips" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Walls along the boundary may fail due to limited discharge options. Consider removing or adjusting them.</p></li>
+<li><p>Buildings sitting higher than surrounding terrain (due to lidar artifacts) may affect wall performance.</p></li>
+<li><p>Use elevation profile plots to determine validity of outliers.</p></li>
+<li><p>Check the <cite>levy_deficit.it.out</cite> and <cite>levy_do.out</cite> for failure times and flow conditions.</p></li>
+<li><p>The model may self-correct minor inconsistencies during runtime.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Only take corrective action if errors are persistent or affect flood routing.</p>
+</div>
+</section>
+</section>
+<section id="next-steps">
+<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
+<p>We now move on to the <strong>Mapping</strong> lesson where simulation outputs like maximum depth and velocity vectors are imported and analyzed.</p>
+</section>
 <section id="save-export-and-run">
 <h2>Save Export and Run<a class="headerlink" href="#save-export-and-run" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/gdzmKSlocsE?si=uyVPzthJHeAiQ6iS"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson walks through saving the FLO-2D project, exporting the required data, troubleshooting errors, and running the simulation.</p>
+<section id="step-1-clean-the-map">
+<h3>Step 1: Clean the Map<a class="headerlink" href="#step-1-clean-the-map" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Right-click and remove temporary or unused layers before saving.</p></li>
+<li><p>If data hasn’t been committed to the GeoPackage, you can remove it by <strong>Right-click &gt; Remove Group</strong>.</p></li>
+</ul>
+</section>
+<section id="step-2-save-your-project">
+<h3>Step 2: Save Your Project<a class="headerlink" href="#step-2-save-your-project" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Click the <strong>Save Project</strong> button to preserve edits and store current data in the <cite>.gpkg</cite>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you already saved the project earlier, some data might already be in the GeoPackage.</p>
+</div>
+</section>
+<section id="step-3-export-and-run-the-model">
+<h3>Step 3: Export and Run the Model<a class="headerlink" href="#step-3-export-and-run-the-model" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Export the Project Data</strong>
+- Click the <strong>Export</strong> button.
+- Confirm export of the <strong>IMP</strong> file when prompted.</p></li>
+<li><p><strong>Run the Model</strong>
+- After export, the path should be set automatically.
+- Click <strong>Run</strong> to begin simulation.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you receive an error on run, open the <cite>error.check</cite> files to investigate.</p>
+</div>
+</section>
+<section id="step-4-troubleshoot-errors">
+<h3>Step 4: Troubleshoot Errors<a class="headerlink" href="#step-4-troubleshoot-errors" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Example Error: “Channel extends through a levy at Bank 5528”</p></li>
+<li><p>Solution:
+1. Use the <strong>Vertex Editor</strong> to reposition the levy line so it does not overlap the channel.
+2. Click <strong>Save</strong>.
+3. Recalculate the levy using the <strong>Levy Tool</strong>.</p></li>
+</ul>
+</section>
+<section id="step-5-re-export-and-rerun">
+<h3>Step 5: Re-export and Rerun<a class="headerlink" href="#step-5-re-export-and-rerun" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Use <strong>Export &gt; Select only Levy data</strong> to replace the corrected <cite>.dat</cite> file.</p></li>
+<li><p>Click <strong>Run</strong> again to verify the error is resolved.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Once the model runs successfully, you can proceed to the summary and data review steps.</p>
+</div>
+</section>
+</section>
+<section id="final-notes">
+<h2>Final Notes<a class="headerlink" href="#final-notes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>This step completes the build-and-run process for the current project.</p></li>
+<li><p>Always check <cite>.check</cite> files if errors occur.</p></li>
+<li><p>Focus first on correcting spatial data (like levies or channels) rather than complex rebuilds.</p></li>
+</ul>
+</section>
 </section>
 
 
