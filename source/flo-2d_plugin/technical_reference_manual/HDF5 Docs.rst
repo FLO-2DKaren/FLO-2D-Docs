@@ -165,7 +165,7 @@ Describes gutter system routing. [Add reference when applicable.]
 Hydraulic Structures
 --------------------
 
-[Awaiting description. Placeholder.]
+Hdf5 data for hydraulic structures is organized into several tables, each corresponding to a specific structure type or function.
 
 *Corresponds to:* `HYSTRUC.DAT`
 
