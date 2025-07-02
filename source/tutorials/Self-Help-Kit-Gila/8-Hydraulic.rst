@@ -358,8 +358,8 @@ Apply and Export
 3. **Export Files**:
    - Go to **Import/Export > Export .DAT files**
    - Create new folder
-     ``Generalized CT with Elevation Correction``
-   - Export project and storm drain layers
+   - Create new folder named ``Generalized CT with Elevation Correction``
+
 
 Run the Model
 -------------
