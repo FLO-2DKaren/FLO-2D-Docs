@@ -2,7 +2,7 @@ Appendix C: FLO-2D HDF5 Data Structure
 ======================================
 
 Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in the Data Input 
-Manual, while those in **green** are internal cross-reference or ID fields used by the HDF5 structure.
+Manual, while those in **green** are internal cross-reference or ID fields used to link data across different tables.
 
 .. contents:: Contents
    :local: 
@@ -126,9 +126,9 @@ Defines rectangular cross sections using base width and depth.
 
 NoExchange / Confluence
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Reserved for special conditions like confluence or split flow.
+Reserved for special conditions like confluence or split flow and no exchange condition between the channel and floodplain.
 
-*Corresponds to:* `CHAN.DAT` 
+*Corresponds to:* `CHAN.DAT` C lines and E lines.
 
 .. image:: ./img/hdf5/FLO084a.png
 
@@ -250,7 +250,7 @@ User-defined breach progression using curve data.
 
 Rainfall
 --------
-
+Defines rainfall parameters.
 
 Uniform Rainfall
 ~~~~~~~~~~~~~~~~
@@ -280,7 +280,6 @@ Note: IRAINDUM table is organized by grid columns x time rows.
 
 Storm Drain
 ----------------
-
 The storm drain data for HDF5 can be cross referenced to the storm drain files in the Data Input Manual.   All other data is saved to the SWMM.INP and
 SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following tables:
 
@@ -309,7 +308,6 @@ Multiple Channel
 
 Reduction Factors
 -----------------
-
 Defines areal and watershed reduction factors.
 
 *Corresponds to:* `ARF.DAT`
@@ -318,30 +316,31 @@ Defines areal and watershed reduction factors.
 
 QGIS
 ----
-
-Data related to plugin-based preprocessing or export functions.
+Modeller contact info and FLOPRO, Plugin, and QGIS version information.
 
 .. image:: ./img/hdf5/FLO082.png
 
 Tailings
 --------
-
-Used for advanced mud/debris flow simulations.
+Defines tailings depth parameters, tailings depth and cv parameters, and tailings stack depth parameters. 
 
 **TAILINGS**  
 *Corresponds to:* `TAILINGS.DAT`
 
+.. image:: ./img/hdf5/FLO112.png
+
 **TAILINGS_CV**  
 *Corresponds to:* `TAILINGS_CV.DAT`
+
+.. image:: ./img/hdf5/FLO114.png
 
 **TAILINGS_STACK_DEPTH**  
 *Corresponds to:* `TAILINGS_STACK_DEPTH.DAT`
 
-.. image:: ./img/hdf5/FLO095.png
+.. image:: ./img/hdf5/FLO113.png
 
 Spatially Variable
 -------------------
-
 The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding \*.DAT file in the Data Input Manual.
 
 **FPFROUDE**  
