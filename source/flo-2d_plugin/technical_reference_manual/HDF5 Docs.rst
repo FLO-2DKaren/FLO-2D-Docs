@@ -288,7 +288,7 @@ SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following
 
 .. image:: ./img/hdf5/FLO101.png
 
-SWMMFLO.DAT
+*Corresponds to:* `SWMMFLO.DAT`
 
 .. image:: ./img/hdf5/FLO100.png
 
