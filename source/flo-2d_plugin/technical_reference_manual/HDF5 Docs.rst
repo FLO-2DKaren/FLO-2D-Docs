@@ -343,7 +343,7 @@ Multiple channel combined method.
 
 Reduction Factors
 -----------------
-Defines areal and watershed reduction factors.
+Defines blocked cells for buildings and other obstructions.
 
 *Corresponds to:* `ARF.DAT`
 
