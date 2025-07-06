@@ -1,8 +1,25 @@
 Appendix C: FLO-2D HDF5 Data Structure
 ======================================
 
-Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in the Data Input 
-Manual, while those in **green** are internal cross-reference or ID fields used to link data across different tables.
+Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in 
+the Data Input Manual, while those in **green** are internal cross-reference or ID fields used to link data across 
+different tables.
+
+.. note::
+
+   HDF5 files are designed to store large amounts of data efficiently. Each table in an HDF5 file works best when 
+   it contains only one type of data. 
+   
+   Examples include:
+
+   - Floating-point (decimal) numbers
+   - Integers (whole numbers)
+   - Strings (text)
+
+   If different types of data are mixed in one table, it can increase file size and make the data harder to work 
+   with in code. To keep the structure simple and efficient, FLO-2D stores values like switches or grid numbers as 
+   floating-point numbers. This is why you may see values such as 1.0 or 3254.0 in the HDF5 file, even though they 
+   represent whole numbers.
 
 .. contents:: Contents
    :local: 
@@ -301,10 +318,28 @@ SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following
 
 Multiple Channel
 ----------------
+The multiple channel data for HDF5 can be cross referenced to the multiple channel files in the Data Input Manual.
 
 *Corresponds to:* `MULT.DAT`, `SIMPLE_MULT.DAT`
 
-.. image:: ./img/hdf5/FLO074.png
+Multiple Channel Legacy Method
+
+*Corresponds to:* `MULT.DAT`
+
+.. image:: ./img/hdf5/FLO074a.png
+
+Multiple channel simple method
+
+*Corresponds to:* `SIMPLE_MULT.DAT`
+
+.. image:: ./img/hdf5/FLO074b.png
+
+Multiple channel combined method.
+
+*Corresponds to:* `MULT.DAT`, `SIMPLE_MULT.DAT`
+
+.. image:: ./img/hdf5/FLO074c.png
+
 
 Reduction Factors
 -----------------
