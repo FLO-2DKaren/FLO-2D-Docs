@@ -51,24 +51,45 @@
 <li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Gila Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Self-Help Kit Gila</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#step-1-download-the-workshop-data">Step 1: Download the Workshop Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#step-2-install-the-workshop">Step 2: Install the Workshop</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#step-3-understand-the-folder-structure">Step 3: Understand the Folder Structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#step-4-use-the-demo-engine">Step 4: Use the Demo Engine</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#step-5-set-up-qgis-to-use-the-demo-engine">Step 5: Set Up QGIS to Use the Demo Engine</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
-<li class="toctree-l4"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="4-Channels.html">Channels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
-<li class="toctree-l4"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Hydraulic Structures - Culverts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
-<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
-<li class="toctree-l4"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1-Setup.html">Self-Help Kit Setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-Grid.html">Create Project and Grid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-Channels.html">Channels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="6-Buildings.html">Buildings and Walls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="7-Realtime.html">Realtime Rainfall</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Hydraulic Structures - Culverts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#import-and-review-culvert-data">Import and Review Culvert Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#add-the-hydraulic-structures-layer">Add the Hydraulic Structures Layer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flow-direction-and-invert-elevation">Flow Direction and Invert Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scuppers-and-elevation-transitions">Scuppers and Elevation Transitions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shared-culverts-between-floodplain-and-channels">Shared Culverts Between Floodplain and Channels</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#labeling-hydraulic-structures">Labeling Hydraulic Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#understanding-structure-types">Understanding Structure Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switches-and-advanced-setup">Switches and Advanced Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next-steps">Next Steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-culvert-structures">Set-up Culvert Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#next-step">Next Step</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#correct-elevation">Correct Elevation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-export-and-run-pre-elevation-change">Save Export and Run Pre Elevation Change</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-s-next">What’s Next?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-culverts-with-culvert-equations">Create Culverts with Culvert Equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#convert-a-culvert-to-gce">Convert a Culvert to GCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#convert-another-culvert-to-gce">Convert Another Culvert to GCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#apply-and-export">Apply and Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run-the-model">Run the Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Next Steps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#summary-and-review-project">Summary and Review Project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Convert a Culvert to GCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Convert Another Culvert to GCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Apply and Export</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Run the Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Next Steps</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="9-Mapping.html">Project Review and Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html">Troubleshooting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="10-Troubleshooting.html#faq-webinar">FAQ - Webinar</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Tailings/index.html">Tailings Dam Modeling Tutorial</a></li>

@@ -7,6 +7,13 @@ This tutorial guides users through setting up a project in FLO-2D and QGIS.
 
    Adjusting the video playback speed to 2x can expedite the learning process.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/tTcxTWMlpkk?si=KUlDut2agYaAg-g2"
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 Create a New Project
 -----------------------
 

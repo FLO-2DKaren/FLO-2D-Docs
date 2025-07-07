@@ -1,8 +1,25 @@
 Appendix C: FLO-2D HDF5 Data Structure
 ======================================
 
-Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in the Data Input 
-Manual, while those in **green** are internal cross-reference or ID fields used by the HDF5 structure.
+Use this reference as a structural map of the `input.hdf5` file. Variables shown in **red** correspond to entries in 
+the Data Input Manual, while those in **green** are internal cross-reference or ID fields used to link data across 
+different tables.
+
+.. note::
+
+   HDF5 files are designed to store large amounts of data efficiently. Each table in an HDF5 file works best when 
+   it contains only one type of data. 
+   
+   Examples include:
+
+   - Floating-point (decimal) numbers
+   - Integers (whole numbers)
+   - Strings (text)
+
+   If different types of data are mixed in one table, it can increase file size and make the data harder to work 
+   with in code. To keep the structure simple and efficient, FLO-2D stores values like switches or grid numbers as 
+   floating-point numbers. This is why you may see values such as 1.0 or 3254.0 in the HDF5 file, even though they 
+   represent whole numbers.
 
 .. contents:: Contents
    :local: 
@@ -126,9 +143,9 @@ Defines rectangular cross sections using base width and depth.
 
 NoExchange / Confluence
 ~~~~~~~~~~~~~~~~~~~~~~~~
-Reserved for special conditions like confluence or split flow.
+Reserved for special conditions like confluence or split flow and no exchange condition between the channel and floodplain.
 
-*Corresponds to:* `CHAN.DAT` 
+*Corresponds to:* `CHAN.DAT` C lines and E lines.
 
 .. image:: ./img/hdf5/FLO084a.png
 
@@ -150,7 +167,7 @@ Defines spatial layout and surface properties.
 
 Floodplain Cross Section
 -------------------------
-Specifies cross section grid elements that are reported to cross section output files.
+Defines cross section grid elements that are reported to cross section output files.
 
 *Corresponds to:* `FPXSEC.DAT`
 
@@ -158,21 +175,23 @@ Specifies cross section grid elements that are reported to cross section output 
 
 Gutter
 ------
-Describes gutter system routing. 
+Defines gutter parameters.
 
 *Corresponds to:* `GUTTER.DAT`
+
+.. image:: ./img/hdf5/FLO115.png
 
 Hydraulic Structures
 --------------------
 Hdf5 data for hydraulic structures is organized into several tables, each corresponding to a specific structure type or function.
 
-*Corresponds to:* `HYSTRUC.DAT`, BRIDGE_XSEC.DAT
+*Corresponds to:* `HYSTRUC.DAT`, `BRIDGE_XSEC.DAT`, `BRIDGE_COEFF.DAT`
 
 Control tables and name tables.
 
 .. image:: ./img/hdf5/FLO106.png
 
-Depth Discharge Tables and Culvert Equation Tables
+Depth Discharge Tables and Culvert Equation Tables.
 
 .. image:: ./img/hdf5/FLO107.png
 
@@ -250,7 +269,7 @@ User-defined breach progression using curve data.
 
 Rainfall
 --------
-
+Defines rainfall parameters.
 
 Uniform Rainfall
 ~~~~~~~~~~~~~~~~
@@ -280,7 +299,6 @@ Note: IRAINDUM table is organized by grid columns x time rows.
 
 Storm Drain
 ----------------
-
 The storm drain data for HDF5 can be cross referenced to the storm drain files in the Data Input Manual.   All other data is saved to the SWMM.INP and
 SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following tables:
 
@@ -289,7 +307,7 @@ SWMM.INI files.  The storm drain data is saved to the HDF5 file in the following
 
 .. image:: ./img/hdf5/FLO101.png
 
-SWMMFLO.DAT
+*Corresponds to:* `SWMMFLO.DAT`
 
 .. image:: ./img/hdf5/FLO100.png
 
@@ -302,15 +320,32 @@ SWMMFLO.DAT
 
 Multiple Channel
 ----------------
+The multiple channel data for HDF5 can be cross referenced to the multiple channel files in the Data Input Manual.
 
 *Corresponds to:* `MULT.DAT`, `SIMPLE_MULT.DAT`
 
-.. image:: ./img/hdf5/FLO074.png
+Multiple Channel Legacy Method
+
+*Corresponds to:* `MULT.DAT`
+
+.. image:: ./img/hdf5/FLO074a.png
+
+Multiple channel simple method
+
+*Corresponds to:* `SIMPLE_MULT.DAT`
+
+.. image:: ./img/hdf5/FLO074b.png
+
+Multiple channel combined method.
+
+*Corresponds to:* `MULT.DAT`, `SIMPLE_MULT.DAT`
+
+.. image:: ./img/hdf5/FLO074c.png
+
 
 Reduction Factors
 -----------------
-
-Defines areal and watershed reduction factors.
+Defines blocked cells for buildings and other obstructions.
 
 *Corresponds to:* `ARF.DAT`
 
@@ -318,30 +353,31 @@ Defines areal and watershed reduction factors.
 
 QGIS
 ----
-
-Data related to plugin-based preprocessing or export functions.
+Modeller contact info and FLOPRO, Plugin, and QGIS version information.
 
 .. image:: ./img/hdf5/FLO082.png
 
 Tailings
 --------
-
-Used for advanced mud/debris flow simulations.
+Defines tailings depth parameters, tailings depth and cv parameters, and tailings stack depth parameters. 
 
 **TAILINGS**  
 *Corresponds to:* `TAILINGS.DAT`
 
+.. image:: ./img/hdf5/FLO112.png
+
 **TAILINGS_CV**  
 *Corresponds to:* `TAILINGS_CV.DAT`
+
+.. image:: ./img/hdf5/FLO114.png
 
 **TAILINGS_STACK_DEPTH**  
 *Corresponds to:* `TAILINGS_STACK_DEPTH.DAT`
 
-.. image:: ./img/hdf5/FLO095.png
+.. image:: ./img/hdf5/FLO113.png
 
 Spatially Variable
 -------------------
-
 The 2D attributes for FLO-2D are stored in the Spatially Variable tables. The table name can be cross referenced to the corresponding \*.DAT file in the Data Input Manual.
 
 **FPFROUDE**  
