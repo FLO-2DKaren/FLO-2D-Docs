@@ -185,13 +185,13 @@ Hydraulic Structures
 --------------------
 Hdf5 data for hydraulic structures is organized into several tables, each corresponding to a specific structure type or function.
 
-*Corresponds to:* `HYSTRUC.DAT`, BRIDGE_XSEC.DAT, B
+*Corresponds to:* `HYSTRUC.DAT`, `BRIDGE_XSEC.DAT`, `BRIDGE_COEFF.DAT`
 
 Control tables and name tables.
 
 .. image:: ./img/hdf5/FLO106.png
 
-Depth Discharge Tables and Culvert Equation Tables
+Depth Discharge Tables and Culvert Equation Tables.
 
 .. image:: ./img/hdf5/FLO107.png
 
