@@ -167,7 +167,7 @@ Defines spatial layout and surface properties.
 
 Floodplain Cross Section
 -------------------------
-Specifies cross section grid elements that are reported to cross section output files.
+Defines cross section grid elements that are reported to cross section output files.
 
 *Corresponds to:* `FPXSEC.DAT`
 
@@ -175,15 +175,17 @@ Specifies cross section grid elements that are reported to cross section output 
 
 Gutter
 ------
-Describes gutter system routing. 
+Defines gutter parameters.
 
 *Corresponds to:* `GUTTER.DAT`
+
+.. image:: ./img/hdf5/FLO115.png
 
 Hydraulic Structures
 --------------------
 Hdf5 data for hydraulic structures is organized into several tables, each corresponding to a specific structure type or function.
 
-*Corresponds to:* `HYSTRUC.DAT`, BRIDGE_XSEC.DAT
+*Corresponds to:* `HYSTRUC.DAT`, BRIDGE_XSEC.DAT, B
 
 Control tables and name tables.
 
