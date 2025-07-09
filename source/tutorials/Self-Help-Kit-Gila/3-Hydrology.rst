@@ -69,11 +69,11 @@ Step 1: Navigate the Map
 Step 2: Add an Inflow Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Click **Collapse All** to clear any open panels.
+- In **FLO-2D Panel**, click **Collapse All** to clear any open panels.
 
 .. image:: ../img/shg/3/shg_hydro004.png
 
-- In QGIS, go to **Plugins > FLO-2D > Boundary Editor**.
+- Expand **Boundary Condition Editor**.
 
 .. image:: ../img/shg/3/shg_hydro005.png
 
