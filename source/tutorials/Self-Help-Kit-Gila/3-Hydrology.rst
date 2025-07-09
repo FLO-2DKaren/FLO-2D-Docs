@@ -298,7 +298,6 @@ You’ve now assigned both **uniform** and **spatially variable** rainfall to yo
 Infiltration
 ---------------
 
-
 .. toggle::
 
    **Infiltration - Assign Horton**
