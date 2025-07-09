@@ -172,12 +172,10 @@ Step 1: Open the Rain Editor
 
 - Check **Simulate Rainfall**.
 - Set the **Total Rainfall Depth** to ``2.65 in`` (this example uses a 6-hour, 100-year event).
+- Leave **Rainfall Abstraction** at ``0.0`` for now. This is set elsewhere.
 - Check **Apply Building Rain**.
 
 .. image:: ../img/shg/3/shg_hydro019.png
-
-.. note::
-   Leave **Rainfall Abstraction** at ``0.0`` for now. This is set elsewhere.
 
 Step 2: Add a Storm Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,11 +194,8 @@ Step 2: Add a Storm Pattern
 
 .. important::
    The rainfall distribution table has:
-
-   - **Time (hours)** on the left.
-
-   - **Cumulative rainfall (0–1)** on the right.
-
+    - **Time (hours)** on the left.
+    - **Cumulative rainfall (0–1)** on the right.
    The percent values must **start at time = 0 and rainfall = 0**.
 
 Step 3: Understanding Rain on Grid
@@ -215,7 +210,6 @@ Step 3: Understanding Rain on Grid
 Step 4: Sample a Rainfall Raster (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable rainfall**.
-
 - Drag your **24-hour rainfall raster** into QGIS.
 - Right-click the layer > **Zoom to Layer**.
 - Check the data: it should be in inches and match your coordinate system.
@@ -223,9 +217,7 @@ You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable ra
 .. image:: ../img/shg/3/shg_hydro023.png
 
 To apply the raster:
-
 - Go to the **Rain Editor**.
-
 - Check **Sample from Raster**.
 
 .. image:: ../img/shg/3/shg_hydro024.png
