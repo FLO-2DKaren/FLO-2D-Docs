@@ -86,7 +86,7 @@ Step 2: Add an Inflow Node
 .. image:: ../img/shg/3/shg_hydro007.png
 
 - Click **OK** to create the inflow point, and then
-click the **Add Point** button again to save it.
+  click the **Add Point** button again to save it.
 
 .. image:: ../img/shg/3/shg_hydro008.png
 
@@ -114,9 +114,9 @@ Step 4: Create a Time Series
 Step 5: Paste Hydrograph Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the provided hydrograph data file from **Lesson 1 Data**.
-  - Choose the `100yr_6hr` inflow file.
+  - Choose the `100yr 6hr` inflow file.
 
-.. image:: ../img/shg/3/shg_hydro012.png
+  .. image:: ../img/shg/3/shg_hydro012.png
 
   - Time should be in hours on the **left** and discharge (cfs) on the **right**.
 - Select all data with **Ctrl+A**, then copy with **Ctrl+C**.
