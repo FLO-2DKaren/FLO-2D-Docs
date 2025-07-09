@@ -40,15 +40,45 @@ h1 > .section-number{
 
 
 
-div.toggle .toggle-button {
-    font-size: 0; /* Hide default text */
+/* Completely hide default togglebutton label text (RTD theme-safe) */
+.toggle .toggle-button {
+    font-size: 0 !important;
+    color: transparent !important;
+    position: relative;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-top: 0.5em;
 }
 
-div.toggle .toggle-button::before {
-    content: "▼";
+/* Clear theme’s generated label content */
+.toggle .toggle-button::after {
+    content: "" !important;
+}
+
+/* Replace label with compact icon + text if desired */
+.toggle .toggle-button::before {
+    content: "▶" !important;
     font-size: 14px;
+    color: #005a9c;
+    position: absolute;
+    left: -1.5em;
+    top: 0;
 }
 
-div.toggle.open .toggle-button::before {
-    content: "▲";
+/* When toggle is open */
+.toggle.open .toggle-button::before {
+    content: "▼" !important;
+    color: #005a9c;
 }
+
+/* Optional: style inner content title */
+.toggle > p:first-child {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 0;
+}
+
