@@ -27,7 +27,7 @@ Step 1: Launch QGIS
 ~~~~~~~~~~~~~~~~~~~~
 - Open the **QGIS application**.
 
-.. img:: ../img/shg/3/shg_hydro001.png
+.. image:: ../img/shg/3/shg_hydro001.png
 
 - You can pin QGIS to your Start Menu for quicker access.
 
@@ -38,13 +38,13 @@ Step 2: Open Your Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - If QGIS opens your most recent project, simply click on it in the **Recent Projects** list.
 
-.. img:: ../img/shg/3/shg_hydro002.png
+.. image:: ../img/shg/3/shg_hydro002.png
 
 - If the project was moved and no longer loads:
   - Go to **Plugins > FLO-2D > Open FLO-2D Project**.
   - Navigate to your project `.gpkg` file (GeoPackage) and select it.
 
-.. img:: ../img/shg/3/shg_hydro003.png
+.. image:: ../img/shg/3/shg_hydro003.png
 
 .. note::
    The GeoPackage contains your entire project, including the `.qgz` file.
