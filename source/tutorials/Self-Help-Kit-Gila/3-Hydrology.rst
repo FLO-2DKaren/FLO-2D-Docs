@@ -159,15 +159,22 @@ Assign Rainfall
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In this lesson, we assign rainfall to a FLO-2D project. You will learn how to use the **Rain Editor**, apply **uniform rainfall**, and optionally sample **spatially variable rainfall** from NOAA Atlas data.
+In this lesson, we assign rainfall to a FLO-2D project.
+You will learn how to use the **Rain Editor**, apply **uniform rainfall**, and optionally sample **spatially
+variable rainfall** from NOAA Atlas data.
 
 Step 1: Open the Rain Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Collapse all QGIS dock widgets to reduce clutter.
 - Go to **Plugins > FLO-2D > Rain Editor**.
+
+.. image:: ../img/shg/3/shg_hydro018.png
+
 - Check **Simulate Rainfall**.
 - Set the **Total Rainfall Depth** to ``2.65 in`` (this example uses a 6-hour, 100-year event).
 - Check **Apply Building Rain**.
+
+.. image:: ../img/shg/3/shg_hydro019.png
 
 .. note::
    Leave **Rainfall Abstraction** at ``0.0`` for now. This is set elsewhere.
@@ -175,14 +182,25 @@ Step 1: Open the Rain Editor
 Step 2: Add a Storm Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Open** next to the storm pattern.
+
+.. image:: ../img/shg/3/shg_hydro020.png
+
 - Navigate to the **FLO-2D documentation folder** and find the **6-hour event distribution**.
-- Choose the **first pattern** from the list.
+  Choose the **first pattern** from the list.
+
+.. image:: ../img/shg/3/shg_hydro021.png
+
 - Confirm the time-percent curve was imported correctly.
+
+.. image:: ../img/shg/3/shg_hydro022.png
 
 .. important::
    The rainfall distribution table has:
-   - **Time (hours)** on the left
-   - **Cumulative rainfall (0–1)** on the right  
+
+   - **Time (hours)** on the left.
+
+   - **Cumulative rainfall (0–1)** on the right.
+
    The percent values must **start at time = 0 and rainfall = 0**.
 
 Step 3: Understanding Rain on Grid
@@ -192,7 +210,7 @@ Step 3: Understanding Rain on Grid
 - This is called **"rain on grid"**, and it is different from assigning rainfall to subcatchments.
 
 .. tip::
-   Rain on grid works well for small projects. For large areas, use **spatial variability** (see below).
+   Rain on grid works well for small projects. For large areas, continue to **Step 4**.
 
 Step 4: Sample a Rainfall Raster (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -202,24 +220,47 @@ You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable ra
 - Right-click the layer > **Zoom to Layer**.
 - Check the data: it should be in inches and match your coordinate system.
 
+.. image:: ../img/shg/3/shg_hydro023.png
+
 To apply the raster:
+
 - Go to the **Rain Editor**.
+
 - Check **Sample from Raster**.
+
+.. image:: ../img/shg/3/shg_hydro024.png
+
 - Select your raster file.
+
 - Leave **"Fill NoData"** unchecked if not needed.
+
 - Click **OK** and confirm.
+
+.. image:: ../img/shg/3/shg_hydro025.png
+
 - QGIS will now **sample rainfall values** from the raster to each grid element based on spatial location.
 
+.. image:: ../img/shg/3/shg_hydro026.png
+
 .. note::
-   The sampling uses the centroid of each grid element and computes a **point reduction factor** based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based** rainfall adjustment.
+   The sampling uses the centroid of each grid element and computes a **point reduction factor**
+   based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based**
+   rainfall adjustment.
 
 Step 5: Export Rainfall Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Go to **Plugins > FLO-2D > Export DAT Files**.
+Check `Control Parameters`:
+- The rainfall switch is turned on automatically when you check **Simulate Rainfall**. Click **Save**.
+
+.. image:: ../img/shg/3/shg_hydro027.png
+
+- Export **DAT Files**.
+
+.. image:: ../img/shg/3/shg_hydro028.png
+
 - This will generate a ``RAIN.DAT`` file in your export folder.
 
-Check `Control Parameters`:
-- The rainfall switch is turned on automatically when you check **Simulate Rainfall**.
+.. image:: ../img/shg/3/shg_hydro029.png
 
 .. tip::
    If ``RAIN.DAT`` is missing an asterisk, your data has been successfully exported.
