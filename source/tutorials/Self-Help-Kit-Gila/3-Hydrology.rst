@@ -224,7 +224,9 @@ You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable ra
 .. image:: ../img/shg/3/shg_hydro023.png
 
 To apply the raster:
+
 - Go to the **Rain Editor**.
+
 - Check **Sample from Raster**.
 
 .. image:: ../img/shg/3/shg_hydro024.png
@@ -249,6 +251,7 @@ To apply the raster:
 Step 5: Export Rainfall Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Check `Control Parameters`:
+
 - The rainfall switch is turned on automatically when you check **Simulate Rainfall**. Click **Save**.
 
 .. image:: ../img/shg/3/shg_hydro027.png
