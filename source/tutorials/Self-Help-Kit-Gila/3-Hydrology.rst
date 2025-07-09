@@ -66,33 +66,47 @@ Step 1: Navigate the Map
 - Use your **mouse scroll wheel** to zoom in and out.
 - Click and drag with the **middle mouse button (wheel)** to pan the map view.
 
-.. note::
-   This navigation style is similar to Civil 3D, ArcGIS, and Google Earth.
-
 Step 2: Add an Inflow Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- In QGIS, go to **Plugins > FLO-2D > Boundary Editor**.
+
 - Click **Collapse All** to clear any open panels.
+
+.. image:: ../img/shg/3/shg_hydro004.png
+
+- In QGIS, go to **Plugins > FLO-2D > Boundary Editor**.
+
+.. image:: ../img/shg/3/shg_hydro005.png
+
 - Choose the **Inflow Node** option.
+
+.. image:: ../img/shg/3/shg_hydro006.png
+
 - Click **Add Point**, then click on the map at the outlet of the structure (culvert with dissipator and grate).
-- Click **OK** to create the inflow point.
-- Click the **Save** button (floppy disk icon) to save it.
+
+.. image:: ../img/shg/3/shg_hydro007.png
+
+- Click **OK** to create the inflow point, and then
+click the **Add Point** button again to save it.
+
+.. image:: ../img/shg/3/shg_hydro008.png
 
 Step 3: Rename the Inflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Rename**, and enter:
+- Click **Rename**, and rename to "Grover Basin Inflow"
 
-  `Grover Basin Inflow`
+.. image:: ../img/shg/3/shg_hydro009.png
 
 Step 4: Create a Time Series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Time Series Editor**.
-- Click **New**, and name it:
+- Click **Rename**, and rename "Time Series 1" to "GroverIn 100yr 6hr"
 
-  `GroverIn_100yr_6hr`
+.. image:: ../img/shg/3/shg_hydro010.png
 
 - This is a 100-year, 6-hour inflow hydrograph taken from the original larger project.
 - Set the **Type** to: `Floodplain`
+
+.. image:: ../img/shg/3/shg_hydro011.png
 
 .. warning::
    Do not select **Channel** unless modeling a direct stream. This is surface runoff entering the basin.
@@ -101,10 +115,15 @@ Step 5: Paste Hydrograph Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the provided hydrograph data file from **Lesson 1 Data**.
   - Choose the `100yr_6hr` inflow file.
+
+.. image:: ../img/shg/3/shg_hydro012.png
+
   - Time should be in hours on the **left** and discharge (cfs) on the **right**.
 - Select all data with **Ctrl+A**, then copy with **Ctrl+C**.
 - Close the file with **Ctrl+W**.
 - In the QGIS Time Series Editor, click the first cell and paste using **Ctrl+V**.
+
+.. image:: ../img/shg/3/shg_hydro013.png
 
 .. note::
    FLO-2D automatically uses **cubic feet per second** for discharge. Use metric units only if your model is in metric.
@@ -113,36 +132,22 @@ Step 6: Schematize the Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to convert the pasted user input into FLO-2D schema data.
 
+.. image:: ../img/shg/3/shg_hydro014.png
+
 Step 7: Export the Inflow File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Right-click the inflow node and choose **Export > Data**.
-- Select only the **Inflow Elements**, not all files.
 - Set the export folder and confirm.
+
+.. image:: ../img/shg/3/shg_hydro015.png
+
+- Select only the **Inflow Elements**, not all files.
+
+.. image:: ../img/shg/3/shg_hydro016.png
 
 You will now have a file called `INFLOW.DAT`.
 
-Understanding the INFLOW.DAT File
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Open `INFLOW.DAT` in **Notepad++** or any plain text editor. It will look like this::
-
-   f   [Floodplain flag]
-   ####  [Grid element number]
-   h   [Time-series line]
-   0.0  0.0
-   0.1  2.4
-   ...
-
-- `f` means **floodplain** (use `c` for channel inflow).
-- The number is the grid element where the inflow enters.
-- `h` starts a new hydrograph.
-- The table represents **time (hr)** and **discharge (cfs)**.
-- Always start at time `0` with `0` discharge.
-- Ramp up gradually in the first interval.
-
-.. tip::
-   For **tailings dams** or Flash like flows, ramp up more quickly (e.g., within 0.5 hour). For regular runoff, 1–2 hours may be appropriate.
-
-
+.. image:: ../img/shg/3/shg_hydro017.png
 
 
 Assign Rainfall
