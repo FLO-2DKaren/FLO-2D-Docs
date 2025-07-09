@@ -194,9 +194,12 @@ Step 2: Add a Storm Pattern
 .. image:: ../img/shg/3/shg_hydro022.png
 
 .. important::
+
    The rainfall distribution table has:
-    - **Time (hours)** on the left.
-    - **Cumulative rainfall (0–1)** on the right.
+
+   - **Time (hours)** on the left.
+   - **Cumulative rainfall (0–1)** on the right.
+
    The percent values must **start at time = 0 and rainfall = 0**.
 
 Step 3: Understanding Rain on Grid
