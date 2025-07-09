@@ -36,3 +36,19 @@ h1 > .section-number{
 .wy-breadcrumbs .section-number {
   display: none;
 }
+
+
+
+
+div.toggle .toggle-button {
+    font-size: 0; /* Hide default text */
+}
+
+div.toggle .toggle-button::before {
+    content: "▼";
+    font-size: 14px;
+}
+
+div.toggle.open .toggle-button::before {
+    content: "▲";
+}
