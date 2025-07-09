@@ -165,8 +165,9 @@ variable rainfall** from NOAA Atlas data.
 
 Step 1: Open the Rain Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Collapse all QGIS dock widgets to reduce clutter.
-- Go to **Plugins > FLO-2D > Rain Editor**.
+
+- In **FLO-2D Panel**, click **Collapse All** to clear any open panels.
+- Expand **Rain Editor**.
 
 .. image:: ../img/shg/3/shg_hydro018.png
 
