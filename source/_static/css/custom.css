@@ -73,7 +73,7 @@ details.sd-dropdown.sd-card {
     padding: 0 !important;
 }
 
-/* Remove spacing and background from the dropdown summary/title */
+/* Style the dropdown summary/title */
 details.sd-dropdown summary {
     padding: 0 !important;
     background: none !important;
@@ -85,14 +85,10 @@ details.sd-dropdown summary {
     align-items: center;
     gap: 0.4em;
     cursor: pointer;
+    justify-content: flex-start !important;
 }
 
-/* Remove the right arrow and use a clean icon */
-details.sd-dropdown summary::after {
-    display: none !important;
-}
-
-/* Optional: add clean arrow manually */
+/* ✅ Add custom left arrow manually */
 details.sd-dropdown summary::before {
     content: "▶";
     color: #005a9c;
@@ -103,29 +99,16 @@ details.sd-dropdown[open] summary::before {
     content: "▼";
 }
 
-/* Hide right arrow from sphinx-design dropdown summary titles */
-details.sd-dropdown summary .sd-summary-content::after,
-details.sd-dropdown summary::after,
-details.sd-dropdown summary::before {
-    display: none !important;
-    content: none !important;
-}
-
-/* Also override any fallback ::marker or inserted SVG */
-details.sd-dropdown summary::marker {
-    display: none !important;
-    content: none !important;
-}
-
-/* Fix layout to prevent spacing left behind by removed arrow */
-details.sd-dropdown summary {
-    justify-content: flex-start !important;
-}
-
-/* ✅ Remove the right arrow ( > ) added by sphinx-design */
+/* ✅ Remove right arrow ( > ) added by sphinx-design */
 details.sd-dropdown summary .sd-summary-content::after {
     content: none !important;
     display: none !important;
+}
+
+/* Remove any fallback ::marker arrow */
+details.sd-dropdown summary::marker {
+    display: none !important;
+    content: none !important;
 }
 
 
