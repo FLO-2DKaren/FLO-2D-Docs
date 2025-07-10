@@ -308,13 +308,14 @@ Infiltration
    - Check **Green-Ampt**.
    - Recommended default values (inches/hour, inches):
 
-      - Initial Abstraction: ``0``
-      - Porosity: ``0.4``
-      - Hydraulic Conductivity: ``0.1``
-      - Initial Saturation: ``0.3``
-      - Final Saturation: ``1.0``
-      - Soil Suction: ``4``
-      - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
+     - Initial Abstraction: ``0``
+     - Porosity: ``0.4``
+     - Hydraulic Conductivity: ``0.1``
+     - Initial Saturation: ``0.3``
+     - Final Saturation: ``1.0``
+     - Soil Suction: ``4``
+     - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
+
    - Click **OK**.
 
    .. container:: h3
