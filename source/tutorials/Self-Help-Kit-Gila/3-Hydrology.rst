@@ -289,8 +289,6 @@ Infiltration
 
 .. dropdown:: Infiltration - Assign Green and Ampt
 
-   Infiltration - Assign Green and Ampt
-   -------------------------------------
    .. raw:: html
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
@@ -302,19 +300,21 @@ Infiltration
    including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method.
    You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
 
-   Step 1: Set Global Parameters
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Open the **Global Infiltration** tool.
-   - Check **Green-Ampt**.
-   - Recommended default values (inches/hour, inches):
-     - Initial Abstraction: ``0``
-     - Porosity: ``0.4``
-     - Hydraulic Conductivity: ``0.1``
-     - Initial Saturation: ``0.3``
-     - Final Saturation: ``1.0``
-     - Soil Suction: ``4``
-     - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
-   - Click **OK**.
+   .. container:: h3
+
+      Step 1: Set Global Parameters
+
+      - Open the **Global Infiltration** tool.
+      - Check **Green-Ampt**.
+      - Recommended default values (inches/hour, inches):
+        - Initial Abstraction: ``0``
+        - Porosity: ``0.4``
+        - Hydraulic Conductivity: ``0.1``
+        - Initial Saturation: ``0.3``
+        - Final Saturation: ``1.0``
+        - Soil Suction: ``4``
+        - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
+      - Click **OK**.
 
    Step 2: Load Land Use and Soil Shapefiles
    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
