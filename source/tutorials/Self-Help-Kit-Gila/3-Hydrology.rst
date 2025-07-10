@@ -305,7 +305,13 @@ Infiltration
       Step 1: Set Global Parameters
 
    - Open the **Global Infiltration** tool.
+
+   .. image:: ../img/shg/3/shg_hydro030.png
+
    - Check **Green-Ampt**.
+
+   .. image:: ../img/shg/3/shg_hydro031.png
+
    - Recommended default values (inches/hour, inches):
 
      - Initial Abstraction: ``0``
@@ -323,6 +329,9 @@ Infiltration
       Step 2: Load Land Use and Soil Shapefiles
 
    - Add land use and soil shapefiles (e.g., 2018 or 2023 Maricopa County).
+
+   .. image:: ../img/shg/3/shg_hydro032.png
+
    - Inspect attributes such as:
      - ``initial abstraction``, ``impervious``, ``initial saturation``
      - ``hydraulic conductivity (XKsat)``, ``soil depth``
@@ -333,6 +342,9 @@ Infiltration
       Step 3: Use the 2018 Method
 
    - Run **Green-Ampt Calculator** (2018 version).
+
+   .. image:: ../img/shg/3/shg_hydro033.png
+
    - Input Fields:
 
      - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
@@ -353,14 +365,26 @@ Infiltration
       Step 5: Export Infiltration Data
 
    - Ensure **Infiltration Switch** is ON in **Control Parameters**.
+
+   .. image:: ../img/shg/3/shg_hydro034.png
+
    - Click **Export DAT Files**.
+
+   .. image:: ../img/shg/3/shg_hydro035.png
+
    - Export only ``INFILTRATION`` and ``CONT.DAT``.
+
+   .. image:: ../img/shg/3/shg_hydro036.png
+
 
    .. container:: h3
 
       Step 6: Use the 2023 Method
 
    - Switch calculator to use 2023 soil shapefile.
+
+   .. image:: ../img/shg/3/shg_hydro037.png
+
    - Input Fields:
 
      - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``, ``DTheta Normal``, ``DTheta Dry``, ``Psif``
@@ -380,20 +404,29 @@ Infiltration
 
      - Horizon, Fragmentation, Component layers
 
+   .. image:: ../img/shg/3/shg_hydro038.png
+
    - Use **OSM Downloader** to generate land use polygons:
 
      - Raster images are vectorized based on color mapping.
+
+   .. image:: ../img/shg/3/shg_hydro039.png
 
    - Calculator reads attributes:
 
      - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
      - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
 
+   .. image:: ../img/shg/3/shg_hydro040.png
+
    .. container:: h3
 
       Step 8: Verify Infiltration Attributes
 
    - Enable **Advanced Layers** in **FLO-2D Settings**.
+
+   .. image:: ../img/shg/3/shg_hydro041.png
+
    - Review attributes in **infiltration_results**:
       - ``Hydraulic Conductivity``
       - ``Soil Suction``
@@ -401,6 +434,9 @@ Infiltration
       - ``Initial Abstraction``
       - ``Impervious``
       - ``Soil Depth``
+
+
+   .. image:: ../img/shg/3/shg_hydro042.png
 
    .. note::
       Always **re-sort by FID** before export to avoid misaligned data rows.
