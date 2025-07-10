@@ -55,31 +55,23 @@ h1 > .section-number{
 
 
 
-/* Hide default togglebutton label text completely */
-.toggle .toggle-button {
-    font-size: 0 !important;
-    color: transparent !important;
-    background: none !important;
+/* Remove card-like style from sphinx-design dropdowns */
+.sd-dropdown {
     border: none !important;
     box-shadow: none !important;
-    text-indent: -9999px;
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 0 0 1em 0 !important;
 }
 
-/* Clear the default content (important for RTD theme) */
-.toggle .toggle-button::after {
-    content: "" !important;
-    display: none;
-}
-
-/* Optional: Style the title inside the toggle content */
-.toggle > p:first-child {
+/* Optional: tighten up the heading spacing */
+.sd-summary-title {
     font-weight: bold;
     font-size: 1.05em;
-    margin-top: 0.5em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.2em;
+}
+
+/* Optional: remove arrow spacing or styling */
+.sd-dropdown summary {
+    padding-left: 0 !important;
 }
