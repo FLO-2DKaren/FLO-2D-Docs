@@ -304,7 +304,7 @@ Infiltration
 
       Step 1: Set Global Parameters
 
-      - Open the **Global Infiltration** tool.
+   - Open the **Global Infiltration** tool.
       - Check **Green-Ampt**.
       - Recommended default values (inches/hour, inches):
         - Initial Abstraction: ``0``
@@ -316,8 +316,10 @@ Infiltration
         - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
       - Click **OK**.
 
-   Step 2: Load Land Use and Soil Shapefiles
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   .. container:: h3
+
+      Step 2: Load Land Use and Soil Shapefiles
+
    - Add land use and soil shapefiles (e.g., 2018 or 2023 Maricopa County).
    - Inspect attributes such as:
      - ``initial abstraction``, ``impervious``, ``initial saturation``
