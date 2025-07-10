@@ -289,6 +289,8 @@ Infiltration
 
 .. dropdown:: Infiltration - Assign Green and Ampt
 
+   Infiltration - Assign Green and Ampt
+   -------------------------------------
    .. raw:: html
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
