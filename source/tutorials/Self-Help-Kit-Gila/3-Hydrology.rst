@@ -298,12 +298,26 @@ You’ve now assigned both **uniform** and **spatially variable** rainfall to yo
 Infiltration
 ---------------
 
-.. toggle::
+.. important::
+   FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
 
-   **Infiltration - Assign Horton**
+.. dropdown:: Infiltration - Assign SCS Curve Number
+
+   This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D.
+   You will learn how to pull Curve Number values from land cover and soil data, manipulate those values,
+   and apply them to your grid using either vector or raster formats.
+
+.. dropdown:: Infiltration - Assign Horton
 
    This lesson walks through the **Horton infiltration method** in FLO-2D.
    You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.
+
+.. dropdown:: Infiltration - Assign Green and Ampt
+
+   This lesson walks through the **Green-Ampt infiltration method** in FLO-2D,
+   including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method.
+   You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
+
 
 
 
