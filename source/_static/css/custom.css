@@ -55,34 +55,50 @@ h1 > .section-number{
 
 
 
-/* Completely flatten sphinx-design dropdowns */
+/* Remove card-like background and border from sphinx-design dropdowns */
 details.sd-dropdown {
-    all: unset;
-    display: block;
-    margin-bottom: 1em;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 1em 0 !important;
+    border-radius: 0 !important;
 }
 
-/* Restore summary toggle behavior */
+/* Fix any inherited card class (used internally by sphinx-design) */
+details.sd-dropdown.sd-card {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Remove spacing and background from the dropdown summary/title */
 details.sd-dropdown summary {
-    cursor: pointer;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
     font-weight: bold;
-    margin-bottom: 0.4em;
-    list-style: none;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer;
 }
 
-/* Remove default marker arrow */
-details.sd-dropdown summary::marker {
-    display: none;
+/* Remove the right arrow and use a clean icon */
+details.sd-dropdown summary::after {
+    display: none !important;
 }
 
-/* Optional: add custom arrow before title */
+/* Optional: add clean arrow manually */
 details.sd-dropdown summary::before {
-    content: "▶ ";
+    content: "▶";
     color: #005a9c;
-    font-weight: normal;
+    font-size: 0.9em;
 }
 
-/* Optional: change arrow when open */
 details.sd-dropdown[open] summary::before {
-    content: "▼ ";
+    content: "▼";
 }
