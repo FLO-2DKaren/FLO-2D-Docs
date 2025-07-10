@@ -102,3 +102,9 @@ details.sd-dropdown summary::before {
 details.sd-dropdown[open] summary::before {
     content: "▼";
 }
+
+/* Remove the right arrow (>) at the end of dropdown summary */
+details.sd-dropdown summary::after {
+    content: none !important;
+    display: none !important;
+}
