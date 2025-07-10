@@ -26,7 +26,8 @@ smv_remote_whitelist = r'^origin$'  # Default remote
 extensions = [
     'sphinxcontrib.mermaid',
     'sphinx_multiversion',
-    'sphinx_togglebutton'
+    'sphinx_togglebutton',
+    'sphinx_design'
 ]
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
