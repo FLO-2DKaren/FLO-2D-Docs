@@ -99,19 +99,6 @@ details.sd-dropdown[open] summary::before {
     content: "▼";
 }
 
-/* ✅ Remove right arrow ( > ) added by sphinx-design */
-details.sd-dropdown summary .sd-summary-content::after {
-    content: none !important;
-    display: none !important;
-}
-
-/* Remove any fallback ::marker arrow */
-details.sd-dropdown summary::marker {
-    display: none !important;
-    content: none !important;
-}
-
-
 
 
 
