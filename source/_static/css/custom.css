@@ -88,3 +88,16 @@ details.sd-dropdown[open] summary::before {
 details.sd-dropdown summary svg {
     display: none !important;
 }
+
+.h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+
+.h4 {
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 1em;
+    color: #444;
+}
