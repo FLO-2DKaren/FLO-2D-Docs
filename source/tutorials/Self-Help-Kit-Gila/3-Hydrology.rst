@@ -443,106 +443,112 @@ Infiltration
 
 .. dropdown:: Infiltration - Assign SCS Curve Number
 
+   .. raw:: html
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
    This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D.
    You will learn how to pull Curve Number values from land cover and soil data, manipulate those values,
    and apply them to your grid using either vector or raster formats.
 
+   .. note::
+      Only complete **one** of the three infiltration methods. This tutorial covers **Curve Number**.
 
-   Infiltration - Assign SCS Curve Number
-   -------------------------------------------
+   .. container:: h3
 
-.. raw:: html
+      Step 1: Generate Curve Number Layer
 
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   - Open the **Curve Number Generator** from the **Toolbox**.
+   - This downloads and intersects:
+
+     - **NLCD** land cover data
+     - **SSURGO** soil data
+
+   - Set outputs to **Temporary Layers**, except save the final Curve Number layer.
+   - Click **Run** to create your composite Curve Number layer.
+   .. container:: h3
+
+      Step 2: Inspect Generated Layers
+
+   - You’ll see several layers:
+
+     - **Soils layer** (SSURGO)
+     - **Impervious surface raster** from NLCD
+     - **Land cover classification**
+     - **Final Curve Number layer**
+
+   .. tip::
+      Use the **Identify Features** tool to inspect pixel values, such as percent impervious or land class (e.g., “Developed, Open Space”).
+
+   .. container:: h3
+
+      Step 3: Edit Curve Number Values
+
+   - Open the **Attribute Table** of the Curve Number layer.
+   - Use **field calculator** or manual selection to edit curve numbers.
+   - Example: Select polygons with Curve Number < 63 and update to 63.
+   - Save edits and close the attribute table.
+
+   .. container:: h3
+
+      Step 4: Apply Curve Number to Grid
+
+   - Open **Infiltration Editor** > **Global Infiltration**.
+   - Choose **Curve Number** as your method.
+   - Click **OK**.
+   - Now go to **Calculate Curve Number**:
+
+     - Select the **Curve Number layer**
+     - Choose the correct field
+     - Apply values to the grid.
+
+   .. container:: h3
+
+      Step 5: Export Infiltration Data
+
+   - Enable the **Infiltration Switch** in **Control Parameters**.
+   - Save your control settings.
+   - Go to **Export DAT Files**.
+   - Select only **Infiltration** and export.
+
+   .. note::
+      ``INFIL.DAT`` will include:
+      - Switch = ``2`` for Curve Number method
+      - Global values (optional)
+      - Local values per grid element
+
+   .. container:: h3
+
+      Step 6: Optional - Rasterize Curve Number
+
+   If your Curve Number polygon layer is too complex or fragmented:
+
+     - Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
+   - Input:
+
+     - Layer: Curve Number shapefile
+     - Field: Curve Number
+     - Cell size: ``30 x 30``
+     - Extent: Match your FLO-2D grid layer
+     - No Data value: ``9999``
+
+   - Save output raster and click **Run**.
+
+   .. container:: h3
+
+   Step 7: Use Raster Calculator (Alternative Method)
+
+   - Open **Infiltration Editor** > **Curve Number from Raster**.
+   - Select your rasterized Curve Number layer.
+   - Run the same sampling calculator used for elevation/N values.
+   - Click **OK** to apply sampled values.
+
+   .. note::
+      Raster sampling uses the **centroid** of each grid element to pull the value and applies a **point-based reduction**.
 
 
-This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D. You will learn how to pull Curve Number values from land cover and soil data, manipulate those values, and apply them to your grid using either vector or raster formats.
-
-.. note::
-   Only complete **one** of the three infiltration methods. This tutorial covers **Curve Number**.
-
-Step 1: Generate Curve Number Layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Curve Number Generator** from the **Toolbox**.
-- This downloads and intersects:
-  - **NLCD** land cover data
-  - **SSURGO** soil data
-- Set outputs to **Temporary Layers**, except save the final Curve Number layer.
-- Click **Run** to create your composite Curve Number layer.
-
-Step 2: Inspect Generated Layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- You’ll see several layers:
-  - **Soils layer** (SSURGO)
-  - **Impervious surface raster** from NLCD
-  - **Land cover classification**
-  - **Final Curve Number layer**
-
-.. tip::
-   Use the **Identify Features** tool to inspect pixel values, such as percent impervious or land class (e.g., “Developed, Open Space”).
-
-Step 3: Edit Curve Number Values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Attribute Table** of the Curve Number layer.
-- Use **field calculator** or manual selection to edit curve numbers.
-- Example: Select polygons with Curve Number < 63 and update to 63.
-- Save edits and close the attribute table.
-
-Step 4: Apply Curve Number to Grid
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open **Infiltration Editor** > **Global Infiltration**.
-- Choose **Curve Number** as your method.
-- Click **OK**.
-- Now go to **Calculate Curve Number**:
-  - Select the **Curve Number layer**
-  - Choose the correct field
-  - Apply values to the grid.
-
-Step 5: Export Infiltration Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Enable the **Infiltration Switch** in **Control Parameters**.
-- Save your control settings.
-- Go to **Export DAT Files**.
-- Select only **Infiltration** and export.
-
-.. note::
-   ``INFIL.DAT`` will include:
-   - Switch = ``2`` for Curve Number method
-   - Global values (optional)
-   - Local values per grid element
-
-Step 6: Optional - Rasterize Curve Number
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If your Curve Number polygon layer is too complex or fragmented:
-
-- Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
-- Input:
-  - Layer: Curve Number shapefile
-  - Field: Curve Number
-  - Cell size: ``30 x 30``
-  - Extent: Match your FLO-2D grid layer
-  - No Data value: ``9999``
-- Save output raster and click **Run**.
-
-Step 7: Use Raster Calculator (Alternative Method)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open **Infiltration Editor** > **Curve Number from Raster**.
-- Select your rasterized Curve Number layer.
-- Run the same sampling calculator used for elevation/N values.
-- Click **OK** to apply sampled values.
-
-.. note::
-   Raster sampling uses the **centroid** of each grid element to pull the value and applies a **point-based reduction**.
-
-Wrap-up
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You now know two ways to assign Curve Number infiltration data:
-1. Using vector polygon data
-2. Using rasterized grid sampling
-
-Only one method is needed for your project.
 
 .. dropdown:: Infiltration - Assign Horton
 
