@@ -103,8 +103,9 @@ details.sd-dropdown[open] summary::before {
     content: "▼";
 }
 
-/* Remove the right arrow (>) at the end of dropdown summary */
-details.sd-dropdown summary::after {
+/* Actually remove the right arrow from sphinx-design dropdown (specific target) */
+details.sd-dropdown > summary > .sd-summary-content::after {
     content: none !important;
     display: none !important;
 }
+
