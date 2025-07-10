@@ -307,6 +307,7 @@ Infiltration
    - Open the **Global Infiltration** tool.
    - Check **Green-Ampt**.
    - Recommended default values (inches/hour, inches):
+
       - Initial Abstraction: ``0``
       - Porosity: ``0.4``
       - Hydraulic Conductivity: ``0.1``
