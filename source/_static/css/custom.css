@@ -122,3 +122,10 @@ details.sd-dropdown summary {
     justify-content: flex-start !important;
 }
 
+/* ✅ Remove the right arrow ( > ) added by sphinx-design */
+details.sd-dropdown summary .sd-summary-content::after {
+    content: none !important;
+    display: none !important;
+}
+
+
