@@ -55,8 +55,8 @@ h1 > .section-number{
 
 
 
-/* Remove card-like style from sphinx-design dropdowns */
-.sd-dropdown {
+/* Remove all card-style box effects from sphinx-design dropdowns */
+details.sd-dropdown {
     border: none !important;
     box-shadow: none !important;
     background-color: transparent !important;
@@ -64,19 +64,13 @@ h1 > .section-number{
     margin: 0 0 1em 0 !important;
 }
 
-/* Optional: tighten up the heading spacing */
-.sd-summary-title {
-    font-weight: bold;
-    font-size: 1.05em;
-    margin-bottom: 0.2em;
+/* Remove padding from the <summary> toggle button */
+details.sd-dropdown > summary {
+    padding: 0 !important;
+    list-style: none !important;
 }
 
-/* Optional: remove arrow spacing or styling */
-.sd-dropdown summary {
-    padding-left: 0 !important;
+/* Remove built-in icon if desired (optional) */
+details.sd-dropdown > summary::marker {
+    display: none;
 }
-
-h1 {
-    color: red !important;
-}
-
