@@ -55,22 +55,34 @@ h1 > .section-number{
 
 
 
-/* Remove all card-style box effects from sphinx-design dropdowns */
+/* Completely flatten sphinx-design dropdowns */
 details.sd-dropdown {
-    border: none !important;
-    box-shadow: none !important;
-    background-color: transparent !important;
-    padding: 0 !important;
-    margin: 0 0 1em 0 !important;
+    all: unset;
+    display: block;
+    margin-bottom: 1em;
 }
 
-/* Remove padding from the <summary> toggle button */
-details.sd-dropdown > summary {
-    padding: 0 !important;
-    list-style: none !important;
+/* Restore summary toggle behavior */
+details.sd-dropdown summary {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.4em;
+    list-style: none;
 }
 
-/* Remove built-in icon if desired (optional) */
-details.sd-dropdown > summary::marker {
+/* Remove default marker arrow */
+details.sd-dropdown summary::marker {
     display: none;
+}
+
+/* Optional: add custom arrow before title */
+details.sd-dropdown summary::before {
+    content: "▶ ";
+    color: #005a9c;
+    font-weight: normal;
+}
+
+/* Optional: change arrow when open */
+details.sd-dropdown[open] summary::before {
+    content: "▼ ";
 }
