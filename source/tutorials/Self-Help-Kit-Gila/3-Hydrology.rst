@@ -281,20 +281,6 @@ Wrap-up
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You’ve now assigned both **uniform** and **spatially variable** rainfall to your project. When ready, run your model to simulate rainfall input across the grid.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Infiltration
 ---------------
 
@@ -302,6 +288,7 @@ Infiltration
    FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
 
 .. dropdown:: Infiltration - Assign Green and Ampt
+
    .. raw:: html
 
       <iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
