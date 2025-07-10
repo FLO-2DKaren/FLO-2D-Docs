@@ -103,9 +103,22 @@ details.sd-dropdown[open] summary::before {
     content: "▼";
 }
 
-/* Actually remove the right arrow from sphinx-design dropdown (specific target) */
-details.sd-dropdown > summary > .sd-summary-content::after {
-    content: none !important;
+/* Hide right arrow from sphinx-design dropdown summary titles */
+details.sd-dropdown summary .sd-summary-content::after,
+details.sd-dropdown summary::after,
+details.sd-dropdown summary::before {
     display: none !important;
+    content: none !important;
+}
+
+/* Also override any fallback ::marker or inserted SVG */
+details.sd-dropdown summary::marker {
+    display: none !important;
+    content: none !important;
+}
+
+/* Fix layout to prevent spacing left behind by removed arrow */
+details.sd-dropdown summary {
+    justify-content: flex-start !important;
 }
 
