@@ -123,11 +123,9 @@ details.sd-dropdown summary {
     background-size: 0 !important;
 }
 
-/* Kill off injected arrow from theme — final defense */
-details.sd-dropdown summary::after,
-details.sd-dropdown summary .sd-summary-content::after {
-    content: none !important;
-    display: none !important;
-    background-image: none !important;
-}
 
+
+/* 🚫 Just in case: remove SVGs inside the summary (edge case) */
+details.sd-dropdown summary svg {
+    display: none !important;
+}
