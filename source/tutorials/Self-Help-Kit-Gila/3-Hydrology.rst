@@ -461,12 +461,18 @@ Infiltration
       Step 1: Generate Curve Number Layer
 
    - Open the **Curve Number Generator** from the **Toolbox**.
+
+   .. image:: ../img/shg/3/shg_hydro043.png
+
    - This downloads and intersects:
 
      - **NLCD** land cover data
      - **SSURGO** soil data
 
    - Set outputs to **Temporary Layers**, except save the final Curve Number layer.
+
+   .. image:: ../img/shg/3/shg_hydro044.png
+
    - Click **Run** to create your composite Curve Number layer.
 
    .. container:: h3
@@ -480,8 +486,11 @@ Infiltration
      - **Land cover classification**
      - **Final Curve Number layer**
 
+   .. image:: ../img/shg/3/shg_hydro045.png
+
    .. tip::
-      Use the **Identify Features** tool to inspect pixel values, such as percent impervious or land class (e.g., “Developed, Open Space”).
+      Use the **Identify Features** tool to inspect pixel values, such as percent impervious or land class
+      (e.g., “Developed, Open Space”).
 
    .. container:: h3
 
@@ -490,6 +499,9 @@ Infiltration
    - Open the **Attribute Table** of the Curve Number layer.
    - Use **field calculator** or manual selection to edit curve numbers.
    - Example: Select polygons with Curve Number < 63 and update to 63.
+
+   .. image:: ../img/shg/3/shg_hydro046.png
+
    - Save edits and close the attribute table.
 
    .. container:: h3
@@ -498,21 +510,34 @@ Infiltration
 
    - Open **Infiltration Editor** > **Global Infiltration**.
    - Choose **Curve Number** as your method.
+
+   .. image:: ../img/shg/3/shg_hydro047.png
+
    - Click **OK**.
    - Now go to **Calculate Curve Number**:
-
      - Select the **Curve Number layer**
      - Choose the correct field
      - Apply values to the grid.
+
+   .. image:: ../img/shg/3/shg_hydro048.png
 
    .. container:: h3
 
       Step 5: Export Infiltration Data
 
    - Enable the **Infiltration Switch** in **Control Parameters**.
+
+   .. image:: ../img/shg/3/shg_hydro034.png
+
    - Save your control settings.
    - Go to **Export DAT Files**.
+
+   .. image:: ../img/shg/3/shg_hydro035.png
+
    - Select only **Infiltration** and export.
+
+   .. image:: ../img/shg/3/shg_hydro036.png
+
 
    .. note::
       ``INFIL.DAT`` will include:
@@ -528,13 +553,17 @@ Infiltration
 
      - Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
 
+   .. image:: ../img/shg/3/shg_hydro049.png
+
    - Input:
 
      - Layer: Curve Number shapefile
      - Field: Curve Number
      - Cell size: ``30 x 30``
      - Extent: Match your FLO-2D grid layer
-     - No Data value: ``9999``
+     - No Data value: ``-9999``
+
+   .. image:: ../img/shg/3/shg_hydro050.png
 
    - Save output raster and click **Run**.
 
@@ -544,12 +573,13 @@ Infiltration
 
    - Open **Infiltration Editor** > **Curve Number from Raster**.
    - Select your rasterized Curve Number layer.
-   - Run the same sampling calculator used for elevation/N values.
+
+   .. image:: ../img/shg/3/shg_hydro051.png
+
    - Click **OK** to apply sampled values.
 
    .. note::
       Raster sampling uses the **centroid** of each grid element to pull the value and applies a **point-based reduction**.
-
 
 
 .. dropdown:: Infiltration - Assign Horton
