@@ -540,7 +540,7 @@ Infiltration
 
    .. container:: h3
 
-   Step 7: Use Raster Calculator (Alternative Method)
+      Step 7: Use Raster Calculator (Alternative Method)
 
    - Open **Infiltration Editor** > **Curve Number from Raster**.
    - Select your rasterized Curve Number layer.
