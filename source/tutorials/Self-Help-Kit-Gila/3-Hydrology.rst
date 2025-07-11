@@ -761,6 +761,9 @@ To use Quick Run:
 
 .. image:: ../img/shg/3/shg_hydro064.png
 
+.. note::
+   The Build 26 FLO-2D engine is capable of running models with *.DAT or input.hdf5 formats.
+
 The plugin will:
 - Export all required `.DAT` files
 - Automatically launch the simulation upon successful export
