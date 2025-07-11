@@ -742,6 +742,8 @@ Step 1: Save Your Project
 - When prompted, click **Yes** to save scratch layers into the **GeoPackage**.
   - This ensures they are committed and safely stored with your project file.
 
+.. image:: ../img/shg/3/shg_hydro062.png
+
 .. tip::
    Scratch layers must be saved to preserve your data across sessions.
 
@@ -755,6 +757,10 @@ To use Quick Run:
 - Create a new folder (e.g., ``quick_run``) for the export.
 - Select this folder when prompted.
 
+.. image:: ../img/shg/3/shg_hydro063.png
+
+.. image:: ../img/shg/3/shg_hydro064.png
+
 The plugin will:
 - Export all required `.DAT` files
 - Automatically launch the simulation upon successful export
@@ -762,6 +768,7 @@ The plugin will:
 Step 3: Wait for Simulation to Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Once data is exported, the model will begin running.
+
 - Watch for early rainfall values in the results window.
   - Rainfall accumulation (e.g., ~0.1 in) will appear first.
   - Ponded water will start appearing on the grid.
