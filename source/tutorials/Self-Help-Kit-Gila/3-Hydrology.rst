@@ -671,7 +671,7 @@ Infiltration
 
    .. container:: h3
 
-   Step 6: Delete the Join
+      Step 6: Delete the Join
 
    - Go back to **Layer Properties > Joins**.
    - Remove the join to improve performance.
@@ -707,9 +707,9 @@ Infiltration
 
    .. image:: ../img/shg/3/shg_hydro035.png
 
-     - Select only ``INFILTRATION`` and ``CONT.DAT``.
+   - Select only ``INFILTRATION`` and ``CONT.DAT``.
 
-     - Click **OK** to export.
+   - Click **OK** to export.
 
    .. image:: ../img/shg/3/shg_hydro036.png
 
