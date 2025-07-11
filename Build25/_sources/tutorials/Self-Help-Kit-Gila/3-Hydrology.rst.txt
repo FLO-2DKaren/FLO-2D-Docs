@@ -1,5 +1,5 @@
 Hydrology
-========================
+==========
 
 Learn how to set up rainfall and infiltration using QGIS and the FLO-2D Gila Plugin.
 
@@ -7,8 +7,11 @@ Learn how to set up rainfall and infiltration using QGIS and the FLO-2D Gila Plu
 
    Set the video playback speed to 2x to complete the lessons faster.
 
+   The videos are more detailed whereas the text gives the minimum steps needed
+   to complete the project.
+
 Load the Project
--------------------
+-----------------
 
 .. raw:: html
 
@@ -18,11 +21,14 @@ Load the Project
 
 
 
-This lesson shows how to load a FLO-2D project in QGIS, manage paths, and handle GeoPackage data. It also highlights improvements from version 0.10.115 to Build 25 regarding project portability.
+This lesson shows how to load a FLO-2D project in QGIS, manage paths, and handle GeoPackage data.
 
 Step 1: Launch QGIS
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 - Open the **QGIS application**.
+
+.. image:: ../img/shg/3/shg_hydro001.png
+
 - You can pin QGIS to your Start Menu for quicker access.
 
 .. tip::
@@ -31,55 +37,17 @@ Step 1: Launch QGIS
 Step 2: Open Your Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - If QGIS opens your most recent project, simply click on it in the **Recent Projects** list.
+
+.. image:: ../img/shg/3/shg_hydro002.png
+
 - If the project was moved and no longer loads:
   - Go to **Plugins > FLO-2D > Open FLO-2D Project**.
   - Navigate to your project `.gpkg` file (GeoPackage) and select it.
 
+.. image:: ../img/shg/3/shg_hydro003.png
+
 .. note::
    The GeoPackage contains your entire project, including the `.qgz` file.
-
-Step 3: Remove Data from the GeoPackage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- To remove data:
-  - Go to **Plugins > FLO-2D > GeoPackage Management**.
-  - Check the layer you want to remove (e.g., `mannings.dat`) and click **Delete**.
-  - Click **Cancel** if you don't want to delete anything.
-
-.. warning::
-   Do not right-click and remove layers from the Layers panel. That does **not** remove them from the GeoPackage.
-
-Step 4: Browse GeoPackage Contents
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Browser** panel in QGIS.
-- If it's in an awkward location, drag it beside the Layers panel until the layout is comfortable.
-
-****Need Image Here**** browser_panel_layout.png
-   :alt: Example layout of QGIS Layers and Browser panels side by side
-
-- Right-click on **GeoPackage** and select **New Connection**.
-- Browse to your project `.gpkg` file and open it.
-- You will now see all layers and tables contained within the GeoPackage.
-
-Step 5: Understand the GeoPackage Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- The GeoPackage is a spatial database built on SQLite.
-- It contains:
-  - Vector data (points, lines, polygons)
-  - Raster data (elevation layers)
-  - Attribute tables (e.g., `RAINCELL.DAT`, `MANNINGS_N.DAT`)
-  - The `.qgz` project file itself
-
-.. note::
-   In older versions like 0.10.115, the `.qgz` file was separate. In Build 25, it is embedded inside the GeoPackage for easier file sharing and portability.
-
-Summary
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the FLO-2D Plugin to open and manage your project.
-- GeoPackage management allows data cleanup without risking data loss.
-- The embedded `.qgz` file ensures seamless project transfer across devices and folders.
-
-
-
 
 Assign an Inflow Node
 --------------------------
@@ -98,33 +66,47 @@ Step 1: Navigate the Map
 - Use your **mouse scroll wheel** to zoom in and out.
 - Click and drag with the **middle mouse button (wheel)** to pan the map view.
 
-.. note::
-   This navigation style is similar to Civil 3D, ArcGIS, and Google Earth.
-
 Step 2: Add an Inflow Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- In QGIS, go to **Plugins > FLO-2D > Boundary Editor**.
-- Click **Collapse All** to clear any open panels.
+
+- In **FLO-2D Panel**, click **Collapse All** to clear any open panels.
+
+.. image:: ../img/shg/3/shg_hydro004.png
+
+- Expand **Boundary Condition Editor**.
+
+.. image:: ../img/shg/3/shg_hydro005.png
+
 - Choose the **Inflow Node** option.
+
+.. image:: ../img/shg/3/shg_hydro006.png
+
 - Click **Add Point**, then click on the map at the outlet of the structure (culvert with dissipator and grate).
-- Click **OK** to create the inflow point.
-- Click the **Save** button (floppy disk icon) to save it.
+
+.. image:: ../img/shg/3/shg_hydro007.png
+
+- Click **OK** to create the inflow point, and then
+  click the **Add Point** button again to save it.
+
+.. image:: ../img/shg/3/shg_hydro008.png
 
 Step 3: Rename the Inflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Rename**, and enter:
+- Click **Rename**, and rename to "Grover Basin Inflow"
 
-  `Grover Basin Inflow`
+.. image:: ../img/shg/3/shg_hydro009.png
 
 Step 4: Create a Time Series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Time Series Editor**.
-- Click **New**, and name it:
+- Click **Rename**, and rename "Time Series 1" to "GroverIn 100yr 6hr"
 
-  `GroverIn_100yr_6hr`
+.. image:: ../img/shg/3/shg_hydro010.png
 
 - This is a 100-year, 6-hour inflow hydrograph taken from the original larger project.
 - Set the **Type** to: `Floodplain`
+
+.. image:: ../img/shg/3/shg_hydro011.png
 
 .. warning::
    Do not select **Channel** unless modeling a direct stream. This is surface runoff entering the basin.
@@ -132,11 +114,16 @@ Step 4: Create a Time Series
 Step 5: Paste Hydrograph Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the provided hydrograph data file from **Lesson 1 Data**.
-  - Choose the `100yr_6hr` inflow file.
+  - Choose the `100yr 6hr` inflow file.
+
+  .. image:: ../img/shg/3/shg_hydro012.png
+
   - Time should be in hours on the **left** and discharge (cfs) on the **right**.
 - Select all data with **Ctrl+A**, then copy with **Ctrl+C**.
 - Close the file with **Ctrl+W**.
 - In the QGIS Time Series Editor, click the first cell and paste using **Ctrl+V**.
+
+.. image:: ../img/shg/3/shg_hydro013.png
 
 .. note::
    FLO-2D automatically uses **cubic feet per second** for discharge. Use metric units only if your model is in metric.
@@ -145,36 +132,22 @@ Step 6: Schematize the Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to convert the pasted user input into FLO-2D schema data.
 
+.. image:: ../img/shg/3/shg_hydro014.png
+
 Step 7: Export the Inflow File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Right-click the inflow node and choose **Export > Data**.
-- Select only the **Inflow Elements**, not all files.
 - Set the export folder and confirm.
+
+.. image:: ../img/shg/3/shg_hydro015.png
+
+- Select only the **Inflow Elements**, not all files.
+
+.. image:: ../img/shg/3/shg_hydro016.png
 
 You will now have a file called `INFLOW.DAT`.
 
-Understanding the INFLOW.DAT File
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Open `INFLOW.DAT` in **Notepad++** or any plain text editor. It will look like this::
-
-   f   [Floodplain flag]
-   ####  [Grid element number]
-   h   [Time-series line]
-   0.0  0.0
-   0.1  2.4
-   ...
-
-- `f` means **floodplain** (use `c` for channel inflow).
-- The number is the grid element where the inflow enters.
-- `h` starts a new hydrograph.
-- The table represents **time (hr)** and **discharge (cfs)**.
-- Always start at time `0` with `0` discharge.
-- Ramp up gradually in the first interval.
-
-.. tip::
-   For **tailings dams** or Flash like flows, ramp up more quickly (e.g., within 0.5 hour). For regular runoff, 1–2 hours may be appropriate.
-
-
+.. image:: ../img/shg/3/shg_hydro017.png
 
 
 Assign Rainfall
@@ -186,30 +159,47 @@ Assign Rainfall
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-In this lesson, we assign rainfall to a FLO-2D project. You will learn how to use the **Rain Editor**, apply **uniform rainfall**, and optionally sample **spatially variable rainfall** from NOAA Atlas data.
+In this lesson, we assign rainfall to a FLO-2D project.
+You will learn how to use the **Rain Editor**, apply **uniform rainfall**, and optionally sample **spatially
+variable rainfall** from NOAA Atlas data.
 
 Step 1: Open the Rain Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Collapse all QGIS dock widgets to reduce clutter.
-- Go to **Plugins > FLO-2D > Rain Editor**.
+
+- In **FLO-2D Panel**, click **Collapse All** to clear any open panels.
+- Expand **Rain Editor**.
+
+.. image:: ../img/shg/3/shg_hydro018.png
+
 - Check **Simulate Rainfall**.
 - Set the **Total Rainfall Depth** to ``2.65 in`` (this example uses a 6-hour, 100-year event).
+- Leave **Rainfall Abstraction** at ``0.0`` for now. This is set elsewhere.
 - Check **Apply Building Rain**.
 
-.. note::
-   Leave **Rainfall Abstraction** at ``0.0`` for now. This is set elsewhere.
+.. image:: ../img/shg/3/shg_hydro019.png
 
 Step 2: Add a Storm Pattern
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Open** next to the storm pattern.
+
+.. image:: ../img/shg/3/shg_hydro020.png
+
 - Navigate to the **FLO-2D documentation folder** and find the **6-hour event distribution**.
-- Choose the **first pattern** from the list.
+  Choose the **first pattern** from the list.
+
+.. image:: ../img/shg/3/shg_hydro021.png
+
 - Confirm the time-percent curve was imported correctly.
 
+.. image:: ../img/shg/3/shg_hydro022.png
+
 .. important::
+
    The rainfall distribution table has:
-   - **Time (hours)** on the left
-   - **Cumulative rainfall (0–1)** on the right  
+
+   - **Time (hours)** on the left.
+   - **Cumulative rainfall (0–1)** on the right.
+
    The percent values must **start at time = 0 and rainfall = 0**.
 
 Step 3: Understanding Rain on Grid
@@ -219,34 +209,60 @@ Step 3: Understanding Rain on Grid
 - This is called **"rain on grid"**, and it is different from assigning rainfall to subcatchments.
 
 .. tip::
-   Rain on grid works well for small projects. For large areas, use **spatial variability** (see below).
+   Rain on grid works well for small projects. For large areas, continue to **Step 4**.
 
 Step 4: Sample a Rainfall Raster (Optional)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable rainfall**.
 
 - Drag your **24-hour rainfall raster** into QGIS.
+
 - Right-click the layer > **Zoom to Layer**.
+
 - Check the data: it should be in inches and match your coordinate system.
 
+.. image:: ../img/shg/3/shg_hydro023.png
+
 To apply the raster:
+
 - Go to the **Rain Editor**.
+
 - Check **Sample from Raster**.
+
+.. image:: ../img/shg/3/shg_hydro024.png
+
 - Select your raster file.
+
 - Leave **"Fill NoData"** unchecked if not needed.
+
 - Click **OK** and confirm.
+
+.. image:: ../img/shg/3/shg_hydro025.png
+
 - QGIS will now **sample rainfall values** from the raster to each grid element based on spatial location.
 
+.. image:: ../img/shg/3/shg_hydro026.png
+
 .. note::
-   The sampling uses the centroid of each grid element and computes a **point reduction factor** based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based** rainfall adjustment.
+   The sampling uses the centroid of each grid element and computes a **point reduction factor**
+   based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based**
+   rainfall adjustment.
 
 Step 5: Export Rainfall Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Go to **Plugins > FLO-2D > Export DAT Files**.
+Check `Control Parameters`:
+
+- The rainfall switch is turned on automatically when you check **Simulate Rainfall**. Click **Save**.
+
+.. image:: ../img/shg/3/shg_hydro027.png
+
+- Export **DAT Files**.
+
+.. image:: ../img/shg/3/shg_hydro028.png
+
 - This will generate a ``RAIN.DAT`` file in your export folder.
 
-Check `Control Parameters`:
-- The rainfall switch is turned on automatically when you check **Simulate Rainfall**.
+.. image:: ../img/shg/3/shg_hydro029.png
 
 .. tip::
    If ``RAIN.DAT`` is missing an asterisk, your data has been successfully exported.
@@ -265,292 +281,446 @@ Wrap-up
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You’ve now assigned both **uniform** and **spatially variable** rainfall to your project. When ready, run your model to simulate rainfall input across the grid.
 
-
-Infiltration - Assign SCS Curve Number
--------------------------------------------
-
-.. Important:: FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D. You will learn how to pull Curve Number values from land cover and soil data, manipulate those values, and apply them to your grid using either vector or raster formats.
-
-.. note::
-   Only complete **one** of the three infiltration methods. This tutorial covers **Curve Number**.
-
-Step 1: Generate Curve Number Layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Curve Number Generator** from the **Toolbox**.
-- This downloads and intersects:
-  - **NLCD** land cover data
-  - **SSURGO** soil data
-- Set outputs to **Temporary Layers**, except save the final Curve Number layer.
-- Click **Run** to create your composite Curve Number layer.
-
-Step 2: Inspect Generated Layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- You’ll see several layers:
-  - **Soils layer** (SSURGO)
-  - **Impervious surface raster** from NLCD
-  - **Land cover classification**
-  - **Final Curve Number layer**
-
-.. tip::
-   Use the **Identify Features** tool to inspect pixel values, such as percent impervious or land class (e.g., “Developed, Open Space”).
-
-Step 3: Edit Curve Number Values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Attribute Table** of the Curve Number layer.
-- Use **field calculator** or manual selection to edit curve numbers.
-- Example: Select polygons with Curve Number < 63 and update to 63.
-- Save edits and close the attribute table.
-
-Step 4: Apply Curve Number to Grid
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open **Infiltration Editor** > **Global Infiltration**.
-- Choose **Curve Number** as your method.
-- Click **OK**.
-- Now go to **Calculate Curve Number**:
-  - Select the **Curve Number layer**
-  - Choose the correct field
-  - Apply values to the grid.
-
-Step 5: Export Infiltration Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Enable the **Infiltration Switch** in **Control Parameters**.
-- Save your control settings.
-- Go to **Export DAT Files**.
-- Select only **Infiltration** and export.
-
-.. note::
-   ``INFIL.DAT`` will include:
-   - Switch = ``2`` for Curve Number method
-   - Global values (optional)
-   - Local values per grid element
-
-Step 6: Optional - Rasterize Curve Number
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If your Curve Number polygon layer is too complex or fragmented:
-
-- Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
-- Input:
-  - Layer: Curve Number shapefile
-  - Field: Curve Number
-  - Cell size: ``30 x 30``
-  - Extent: Match your FLO-2D grid layer
-  - No Data value: ``9999``
-- Save output raster and click **Run**.
-
-Step 7: Use Raster Calculator (Alternative Method)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open **Infiltration Editor** > **Curve Number from Raster**.
-- Select your rasterized Curve Number layer.
-- Run the same sampling calculator used for elevation/N values.
-- Click **OK** to apply sampled values.
-
-.. note::
-   Raster sampling uses the **centroid** of each grid element to pull the value and applies a **point-based reduction**.
-
-Wrap-up
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You now know two ways to assign Curve Number infiltration data:
-1. Using vector polygon data
-2. Using rasterized grid sampling
-
-Only one method is needed for your project.
-
-
-Infiltration - Assign Horton
------------------------------------------------
-
-.. Important:: FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/SgvLq0CCJFc?si=SnC1Au5xSzV6C_QQ"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson walks through the **Horton infiltration method** in FLO-2D. You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.
-
-Step 1: Prepare Horton Shapefile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If you don't have Horton data, you can estimate it by comparing with SCS Curve Number values.
-- Create a shapefile with estimated Horton parameters.
-- Add this shapefile to QGIS and place it in the **External Layers** group.
-
-Step 2: Add Unique Name Field
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Attribute Table** and toggle editing.
-- Add a new field named ``name`` (type: String).
-- Use the **Expression Editor** to generate unique IDs:
-  - Use `concat('Horton-', @row_number)` to fill the field.
-- Click **Update All**, save edits, and stop editing.
-
-Step 3: Copy Features to GeoPackage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Select all features in the shapefile.
-- Press ``Ctrl+C`` to copy.
-- Edit the **infiltration areas** layer in your GeoPackage.
-- Paste the features and save.
-
-.. note::
-   Attributes are not copied. You will perform a **table join** next.
-
-Step 4: Perform Table Join
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Right-click **infiltration areas** > **Properties** > **Joins**.
-- Add a join to the Horton shapefile using the ``name`` field.
-- Select only required fields: ``initial``, ``final``, ``decay``.
-- Add a prefix like ``Horton_`` for clarity.
-
-Step 5: Copy Joined Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Reopen the attribute table for infiltration areas.
-- Toggle editing and update:
-  - Set ``Horton Initial`` = ``Horton_initial``
-  - Set ``Horton Final`` = ``Horton_final``
-  - Set ``Decay`` = ``Horton_decay``
-- Click **Update All**, save edits, and turn off editing.
+Infiltration
+---------------
 
 .. important::
-   Joined fields are read-only. You must copy them to editable fields.
+   FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
 
-Step 6: Delete the Join
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Go back to **Layer Properties > Joins**.
-- Remove the join to improve performance.
+.. dropdown:: Infiltration - Assign Green and Ampt
 
-Step 7: Global Horton Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open **Infiltration Editor > Global Infiltration**.
-- Check **Horton** and enter generic global values (used only for missing cells).
-- Click **OK**.
+   .. raw:: html
 
-Step 8: Schematize and Export
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Schematize** to sample Horton values to the grid.
-- Enable **Infiltration Switch** in **Control Parameters**.
-- Save your project.
-
-Then:
-- Go to **Export DAT Files**.
-- Select only ``INFILTRATION`` and ``CONT.DAT``.
-- Click **OK** to export.
-
-Step 9: Edit Initial Abstraction (Manual Step)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open ``INFIL.DAT`` in Notepad++.
-- Add **initial abstraction** manually, if needed (e.g., ``0.2``).
-- Save and do not forget to reapply this if you re-export later.
-
-.. note::
-   This value offsets rainfall before infiltration starts. It may be added to the plugin in the future.
-
-Troubleshooting: Missing Grid Elements
---------------------------------------
-- If some cells don’t receive infiltration data, verify **complete polygon coverage**.
-- Use the **Vertex Tool** to stretch polygon boundaries over missing cells.
-- Save and re-run **Schematize**.
-
-Infiltration - Assign Green and Ampt
-----------------------------------------------
-
-.. Important:: FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-This lesson walks through the **Green-Ampt infiltration method** in FLO-2D, including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method. You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
+   This lesson walks through the **Green-Ampt infiltration method** in FLO-2D,
+   including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method.
+   You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
 
-Step 1: Set Global Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Global Infiltration** tool.
-- Check **Green-Ampt**.
-- Recommended default values (inches/hour, inches):
-  - Initial Abstraction: ``0``
-  - Porosity: ``0.4``
-  - Hydraulic Conductivity: ``0.1``
-  - Initial Saturation: ``0.3``
-  - Final Saturation: ``1.0``
-  - Soil Suction: ``4``
-  - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
-- Click **OK**.
+   .. container:: h3
 
-Step 2: Load Land Use and Soil Shapefiles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Add land use and soil shapefiles (e.g., 2018 or 2023 Maricopa County).
-- Inspect attributes such as:
-  - ``initial abstraction``, ``impervious``, ``initial saturation``
-  - ``hydraulic conductivity (XKsat)``, ``soil depth``
-  - ``DTheta dry``, ``DTheta normal``, ``Psif``
+      Step 1: Set Global Parameters
 
-Step 3: Use the 2018 Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Run **Green-Ampt Calculator** (2018 version).
-- Input Fields:
-  - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
-  - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
-- Leave ``Vegetative Cover`` unchecked.
-- Click **OK** to calculate.
+   - Open the **Global Infiltration** tool.
 
-Step 4: Review the 2018 Manual Settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
-- Uses area-weighted averages (no log scaling).
-- Global and local infiltration data will be stored in ``INFIL.DAT``.
+   .. image:: ../img/shg/3/shg_hydro030.png
 
-Step 5: Export Infiltration Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Ensure **Infiltration Switch** is ON in **Control Parameters**.
-- Click **Export DAT Files**.
-- Export only ``INFILTRATION`` and ``CONT.DAT``.
+   - Check **Green-Ampt**.
 
-Step 6: Use the 2023 Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Switch calculator to use 2023 soil shapefile.
-- Input Fields:
-  - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``, ``DTheta Normal``, ``DTheta Dry``, ``Psif``
-  - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
-- Leave ``Vegetative Cover`` unchecked.
-- 2023 method uses:
-  - Log area average for XKsat and Psif
-  - Intersected DTheta from land use-soil overlay
-  - Maximum impervious value from both layers
+   .. image:: ../img/shg/3/shg_hydro031.png
 
-Step 7: Use SERGO and OpenStreetMap Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use **SERGO Downloader** to get soil components:
-  - Horizon, Fragmentation, Component layers
-- Use **OSM Downloader** to generate land use polygons:
-  - Raster images are vectorized based on color mapping.
-- Calculator reads attributes:
-  - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
-  - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
+   - Recommended default values (inches/hour, inches):
 
-Step 8: Verify Infiltration Attributes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Enable **Advanced Layers** in **FLO-2D Settings**.
-- Review attributes in **infiltration_results**:
-  - ``Hydraulic Conductivity``
-  - ``Soil Suction``
-  - ``DTheta``
-  - ``Initial Abstraction``
-  - ``Impervious``
-  - ``Soil Depth``
+     - Initial Abstraction: ``0``
+     - Porosity: ``0.4``
+     - Hydraulic Conductivity: ``0.1``
+     - Initial Saturation: ``0.3``
+     - Final Saturation: ``1.0``
+     - Soil Suction: ``4``
+     - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
 
-.. note::
-   Always **re-sort by FID** before export to avoid misaligned data rows.
+   - Click **OK**.
+
+   .. container:: h3
+
+      Step 2: Load Land Use and Soil Shapefiles
+
+   - Add land use and soil shapefiles (e.g., 2018 or 2023 Maricopa County).
+
+   .. image:: ../img/shg/3/shg_hydro032.png
+
+   - Inspect attributes such as:
+     - ``initial abstraction``, ``impervious``, ``initial saturation``
+     - ``hydraulic conductivity (XKsat)``, ``soil depth``
+     - ``DTheta dry``, ``DTheta normal``, ``Psif``
+
+   .. container:: h3
+
+      Step 3: Use the 2018 Method
+
+   - Run **Green-Ampt Calculator** (2018 version).
+
+   .. image:: ../img/shg/3/shg_hydro033.png
+
+   - Input Fields:
+
+     - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
+     - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+   - Leave ``Vegetative Cover`` unchecked.
+   - Click **OK** to calculate.
+
+   .. container:: h3
+
+      Step 4: Review the 2018 Manual Settings
+
+   - 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
+   - Uses area-weighted averages (no log scaling).
+   - Global and local infiltration data will be stored in ``INFIL.DAT``.
+
+   .. container:: h3
+
+      Step 5: Export Infiltration Data
+
+   - Ensure **Infiltration Switch** is ON in **Control Parameters**.
+
+   .. image:: ../img/shg/3/shg_hydro034.png
+
+   - Click **Export DAT Files**.
+
+   .. image:: ../img/shg/3/shg_hydro035.png
+
+   - Export only ``INFILTRATION`` and ``CONT.DAT``.
+
+   .. image:: ../img/shg/3/shg_hydro036.png
+
+
+   .. container:: h3
+
+      Step 6: Use the 2023 Method
+
+   - Switch calculator to use 2023 soil shapefile.
+
+   .. image:: ../img/shg/3/shg_hydro037.png
+
+   - Input Fields:
+
+     - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``, ``DTheta Normal``, ``DTheta Dry``, ``Psif``
+     - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+
+   - Leave ``Vegetative Cover`` unchecked.
+   - 2023 method uses:
+   - Log area average for XKsat and Psif
+   - Intersected DTheta from land use-soil overlay
+   - Maximum impervious value from both layers
+
+   .. container:: h3
+
+      Step 7: Use SERGO and OpenStreetMap Data
+
+   - Use **SERGO Downloader** to get soil components:
+
+     - Horizon, Fragmentation, Component layers
+
+   .. image:: ../img/shg/3/shg_hydro038.png
+
+   - Use **OSM Downloader** to generate land use polygons:
+
+     - Raster images are vectorized based on color mapping.
+
+   .. image:: ../img/shg/3/shg_hydro039.png
+
+   - Calculator reads attributes:
+
+     - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
+     - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
+
+   .. image:: ../img/shg/3/shg_hydro040.png
+
+   .. container:: h3
+
+      Step 8: Verify Infiltration Attributes
+
+   - Enable **Advanced Layers** in **FLO-2D Settings**.
+
+   .. image:: ../img/shg/3/shg_hydro041.png
+
+   - Review attributes in **infiltration_results**:
+      - ``Hydraulic Conductivity``
+      - ``Soil Suction``
+      - ``DTheta``
+      - ``Initial Abstraction``
+      - ``Impervious``
+      - ``Soil Depth``
+
+
+   .. image:: ../img/shg/3/shg_hydro042.png
+
+   .. note::
+      Always **re-sort by FID** before export to avoid misaligned data rows.
+
+.. dropdown:: Infiltration - Assign SCS Curve Number
+
+   .. raw:: html
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+   This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D.
+   You will learn how to pull Curve Number values from land cover and soil data, manipulate those values,
+   and apply them to your grid using either vector or raster formats.
+
+   .. note::
+      Only complete **one** of the three infiltration methods. This tutorial covers **Curve Number**.
+
+   .. container:: h3
+
+      Step 1: Generate Curve Number Layer
+
+   - Open the **Curve Number Generator** from the **Toolbox**.
+
+   .. image:: ../img/shg/3/shg_hydro043.png
+
+   - This downloads and intersects:
+
+     - **NLCD** land cover data
+     - **SSURGO** soil data
+
+   - Set outputs to **Temporary Layers**, except save the final Curve Number layer.
+
+   .. image:: ../img/shg/3/shg_hydro044.png
+
+   - Click **Run** to create your composite Curve Number layer.
+
+   .. container:: h3
+
+      Step 2: Inspect Generated Layers
+
+   - You’ll see several layers:
+
+     - **Soils layer** (SSURGO)
+     - **Impervious surface raster** from NLCD
+     - **Land cover classification**
+     - **Final Curve Number layer**
+
+   .. image:: ../img/shg/3/shg_hydro045.png
+
+   .. tip::
+      Use the **Identify Features** tool to inspect pixel values, such as percent impervious or land class
+      (e.g., “Developed, Open Space”).
+
+   .. container:: h3
+
+      Step 3: Edit Curve Number Values
+
+   - Open the **Attribute Table** of the Curve Number layer.
+   - Use **field calculator** or manual selection to edit curve numbers.
+   - Example: Select polygons with Curve Number < 63 and update to 63.
+
+   .. image:: ../img/shg/3/shg_hydro046.png
+
+   - Save edits and close the attribute table.
+
+   .. container:: h3
+
+      Step 4: Apply Curve Number to Grid
+
+   - Open **Infiltration Editor** > **Global Infiltration**.
+   - Choose **Curve Number** as your method.
+
+   .. image:: ../img/shg/3/shg_hydro047.png
+
+   - Click **OK**.
+   - Now go to **Calculate Curve Number**:
+     - Select the **Curve Number layer**
+     - Choose the correct field
+     - Apply values to the grid.
+
+   .. image:: ../img/shg/3/shg_hydro048.png
+
+   .. container:: h3
+
+      Step 5: Export Infiltration Data
+
+   - Enable the **Infiltration Switch** in **Control Parameters**.
+
+   .. image:: ../img/shg/3/shg_hydro034.png
+
+   - Save your control settings.
+   - Go to **Export DAT Files**.
+
+   .. image:: ../img/shg/3/shg_hydro035.png
+
+   - Select only **Infiltration** and export.
+
+   .. image:: ../img/shg/3/shg_hydro036.png
+
+
+   .. note::
+      ``INFIL.DAT`` will include:
+      - Switch = ``2`` for Curve Number method
+      - Global values (optional)
+      - Local values per grid element
+
+   .. container:: h3
+
+      Step 6: Optional - Rasterize Curve Number
+
+   If your Curve Number polygon layer is too complex or fragmented:
+
+     - Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
+
+   .. image:: ../img/shg/3/shg_hydro049.png
+
+   - Input:
+
+     - Layer: Curve Number shapefile
+     - Field: Curve Number
+     - Cell size: ``30 x 30``
+     - Extent: Match your FLO-2D grid layer
+     - No Data value: ``-9999``
+
+   .. image:: ../img/shg/3/shg_hydro050.png
+
+   - Save output raster and click **Run**.
+
+   .. container:: h3
+
+      Step 7: Use Raster Calculator (Alternative Method)
+
+   - Open **Infiltration Editor** > **Curve Number from Raster**.
+   - Select your rasterized Curve Number layer.
+
+   .. image:: ../img/shg/3/shg_hydro051.png
+
+   - Click **OK** to apply sampled values.
+
+   .. note::
+      Raster sampling uses the **centroid** of each grid element to pull the value and applies a **point-based reduction**.
+
+
+.. dropdown:: Infiltration - Assign Horton
+
+   .. raw:: html
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SgvLq0CCJFc?si=SnC1Au5xSzV6C_QQ"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+   This lesson walks through the **Horton infiltration method** in FLO-2D.
+   You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.
+
+   .. container:: h3
+
+      Step 1: Prepare Horton Shapefile
+
+   - If you don't have Horton data, you can estimate it by comparing with SCS Curve Number values.
+   - Create a shapefile with estimated Horton parameters.
+   - Add this shapefile to QGIS and place it in the **External Layers** group.
+
+   .. image:: ../img/shg/3/shg_hydro052.png
+
+   .. container:: h3
+
+      Step 2: Add Unique Name Field
+
+   - Open the **Attribute Table** and toggle editing.
+   - Add a new field named ``name`` (type: String).
+
+   .. image:: ../img/shg/3/shg_hydro053.png
+
+   - Use the **Expression Editor** to generate unique IDs:
+
+     - Use `concat('Horton-', @row_number)` to fill the field.
+
+   .. image:: ../img/shg/3/shg_hydro054.png
+
+   - Click **Update All**, save edits, and stop editing.
+
+   .. image:: ../img/shg/3/shg_hydro055.png
+
+   .. container:: h3
+
+      Step 3: Copy Features to GeoPackage
+
+   - Select all features in the shapefile.
+   - Press ``Ctrl+C`` to copy.
+   - Edit the **infiltration areas** layer in your GeoPackage.
+   - Paste the features and save.
+
+   .. image:: ../img/shg/3/shg_hydro056.png
+
+   .. note::
+      Attributes are not copied. You will perform a **table join** next.
+
+   .. container:: h3
+
+      Step 4: Perform Table Join
+
+   - Right-click **infiltration areas** > **Properties** > **Joins**.
+   - Add a join to the Horton shapefile using the ``name`` field.
+   - Select only required fields: ``initial``, ``final``, ``decay``.
+   - Add a prefix like ``Horton_`` for clarity.
+
+   .. image:: ../img/shg/3/shg_hydro057.png
+
+   .. container:: h3
+
+      Step 5: Copy Joined Data
+
+   - Reopen the attribute table for infiltration areas.
+
+   .. image:: ../img/shg/3/shg_hydro058.png
+
+   - Toggle editing and update:
+
+     - Set ``Horton Initial`` = ``Horton_initial``
+     - Set ``Horton Final`` = ``Horton_final``
+     - Set ``Decay`` = ``Horton_decay``
+
+   - Click **Update All**, save edits, and turn off editing.
+
+   .. image:: ../img/shg/3/shg_hydro059.png
+
+   .. important::
+      Joined fields are read-only. You must copy them to editable fields.
+
+   .. container:: h3
+
+      Step 6: Delete the Join
+
+   - Go back to **Layer Properties > Joins**.
+   - Remove the join to improve performance.
+
+   .. container:: h3
+
+      Step 7: Global Horton Parameters
+
+   - Open **Infiltration Editor > Global Infiltration**.
+   - Check **Horton** and enter generic global values (used only for missing cells).
+
+   .. image:: ../img/shg/3/shg_hydro060.png
+
+   - Click **OK**.
+
+   .. container:: h3
+
+      Step 8: Schematize and Export
+
+   - Click **Schematize** to sample Horton values to the grid.
+
+   .. image:: ../img/shg/3/shg_hydro061.png
+
+   - Enable **Infiltration Switch** in **Control Parameters**.
+
+   .. image:: ../img/shg/3/shg_hydro034.png
+
+   - Save your project.
+
+   Then:
+
+     - Go to **Export DAT Files**.
+
+   .. image:: ../img/shg/3/shg_hydro035.png
+
+   - Select only ``INFILTRATION`` and ``CONT.DAT``.
+
+   - Click **OK** to export.
+
+   .. image:: ../img/shg/3/shg_hydro036.png
+
+   .. container:: h3
+
+      Troubleshooting: Missing Grid Elements
+
+   - If some cells don’t receive infiltration data, verify **complete polygon coverage**.
+   - Use the **Vertex Tool** to stretch polygon boundaries over missing cells.
+   - Save and re-run **Schematize**.
+
 
 Save Export and Run
 -----------------------
@@ -572,6 +742,8 @@ Step 1: Save Your Project
 - When prompted, click **Yes** to save scratch layers into the **GeoPackage**.
   - This ensures they are committed and safely stored with your project file.
 
+.. image:: ../img/shg/3/shg_hydro062.png
+
 .. tip::
    Scratch layers must be saved to preserve your data across sessions.
 
@@ -585,6 +757,13 @@ To use Quick Run:
 - Create a new folder (e.g., ``quick_run``) for the export.
 - Select this folder when prompted.
 
+.. image:: ../img/shg/3/shg_hydro063.png
+
+.. image:: ../img/shg/3/shg_hydro064.png
+
+.. note::
+   The Build 26 FLO-2D engine is capable of running models with \*.DAT or input.hdf5 formats.
+
 The plugin will:
 - Export all required `.DAT` files
 - Automatically launch the simulation upon successful export
@@ -592,6 +771,7 @@ The plugin will:
 Step 3: Wait for Simulation to Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Once data is exported, the model will begin running.
+
 - Watch for early rainfall values in the results window.
   - Rainfall accumulation (e.g., ~0.1 in) will appear first.
   - Ponded water will start appearing on the grid.
