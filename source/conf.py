@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.abspath("..."))
 
 # -- Project information -----------------------------------------------------
 project = 'FLO-2D Pro Documentation'
-copyright = "2025, Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
+copyright = "2004 - Present, FLO-2D Software, Inc."
 author = "Jimmy O'Brien, Noemi Gonzalez-Ramirez, Karen O'Brien, Robson Pachaly"
 html_logo = "FLO-2D Transparent.png"
 
@@ -13,8 +13,9 @@ html_logo = "FLO-2D Transparent.png"
 
 # 🔁 FULL BUILD: Use this when building all branches (e.g., on GitHub Actions)
 smv_tag_whitelist = r'^$'  # Exclude all tags
-smv_branch_whitelist = r'^(main|Build.*)$'  # Include branches main and Build wildcards.
+smv_branch_whitelist = r'^(Build25)$'  # Include only branch Build25.
 smv_remote_whitelist = r'^origin$'  # Default remote
+
 
 # 🔁 QUICK BUILD: Uncomment below for fast local dev on current branch
 # smv_tag_whitelist = r'^$'
@@ -24,16 +25,19 @@ smv_remote_whitelist = r'^origin$'  # Default remote
 # -- General configuration ---------------------------------------------------
 extensions = [
     'sphinxcontrib.mermaid',
-    'sphinx_multiversion'
+    'sphinx_multiversion',
+    'sphinx_togglebutton',
+    'sphinx_design'
 ]
 templates_path = ['_templates']
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
+
 # -- HTML Output -------------------------------------------------------------
 html_theme = "sphinx_rtd_theme"
-html_static_path = ['_static'] # Edited from ['_static'] on 27/05/2025
+html_static_path = ['_static']
 html_css_files = [
-    ('css/custom.css', {'priority': 1000}) # Edited from ('static/custom.css', {'priority': 1000}) on 27/05/2025
+    ('css/custom.css', {'priority': 1000})
 ]
 
 # -- HTML Context for Version Dropdown (optional enhancement) ----------------
@@ -55,8 +59,6 @@ docx_documents = [
 docx_pagebreak_before_section = 1
 
 
-
-# Added on 27/05/2025 to enforce chapter-based equation numbering
 numfig = True
 numfig_secnum_depth = 1
 
