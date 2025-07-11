@@ -602,17 +602,26 @@ Infiltration
    - Create a shapefile with estimated Horton parameters.
    - Add this shapefile to QGIS and place it in the **External Layers** group.
 
+   .. image:: ../img/shg/3/shg_hydro052.png
+
    .. container:: h3
 
       Step 2: Add Unique Name Field
 
    - Open the **Attribute Table** and toggle editing.
    - Add a new field named ``name`` (type: String).
+
+   .. image:: ../img/shg/3/shg_hydro053.png
+
    - Use the **Expression Editor** to generate unique IDs:
 
      - Use `concat('Horton-', @row_number)` to fill the field.
 
+   .. image:: ../img/shg/3/shg_hydro054.png
+
    - Click **Update All**, save edits, and stop editing.
+
+   .. image:: ../img/shg/3/shg_hydro055.png
 
    .. container:: h3
 
@@ -622,6 +631,8 @@ Infiltration
    - Press ``Ctrl+C`` to copy.
    - Edit the **infiltration areas** layer in your GeoPackage.
    - Paste the features and save.
+
+   .. image:: ../img/shg/3/shg_hydro056.png
 
    .. note::
       Attributes are not copied. You will perform a **table join** next.
@@ -635,11 +646,16 @@ Infiltration
    - Select only required fields: ``initial``, ``final``, ``decay``.
    - Add a prefix like ``Horton_`` for clarity.
 
+   .. image:: ../img/shg/3/shg_hydro057.png
+
    .. container:: h3
 
       Step 5: Copy Joined Data
 
    - Reopen the attribute table for infiltration areas.
+
+   .. image:: ../img/shg/3/shg_hydro058.png
+
    - Toggle editing and update:
 
      - Set ``Horton Initial`` = ``Horton_initial``
@@ -647,6 +663,8 @@ Infiltration
      - Set ``Decay`` = ``Horton_decay``
 
    - Click **Update All**, save edits, and turn off editing.
+
+   .. image:: ../img/shg/3/shg_hydro059.png
 
    .. important::
       Joined fields are read-only. You must copy them to editable fields.
@@ -664,6 +682,9 @@ Infiltration
 
    - Open **Infiltration Editor > Global Infiltration**.
    - Check **Horton** and enter generic global values (used only for missing cells).
+
+   .. image:: ../img/shg/3/shg_hydro060.png
+
    - Click **OK**.
 
    .. container:: h3
@@ -671,25 +692,26 @@ Infiltration
       Step 8: Schematize and Export
 
    - Click **Schematize** to sample Horton values to the grid.
+
+   .. image:: ../img/shg/3/shg_hydro061.png
+
    - Enable **Infiltration Switch** in **Control Parameters**.
+
+   .. image:: ../img/shg/3/shg_hydro034.png
+
    - Save your project.
 
    Then:
 
      - Go to **Export DAT Files**.
+
+   .. image:: ../img/shg/3/shg_hydro035.png
+
      - Select only ``INFILTRATION`` and ``CONT.DAT``.
+
      - Click **OK** to export.
 
-   .. container:: h3
-
-      Step 9: Edit Initial Abstraction (Manual Step)
-
-   - Open ``INFIL.DAT`` in Notepad++.
-   - Add **initial abstraction** manually, if needed (e.g., ``0.2``).
-   - Save and do not forget to reapply this if you re-export later.
-
-   .. note::
-      This value offsets rainfall before infiltration starts. It may be added to the plugin in the future.
+   .. image:: ../img/shg/3/shg_hydro036.png
 
    .. container:: h3
 
