@@ -1,15 +1,9 @@
-
 /* Custom styles for FLO-2D Documentation */
 .wy-nav-content {
     max-width: 1200px;
 }
 
-
-
-
-
-
-/* The following lines were added on 27/05/2025 to enable chapter-based equation numbering */
+/* Customize chapter-based equation numbering design */
 
 /* Align Sphinx equation numbers to the RIGHT of the equation */
 div.math {
@@ -42,4 +36,68 @@ h1 > .section-number{
 /* Hide section number in the breadcrumbs only */
 .wy-breadcrumbs .section-number {
   display: none;
+}
+
+/* Remove the default border and background from sphinx-design dropdowns [Hydrology tutorial, Infiltration 07/10/2025] */
+
+/* Remove card-like background and border from sphinx-design dropdowns */
+details.sd-dropdown {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 0 1em 0 !important;
+    border-radius: 0 !important;
+}
+
+/* Fix any inherited card class (used internally by sphinx-design) */
+details.sd-dropdown.sd-card {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Style the dropdown summary/title */
+details.sd-dropdown summary {
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    cursor: pointer;
+    justify-content: flex-start !important;
+}
+
+/* Add custom left arrow manually */
+details.sd-dropdown summary::before {
+    content: "▶";
+    color: #005a9c;
+    font-size: 0.9em;
+}
+
+details.sd-dropdown[open] summary::before {
+    content: "▼";
+}
+
+/* Remove SVGs inside the summary (edge case) */
+details.sd-dropdown summary svg {
+    display: none !important;
+}
+
+.h3 {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+
+.h4 {
+    font-weight: bold;
+    font-size: 1em;
+    margin-left: 1em;
+    color: #444;
 }
