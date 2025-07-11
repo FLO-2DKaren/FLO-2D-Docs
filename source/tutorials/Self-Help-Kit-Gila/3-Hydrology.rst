@@ -554,99 +554,120 @@ Infiltration
 
 .. dropdown:: Infiltration - Assign Horton
 
-Infiltration - Assign Horton
------------------------------------------------
+   .. raw:: html
 
-.. Important:: FLO-2D uses three infiltration types. Choose one lesson and skip the other two.
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/SgvLq0CCJFc?si=SnC1Au5xSzV6C_QQ"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SgvLq0CCJFc?si=SnC1Au5xSzV6C_QQ"
+      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-This lesson walks through the **Horton infiltration method** in FLO-2D. You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.
+   This lesson walks through the **Horton infiltration method** in FLO-2D.
+   You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.
 
-Step 1: Prepare Horton Shapefile
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If you don't have Horton data, you can estimate it by comparing with SCS Curve Number values.
-- Create a shapefile with estimated Horton parameters.
-- Add this shapefile to QGIS and place it in the **External Layers** group.
+   .. container:: h3
 
-Step 2: Add Unique Name Field
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Attribute Table** and toggle editing.
-- Add a new field named ``name`` (type: String).
-- Use the **Expression Editor** to generate unique IDs:
-  - Use `concat('Horton-', @row_number)` to fill the field.
-- Click **Update All**, save edits, and stop editing.
+      Step 1: Prepare Horton Shapefile
 
-Step 3: Copy Features to GeoPackage
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Select all features in the shapefile.
-- Press ``Ctrl+C`` to copy.
-- Edit the **infiltration areas** layer in your GeoPackage.
-- Paste the features and save.
+   - If you don't have Horton data, you can estimate it by comparing with SCS Curve Number values.
+   - Create a shapefile with estimated Horton parameters.
+   - Add this shapefile to QGIS and place it in the **External Layers** group.
 
-.. note::
-   Attributes are not copied. You will perform a **table join** next.
+   .. container:: h3
 
-Step 4: Perform Table Join
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Right-click **infiltration areas** > **Properties** > **Joins**.
-- Add a join to the Horton shapefile using the ``name`` field.
-- Select only required fields: ``initial``, ``final``, ``decay``.
-- Add a prefix like ``Horton_`` for clarity.
+      Step 2: Add Unique Name Field
 
-Step 5: Copy Joined Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Reopen the attribute table for infiltration areas.
-- Toggle editing and update:
-  - Set ``Horton Initial`` = ``Horton_initial``
-  - Set ``Horton Final`` = ``Horton_final``
-  - Set ``Decay`` = ``Horton_decay``
-- Click **Update All**, save edits, and turn off editing.
+   - Open the **Attribute Table** and toggle editing.
+   - Add a new field named ``name`` (type: String).
+   - Use the **Expression Editor** to generate unique IDs:
 
-.. important::
-   Joined fields are read-only. You must copy them to editable fields.
+     - Use `concat('Horton-', @row_number)` to fill the field.
 
-Step 6: Delete the Join
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Go back to **Layer Properties > Joins**.
-- Remove the join to improve performance.
+   - Click **Update All**, save edits, and stop editing.
 
-Step 7: Global Horton Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open **Infiltration Editor > Global Infiltration**.
-- Check **Horton** and enter generic global values (used only for missing cells).
-- Click **OK**.
+   .. container:: h3
 
-Step 8: Schematize and Export
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Schematize** to sample Horton values to the grid.
-- Enable **Infiltration Switch** in **Control Parameters**.
-- Save your project.
+      Step 3: Copy Features to GeoPackage
 
-Then:
-- Go to **Export DAT Files**.
-- Select only ``INFILTRATION`` and ``CONT.DAT``.
-- Click **OK** to export.
+   - Select all features in the shapefile.
+   - Press ``Ctrl+C`` to copy.
+   - Edit the **infiltration areas** layer in your GeoPackage.
+   - Paste the features and save.
 
-Step 9: Edit Initial Abstraction (Manual Step)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open ``INFIL.DAT`` in Notepad++.
-- Add **initial abstraction** manually, if needed (e.g., ``0.2``).
-- Save and do not forget to reapply this if you re-export later.
+   .. note::
+      Attributes are not copied. You will perform a **table join** next.
 
-.. note::
-   This value offsets rainfall before infiltration starts. It may be added to the plugin in the future.
+   .. container:: h3
 
-Troubleshooting: Missing Grid Elements
---------------------------------------
-- If some cells don’t receive infiltration data, verify **complete polygon coverage**.
-- Use the **Vertex Tool** to stretch polygon boundaries over missing cells.
-- Save and re-run **Schematize**.
+      Step 4: Perform Table Join
+
+   - Right-click **infiltration areas** > **Properties** > **Joins**.
+   - Add a join to the Horton shapefile using the ``name`` field.
+   - Select only required fields: ``initial``, ``final``, ``decay``.
+   - Add a prefix like ``Horton_`` for clarity.
+
+   .. container:: h3
+
+      Step 5: Copy Joined Data
+
+   - Reopen the attribute table for infiltration areas.
+   - Toggle editing and update:
+
+     - Set ``Horton Initial`` = ``Horton_initial``
+     - Set ``Horton Final`` = ``Horton_final``
+     - Set ``Decay`` = ``Horton_decay``
+
+   - Click **Update All**, save edits, and turn off editing.
+
+   .. important::
+      Joined fields are read-only. You must copy them to editable fields.
+
+   .. container:: h3
+
+   Step 6: Delete the Join
+
+   - Go back to **Layer Properties > Joins**.
+   - Remove the join to improve performance.
+
+   .. container:: h3
+
+      Step 7: Global Horton Parameters
+
+   - Open **Infiltration Editor > Global Infiltration**.
+   - Check **Horton** and enter generic global values (used only for missing cells).
+   - Click **OK**.
+
+   .. container:: h3
+
+      Step 8: Schematize and Export
+
+   - Click **Schematize** to sample Horton values to the grid.
+   - Enable **Infiltration Switch** in **Control Parameters**.
+   - Save your project.
+
+   Then:
+
+     - Go to **Export DAT Files**.
+     - Select only ``INFILTRATION`` and ``CONT.DAT``.
+     - Click **OK** to export.
+
+   .. container:: h3
+
+      Step 9: Edit Initial Abstraction (Manual Step)
+
+   - Open ``INFIL.DAT`` in Notepad++.
+   - Add **initial abstraction** manually, if needed (e.g., ``0.2``).
+   - Save and do not forget to reapply this if you re-export later.
+
+   .. note::
+      This value offsets rainfall before infiltration starts. It may be added to the plugin in the future.
+
+   .. container:: h3
+
+      Troubleshooting: Missing Grid Elements
+
+   - If some cells don’t receive infiltration data, verify **complete polygon coverage**.
+   - Use the **Vertex Tool** to stretch polygon boundaries over missing cells.
+   - Save and re-run **Schematize**.
 
 
 Save Export and Run
