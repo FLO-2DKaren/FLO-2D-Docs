@@ -135,6 +135,8 @@ Step 2: Rename Cross-Sections by Segment
   - Format: ``G1-0``, ``G2-1``, etc.
 - Assign each set to a unique segment (G1, G2, G3).
 
+.. image:: ../img/shg/4/shg_chan010.jpg
+
 .. note::
    Use the plugin’s **Save** button to commit changes — **not** the QGIS save button.
 
@@ -142,6 +144,9 @@ Step 3: Sample Elevation Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the cross-section editor.
 - Select **Sample All** to gather elevation data from the grid DEM.
+
+.. image:: ../img/shg/4/shg_chan011.jpg
+
 - Elevation is sampled from the **first to last vertex** of each cross-section.
 
 Step 4: Review Cross-Section Profiles
@@ -151,6 +156,8 @@ Step 4: Review Cross-Section Profiles
 - Adjust vertices using the **Vertex Tool**:
   - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
   - Click **Sample Single** to resample after adjustment.
+
+.. image:: ../img/shg/4/shg_chan012.jpg
 
 .. tip::
    Use Enter to confirm sampling instead of clicking "Yes" repeatedly.
@@ -174,10 +181,6 @@ Step 6: Add Missing Cross-Sections
 
 .. note::
    You can delete schema data before re-schematizing if needed.
-
-Wrap-up
--------
-Your cross-sections are now properly named, sampled, and refined with correct elevation data. All issues (placement, sampling anomalies, missing transitions) should be resolved before continuing.
 
 Bank Align and Interpolate
 ----------------------------
