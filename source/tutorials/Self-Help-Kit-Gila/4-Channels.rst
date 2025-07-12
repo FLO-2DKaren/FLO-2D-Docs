@@ -210,6 +210,8 @@ Step 2: Schematize and Interpolate
 - Click **Schematize Channel** to commit updated geometry.
 - Then use the **Interpolate Channel** tool to regenerate elevation stations between cross-sections.
 
+.. image:: ../img/shg/4/shg_chan013.jpg
+
 .. note::
    If a cross-section has fewer than 6 stations, an error will appear.
 
@@ -218,6 +220,8 @@ Step 3: Use the Geometry Checker
 - After interpolation, click **Check Channel Geometry**:
   - It will verify minimum spacing and floodplain surface area.
   - Click error messages to locate problematic cross-sections or elements.
+
+.. image:: ../img/shg/4/shg_chan014.jpg
 
 - Adjust vertex positions as needed to resolve errors.
 - Re-schematize and interpolate again.
