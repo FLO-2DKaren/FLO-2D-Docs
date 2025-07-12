@@ -1,5 +1,5 @@
 Channels
-========================
+=========
 
 This is an advanced channel lesson.  It shows how to create a channel by digitizing left bank, right bank and
 cross section data.  It also shows how to add a boundary control and culverts.
@@ -7,6 +7,9 @@ cross section data.  It also shows how to add a boundary control and culverts.
 .. Note:: It will be easier to view these videos on YouTube.
 
    Set the video playback speed to 2x to complete the lessons faster.
+
+   The videos are more detailed whereas the text gives the minimum steps needed
+   to complete the project.
 
 Backup and Reload
 --------------------
@@ -20,30 +23,6 @@ Backup and Reload
    
 This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.
 
-Step 1: Backup Your Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Save and close your **QGIS** project.
-- Navigate to your project directory.
-- Zip your GeoPackage project file.
-
-.. tip::
-   Name the backup descriptively.  
-   Example: ``backup_ready_for_channel.zip``
-
-- Move the backup into your **Backup Folder** for safekeeping.
-
-.. note::
-   This backup will be reused throughout the channel lessons:
-   - First example: **Importing from RAS**
-   - Second example: **Building channels manually**
-
-Step 2: Plugin Version Note
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If you're using **FLO-2D Plugin 1.1.5**, skip this lesson and proceed directly to the RAS import lesson.
-
-Next Steps
-----------
-Now that your project is backed up and saved, you’re ready to begin importing **HEC-RAS** channel data in the next lesson.
 
 Build Channel and Schematize
 ----------------------------------
@@ -60,18 +39,28 @@ This lesson shows how to create channels manually in FLO-2D when you do not have
 Step 1: Load Guidance Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Import reference layers (left bank, right bank, cross-sections).
+
+.. image:: ../img/shg/4/shg_chan001.jpg
+
 - Use these layers as **visual guides only**.
 - Update colors for visibility:
   - Left Bank: Cyan
   - Right Bank: Magenta
   - Cross-Sections: Navy
 
+.. image:: ../img/shg/4/shg_chan002.jpg
+
 Step 2: Draw Left and Right Banks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Activate editing on the **channel bank** layer.
 - Use **"Add Line Feature"** and set to **Digitize with Segment**.
 - Draw each channel segment **Upstream to Downstream**.
+
+.. image:: ../img/shg/4/shg_chan003.jpg
+
 - Typical limiters: ``0.9`` (supercritical), ``0.2`` (width).
+
+.. image:: ../img/shg/4/shg_chan004.jpg
 
 .. tip::
    Use satellite imagery and elevation contours to align your lines.
@@ -88,6 +77,10 @@ Step 4: Add Cross-Sections
 - Digitize cross-sections from **Left to Right bank**.
 - Ensure both ends and the crossing lie within the same grid element.
 
+.. image:: ../img/shg/4/shg_chan005.jpg
+
+.. image:: ../img/shg/4/shg_chan006.jpg
+
 .. note::
    You only need ~6 cross-sections per channel segment in uniform channels.
 
@@ -98,7 +91,16 @@ Step 5: Save and Schematize
 
 Click **Schematize Channel** to validate geometry:
 - Errors such as "bank and cross-section not in same grid cell" will be reported.
+
+.. image:: ../img/shg/4/shg_chan007.jpg
+
+The cross-section that triggered the above error was the one circled below:
+
+.. image:: ../img/shg/4/shg_chan008.jpg
+
 - Adjust vertex positions with the **Vertex Tool** to fix errors.
+
+.. image:: ../img/shg/4/shg_chan009.jpg
 
 Step 6: Review Schematic Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,11 +110,6 @@ Step 6: Review Schematic Summary
 .. tip::
    Fix spacing and other geometry refinements in the next step.
 
-Wrap-up
--------
-You’ve now digitized bank lines and cross-sections and successfully schematized your FLO-2D channel.
-
-Next up: Assign elevation data to your cross-sections.
 
 Sample Elevation and Schematize
 -------------------------------------
