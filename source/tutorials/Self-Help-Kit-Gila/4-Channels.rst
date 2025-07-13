@@ -313,7 +313,7 @@ Step 4: Schematize and Export
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to generate boundary files.
 
- .. image:: ../img/shg/4/shg_chan025.jpg
+ .. image:: ../img/shg/4/shg_chan024.jpg
 
 - Use **Export DAT Files** to save your project.
 
