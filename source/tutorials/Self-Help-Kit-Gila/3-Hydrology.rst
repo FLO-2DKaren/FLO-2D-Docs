@@ -772,15 +772,14 @@ Step 3: Wait for Simulation to Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Once data is exported, the model will begin running.
 
+.. image:: ../img/shg/3/shg_hydro065.png
+
 - Watch for early rainfall values in the results window.
   - Rainfall accumulation (e.g., ~0.1 in) will appear first.
   - Ponded water will start appearing on the grid.
   - Water will flow down streets and terrain according to the grid and infiltration settings.
 
+.. image:: ../img/shg/3/shg_hydro066.png
+
 .. note::
    Simulation results should show flow routing from rainfall across your modeled surface and toward low-lying areas.
-
-Wrap-up
-----------
-You’ve now saved your project, exported model inputs, and initiated a run using **Quick Run**. The next lesson will guide you through reviewing and visualizing your simulation results.
-
