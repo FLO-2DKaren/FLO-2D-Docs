@@ -235,15 +235,16 @@ Step 5: Export and Run Test Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Export DAT files using **Export DAT Files** tool.
 - Overwrite the files in your test folder if needed.
-- Launch **FLO-2D Pro** to run the simulation.
+
+.. image:: ../img/shg/4/shg_chan015.jpg
+
+- Launch **FLO-2D Pro** to run the simulation.\
+
+.. image:: ../img/shg/4/shg_chan016.jpg
 
 .. tip::
    You’re only validating **channel geometry**, not full model results.
    A successful run here indicates channel alignment and schematization passed.
-
-Wrap-up
--------
-With a successful test run, your channels are now aligned, interpolated, and validated. You’re ready to move on to **boundary conditions** and **culverts** in the next lesson.
 
 
 Add a Boundary Control
