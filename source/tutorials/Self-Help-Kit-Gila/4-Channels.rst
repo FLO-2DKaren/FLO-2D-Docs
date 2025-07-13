@@ -79,8 +79,6 @@ Step 4: Add Cross-Sections
 
 .. image:: ../img/shg/4/shg_chan005.jpg
 
-.. image:: ../img/shg/4/shg_chan006.jpg
-
 .. note::
    You only need ~6 cross-sections per channel segment in uniform channels.
 
@@ -90,6 +88,9 @@ Step 5: Save and Schematize
 - Cross-sections will initially have placeholder elevation data.
 
 Click **Schematize Channel** to validate geometry:
+
+.. image:: ../img/shg/4/shg_chan006.jpg
+
 - Errors such as "bank and cross-section not in same grid cell" will be reported.
 
 .. image:: ../img/shg/4/shg_chan007.jpg
