@@ -446,7 +446,7 @@ Step 8: Run a Test Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Launch **FLO-2D Pro** to verify structures and inflow integration.
 
-.. image:: ../img/shg/4/shg_chan040.jpg
+.. image:: ../img/shg/4/shg_chan041.jpg
 
 - Rainfall and hydrograph will appear as different colors in the simulation output.
 - Use the simulation to evaluate discharge, transitions, and overtopping behavior.
