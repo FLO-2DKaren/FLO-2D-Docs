@@ -9,6 +9,8 @@
   <title>Hydrology &mdash; FLO-2D Pro Documentation  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c7e3da69" />
 
   
@@ -17,6 +19,12 @@
       <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
       <script src="../../_static/doctools.js?v=9bcbadda"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -386,7 +394,446 @@ rainfall adjustment.</p>
 <p class="admonition-title">Important</p>
 <p>FLO-2D uses three infiltration types. Choose one lesson and skip the other two.</p>
 </div>
-</section>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Infiltration - Assign Green and Ampt</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through the <strong>Green-Ampt infiltration method</strong> in FLO-2D,
+including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method.
+You’ll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 1: Set Global Parameters</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open the <strong>Global Infiltration</strong> tool.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro030.png" src="../../_images/shg_hydro030.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Check <strong>Green-Ampt</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro031.png" src="../../_images/shg_hydro031.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Recommended default values (inches/hour, inches):</p>
+<ul>
+<li><p class="sd-card-text">Initial Abstraction: <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+<li><p class="sd-card-text">Porosity: <code class="docutils literal notranslate"><span class="pre">0.4</span></code></p></li>
+<li><p class="sd-card-text">Hydraulic Conductivity: <code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></li>
+<li><p class="sd-card-text">Initial Saturation: <code class="docutils literal notranslate"><span class="pre">0.3</span></code></p></li>
+<li><p class="sd-card-text">Final Saturation: <code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></li>
+<li><p class="sd-card-text">Soil Suction: <code class="docutils literal notranslate"><span class="pre">4</span></code></p></li>
+<li><p class="sd-card-text">Soil Depth: Set to <code class="docutils literal notranslate"><span class="pre">1</span></code> for limited depth (set to <code class="docutils literal notranslate"><span class="pre">0</span></code> for unlimited).</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Click <strong>OK</strong>.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 2: Load Land Use and Soil Shapefiles</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Add land use and soil shapefiles (e.g., 2018 or 2023 Maricopa County).</p></li>
+</ul>
+<img alt="../../_images/shg_hydro032.png" src="../../_images/shg_hydro032.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Inspect attributes such as:
+- <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">abstraction</span></code>, <code class="docutils literal notranslate"><span class="pre">impervious</span></code>, <code class="docutils literal notranslate"><span class="pre">initial</span> <span class="pre">saturation</span></code>
+- <code class="docutils literal notranslate"><span class="pre">hydraulic</span> <span class="pre">conductivity</span> <span class="pre">(XKsat)</span></code>, <code class="docutils literal notranslate"><span class="pre">soil</span> <span class="pre">depth</span></code>
+- <code class="docutils literal notranslate"><span class="pre">DTheta</span> <span class="pre">dry</span></code>, <code class="docutils literal notranslate"><span class="pre">DTheta</span> <span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">Psif</span></code></p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 3: Use the 2018 Method</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Run <strong>Green-Ampt Calculator</strong> (2018 version).</p></li>
+</ul>
+<img alt="../../_images/shg_hydro033.png" src="../../_images/shg_hydro033.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Input Fields:</p>
+<ul>
+<li><p class="sd-card-text">Soil Layer: <code class="docutils literal notranslate"><span class="pre">XKsat</span></code>, <code class="docutils literal notranslate"><span class="pre">RockOutcrop</span></code>, <code class="docutils literal notranslate"><span class="pre">SoilDepth</span></code></p></li>
+<li><p class="sd-card-text">Land Use: <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Saturation</span></code>, <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Abstraction</span></code>, <code class="docutils literal notranslate"><span class="pre">Impervious</span></code></p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Leave <code class="docutils literal notranslate"><span class="pre">Vegetative</span> <span class="pre">Cover</span></code> unchecked.</p></li>
+<li><p class="sd-card-text">Click <strong>OK</strong> to calculate.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 4: Review the 2018 Manual Settings</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">2018 method derives <code class="docutils literal notranslate"><span class="pre">Psif</span></code> and <code class="docutils literal notranslate"><span class="pre">DTheta</span></code> from XKsat.</p></li>
+<li><p class="sd-card-text">Uses area-weighted averages (no log scaling).</p></li>
+<li><p class="sd-card-text">Global and local infiltration data will be stored in <code class="docutils literal notranslate"><span class="pre">INFIL.DAT</span></code>.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 5: Export Infiltration Data</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Ensure <strong>Infiltration Switch</strong> is ON in <strong>Control Parameters</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro034.png" src="../../_images/shg_hydro034.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>Export DAT Files</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro035.png" src="../../_images/shg_hydro035.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Export only <code class="docutils literal notranslate"><span class="pre">INFILTRATION</span></code> and <code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro036.png" src="../../_images/shg_hydro036.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 6: Use the 2023 Method</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Switch calculator to use 2023 soil shapefile.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro037.png" src="../../_images/shg_hydro037.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Input Fields:</p>
+<ul>
+<li><p class="sd-card-text">Soil Layer: <code class="docutils literal notranslate"><span class="pre">XKsat</span></code>, <code class="docutils literal notranslate"><span class="pre">RockOutcrop</span></code>, <code class="docutils literal notranslate"><span class="pre">SoilDepth</span></code>, <code class="docutils literal notranslate"><span class="pre">DTheta</span> <span class="pre">Normal</span></code>, <code class="docutils literal notranslate"><span class="pre">DTheta</span> <span class="pre">Dry</span></code>, <code class="docutils literal notranslate"><span class="pre">Psif</span></code></p></li>
+<li><p class="sd-card-text">Land Use: <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Saturation</span></code>, <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Abstraction</span></code>, <code class="docutils literal notranslate"><span class="pre">Impervious</span></code></p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Leave <code class="docutils literal notranslate"><span class="pre">Vegetative</span> <span class="pre">Cover</span></code> unchecked.</p></li>
+<li><p class="sd-card-text">2023 method uses:</p></li>
+<li><p class="sd-card-text">Log area average for XKsat and Psif</p></li>
+<li><p class="sd-card-text">Intersected DTheta from land use-soil overlay</p></li>
+<li><p class="sd-card-text">Maximum impervious value from both layers</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 7: Use SERGO and OpenStreetMap Data</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Use <strong>SERGO Downloader</strong> to get soil components:</p>
+<ul>
+<li><p class="sd-card-text">Horizon, Fragmentation, Component layers</p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro038.png" src="../../_images/shg_hydro038.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Use <strong>OSM Downloader</strong> to generate land use polygons:</p>
+<ul>
+<li><p class="sd-card-text">Raster images are vectorized based on color mapping.</p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro039.png" src="../../_images/shg_hydro039.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Calculator reads attributes:</p>
+<ul>
+<li><p class="sd-card-text">Land Use: <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Saturation</span></code>, <code class="docutils literal notranslate"><span class="pre">Impervious</span></code>, <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Abstraction</span></code></p></li>
+<li><p class="sd-card-text">Soil: <code class="docutils literal notranslate"><span class="pre">XKsat</span></code>, <code class="docutils literal notranslate"><span class="pre">Soil</span> <span class="pre">Depth</span></code>, <code class="docutils literal notranslate"><span class="pre">DTheta</span></code>, <code class="docutils literal notranslate"><span class="pre">Psif</span></code></p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro040.png" src="../../_images/shg_hydro040.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 8: Verify Infiltration Attributes</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Enable <strong>Advanced Layers</strong> in <strong>FLO-2D Settings</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro041.png" src="../../_images/shg_hydro041.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt>Review attributes in <strong>infiltration_results</strong>:</dt><dd><ul>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Hydraulic</span> <span class="pre">Conductivity</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Soil</span> <span class="pre">Suction</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">DTheta</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Abstraction</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Impervious</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Soil</span> <span class="pre">Depth</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro042.png" src="../../_images/shg_hydro042.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Always <strong>re-sort by FID</strong> before export to avoid misaligned data rows.</p>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Infiltration - Assign SCS Curve Number</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D.
+You will learn how to pull Curve Number values from land cover and soil data, manipulate those values,
+and apply them to your grid using either vector or raster formats.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Only complete <strong>one</strong> of the three infiltration methods. This tutorial covers <strong>Curve Number</strong>.</p>
+</div>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 1: Generate Curve Number Layer</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open the <strong>Curve Number Generator</strong> from the <strong>Toolbox</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro043.png" src="../../_images/shg_hydro043.png" />
+<ul class="simple">
+<li><p class="sd-card-text">This downloads and intersects:</p>
+<ul>
+<li><p class="sd-card-text"><strong>NLCD</strong> land cover data</p></li>
+<li><p class="sd-card-text"><strong>SSURGO</strong> soil data</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Set outputs to <strong>Temporary Layers</strong>, except save the final Curve Number layer.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro044.png" src="../../_images/shg_hydro044.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>Run</strong> to create your composite Curve Number layer.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 2: Inspect Generated Layers</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">You’ll see several layers:</p>
+<ul>
+<li><p class="sd-card-text"><strong>Soils layer</strong> (SSURGO)</p></li>
+<li><p class="sd-card-text"><strong>Impervious surface raster</strong> from NLCD</p></li>
+<li><p class="sd-card-text"><strong>Land cover classification</strong></p></li>
+<li><p class="sd-card-text"><strong>Final Curve Number layer</strong></p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro045.png" src="../../_images/shg_hydro045.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p class="sd-card-text">Use the <strong>Identify Features</strong> tool to inspect pixel values, such as percent impervious or land class
+(e.g., “Developed, Open Space”).</p>
+</div>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 3: Edit Curve Number Values</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open the <strong>Attribute Table</strong> of the Curve Number layer.</p></li>
+<li><p class="sd-card-text">Use <strong>field calculator</strong> or manual selection to edit curve numbers.</p></li>
+<li><p class="sd-card-text">Example: Select polygons with Curve Number &lt; 63 and update to 63.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro046.png" src="../../_images/shg_hydro046.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Save edits and close the attribute table.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 4: Apply Curve Number to Grid</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open <strong>Infiltration Editor</strong> &gt; <strong>Global Infiltration</strong>.</p></li>
+<li><p class="sd-card-text">Choose <strong>Curve Number</strong> as your method.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro047.png" src="../../_images/shg_hydro047.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>OK</strong>.</p></li>
+<li><p class="sd-card-text">Now go to <strong>Calculate Curve Number</strong>:
+- Select the <strong>Curve Number layer</strong>
+- Choose the correct field
+- Apply values to the grid.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro048.png" src="../../_images/shg_hydro048.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 5: Export Infiltration Data</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Enable the <strong>Infiltration Switch</strong> in <strong>Control Parameters</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro034.png" src="../../_images/shg_hydro034.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Save your control settings.</p></li>
+<li><p class="sd-card-text">Go to <strong>Export DAT Files</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro035.png" src="../../_images/shg_hydro035.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Select only <strong>Infiltration</strong> and export.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro036.png" src="../../_images/shg_hydro036.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">INFIL.DAT</span></code> will include:
+- Switch = <code class="docutils literal notranslate"><span class="pre">2</span></code> for Curve Number method
+- Global values (optional)
+- Local values per grid element</p>
+</div>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 6: Optional - Rasterize Curve Number</p>
+</div>
+<p class="sd-card-text">If your Curve Number polygon layer is too complex or fragmented:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="sd-card-text">Open <strong>Rasterize Vector to Raster</strong> from the <strong>Processing Toolbox</strong>.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/shg_hydro049.png" src="../../_images/shg_hydro049.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Input:</p>
+<ul>
+<li><p class="sd-card-text">Layer: Curve Number shapefile</p></li>
+<li><p class="sd-card-text">Field: Curve Number</p></li>
+<li><p class="sd-card-text">Cell size: <code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">x</span> <span class="pre">30</span></code></p></li>
+<li><p class="sd-card-text">Extent: Match your FLO-2D grid layer</p></li>
+<li><p class="sd-card-text">No Data value: <code class="docutils literal notranslate"><span class="pre">-9999</span></code></p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro050.png" src="../../_images/shg_hydro050.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Save output raster and click <strong>Run</strong>.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 7: Use Raster Calculator (Alternative Method)</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open <strong>Infiltration Editor</strong> &gt; <strong>Curve Number from Raster</strong>.</p></li>
+<li><p class="sd-card-text">Select your rasterized Curve Number layer.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro051.png" src="../../_images/shg_hydro051.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>OK</strong> to apply sampled values.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Raster sampling uses the <strong>centroid</strong> of each grid element to pull the value and applies a <strong>point-based reduction</strong>.</p>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Infiltration - Assign Horton</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SgvLq0CCJFc?si=SnC1Au5xSzV6C_QQ"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through the <strong>Horton infiltration method</strong> in FLO-2D.
+You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.</p>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 1: Prepare Horton Shapefile</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">If you don’t have Horton data, you can estimate it by comparing with SCS Curve Number values.</p></li>
+<li><p class="sd-card-text">Create a shapefile with estimated Horton parameters.</p></li>
+<li><p class="sd-card-text">Add this shapefile to QGIS and place it in the <strong>External Layers</strong> group.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro052.png" src="../../_images/shg_hydro052.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 2: Add Unique Name Field</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open the <strong>Attribute Table</strong> and toggle editing.</p></li>
+<li><p class="sd-card-text">Add a new field named <code class="docutils literal notranslate"><span class="pre">name</span></code> (type: String).</p></li>
+</ul>
+<img alt="../../_images/shg_hydro053.png" src="../../_images/shg_hydro053.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Use the <strong>Expression Editor</strong> to generate unique IDs:</p>
+<ul>
+<li><p class="sd-card-text">Use <cite>concat(‘Horton-’, &#64;row_number)</cite> to fill the field.</p></li>
+</ul>
+</li>
+</ul>
+<img alt="../../_images/shg_hydro054.png" src="../../_images/shg_hydro054.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>Update All</strong>, save edits, and stop editing.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro055.png" src="../../_images/shg_hydro055.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 3: Copy Features to GeoPackage</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Select all features in the shapefile.</p></li>
+<li><p class="sd-card-text">Press <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> to copy.</p></li>
+<li><p class="sd-card-text">Edit the <strong>infiltration areas</strong> layer in your GeoPackage.</p></li>
+<li><p class="sd-card-text">Paste the features and save.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro056.png" src="../../_images/shg_hydro056.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">Attributes are not copied. You will perform a <strong>table join</strong> next.</p>
+</div>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 4: Perform Table Join</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Right-click <strong>infiltration areas</strong> &gt; <strong>Properties</strong> &gt; <strong>Joins</strong>.</p></li>
+<li><p class="sd-card-text">Add a join to the Horton shapefile using the <code class="docutils literal notranslate"><span class="pre">name</span></code> field.</p></li>
+<li><p class="sd-card-text">Select only required fields: <code class="docutils literal notranslate"><span class="pre">initial</span></code>, <code class="docutils literal notranslate"><span class="pre">final</span></code>, <code class="docutils literal notranslate"><span class="pre">decay</span></code>.</p></li>
+<li><p class="sd-card-text">Add a prefix like <code class="docutils literal notranslate"><span class="pre">Horton_</span></code> for clarity.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro057.png" src="../../_images/shg_hydro057.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 5: Copy Joined Data</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Reopen the attribute table for infiltration areas.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro058.png" src="../../_images/shg_hydro058.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Toggle editing and update:</p>
+<ul>
+<li><p class="sd-card-text">Set <code class="docutils literal notranslate"><span class="pre">Horton</span> <span class="pre">Initial</span></code> = <code class="docutils literal notranslate"><span class="pre">Horton_initial</span></code></p></li>
+<li><p class="sd-card-text">Set <code class="docutils literal notranslate"><span class="pre">Horton</span> <span class="pre">Final</span></code> = <code class="docutils literal notranslate"><span class="pre">Horton_final</span></code></p></li>
+<li><p class="sd-card-text">Set <code class="docutils literal notranslate"><span class="pre">Decay</span></code> = <code class="docutils literal notranslate"><span class="pre">Horton_decay</span></code></p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Click <strong>Update All</strong>, save edits, and turn off editing.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro059.png" src="../../_images/shg_hydro059.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p class="sd-card-text">Joined fields are read-only. You must copy them to editable fields.</p>
+</div>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 6: Delete the Join</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Go back to <strong>Layer Properties &gt; Joins</strong>.</p></li>
+<li><p class="sd-card-text">Remove the join to improve performance.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 7: Global Horton Parameters</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Open <strong>Infiltration Editor &gt; Global Infiltration</strong>.</p></li>
+<li><p class="sd-card-text">Check <strong>Horton</strong> and enter generic global values (used only for missing cells).</p></li>
+</ul>
+<img alt="../../_images/shg_hydro060.png" src="../../_images/shg_hydro060.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>OK</strong>.</p></li>
+</ul>
+<div class="h3 docutils container">
+<p class="sd-card-text">Step 8: Schematize and Export</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>Schematize</strong> to sample Horton values to the grid.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro061.png" src="../../_images/shg_hydro061.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Enable <strong>Infiltration Switch</strong> in <strong>Control Parameters</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro034.png" src="../../_images/shg_hydro034.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Save your project.</p></li>
+</ul>
+<p class="sd-card-text">Then:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="sd-card-text">Go to <strong>Export DAT Files</strong>.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../../_images/shg_hydro035.png" src="../../_images/shg_hydro035.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Select only <code class="docutils literal notranslate"><span class="pre">INFILTRATION</span></code> and <code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>.</p></li>
+<li><p class="sd-card-text">Click <strong>OK</strong> to export.</p></li>
+</ul>
+<img alt="../../_images/shg_hydro036.png" src="../../_images/shg_hydro036.png" />
+<div class="h3 docutils container">
+<p class="sd-card-text">Troubleshooting: Missing Grid Elements</p>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">If some cells don’t receive infiltration data, verify <strong>complete polygon coverage</strong>.</p></li>
+<li><p class="sd-card-text">Use the <strong>Vertex Tool</strong> to stretch polygon boundaries over missing cells.</p></li>
+<li><p class="sd-card-text">Save and re-run <strong>Schematize</strong>.</p></li>
+</ul>
+</div>
+</details></section>
 <section id="save-export-and-run">
 <h2>Save Export and Run<a class="headerlink" href="#save-export-and-run" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nOPr9G2UmQA?si=BhGrr7CuclE_UC4Q"
@@ -459,7 +906,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2025, Jimmy O&#39;Brien, Noemi Gonzalez-Ramirez, Karen O&#39;Brien, Robson Pachaly.</p>
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
@@ -488,24 +935,6 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
             <dd><a href="3-Hydrology.html">
                     
                     Build25
-                    
-                </a></dd>
-            
-            <dd><a href="../../../Build23/index.html">
-                    
-                    Build23
-                    
-                </a></dd>
-            
-            <dd><a href="../../../Build21/index.html">
-                    
-                    Build21
-                    
-                </a></dd>
-            
-            <dd><a href="../../../main/index.html">
-                    
-                    dev
                     
                 </a></dd>
             
