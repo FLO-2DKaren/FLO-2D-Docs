@@ -355,6 +355,9 @@ Step 1: Identify Culvert Locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Stop your current simulation if you observe **unexpected overtopping** in channels.
 - Switch to the **Structure Editor** and click **Add Structure**.
+
+.. image:: ../img/shg/4/shg_chan027.jpg
+
 - Draw each structure from the **left bank** of the upstream channel to the **left bank** of the downstream channel.
 
 .. tip::
@@ -363,16 +366,30 @@ Step 1: Identify Culvert Locations
 Step 2: Define Structure Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Save** after drawing all structures.
-- Name each structure (e.g., ``Greenway1``, ``Greenway2``). Avoid spaces.
+- Name each structure (e.g., ``Grnway1``, ``Grnway2``). Avoid spaces.
 - Set:
   - Type: **Channel to Channel**
   - Method: **Rating Table**
 
+.. image:: ../img/shg/4/shg_chan028.jpg
+
 Step 3: Import Rating Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Import Rating Table** tool.
-- Ensure filenames match the structure names exactly (e.g., ``Greenway1.txt``).
+
+.. image:: ../img/shg/4/shg_chan029.jpg
+
+- Ensure filenames match the structure names exactly (e.g., ``Grnway1.txt``).
+
+.. image:: ../img/shg/4/shg_chan030.jpg
+
 - Loaded data should now populate the structure’s table.
+
+.. image:: ../img/shg/4/shg_chan031.jpg
+
+.. image:: ../img/shg/4/shg_chan032.jpg
+
+.. image:: ../img/shg/4/shg_chan033.jpg
 
 .. note::
    You can alternatively use the **Generalized CT Equation** and define geometry and length manually.
@@ -386,16 +403,28 @@ Step 4: Tailwater Controls
 
 - Set to **No Tailwater Control** for this basic model (warnings may occur).
 
+.. image:: ../img/shg/4/shg_chan034.jpg
+
 Step 5: Optional Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Head Reference Elevation: Only used if a weir controls flow onset.
 - Length and Diameter: Required only if using **Generalized Equation**, not rating tables.
 
+.. image:: ../img/shg/4/shg_chan035.jpg
+
 Step 6: Schematize and Save
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to convert user-drawn structures to **grid-aligned schema features**.
+
+.. image:: ../img/shg/4/shg_chan036.jpg
+
 - Schema lines (blue) are snapped to grid centers.
+
+.. image:: ../img/shg/4/shg_chan037.jpg
+
 - Enable **Structure Switch** in **Control Parameters**, then **Save**.
+
+.. image:: ../img/shg/4/shg_chan038.jpg
 
 Step 7: Export and Review Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -403,6 +432,10 @@ Step 7: Export and Review Files
 - Files updated:
   - ``CONT.DAT``: Structure switch activated.
   - ``HYSTRUCT.DAT``: Lists all culvert definitions and rating tables.
+
+.. image:: ../img/shg/4/shg_chan039.jpg
+
+.. image:: ../img/shg/4/shg_chan040.jpg
 
 .. note::
    - `S` lines = structure metadata
@@ -414,10 +447,6 @@ Step 8: Run a Test Simulation
 - Launch **FLO-2D Pro** to verify structures and inflow integration.
 - Rainfall and hydrograph will appear as different colors in the simulation output.
 - Use the simulation to evaluate discharge, transitions, and overtopping behavior.
-
-Wrap-up
--------
-Your culvert structures are now defined and linked into the grid. Their behavior will control how inflow is conveyed between channel segments. You’re now ready to analyze output and prepare for post-processing.
 
 
 Channel Summary and Results
