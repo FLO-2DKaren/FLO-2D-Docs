@@ -466,18 +466,38 @@ Channel Summary and Results
 Step 1: Prepare the Results Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Create a new group in QGIS called **Results**.
+
+.. image:: ../img/shg/4/shg_chan042.jpg
+
 - Save your project before loading large output files.
 - You can load results into the same project or in a new one for post-processing.
 
 Step 2: Use the Rasterizer Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the **Rasterizer Tool** from the FLO-2D toolbar.
+
+.. image:: ../img/shg/4/shg_chan043.jpg
+
 - Select output files (e.g., ``DEPTH.OUT``, ``FINDEPTH.OUT``, ``MAXWSE.OUT``).
 
 Examples:
 - `DEPTH.OUT` → **max_depth**
+
+.. image:: ../img/shg/4/shg_chan044.jpg
+
+.. image:: ../img/shg/4/shg_chan045.jpg
+
 - `FINDEPTH.OUT` → **final_depth**
-- `MAXWSE.OUT` → **max_wselv**
+
+.. image:: ../img/shg/4/shg_chan046.jpg
+
+.. image:: ../img/shg/4/shg_chan047.jpg
+
+- `MAXWSELEV.OUT` → **max_wselv**
+
+.. image:: ../img/shg/4/shg_chan048.jpg
+
+.. image:: ../img/shg/4/shg_chan049.jpg
 
 .. note::
    Output files must contain:
@@ -489,12 +509,20 @@ Step 3: Visualize Raster Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Turn off the grid and open the **Symbology** of the raster layer.
 - Apply a minimum display threshold (e.g., 0.1 ft) to improve visibility.
+
+.. image:: ../img/shg/4/shg_chan050.jpg
+
 - Identify areas of pooling, drainage issues, or channel performance.
 
 Step 4: Difference Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Compare raster layers:
   - Input: **max_depth** minus **final_depth**
+
+.. image:: ../img/shg/4/shg_chan051.jpg
+
+.. image:: ../img/shg/4/shg_chan052.jpg
+
 - Output layer shows:
   - **Red** = Max > Final (not fully drained)
   - **Blue** = Max < Final (anomaly)
@@ -507,6 +535,8 @@ Step 5: Profile Tool Analysis
 - Use the **Profile Tool** to compare elevation and max water surface elevation.
 - Set base elevation (black) and max WSE (blue).
 - Draw profiles across basins and channels to check for proper drainage and overtopping.
+
+.. image:: ../img/shg/4/shg_chan053.jpg
 
 Step 6: Hydraulic Structure Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -532,7 +562,3 @@ Step 7: Interpretation and QA/QC
   - Overtopping
   - Unrealistic velocity or discharge spikes
 - Review rating table discharge curves and cross-section data for stability.
-
-Wrap-up
--------
-You’ve now visualized your model results and validated flow through the system. Use these tools for QA/QC, communication, and export of final maps for reports or stakeholders.
