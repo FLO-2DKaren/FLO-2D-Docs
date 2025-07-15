@@ -1,5 +1,5 @@
 Channels
-========================
+=========
 
 This is an advanced channel lesson.  It shows how to create a channel by digitizing left bank, right bank and
 cross section data.  It also shows how to add a boundary control and culverts.
@@ -7,6 +7,9 @@ cross section data.  It also shows how to add a boundary control and culverts.
 .. Note:: It will be easier to view these videos on YouTube.
 
    Set the video playback speed to 2x to complete the lessons faster.
+
+   The videos are more detailed whereas the text gives the minimum steps needed
+   to complete the project.
 
 Backup and Reload
 --------------------
@@ -20,30 +23,6 @@ Backup and Reload
    
 This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.
 
-Step 1: Backup Your Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Save and close your **QGIS** project.
-- Navigate to your project directory.
-- Zip your GeoPackage project file.
-
-.. tip::
-   Name the backup descriptively.  
-   Example: ``backup_ready_for_channel.zip``
-
-- Move the backup into your **Backup Folder** for safekeeping.
-
-.. note::
-   This backup will be reused throughout the channel lessons:
-   - First example: **Importing from RAS**
-   - Second example: **Building channels manually**
-
-Step 2: Plugin Version Note
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If you're using **FLO-2D Plugin 1.1.5**, skip this lesson and proceed directly to the RAS import lesson.
-
-Next Steps
-----------
-Now that your project is backed up and saved, you’re ready to begin importing **HEC-RAS** channel data in the next lesson.
 
 Build Channel and Schematize
 ----------------------------------
@@ -60,18 +39,28 @@ This lesson shows how to create channels manually in FLO-2D when you do not have
 Step 1: Load Guidance Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Import reference layers (left bank, right bank, cross-sections).
+
+.. image:: ../img/shg/4/shg_chan001.jpg
+
 - Use these layers as **visual guides only**.
 - Update colors for visibility:
   - Left Bank: Cyan
   - Right Bank: Magenta
   - Cross-Sections: Navy
 
+.. image:: ../img/shg/4/shg_chan002.jpg
+
 Step 2: Draw Left and Right Banks
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Activate editing on the **channel bank** layer.
 - Use **"Add Line Feature"** and set to **Digitize with Segment**.
 - Draw each channel segment **Upstream to Downstream**.
+
+.. image:: ../img/shg/4/shg_chan003.jpg
+
 - Typical limiters: ``0.9`` (supercritical), ``0.2`` (width).
+
+.. image:: ../img/shg/4/shg_chan004.jpg
 
 .. tip::
    Use satellite imagery and elevation contours to align your lines.
@@ -88,6 +77,8 @@ Step 4: Add Cross-Sections
 - Digitize cross-sections from **Left to Right bank**.
 - Ensure both ends and the crossing lie within the same grid element.
 
+.. image:: ../img/shg/4/shg_chan005.jpg
+
 .. note::
    You only need ~6 cross-sections per channel segment in uniform channels.
 
@@ -97,8 +88,20 @@ Step 5: Save and Schematize
 - Cross-sections will initially have placeholder elevation data.
 
 Click **Schematize Channel** to validate geometry:
+
+.. image:: ../img/shg/4/shg_chan006.jpg
+
 - Errors such as "bank and cross-section not in same grid cell" will be reported.
+
+.. image:: ../img/shg/4/shg_chan007.jpg
+
+The cross-section that triggered the above error was the one circled below:
+
+.. image:: ../img/shg/4/shg_chan008.jpg
+
 - Adjust vertex positions with the **Vertex Tool** to fix errors.
+
+.. image:: ../img/shg/4/shg_chan009.jpg
 
 Step 6: Review Schematic Summary
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -108,11 +111,6 @@ Step 6: Review Schematic Summary
 .. tip::
    Fix spacing and other geometry refinements in the next step.
 
-Wrap-up
--------
-You’ve now digitized bank lines and cross-sections and successfully schematized your FLO-2D channel.
-
-Next up: Assign elevation data to your cross-sections.
 
 Sample Elevation and Schematize
 -------------------------------------
@@ -138,6 +136,8 @@ Step 2: Rename Cross-Sections by Segment
   - Format: ``G1-0``, ``G2-1``, etc.
 - Assign each set to a unique segment (G1, G2, G3).
 
+.. image:: ../img/shg/4/shg_chan010.jpg
+
 .. note::
    Use the plugin’s **Save** button to commit changes — **not** the QGIS save button.
 
@@ -145,6 +145,9 @@ Step 3: Sample Elevation Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the cross-section editor.
 - Select **Sample All** to gather elevation data from the grid DEM.
+
+.. image:: ../img/shg/4/shg_chan011.jpg
+
 - Elevation is sampled from the **first to last vertex** of each cross-section.
 
 Step 4: Review Cross-Section Profiles
@@ -154,6 +157,8 @@ Step 4: Review Cross-Section Profiles
 - Adjust vertices using the **Vertex Tool**:
   - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
   - Click **Sample Single** to resample after adjustment.
+
+.. image:: ../img/shg/4/shg_chan012.jpg
 
 .. tip::
    Use Enter to confirm sampling instead of clicking "Yes" repeatedly.
@@ -177,10 +182,6 @@ Step 6: Add Missing Cross-Sections
 
 .. note::
    You can delete schema data before re-schematizing if needed.
-
-Wrap-up
--------
-Your cross-sections are now properly named, sampled, and refined with correct elevation data. All issues (placement, sampling anomalies, missing transitions) should be resolved before continuing.
 
 Bank Align and Interpolate
 ----------------------------
@@ -210,6 +211,8 @@ Step 2: Schematize and Interpolate
 - Click **Schematize Channel** to commit updated geometry.
 - Then use the **Interpolate Channel** tool to regenerate elevation stations between cross-sections.
 
+.. image:: ../img/shg/4/shg_chan013.jpg
+
 .. note::
    If a cross-section has fewer than 6 stations, an error will appear.
 
@@ -218,6 +221,8 @@ Step 3: Use the Geometry Checker
 - After interpolation, click **Check Channel Geometry**:
   - It will verify minimum spacing and floodplain surface area.
   - Click error messages to locate problematic cross-sections or elements.
+
+.. image:: ../img/shg/4/shg_chan014.jpg
 
 - Adjust vertex positions as needed to resolve errors.
 - Re-schematize and interpolate again.
@@ -231,15 +236,16 @@ Step 5: Export and Run Test Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Export DAT files using **Export DAT Files** tool.
 - Overwrite the files in your test folder if needed.
-- Launch **FLO-2D Pro** to run the simulation.
+
+.. image:: ../img/shg/4/shg_chan015.jpg
+
+- Launch **FLO-2D Pro** to run the simulation.\
+
+.. image:: ../img/shg/4/shg_chan016.jpg
 
 .. tip::
    You’re only validating **channel geometry**, not full model results.
    A successful run here indicates channel alignment and schematization passed.
-
-Wrap-up
--------
-With a successful test run, your channels are now aligned, interpolated, and validated. You’re ready to move on to **boundary conditions** and **culverts** in the next lesson.
 
 
 Add a Boundary Control
@@ -254,21 +260,20 @@ Add a Boundary Control
 
 In this lesson, you’ll assign **inflow and outflow boundary conditions** to your FLO-2D channel model using both steady and time-series hydrographs.
 
-Step 1: Turn Off Unused Layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Turn off user layers to reduce visual clutter.
-- Focus on your **schematized cross-sections** and channel grid.
-
-Step 2: Create Upstream Inflow Point
+Step 1: Create Upstream Inflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the **Boundary Editor** and click **Create**.
 - Select the upstream grid element at the head of your channel.
 - Click **OK**, then click the new boundary marker again to save.
 
-Step 3: Add Inflow Hydrograph
+.. image:: ../img/shg/4/shg_chan017.jpg
+
+Step 2: Add Inflow Hydrograph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Set the boundary type to **Channel**.
 - Choose **"Add Inflow Time Series"**.
+
+.. image:: ../img/shg/4/shg_chan018.jpg
 
 You have two options:
 
@@ -276,44 +281,62 @@ You have two options:
   Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).  
   Sample time steps at 0.5-hr intervals until 10 hours.
 
+  .. image:: ../img/shg/4/shg_chan019.jpg
+
 - **Imported Hydrograph**  
   Copy a 6-hour inflow from your project folder (e.g., ``lesson2``).  
   Paste values directly into the hydrograph table.
 
+  .. image:: ../img/shg/4/shg_chan020.jpg
+
+  Rename "Time Series 3" to "GrnwayIn 100yr 6hr"
 
 .. tip::
    Swap between hydrographs quickly by selecting a different record and **schematizing**.
 
-Step 4: Create Downstream Outflow Point
+ .. image:: ../img/shg/4/shg_chan021.jpg
+
+Step 3: Create Downstream Outflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click the **Boundary Editor** again and select the **last grid element**.
 - Click to confirm, then click the marker again to save.
 
-- Name the boundary (e.g., ``Greenway_out``).
+- Name the boundary (e.g., ``GrnwayOut``).
+
+ .. image:: ../img/shg/4/shg_chan022.jpg
+
+ .. image:: ../img/shg/4/shg_chan023.jpg
+
 - Set type to **Floodplain and Channel Outflow**.
 - No hydrograph is required.
 
-Step 5: Schematize and Export
+Step 4: Schematize and Export
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to generate boundary files.
+
+ .. image:: ../img/shg/4/shg_chan024.jpg
+
 - Use **Export DAT Files** to save your project.
+
+ .. image:: ../img/shg/4/shg_chan025.jpg
 
 Files updated:
 - ``INFLOW.DAT``: now includes the new stepped hydrograph.
 - ``CHAN.DAT``, ``CHANBANK.DAT``, ``CHANCOND.DAT``, ``CHANROUGH.DAT``: standard channel outputs.
 
-Step 6: Run a Simulation
+Step 5: Run a Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Run FLO-2D** to test the boundary setup.
+
+ .. image:: ../img/shg/4/shg_chan026.jpg
+
+ .. image:: ../img/shg/4/shg_chan016.jpg
+
 - If the simulation starts successfully, your boundary conditions are valid.
 
 .. note::
    Water enters the channel from the upstream **cross-section**, not the grid element.  
    If the flow overtops the channel, it will exit via floodplain outflow.
-
-Wrap-up
--------
-You’ve now defined channel inflow and outflow conditions. You’re ready to move on to adding hydraulic structures in the next lesson.
 
 
 Add Culverts
@@ -332,6 +355,9 @@ Step 1: Identify Culvert Locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Stop your current simulation if you observe **unexpected overtopping** in channels.
 - Switch to the **Structure Editor** and click **Add Structure**.
+
+.. image:: ../img/shg/4/shg_chan027.jpg
+
 - Draw each structure from the **left bank** of the upstream channel to the **left bank** of the downstream channel.
 
 .. tip::
@@ -340,16 +366,30 @@ Step 1: Identify Culvert Locations
 Step 2: Define Structure Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Save** after drawing all structures.
-- Name each structure (e.g., ``Greenway1``, ``Greenway2``). Avoid spaces.
+- Name each structure (e.g., ``Grnway1``, ``Grnway2``). Avoid spaces.
 - Set:
   - Type: **Channel to Channel**
   - Method: **Rating Table**
 
+.. image:: ../img/shg/4/shg_chan028.jpg
+
 Step 3: Import Rating Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Import Rating Table** tool.
-- Ensure filenames match the structure names exactly (e.g., ``Greenway1.txt``).
+
+.. image:: ../img/shg/4/shg_chan029.jpg
+
+- Ensure filenames match the structure names exactly (e.g., ``Grnway1.txt``).
+
+.. image:: ../img/shg/4/shg_chan030.jpg
+
 - Loaded data should now populate the structure’s table.
+
+.. image:: ../img/shg/4/shg_chan031.jpg
+
+.. image:: ../img/shg/4/shg_chan032.jpg
+
+.. image:: ../img/shg/4/shg_chan033.jpg
 
 .. note::
    You can alternatively use the **Generalized CT Equation** and define geometry and length manually.
@@ -363,16 +403,28 @@ Step 4: Tailwater Controls
 
 - Set to **No Tailwater Control** for this basic model (warnings may occur).
 
+.. image:: ../img/shg/4/shg_chan034.jpg
+
 Step 5: Optional Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Head Reference Elevation: Only used if a weir controls flow onset.
 - Length and Diameter: Required only if using **Generalized Equation**, not rating tables.
 
+.. image:: ../img/shg/4/shg_chan035.jpg
+
 Step 6: Schematize and Save
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to convert user-drawn structures to **grid-aligned schema features**.
+
+.. image:: ../img/shg/4/shg_chan036.jpg
+
 - Schema lines (blue) are snapped to grid centers.
+
+.. image:: ../img/shg/4/shg_chan037.jpg
+
 - Enable **Structure Switch** in **Control Parameters**, then **Save**.
+
+.. image:: ../img/shg/4/shg_chan038.jpg
 
 Step 7: Export and Review Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -380,6 +432,10 @@ Step 7: Export and Review Files
 - Files updated:
   - ``CONT.DAT``: Structure switch activated.
   - ``HYSTRUCT.DAT``: Lists all culvert definitions and rating tables.
+
+.. image:: ../img/shg/4/shg_chan039.jpg
+
+.. image:: ../img/shg/4/shg_chan040.jpg
 
 .. note::
    - `S` lines = structure metadata
@@ -389,12 +445,11 @@ Step 7: Export and Review Files
 Step 8: Run a Test Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Launch **FLO-2D Pro** to verify structures and inflow integration.
+
+.. image:: ../img/shg/4/shg_chan041.jpg
+
 - Rainfall and hydrograph will appear as different colors in the simulation output.
 - Use the simulation to evaluate discharge, transitions, and overtopping behavior.
-
-Wrap-up
--------
-Your culvert structures are now defined and linked into the grid. Their behavior will control how inflow is conveyed between channel segments. You’re now ready to analyze output and prepare for post-processing.
 
 
 Channel Summary and Results
@@ -411,18 +466,38 @@ Channel Summary and Results
 Step 1: Prepare the Results Group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Create a new group in QGIS called **Results**.
+
+.. image:: ../img/shg/4/shg_chan042.jpg
+
 - Save your project before loading large output files.
 - You can load results into the same project or in a new one for post-processing.
 
 Step 2: Use the Rasterizer Tool
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the **Rasterizer Tool** from the FLO-2D toolbar.
+
+.. image:: ../img/shg/4/shg_chan043.jpg
+
 - Select output files (e.g., ``DEPTH.OUT``, ``FINDEPTH.OUT``, ``MAXWSE.OUT``).
 
 Examples:
 - `DEPTH.OUT` → **max_depth**
+
+.. image:: ../img/shg/4/shg_chan044.jpg
+
+.. image:: ../img/shg/4/shg_chan045.jpg
+
 - `FINDEPTH.OUT` → **final_depth**
-- `MAXWSE.OUT` → **max_wselv**
+
+.. image:: ../img/shg/4/shg_chan046.jpg
+
+.. image:: ../img/shg/4/shg_chan047.jpg
+
+- `MAXWSELEV.OUT` → **max_wselv**
+
+.. image:: ../img/shg/4/shg_chan048.jpg
+
+.. image:: ../img/shg/4/shg_chan049.jpg
 
 .. note::
    Output files must contain:
@@ -434,12 +509,20 @@ Step 3: Visualize Raster Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Turn off the grid and open the **Symbology** of the raster layer.
 - Apply a minimum display threshold (e.g., 0.1 ft) to improve visibility.
+
+.. image:: ../img/shg/4/shg_chan050.jpg
+
 - Identify areas of pooling, drainage issues, or channel performance.
 
 Step 4: Difference Mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Compare raster layers:
   - Input: **max_depth** minus **final_depth**
+
+.. image:: ../img/shg/4/shg_chan051.jpg
+
+.. image:: ../img/shg/4/shg_chan052.jpg
+
 - Output layer shows:
   - **Red** = Max > Final (not fully drained)
   - **Blue** = Max < Final (anomaly)
@@ -452,6 +535,8 @@ Step 5: Profile Tool Analysis
 - Use the **Profile Tool** to compare elevation and max water surface elevation.
 - Set base elevation (black) and max WSE (blue).
 - Draw profiles across basins and channels to check for proper drainage and overtopping.
+
+.. image:: ../img/shg/4/shg_chan053.jpg
 
 Step 6: Hydraulic Structure Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -477,7 +562,3 @@ Step 7: Interpretation and QA/QC
   - Overtopping
   - Unrealistic velocity or discharge spikes
 - Review rating table discharge curves and cross-section data for stability.
-
-Wrap-up
--------
-You’ve now visualized your model results and validated flow through the system. Use these tools for QA/QC, communication, and export of final maps for reports or stakeholders.

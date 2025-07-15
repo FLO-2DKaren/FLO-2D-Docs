@@ -64,19 +64,12 @@
 <li class="toctree-l3"><a class="reference internal" href="3-Hydrology.html">Hydrology</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Channels</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#backup-and-reload">Backup and Reload</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#next-steps">Next Steps</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#build-channel-and-schematize">Build Channel and Schematize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wrap-up">Wrap-up</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sample-elevation-and-schematize">Sample Elevation and Schematize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Wrap-up</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bank-align-and-interpolate">Bank Align and Interpolate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">Wrap-up</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-a-boundary-control">Add a Boundary Control</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Wrap-up</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#add-culverts">Add Culverts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">Wrap-up</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#channel-summary-and-results">Channel Summary and Results</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">Wrap-up</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
@@ -129,44 +122,14 @@ cross section data.  It also shows how to add a boundary control and culverts.</
 <p class="admonition-title">Note</p>
 <p>It will be easier to view these videos on YouTube.</p>
 <p>Set the video playback speed to 2x to complete the lessons faster.</p>
+<p>The videos are more detailed whereas the text gives the minimum steps needed
+to complete the project.</p>
 </div>
 <section id="backup-and-reload">
 <h2>Backup and Reload<a class="headerlink" href="#backup-and-reload" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XrEn2obremk?si=NEYQSLH6de5jA-rT"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.</p>
-<section id="step-1-backup-your-project">
-<h3>Step 1: Backup Your Project<a class="headerlink" href="#step-1-backup-your-project" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Save and close your <strong>QGIS</strong> project.</p></li>
-<li><p>Navigate to your project directory.</p></li>
-<li><p>Zip your GeoPackage project file.</p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Name the backup descriptively.
-Example: <code class="docutils literal notranslate"><span class="pre">backup_ready_for_channel.zip</span></code></p>
-</div>
-<ul class="simple">
-<li><p>Move the backup into your <strong>Backup Folder</strong> for safekeeping.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This backup will be reused throughout the channel lessons:
-- First example: <strong>Importing from RAS</strong>
-- Second example: <strong>Building channels manually</strong></p>
-</div>
-</section>
-<section id="step-2-plugin-version-note">
-<h3>Step 2: Plugin Version Note<a class="headerlink" href="#step-2-plugin-version-note" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>If you’re using <strong>FLO-2D Plugin 1.1.5</strong>, skip this lesson and proceed directly to the RAS import lesson.</p></li>
-</ul>
-</section>
-</section>
-<section id="next-steps">
-<h2>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h2>
-<p>Now that your project is backed up and saved, you’re ready to begin importing <strong>HEC-RAS</strong> channel data in the next lesson.</p>
 </section>
 <section id="build-channel-and-schematize">
 <h2>Build Channel and Schematize<a class="headerlink" href="#build-channel-and-schematize" title="Link to this heading"></a></h2>
@@ -177,12 +140,16 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <h3>Step 1: Load Guidance Layers<a class="headerlink" href="#step-1-load-guidance-layers" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Import reference layers (left bank, right bank, cross-sections).</p></li>
+</ul>
+<img alt="../../_images/shg_chan001.jpg" src="../../_images/shg_chan001.jpg" />
+<ul class="simple">
 <li><p>Use these layers as <strong>visual guides only</strong>.</p></li>
 <li><p>Update colors for visibility:
 - Left Bank: Cyan
 - Right Bank: Magenta
 - Cross-Sections: Navy</p></li>
 </ul>
+<img alt="../../_images/shg_chan002.jpg" src="../../_images/shg_chan002.jpg" />
 </section>
 <section id="step-2-draw-left-and-right-banks">
 <h3>Step 2: Draw Left and Right Banks<a class="headerlink" href="#step-2-draw-left-and-right-banks" title="Link to this heading"></a></h3>
@@ -190,8 +157,12 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p>Activate editing on the <strong>channel bank</strong> layer.</p></li>
 <li><p>Use <strong>“Add Line Feature”</strong> and set to <strong>Digitize with Segment</strong>.</p></li>
 <li><p>Draw each channel segment <strong>Upstream to Downstream</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_chan003.jpg" src="../../_images/shg_chan003.jpg" />
+<ul class="simple">
 <li><p>Typical limiters: <code class="docutils literal notranslate"><span class="pre">0.9</span></code> (supercritical), <code class="docutils literal notranslate"><span class="pre">0.2</span></code> (width).</p></li>
 </ul>
+<img alt="../../_images/shg_chan004.jpg" src="../../_images/shg_chan004.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Use satellite imagery and elevation contours to align your lines.
@@ -212,6 +183,7 @@ Use consistent start and end locations across segments.</p>
 <li><p>Digitize cross-sections from <strong>Left to Right bank</strong>.</p></li>
 <li><p>Ensure both ends and the crossing lie within the same grid element.</p></li>
 </ul>
+<img alt="../../_images/shg_chan005.jpg" src="../../_images/shg_chan005.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You only need ~6 cross-sections per channel segment in uniform channels.</p>
@@ -223,9 +195,18 @@ Use consistent start and end locations across segments.</p>
 <li><p>Use the <strong>Cross-Section Save Button</strong> (not the QGIS save button) to trigger correct processing.</p></li>
 <li><p>Cross-sections will initially have placeholder elevation data.</p></li>
 </ul>
-<p>Click <strong>Schematize Channel</strong> to validate geometry:
-- Errors such as “bank and cross-section not in same grid cell” will be reported.
-- Adjust vertex positions with the <strong>Vertex Tool</strong> to fix errors.</p>
+<p>Click <strong>Schematize Channel</strong> to validate geometry:</p>
+<img alt="../../_images/shg_chan006.jpg" src="../../_images/shg_chan006.jpg" />
+<ul class="simple">
+<li><p>Errors such as “bank and cross-section not in same grid cell” will be reported.</p></li>
+</ul>
+<img alt="../../_images/shg_chan007.jpg" src="../../_images/shg_chan007.jpg" />
+<p>The cross-section that triggered the above error was the one circled below:</p>
+<img alt="../../_images/shg_chan008.jpg" src="../../_images/shg_chan008.jpg" />
+<ul class="simple">
+<li><p>Adjust vertex positions with the <strong>Vertex Tool</strong> to fix errors.</p></li>
+</ul>
+<img alt="../../_images/shg_chan009.jpg" src="../../_images/shg_chan009.jpg" />
 </section>
 <section id="step-6-review-schematic-summary">
 <h3>Step 6: Review Schematic Summary<a class="headerlink" href="#step-6-review-schematic-summary" title="Link to this heading"></a></h3>
@@ -238,11 +219,6 @@ Use consistent start and end locations across segments.</p>
 <p>Fix spacing and other geometry refinements in the next step.</p>
 </div>
 </section>
-</section>
-<section id="wrap-up">
-<h2>Wrap-up<a class="headerlink" href="#wrap-up" title="Link to this heading"></a></h2>
-<p>You’ve now digitized bank lines and cross-sections and successfully schematized your FLO-2D channel.</p>
-<p>Next up: Assign elevation data to your cross-sections.</p>
 </section>
 <section id="sample-elevation-and-schematize">
 <h2>Sample Elevation and Schematize<a class="headerlink" href="#sample-elevation-and-schematize" title="Link to this heading"></a></h2>
@@ -264,6 +240,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 - Format: <code class="docutils literal notranslate"><span class="pre">G1-0</span></code>, <code class="docutils literal notranslate"><span class="pre">G2-1</span></code>, etc.</p></li>
 <li><p>Assign each set to a unique segment (G1, G2, G3).</p></li>
 </ul>
+<img alt="../../_images/shg_chan010.jpg" src="../../_images/shg_chan010.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Use the plugin’s <strong>Save</strong> button to commit changes — <strong>not</strong> the QGIS save button.</p>
@@ -274,6 +251,9 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <ul class="simple">
 <li><p>Open the cross-section editor.</p></li>
 <li><p>Select <strong>Sample All</strong> to gather elevation data from the grid DEM.</p></li>
+</ul>
+<img alt="../../_images/shg_chan011.jpg" src="../../_images/shg_chan011.jpg" />
+<ul class="simple">
 <li><p>Elevation is sampled from the <strong>first to last vertex</strong> of each cross-section.</p></li>
 </ul>
 </section>
@@ -286,6 +266,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
 - Click <strong>Sample Single</strong> to resample after adjustment.</p></li>
 </ul>
+<img alt="../../_images/shg_chan012.jpg" src="../../_images/shg_chan012.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Use Enter to confirm sampling instead of clicking “Yes” repeatedly.</p>
@@ -316,10 +297,6 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </div>
 </section>
 </section>
-<section id="id1">
-<h2>Wrap-up<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
-<p>Your cross-sections are now properly named, sampled, and refined with correct elevation data. All issues (placement, sampling anomalies, missing transitions) should be resolved before continuing.</p>
-</section>
 <section id="bank-align-and-interpolate">
 <h2>Bank Align and Interpolate<a class="headerlink" href="#bank-align-and-interpolate" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ManhJIY0_1A?si=pqqV0H79lHIeTHg9"
@@ -345,6 +322,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p>Click <strong>Schematize Channel</strong> to commit updated geometry.</p></li>
 <li><p>Then use the <strong>Interpolate Channel</strong> tool to regenerate elevation stations between cross-sections.</p></li>
 </ul>
+<img alt="../../_images/shg_chan013.jpg" src="../../_images/shg_chan013.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If a cross-section has fewer than 6 stations, an error will appear.</p>
@@ -356,6 +334,9 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p>After interpolation, click <strong>Check Channel Geometry</strong>:
 - It will verify minimum spacing and floodplain surface area.
 - Click error messages to locate problematic cross-sections or elements.</p></li>
+</ul>
+<img alt="../../_images/shg_chan014.jpg" src="../../_images/shg_chan014.jpg" />
+<ul class="simple">
 <li><p>Adjust vertex positions as needed to resolve errors.</p></li>
 <li><p>Re-schematize and interpolate again.</p></li>
 </ul>
@@ -372,8 +353,12 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <ul class="simple">
 <li><p>Export DAT files using <strong>Export DAT Files</strong> tool.</p></li>
 <li><p>Overwrite the files in your test folder if needed.</p></li>
+</ul>
+<img alt="../../_images/shg_chan015.jpg" src="../../_images/shg_chan015.jpg" />
+<ul class="simple">
 <li><p>Launch <strong>FLO-2D Pro</strong> to run the simulation.</p></li>
 </ul>
+<img alt="../../_images/shg_chan016.jpg" src="../../_images/shg_chan016.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You’re only validating <strong>channel geometry</strong>, not full model results.
@@ -381,74 +366,93 @@ A successful run here indicates channel alignment and schematization passed.</p>
 </div>
 </section>
 </section>
-<section id="id2">
-<h2>Wrap-up<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
-<p>With a successful test run, your channels are now aligned, interpolated, and validated. You’re ready to move on to <strong>boundary conditions</strong> and <strong>culverts</strong> in the next lesson.</p>
-</section>
 <section id="add-a-boundary-control">
 <h2>Add a Boundary Control<a class="headerlink" href="#add-a-boundary-control" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T-GyXsFokIA?si=WUSj7abEMNxjxrkm"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, you’ll assign <strong>inflow and outflow boundary conditions</strong> to your FLO-2D channel model using both steady and time-series hydrographs.</p>
-<section id="step-1-turn-off-unused-layers">
-<h3>Step 1: Turn Off Unused Layers<a class="headerlink" href="#step-1-turn-off-unused-layers" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Turn off user layers to reduce visual clutter.</p></li>
-<li><p>Focus on your <strong>schematized cross-sections</strong> and channel grid.</p></li>
-</ul>
-</section>
-<section id="step-2-create-upstream-inflow-point">
-<h3>Step 2: Create Upstream Inflow Point<a class="headerlink" href="#step-2-create-upstream-inflow-point" title="Link to this heading"></a></h3>
+<section id="step-1-create-upstream-inflow-point">
+<h3>Step 1: Create Upstream Inflow Point<a class="headerlink" href="#step-1-create-upstream-inflow-point" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Open the <strong>Boundary Editor</strong> and click <strong>Create</strong>.</p></li>
 <li><p>Select the upstream grid element at the head of your channel.</p></li>
 <li><p>Click <strong>OK</strong>, then click the new boundary marker again to save.</p></li>
 </ul>
+<img alt="../../_images/shg_chan017.jpg" src="../../_images/shg_chan017.jpg" />
 </section>
-<section id="step-3-add-inflow-hydrograph">
-<h3>Step 3: Add Inflow Hydrograph<a class="headerlink" href="#step-3-add-inflow-hydrograph" title="Link to this heading"></a></h3>
+<section id="step-2-add-inflow-hydrograph">
+<h3>Step 2: Add Inflow Hydrograph<a class="headerlink" href="#step-2-add-inflow-hydrograph" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Set the boundary type to <strong>Channel</strong>.</p></li>
 <li><p>Choose <strong>“Add Inflow Time Series”</strong>.</p></li>
 </ul>
+<img alt="../../_images/shg_chan018.jpg" src="../../_images/shg_chan018.jpg" />
 <p>You have two options:</p>
-<ul class="simple">
+<ul>
 <li><p><strong>Steady Flow (Stepped) Hydrograph</strong>
 Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).
-Sample time steps at 0.5-hr intervals until 10 hours.</p></li>
+Sample time steps at 0.5-hr intervals until 10 hours.</p>
+<img alt="../../_images/shg_chan019.jpg" src="../../_images/shg_chan019.jpg" />
+</li>
 <li><p><strong>Imported Hydrograph</strong>
 Copy a 6-hour inflow from your project folder (e.g., <code class="docutils literal notranslate"><span class="pre">lesson2</span></code>).
-Paste values directly into the hydrograph table.</p></li>
+Paste values directly into the hydrograph table.</p>
+<img alt="../../_images/shg_chan020.jpg" src="../../_images/shg_chan020.jpg" />
+<p>Rename “Time Series 3” to “GrnwayIn 100yr 6hr”</p>
+</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Swap between hydrographs quickly by selecting a different record and <strong>schematizing</strong>.</p>
+<blockquote>
+<div><p>Swap between hydrographs quickly by selecting a different record and <strong>schematizing</strong>.</p>
+</div></blockquote>
+<img alt="../../_images/shg_chan021.jpg" src="../../_images/shg_chan021.jpg" />
 </div>
 </section>
-<section id="step-4-create-downstream-outflow-point">
-<h3>Step 4: Create Downstream Outflow Point<a class="headerlink" href="#step-4-create-downstream-outflow-point" title="Link to this heading"></a></h3>
+<section id="step-3-create-downstream-outflow-point">
+<h3>Step 3: Create Downstream Outflow Point<a class="headerlink" href="#step-3-create-downstream-outflow-point" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Click the <strong>Boundary Editor</strong> again and select the <strong>last grid element</strong>.</p></li>
 <li><p>Click to confirm, then click the marker again to save.</p></li>
-<li><p>Name the boundary (e.g., <code class="docutils literal notranslate"><span class="pre">Greenway_out</span></code>).</p></li>
+<li><p>Name the boundary (e.g., <code class="docutils literal notranslate"><span class="pre">GrnwayOut</span></code>).</p></li>
+</ul>
+<blockquote>
+<div><img alt="../../_images/shg_chan022.jpg" src="../../_images/shg_chan022.jpg" />
+<img alt="../../_images/shg_chan023.jpg" src="../../_images/shg_chan023.jpg" />
+</div></blockquote>
+<ul class="simple">
 <li><p>Set type to <strong>Floodplain and Channel Outflow</strong>.</p></li>
 <li><p>No hydrograph is required.</p></li>
 </ul>
 </section>
-<section id="step-5-schematize-and-export">
-<h3>Step 5: Schematize and Export<a class="headerlink" href="#step-5-schematize-and-export" title="Link to this heading"></a></h3>
+<section id="step-4-schematize-and-export">
+<h3>Step 4: Schematize and Export<a class="headerlink" href="#step-4-schematize-and-export" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Click <strong>Schematize</strong> to generate boundary files.</p></li>
+</ul>
+<blockquote>
+<div><img alt="../../_images/shg_chan024.jpg" src="../../_images/shg_chan024.jpg" />
+</div></blockquote>
+<ul class="simple">
 <li><p>Use <strong>Export DAT Files</strong> to save your project.</p></li>
 </ul>
+<blockquote>
+<div><img alt="../../_images/shg_chan025.jpg" src="../../_images/shg_chan025.jpg" />
+</div></blockquote>
 <p>Files updated:
 - <code class="docutils literal notranslate"><span class="pre">INFLOW.DAT</span></code>: now includes the new stepped hydrograph.
 - <code class="docutils literal notranslate"><span class="pre">CHAN.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANBANK.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANCOND.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANROUGH.DAT</span></code>: standard channel outputs.</p>
 </section>
-<section id="step-6-run-a-simulation">
-<h3>Step 6: Run a Simulation<a class="headerlink" href="#step-6-run-a-simulation" title="Link to this heading"></a></h3>
+<section id="step-5-run-a-simulation">
+<h3>Step 5: Run a Simulation<a class="headerlink" href="#step-5-run-a-simulation" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Click <strong>Run FLO-2D</strong> to test the boundary setup.</p></li>
+</ul>
+<blockquote>
+<div><img alt="../../_images/shg_chan026.jpg" src="../../_images/shg_chan026.jpg" />
+<img alt="../../_images/shg_chan016.jpg" src="../../_images/shg_chan016.jpg" />
+</div></blockquote>
+<ul class="simple">
 <li><p>If the simulation starts successfully, your boundary conditions are valid.</p></li>
 </ul>
 <div class="admonition note">
@@ -457,10 +461,6 @@ Paste values directly into the hydrograph table.</p></li>
 If the flow overtops the channel, it will exit via floodplain outflow.</p>
 </div>
 </section>
-</section>
-<section id="id3">
-<h2>Wrap-up<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
-<p>You’ve now defined channel inflow and outflow conditions. You’re ready to move on to adding hydraulic structures in the next lesson.</p>
 </section>
 <section id="add-culverts">
 <h2>Add Culverts<a class="headerlink" href="#add-culverts" title="Link to this heading"></a></h2>
@@ -474,6 +474,9 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <ul class="simple">
 <li><p>Stop your current simulation if you observe <strong>unexpected overtopping</strong> in channels.</p></li>
 <li><p>Switch to the <strong>Structure Editor</strong> and click <strong>Add Structure</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_chan027.jpg" src="../../_images/shg_chan027.jpg" />
+<ul class="simple">
 <li><p>Draw each structure from the <strong>left bank</strong> of the upstream channel to the <strong>left bank</strong> of the downstream channel.</p></li>
 </ul>
 <div class="admonition tip">
@@ -485,19 +488,29 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <h3>Step 2: Define Structure Properties<a class="headerlink" href="#step-2-define-structure-properties" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Click <strong>Save</strong> after drawing all structures.</p></li>
-<li><p>Name each structure (e.g., <code class="docutils literal notranslate"><span class="pre">Greenway1</span></code>, <code class="docutils literal notranslate"><span class="pre">Greenway2</span></code>). Avoid spaces.</p></li>
+<li><p>Name each structure (e.g., <code class="docutils literal notranslate"><span class="pre">Grnway1</span></code>, <code class="docutils literal notranslate"><span class="pre">Grnway2</span></code>). Avoid spaces.</p></li>
 <li><p>Set:
 - Type: <strong>Channel to Channel</strong>
 - Method: <strong>Rating Table</strong></p></li>
 </ul>
+<img alt="../../_images/shg_chan028.jpg" src="../../_images/shg_chan028.jpg" />
 </section>
 <section id="step-3-import-rating-tables">
 <h3>Step 3: Import Rating Tables<a class="headerlink" href="#step-3-import-rating-tables" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Use the <strong>Import Rating Table</strong> tool.</p></li>
-<li><p>Ensure filenames match the structure names exactly (e.g., <code class="docutils literal notranslate"><span class="pre">Greenway1.txt</span></code>).</p></li>
+</ul>
+<img alt="../../_images/shg_chan029.jpg" src="../../_images/shg_chan029.jpg" />
+<ul class="simple">
+<li><p>Ensure filenames match the structure names exactly (e.g., <code class="docutils literal notranslate"><span class="pre">Grnway1.txt</span></code>).</p></li>
+</ul>
+<img alt="../../_images/shg_chan030.jpg" src="../../_images/shg_chan030.jpg" />
+<ul class="simple">
 <li><p>Loaded data should now populate the structure’s table.</p></li>
 </ul>
+<img alt="../../_images/shg_chan031.jpg" src="../../_images/shg_chan031.jpg" />
+<img alt="../../_images/shg_chan032.jpg" src="../../_images/shg_chan032.jpg" />
+<img alt="../../_images/shg_chan033.jpg" src="../../_images/shg_chan033.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can alternatively use the <strong>Generalized CT Equation</strong> and define geometry and length manually.</p>
@@ -512,6 +525,7 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 3. <strong>Submergence with Reverse Flow</strong>: Allows flow to reverse under high tailwater.</p></li>
 <li><p>Set to <strong>No Tailwater Control</strong> for this basic model (warnings may occur).</p></li>
 </ul>
+<img alt="../../_images/shg_chan034.jpg" src="../../_images/shg_chan034.jpg" />
 </section>
 <section id="step-5-optional-parameters">
 <h3>Step 5: Optional Parameters<a class="headerlink" href="#step-5-optional-parameters" title="Link to this heading"></a></h3>
@@ -519,14 +533,22 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <li><p>Head Reference Elevation: Only used if a weir controls flow onset.</p></li>
 <li><p>Length and Diameter: Required only if using <strong>Generalized Equation</strong>, not rating tables.</p></li>
 </ul>
+<img alt="../../_images/shg_chan035.jpg" src="../../_images/shg_chan035.jpg" />
 </section>
 <section id="step-6-schematize-and-save">
 <h3>Step 6: Schematize and Save<a class="headerlink" href="#step-6-schematize-and-save" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Click <strong>Schematize</strong> to convert user-drawn structures to <strong>grid-aligned schema features</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_chan036.jpg" src="../../_images/shg_chan036.jpg" />
+<ul class="simple">
 <li><p>Schema lines (blue) are snapped to grid centers.</p></li>
+</ul>
+<img alt="../../_images/shg_chan037.jpg" src="../../_images/shg_chan037.jpg" />
+<ul class="simple">
 <li><p>Enable <strong>Structure Switch</strong> in <strong>Control Parameters</strong>, then <strong>Save</strong>.</p></li>
 </ul>
+<img alt="../../_images/shg_chan038.jpg" src="../../_images/shg_chan038.jpg" />
 </section>
 <section id="step-7-export-and-review-files">
 <h3>Step 7: Export and Review Files<a class="headerlink" href="#step-7-export-and-review-files" title="Link to this heading"></a></h3>
@@ -536,6 +558,8 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 - <code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>: Structure switch activated.
 - <code class="docutils literal notranslate"><span class="pre">HYSTRUCT.DAT</span></code>: Lists all culvert definitions and rating tables.</p></li>
 </ul>
+<img alt="../../_images/shg_chan039.jpg" src="../../_images/shg_chan039.jpg" />
+<img alt="../../_images/shg_chan040.jpg" src="../../_images/shg_chan040.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <ul class="simple">
@@ -549,14 +573,13 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <h3>Step 8: Run a Test Simulation<a class="headerlink" href="#step-8-run-a-test-simulation" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Launch <strong>FLO-2D Pro</strong> to verify structures and inflow integration.</p></li>
+</ul>
+<img alt="../../_images/shg_chan041.jpg" src="../../_images/shg_chan041.jpg" />
+<ul class="simple">
 <li><p>Rainfall and hydrograph will appear as different colors in the simulation output.</p></li>
 <li><p>Use the simulation to evaluate discharge, transitions, and overtopping behavior.</p></li>
 </ul>
 </section>
-</section>
-<section id="id4">
-<h2>Wrap-up<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
-<p>Your culvert structures are now defined and linked into the grid. Their behavior will control how inflow is conveyed between channel segments. You’re now ready to analyze output and prepare for post-processing.</p>
 </section>
 <section id="channel-summary-and-results">
 <h2>Channel Summary and Results<a class="headerlink" href="#channel-summary-and-results" title="Link to this heading"></a></h2>
@@ -569,6 +592,9 @@ This lesson shows how to view simulation outputs, map flood depths and elevation
 <h3>Step 1: Prepare the Results Group<a class="headerlink" href="#step-1-prepare-the-results-group" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Create a new group in QGIS called <strong>Results</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_chan042.jpg" src="../../_images/shg_chan042.jpg" />
+<ul class="simple">
 <li><p>Save your project before loading large output files.</p></li>
 <li><p>You can load results into the same project or in a new one for post-processing.</p></li>
 </ul>
@@ -577,12 +603,25 @@ This lesson shows how to view simulation outputs, map flood depths and elevation
 <h3>Step 2: Use the Rasterizer Tool<a class="headerlink" href="#step-2-use-the-rasterizer-tool" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Open the <strong>Rasterizer Tool</strong> from the FLO-2D toolbar.</p></li>
+</ul>
+<img alt="../../_images/shg_chan043.jpg" src="../../_images/shg_chan043.jpg" />
+<ul class="simple">
 <li><p>Select output files (e.g., <code class="docutils literal notranslate"><span class="pre">DEPTH.OUT</span></code>, <code class="docutils literal notranslate"><span class="pre">FINDEPTH.OUT</span></code>, <code class="docutils literal notranslate"><span class="pre">MAXWSE.OUT</span></code>).</p></li>
 </ul>
 <p>Examples:
-- <cite>DEPTH.OUT</cite> → <strong>max_depth</strong>
-- <cite>FINDEPTH.OUT</cite> → <strong>final_depth</strong>
-- <cite>MAXWSE.OUT</cite> → <strong>max_wselv</strong></p>
+- <cite>DEPTH.OUT</cite> → <strong>max_depth</strong></p>
+<img alt="../../_images/shg_chan044.jpg" src="../../_images/shg_chan044.jpg" />
+<img alt="../../_images/shg_chan045.jpg" src="../../_images/shg_chan045.jpg" />
+<ul class="simple">
+<li><p><cite>FINDEPTH.OUT</cite> → <strong>final_depth</strong></p></li>
+</ul>
+<img alt="../../_images/shg_chan046.jpg" src="../../_images/shg_chan046.jpg" />
+<img alt="../../_images/shg_chan047.jpg" src="../../_images/shg_chan047.jpg" />
+<ul class="simple">
+<li><p><cite>MAXWSELEV.OUT</cite> → <strong>max_wselv</strong></p></li>
+</ul>
+<img alt="../../_images/shg_chan048.jpg" src="../../_images/shg_chan048.jpg" />
+<img alt="../../_images/shg_chan049.jpg" src="../../_images/shg_chan049.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Output files must contain:
@@ -596,6 +635,9 @@ This lesson shows how to view simulation outputs, map flood depths and elevation
 <ul class="simple">
 <li><p>Turn off the grid and open the <strong>Symbology</strong> of the raster layer.</p></li>
 <li><p>Apply a minimum display threshold (e.g., 0.1 ft) to improve visibility.</p></li>
+</ul>
+<img alt="../../_images/shg_chan050.jpg" src="../../_images/shg_chan050.jpg" />
+<ul class="simple">
 <li><p>Identify areas of pooling, drainage issues, or channel performance.</p></li>
 </ul>
 </section>
@@ -604,6 +646,10 @@ This lesson shows how to view simulation outputs, map flood depths and elevation
 <ul class="simple">
 <li><p>Compare raster layers:
 - Input: <strong>max_depth</strong> minus <strong>final_depth</strong></p></li>
+</ul>
+<img alt="../../_images/shg_chan051.jpg" src="../../_images/shg_chan051.jpg" />
+<img alt="../../_images/shg_chan052.jpg" src="../../_images/shg_chan052.jpg" />
+<ul class="simple">
 <li><p>Output layer shows:
 - <strong>Red</strong> = Max &gt; Final (not fully drained)
 - <strong>Blue</strong> = Max &lt; Final (anomaly)</p></li>
@@ -620,6 +666,7 @@ This lesson shows how to view simulation outputs, map flood depths and elevation
 <li><p>Set base elevation (black) and max WSE (blue).</p></li>
 <li><p>Draw profiles across basins and channels to check for proper drainage and overtopping.</p></li>
 </ul>
+<img alt="../../_images/shg_chan053.jpg" src="../../_images/shg_chan053.jpg" />
 </section>
 <section id="step-6-hydraulic-structure-results">
 <h3>Step 6: Hydraulic Structure Results<a class="headerlink" href="#step-6-hydraulic-structure-results" title="Link to this heading"></a></h3>
@@ -651,10 +698,6 @@ This lesson shows how to view simulation outputs, map flood depths and elevation
 <li><p>Review rating table discharge curves and cross-section data for stability.</p></li>
 </ul>
 </section>
-</section>
-<section id="id5">
-<h2>Wrap-up<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
-<p>You’ve now visualized your model results and validated flow through the system. Use these tools for QA/QC, communication, and export of final maps for reports or stakeholders.</p>
 </section>
 </section>
 
