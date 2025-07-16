@@ -89,14 +89,14 @@ Step 3: Documentation and Learning Resources
 Step 4: Contact Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you get stuck, contact FLO-2D support directly via the following contact form:
+If you encounter any issues or require further assistance,
+please reach out to the FLO-2D support team using the form provided below:
 
 |Contact-Form|
 
 .. |Contact-Form| raw:: html
 
    <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
-
 
 Wrap-up
 -------
