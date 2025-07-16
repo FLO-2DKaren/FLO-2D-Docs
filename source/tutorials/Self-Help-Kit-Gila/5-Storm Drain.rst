@@ -89,8 +89,7 @@ Step 3: Documentation and Learning Resources
 Step 4: Contact Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you encounter any issues or require further assistance,
-please reach out to the FLO-2D support team using the form provided below:
+For technical assistance or troubleshooting, use the official FLO-2D support form available at the link below:
 
 |Contact-Form|
 
