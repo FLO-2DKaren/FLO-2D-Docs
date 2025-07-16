@@ -532,6 +532,7 @@ Check the **Simulate Storm Drain** box to turn it on.
 
 Step 4: Add Type 4 Rating Tables and Culverts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - Go to the **Type 4 Table Editor**.
 
 .. image:: ../img/shg/5/shg_storm011.jpg
