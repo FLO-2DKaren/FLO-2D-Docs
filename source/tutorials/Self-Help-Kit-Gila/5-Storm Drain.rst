@@ -91,6 +91,8 @@ Step 4: Contact Support
 
 If you get stuck, contact FLO-2D support directly
 
+|Contact-Form|
+
 .. |Contact-Form| raw:: html
 
    <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
