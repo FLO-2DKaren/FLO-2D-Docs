@@ -526,6 +526,7 @@ Click the **Auto-Assign Links and Nodes** button.
 .. warning::
    - Make sure conduit directions are correct using the **Reverse Line Tool** in the **Advanced Digitizing Toolbar**.
    - Use the **Snapping Tool** to ensure precise vertex-node connections.
+
 Check the **Simulate Storm Drain** box to turn it on.
 
 .. image:: ../img/shg/5/shg_storm010.jpg
