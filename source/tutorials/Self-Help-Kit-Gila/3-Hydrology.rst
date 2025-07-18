@@ -265,18 +265,6 @@ Check `Control Parameters`:
 
 .. image:: ../img/shg/3/shg_hydro029.png
 
-.. tip::
-   If ``RAIN.DAT`` is missing an asterisk, the data has been successfully exported.
-
-Inside the ``RAIN.DAT`` file:
-- ``0`` = uniform rainfall  
-- ``1`` = rain-on-building (not used here)  
-- Total rainfall is listed  
-- A distribution pattern is defined  
-- Each grid element gets a **reduction factor** based on the raster (e.g., ``0.999``)
-
-.. note::
-   Raster values are sampled, warped to match the grid, and averaged by pixel intersection. A **ratio** is calculated between each grid cell's rainfall and the maximum value, generating a point reduction factor.
 
 Infiltration
 ---------------
