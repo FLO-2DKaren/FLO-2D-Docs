@@ -34,7 +34,8 @@ Step 1: Launch QGIS
 
 Step 2: Open Your Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If QGIS opens your most recent project, simply click on it in the **Recent Projects** list.
+
+- If QGIS opens the most recent project, simply click on it in the **Recent Projects** list.
 
 .. image:: ../img/shg/3/shg_hydro002.png
 
@@ -42,12 +43,12 @@ Step 2: Open Your Project
 
   - Go to **Plugins > FLO-2D > Open FLO-2D Project**.
 
-  - Navigate to your project `.gpkg` file (GeoPackage) and select it.
+  - Navigate to the project `.gpkg` file (GeoPackage) and select it.
 
 .. image:: ../img/shg/3/shg_hydro003.png
 
 .. note::
-   The GeoPackage contains your entire project, including the `.qgz` file.
+   The GeoPackage contains the entire project, including the `.qgz` file.
 
 Assign an Inflow Node
 --------------------------
@@ -63,7 +64,7 @@ This tutorial shows how to create an **inflow boundary condition** at a project 
 
 Step 1: Navigate the Map
 ~~~~~~~~~~~~~~~~~~~~~~~~
-- Use your **mouse scroll wheel** to zoom in and out.
+- Use the **mouse scroll wheel** to zoom in and out.
 - Click and drag with the **middle mouse button (wheel)** to pan the map view.
 
 Step 2: Add an Inflow Node
@@ -109,7 +110,7 @@ Step 4: Create a Time Series
 .. image:: ../img/shg/3/shg_hydro011.png
 
 .. warning::
-   Do not select **Channel** unless modeling a direct stream. This is surface runoff entering the basin.
+   Do not select **Channel** unless modeling a **1-D FLO-2D** channel. This is surface runoff entering the basin.
 
 Step 5: Paste Hydrograph Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,7 +119,7 @@ Step 5: Paste Hydrograph Data
 
   .. image:: ../img/shg/3/shg_hydro012.png
 
-  - Time should be in hours on the **left** and discharge (cfs) on the **right**.
+- Time should be in hours on the **left** and discharge (cfs) on the **right**.
 - Select all data with **Ctrl+A**, then copy with **Ctrl+C**.
 - Close the file with **Ctrl+W**.
 - In the QGIS Time Series Editor, click the first cell and paste using **Ctrl+V**.
@@ -126,7 +127,8 @@ Step 5: Paste Hydrograph Data
 .. image:: ../img/shg/3/shg_hydro013.png
 
 .. note::
-   FLO-2D automatically uses **cubic feet per second** for discharge. Use metric units only if your model is in metric.
+   FLO-2D uses **cubic feet per second** for discharge unless the metric units switch is on, in which case it uses **cubic meters per second**.
+
 
 Step 6: Schematize the Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -158,10 +160,6 @@ Assign Rainfall
    <iframe width="560" height="315" src="https://www.youtube.com/embed/IKeZAli-2yA?si=ACNEjxC64o8Ltyq9"
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-In this lesson, we assign rainfall to a FLO-2D project.
-You will learn how to use the **Rain Editor**, apply **uniform rainfall**, and optionally sample **spatially
-variable rainfall** from NOAA Atlas data.
 
 Step 1: Open the Rain Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -211,48 +209,51 @@ Step 3: Understanding Rain on Grid
 .. tip::
    Rain on grid works well for small projects. For large areas, continue to **Step 4**.
 
-Step 4: Sample a Rainfall Raster (Optional)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You can use a **NOAA Atlas 14 rainfall raster** to apply **spatially variable rainfall**.
 
-- Drag your **24-hour rainfall raster** into QGIS.
 
-- Right-click the layer > **Zoom to Layer**.
 
-- Check the data: it should be in inches and match your coordinate system.
+.. dropdown:: Step 4: Sample a Rainfall Raster (Optional)
 
-.. image:: ../img/shg/3/shg_hydro023.png
+   **NOAA Atlas 14 rainfall raster** cab be used to apply **spatially variable rainfall** as described in the following steps.
 
-To apply the raster:
+   - Drag the **24-hour rainfall raster** into QGIS.
 
-- Go to the **Rain Editor**.
+   - Right-click the layer > **Zoom to Layer**.
 
-- Check **Sample from Raster**.
+   - Check the data: it should be in inches and match the coordinate system in use.
 
-.. image:: ../img/shg/3/shg_hydro024.png
+   .. image:: ../img/shg/3/shg_hydro023.png
 
-- Select your raster file.
+   To apply the raster:
 
-- Leave **"Fill NoData"** unchecked if not needed.
+   - Go to the **Rain Editor**.
 
-- Click **OK** and confirm.
+   - Check **Sample from Raster**.
 
-.. image:: ../img/shg/3/shg_hydro025.png
+   .. image:: ../img/shg/3/shg_hydro024.png
 
-- QGIS will now **sample rainfall values** from the raster to each grid element based on spatial location.
+   - Select **NOAA Atlas 14 rainfall** raster file.
 
-.. image:: ../img/shg/3/shg_hydro026.png
+   - Leave **"Fill NoData"** unchecked if not needed.
 
-.. note::
-   The sampling uses the centroid of each grid element and computes a **point reduction factor**
-   based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based**
-   rainfall adjustment.
+   - Click **OK** and confirm.
+
+   .. image:: ../img/shg/3/shg_hydro025.png
+
+   - QGIS will now **sample rainfall values** from the raster to each grid element based on spatial location.
+
+   .. image:: ../img/shg/3/shg_hydro026.png
+
+   .. note::
+      The sampling uses the centroid of each grid element and computes a **point reduction factor**
+      based on the maximum raster value. It is **not** a depth-area reduction, but rather a **point-based**
+      rainfall adjustment.
 
 Step 5: Export Rainfall Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Check `Control Parameters`:
 
-- The rainfall switch is turned on automatically when you check **Simulate Rainfall**. Click **Save**.
+- The rainfall switch is turned on automatically when **Simulate Rainfall** is checked. Click **Save**.
 
 .. image:: ../img/shg/3/shg_hydro027.png
 
@@ -260,12 +261,12 @@ Check `Control Parameters`:
 
 .. image:: ../img/shg/3/shg_hydro028.png
 
-- This will generate a ``RAIN.DAT`` file in your export folder.
+- This will generate a ``RAIN.DAT`` file in the export folder.
 
 .. image:: ../img/shg/3/shg_hydro029.png
 
 .. tip::
-   If ``RAIN.DAT`` is missing an asterisk, your data has been successfully exported.
+   If ``RAIN.DAT`` is missing an asterisk, the data has been successfully exported.
 
 Inside the ``RAIN.DAT`` file:
 - ``0`` = uniform rainfall  
@@ -276,10 +277,6 @@ Inside the ``RAIN.DAT`` file:
 
 .. note::
    Raster values are sampled, warped to match the grid, and averaged by pixel intersection. A **ratio** is calculated between each grid cell's rainfall and the maximum value, generating a point reduction factor.
-
-Wrap-up
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-You’ve now assigned both **uniform** and **spatially variable** rainfall to your project. When ready, run your model to simulate rainfall input across the grid.
 
 Infiltration
 ---------------
