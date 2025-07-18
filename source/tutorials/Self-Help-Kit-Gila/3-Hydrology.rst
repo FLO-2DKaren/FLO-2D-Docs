@@ -41,7 +41,9 @@ Step 2: Open Your Project
 .. image:: ../img/shg/3/shg_hydro002.png
 
 - If the project was moved and no longer loads:
+
   - Go to **Plugins > FLO-2D > Open FLO-2D Project**.
+
   - Navigate to your project `.gpkg` file (GeoPackage) and select it.
 
 .. image:: ../img/shg/3/shg_hydro003.png
