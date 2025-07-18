@@ -29,8 +29,6 @@ Step 1: Launch QGIS
 
 .. image:: ../img/shg/3/shg_hydro001.png
 
-- You can pin QGIS to your Start Menu for quicker access.
-
 .. tip::
    To avoid searching for QGIS every time, right-click the QGIS icon and select **"Pin to Start."**
 
