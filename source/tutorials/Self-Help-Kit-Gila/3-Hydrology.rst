@@ -282,7 +282,7 @@ Infiltration
 
 
    This lesson walks through the **Green-Ampt infiltration method** in FLO-2D,
-   including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method.
+   including the 2018 and 2023 Flood Control District methods and the SSURGO/OSM-based method.
    You'll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.
 
    .. container:: h3
@@ -296,16 +296,6 @@ Infiltration
    - Check **Green-Ampt**.
 
    .. image:: ../img/shg/3/shg_hydro031.png
-
-   - Recommended default values (inches/hour, inches):
-
-     - Initial Abstraction: ``0``
-     - Porosity: ``0.4``
-     - Hydraulic Conductivity: ``0.1``
-     - Initial Saturation: ``0.3``
-     - Final Saturation: ``1.0``
-     - Soil Suction: ``4``
-     - Soil Depth: Set to ``1`` for limited depth (set to ``0`` for unlimited).
 
    - Click **OK**.
 
@@ -381,28 +371,30 @@ Infiltration
    - Intersected DTheta from land use-soil overlay
    - Maximum impervious value from both layers
 
-   .. container:: h3
+      .. dropdown:: Infiltration - Assign Green and Ampt
 
-      Step 7: Use SERGO and OpenStreetMap Data
+         .. container:: h3
 
-   - Use **SERGO Downloader** to get soil components:
+            Step 7: Use SSURGO and OpenStreetMap Data
 
-     - Horizon, Fragmentation, Component layers
+         - Use **SSURGO Downloader** to get soil components:
 
-   .. image:: ../img/shg/3/shg_hydro038.png
+           - Horizon, Fragmentation, Component layers
 
-   - Use **OSM Downloader** to generate land use polygons:
+         .. image:: ../img/shg/3/shg_hydro038.png
 
-     - Raster images are vectorized based on color mapping.
+         - Use **OSM Downloader** to generate land use polygons:
 
-   .. image:: ../img/shg/3/shg_hydro039.png
+          - Raster images are vectorized based on color mapping.
 
-   - Calculator reads attributes:
+         .. image:: ../img/shg/3/shg_hydro039.png
 
-     - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
-     - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
+        - Calculator reads attributes:
 
-   .. image:: ../img/shg/3/shg_hydro040.png
+          - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
+          - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
+
+       .. image:: ../img/shg/3/shg_hydro040.png
 
    .. container:: h3
 
