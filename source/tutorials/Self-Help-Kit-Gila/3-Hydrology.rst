@@ -714,9 +714,9 @@ Step 2: Export Data Using Quick Run
 
 To use Quick Run:
 
-- Click **Quick Run** from the FLO-2D toolbar.
-- Create a new folder (e.g., ``quick_run``) for the export.
-- Select this folder when prompted.
+ - Click **Quick Run** from the FLO-2D toolbar.
+ - Create a new folder (e.g., ``quick_run``) for the export.
+ - Select this folder when prompted.
 
 .. image:: ../img/shg/3/shg_hydro063.png
 
