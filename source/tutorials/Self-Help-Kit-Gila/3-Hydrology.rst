@@ -219,10 +219,10 @@ Step 3: Understanding Rain on Grid
 
       .. image:: ../img/shg/3/shg_hydro023.png
 
-   To apply the raster:
+   - To apply the raster:
 
-     - Go to the **Rain Editor**.
-     - Check **Sample from Raster**.
+      - Go to the **Rain Editor**.
+      - Check **Sample from Raster**.
 
      .. image:: ../img/shg/3/shg_hydro024.png
 
