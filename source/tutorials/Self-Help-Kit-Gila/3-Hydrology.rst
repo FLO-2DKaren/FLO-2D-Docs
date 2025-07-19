@@ -730,11 +730,11 @@ The plugin will:
 
 Step 3: Wait for Simulation to Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Once data is exported, the model will begin running.
+Once data is exported, the model will begin running.
 
 .. image:: ../img/shg/3/shg_hydro065.png
 
-- Watch for early rainfall values in the results window.
+Watch for early rainfall values in the results window.
   - Rainfall accumulation (e.g., ~0.1 in) will appear first.
   - Ponded water will start appearing on the grid.
   - Water will flow down streets and terrain according to the grid and infiltration settings.
