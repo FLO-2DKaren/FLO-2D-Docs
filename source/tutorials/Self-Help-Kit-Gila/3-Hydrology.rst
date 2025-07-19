@@ -516,6 +516,10 @@ Infiltration
 
      - Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
 
+   - Input:
+
+     - Layer: Curve Number shapefile
+
    .. image:: ../img/shg/3/shg_hydro049.png
 
    - Input:
