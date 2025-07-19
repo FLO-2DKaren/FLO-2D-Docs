@@ -663,7 +663,6 @@ Infiltration
    - Save your project.
 
    Then:
-
    - Go to **Export DAT Files**.
 
    .. image:: ../img/shg/3/shg_hydro035.png
