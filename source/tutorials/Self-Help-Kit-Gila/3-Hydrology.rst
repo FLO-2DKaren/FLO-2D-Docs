@@ -477,6 +477,7 @@ Infiltration
 
    - Click **OK**.
    - Now go to **Calculate Curve Number**:
+
      - Select the **Curve Number layer**
      - Choose the correct field
      - Apply values to the grid.
