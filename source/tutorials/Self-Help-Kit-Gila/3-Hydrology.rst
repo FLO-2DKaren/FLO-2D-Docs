@@ -321,9 +321,9 @@ Infiltration
      .. image:: ../img/shg/3/shg_hydro033.png
 
      - Input Fields:
-      - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
-      - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
-      - Leave ``Vegetative Cover`` unchecked.
+       - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
+       - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+       - Leave ``Vegetative Cover`` unchecked.
 
      - Click **OK** to calculate.
 
