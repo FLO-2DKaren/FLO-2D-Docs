@@ -212,6 +212,7 @@ Step 3: Understanding Rain on Grid
 .. dropdown:: Step 4: Sample a Rainfall Raster (Optional)
 
    **NOAA Atlas 14 rainfall raster** cab be used to apply **spatially variable rainfall** as described in the following steps.
+
     - Drag the **24-hour rainfall raster** into QGIS.
     - Right-click the layer > **Zoom to Layer**.
     - Check the data: it should be in inches and match the coordinate system in use.
@@ -220,19 +221,18 @@ Step 3: Understanding Rain on Grid
 
    To apply the raster:
 
-   - Go to the **Rain Editor**.
+     - Go to the **Rain Editor**.
+     - Check **Sample from Raster**.
 
-   - Check **Sample from Raster**.
+     .. image:: ../img/shg/3/shg_hydro024.png
 
-   .. image:: ../img/shg/3/shg_hydro024.png
+     - Select **NOAA Atlas 14 rainfall** raster file.
 
-   - Select **NOAA Atlas 14 rainfall** raster file.
+     - Leave **"Fill NoData"** unchecked if not needed.
 
-   - Leave **"Fill NoData"** unchecked if not needed.
+     - Click **OK** and confirm.
 
-   - Click **OK** and confirm.
-
-   .. image:: ../img/shg/3/shg_hydro025.png
+     .. image:: ../img/shg/3/shg_hydro025.png
 
    - QGIS will now **sample rainfall values** from the raster to each grid element based on spatial location.
 
