@@ -314,7 +314,7 @@ Infiltration
 
 
 
-   .. dropdown:: Step 3: Use the 2018 Method
+   .. dropdown:: Step 3 (Option 1): Use the 2018 Method
 
       - Run **Green-Ampt Calculator** (2018 version).
 
