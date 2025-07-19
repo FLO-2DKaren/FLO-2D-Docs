@@ -674,15 +674,6 @@ Infiltration
 
    .. image:: ../img/shg/3/shg_hydro036b.png
 
-   .. container:: h3
-
-      Troubleshooting: Missing Grid Elements
-
-   - If some cells don’t receive infiltration data, verify **complete polygon coverage**.
-   - Use the **Vertex Tool** to stretch polygon boundaries over missing cells.
-   - Save and re-run **Schematize**.
-
-
 Save Export and Run
 -----------------------
 
