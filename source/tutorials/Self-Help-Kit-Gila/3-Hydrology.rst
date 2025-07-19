@@ -725,8 +725,8 @@ To use Quick Run:
    The Build 26 FLO-2D engine is capable of running models with \*.DAT or input.hdf5 formats.
 
 The plugin will:
-- Export all required `.DAT` files
-- Automatically launch the simulation upon successful export
+  - Export all required `.DAT` files
+  - Automatically launch the simulation upon successful export
 
 Step 3: Wait for Simulation to Start
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
