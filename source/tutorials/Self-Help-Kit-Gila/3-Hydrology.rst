@@ -324,7 +324,8 @@ Infiltration
 
       - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
       - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
-     - Leave ``Vegetative Cover`` unchecked.
+      - Leave ``Vegetative Cover`` unchecked.
+
      - Click **OK** to calculate.
 
      .. container:: h3
