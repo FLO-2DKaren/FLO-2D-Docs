@@ -709,6 +709,7 @@ To use Quick Run:
    The Build 26 FLO-2D engine is capable of running models with \*.DAT or input.hdf5 formats.
 
 The plugin will:
+
   - Export all required `.DAT` files
   - Automatically launch the simulation upon successful export
 
@@ -719,6 +720,7 @@ Once data is exported, the model will begin running.
 .. image:: ../img/shg/3/shg_hydro065.png
 
 Watch for early rainfall values in the results window.
+
   - Rainfall accumulation (e.g., ~0.1 in) will appear first.
   - Ponded water will start appearing on the grid.
   - Water will flow down streets and terrain according to the grid and infiltration settings.
