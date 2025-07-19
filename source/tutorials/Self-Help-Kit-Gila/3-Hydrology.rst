@@ -554,8 +554,6 @@ Infiltration
       gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This lesson walks through the **Horton infiltration method** in FLO-2D.
-   You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.
 
    .. container:: h3
 
@@ -666,7 +664,7 @@ Infiltration
 
    Then:
 
-     - Go to **Export DAT Files**.
+   - Go to **Export DAT Files**.
 
    .. image:: ../img/shg/3/shg_hydro035.png
 
