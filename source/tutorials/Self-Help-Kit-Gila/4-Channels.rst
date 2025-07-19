@@ -152,7 +152,10 @@ Step 4: Review Cross-Section Profiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **scroll wheel** to cycle through each profile.
 - Look for elevation anomalies or errors (jagged shapes, false dips).
+
+
 - Adjust vertices using the **Vertex Tool**:
+
   - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
   - Click **Sample Single** to resample after adjustment.
 
