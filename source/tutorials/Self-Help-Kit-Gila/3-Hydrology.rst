@@ -211,7 +211,8 @@ Step 3: Understanding Rain on Grid
 
 .. dropdown:: Step 4: Sample a Rainfall Raster (Optional)
 
-   **NOAA Atlas 14 rainfall raster** cab be used to apply **spatially variable rainfall** as described in the following steps.
+   - **NOAA Atlas 14 rainfall raster** cab be used to apply **spatially variable rainfall** as described
+   in the following steps.
 
      - Drag the **24-hour rainfall raster** into QGIS.
      - Right-click the layer > **Zoom to Layer**.
