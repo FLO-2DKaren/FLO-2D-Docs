@@ -115,7 +115,7 @@ Step 4: Create a Time Series
 Step 5: Paste Hydrograph Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open the provided hydrograph data file from **Lesson 1 Data**.
-  - Choose the `100yr 6hr` inflow file.
+- Choose the `100yr 6hr` inflow file.
 
   .. image:: ../img/shg/3/shg_hydro012.png
 
@@ -208,9 +208,6 @@ Step 3: Understanding Rain on Grid
 
 .. tip::
    Rain on grid works well for small projects. For large areas, continue to **Step 4**.
-
-
-
 
 .. dropdown:: Step 4: Sample a Rainfall Raster (Optional)
 
