@@ -663,6 +663,7 @@ Infiltration
    - Save your project.
 
    Then:
+
    - Go to **Export DAT Files**.
 
    .. image:: ../img/shg/3/shg_hydro035.png
@@ -672,6 +673,7 @@ Infiltration
    .. image:: ../img/shg/3/shg_hydro036.png
 
    - Click **OK** to export.
+
    .. image:: ../img/shg/3/shg_hydro036b.png
 
    .. container:: h3
@@ -711,6 +713,7 @@ Step 2: Export Data Using Quick Run
 - Quick Run is only available **if your project does not include storm drains**.
 
 To use Quick Run:
+
 - Click **Quick Run** from the FLO-2D toolbar.
 - Create a new folder (e.g., ``quick_run``) for the export.
 - Select this folder when prompted.
