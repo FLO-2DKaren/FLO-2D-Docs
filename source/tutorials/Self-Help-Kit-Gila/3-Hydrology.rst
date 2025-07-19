@@ -692,16 +692,14 @@ Save Export and Run
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-This lesson covers the final steps before running your FLO-2D simulation. You will learn how to save your project, export model data, and run the simulation using the **Quick Run** tool.
-
 Step 1: Save Your Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Remove unneeded scratch layers:
+
   - Right-click any temporary layers you no longer need and select **Remove**.
 - Click the **Save Project** button.
 - When prompted, click **Yes** to save scratch layers into the **GeoPackage**.
-  - This ensures they are committed and safely stored with your project file.
+This ensures they are committed and safely stored with your project file.
 
 .. image:: ../img/shg/3/shg_hydro062.png
 
