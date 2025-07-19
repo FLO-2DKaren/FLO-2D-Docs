@@ -79,9 +79,6 @@ Step 4: Add Cross-Sections
 
 .. image:: ../img/shg/4/shg_chan005.jpg
 
-.. note::
-   You only need ~6 cross-sections per channel segment in uniform channels.
-
 Step 5: Save and Schematize
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Cross-Section Save Button** (not the QGIS save button) to trigger correct processing.
