@@ -695,7 +695,7 @@ Step 2: Export Data Using Quick Run
 - Use **Quick Run** to export and simulate in one step.
 - Quick Run is only available **if your project does not include storm drains**.
 
-To use Quick Run:
+- To use Quick Run:
 
   - Click **Quick Run** from the FLO-2D toolbar.
   - Create a new folder (e.g., ``quick_run``) for the export.
@@ -708,7 +708,7 @@ To use Quick Run:
 .. note::
    The Build 26 FLO-2D engine is capable of running models with \*.DAT or input.hdf5 formats.
 
-The plugin will:
+- The plugin will:
 
   - Export all required `.DAT` files
   - Automatically launch the simulation upon successful export
