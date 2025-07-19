@@ -103,7 +103,7 @@ details.sd-dropdown summary svg {
 }
 
 
-/* Changes made on 19th July 2025 to allow toggling methods for Green-Ampt Infiltration */
+/* 19/07/2025 Changes made on 19th July 2025 to allow toggling methods for Green-Ampt Infiltration */
 
 /* Default closed arrow for all dropdowns */
 details.sd-dropdown summary::before {
@@ -123,4 +123,11 @@ details.sd-dropdown summary:not([aria-expanded="true"])::before {
 }
 details.sd-dropdown summary[aria-expanded="true"]::before {
     content: "▼";
+}
+
+
+/* 19/07/2025 image-text spacing */
+/* Add space after images to separate from following text */
+img {
+    margin-bottom: 1em;
 }
