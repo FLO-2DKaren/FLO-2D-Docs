@@ -36,7 +36,7 @@ Build Channel and Schematize
    
 This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data. You will digitize channel banks and cross-sections, schematize them, and validate the geometry.
 
-Step 1: Load Guidance Layers
+Step 1: Load Templates Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Import reference layers (left bank, right bank, cross-sections).
 
@@ -44,9 +44,9 @@ Step 1: Load Guidance Layers
 
 - Use these layers as **visual guides only**.
 - Update colors for visibility:
-  - Left Bank: Cyan
-  - Right Bank: Magenta
-  - Cross-Sections: Navy
+   - Left Bank: Cyan
+   - Right Bank: Magenta
+   - Cross-Sections: Navy
 
 .. image:: ../img/shg/4/shg_chan002.jpg
 
