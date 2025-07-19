@@ -44,9 +44,10 @@ Step 1: Load Templates Layers
 
 - Use these layers as **visual guides only**.
 - Update colors for visibility:
-   - Left Bank: Cyan
-   - Right Bank: Magenta
-   - Cross-Sections: Navy
+
+  - Left Bank: Cyan
+  - Right Bank: Magenta
+  - Cross-Sections: Navy
 
 .. image:: ../img/shg/4/shg_chan002.jpg
 
