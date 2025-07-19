@@ -328,29 +328,25 @@ Infiltration
 
      - Click **OK** to calculate.
 
-     .. container:: h3
+     - Review the 2018 Manual Settings:
 
-      Step 4: Review the 2018 Manual Settings
+       - 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
+       - Uses area-weighted averages (no log scaling).
+       - Global and local infiltration data will be stored in ``INFIL.DAT``.
 
-     - 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
-     - Uses area-weighted averages (no log scaling).
-     - Global and local infiltration data will be stored in ``INFIL.DAT``.
+      - Step 5: Export Infiltration Data
 
-     .. container:: h3
+       - Ensure **Infiltration Switch** is ON in **Control Parameters**.
 
-       Step 5: Export Infiltration Data
+       .. image:: ../img/shg/3/shg_hydro034.png
 
-     - Ensure **Infiltration Switch** is ON in **Control Parameters**.
+       - Click **Export DAT Files**.
 
-     .. image:: ../img/shg/3/shg_hydro034.png
+       .. image:: ../img/shg/3/shg_hydro035.png
 
-     - Click **Export DAT Files**.
+       - Export only ``INFILTRATION`` and ``CONT.DAT``.
 
-     .. image:: ../img/shg/3/shg_hydro035.png
-
-     - Export only ``INFILTRATION`` and ``CONT.DAT``.
-
-     .. image:: ../img/shg/3/shg_hydro036.png
+       .. image:: ../img/shg/3/shg_hydro036.png
 
 
    .. dropdown:: Step 3 (Option 2): Use the 2023 Method
