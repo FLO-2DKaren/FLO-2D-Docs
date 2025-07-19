@@ -153,6 +153,9 @@ Step 4: Review Cross-Section Profiles
 - Use the **scroll wheel** to cycle through each profile.
 - Look for elevation anomalies or errors (jagged shapes, false dips).
 
+.. image:: ../img/shg/4/shg_chan04.jpg
+
+.. image:: ../img/shg/4/shg_chan055.jpg
 
 - Adjust vertices using the **Vertex Tool**:
 
