@@ -418,13 +418,6 @@ Infiltration
       title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
       gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D.
-   You will learn how to pull Curve Number values from land cover and soil data, manipulate those values,
-   and apply them to your grid using either vector or raster formats.
-
-   .. note::
-      Only complete **one** of the three infiltration methods. This tutorial covers **Curve Number**.
-
    .. container:: h3
 
       Step 1: Generate Curve Number Layer
