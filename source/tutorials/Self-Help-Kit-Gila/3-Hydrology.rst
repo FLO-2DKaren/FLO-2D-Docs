@@ -334,7 +334,7 @@ Infiltration
        - Uses area-weighted averages (no log scaling).
        - Global and local infiltration data will be stored in ``INFIL.DAT``.
 
-      - Step 5: Export Infiltration Data
+     - Step 5: Export Infiltration Data
 
        - Ensure **Infiltration Switch** is ON in **Control Parameters**.
 
