@@ -396,6 +396,7 @@ Infiltration
       .. image:: ../img/shg/3/shg_hydro041.png
 
       - Review attributes in **infiltration_results**:
+
         - ``Hydraulic Conductivity``
         - ``Soil Suction``
         - ``DTheta``
