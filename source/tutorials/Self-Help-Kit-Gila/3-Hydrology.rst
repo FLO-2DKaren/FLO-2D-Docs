@@ -353,7 +353,7 @@ Infiltration
      .. image:: ../img/shg/3/shg_hydro036.png
 
 
-   .. dropdown:: Step 6: Use the 2023 Method
+   .. dropdown:: Step (Option 2): Use the 2023 Method
 
      - Switch calculator to use 2023 soil shapefile.
 
@@ -370,7 +370,7 @@ Infiltration
      - Intersected DTheta from land use-soil overlay
      - Maximum impervious value from both layers
 
-   .. dropdown:: Step 7: Use SSURGO and OpenStreetMap Data
+   .. dropdown:: Step (Option 3): Use SSURGO and OpenStreetMap Data
 
       - Use **SSURGO Downloader** to get soil components:
 
