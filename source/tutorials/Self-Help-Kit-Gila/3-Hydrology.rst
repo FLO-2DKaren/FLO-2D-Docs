@@ -312,111 +312,105 @@ Infiltration
      - ``hydraulic conductivity (XKsat)``, ``soil depth``
      - ``DTheta dry``, ``DTheta normal``, ``Psif``
 
-   .. container:: h3
 
-      Step 3: Use the 2018 Method
 
-   - Run **Green-Ampt Calculator** (2018 version).
+   .. dropdown:: Step 3: Use the 2018 Method
 
-   .. image:: ../img/shg/3/shg_hydro033.png
+      - Run **Green-Ampt Calculator** (2018 version).
 
-   - Input Fields:
+     .. image:: ../img/shg/3/shg_hydro033.png
 
-     - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
-     - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
-   - Leave ``Vegetative Cover`` unchecked.
-   - Click **OK** to calculate.
+     - Input Fields:
 
-   .. container:: h3
+      - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``
+      - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+     - Leave ``Vegetative Cover`` unchecked.
+     - Click **OK** to calculate.
+
+     .. container:: h3
 
       Step 4: Review the 2018 Manual Settings
 
-   - 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
-   - Uses area-weighted averages (no log scaling).
-   - Global and local infiltration data will be stored in ``INFIL.DAT``.
+     - 2018 method derives ``Psif`` and ``DTheta`` from XKsat.
+     - Uses area-weighted averages (no log scaling).
+     - Global and local infiltration data will be stored in ``INFIL.DAT``.
 
-   .. container:: h3
+     .. container:: h3
 
-      Step 5: Export Infiltration Data
+       Step 5: Export Infiltration Data
 
-   - Ensure **Infiltration Switch** is ON in **Control Parameters**.
+     - Ensure **Infiltration Switch** is ON in **Control Parameters**.
 
-   .. image:: ../img/shg/3/shg_hydro034.png
+     .. image:: ../img/shg/3/shg_hydro034.png
 
-   - Click **Export DAT Files**.
+     - Click **Export DAT Files**.
 
-   .. image:: ../img/shg/3/shg_hydro035.png
+     .. image:: ../img/shg/3/shg_hydro035.png
 
-   - Export only ``INFILTRATION`` and ``CONT.DAT``.
+     - Export only ``INFILTRATION`` and ``CONT.DAT``.
 
-   .. image:: ../img/shg/3/shg_hydro036.png
-
-
-   .. container:: h3
-
-      Step 6: Use the 2023 Method
-
-   - Switch calculator to use 2023 soil shapefile.
-
-   .. image:: ../img/shg/3/shg_hydro037.png
-
-   - Input Fields:
-
-     - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``, ``DTheta Normal``, ``DTheta Dry``, ``Psif``
-     - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
-
-   - Leave ``Vegetative Cover`` unchecked.
-   - 2023 method uses:
-   - Log area average for XKsat and Psif
-   - Intersected DTheta from land use-soil overlay
-   - Maximum impervious value from both layers
-
-      .. dropdown:: Infiltration - Assign Green and Ampt
-
-         .. container:: h3
-
-            Step 7: Use SSURGO and OpenStreetMap Data
-
-         - Use **SSURGO Downloader** to get soil components:
-
-           - Horizon, Fragmentation, Component layers
-
-         .. image:: ../img/shg/3/shg_hydro038.png
-
-         - Use **OSM Downloader** to generate land use polygons:
-
-          - Raster images are vectorized based on color mapping.
-
-         .. image:: ../img/shg/3/shg_hydro039.png
-
-        - Calculator reads attributes:
-
-          - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
-          - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
-
-       .. image:: ../img/shg/3/shg_hydro040.png
-
-   .. container:: h3
-
-      Step 8: Verify Infiltration Attributes
-
-   - Enable **Advanced Layers** in **FLO-2D Settings**.
-
-   .. image:: ../img/shg/3/shg_hydro041.png
-
-   - Review attributes in **infiltration_results**:
-      - ``Hydraulic Conductivity``
-      - ``Soil Suction``
-      - ``DTheta``
-      - ``Initial Abstraction``
-      - ``Impervious``
-      - ``Soil Depth``
+     .. image:: ../img/shg/3/shg_hydro036.png
 
 
-   .. image:: ../img/shg/3/shg_hydro042.png
+   .. dropdown:: Step 6: Use the 2023 Method
 
-   .. note::
-      Always **re-sort by FID** before export to avoid misaligned data rows.
+     - Switch calculator to use 2023 soil shapefile.
+
+     .. image:: ../img/shg/3/shg_hydro037.png
+
+     - Input Fields:
+
+       - Soil Layer: ``XKsat``, ``RockOutcrop``, ``SoilDepth``, ``DTheta Normal``, ``DTheta Dry``, ``Psif``
+       - Land Use: ``Initial Saturation``, ``Initial Abstraction``, ``Impervious``
+
+     - Leave ``Vegetative Cover`` unchecked.
+     - 2023 method uses:
+     - Log area average for XKsat and Psif
+     - Intersected DTheta from land use-soil overlay
+     - Maximum impervious value from both layers
+
+   .. dropdown:: Step 7: Use SSURGO and OpenStreetMap Data
+
+      - Use **SSURGO Downloader** to get soil components:
+
+        - Horizon, Fragmentation, Component layers
+
+      .. image:: ../img/shg/3/shg_hydro038.png
+
+      - Use **OSM Downloader** to generate land use polygons:
+
+        - Raster images are vectorized based on color mapping.
+
+      .. image:: ../img/shg/3/shg_hydro039.png
+
+      - Calculator reads attributes:
+
+        - Land Use: ``Initial Saturation``, ``Impervious``, ``Initial Abstraction``
+        - Soil: ``XKsat``, ``Soil Depth``, ``DTheta``, ``Psif``
+
+      .. image:: ../img/shg/3/shg_hydro040.png
+
+      .. container:: h3
+
+        Step 8: Verify Infiltration Attributes
+
+      - Enable **Advanced Layers** in **FLO-2D Settings**.
+
+      .. image:: ../img/shg/3/shg_hydro041.png
+
+      - Review attributes in **infiltration_results**:
+        - ``Hydraulic Conductivity``
+        - ``Soil Suction``
+        - ``DTheta``
+        - ``Initial Abstraction``
+        - ``Impervious``
+        - ``Soil Depth``
+
+
+      .. image:: ../img/shg/3/shg_hydro042.png
+
+      .. note::
+         Always **re-sort by FID** before export to avoid misaligned data rows.
 
 .. dropdown:: Infiltration - Assign SCS Curve Number
 
