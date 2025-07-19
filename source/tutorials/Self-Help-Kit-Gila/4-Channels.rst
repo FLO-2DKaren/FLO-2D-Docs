@@ -78,7 +78,7 @@ Step 4: Add Cross-Sections
 - Digitize cross-sections from **Left to Right bank**.
 - Ensure both ends and the crossing lie within the same grid element.
 
-.. image:: ../img/shg/4/shg_chan005.jpg
+.. image:: ../img/shg/4/shg_chan005.gif
 
 Step 5: Save and Schematize
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
