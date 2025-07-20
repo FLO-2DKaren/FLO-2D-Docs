@@ -129,25 +129,30 @@ to complete the project.</p>
 <h2>Backup and Reload<a class="headerlink" href="#backup-and-reload" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/XrEn2obremk?si=NEYQSLH6de5jA-rT"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.</p>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson introduces how to begin working with channels in FLO-2D.
+The first step is creating a project backup and preparing for channel data input.</p>
 </section>
 <section id="build-channel-and-schematize">
 <h2>Build Channel and Schematize<a class="headerlink" href="#build-channel-and-schematize" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x1QEP2ggYT0?si=j14aMbvgx_k7jmTq"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data. You will digitize channel banks and cross-sections, schematize them, and validate the geometry.</p>
-<section id="step-1-load-guidance-layers">
-<h3>Step 1: Load Guidance Layers<a class="headerlink" href="#step-1-load-guidance-layers" title="Link to this heading"></a></h3>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson demonstrates how to manually create channels in FLO-2D in the absence of HEC-RAS data
+The process involves digitizing channel banks and cross-sections, followed by schematization and geometry validation.</p>
+<section id="step-1-load-templates-layers">
+<h3>Step 1: Load Templates Layers<a class="headerlink" href="#step-1-load-templates-layers" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Import reference layers (left bank, right bank, cross-sections).</p></li>
 </ul>
 <img alt="../../_images/shg_chan001.jpg" src="../../_images/shg_chan001.jpg" />
 <ul class="simple">
 <li><p>Use these layers as <strong>visual guides only</strong>.</p></li>
-<li><p>Update colors for visibility:
-- Left Bank: Cyan
-- Right Bank: Magenta
-- Cross-Sections: Navy</p></li>
+<li><p>Update colors for visibility:</p>
+<ul>
+<li><p>Left Bank: Cyan</p></li>
+<li><p>Right Bank: Magenta</p></li>
+<li><p>Cross-Sections: Navy</p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_chan002.jpg" src="../../_images/shg_chan002.jpg" />
 </section>
@@ -165,7 +170,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <img alt="../../_images/shg_chan004.jpg" src="../../_images/shg_chan004.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Use satellite imagery and elevation contours to align your lines.
+<p>Use satellite imagery and elevation contours to align the lines.
 Use consistent start and end locations across segments.</p>
 </div>
 </section>
@@ -183,11 +188,7 @@ Use consistent start and end locations across segments.</p>
 <li><p>Digitize cross-sections from <strong>Left to Right bank</strong>.</p></li>
 <li><p>Ensure both ends and the crossing lie within the same grid element.</p></li>
 </ul>
-<img alt="../../_images/shg_chan005.jpg" src="../../_images/shg_chan005.jpg" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You only need ~6 cross-sections per channel segment in uniform channels.</p>
-</div>
+<img alt="../../_images/shg_chan005.gif" src="../../_images/shg_chan005.gif" />
 </section>
 <section id="step-5-save-and-schematize">
 <h3>Step 5: Save and Schematize<a class="headerlink" href="#step-5-save-and-schematize" title="Link to this heading"></a></h3>
@@ -214,10 +215,6 @@ Use consistent start and end locations across segments.</p>
 <li><p>Open the <strong>Log Messages Panel</strong>.</p></li>
 <li><p>You’ll see a count of cross-sections per segment and interpolated ones added.</p></li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Fix spacing and other geometry refinements in the next step.</p>
-</div>
 </section>
 </section>
 <section id="sample-elevation-and-schematize">
@@ -257,40 +254,50 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p>Elevation is sampled from the <strong>first to last vertex</strong> of each cross-section.</p></li>
 </ul>
 </section>
-<section id="step-4-review-cross-section-profiles">
-<h3>Step 4: Review Cross-Section Profiles<a class="headerlink" href="#step-4-review-cross-section-profiles" title="Link to this heading"></a></h3>
+<section id="step-4-review-and-repair-bad-cross-section-profiles">
+<h3>Step 4: Review and Repair Bad Cross-Section Profiles<a class="headerlink" href="#step-4-review-and-repair-bad-cross-section-profiles" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Use the <strong>scroll wheel</strong> to cycle through each profile.</p></li>
 <li><p>Look for elevation anomalies or errors (jagged shapes, false dips).</p></li>
-<li><p>Adjust vertices using the <strong>Vertex Tool</strong>:
-- Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
-- Click <strong>Sample Single</strong> to resample after adjustment.</p></li>
+</ul>
+<img alt="../../_images/shg_chan054.jpg" src="../../_images/shg_chan054.jpg" />
+<img alt="../../_images/shg_chan055.jpg" src="../../_images/shg_chan055.jpg" />
+<ul>
+<li><p>For bad cross-section profiles, try:</p>
+<ul>
+<li><p>Adjust Left/Right bank vertices using the <strong>Vertex Tool</strong>:</p>
+<ul class="simple">
+<li><p>Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).</p></li>
+<li><p>Click <strong>Sample Single</strong> to resample after adjustment.</p></li>
 </ul>
 <img alt="../../_images/shg_chan012.jpg" src="../../_images/shg_chan012.jpg" />
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use Enter to confirm sampling instead of clicking “Yes” repeatedly.</p>
-</div>
-</section>
-<section id="step-5-repair-bad-cross-sections">
-<h3>Step 5: Repair Bad Cross-Sections<a class="headerlink" href="#step-5-repair-bad-cross-sections" title="Link to this heading"></a></h3>
+<img alt="../../_images/shg_chan057.jpg" src="../../_images/shg_chan057.jpg" />
+</li>
+<li><p>If a cross-section samples poor data:</p>
 <ul class="simple">
-<li><p>If a cross-section samples poor data:
-- Move the vertex away from overlapping features (like inlets or retaining walls).
-- Resample and check again.</p></li>
+<li><p>Move the vertex away from overlapping features or boundary limits (like inlets or retaining walls).</p></li>
 <li><p>Keep cross-sections <strong>perpendicular</strong> and well-positioned.</p></li>
-<li><p>Avoid overlapping nearby features or boundary limits.</p></li>
+<li><p>Resample and check again.</p></li>
+</ul>
+<img alt="../../_images/shg_chan056.jpg" src="../../_images/shg_chan056.jpg" />
+</li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="step-6-add-missing-cross-sections">
 <h3>Step 6: Add Missing Cross-Sections<a class="headerlink" href="#step-6-add-missing-cross-sections" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>If a <strong>transition is missing</strong>, add a cross-section manually:
-- Use the <strong>Cross-Section Tool</strong>
-- Draw a new line and click <strong>Save</strong>
-- Rename it (e.g., “new”) before schematizing
-- Run <strong>Schematize</strong> to properly place it in order</p></li>
+<li><p>If a <strong>transition is missing</strong>, add a cross-section manually:</p>
+<ul>
+<li><p>Use the <strong>Cross-Section Tool</strong></p></li>
+<li><p>Draw a new line and click <strong>Save</strong></p></li>
+<li><p>Rename it (e.g., “new”) before schematizing</p></li>
+<li><p>Run <strong>Schematize</strong> to properly place it in order</p></li>
 </ul>
+</li>
+</ul>
+<img alt="../../_images/shg_chan057.gif" src="../../_images/shg_chan057.gif" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can delete schema data before re-schematizing if needed.</p>
@@ -306,11 +313,15 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <h3>Step 1: Review Bank Alignment<a class="headerlink" href="#step-1-review-bank-alignment" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Use the <strong>Vertex Tool</strong> to adjust left and right bank lines.</p></li>
-<li><p>Goals:
-- Avoid backyards and buildings
-- Ensure the channel spans <strong>at least three grid elements</strong>
-- Maintain <strong>crossing lines</strong> between left and right banks</p></li>
+<li><p>Goals:</p>
+<ul>
+<li><p>Avoid backyards and buildings</p></li>
+<li><p>Ensure the channel spans <strong>at least three grid elements</strong></p></li>
+<li><p>Maintain <strong>crossing lines</strong> between left and right banks</p></li>
 </ul>
+</li>
+</ul>
+<img alt="../../_images/shg_chan057.jpg" src="../../_images/shg_chan057.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Keep banks away from grid edges and channel transitions if possible.</p>
@@ -331,9 +342,12 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <section id="step-3-use-the-geometry-checker">
 <h3>Step 3: Use the Geometry Checker<a class="headerlink" href="#step-3-use-the-geometry-checker" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>After interpolation, click <strong>Check Channel Geometry</strong>:
-- It will verify minimum spacing and floodplain surface area.
-- Click error messages to locate problematic cross-sections or elements.</p></li>
+<li><p>After interpolation, click <strong>Check Channel Geometry</strong>:</p>
+<ul>
+<li><p>It will verify minimum spacing and floodplain surface area.</p></li>
+<li><p>Click error messages to locate problematic cross-sections or elements.</p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_chan014.jpg" src="../../_images/shg_chan014.jpg" />
 <ul class="simple">
@@ -361,7 +375,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <img alt="../../_images/shg_chan016.jpg" src="../../_images/shg_chan016.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>You’re only validating <strong>channel geometry</strong>, not full model results.
+<p>This simulation is only validating <strong>channel geometry</strong>, not full model results.
 A successful run here indicates channel alignment and schematization passed.</p>
 </div>
 </section>
@@ -370,7 +384,8 @@ A successful run here indicates channel alignment and schematization passed.</p>
 <h2>Add a Boundary Control<a class="headerlink" href="#add-a-boundary-control" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T-GyXsFokIA?si=WUSj7abEMNxjxrkm"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, you’ll assign <strong>inflow and outflow boundary conditions</strong> to your FLO-2D channel model using both steady and time-series hydrographs.</p>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, you’ll assign <strong>inflow and outflow boundary conditions</strong> to your FLO-2D channel model
+using both steady and time-series hydrographs.</p>
 <section id="step-1-create-upstream-inflow-point">
 <h3>Step 1: Create Upstream Inflow Point<a class="headerlink" href="#step-1-create-upstream-inflow-point" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -439,9 +454,11 @@ Paste values directly into the hydrograph table.</p>
 <blockquote>
 <div><img alt="../../_images/shg_chan025.jpg" src="../../_images/shg_chan025.jpg" />
 </div></blockquote>
-<p>Files updated:
-- <code class="docutils literal notranslate"><span class="pre">INFLOW.DAT</span></code>: now includes the new stepped hydrograph.
-- <code class="docutils literal notranslate"><span class="pre">CHAN.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANBANK.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANCOND.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANROUGH.DAT</span></code>: standard channel outputs.</p>
+<p>Files updated:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">INFLOW.DAT</span></code>: now includes the new stepped hydrograph.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CHAN.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANBANK.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANCOND.DAT</span></code>, <code class="docutils literal notranslate"><span class="pre">CHANROUGH.DAT</span></code>: standard channel outputs.</p></li>
+</ul>
 </section>
 <section id="step-5-run-a-simulation">
 <h3>Step 5: Run a Simulation<a class="headerlink" href="#step-5-run-a-simulation" title="Link to this heading"></a></h3>
@@ -453,7 +470,7 @@ Paste values directly into the hydrograph table.</p>
 <img alt="../../_images/shg_chan016.jpg" src="../../_images/shg_chan016.jpg" />
 </div></blockquote>
 <ul class="simple">
-<li><p>If the simulation starts successfully, your boundary conditions are valid.</p></li>
+<li><p>If the simulation starts successfully, the boundary conditions are valid.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -466,10 +483,9 @@ If the flow overtops the channel, it will exit via floodplain outflow.</p>
 <h2>Add Culverts<a class="headerlink" href="#add-culverts" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qioj94sbAgA?si=5xyNs9hd0ld66E9x"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson covers how to define and integrate culvert structures (CTs) into your FLO-2D channel using rating tables or the generalized culvert equation.<section id="step-1-identify-culvert-locations">
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson covers how to define and integrate culvert structures (CTs) into your FLO-2D channel using
+rating tables or the generalized culvert equation.</p>
+<section id="step-1-identify-culvert-locations">
 <h3>Step 1: Identify Culvert Locations<a class="headerlink" href="#step-1-identify-culvert-locations" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Stop your current simulation if you observe <strong>unexpected overtopping</strong> in channels.</p></li>
@@ -479,19 +495,18 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <ul class="simple">
 <li><p>Draw each structure from the <strong>left bank</strong> of the upstream channel to the <strong>left bank</strong> of the downstream channel.</p></li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use left-click, left-click, and right-click to define the start and end.</p>
-</div>
 </section>
 <section id="step-2-define-structure-properties">
 <h3>Step 2: Define Structure Properties<a class="headerlink" href="#step-2-define-structure-properties" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Click <strong>Save</strong> after drawing all structures.</p></li>
 <li><p>Name each structure (e.g., <code class="docutils literal notranslate"><span class="pre">Grnway1</span></code>, <code class="docutils literal notranslate"><span class="pre">Grnway2</span></code>). Avoid spaces.</p></li>
-<li><p>Set:
-- Type: <strong>Channel to Channel</strong>
-- Method: <strong>Rating Table</strong></p></li>
+<li><p>Set:</p>
+<ul>
+<li><p>Type: <strong>Channel to Channel</strong></p></li>
+<li><p>Method: <strong>Rating Table</strong></p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_chan028.jpg" src="../../_images/shg_chan028.jpg" />
 </section>
@@ -513,16 +528,19 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <img alt="../../_images/shg_chan033.jpg" src="../../_images/shg_chan033.jpg" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can alternatively use the <strong>Generalized CT Equation</strong> and define geometry and length manually.</p>
+<p>You can alternatively use the <strong>Generalized Culvert Equation</strong> and define geometry and length manually.</p>
 </div>
 </section>
 <section id="step-4-tailwater-controls">
 <h3>Step 4: Tailwater Controls<a class="headerlink" href="#step-4-tailwater-controls" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Options:
-1. <strong>No Tailwater Control</strong>: Only headwater affects flow (e.g., flap gates).
-2. <strong>Submergence Applied</strong>: Tailwater reduces discharge, but no reverse flow.
-3. <strong>Submergence with Reverse Flow</strong>: Allows flow to reverse under high tailwater.</p></li>
+<li><p>Options:</p>
+<ol class="arabic simple">
+<li><p><strong>No Tailwater Control</strong>: Only headwater affects flow (e.g., flap gates).</p></li>
+<li><p><strong>Submergence Applied</strong>: Tailwater reduces discharge, but no reverse flow.</p></li>
+<li><p><strong>Submergence with Reverse Flow</strong>: Allows flow to reverse under high tailwater.</p></li>
+</ol>
+</li>
 <li><p>Set to <strong>No Tailwater Control</strong> for this basic model (warnings may occur).</p></li>
 </ul>
 <img alt="../../_images/shg_chan034.jpg" src="../../_images/shg_chan034.jpg" />
@@ -531,7 +549,8 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <h3>Step 5: Optional Parameters<a class="headerlink" href="#step-5-optional-parameters" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Head Reference Elevation: Only used if a weir controls flow onset.</p></li>
-<li><p>Length and Diameter: Required only if using <strong>Generalized Equation</strong>, not rating tables.</p></li>
+<li><p>Length and Diameter: Required only if using <strong>Generalized Equation</strong> or long culverts in excess of 500 ft,
+not rating tables.</p></li>
 </ul>
 <img alt="../../_images/shg_chan035.jpg" src="../../_images/shg_chan035.jpg" />
 </section>
@@ -554,9 +573,12 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <h3>Step 7: Export and Review Files<a class="headerlink" href="#step-7-export-and-review-files" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Export DAT files.</p></li>
-<li><p>Files updated:
-- <code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>: Structure switch activated.
-- <code class="docutils literal notranslate"><span class="pre">HYSTRUCT.DAT</span></code>: Lists all culvert definitions and rating tables.</p></li>
+<li><p>Files updated:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>: Structure switch activated.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HYSTRUCT.DAT</span></code>: Lists all culvert definitions and rating tables.</p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_chan039.jpg" src="../../_images/shg_chan039.jpg" />
 <img alt="../../_images/shg_chan040.jpg" src="../../_images/shg_chan040.jpg" />
@@ -585,119 +607,8 @@ This lesson covers how to define and integrate culvert structures (CTs) into you
 <h2>Channel Summary and Results<a class="headerlink" href="#channel-summary-and-results" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JQNBCUqOKbY?si=_HqHJOdV7lfZCtWP"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson shows how to view simulation outputs, map flood depths and elevations, and evaluate hydraulic structure performance in FLO-2D.<section id="step-1-prepare-the-results-group">
-<h3>Step 1: Prepare the Results Group<a class="headerlink" href="#step-1-prepare-the-results-group" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Create a new group in QGIS called <strong>Results</strong>.</p></li>
-</ul>
-<img alt="../../_images/shg_chan042.jpg" src="../../_images/shg_chan042.jpg" />
-<ul class="simple">
-<li><p>Save your project before loading large output files.</p></li>
-<li><p>You can load results into the same project or in a new one for post-processing.</p></li>
-</ul>
-</section>
-<section id="step-2-use-the-rasterizer-tool">
-<h3>Step 2: Use the Rasterizer Tool<a class="headerlink" href="#step-2-use-the-rasterizer-tool" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Open the <strong>Rasterizer Tool</strong> from the FLO-2D toolbar.</p></li>
-</ul>
-<img alt="../../_images/shg_chan043.jpg" src="../../_images/shg_chan043.jpg" />
-<ul class="simple">
-<li><p>Select output files (e.g., <code class="docutils literal notranslate"><span class="pre">DEPTH.OUT</span></code>, <code class="docutils literal notranslate"><span class="pre">FINDEPTH.OUT</span></code>, <code class="docutils literal notranslate"><span class="pre">MAXWSE.OUT</span></code>).</p></li>
-</ul>
-<p>Examples:
-- <cite>DEPTH.OUT</cite> → <strong>max_depth</strong></p>
-<img alt="../../_images/shg_chan044.jpg" src="../../_images/shg_chan044.jpg" />
-<img alt="../../_images/shg_chan045.jpg" src="../../_images/shg_chan045.jpg" />
-<ul class="simple">
-<li><p><cite>FINDEPTH.OUT</cite> → <strong>final_depth</strong></p></li>
-</ul>
-<img alt="../../_images/shg_chan046.jpg" src="../../_images/shg_chan046.jpg" />
-<img alt="../../_images/shg_chan047.jpg" src="../../_images/shg_chan047.jpg" />
-<ul class="simple">
-<li><p><cite>MAXWSELEV.OUT</cite> → <strong>max_wselv</strong></p></li>
-</ul>
-<img alt="../../_images/shg_chan048.jpg" src="../../_images/shg_chan048.jpg" />
-<img alt="../../_images/shg_chan049.jpg" src="../../_images/shg_chan049.jpg" />
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Output files must contain:
-- Grid element number
-- X and Y coordinates
-- The data value (e.g., depth or elevation)</p>
-</div>
-</section>
-<section id="step-3-visualize-raster-layers">
-<h3>Step 3: Visualize Raster Layers<a class="headerlink" href="#step-3-visualize-raster-layers" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Turn off the grid and open the <strong>Symbology</strong> of the raster layer.</p></li>
-<li><p>Apply a minimum display threshold (e.g., 0.1 ft) to improve visibility.</p></li>
-</ul>
-<img alt="../../_images/shg_chan050.jpg" src="../../_images/shg_chan050.jpg" />
-<ul class="simple">
-<li><p>Identify areas of pooling, drainage issues, or channel performance.</p></li>
-</ul>
-</section>
-<section id="step-4-difference-mapping">
-<h3>Step 4: Difference Mapping<a class="headerlink" href="#step-4-difference-mapping" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Compare raster layers:
-- Input: <strong>max_depth</strong> minus <strong>final_depth</strong></p></li>
-</ul>
-<img alt="../../_images/shg_chan051.jpg" src="../../_images/shg_chan051.jpg" />
-<img alt="../../_images/shg_chan052.jpg" src="../../_images/shg_chan052.jpg" />
-<ul class="simple">
-<li><p>Output layer shows:
-- <strong>Red</strong> = Max &gt; Final (not fully drained)
-- <strong>Blue</strong> = Max &lt; Final (anomaly)</p></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Be sure your simulation ran long enough for proper drainage. Short runs may skew results.</p>
-</div>
-</section>
-<section id="step-5-profile-tool-analysis">
-<h3>Step 5: Profile Tool Analysis<a class="headerlink" href="#step-5-profile-tool-analysis" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Use the <strong>Profile Tool</strong> to compare elevation and max water surface elevation.</p></li>
-<li><p>Set base elevation (black) and max WSE (blue).</p></li>
-<li><p>Draw profiles across basins and channels to check for proper drainage and overtopping.</p></li>
-</ul>
-<img alt="../../_images/shg_chan053.jpg" src="../../_images/shg_chan053.jpg" />
-</section>
-<section id="step-6-hydraulic-structure-results">
-<h3>Step 6: Hydraulic Structure Results<a class="headerlink" href="#step-6-hydraulic-structure-results" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Open the <strong>Result Viewer</strong>.</p></li>
-<li><p>Turn on FLO-2D results tables.</p></li>
-<li><p>Click on hydraulic structures to view:
-- Discharge
-- Depth
-- Velocity
-- Flow area
-- Shear stress
-- Energy slope
-- And more</p></li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Use this to validate rating tables and confirm structure performance against your stepped hydrograph.</p>
-</div>
-</section>
-<section id="step-7-interpretation-and-qa-qc">
-<h3>Step 7: Interpretation and QA/QC<a class="headerlink" href="#step-7-interpretation-and-qa-qc" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Confirm the system drained correctly.</p></li>
-<li><p>Check for:
-- Trapped water
-- Overtopping
-- Unrealistic velocity or discharge spikes</p></li>
-<li><p>Review rating table discharge curves and cross-section data for stability.</p></li>
-</ul>
-</section>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This video shows how to view simulation outputs, map flood depths and elevations,
+and evaluate hydraulic structure performance in FLO-2D.</p>
 </section>
 </section>
 

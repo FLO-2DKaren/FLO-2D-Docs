@@ -133,9 +133,6 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p>Open the <strong>QGIS application</strong>.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro001.png" src="../../_images/shg_hydro001.png" />
-<ul class="simple">
-<li><p>You can pin QGIS to your Start Menu for quicker access.</p></li>
-</ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>To avoid searching for QGIS every time, right-click the QGIS icon and select <strong>“Pin to Start.”</strong></p>
@@ -144,18 +141,21 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <section id="step-2-open-your-project">
 <h3>Step 2: Open Your Project<a class="headerlink" href="#step-2-open-your-project" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>If QGIS opens your most recent project, simply click on it in the <strong>Recent Projects</strong> list.</p></li>
+<li><p>If QGIS opens the most recent project, simply click on it in the <strong>Recent Projects</strong> list.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro002.png" src="../../_images/shg_hydro002.png" />
 <ul class="simple">
-<li><p>If the project was moved and no longer loads:
-- Go to <strong>Plugins &gt; FLO-2D &gt; Open FLO-2D Project</strong>.
-- Navigate to your project <cite>.gpkg</cite> file (GeoPackage) and select it.</p></li>
+<li><p>If the project was moved and no longer loads:</p>
+<ul>
+<li><p>Go to <strong>Plugins &gt; FLO-2D &gt; Open FLO-2D Project</strong>.</p></li>
+<li><p>Navigate to the project <cite>.gpkg</cite> file (GeoPackage) and select it.</p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_hydro003.png" src="../../_images/shg_hydro003.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The GeoPackage contains your entire project, including the <cite>.qgz</cite> file.</p>
+<p>The GeoPackage contains the entire project, including the <cite>.qgz</cite> file.</p>
 </div>
 </section>
 </section>
@@ -167,7 +167,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <section id="step-1-navigate-the-map">
 <h3>Step 1: Navigate the Map<a class="headerlink" href="#step-1-navigate-the-map" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Use your <strong>mouse scroll wheel</strong> to zoom in and out.</p></li>
+<li><p>Use the <strong>mouse scroll wheel</strong> to zoom in and out.</p></li>
 <li><p>Click and drag with the <strong>middle mouse button (wheel)</strong> to pan the map view.</p></li>
 </ul>
 </section>
@@ -216,19 +216,17 @@ click the <strong>Add Point</strong> button again to save it.</p></li>
 <img alt="../../_images/shg_hydro011.png" src="../../_images/shg_hydro011.png" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Do not select <strong>Channel</strong> unless modeling a direct stream. This is surface runoff entering the basin.</p>
+<p>Do not select <strong>Channel</strong> unless modeling a <strong>1-D FLO-2D</strong> channel. This is surface runoff entering the basin.</p>
 </div>
 </section>
 <section id="step-5-paste-hydrograph-data">
 <h3>Step 5: Paste Hydrograph Data<a class="headerlink" href="#step-5-paste-hydrograph-data" title="Link to this heading"></a></h3>
 <ul>
-<li><p>Open the provided hydrograph data file from <strong>Lesson 1 Data</strong>.
-- Choose the <cite>100yr 6hr</cite> inflow file.</p>
+<li><p>Open the provided hydrograph data file from <strong>Lesson 1 Data</strong>.</p></li>
+<li><p>Choose the <cite>100yr 6hr</cite> inflow file.</p>
 <img alt="../../_images/shg_hydro012.png" src="../../_images/shg_hydro012.png" />
-<ul class="simple">
-<li><p>Time should be in hours on the <strong>left</strong> and discharge (cfs) on the <strong>right</strong>.</p></li>
-</ul>
 </li>
+<li><p>Time should be in hours on the <strong>left</strong> and discharge (cfs) on the <strong>right</strong>.</p></li>
 <li><p>Select all data with <strong>Ctrl+A</strong>, then copy with <strong>Ctrl+C</strong>.</p></li>
 <li><p>Close the file with <strong>Ctrl+W</strong>.</p></li>
 <li><p>In the QGIS Time Series Editor, click the first cell and paste using <strong>Ctrl+V</strong>.</p></li>
@@ -236,7 +234,7 @@ click the <strong>Add Point</strong> button again to save it.</p></li>
 <img alt="../../_images/shg_hydro013.png" src="../../_images/shg_hydro013.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>FLO-2D automatically uses <strong>cubic feet per second</strong> for discharge. Use metric units only if your model is in metric.</p>
+<p>FLO-2D uses <strong>cubic feet per second</strong> for discharge unless the metric units switch is on, in which case it uses <strong>cubic meters per second</strong>.</p>
 </div>
 </section>
 <section id="step-6-schematize-the-data">
@@ -265,10 +263,7 @@ click the <strong>Add Point</strong> button again to save it.</p></li>
 <h2>Assign Rainfall<a class="headerlink" href="#assign-rainfall" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IKeZAli-2yA?si=ACNEjxC64o8Ltyq9"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>In this lesson, we assign rainfall to a FLO-2D project.
-You will learn how to use the <strong>Rain Editor</strong>, apply <strong>uniform rainfall</strong>, and optionally sample <strong>spatially
-variable rainfall</strong> from NOAA Atlas data.</p>
-<section id="step-1-open-the-rain-editor">
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><section id="step-1-open-the-rain-editor">
 <h3>Step 1: Open the Rain Editor<a class="headerlink" href="#step-1-open-the-rain-editor" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>In <strong>FLO-2D Panel</strong>, click <strong>Collapse All</strong> to clear any open panels.</p></li>
@@ -319,44 +314,49 @@ Choose the <strong>first pattern</strong> from the list.</p></li>
 <p class="admonition-title">Tip</p>
 <p>Rain on grid works well for small projects. For large areas, continue to <strong>Step 4</strong>.</p>
 </div>
-</section>
-<section id="step-4-sample-a-rainfall-raster-optional">
-<h3>Step 4: Sample a Rainfall Raster (Optional)<a class="headerlink" href="#step-4-sample-a-rainfall-raster-optional" title="Link to this heading"></a></h3>
-<p>You can use a <strong>NOAA Atlas 14 rainfall raster</strong> to apply <strong>spatially variable rainfall</strong>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 4: Sample a Rainfall Raster (Optional)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<ul>
+<li><p class="sd-card-text"><strong>NOAA Atlas 14 rainfall raster</strong> cab be used to apply <strong>spatially variable rainfall</strong> as described in the following steps.</p>
 <ul class="simple">
-<li><p>Drag your <strong>24-hour rainfall raster</strong> into QGIS.</p></li>
-<li><p>Right-click the layer &gt; <strong>Zoom to Layer</strong>.</p></li>
-<li><p>Check the data: it should be in inches and match your coordinate system.</p></li>
+<li><p class="sd-card-text">Drag the <strong>24-hour rainfall raster</strong> into QGIS.</p></li>
+<li><p class="sd-card-text">Right-click the layer &gt; <strong>Zoom to Layer</strong>.</p></li>
+<li><p class="sd-card-text">Check the data: it should be in inches and match the coordinate system in use.</p></li>
 </ul>
-<img alt="../../_images/shg_hydro023.png" src="../../_images/shg_hydro023.png" />
-<p>To apply the raster:</p>
+<blockquote>
+<div><img alt="../../_images/shg_hydro023.png" src="../../_images/shg_hydro023.png" />
+</div></blockquote>
+</li>
+<li><p class="sd-card-text">To apply the raster:</p>
 <ul class="simple">
-<li><p>Go to the <strong>Rain Editor</strong>.</p></li>
-<li><p>Check <strong>Sample from Raster</strong>.</p></li>
+<li><p class="sd-card-text">Go to the <strong>Rain Editor</strong>.</p></li>
+<li><p class="sd-card-text">Check <strong>Sample from Raster</strong>.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro024.png" src="../../_images/shg_hydro024.png" />
 <ul class="simple">
-<li><p>Select your raster file.</p></li>
-<li><p>Leave <strong>“Fill NoData”</strong> unchecked if not needed.</p></li>
-<li><p>Click <strong>OK</strong> and confirm.</p></li>
+<li><p class="sd-card-text">Select <strong>NOAA Atlas 14 rainfall</strong> raster file.</p></li>
+<li><p class="sd-card-text">Leave <strong>“Fill NoData”</strong> unchecked if not needed.</p></li>
+<li><p class="sd-card-text">Click <strong>OK</strong> and confirm.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro025.png" src="../../_images/shg_hydro025.png" />
-<ul class="simple">
-<li><p>QGIS will now <strong>sample rainfall values</strong> from the raster to each grid element based on spatial location.</p></li>
+</li>
+<li><p class="sd-card-text">QGIS will now <strong>sample rainfall values</strong> from the raster to each grid element based on spatial location.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro026.png" src="../../_images/shg_hydro026.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The sampling uses the centroid of each grid element and computes a <strong>point reduction factor</strong>
+<p class="sd-card-text">The sampling uses the centroid of each grid element and computes a <strong>point reduction factor</strong>
 based on the maximum raster value. It is <strong>not</strong> a depth-area reduction, but rather a <strong>point-based</strong>
 rainfall adjustment.</p>
 </div>
-</section>
+</div>
+</details></section>
 <section id="step-5-export-rainfall-data">
 <h3>Step 5: Export Rainfall Data<a class="headerlink" href="#step-5-export-rainfall-data" title="Link to this heading"></a></h3>
 <p>Check <cite>Control Parameters</cite>:</p>
 <ul class="simple">
-<li><p>The rainfall switch is turned on automatically when you check <strong>Simulate Rainfall</strong>. Click <strong>Save</strong>.</p></li>
+<li><p>The rainfall switch is turned on automatically when <strong>Simulate Rainfall</strong> is checked. Click <strong>Save</strong>.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro027.png" src="../../_images/shg_hydro027.png" />
 <ul class="simple">
@@ -364,27 +364,9 @@ rainfall adjustment.</p>
 </ul>
 <img alt="../../_images/shg_hydro028.png" src="../../_images/shg_hydro028.png" />
 <ul class="simple">
-<li><p>This will generate a <code class="docutils literal notranslate"><span class="pre">RAIN.DAT</span></code> file in your export folder.</p></li>
+<li><p>This will generate a <code class="docutils literal notranslate"><span class="pre">RAIN.DAT</span></code> file in the export folder.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro029.png" src="../../_images/shg_hydro029.png" />
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>If <code class="docutils literal notranslate"><span class="pre">RAIN.DAT</span></code> is missing an asterisk, your data has been successfully exported.</p>
-</div>
-<p>Inside the <code class="docutils literal notranslate"><span class="pre">RAIN.DAT</span></code> file:
-- <code class="docutils literal notranslate"><span class="pre">0</span></code> = uniform rainfall
-- <code class="docutils literal notranslate"><span class="pre">1</span></code> = rain-on-building (not used here)
-- Total rainfall is listed
-- A distribution pattern is defined
-- Each grid element gets a <strong>reduction factor</strong> based on the raster (e.g., <code class="docutils literal notranslate"><span class="pre">0.999</span></code>)</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Raster values are sampled, warped to match the grid, and averaged by pixel intersection. A <strong>ratio</strong> is calculated between each grid cell’s rainfall and the maximum value, generating a point reduction factor.</p>
-</div>
-</section>
-<section id="wrap-up">
-<h3>Wrap-up<a class="headerlink" href="#wrap-up" title="Link to this heading"></a></h3>
-<p>You’ve now assigned both <strong>uniform</strong> and <strong>spatially variable</strong> rainfall to your project. When ready, run your model to simulate rainfall input across the grid.</p>
 </section>
 </section>
 <section id="infiltration">
@@ -399,8 +381,8 @@ rainfall adjustment.</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PE9vvuW7p-A?si=O2bP9jhPCbZUWS10"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through the <strong>Green-Ampt infiltration method</strong> in FLO-2D,
-including the 2018 and 2023 Flood Control District methods and the SERGO/OSM-based method.
-You’ll learn how to set global parameters, apply land use and soil data, and export Green-Ampt data files.</p>
+including the 2018 and 2023 Flood Control District methods and the SSURGO/OSM-based method.
+It covers how to set global parameters, apply land use and soil data, and export Green-Ampt data files.</p>
 <div class="h3 docutils container">
 <p class="sd-card-text">Step 1: Set Global Parameters</p>
 </div>
@@ -413,17 +395,6 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 </ul>
 <img alt="../../_images/shg_hydro031.png" src="../../_images/shg_hydro031.png" />
 <ul class="simple">
-<li><p class="sd-card-text">Recommended default values (inches/hour, inches):</p>
-<ul>
-<li><p class="sd-card-text">Initial Abstraction: <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
-<li><p class="sd-card-text">Porosity: <code class="docutils literal notranslate"><span class="pre">0.4</span></code></p></li>
-<li><p class="sd-card-text">Hydraulic Conductivity: <code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></li>
-<li><p class="sd-card-text">Initial Saturation: <code class="docutils literal notranslate"><span class="pre">0.3</span></code></p></li>
-<li><p class="sd-card-text">Final Saturation: <code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></li>
-<li><p class="sd-card-text">Soil Suction: <code class="docutils literal notranslate"><span class="pre">4</span></code></p></li>
-<li><p class="sd-card-text">Soil Depth: Set to <code class="docutils literal notranslate"><span class="pre">1</span></code> for limited depth (set to <code class="docutils literal notranslate"><span class="pre">0</span></code> for unlimited).</p></li>
-</ul>
-</li>
 <li><p class="sd-card-text">Click <strong>OK</strong>.</p></li>
 </ul>
 <div class="h3 docutils container">
@@ -439,34 +410,32 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 - <code class="docutils literal notranslate"><span class="pre">hydraulic</span> <span class="pre">conductivity</span> <span class="pre">(XKsat)</span></code>, <code class="docutils literal notranslate"><span class="pre">soil</span> <span class="pre">depth</span></code>
 - <code class="docutils literal notranslate"><span class="pre">DTheta</span> <span class="pre">dry</span></code>, <code class="docutils literal notranslate"><span class="pre">DTheta</span> <span class="pre">normal</span></code>, <code class="docutils literal notranslate"><span class="pre">Psif</span></code></p></li>
 </ul>
-<div class="h3 docutils container">
-<p class="sd-card-text">Step 3: Use the 2018 Method</p>
-</div>
-<ul class="simple">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 3 (Option 1): Use the 2018 Method</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<blockquote>
+<div><ul class="simple">
 <li><p class="sd-card-text">Run <strong>Green-Ampt Calculator</strong> (2018 version).</p></li>
 </ul>
+</div></blockquote>
 <img alt="../../_images/shg_hydro033.png" src="../../_images/shg_hydro033.png" />
-<ul class="simple">
-<li><p class="sd-card-text">Input Fields:</p>
 <ul>
+<li><p class="sd-card-text">Input Fields:</p>
+<ul class="simple">
 <li><p class="sd-card-text">Soil Layer: <code class="docutils literal notranslate"><span class="pre">XKsat</span></code>, <code class="docutils literal notranslate"><span class="pre">RockOutcrop</span></code>, <code class="docutils literal notranslate"><span class="pre">SoilDepth</span></code></p></li>
 <li><p class="sd-card-text">Land Use: <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Saturation</span></code>, <code class="docutils literal notranslate"><span class="pre">Initial</span> <span class="pre">Abstraction</span></code>, <code class="docutils literal notranslate"><span class="pre">Impervious</span></code></p></li>
+<li><p class="sd-card-text">Leave <code class="docutils literal notranslate"><span class="pre">Vegetative</span> <span class="pre">Cover</span></code> unchecked.</p></li>
 </ul>
 </li>
-<li><p class="sd-card-text">Leave <code class="docutils literal notranslate"><span class="pre">Vegetative</span> <span class="pre">Cover</span></code> unchecked.</p></li>
 <li><p class="sd-card-text">Click <strong>OK</strong> to calculate.</p></li>
-</ul>
-<div class="h3 docutils container">
-<p class="sd-card-text">Step 4: Review the 2018 Manual Settings</p>
-</div>
+<li><p class="sd-card-text">Review the 2018 Manual Settings:</p>
 <ul class="simple">
 <li><p class="sd-card-text">2018 method derives <code class="docutils literal notranslate"><span class="pre">Psif</span></code> and <code class="docutils literal notranslate"><span class="pre">DTheta</span></code> from XKsat.</p></li>
 <li><p class="sd-card-text">Uses area-weighted averages (no log scaling).</p></li>
 <li><p class="sd-card-text">Global and local infiltration data will be stored in <code class="docutils literal notranslate"><span class="pre">INFIL.DAT</span></code>.</p></li>
 </ul>
-<div class="h3 docutils container">
-<p class="sd-card-text">Step 5: Export Infiltration Data</p>
-</div>
+</li>
+<li><p class="sd-card-text">Step 5: Export Infiltration Data</p>
 <ul class="simple">
 <li><p class="sd-card-text">Ensure <strong>Infiltration Switch</strong> is ON in <strong>Control Parameters</strong>.</p></li>
 </ul>
@@ -479,9 +448,12 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 <li><p class="sd-card-text">Export only <code class="docutils literal notranslate"><span class="pre">INFILTRATION</span></code> and <code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro036.png" src="../../_images/shg_hydro036.png" />
-<div class="h3 docutils container">
-<p class="sd-card-text">Step 6: Use the 2023 Method</p>
+</li>
+</ul>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 3 (Option 2): Use the 2023 Method</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
 <li><p class="sd-card-text">Switch calculator to use 2023 soil shapefile.</p></li>
 </ul>
@@ -499,11 +471,12 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 <li><p class="sd-card-text">Intersected DTheta from land use-soil overlay</p></li>
 <li><p class="sd-card-text">Maximum impervious value from both layers</p></li>
 </ul>
-<div class="h3 docutils container">
-<p class="sd-card-text">Step 7: Use SERGO and OpenStreetMap Data</p>
 </div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 3 (Option 3): Use SSURGO and OpenStreetMap Data</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p class="sd-card-text">Use <strong>SERGO Downloader</strong> to get soil components:</p>
+<li><p class="sd-card-text">Use <strong>SSURGO Downloader</strong> to get soil components:</p>
 <ul>
 <li><p class="sd-card-text">Horizon, Fragmentation, Component layers</p></li>
 </ul>
@@ -535,8 +508,8 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 </ul>
 <img alt="../../_images/shg_hydro041.png" src="../../_images/shg_hydro041.png" />
 <ul class="simple">
-<li><dl class="simple">
-<dt>Review attributes in <strong>infiltration_results</strong>:</dt><dd><ul>
+<li><p class="sd-card-text">Review attributes in <strong>infiltration_results</strong>:</p>
+<ul>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Hydraulic</span> <span class="pre">Conductivity</span></code></p></li>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Soil</span> <span class="pre">Suction</span></code></p></li>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">DTheta</span></code></p></li>
@@ -544,8 +517,6 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Impervious</span></code></p></li>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Soil</span> <span class="pre">Depth</span></code></p></li>
 </ul>
-</dd>
-</dl>
 </li>
 </ul>
 <img alt="../../_images/shg_hydro042.png" src="../../_images/shg_hydro042.png" />
@@ -554,19 +525,13 @@ You’ll learn how to set global parameters, apply land use and soil data, and e
 <p class="sd-card-text">Always <strong>re-sort by FID</strong> before export to avoid misaligned data rows.</p>
 </div>
 </div>
+</details></div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Infiltration - Assign SCS Curve Number</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/thLVZaBdGT0?si=xrzdoZUKB4fLUB7m"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through how to generate and apply Curve Number infiltration data in FLO-2D.
-You will learn how to pull Curve Number values from land cover and soil data, manipulate those values,
-and apply them to your grid using either vector or raster formats.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">Only complete <strong>one</strong> of the three infiltration methods. This tutorial covers <strong>Curve Number</strong>.</p>
-</div>
-<div class="h3 docutils container">
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="h3 docutils container">
 <p class="sd-card-text">Step 1: Generate Curve Number Layer</p>
 </div>
 <ul class="simple">
@@ -627,10 +592,13 @@ and apply them to your grid using either vector or raster formats.</p>
 <img alt="../../_images/shg_hydro047.png" src="../../_images/shg_hydro047.png" />
 <ul class="simple">
 <li><p class="sd-card-text">Click <strong>OK</strong>.</p></li>
-<li><p class="sd-card-text">Now go to <strong>Calculate Curve Number</strong>:
-- Select the <strong>Curve Number layer</strong>
-- Choose the correct field
-- Apply values to the grid.</p></li>
+<li><p class="sd-card-text">Now go to <strong>Calculate Curve Number</strong>:</p>
+<ul>
+<li><p class="sd-card-text">Select the <strong>Curve Number layer</strong></p></li>
+<li><p class="sd-card-text">Choose the correct field</p></li>
+<li><p class="sd-card-text">Apply values to the grid.</p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_hydro048.png" src="../../_images/shg_hydro048.png" />
 <div class="h3 docutils container">
@@ -659,12 +627,10 @@ and apply them to your grid using either vector or raster formats.</p>
 <div class="h3 docutils container">
 <p class="sd-card-text">Step 6: Optional - Rasterize Curve Number</p>
 </div>
-<p class="sd-card-text">If your Curve Number polygon layer is too complex or fragmented:</p>
-<blockquote>
-<div><ul class="simple">
+<p class="sd-card-text">If the Curve Number polygon layer is too complex or fragmented:</p>
+<ul class="simple">
 <li><p class="sd-card-text">Open <strong>Rasterize Vector to Raster</strong> from the <strong>Processing Toolbox</strong>.</p></li>
 </ul>
-</div></blockquote>
 <img alt="../../_images/shg_hydro049.png" src="../../_images/shg_hydro049.png" />
 <ul class="simple">
 <li><p class="sd-card-text">Input:</p>
@@ -702,9 +668,7 @@ and apply them to your grid using either vector or raster formats.</p>
 <span class="sd-summary-text">Infiltration - Assign Horton</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SgvLq0CCJFc?si=SnC1Au5xSzV6C_QQ"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through the <strong>Horton infiltration method</strong> in FLO-2D.
-You’ll learn how to estimate Horton parameters, join infiltration attributes, and prepare data for export.</p>
-<div class="h3 docutils container">
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="h3 docutils container">
 <p class="sd-card-text">Step 1: Prepare Horton Shapefile</p>
 </div>
 <ul class="simple">
@@ -810,80 +774,73 @@ You’ll learn how to estimate Horton parameters, join infiltration attributes, 
 <img alt="../../_images/shg_hydro034.png" src="../../_images/shg_hydro034.png" />
 <ul class="simple">
 <li><p class="sd-card-text">Save your project.</p></li>
-</ul>
-<p class="sd-card-text">Then:</p>
-<blockquote>
-<div><ul class="simple">
 <li><p class="sd-card-text">Go to <strong>Export DAT Files</strong>.</p></li>
 </ul>
-</div></blockquote>
 <img alt="../../_images/shg_hydro035.png" src="../../_images/shg_hydro035.png" />
 <ul class="simple">
 <li><p class="sd-card-text">Select only <code class="docutils literal notranslate"><span class="pre">INFILTRATION</span></code> and <code class="docutils literal notranslate"><span class="pre">CONT.DAT</span></code>.</p></li>
-<li><p class="sd-card-text">Click <strong>OK</strong> to export.</p></li>
 </ul>
 <img alt="../../_images/shg_hydro036.png" src="../../_images/shg_hydro036.png" />
-<div class="h3 docutils container">
-<p class="sd-card-text">Troubleshooting: Missing Grid Elements</p>
-</div>
 <ul class="simple">
-<li><p class="sd-card-text">If some cells don’t receive infiltration data, verify <strong>complete polygon coverage</strong>.</p></li>
-<li><p class="sd-card-text">Use the <strong>Vertex Tool</strong> to stretch polygon boundaries over missing cells.</p></li>
-<li><p class="sd-card-text">Save and re-run <strong>Schematize</strong>.</p></li>
+<li><p class="sd-card-text">Click <strong>OK</strong> to export.</p></li>
 </ul>
+<img alt="../../_images/shg_hydro036b.png" src="../../_images/shg_hydro036b.png" />
 </div>
 </details></section>
 <section id="save-export-and-run">
 <h2>Save Export and Run<a class="headerlink" href="#save-export-and-run" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nOPr9G2UmQA?si=BhGrr7CuclE_UC4Q"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p>This lesson covers the final steps before running your FLO-2D simulation. You will learn how to save your project, export model data, and run the simulation using the <strong>Quick Run</strong> tool.</p>
-<section id="step-1-save-your-project">
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><section id="step-1-save-your-project">
 <h3>Step 1: Save Your Project<a class="headerlink" href="#step-1-save-your-project" title="Link to this heading"></a></h3>
 <ul class="simple">
-<li><p>Remove unneeded scratch layers:
-- Right-click any temporary layers you no longer need and select <strong>Remove</strong>.</p></li>
+<li><p>Right-click any temporary layers are no longer necessary and select <strong>Remove</strong>.</p></li>
 <li><p>Click the <strong>Save Project</strong> button.</p></li>
-<li><p>When prompted, click <strong>Yes</strong> to save scratch layers into the <strong>GeoPackage</strong>.
-- This ensures they are committed and safely stored with your project file.</p></li>
+<li><p>When prompted, click <strong>Yes</strong> to save scratch layers into the <strong>GeoPackage</strong>.</p></li>
 </ul>
+<p>This ensures they are committed and safely stored with the project file.</p>
 <img alt="../../_images/shg_hydro062.png" src="../../_images/shg_hydro062.png" />
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Scratch layers must be saved to preserve your data across sessions.</p>
-</div>
 </section>
 <section id="step-2-export-data-using-quick-run">
 <h3>Step 2: Export Data Using Quick Run<a class="headerlink" href="#step-2-export-data-using-quick-run" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Use <strong>Quick Run</strong> to export and simulate in one step.</p></li>
-<li><p>Quick Run is only available <strong>if your project does not include storm drains</strong>.</p></li>
+<li><p>Quick Run is only available <strong>if the project does not include storm drains</strong>.</p></li>
+<li><p>To use Quick Run:</p>
+<ul>
+<li><p>Click <strong>Quick Run</strong> from the FLO-2D toolbar.</p></li>
+<li><p>Create a new folder (e.g., <code class="docutils literal notranslate"><span class="pre">quick_run</span></code>) for the export.</p></li>
+<li><p>Select this folder when prompted.</p></li>
 </ul>
-<p>To use Quick Run:
-- Click <strong>Quick Run</strong> from the FLO-2D toolbar.
-- Create a new folder (e.g., <code class="docutils literal notranslate"><span class="pre">quick_run</span></code>) for the export.
-- Select this folder when prompted.</p>
+</li>
+</ul>
 <img alt="../../_images/shg_hydro063.png" src="../../_images/shg_hydro063.png" />
 <img alt="../../_images/shg_hydro064.png" src="../../_images/shg_hydro064.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Build 26 FLO-2D engine is capable of running models with *.DAT or input.hdf5 formats.</p>
 </div>
-<p>The plugin will:
-- Export all required <cite>.DAT</cite> files
-- Automatically launch the simulation upon successful export</p>
+<ul class="simple">
+<li><p>The plugin will:</p>
+<ul>
+<li><p>Export all required <cite>.DAT</cite> files</p></li>
+<li><p>Automatically launch the simulation upon successful export</p></li>
+</ul>
+</li>
+</ul>
 </section>
 <section id="step-3-wait-for-simulation-to-start">
 <h3>Step 3: Wait for Simulation to Start<a class="headerlink" href="#step-3-wait-for-simulation-to-start" title="Link to this heading"></a></h3>
-<ul class="simple">
-<li><p>Once data is exported, the model will begin running.</p></li>
-</ul>
+<p>Once data is exported, the model will begin running.</p>
 <img alt="../../_images/shg_hydro065.png" src="../../_images/shg_hydro065.png" />
 <ul class="simple">
-<li><p>Watch for early rainfall values in the results window.
-- Rainfall accumulation (e.g., ~0.1 in) will appear first.
-- Ponded water will start appearing on the grid.
-- Water will flow down streets and terrain according to the grid and infiltration settings.</p></li>
+<li><p>Watch for early rainfall values in the results window.</p>
+<ul>
+<li><p>Rainfall accumulation (e.g., ~0.1 in) will appear first.</p></li>
+<li><p>Ponded water will start appearing on the grid.</p></li>
+<li><p>Water will flow down streets and terrain according to the grid and infiltration settings.</p></li>
+</ul>
+</li>
 </ul>
 <img alt="../../_images/shg_hydro066.png" src="../../_images/shg_hydro066.png" />
 <div class="admonition note">
