@@ -167,9 +167,8 @@ Step 4: Review and Repair Bad Cross-Section Profiles
 
   - If a cross-section samples poor data:
 
-    - Move the vertex away from overlapping features (like inlets or retaining walls).
+    - Move the vertex away from overlapping features or boundary limits (like inlets or retaining walls).
     - Keep cross-sections **perpendicular** and well-positioned.
-    - Avoid overlapping nearby features or boundary limits.
     - Resample and check again.
 
     .. image:: ../img/shg/4/shg_chan056.jpg
@@ -466,104 +465,5 @@ Channel Summary and Results
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This lesson shows how to view simulation outputs, map flood depths and elevations, and evaluate hydraulic structure performance in FLO-2D.
-
-Step 1: Prepare the Results Group
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Create a new group in QGIS called **Results**.
-
-.. image:: ../img/shg/4/shg_chan042.jpg
-
-- Save your project before loading large output files.
-- You can load results into the same project or in a new one for post-processing.
-
-Step 2: Use the Rasterizer Tool
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Rasterizer Tool** from the FLO-2D toolbar.
-
-.. image:: ../img/shg/4/shg_chan043.jpg
-
-- Select output files (e.g., ``DEPTH.OUT``, ``FINDEPTH.OUT``, ``MAXWSE.OUT``).
-
-Examples:
-- `DEPTH.OUT` → **max_depth**
-
-.. image:: ../img/shg/4/shg_chan044.jpg
-
-.. image:: ../img/shg/4/shg_chan045.jpg
-
-- `FINDEPTH.OUT` → **final_depth**
-
-.. image:: ../img/shg/4/shg_chan046.jpg
-
-.. image:: ../img/shg/4/shg_chan047.jpg
-
-- `MAXWSELEV.OUT` → **max_wselv**
-
-.. image:: ../img/shg/4/shg_chan048.jpg
-
-.. image:: ../img/shg/4/shg_chan049.jpg
-
-.. note::
-   Output files must contain:
-   - Grid element number
-   - X and Y coordinates
-   - The data value (e.g., depth or elevation)
-
-Step 3: Visualize Raster Layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Turn off the grid and open the **Symbology** of the raster layer.
-- Apply a minimum display threshold (e.g., 0.1 ft) to improve visibility.
-
-.. image:: ../img/shg/4/shg_chan050.jpg
-
-- Identify areas of pooling, drainage issues, or channel performance.
-
-Step 4: Difference Mapping
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Compare raster layers:
-  - Input: **max_depth** minus **final_depth**
-
-.. image:: ../img/shg/4/shg_chan051.jpg
-
-.. image:: ../img/shg/4/shg_chan052.jpg
-
-- Output layer shows:
-  - **Red** = Max > Final (not fully drained)
-  - **Blue** = Max < Final (anomaly)
-
-.. warning::
-   Be sure your simulation ran long enough for proper drainage. Short runs may skew results.
-
-Step 5: Profile Tool Analysis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Profile Tool** to compare elevation and max water surface elevation.
-- Set base elevation (black) and max WSE (blue).
-- Draw profiles across basins and channels to check for proper drainage and overtopping.
-
-.. image:: ../img/shg/4/shg_chan053.jpg
-
-Step 6: Hydraulic Structure Results
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Result Viewer**.
-- Turn on FLO-2D results tables.
-- Click on hydraulic structures to view:
-  - Discharge
-  - Depth
-  - Velocity
-  - Flow area
-  - Shear stress
-  - Energy slope
-  - And more
-
-.. tip::
-   Use this to validate rating tables and confirm structure performance against your stepped hydrograph.
-
-Step 7: Interpretation and QA/QC
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Confirm the system drained correctly.
-- Check for:
-  - Trapped water
-  - Overtopping
-  - Unrealistic velocity or discharge spikes
-- Review rating table discharge curves and cross-section data for stability.
+   This video shows how to view simulation outputs, map flood depths and elevations,
+   and evaluate hydraulic structure performance in FLO-2D.
