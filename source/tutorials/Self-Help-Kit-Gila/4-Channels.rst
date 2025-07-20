@@ -170,6 +170,8 @@ Step 5: Repair Bad Cross-Sections
 - Keep cross-sections **perpendicular** and well-positioned.
 - Avoid overlapping nearby features or boundary limits.
 
+.. image:: ../img/shg/4/shg_chan056.jpg
+
 Step 6: Add Missing Cross-Sections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - If a **transition is missing**, add a cross-section manually:
