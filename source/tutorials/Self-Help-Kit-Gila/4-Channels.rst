@@ -164,12 +164,10 @@ Step 4: Review Cross-Section Profiles
 
 .. image:: ../img/shg/4/shg_chan012.jpg
 
-.. tip::
-   Use Enter to confirm sampling instead of clicking "Yes" repeatedly.
-
 Step 5: Repair Bad Cross-Sections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - If a cross-section samples poor data:
+
   - Move the vertex away from overlapping features (like inlets or retaining walls).
   - Resample and check again.
 
