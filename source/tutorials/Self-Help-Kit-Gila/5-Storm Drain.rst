@@ -572,8 +572,20 @@ Step 5: Add Pump Curve Data
 Step 6: Add Storage Unit Curves
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open **Storage Units** attribute table.
+
+.. image:: ../img/shg/5/shg_storm025.jpg
+
 - Use the **FLO-2D Info Tool** to open the storage curve editor.
+
+.. image:: ../img/shg/5/shg_storm026.jpg
+
 - Import a tab-delimited text file or paste Excel values.
+
+.. image:: ../img/shg/5/shg_storm027.jpg
+
+.. image:: ../img/shg/5/shg_storm028.jpg
+
+.. image:: ../img/shg/5/shg_storm029.jpg
 
 Step 7: Set Storm Drain Control Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
