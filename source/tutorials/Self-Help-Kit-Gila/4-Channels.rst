@@ -144,8 +144,9 @@ Step 3: Sample Elevation Data
 
 - Elevation is sampled from the **first to last vertex** of each cross-section.
 
-Step 4: Review Cross-Section Profiles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 4: Review and Repair Bad Cross-Section Profiles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - Use the **scroll wheel** to cycle through each profile.
 - Look for elevation anomalies or errors (jagged shapes, false dips).
 
@@ -153,24 +154,25 @@ Step 4: Review Cross-Section Profiles
 
 .. image:: ../img/shg/4/shg_chan055.jpg
 
-- Adjust vertices using the **Vertex Tool**:
+- For bad cross-sections, try:
 
-  - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
-  - Click **Sample Single** to resample after adjustment.
+  - Adjust Left/Right bank vertices using the **Vertex Tool**:
 
-.. image:: ../img/shg/4/shg_chan012.jpg
+    - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
+    - Click **Sample Single** to resample after adjustment.
 
-Step 5: Repair Bad Cross-Sections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If a cross-section samples poor data:
+    .. image:: ../img/shg/4/shg_chan012.jpg
 
-  - Move the vertex away from overlapping features (like inlets or retaining walls).
-  - Resample and check again.
+    .. image:: ../img/shg/4/shg_chan057.jpg
 
-- Keep cross-sections **perpendicular** and well-positioned.
-- Avoid overlapping nearby features or boundary limits.
+  - If a cross-section samples poor data:
 
-.. image:: ../img/shg/4/shg_chan056.jpg
+    - Move the vertex away from overlapping features (like inlets or retaining walls).
+    - Keep cross-sections **perpendicular** and well-positioned.
+    - Avoid overlapping nearby features or boundary limits.
+    - Resample and check again.
+
+    .. image:: ../img/shg/4/shg_chan056.jpg
 
 Step 6: Add Missing Cross-Sections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -180,6 +182,8 @@ Step 6: Add Missing Cross-Sections
   - Draw a new line and click **Save**
   - Rename it (e.g., “new”) before schematizing
   - Run **Schematize** to properly place it in order
+
+.. image:: ../img/shg/4/shg_chan057.gif
 
 .. note::
    You can delete schema data before re-schematizing if needed.
