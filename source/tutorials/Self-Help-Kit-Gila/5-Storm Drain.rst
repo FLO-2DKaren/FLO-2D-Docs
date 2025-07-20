@@ -1,6 +1,10 @@
 Storm Drain
 ========================
 
+See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
+
+
+
 This advanced lesson shows how to create a storm drain from Shapefiles.  Stay tuned for more lessons that will
 show how to set up a storm drain from a swmm.inp.
 
@@ -39,15 +43,16 @@ Data and Resources
 
 This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.
 
-Step 1: Import Storm Drain Shapefiles
+Import Storm Drain Shapefiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Load storm drain shapefiles into your project.
 - Sort files by type and select those labeled as **shapefiles**.
 - Drag and drop into a **Storm Drain** group in your QGIS layer panel.
 
-Step 2: Understanding FLO-2D Storm Drain Logic
+Understanding FLO-2D Storm Drain Logic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - FLO-2D handles most drainage through the **surface model**:
+
   - Channels and detention basins are modeled at the surface.
   - Inlets and outfalls interface with the surface system.
 
@@ -55,10 +60,11 @@ Step 2: Understanding FLO-2D Storm Drain Logic
    You do **not** need subcatchments, rain gauges, or separate infiltration models like in SWMM.
 
 - Storm drains receive water from:
+
   - Streets and inlets (inflow)
   - Outfalls discharge to channels or basins (outflow)
 
-Step 3: Documentation and Learning Resources
+Documentation and Learning Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - FLO-2D provides built-in documentation:
 
