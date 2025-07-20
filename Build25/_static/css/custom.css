@@ -101,3 +101,34 @@ details.sd-dropdown summary svg {
     margin-left: 1em;
     color: #444;
 }
+
+
+/* Changes made on 19th July 2025 to allow toggling methods for Green-Ampt Infiltration */
+
+/* Default closed arrow for all dropdowns */
+details.sd-dropdown summary::before {
+    content: "▶";
+    color: #005a9c;
+    font-size: 0.9em;
+}
+
+/* Open arrow only when [open] attribute is actually present */
+details.sd-dropdown[open] > summary::before {
+    content: "▼" !important;
+}
+
+/* Fallback fix for nested dropdowns that don't use <details> properly */
+details.sd-dropdown summary:not([aria-expanded="true"])::before {
+    content: "▶";
+}
+details.sd-dropdown summary[aria-expanded="true"]::before {
+    content: "▼";
+}
+
+
+/* 19/07/2025 image-text spacing */
+/* Add space after images to separate from following text */
+img {
+    margin-bottom: 1em;
+}
+
