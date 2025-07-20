@@ -66,7 +66,7 @@ Step 2: Draw Left and Right Banks
 .. image:: ../img/shg/4/shg_chan004.jpg
 
 .. tip::
-   Use satellite imagery and elevation contours to align your lines.
+   Use satellite imagery and elevation contours to align the lines.
    Use consistent start and end locations across segments.
 
 Step 3: Save and Review Bank Lines
