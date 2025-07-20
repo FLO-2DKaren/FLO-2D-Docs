@@ -34,8 +34,8 @@ Build Channel and Schematize
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   
-This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data.
+
+This lesson demonstrates how to manually create channels in FLO-2D in the absence of HEC-RAS data
 The process involves digitizing channel banks and cross-sections, followed by schematization and geometry validation.
 
 Step 1: Load Templates Layers
