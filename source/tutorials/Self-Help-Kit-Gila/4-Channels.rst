@@ -106,10 +106,6 @@ Step 6: Review Schematic Summary
 - Open the **Log Messages Panel**.
 - You’ll see a count of cross-sections per segment and interpolated ones added.
 
-.. tip::
-   Fix spacing and other geometry refinements in the next step.
-
-
 Sample Elevation and Schematize
 -------------------------------------
 
