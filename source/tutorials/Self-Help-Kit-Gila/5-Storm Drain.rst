@@ -131,7 +131,7 @@ Inlet and junction nodes contain attributes that define how they interact with t
 
 Documentation References
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Storm Drain Editor Manual** (Chapter 2) to understand inlet types:
+- Use the **Storm Drain Editor Guidelines** (Chapter 2) to understand inlet types:
 
   - Type 0: Junction (no interaction with surface)
   - Type 1: Curb opening
@@ -217,7 +217,9 @@ This lesson explains how to review and configure outfalls and storage units in y
 Outfalls
 --------
 
-Outfalls are point features representing discharge points from the storm drain network. To open the outfall data:
+Outfalls are point features representing discharge points from the storm drain network.
+
+To open the outfall data:
 
 - Right-click the **Outfalls** layer and select **Open Attribute Table**.
 - Dock the table for convenience.
@@ -308,6 +310,7 @@ The following fields should be configured in the conduit shapefile:
 | `name`                 | String         | Unique identifier                           |
 |                        |                |                                             |
 | `inletoffset`          | Float          | Offset from upstream node                   |
+|                        |                |                                             |
 | `outletoffset`         | Float          | Offset from downstream node                 |
 | `shape`                | String         | Closed RECTANGLE, CIRCULAR, etc.            |
 | `barrels`              | Integer        | Number of parallel conduits                 |
