@@ -262,7 +262,8 @@ Add a Boundary Control
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-In this lesson, you’ll assign **inflow and outflow boundary conditions** to your FLO-2D channel model using both steady and time-series hydrographs.
+In this lesson, you’ll assign **inflow and outflow boundary conditions** to your FLO-2D channel model
+using both steady and time-series hydrographs.
 
 Step 1: Create Upstream Inflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -353,7 +354,8 @@ Add Culverts
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This lesson covers how to define and integrate culvert structures (CTs) into your FLO-2D channel using rating tables or the generalized culvert equation.
+This lesson covers how to define and integrate culvert structures (CTs) into your FLO-2D channel using
+rating tables or the generalized culvert equation.
 
 Step 1: Identify Culvert Locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -465,5 +467,5 @@ Channel Summary and Results
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This video shows how to view simulation outputs, map flood depths and elevations,
-   and evaluate hydraulic structure performance in FLO-2D.
+This video shows how to view simulation outputs, map flood depths and elevations,
+and evaluate hydraulic structure performance in FLO-2D.
