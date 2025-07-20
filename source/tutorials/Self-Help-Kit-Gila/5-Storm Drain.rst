@@ -65,13 +65,13 @@ Documentation and Learning Resources
 - FLO-2D provides built-in documentation:
 
     **Storm Drain Guidelines**
-
       - Location:
 
         - `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_.
 
         - The installation directory under ``FLO-2D > Manuals`` or
         - Via the **book icon** in the editor.
+
       - Key Chapters:
 
         - Chapter 2: Inlet data types
@@ -86,16 +86,13 @@ Documentation and Learning Resources
        - Found on YouTube under the *New Self-Help Kit* playlist
 
     **EPA SWMM GUI**
-
        - Installed alongside FLO-2D
        - Use for pump setups, advanced SWMM elements, and additional documentation
 
     **OpenSWMM.org**
-
        - A knowledge base and community forum with examples, questions, and shared resources.
 
     **ChatGPT**
-
        - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
        - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
 
