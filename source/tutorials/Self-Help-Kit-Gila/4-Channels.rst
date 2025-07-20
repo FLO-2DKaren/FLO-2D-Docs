@@ -175,6 +175,7 @@ Step 5: Repair Bad Cross-Sections
 Step 6: Add Missing Cross-Sections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - If a **transition is missing**, add a cross-section manually:
+
   - Use the **Cross-Section Tool**
   - Draw a new line and click **Save**
   - Rename it (e.g., “new”) before schematizing
