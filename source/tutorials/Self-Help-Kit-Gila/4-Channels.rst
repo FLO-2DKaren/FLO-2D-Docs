@@ -440,6 +440,7 @@ Step 7: Export and Review Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Export DAT files.
 - Files updated:
+
   - ``CONT.DAT``: Structure switch activated.
   - ``HYSTRUCT.DAT``: Lists all culvert definitions and rating tables.
 
