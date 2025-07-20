@@ -332,6 +332,7 @@ Step 4: Schematize and Export
  .. image:: ../img/shg/4/shg_chan025.jpg
 
 Files updated:
+
 - ``INFLOW.DAT``: now includes the new stepped hydrograph.
 - ``CHAN.DAT``, ``CHANBANK.DAT``, ``CHANCOND.DAT``, ``CHANROUGH.DAT``: standard channel outputs.
 
