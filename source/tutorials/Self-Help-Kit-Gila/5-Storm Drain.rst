@@ -100,16 +100,6 @@ For technical assistance or troubleshooting, use the official FLO-2D support for
 
    <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
 
-Wrap-up
--------
-In this lesson, you’ve:
-- Imported storm drain shapefiles
-- Reviewed the role of inlets and outfalls
-- Accessed documentation and training resources
-
-Next lesson: Review and edit storm drain shape file attributes.
-
-
 Node Overview - Inlet, Junction
 ----------------------------------
 
@@ -193,10 +183,6 @@ Step 6: Unit Notes
 - All dimensions in **feet**
 - Clogging factor is a **percentage (0-1)**
 - Clogging time is in **hours**
-
-Wrap-up
--------
-This lesson focused on how to interpret and verify inlet and junction attributes using shapefile data. Proper definition ensures realistic storm drain and surface flow interactions.
 
 Node Overview - Outfall, Storage Unit
 ------------------------------------------
