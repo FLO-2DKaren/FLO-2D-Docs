@@ -86,8 +86,8 @@ Documentation and Learning Resources
        - Found on YouTube under the *New Self-Help Kit* playlist
 
     **EPA SWMM GUI**
-       - Installed alongside FLO-2D
-       - Use for pump setups, advanced SWMM elements, and additional documentation
+     - Installed alongside FLO-2D
+     - Use for pump setups, advanced SWMM elements, and additional documentation
 
     **OpenSWMM.org**
        - A knowledge base and community forum with examples, questions, and shared resources.
