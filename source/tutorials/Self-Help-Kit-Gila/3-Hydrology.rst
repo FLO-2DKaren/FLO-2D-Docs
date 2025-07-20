@@ -506,7 +506,7 @@ Infiltration
 
       Step 6: Optional - Rasterize Curve Number
 
-   If your Curve Number polygon layer is too complex or fragmented:
+   If the Curve Number polygon layer is too complex or fragmented:
 
    - Open **Rasterize Vector to Raster** from the **Processing Toolbox**.
 
@@ -679,21 +679,18 @@ Save Export and Run
 
 Step 1: Save Your Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Right-click any temporary layers you no longer need and select **Remove**.
+- Right-click any temporary layers are no longer necessary and select **Remove**.
 - Click the **Save Project** button.
 - When prompted, click **Yes** to save scratch layers into the **GeoPackage**.
 
-This ensures they are committed and safely stored with your project file.
+This ensures they are committed and safely stored with the project file.
 
 .. image:: ../img/shg/3/shg_hydro062.png
-
-.. tip::
-   Scratch layers must be saved to preserve your data across sessions.
 
 Step 2: Export Data Using Quick Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use **Quick Run** to export and simulate in one step.
-- Quick Run is only available **if your project does not include storm drains**.
+- Quick Run is only available **if the project does not include storm drains**.
 
 - To use Quick Run:
 
