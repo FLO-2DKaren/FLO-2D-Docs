@@ -68,7 +68,6 @@ Documentation and Learning Resources
       - Location:
 
         - `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_.
-
         - The installation directory under ``FLO-2D > Manuals`` or
         - Via the **book icon** in the editor.
 
@@ -102,7 +101,8 @@ Documentation and Learning Resources
 Contact Support
 ~~~~~~~~~~~~~~~~~
 
-For technical assistance or troubleshooting, use the official FLO-2D support form available at the link below:
+For technical assistance or troubleshooting, use the official FLO-2D support form available at
+the link below:
 
 |Contact-Form|
 
@@ -122,16 +122,17 @@ Node Overview - Inlet, Junction
 
 This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
 
-Step 1: Storm Drain Feature Overview
+Storm Drain Feature Overview
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
 - **Polyline features** (links): conduits, pumps, orifices
 
 Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
 
-Step 2: Documentation References
+Documentation References
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Storm Drain Editor Manual** (Chapter 2) to understand inlet types:
+
   - Type 0: Junction (no interaction with surface)
   - Type 1: Curb opening
   - Type 2: Curb with gutter
@@ -139,11 +140,12 @@ Step 2: Documentation References
   - Type 4: Unique (e.g. headwall)
   - Type 5: Manhole
 
-Step 3: Reviewing Node Attributes
+Reviewing Node Attributes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Open the shapefile table for inlets and junctions in QGIS.
 
 - **Required attributes** (vary by type):
+
   - ``Name``: Must start with "I" for inlets
   - ``Type``: Integer (0 to 5)
   - ``Elevation``: Invert elevation
@@ -153,42 +155,48 @@ Open the shapefile table for inlets and junctions in QGIS.
   - ``Feature Switch``: 0 (rim), 1 (invert), or 2 (special conditions)
   - Optional: ``Curb Height``, ``Clog Factor``, ``Clog Time``, ``Dropbox Area``
 
-Step 4: Understanding Specific Types
+Understanding Specific Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Type 0: Junction**
+
 - No surface interaction
 - Requires only invert elevation and max depth
 
 **Type 1: Curb Opening**
+
 - Requires: Length, Height, Weir Coefficient
 - Does not include sag or width
 
 **Type 2: Curb with Gutter**
+
 - Requires: Length, Width (sag), Height, Weir Coefficient
 - Optional: Curb Height, Dropbox Area
 
 **Type 3: Grate**
+
 - Requires: Perimeter, Area, Sag (optional), Weir Coefficient
 - Often used in depressed road areas
 
 **Type 4: Unique (Headwall)**
+
 - Requires: Invert Elevation, Max Depth
 - ``Feature Switch = 1`` sets grid elevation to invert
 - Used for channel interfaces or direct inflow control
 
 **Type 5: Manhole**
+
 - Requires: Invert Elevation, Max Depth, Perimeter, Area, Surcharge Depth, Weir Coefficient
 - Acts like a junction until surcharge pops the lid
 - Allows bidirectional flow once popped
 
-Step 5: Visualization Tips
+Visualization Tips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use **categorized symbology** to color nodes by inlet type
 - Use **Zoom to Feature** and satellite imagery to verify node alignment
 - Position nodes carefully relative to grid elements for accurate simulation
 
-Step 6: Unit Notes
+Unit Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 - All dimensions in **feet**
 - Clogging factor is a **percentage (0-1)**
@@ -221,6 +229,7 @@ Key Attributes for Outfalls:
 - **Flap Gate**: `True` or `False`. Controls whether backflow is allowed.
 - **Allow Q**: `1` = yes, interfaces with FLO-2D; `0` = no interface.
 - **Outfall Type**: Options include:
+
   - `FREE`: Free discharge
   - `NORMAL`: Controlled by downstream conditions
   - `FIXED`: Fixed stage elevation
@@ -231,6 +240,7 @@ Key Attributes for Outfalls:
    When connecting an outfall to a channel, always assign it to the **left bank looking downstream**, even if physically placed on the right.
 
 Examples:
+
 - Outfalls located outside the grid should have `Allow Q` set to `0`.
 - Tidal or fixed outfalls must define a corresponding elevation, curve, or time series.
 
@@ -240,6 +250,7 @@ Storage Units
 Storage units in FLO-2D are used for **closed systems** like tanks or underground vaults.
 
 Open the **Storage Units** layer:
+
 - Right-click and select **Open Attribute Table**
 - Dock the table for visibility
 
@@ -283,6 +294,7 @@ Open and Review the Conduit Attribute Table
 1. In QGIS, right-click on the **Conduits** layer and choose **Open Attribute Table**.
 2. Dock the table to work alongside the map.
 3. Note that conduits:
+
    - Do not generate `.dat` files like `SWMMFLOW.DAT` or `SWMMOUTF.DAT`.
    - Are entirely represented in the **SWMM .inp file**.
 
@@ -321,6 +333,7 @@ Tips on Flow Direction
 - Flow direction is determined by the digitized order of the polyline.
 - Use the **Advanced Digitizing Toolbar** in QGIS to flip flow direction with the **Reverse Line** tool.
 - Turn on **arrow symbology** to visualize flow direction:
+
   - Right-click layer > Symbology > Line Symbol > Arrow
 
 .. tip::
@@ -329,6 +342,7 @@ Tips on Flow Direction
 Checking Profiles and Connectivity
 ----------------------------------
 Use the **Profile Tool** to visualize elevation and connectivity:
+
 1. Select a starting node and ending node.
 2. Plot the conduit profile.
 3. Observe invert elevations and slope direction.
@@ -337,6 +351,7 @@ Use the **Profile Tool** to visualize elevation and connectivity:
 Minimum Length Guidelines
 -------------------------
 To maintain model stability:
+
 - The **minimum conduit length** should match or exceed the grid cell size.
 - For urban grids (typically 20 to 30 ft), no conduit should be shorter than the grid resolution.
 
@@ -348,6 +363,7 @@ To maintain model stability:
 Setting Styles by Attributes
 ----------------------------
 To visually inspect your network:
+
 - Use graduated symbology on conduit `length` or `geom1` (diameter).
 - Classify using color ramps for clearer mapping.
 
@@ -402,6 +418,7 @@ Pump fields:
 +-------------------+----------+----------------------------------------+
 
 Pump types:
+
 - **IDEAL**: Transfers all flow from inlet to outlet (design only).
 - **TYPE 1**: Offline, staged, requires wet well.
 - **TYPE 2**: Inline, stepped flow.
