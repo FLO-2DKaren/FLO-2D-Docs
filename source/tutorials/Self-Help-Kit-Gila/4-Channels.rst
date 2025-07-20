@@ -344,7 +344,7 @@ Step 5: Run a Simulation
 
  .. image:: ../img/shg/4/shg_chan016.jpg
 
-- If the simulation starts successfully, your boundary conditions are valid.
+- If the simulation starts successfully, the boundary conditions are valid.
 
 .. note::
    Water enters the channel from the upstream **cross-section**, not the grid element.  
