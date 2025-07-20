@@ -504,11 +504,19 @@ Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
 
 .. image:: ../img/shg/5/shg_storm004.jpg
 
+.. image:: ../img/shg/5/shg_storm021.jpg
+
 .. image:: ../img/shg/5/shg_storm005.jpg
+
+.. image:: ../img/shg/5/shg_storm006.jpg
+
+.. image:: ../img/shg/5/shg_storm0022.jpg
+
+.. image:: ../img/shg/5/shg_storm0023.jpg
 
 Click **Assign Selected Fields**, then click **OK** for the warning that follows.
 
-.. image:: ../img/shg/5/shg_storm006.jpg
+.. image:: ../img/shg/5/shg_storm0024.jpg
 
 .. image:: ../img/shg/5/shg_storm007.jpg
 
