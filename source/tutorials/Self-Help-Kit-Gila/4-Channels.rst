@@ -203,9 +203,12 @@ Step 1: Review Bank Alignment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Vertex Tool** to adjust left and right bank lines.
 - Goals:
+
   - Avoid backyards and buildings
   - Ensure the channel spans **at least three grid elements**
   - Maintain **crossing lines** between left and right banks
+
+.. image:: ../img/shg/4/shg_chan057.jpg
 
 .. tip::
    Keep banks away from grid edges and channel transitions if possible.
