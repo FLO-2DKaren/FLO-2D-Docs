@@ -154,7 +154,7 @@ Step 4: Review and Repair Bad Cross-Section Profiles
 
 .. image:: ../img/shg/4/shg_chan055.jpg
 
-- For bad cross-sections, try:
+- For bad cross-section profiles, try:
 
   - Adjust Left/Right bank vertices using the **Vertex Tool**:
 
