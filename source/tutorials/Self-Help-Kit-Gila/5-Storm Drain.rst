@@ -510,19 +510,21 @@ Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
 
 .. image:: ../img/shg/5/shg_storm006.jpg
 
-.. image:: ../img/shg/5/shg_storm0022.jpg
+.. image:: ../img/shg/5/shg_storm022.jpg
 
-.. image:: ../img/shg/5/shg_storm0023.jpg
+.. image:: ../img/shg/5/shg_storm023.jpg
 
 Click **Assign Selected Fields**, then click **OK** for the warning that follows.
 
-.. image:: ../img/shg/5/shg_storm0024.jpg
+.. image:: ../img/shg/5/shg_storm024.jpg
 
 .. image:: ../img/shg/5/shg_storm007.jpg
 
 Step 3: Assign Nodes to Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click the **Auto-Assign Links and Nodes** button.
+
+.. image:: ../img/shg/5/shg_storm007.jpg
 
 .. image:: ../img/shg/5/shg_storm008.jpg
 
