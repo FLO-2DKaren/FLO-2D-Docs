@@ -68,7 +68,7 @@ Documentation and Learning Resources
 
       - Location:
 
-See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
+        - See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
 
         - The installation directory under ``FLO-2D > Manuals`` or
         - Via the **book icon** in the editor.
