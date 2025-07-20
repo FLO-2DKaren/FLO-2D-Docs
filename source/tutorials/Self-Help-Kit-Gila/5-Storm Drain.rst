@@ -524,11 +524,7 @@ Step 3: Assign Nodes to Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click the **Auto-Assign Links and Nodes** button.
 
-.. image:: ../img/shg/5/shg_storm007.jpg
-
 .. image:: ../img/shg/5/shg_storm008.jpg
-
-.. image:: ../img/shg/5/shg_storm009.jpg
 
 - This assigns start and end nodes to each conduit.
 - Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.
