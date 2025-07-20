@@ -306,6 +306,7 @@ The following fields should be configured in the conduit shapefile:
 | Field Name             | Type           | Description                                 |
 +========================+================+=============================================+
 | `name`                 | String         | Unique identifier                           |
+|                        |                |                                             |
 | `inletoffset`          | Float          | Offset from upstream node                   |
 | `outletoffset`         | Float          | Offset from downstream node                 |
 | `shape`                | String         | Closed RECTANGLE, CIRCULAR, etc.            |
