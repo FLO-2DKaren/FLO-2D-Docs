@@ -21,11 +21,12 @@ Backup and Reload
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
    
    
-This lesson introduces how to begin working with channels in FLO-2D. The first step is creating a project backup and preparing for channel data input.
+This lesson introduces how to begin working with channels in FLO-2D.
+The first step is creating a project backup and preparing for channel data input.
 
 
 Build Channel and Schematize
-----------------------------------
+------------------------------
 
 .. raw:: html
 
@@ -34,7 +35,8 @@ Build Channel and Schematize
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
    
-This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data. You will digitize channel banks and cross-sections, schematize them, and validate the geometry.
+This lesson shows how to create channels manually in FLO-2D when you do not have HEC-RAS data.
+The process involves digitizing channel banks and cross-sections, followed by schematization and geometry validation.
 
 Step 1: Load Templates Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
