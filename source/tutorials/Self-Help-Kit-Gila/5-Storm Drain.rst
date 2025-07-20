@@ -1,11 +1,6 @@
 Storm Drain
 ========================
 
-See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin
-/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
-
-
-
 This advanced lesson shows how to create a storm drain from Shapefiles.  Stay tuned for more lessons that will
 show how to set up a storm drain from a swmm.inp.
 
@@ -69,35 +64,45 @@ Documentation and Learning Resources
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - FLO-2D provides built-in documentation:
 
+    **Storm Drain Guidelines**
 
-    **Storm Drain Editor Manual**
+      - Location:
 
-- Located in the installation directory under ``FLO-2D > Manuals`` or via the **book icon** in the editor.
-- Key Chapters:
-  - Chapter 2: Inlet data types
-  - Chapter 3: Output file structure
-  - Chapter 4: Setup guidelines
-  - Chapter 5: Troubleshooting
-  - Chapter 6: How to review your storm drain model
+        - `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin
+           /user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_.
 
+        - The installation directory under ``FLO-2D > Manuals`` or
+        - Via the **book icon** in the editor.
+      - Key Chapters:
 
-  **Advanced Tutorial**
-  - Found on YouTube under the *New Self-Help Kit* playlist
-
-  **EPA SWMM GUI**
-  - Installed alongside FLO-2D
-  - Use for pump setups, advanced SWMM elements, and additional documentation
-
-  **OpenSWMM.org**
-  - A knowledge base and community forum with examples, questions, and shared resources.
-
-  **ChatGPT**
-  - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
-  - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
+        - Chapter 2: Inlet data types
+        - Chapter 3: Output file structure
+        - Chapter 4: Setup guidelines
+        - Chapter 5: Troubleshooting
+        - Chapter 6: How to review your storm drain model
 
 
-Step 4: Contact Support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    **Advanced Tutorial**
+
+       - Found on YouTube under the *New Self-Help Kit* playlist
+
+    **EPA SWMM GUI**
+
+       - Installed alongside FLO-2D
+       - Use for pump setups, advanced SWMM elements, and additional documentation
+
+    **OpenSWMM.org**
+
+       - A knowledge base and community forum with examples, questions, and shared resources.
+
+    **ChatGPT**
+
+       - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
+       - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
+
+
+Contact Support
+~~~~~~~~~~~~~~~~~
 
 For technical assistance or troubleshooting, use the official FLO-2D support form available at the link below:
 
