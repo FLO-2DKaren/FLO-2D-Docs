@@ -226,6 +226,7 @@ Step 2: Schematize and Interpolate
 Step 3: Use the Geometry Checker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - After interpolation, click **Check Channel Geometry**:
+
   - It will verify minimum spacing and floodplain surface area.
   - Click error messages to locate problematic cross-sections or elements.
 
@@ -251,7 +252,7 @@ Step 5: Export and Run Test Simulation
 .. image:: ../img/shg/4/shg_chan016.jpg
 
 .. tip::
-   You’re only validating **channel geometry**, not full model results.
+   This simulation is only validating **channel geometry**, not full model results.
    A successful run here indicates channel alignment and schematization passed.
 
 
@@ -369,8 +370,6 @@ Step 1: Identify Culvert Locations
 
 - Draw each structure from the **left bank** of the upstream channel to the **left bank** of the downstream channel.
 
-.. tip::
-   Use left-click, left-click, and right-click to define the start and end.
 
 Step 2: Define Structure Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -401,11 +400,12 @@ Step 3: Import Rating Tables
 .. image:: ../img/shg/4/shg_chan033.jpg
 
 .. note::
-   You can alternatively use the **Generalized CT Equation** and define geometry and length manually.
+   You can alternatively use the **Generalized Culvert Equation** and define geometry and length manually.
 
 Step 4: Tailwater Controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Options:
+
   1. **No Tailwater Control**: Only headwater affects flow (e.g., flap gates).
   2. **Submergence Applied**: Tailwater reduces discharge, but no reverse flow.
   3. **Submergence with Reverse Flow**: Allows flow to reverse under high tailwater.
@@ -417,7 +417,8 @@ Step 4: Tailwater Controls
 Step 5: Optional Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Head Reference Elevation: Only used if a weir controls flow onset.
-- Length and Diameter: Required only if using **Generalized Equation**, not rating tables.
+- Length and Diameter: Required only if using **Generalized Equation** or long culverts in excess of 500 ft,
+  not rating tables.
 
 .. image:: ../img/shg/4/shg_chan035.jpg
 
