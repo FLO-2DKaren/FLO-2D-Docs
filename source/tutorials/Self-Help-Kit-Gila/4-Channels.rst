@@ -379,6 +379,7 @@ Step 2: Define Structure Properties
 - Click **Save** after drawing all structures.
 - Name each structure (e.g., ``Grnway1``, ``Grnway2``). Avoid spaces.
 - Set:
+
   - Type: **Channel to Channel**
   - Method: **Rating Table**
 
