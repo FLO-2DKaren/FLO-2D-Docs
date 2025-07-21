@@ -249,6 +249,13 @@ Examples:
 - Outfalls located outside the grid should have `Allow Q` set to `0`.
 - Tidal or fixed outfalls must define a corresponding elevation, curve, or time series.
 
+For more information on outfalls, see the **Storm Drain Guidelines** for `Outfalls <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#outfalls>`_ .
+
+Use the **EPA SWMM GUI** to understand field definitions.
+
+FLO-2D only uses closed storage systems in the storm drain module.
+
 Storage Units
 -------------
 
@@ -275,13 +282,12 @@ Unsupported Features:
 .. note::
    FLO-2D does not support surface ponding or infiltration via storage units. Use the grid system for those interactions.
 
-Where to Learn More
--------------------
+For more information on storage units, see the **Storm Drain Guidelines** for `Storage Units <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#storage-units>`_ .
 
-- Check the **Storm Drain Guidelines** for `Outfalls <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#outfalls>`_ and
-  `Storage Unit <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#storage-units>`_ setup.
-- Use the **EPA SWMM GUI** to understand field definitions
-- FLO-2D only uses closed storage systems in the storm drain module
+Use the **EPA SWMM GUI** to understand field definitions.
+
+FLO-2D only uses closed storage systems in the storm drain module.
 
 Link Overview - Conduit
 -----------------------------
@@ -405,6 +411,9 @@ To maintain model stability:
 
 .. important::
    Entry/exit losses are applied to simulate energy loss at junctions and transitions.
+
+For more information on conduits, see the **Storm Drain Guidelines** for `Conduits <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#conduits>`_ .
 
 Link Overview - Pump, Orifice, Weir
 ------------------------------------------
