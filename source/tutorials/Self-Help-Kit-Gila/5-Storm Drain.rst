@@ -201,7 +201,7 @@ Open the shapefile table for inlets and junctions in QGIS.
 - All dimensions in **feet**
 - Clogging factor is a **percentage (0-1)**
 - Clogging time is in **hours**
-- For more information on storm drain units, see the `Storm Drain Units <https://flo-2dkaren.github.io
+- For more information on storm drain units, see the **Storm Drain Guidelines** for `Storm Drain Units <https://flo-2dkaren.github.io
   /FLO-2D-Docs/Build25/  flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-units>`_.
 
 For more information on inlets/junctions, see the **Storm Drain Guidelines** for `Inlets/Junctions <https://flo-2dkaren.github.io
