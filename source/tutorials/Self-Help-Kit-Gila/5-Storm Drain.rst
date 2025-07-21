@@ -41,9 +41,10 @@ This lesson provides an introduction to importing and understanding the storm dr
 
 Import Storm Drain Shapefiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Load storm drain shapefiles into your project.
-- Sort files by type and select those labeled as **shapefiles**.
-- Drag and drop into a **Storm Drain** group in your QGIS layer panel.
+- Load storm drain shapefiles into your project:
+
+  - Sort files by type and select those labeled as **shapefiles**.
+  - Drag and drop into a **Storm Drain** group in your QGIS layer panel.
 
 Understanding FLO-2D Storm Drain Logic
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,15 +124,15 @@ Node Overview - Inlet, Junction
 This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
 
 Storm Drain Feature Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
 - **Polyline features** (links): conduits, pumps, orifices
 
 Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
 
 Documentation References
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Storm Drain Editor Guidelines** (Chapter 2) to understand inlet types:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Storm Drain Guidelines** (Chapter 2) to understand inlet types:
 
   - Type 0: Junction (no interaction with surface)
   - Type 1: Curb opening
@@ -408,16 +409,6 @@ Loss Coefficients and Flap Gates
 .. important::
    Entry/exit losses are applied to simulate energy loss at junctions and transitions.
 
-Final Notes
------------
-- Conduits form the backbone of your storm drain system.
-- Digitizing accuracy and attribute completeness are critical.
-- Double-check names, flow directions, and invert elevations.
-
-Next Lesson
------------
-The next video will cover: **Pumps, Orifices, and Weirs**
-
 Link Overview - Pump, Orifice, Weir
 ------------------------------------------
 
@@ -549,10 +540,6 @@ Review Tips
 - Use the **EPA SWMM GUI** to preview expected inputs and verify how fields work together.
 - Field types and required formats should follow SWMM rules.
 - Curves (for pumps and orifices) are configured in a separate step.
-
-Next Step
----------
-Continue with the next lesson: **Setting Up Storm Drain Curves**
 
 
 Create a Storm Drain from Shapefiles
