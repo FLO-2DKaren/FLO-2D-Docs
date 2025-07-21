@@ -116,8 +116,6 @@ Storm Drain Feature Overview
 - **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
 - **Polyline features** (links): conduits, pumps, orifices
 
-Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
-
 Node Overview - Inlet, Junction
 ----------------------------------
 
@@ -129,6 +127,7 @@ Node Overview - Inlet, Junction
 
 
 This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
+Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
 
 **Documentation References**
 
