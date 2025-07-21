@@ -205,9 +205,7 @@ Open the shapefile table for inlets and junctions in QGIS.
 - For more information on storm drain units, see the `Storm Drain Units <https://flo-2dkaren.github.io
   /FLO-2D-Docs/Build25/  flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-units>`_.
 
-
-
-For more information on outfalls, see the **Storm Drain Guidelines** for `Outfalls <https://flo-2dkaren.github.io
+For more information on inlets/junctions, see the **Storm Drain Guidelines** for `Inlets/Junctions <https://flo-2dkaren.github.io
 /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#inlets-junctions>`_ .
 
 Node Overview - Outfall, Storage Unit
