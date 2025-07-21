@@ -278,7 +278,9 @@ Unsupported Features:
 Where to Learn More
 -------------------
 
-- Check the **Storm Drain Manual** for outfall and storage unit setup
+- Check the **Storm Drain Guidelines** for outfall and storage unit setup
+- Check the **Storm Drain Guidelines** for `Outfalls <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#outfalls>`_ and
+`Storage Unit <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#storage-units>`_ setup.
 - Use the **EPA SWMM GUI** to understand field definitions
 - FLO-2D only uses closed storage systems in the storm drain module
 
