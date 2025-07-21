@@ -497,6 +497,9 @@ Orifices are typically underground restrictions connected to manholes or other s
 | `open_close_time`     | Float    | Optional: time to open or close in hours       |
 +-----------------------+----------+------------------------------------------------+
 
+For more information on orifices, see the **Storm Drain Guidelines** for `Pumps <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#pumps>`_ .
+
 Weirs
 -----
 
