@@ -456,6 +456,9 @@ Pump types:
 - **TYPE 3**: Head/flow differential.
 - **TYPE 4**: Flow-depth, continuous.
 
+For more information on pumps, see the **Storm Drain Guidelines** for `Pumps <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#pumps>`_ .
+
 .. note::
    Set up the pump in the storm drain editor first, then assign the curve data in the **Pump Curves** table.
 
