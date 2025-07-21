@@ -192,7 +192,7 @@ Understanding Specific Types
 - Allows bidirectional flow once popped
 
 Visualization Tips
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 - Use **categorized symbology** to color nodes by inlet type
 - Use **Zoom to Feature** and satellite imagery to verify node alignment
 - Position nodes carefully relative to grid elements for accurate simulation
@@ -200,7 +200,7 @@ Visualization Tips
 
 
 Unit Notes
-~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~
 - All dimensions in **feet**
 - Clogging factor is a **percentage (0-1)**
 - Clogging time is in **hours**
