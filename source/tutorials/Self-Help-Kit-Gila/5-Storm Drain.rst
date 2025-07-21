@@ -196,14 +196,19 @@ Open the shapefile table for inlets and junctions in QGIS.
 - Use **categorized symbology** to color nodes by inlet type
 - Use **Zoom to Feature** and satellite imagery to verify node alignment
 - Position nodes carefully relative to grid elements for accurate simulation
-- See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
-
 
 **Unit Notes**
 
 - All dimensions in **feet**
 - Clogging factor is a **percentage (0-1)**
 - Clogging time is in **hours**
+- For more information on storm drain units, see the `Storm Drain Units <https://flo-2dkaren.github.io
+  /FLO-2D-Docs/Build25/  flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-units>`_.
+
+
+
+For more information on outfalls, see the **Storm Drain Guidelines** for `Outfalls <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#inlets-junctions>`_ .
 
 Node Overview - Outfall, Storage Unit
 ------------------------------------------
