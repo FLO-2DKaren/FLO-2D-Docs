@@ -218,9 +218,9 @@ Step 10: Review the `ARF.DAT` File
 
    - Key sections:
 
-   - ``S``line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
-   - ``T`` lines: fully blocked cells.
-   - ``P`` lines: partial blocks with ARF values < 1.0.
+     - ``S`` line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
+     - ``T`` lines: fully blocked cells.
+     - ``P`` lines: partial blocks with ARF values < 1.0.
 
    .. image:: ../img/shg/6/Bshg03_0027.png
 
@@ -246,7 +246,7 @@ Walls are common features in urban flood studies, especially in the southwestern
    These steps are based on QGIS 3.40 and FLO-2D Gila Plugin 2.0.
 
 Step 1: Review Wall Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 - Open the **walls** layer provided by the Flood Control District.
 - Right-click the layer and select **Open Attribute Table**.
 
@@ -262,7 +262,7 @@ Step 1: Review Wall Data
    Only keep hydraulically significant walls. Remove walls that do not affect flood routing, such as those inside large neighborhoods.
 
 Step 2: Add Walls to User Levee Lines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 - Open the **Levee and Wall Tool** from the FLO-2D toolbar.
 
 .. image:: ../img/shg/6/Bshg03_0029.png
@@ -278,7 +278,7 @@ Step 2: Add Walls to User Levee Lines
 .. image:: ../img/shg/6/Bshg03_0031.png
 
 Step 3: Convert Levee Lines to Schematic Layers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------
 - In the Levee tool, click **Create Schematic Layers from User Levee Layers**.
 
 .. image:: ../img/shg/6/Bshg03_0032.png
@@ -293,7 +293,7 @@ Step 3: Convert Levee Lines to Schematic Layers
 .. image:: ../img/shg/6/Bshg03_0034.png
 
 Step 4: Prescribed Failure Setup
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------
 - Open the **Levee Editor**.
 - Enable **Prescribed Failure** for the wall lines.
 - Export the levee data again.
