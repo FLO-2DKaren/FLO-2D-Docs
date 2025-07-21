@@ -497,8 +497,8 @@ Orifices are typically underground restrictions connected to manholes or other s
 | `open_close_time`     | Float    | Optional: time to open or close in hours       |
 +-----------------------+----------+------------------------------------------------+
 
-For more information on orifices, see the **Storm Drain Guidelines** for `Pumps <https://flo-2dkaren.github.io
-/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#pumps>`_ .
+For more information on orifices, see the **Storm Drain Guidelines** for `Orifices <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#orifices>`_ .
 
 Weirs
 -----
@@ -534,6 +534,9 @@ Weirs are usually surface-connected structures (rare underground). Always verify
 +-----------------------+----------+------------------------------------------------+
 | `contraction_coeff`   | Float    | Optional contraction coefficient               |
 +-----------------------+----------+------------------------------------------------+
+
+For more information on weirs, see the **Storm Drain Guidelines** for `Weirs <https://flo-2dkaren.github.io
+/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#weirs>`_ .
 
 .. caution::
    Weirs are typically not used in FLO-2D storm drain systems. If one appears in an `.inp` file, confirm its purpose. May need to be removed if inherited from surface modeling software.
