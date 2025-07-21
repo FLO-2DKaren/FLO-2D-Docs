@@ -39,15 +39,15 @@ Data and Resources
 
 This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.
 
-Import Storm Drain Shapefiles
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Import Storm Drain Shapefiles**
+
 - Load storm drain shapefiles into your project:
 
   - Sort files by type and select those labeled as **shapefiles**.
   - Drag and drop into a **Storm Drain** group in your QGIS layer panel.
 
-Understanding FLO-2D Storm Drain Logic
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Understanding FLO-2D Storm Drain Logic**
+
 - FLO-2D handles most drainage through the **surface model**:
 
   - Channels and detention basins are modeled at the surface.
@@ -61,8 +61,8 @@ Understanding FLO-2D Storm Drain Logic
   - Streets and inlets (inflow)
   - Outfalls discharge to channels or basins (outflow)
 
-Documentation and Learning Resources
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Documentation and Learning Resources**
+
 - FLO-2D provides built-in documentation:
 
     **Storm Drain Guidelines**
@@ -130,8 +130,8 @@ Node Overview - Inlet, Junction
 
 This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
 
-Documentation References
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Documentation References**
+
 - Use the **Storm Drain Guidelines** (Chapter 2) to understand inlet types:
 
   - Type 0: Junction (no interaction with surface)
@@ -141,8 +141,8 @@ Documentation References
   - Type 4: Unique (e.g. headwall)
   - Type 5: Manhole
 
-Reviewing Node Attributes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Reviewing Node Attributes**
+
 Open the shapefile table for inlets and junctions in QGIS.
 
 - **Required attributes** (vary by type):
@@ -156,8 +156,8 @@ Open the shapefile table for inlets and junctions in QGIS.
   - ``Feature Switch``: 0 (rim), 1 (invert), or 2 (special conditions)
   - Optional: ``Curb Height``, ``Clog Factor``, ``Clog Time``, ``Dropbox Area``
 
-Understanding Specific Types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Understanding Specific Types**
+
 
 **Type 0: Junction**
 
@@ -191,16 +191,16 @@ Understanding Specific Types
 - Acts like a junction until surcharge pops the lid
 - Allows bidirectional flow once popped
 
-Visualization Tips
-~~~~~~~~~~~~~~~~~~~~
+**Visualization Tips**
+
 - Use **categorized symbology** to color nodes by inlet type
 - Use **Zoom to Feature** and satellite imagery to verify node alignment
 - Position nodes carefully relative to grid elements for accurate simulation
 - See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
 
 
-Unit Notes
-~~~~~~~~~~~~
+**Unit Notes**
+
 - All dimensions in **feet**
 - Clogging factor is a **percentage (0-1)**
 - Clogging time is in **hours**
@@ -295,8 +295,8 @@ Link Overview - Conduit
 
 This lesson focuses on configuring **conduits** in the storm drain system. Conduits are polylines that connect nodes (e.g., inlets, junctions, outfalls), and are fully stored in the `.inp` file without an associated FLO-2D file.
 
-Open and Review the Conduit Attribute Table
--------------------------------------------
+**Open and Review the Conduit Attribute Table**
+
 1. In QGIS, right-click on the **Conduits** layer and choose **Open Attribute Table**.
 2. Dock the table to work alongside the map.
 3. Note that conduits:
@@ -304,8 +304,8 @@ Open and Review the Conduit Attribute Table
    - Do not generate `.dat` files like `SWMMFLOW.DAT` or `SWMMOUTF.DAT`.
    - Are entirely represented in the **SWMM .inp file**.
 
-Key Fields and Attributes
--------------------------
+**Key Fields and Attributes**
+
 The following fields should be configured in the conduit shapefile:
 
 +------------------------+----------------+---------------------------------------------+
@@ -365,8 +365,8 @@ The following fields should be configured in the conduit shapefile:
 .. note::
    Use the **Storm Drain Guidelines** or **SWMM GUI Help** to reference proper field definitions and recommended values.
 
-Tips on Flow Direction
-----------------------
+**Tips on Flow Direction**
+
 - Flow direction is determined by the digitized order of the polyline.
 - Use the **Advanced Digitizing Toolbar** in QGIS to flip flow direction with the **Reverse Line** tool.
 - Turn on **arrow symbology** to visualize flow direction:
@@ -376,8 +376,8 @@ Tips on Flow Direction
 .. tip::
    Reversing a line also reverses all internal vertices, keeping topology intact.
 
-Checking Profiles and Connectivity
-----------------------------------
+**Checking Profiles and Connectivity**
+
 Use the **Profile Tool** to visualize elevation and connectivity:
 
 1. Select a starting node and ending node.
@@ -385,8 +385,8 @@ Use the **Profile Tool** to visualize elevation and connectivity:
 3. Observe invert elevations and slope direction.
 4. Check for backward conduits or improper connections.
 
-Minimum Length Guidelines
--------------------------
+**Minimum Length Guidelines**
+
 To maintain model stability:
 
 - The **minimum conduit length** should match or exceed the grid cell size.
@@ -397,15 +397,9 @@ To maintain model stability:
    # Example: Reset all conduits with length < 20 to 20
    length < 20 = update to 20
 
-Setting Styles by Attributes
-----------------------------
-To visually inspect your network:
 
-- Use graduated symbology on conduit `length` or `geom1` (diameter).
-- Classify using color ramps for clearer mapping.
+**Loss Coefficients and Flap Gates**
 
-Loss Coefficients and Flap Gates
---------------------------------
 - Reference **SWMM GUI Help > Losses** for entrance/exit coefficient ranges.
 - **Flap Gate** set to 1 prevents backflow.
 
@@ -538,8 +532,8 @@ Weirs are usually surface-connected structures (rare underground). Always verify
 .. caution::
    Weirs are typically not used in FLO-2D storm drain systems. If one appears in an `.inp` file, confirm its purpose. May need to be removed if inherited from surface modeling software.
 
-Review Tips
------------
+**Review Tips**
+
 - Use the **EPA SWMM GUI** to preview expected inputs and verify how fields work together.
 - Field types and required formats should follow SWMM rules.
 - Curves (for pumps and orifices) are configured in a separate step.
