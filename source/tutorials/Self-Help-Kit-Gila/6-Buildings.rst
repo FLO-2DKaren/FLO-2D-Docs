@@ -92,8 +92,9 @@ Download Building Polygons
 
    This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
 
-   Step 1: Install the OSM Downloader Plugin
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1: Install the OSM Downloader Plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
    - Go to **Plugins > Manage and Install Plugins**.
    - Search for **OSM Downloader**.
    - Click **Install**.
@@ -103,8 +104,8 @@ Download Building Polygons
    .. tip::
       The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.
 
-   Step 2: Download Data
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 2: Download Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Activate the **OSM Downloader tool**.
 
    .. image:: ../img/shg/6/Bshg03_007.png
@@ -118,8 +119,8 @@ Download Building Polygons
 
    .. image:: ../img/shg/6/Bshg03_009.png
 
-   Step 3: Export Polygons
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 3: Export Polygons
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Turn off unnecessary OSM sublayers (e.g., roads).
    - Right-click the **polygons** layer > **Export > Save Features As...**
 
@@ -131,8 +132,8 @@ Download Building Polygons
 
    .. image:: ../img/shg/6/Bshg03_0011.png
 
-   Step 4: Filter for Buildings
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 4: Filter for Buildings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Open the attribute table.
    - Sort by the ``building`` field.
    - Select rows where ``building`` is null or empty and delete them.
@@ -143,8 +144,8 @@ Download Building Polygons
    .. image:: ../img/shg/6/Bshg03_0013.png
 
 
-   Step 5: Crop to Project Boundary
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 5: Crop to Project Boundary
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    .. image:: ../img/shg/6/Bshg03_0014.png
 
@@ -160,8 +161,8 @@ Download Building Polygons
 
    .. image:: ../img/shg/6/Bshg03_0017.png
 
-   Step 6: Clean Building Types
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 6: Clean Building Types
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Review building types.
    - Delete features such as ``carports``, ``gas islands``, etc., which don’t obstruct flow.
 
@@ -170,8 +171,8 @@ Download Building Polygons
    .. image:: ../img/shg/6/Bshg03_0019.png
 
 
-   Step 7: Add Required Fields
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 7: Add Required Fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Add the following integer fields:
    - ``collapse``
    - ``ARF`` (Area Reduction Factor)
@@ -188,8 +189,8 @@ Download Building Polygons
 
    .. image:: ../img/shg/6/Bshg03_0022.png
 
-   Step 8: Fill in Missing Buildings (Optional)
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 8: Fill in Missing Buildings (Optional)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Turn on a satellite basemap (e.g., Google Satellite).
    - Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
    - Digitize missing buildings.
@@ -202,20 +203,21 @@ Download Building Polygons
 
    .. image:: ../img/shg/6/Bshg03_0024.png
 
-   Step 9: Export the Final Building Layer
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 9: Export the Final Building Layer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - Save your edited buildings as a new layer if desired.
    - This layer can now be used with the **Grid Tools > Assign Buildings** tool.
 
    .. image:: ../img/shg/6/Bshg03_0025.png
 
-   Step 10: Review the `ARF.DAT` File
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 10: Review the `ARF.DAT` File
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    - After exporting building reductions, open ``arf.dat`` in Notepad++.
 
    .. image:: ../img/shg/6/Bshg03_0026.png
 
    - Key sections:
+
    - ``S``line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
    - ``T`` lines: fully blocked cells.
    - ``P`` lines: partial blocks with ARF values < 1.0.
@@ -234,7 +236,7 @@ Review and Assign Walls
    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-   Wall Setup and Failure
+Wall Setup and Failure
 =======================
 
 This lesson explains how to assign walls, set failure properties, and export wall data for FLO-2D modeling.
