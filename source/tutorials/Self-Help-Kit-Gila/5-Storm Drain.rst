@@ -196,6 +196,8 @@ Visualization Tips
 - Use **categorized symbology** to color nodes by inlet type
 - Use **Zoom to Feature** and satellite imagery to verify node alignment
 - Position nodes carefully relative to grid elements for accurate simulation
+- See the `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_ for more information.
+
 
 Unit Notes
 ~~~~~~~~~~~~~~~~~~~~~~~~
