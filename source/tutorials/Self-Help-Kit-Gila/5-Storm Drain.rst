@@ -111,6 +111,13 @@ the link below:
 
    <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
 
+Storm Drain Feature Overview
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
+- **Polyline features** (links): conduits, pumps, orifices
+
+Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
+
 Node Overview - Inlet, Junction
 ----------------------------------
 
@@ -122,13 +129,6 @@ Node Overview - Inlet, Junction
 
 
 This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
-
-Storm Drain Feature Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
-- **Polyline features** (links): conduits, pumps, orifices
-
-Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
 
 Documentation References
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -360,7 +360,7 @@ The following fields should be configured in the conduit shapefile:
 +------------------------+----------------+---------------------------------------------+
 
 .. note::
-   Use the **Storm Drain Editor manual** or **SWMM GUI Help** to reference proper field definitions and recommended values.
+   Use the **Storm Drain Guidelines** or **SWMM GUI Help** to reference proper field definitions and recommended values.
 
 Tips on Flow Direction
 ----------------------
