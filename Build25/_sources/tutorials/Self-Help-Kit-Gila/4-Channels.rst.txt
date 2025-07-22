@@ -373,6 +373,7 @@ Step 1: Identify Culvert Locations
 
 - Draw each structure from the **left bank** of the upstream channel to the **left bank** of the downstream channel.
 
+.. image:: ../img/shg/4/shg_chan059.gif
 
 Step 2: Define Structure Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

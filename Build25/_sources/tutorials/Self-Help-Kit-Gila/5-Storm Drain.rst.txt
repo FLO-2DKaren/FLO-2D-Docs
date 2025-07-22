@@ -576,7 +576,7 @@ Step 1: Load Shapefiles
 - Open the **Advanced Storm Drain Layers** folder.
 - Drag and drop the appropriate shapefiles into QGIS.
 
-.. image:: ../img/shg/5/shg_storm001.jpg
+.. image:: ../img/shg/5b/shg_storm001.jpg
 
 - Do **not** add them to the GeoPackage. Keep them in the User Layers.
 - Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
@@ -585,38 +585,38 @@ Step 2: Assign Shapefile Fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
 
-.. image:: ../img/shg/5/shg_storm002.jpg
+.. image:: ../img/shg/5b/shg_storm002.jpg
 
 - Point layers like inlets, outfalls, and storage units will show up in the dropdown.
 - Assign each required field from the shapefile attributes:
   - Example: `Inlet Name` → `name`, `Type` → `type`, etc.
 - Turn off unused or null-value fields to avoid unnecessary entries.
 
-.. image:: ../img/shg/5/shg_storm003.jpg
+.. image:: ../img/shg/5b/shg_storm003.jpg
 
-.. image:: ../img/shg/5/shg_storm004.jpg
+.. image:: ../img/shg/5b/shg_storm004.jpg
 
-.. image:: ../img/shg/5/shg_storm021.jpg
+.. image:: ../img/shg/5b/shg_storm021.jpg
 
-.. image:: ../img/shg/5/shg_storm005.jpg
+.. image:: ../img/shg/5b/shg_storm005.jpg
 
-.. image:: ../img/shg/5/shg_storm006.jpg
+.. image:: ../img/shg/5b/shg_storm006.jpg
 
-.. image:: ../img/shg/5/shg_storm022.jpg
+.. image:: ../img/shg/5b/shg_storm022.jpg
 
-.. image:: ../img/shg/5/shg_storm023.jpg
+.. image:: ../img/shg/5b/shg_storm023.jpg
 
 Click **Assign Selected Fields**, then click **OK** for the warning that follows.
 
-.. image:: ../img/shg/5/shg_storm024.jpg
+.. image:: ../img/shg/5b/shg_storm024.jpg
 
-.. image:: ../img/shg/5/shg_storm007.jpg
+.. image:: ../img/shg/5b/shg_storm007.jpg
 
 Step 3: Assign Nodes to Links
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click the **Auto-Assign Links and Nodes** button.
 
-.. image:: ../img/shg/5/shg_storm008.jpg
+.. image:: ../img/shg/5b/shg_storm008.jpg
 
 - This assigns start and end nodes to each conduit.
 - Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.
@@ -627,20 +627,20 @@ Click the **Auto-Assign Links and Nodes** button.
 
 Check the **Simulate Storm Drain** box to turn it on.
 
-.. image:: ../img/shg/5/shg_storm010.jpg
+.. image:: ../img/shg/5b/shg_storm010.jpg
 
 Step 4: Add Type 4 Rating Tables and Culverts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Go to the **Type 4 Table Editor**.
 
-.. image:: ../img/shg/5/shg_storm011.jpg
+.. image:: ../img/shg/5b/shg_storm011.jpg
 
 - Import rating tables or culvert equations for each type 4 inlet.
 
-.. image:: ../img/shg/5/shg_storm012.jpg
+.. image:: ../img/shg/5b/shg_storm012.jpg
 
-.. image:: ../img/shg/5/shg_storm013.jpg
+.. image:: ../img/shg/5b/shg_storm013.jpg
 
 - File names must match inlet names (e.g., ``41.txt`` for inlet 41).
 - Format for rating tables: Depth on the left, Discharge on the right.
@@ -649,15 +649,15 @@ Step 5: Add Pump Curve Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Add a pump curve via the Pump Table interface.
 
-.. image:: ../img/shg/5/shg_storm014.jpg
+.. image:: ../img/shg/5b/shg_storm014.jpg
 
 - Name it to match the pump (e.g., ``P1``).
 
-.. image:: ../img/shg/5/shg_storm015.jpg
+.. image:: ../img/shg/5b/shg_storm015.jpg
 
 - Enter a depth-discharge pair (e.g., ``1,10``, ``2,20``).
 
-.. image:: ../img/shg/5/shg_storm016.jpg
+.. image:: ../img/shg/5b/shg_storm016.jpg
 
 - Data is saved automatically when you click off the cell.
 
@@ -665,19 +665,19 @@ Step 6: Add Storage Unit Curves
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Open **Storage Units** attribute table.
 
-.. image:: ../img/shg/5/shg_storm025.jpg
+.. image:: ../img/shg/5b/shg_storm025.jpg
 
 - Use the **FLO-2D Info Tool** to open the storage curve editor.
 
-.. image:: ../img/shg/5/shg_storm026.jpg
+.. image:: ../img/shg/5b/shg_storm026.jpg
 
 - Import a tab-delimited text file or paste Excel values.
 
-.. image:: ../img/shg/5/shg_storm027.jpg
+.. image:: ../img/shg/5b/shg_storm027.jpg
 
-.. image:: ../img/shg/5/shg_storm028.jpg
+.. image:: ../img/shg/5b/shg_storm028.jpg
 
-.. image:: ../img/shg/5/shg_storm029.jpg
+.. image:: ../img/shg/5b/shg_storm029.jpg
 
 Step 7: Set Storm Drain Control Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -686,21 +686,21 @@ Step 7: Set Storm Drain Control Parameters
 - Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
 - Leave advanced defaults unless needed.
 
-.. image:: ../img/shg/5/shg_storm017.jpg
+.. image:: ../img/shg/5b/shg_storm017.jpg
 
 
 Step 8: Schematize and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
 
-.. image:: ../img/shg/5/shg_storm018.jpg
+.. image:: ../img/shg/5b/shg_storm018.jpg
 
 - Click **Quick Run** to simulate.
 - Output files will populate your designated folder.
 
-.. image:: ../img/shg/5/shg_storm019.jpg
+.. image:: ../img/shg/5b/shg_storm019.jpg
 
-.. image:: ../img/shg/5/shg_storm020.jpg
+.. image:: ../img/shg/5b/shg_storm020.jpg
 
 .. tip::
    If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
