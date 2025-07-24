@@ -8,7 +8,7 @@ cross section data.  It also shows how to add a boundary control and culverts.
 
    Set the video playback speed to 2x to complete the lessons faster.
 
-   The videos are more detailed whereas the text gives the minimum steps needed
+   The videos are **more detailed** whereas the text gives the minimum steps needed
    to complete the project.
 
 Backup and Reload
@@ -35,78 +35,139 @@ Build Channel and Schematize
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-This lesson demonstrates how to manually create channels in FLO-2D in the absence of HEC-RAS data
-The process involves digitizing channel banks and cross-sections, followed by schematization and geometry validation.
+This lesson demonstrates how to create 3 channel segments using QGIS and the FLO-2D Plugin.
+The process involves digitizing channel banks and cross sections, followed by schematization and geometry validation.
 
-Step 1: Load Templates Layers
+Step 1: Load Template Layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Import reference layers (left bank, right bank, cross-sections).
+- Import template layers (LB Template, RB Template, CS Template).
 
-.. image:: ../img/shg/4/shg_chan001.jpg
+.. image:: ../img/shg/4/shg_chan001.png
 
 - Use these layers as **visual guides only**.
 - Update colors for visibility:
 
-  - Left Bank: Cyan
-  - Right Bank: Magenta
-  - Cross-Sections: Navy
+  - LB Template: Lime Green 0.5 width
+  - RB Template: Hot Pink 0.5 width
+  - CS Template: Purple 0.5 width
 
-.. image:: ../img/shg/4/shg_chan002.jpg
+.. image:: ../img/shg/4/shg_chan002.png
 
-Step 2: Draw Left and Right Banks
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Activate editing on the **channel bank** layer.
+Step 2: Create Left Banks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Activate editing on the **left bank lines** layer.
+- The left bank is left side of the channel when facing downstream.
 - Use **"Add Line Feature"** and set to **Digitize with Segment**.
-- Draw each channel segment **Upstream to Downstream**.
+- Draw each left bank segment **Upstream to Downstream**.
+- Use the **LB Template** layer as a guide for alignment.
 
-.. image:: ../img/shg/4/shg_chan003.jpg
+.. image:: ../img/shg/4/shg_chan003.png
 
-- Typical limiters: ``0.9`` (supercritical), ``0.2`` (width).
+- The following animation shows how to digitize the first left bank segment:
 
-.. image:: ../img/shg/4/shg_chan004.jpg
+.. image:: ../img/shg/4/shg_chan003.gif
+
+Fill the attributes as shown below or leave them blank and click OK.
+If you leave them blank, you can add them later in the **Attribute Table**.
+
+.. image:: ../img/shg/4/shg_chan004.png
 
 .. tip::
-   Use satellite imagery and elevation contours to align the lines.
+   Use satellite imagery and elevation hillshade to align the banks.
    Use consistent start and end locations across segments.
 
-Step 3: Save and Review Bank Lines
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Save frequently during edits.
-- Check that both **Left** and **Right** banks are aligned and positioned properly.
+Step 3: Create Right Banks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Activate editing on the **Right Bank Lines** layer.
+- The right bank is right side of the channel when facing downstream.
+- Use **"Add Line Feature"** and set to **Digitize with Segment**.
+- Draw each right bank segment **Upstream to Downstream**.
+- Use the **RB Template** as a guide for alignment.
 
-Step 4: Add Cross-Sections
+.. image:: ../img/shg/4/shg_chan003a.png
+
+- The following animation shows how to digitize the first right bank segment:
+
+.. image:: ../img/shg/4/shg_chan003a.gif
+
+.. tip::
+   Use satellite imagery and elevation hillshade to align the banks.
+   Use consistent start and end locations across segments.
+   
+   Keep the right banks close to the fence line but away from the street.
+   
+Step 4: Save Bank Lines
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Save the bank line layers and stop editing.
+
+.. image:: ../img/shg/4/shg_chan005.png
+
+Step 5: Cross Section Rules
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Cross-Section Editor**.
-- Digitize cross-sections from **Left to Right bank**.
-- Ensure both ends and the crossing lie within the same grid element.
+- The first cross section in each channel segment must have its end points located within 
+  the same grid elements as the corresponding left and right bank lines. The following image
+  small circles around the end points and they are located within the same grid elements as the left and right bank lines.
+
+.. image:: ../img/shg/4/shg_chan006.png
+
+- The cross section must cross the left and right bank lines.
+
+.. image:: ../img/shg/4/shg_chan007.png
+
+- Digitize the cross sections from upstream to downstream.
+
+.. image:: ../img/shg/4/shg_chan009.png
+
+- Place the cross section where the DEM elevation is representative of the channel.
+- Try to represent the channel transition up to and away from culverts or other structures.
+
+.. image:: ../img/shg/4/shg_chan008.png
+
+- Do not place two cross sections in a single grid element.
+
+Step 6: Digitize Cross Sections
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **CS Template** as a guide for alignment.
+- Use the **Cross Section Editor**.
+  
+ - Click **Add Line Feature** button.
+ - Start digitizing cross sections.
+ - When finished, click the **Save** button.
+ - Use the enter key or click OK to close the dialog.  It is faster to use the enter key.  It is OK to modify the **n value** and **name** fields.
+   but not necessary at this point.
+ - Use the arrow keys to quickly pan to the next cross section.
+ - **Note that the gif only shows the first 3 cross sections being digitized.**
 
 .. image:: ../img/shg/4/shg_chan005.gif
 
-Step 5: Save and Schematize
+- Natural (“N”) type cross sections are given temporary geometry that will be replaced by sampling elevation.
+
+.. image:: ../img/shg/4/shg_chan010.png  
+
+Step 7: Save and Schematize
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Cross-Section Save Button** (not the QGIS save button) to trigger correct processing.
-- Cross-sections will initially have placeholder elevation data.
+- Use the **Cross Section Save Button** (not the QGIS save button) to trigger correct processing.
+- Cross sections will initially have placeholder elevation data.
+- Click **Schematize Channel Button** to create the schema layers and validate the channel placement.
 
-Click **Schematize Channel** to validate geometry:
+.. image:: ../img/shg/4/shg_chan011.png
 
-.. image:: ../img/shg/4/shg_chan006.jpg
+- Errors such as "bank and cross section not in same grid cell" will be reported.
 
-- Errors such as "bank and cross-section not in same grid cell" will be reported.
+.. note:: This error was intentionally created to show the error message.  Watch the video to see how to fix it.
 
-.. image:: ../img/shg/4/shg_chan007.jpg
+.. image:: ../img/shg/4/shg_chan012.png
 
-The cross-section that triggered the above error was the one circled below:
+- If errors occur:
 
-.. image:: ../img/shg/4/shg_chan008.jpg
+  - Adjust the cross section position to ensure it crosses both banks.
+  - Ensure the first cross section endpoints are within the same grid elements as the bank lines.
+  - Use the **Vertex Editor** to modify cross section alignment.
 
-- Adjust vertex positions with the **Vertex Tool** to fix errors.
+- After resolving errors, click **Schematize Channel** again to update the schema layers.
+- Schematized cross sections are grouped by channel segments.
 
-.. image:: ../img/shg/4/shg_chan009.jpg
-
-Step 6: Review Schematic Summary
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Log Messages Panel**.
-- You’ll see a count of cross-sections per segment and interpolated ones added.
+.. image:: ../img/shg/4/shg_chan013.png
 
 Sample Elevation and Schematize
 -------------------------------------
@@ -118,76 +179,35 @@ Sample Elevation and Schematize
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
    
-This lesson walks through how to sample and refine elevation data for your FLO-2D cross-sections after schematizing your channel geometry.
+This lesson walks through how to sample and refine elevation data for FLO-2D cross sections after schematizing channel geometry.
 
-Step 1: Backup Your Channel
+Step 1: Sample Elevation Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Create a backup of your project before making changes.
-- Example: ``backup_ready_to_sample_channel_elevation.zip``
-
-Step 2: Rename Cross-Sections by Segment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Attribute Table** of the cross-section layer.
-- Use the **Field Calculator** to concatenate names:
-  - Format: ``G1-0``, ``G2-1``, etc.
-- Assign each set to a unique segment (G1, G2, G3).
-
-.. image:: ../img/shg/4/shg_chan010.jpg
-
-.. note::
-   Use the plugin’s **Save** button to commit changes — **not** the QGIS save button.
-
-Step 3: Sample Elevation Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the cross-section editor.
+- Open the cross section editor.
 - Select **Sample All** to gather elevation data from the grid DEM.
 
-.. image:: ../img/shg/4/shg_chan011.jpg
+.. image:: ../img/shg/4/shg_chan014.png
 
-- Elevation is sampled from the **first to last vertex** of each cross-section.
+- Elevation is sampled from the point where the cross section crosses the left bank line to the right bank line of each cross section.
 
-Step 4: Review and Repair Bad Cross-Section Profiles
+.. image:: ../img/shg/4/shg_chan014a.png
+
+Step 2: Review and Repair Bad Cross Section Profiles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - Use the **scroll wheel** to cycle through each profile.
-- Look for elevation anomalies or errors (jagged shapes, false dips).
+- Look for elevation anomalies or errors (jagged shapes, incorrect bank elevation, no banks).
 
-.. image:: ../img/shg/4/shg_chan054.jpg
+.. image:: ../img/shg/4/shg_chan015a.png
 
-.. image:: ../img/shg/4/shg_chan055.jpg
+.. image:: ../img/shg/4/shg_chan015.png
 
-- For bad cross-section profiles, try:
+- For bad cross section profiles, try:
 
-  - Adjust Left/Right bank vertices using the **Vertex Tool**:
+  - Adjust the vertices of the cross section, left bank, or right bank layers using the **Vertex Tool**
+  - Drag vertex points slightly to avoid bad samples (e.g., near culverts or transitions).
+  - Click **Sample Single** to resample after adjustment.
 
-    - Drag Left/Right bank points slightly to avoid bad samples (e.g., near culverts or transitions).
-    - Click **Sample Single** to resample after adjustment.
-
-    .. image:: ../img/shg/4/shg_chan012.jpg
-
-    .. image:: ../img/shg/4/shg_chan057.jpg
-
-  - If a cross-section samples poor data:
-
-    - Move the vertex away from overlapping features or boundary limits (like inlets or retaining walls).
-    - Keep cross-sections **perpendicular** and well-positioned.
-    - Resample and check again.
-
-    .. image:: ../img/shg/4/shg_chan056.jpg
-
-Step 6: Add Missing Cross-Sections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- If a **transition is missing**, add a cross-section manually:
-
-  - Use the **Cross-Section Tool**
-  - Draw a new line and click **Save**
-  - Rename it (e.g., “new”) before schematizing
-  - Run **Schematize** to properly place it in order
-
-.. image:: ../img/shg/4/shg_chan057.gif
-
-.. note::
-   You can delete schema data before re-schematizing if needed.
+.. note:: For a more detailed example, watch the video.
 
 Bank Align and Interpolate
 ----------------------------
@@ -199,64 +219,43 @@ Bank Align and Interpolate
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-In this lesson, you’ll learn how to refine your left and right bank channel alignments and perform a test simulation to validate your model setup.
+Learn how to refine the left and right bank channel alignments and perform a test simulation to validate your model setup.
 
-Step 1: Review Bank Alignment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Vertex Tool** to adjust left and right bank lines.
-- Goals:
+.. note:: These steps might not follow the video exactly.  These steps are the minimum needed to complete the task.
 
-  - Avoid backyards and buildings
-  - Ensure the channel spans **at least three grid elements**
-  - Maintain **crossing lines** between left and right banks
-
-.. image:: ../img/shg/4/shg_chan057.jpg
-
-.. tip::
-   Keep banks away from grid edges and channel transitions if possible.
-
-Step 2: Schematize and Interpolate
+Step 1: Schematize and Interpolate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize Channel** to commit updated geometry.
-- Then use the **Interpolate Channel** tool to regenerate elevation stations between cross-sections.
+- Click the **Interpolate Channel** tool to interpolate schema cross sections which are between the user cross sections.
+- If an interpolation error loads, check the project path using the FLO-2D Settings dialog.
 
-.. image:: ../img/shg/4/shg_chan013.jpg
+.. image:: ../img/shg/4/shg_chan016.png
 
-.. note::
-   If a cross-section has fewer than 6 stations, an error will appear.
-
-Step 3: Use the Geometry Checker
+Step 2: Use the Geometry Checker
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - After interpolation, click **Check Channel Geometry**:
+- It will verify minimum spacing and floodplain surface area.
+- Click error messages to locate problematic cross sections or elements.
 
-  - It will verify minimum spacing and floodplain surface area.
-  - Click error messages to locate problematic cross-sections or elements.
-
-.. image:: ../img/shg/4/shg_chan014.jpg
+.. image:: ../img/shg/4/shg_chan017.png
 
 - Adjust vertex positions as needed to resolve errors.
 - Re-schematize and interpolate again.
 
+.. note:: See the video for a detailed example.
+
+Step 3: Review Bank Alignment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Use the **Vertex Tool** to adjust left and right bank lines.
+
+.. image:: ../img/shg/4/shg_chan006.gif
+
+
 Step 4: Final Save and Verification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Save both the **bank lines** and **cross-section layers**.
-- Verify that your cross-sections still contain elevation data.
-
-Step 5: Export and Run Test Simulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Export DAT files using **Export DAT Files** tool.
-- Overwrite the files in your test folder if needed.
-
-.. image:: ../img/shg/4/shg_chan015.jpg
-
-- Launch **FLO-2D Pro** to run the simulation.\
-
-.. image:: ../img/shg/4/shg_chan016.jpg
-
-.. tip::
-   This simulation is only validating **channel geometry**, not full model results.
-   A successful run here indicates channel alignment and schematization passed.
-
+- Save both the **bank lines** and **cross section layers**.
+- Verify that your cross sections still have good elevation data.
+- Perform a final schematize, interpolate, and geometry check.
 
 Add a Boundary Control
 ----------------------------
@@ -268,16 +267,16 @@ Add a Boundary Control
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-In this lesson, you’ll assign **inflow and outflow boundary conditions** to your FLO-2D channel model
+In this lesson, assign **inflow and outflow boundary conditions** to the FLO-2D channel model
 using both steady and time-series hydrographs.
 
 Step 1: Create Upstream Inflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Boundary Editor** and click **Create**.
+- Open the **Boundary Editor** and click **Add Point**.
 - Select the upstream grid element at the head of your channel.
 - Click **OK**, then click the new boundary marker again to save.
 
-.. image:: ../img/shg/4/shg_chan017.jpg
+.. image:: ../img/shg/4/shg_chan017a.jpg
 
 Step 2: Add Inflow Hydrograph
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -286,70 +285,50 @@ Step 2: Add Inflow Hydrograph
 
 .. image:: ../img/shg/4/shg_chan018.jpg
 
-You have two options:
+There are several options for hydrographs but here are two examples:
 
-- **Steady Flow (Stepped) Hydrograph**  
-  Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).  
-  Sample time steps at 0.5-hr intervals until 10 hours.
+.. dropdown:: Steady Flow or Stepped Hydrograph
 
-  .. image:: ../img/shg/4/shg_chan019.jpg
+   - Create a hydrograph with incremental CFS values (e.g., 100 → 250 → 350 → 550).  
+   - Sample time steps at 0.5-hr intervals until 10 hours.
 
-- **Imported Hydrograph**  
-  Copy a 6-hour inflow from your project folder (e.g., ``lesson2``).  
-  Paste values directly into the hydrograph table.
+   .. image:: ../img/shg/4/shg_chan019.jpg
 
-  .. image:: ../img/shg/4/shg_chan020.jpg
+.. dropdown:: Imported Hydrograph
 
-  Rename "Time Series 3" to "GrnwayIn 100yr 6hr"
+   - Copy a 6-hour inflow from your project folder (e.g., ``lesson2``).  
+   - Paste values directly into the hydrograph table.
+
+   .. image:: ../img/shg/4/shg_chan020.jpg
+
+   - Rename "Time Series 3" to "GrnwayIn 100yr 6hr"
+
+- Finish the upstream inflow by clicking the schematize button.
+
+.. image:: ../img/shg/4/shg_chan021.jpg
 
 .. tip::
    Swap between hydrographs quickly by selecting a different record and **schematizing**.
 
- .. image:: ../img/shg/4/shg_chan021.jpg
-
 Step 3: Create Downstream Outflow Point
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click the **Boundary Editor** again and select the **last grid element**.
+- Click the **Boundary Editor** point button on the outflow widget.
+- Click the left bank element of the last channel element. 
+- This will be the normal outflow condition for the cross section.
 - Click to confirm, then click the marker again to save.
 
 - Name the boundary (e.g., ``GrnwayOut``).
 
- .. image:: ../img/shg/4/shg_chan022.jpg
+.. image:: ../img/shg/4/shg_chan022.png
 
- .. image:: ../img/shg/4/shg_chan023.jpg
+.. image:: ../img/shg/4/shg_chan023.png
 
 - Set type to **Floodplain and Channel Outflow**.
 - No hydrograph is required.
 
-Step 4: Schematize and Export
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Schematize** to generate boundary files.
 
  .. image:: ../img/shg/4/shg_chan024.jpg
-
-- Use **Export DAT Files** to save your project.
-
- .. image:: ../img/shg/4/shg_chan025.jpg
-
-Files updated:
-
-- ``INFLOW.DAT``: now includes the new stepped hydrograph.
-- ``CHAN.DAT``, ``CHANBANK.DAT``, ``CHANCOND.DAT``, ``CHANROUGH.DAT``: standard channel outputs.
-
-Step 5: Run a Simulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Run FLO-2D** to test the boundary setup.
-
- .. image:: ../img/shg/4/shg_chan026.jpg
-
- .. image:: ../img/shg/4/shg_chan016.jpg
-
-- If the simulation starts successfully, the boundary conditions are valid.
-
-.. note::
-   Water enters the channel from the upstream **cross-section**, not the grid element.  
-   If the flow overtops the channel, it will exit via floodplain outflow.
-
 
 Add Culverts
 -------------------
@@ -361,12 +340,11 @@ Add Culverts
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-This lesson covers how to define and integrate culvert structures (CTs) into your FLO-2D channel using
-rating tables or the generalized culvert equation.
+This lesson covers how to define and integrate culvert structures into a FLO-2D channel using
+rating tables.
 
 Step 1: Identify Culvert Locations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Stop your current simulation if you observe **unexpected overtopping** in channels.
 - Switch to the **Structure Editor** and click **Add Structure**.
 
 .. image:: ../img/shg/4/shg_chan027.jpg
@@ -378,11 +356,12 @@ Step 1: Identify Culvert Locations
 Step 2: Define Structure Properties
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Click **Save** after drawing all structures.
-- Name each structure (e.g., ``Grnway1``, ``Grnway2``). Avoid spaces.
+- Name each structure (``Grnway1``, ``Grnway2``). 
+- Do not use spaces in names.
 - Set:
 
   - Type: **Channel to Channel**
-  - Method: **Rating Table**
+  - Rating: **Rating Table**
 
 .. image:: ../img/shg/4/shg_chan028.jpg
 
@@ -404,9 +383,6 @@ Step 3: Import Rating Tables
 
 .. image:: ../img/shg/4/shg_chan033.jpg
 
-.. note::
-   You can alternatively use the **Generalized Culvert Equation** and define geometry and length manually.
-
 Step 4: Tailwater Controls
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Options:
@@ -421,15 +397,15 @@ Step 4: Tailwater Controls
 
 Step 5: Optional Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Head Reference Elevation: Only used if a weir controls flow onset.
-- Length and Diameter: Required only if using **Generalized Equation** or long culverts in excess of 500 ft,
-  not rating tables.
+- Head Reference Elevation: Only used if a weir controls flow.
+- Length and Diameter: Required only if using `Generalized Equation` or `Long Culverts` in excess of 500 ft,
+
 
 .. image:: ../img/shg/4/shg_chan035.jpg
 
 Step 6: Schematize and Save
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Schematize** to convert user-drawn structures to **grid-aligned schema features**.
+- Click **Schematize** to convert user-drawn structures to **FLO-2D grid aligned features**.
 
 .. image:: ../img/shg/4/shg_chan036.jpg
 
@@ -438,34 +414,29 @@ Step 6: Schematize and Save
 .. image:: ../img/shg/4/shg_chan037.jpg
 
 - Enable **Structure Switch** in **Control Parameters**, then **Save**.
+- The switch may be automatically enabled when the Schematize button is clicked.
 
 .. image:: ../img/shg/4/shg_chan038.jpg
 
-Step 7: Export and Review Files
+Step 7: Run a Test Simulation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Export DAT files.
-- Files updated:
+- Run a Quick Run to verify the channel and structures.
 
-  - ``CONT.DAT``: Structure switch activated.
-  - ``HYSTRUCT.DAT``: Lists all culvert definitions and rating tables.
+.. image:: ../img/shg/4/shg_chan024.png
 
-.. image:: ../img/shg/4/shg_chan039.jpg
+- Create a Run Folder to start export the data files into.
 
-.. image:: ../img/shg/4/shg_chan040.jpg
+.. image:: ../img/shg/4/shg_chan025.png
 
-.. note::
-   - `S` lines = structure metadata
-   - `T` lines = rating table values (depth, flow, area)
-   - Use line codes 0 = floodplain-to-floodplain, 1 = channel-to-channel, etc.
+- Click OK twice to start the simulation.
 
-Step 8: Run a Test Simulation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Launch **FLO-2D Pro** to verify structures and inflow integration.
+.. image:: ../img/shg/4/shg_chan026.png
+
+- The run will take a few minutes to complete.
 
 .. image:: ../img/shg/4/shg_chan041.jpg
 
-- Rainfall and hydrograph will appear as different colors in the simulation output.
-- Use the simulation to evaluate discharge, transitions, and overtopping behavior.
+.. note:: If an error occurs, check the ERROR.CHK text file for details.  The videos show more details on how to fix common errors.
 
 
 Channel Summary and Results
