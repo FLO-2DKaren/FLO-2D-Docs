@@ -1,5 +1,7 @@
 .. dropdown:: Simple Storm Drain
 
+    Simple Storm Drain
+    ====================
 
     This simple lesson shows how to create a simple storm drain from Shapefiles.
 
