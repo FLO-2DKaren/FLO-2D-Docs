@@ -27,11 +27,10 @@ Simple Storm Drain
 
     .. raw:: html
 
-        <h3> Step 1: Load Shapefiles <h3>
+        <h3> Step 1: Load Shapefiles </h3>
 
-    Open the **Simple Storm Drain Layers** folder.
-
-    Drag and drop the appropriate shapefiles into QGIS.
+    - Open the **Simple Storm Drain Layers** folder.
+    - Drag and drop the appropriate shapefiles into QGIS.
 
     .. image:: ../img/shg/5a/shg_sstorm001.jpg
 
@@ -40,7 +39,7 @@ Simple Storm Drain
 
     .. raw:: html
 
-        <h3> Step 2: Assign Shapefile Fields <h3>
+        <h3> Step 2: Assign Shapefile Fields </h3>
 
     Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
 
@@ -65,7 +64,7 @@ Simple Storm Drain
 
     .. raw:: html
 
-        <h3> Step 3: Assign Nodes to Links <h3>
+        <h3> Step 3: Assign Nodes to Links </h3>
 
     Click the **Auto-Assign Links and Nodes** button.
 
@@ -84,7 +83,7 @@ Simple Storm Drain
 
     .. raw:: html
 
-        <h3> Step 4: Add Type 4 Rating Tables and Culverts <h3>
+        <h3> Step 4: Add Type 4 Rating Tables and Culverts </h3>
 
     - Go to the **Type 4 Table Editor**.
 
@@ -99,7 +98,7 @@ Simple Storm Drain
 
     .. raw:: html
 
-        <h3> Step 5: Set Storm Drain Control Parameters <h3>
+        <h3> Step 5: Set Storm Drain Control Parameters </h3>
 
     - Set the **start and end time** of your simulation (e.g., 10 hours).
     - Ensure it matches any time series used.
