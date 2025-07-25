@@ -1,7 +1,11 @@
 Simple Storm Drain
 ====================
 
-.. dropdown:: Simple Storm Drain
+.. dropdown::
+
+    .. raw:: html
+
+        <h1> Simple Storm Drain </h1>
 
     .. raw:: html
 
