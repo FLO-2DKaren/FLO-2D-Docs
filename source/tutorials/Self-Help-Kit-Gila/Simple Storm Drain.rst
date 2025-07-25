@@ -1,3 +1,6 @@
+Simple Storm Drain
+====================
+
 .. dropdown:: Simple Storm Drain
 
     .. raw:: html
