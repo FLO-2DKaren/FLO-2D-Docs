@@ -29,8 +29,9 @@ Simple Storm Drain
 
         <h3> Step 1: Load Shapefiles <h3>
 
-    - Open the **Simple Storm Drain Layers** folder.
-    - Drag and drop the appropriate shapefiles into QGIS.
+    Open the **Simple Storm Drain Layers** folder.
+
+    Drag and drop the appropriate shapefiles into QGIS.
 
     .. image:: ../img/shg/5a/shg_sstorm001.jpg
 
