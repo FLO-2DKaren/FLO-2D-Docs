@@ -5,7 +5,7 @@ Simple Storm Drain
 
     .. raw:: html
 
-        <h1> Simple Storm Drain </h1>
+        <h2> Simple Storm Drain </h2>
 
     .. raw:: html
 
