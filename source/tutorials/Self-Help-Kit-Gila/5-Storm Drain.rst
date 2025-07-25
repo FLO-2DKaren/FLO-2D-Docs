@@ -1,10 +1,11 @@
 Storm Drain
 ============
 
+.. dropdown:: Simple Storm Drain
 
 
-
-This advanced lesson shows how to create a storm drain from Shapefiles.  Stay tuned for more lessons that will
+This advanced lesson shows how to create a storm drain from Shapefiles.
+Stay tuned for more lessons that will
 show how to set up a storm drain from a swmm.inp.
 
 .. Note:: It will be easier to view these videos on YouTube.
@@ -30,8 +31,10 @@ Kit.  Here is a checklist of tasks that might get skipped during storm drain mod
 - [ ] Schematize the network.
 - [ ] Perform a test run.
 
-Data and Resources
---------------------
+
+.. raw:: html
+
+    <h2>Data and Resources</h2>
 
 .. raw:: html
 
@@ -101,9 +104,10 @@ This lesson provides an introduction to importing and understanding the storm dr
        - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
        - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
 
+.. raw:: html
 
-Contact Support
-~~~~~~~~~~~~~~~~~
+    <h3>Contact Support</h3>
+
 
 For technical assistance or troubleshooting, use the official FLO-2D support form available at
 the link below:
@@ -114,13 +118,20 @@ the link below:
 
    <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
 
-Storm Drain Feature Overview
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Storm Drain Feature Overview</h3>
+
 - **Point features** (nodes): inlets, junctions, manholes, outfalls, storage units
 - **Polyline features** (links): conduits, pumps, orifices
 
-Node Overview - Inlet, Junction
-----------------------------------
+.. raw:: html
+
+    <h3>Storm Drain Feature Overview</h3>
+
+.. raw:: html
+
+    <h4>Node Overview - Inlet, Junction</h4>
 
 .. raw:: html
 
@@ -210,8 +221,9 @@ Open the shapefile table for inlets and junctions in QGIS.
 For more information on inlets/junctions, see the **Storm Drain Guidelines** for `Inlets/Junctions <https://flo-2dkaren.github.io
 /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#inlets-junctions>`_ .
 
-Node Overview - Outfall, Storage Unit
-------------------------------------------
+.. raw:: html
+
+    <h4>Node Overview - Outfall, Storage Unit</h4>
 
 .. raw:: html
 
@@ -222,8 +234,8 @@ Node Overview - Outfall, Storage Unit
 
 This lesson explains how to review and configure outfalls and storage units in your storm drain shapefiles.
 
-Outfalls
---------
+**Outfalls**
+
 
 Outfalls are point features representing discharge points from the storm drain network.
 
@@ -261,8 +273,7 @@ Use the **EPA SWMM GUI** to understand field definitions.
 
 FLO-2D only uses closed storage systems in the storm drain module.
 
-Storage Units
--------------
+**Storage Units**
 
 Storage units in FLO-2D are used for **closed systems** like tanks or underground vaults.
 
@@ -294,8 +305,9 @@ Use the **EPA SWMM GUI** to understand field definitions.
 
 FLO-2D only uses closed storage systems in the storm drain module.
 
-Link Overview - Conduit
------------------------------
+.. raw:: html
+
+    <h4>Link Overview - Conduit</h4>
 
 .. raw:: html
 
@@ -420,8 +432,9 @@ To maintain model stability:
 For more information on conduits, see the **Storm Drain Guidelines** for `Conduits <https://flo-2dkaren.github.io
 /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#conduits>`_ .
 
-Link Overview - Pump, Orifice, Weir
-------------------------------------------
+.. raw:: html
+
+    <h4>Link Overview - Pump, Orifice, Weir</h4>
 
 .. raw:: html
 
@@ -431,8 +444,7 @@ Link Overview - Pump, Orifice, Weir
 
 This lesson explains the setup and attributes for **pumps**, **orifices**, and **weirs** in the storm drain system using QGIS and the EPA SWMM interface.
 
-Pumps
------
+**Pumps**
 
 To view and configure pump data:
 
@@ -476,8 +488,7 @@ For more information on pumps, see the **Storm Drain Guidelines** for `Pumps <ht
 .. note::
    Set up the pump in the storm drain editor first, then assign the curve data in the **Pump Curves** table.
 
-Orifices
---------
+**Orifices**
 
 Orifices are typically underground restrictions connected to manholes or other subsurface elements.
 
@@ -514,8 +525,7 @@ Orifices are typically underground restrictions connected to manholes or other s
 For more information on orifices, see the **Storm Drain Guidelines** for `Orifices <https://flo-2dkaren.github.io
 /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#orifices>`_ .
 
-Weirs
------
+**Weirs**
 
 Weirs are usually surface-connected structures (rare underground). Always verify usage.
 
@@ -561,9 +571,9 @@ For more information on weirs, see the **Storm Drain Guidelines** for `Weirs <ht
 - Field types and required formats should follow SWMM rules.
 - Curves (for pumps and orifices) are configured in a separate step.
 
+.. html::
 
-Create a Storm Drain from Shapefiles
-------------------------------------
+    <h2>Create a Storm Drain from Shapefiles</h2>
 
 .. raw:: html
 
@@ -574,8 +584,10 @@ Create a Storm Drain from Shapefiles
 
 This lesson walks through building an entire storm drain system from shapefiles, defining rating tables, storage units, and pump curves, and then running the simulation.
 
-Step 1: Load Shapefiles
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 1: Load Shapefiles</h3>
+
 - Open the **Advanced Storm Drain Layers** folder.
 - Drag and drop the appropriate shapefiles into QGIS.
 
@@ -584,8 +596,10 @@ Step 1: Load Shapefiles
 - Do **not** add them to the GeoPackage. Keep them in the User Layers.
 - Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
 
-Step 2: Assign Shapefile Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 2: Assign Shapefile Fields</h3>
+
 Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
 
 .. image:: ../img/shg/5b/shg_storm002.jpg
@@ -615,8 +629,10 @@ Click **Assign Selected Fields**, then click **OK** for the warning that follows
 
 .. image:: ../img/shg/5b/shg_storm007.jpg
 
-Step 3: Assign Nodes to Links
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 3: Assign Nodes to Links</h3>
+
 Click the **Auto-Assign Links and Nodes** button.
 
 .. image:: ../img/shg/5b/shg_storm008.jpg
@@ -632,8 +648,9 @@ Check the **Simulate Storm Drain** box to turn it on.
 
 .. image:: ../img/shg/5b/shg_storm010.jpg
 
-Step 4: Add Type 4 Rating Tables and Culverts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 4: Add Type 4 Rating Tables and Culverts</h3>
 
 - Go to the **Type 4 Table Editor**.
 
@@ -648,8 +665,10 @@ Step 4: Add Type 4 Rating Tables and Culverts
 - File names must match inlet names (e.g., ``41.txt`` for inlet 41).
 - Format for rating tables: Depth on the left, Discharge on the right.
 
-Step 5: Add Pump Curve Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 5: Add Pump Curve Data</h3>
+
 - Add a pump curve via the Pump Table interface.
 
 .. image:: ../img/shg/5b/shg_storm014.jpg
@@ -664,8 +683,10 @@ Step 5: Add Pump Curve Data
 
 - Data is saved automatically when you click off the cell.
 
-Step 6: Add Storage Unit Curves
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 6: Add Storage Unit Curves</h3>
+
 - Open **Storage Units** attribute table.
 
 .. image:: ../img/shg/5b/shg_storm025.jpg
@@ -682,8 +703,10 @@ Step 6: Add Storage Unit Curves
 
 .. image:: ../img/shg/5b/shg_storm029.jpg
 
-Step 7: Set Storm Drain Control Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3>Step 7: Set Storm Drain Control Parameters</h3>
+
 - Set the **start and end time** of your simulation (e.g., 10 hours).
 - Ensure it matches any time series used.
 - Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
@@ -691,9 +714,10 @@ Step 7: Set Storm Drain Control Parameters
 
 .. image:: ../img/shg/5b/shg_storm017.jpg
 
+.. raw:: html
 
-Step 8: Schematize and Run
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    <h3>Step 8: Schematize and Run</h3>
+
 - Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
 
 .. image:: ../img/shg/5b/shg_storm018.jpg
@@ -708,12 +732,14 @@ Step 8: Schematize and Run
 .. tip::
    If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
 
-Summary and Review Results
----------------------------
+.. raw:: html
+
+    <h2>Summary and Review Results</h2>
 
 Coming Soon
 
-Storm Drain from SWMM.INP
----------------------------
+.. raw:: html
+
+    <h2>Storm Drain from SWMM.INP</h2>
 
 Coming Soon
