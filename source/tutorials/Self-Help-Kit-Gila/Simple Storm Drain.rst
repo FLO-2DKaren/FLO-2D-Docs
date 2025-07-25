@@ -1,5 +1,3 @@
-.. dropdown:: Simple Storm Drain
-
     Simple Storm Drain
     ====================
 

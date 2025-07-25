@@ -1,6 +1,12 @@
 Storm Drain
 ============
 
+.. dropdown:: Simple Storm Drain
+
+    .. include:: Simple Storm Drain.rst
+
+
+
 This advanced lesson shows how to create a storm drain from Shapefiles.  Stay tuned for more lessons that will
 show how to set up a storm drain from a swmm.inp.
 
