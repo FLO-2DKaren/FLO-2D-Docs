@@ -571,7 +571,7 @@ For more information on weirs, see the **Storm Drain Guidelines** for `Weirs <ht
 - Field types and required formats should follow SWMM rules.
 - Curves (for pumps and orifices) are configured in a separate step.
 
-.. html::
+.. raw:: html
 
     <h2>Create a Storm Drain from Shapefiles</h2>
 
