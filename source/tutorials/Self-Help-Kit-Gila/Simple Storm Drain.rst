@@ -4,10 +4,6 @@
 
         <h2>Create a Storm Drain from Shapefiles</h2>
 
-        <h3>Create a Storm Drain from Shapefiles</h3>
-
-        <h4>Create a Storm Drain from Shapefiles</h4>
-
     This simple lesson shows how to create a simple storm drain from Shapefiles.
 
     .. Note:: It will be easier to view these videos on YouTube.
@@ -17,107 +13,112 @@
         The videos are more detailed whereas the text gives the minimum steps needed
         to complete the project.
 
+    .. raw:: html
 
-Create a Storm Drain from Shapefiles
-------------------------------------
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-This lesson walks through building a simple storm drain system from shapefiles.
+    This lesson walks through building a simple storm drain system from shapefiles.
 
-Step 1: Load Shapefiles
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Open the **Simple Storm Drain Layers** folder.
-- Drag and drop the appropriate shapefiles into QGIS.
+    .. raw:: html
 
-.. image:: ../img/shg/5a/shg_sstorm001.jpg
+        <h3> Step 1: Load Shapefiles <h3>
 
-- Do **not** add them to the GeoPackage. Keep them in the User Layers.
-- Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
+    - Open the **Simple Storm Drain Layers** folder.
+    - Drag and drop the appropriate shapefiles into QGIS.
 
-Step 2: Assign Shapefile Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
+    .. image:: ../img/shg/5a/shg_sstorm001.jpg
 
-.. image:: ../img/shg/5a/shg_sstorm002.jpg
+    - Do **not** add them to the GeoPackage. Keep them in the User Layers.
+    - Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
 
-- Point layers like inlets and outfalls will show up in the dropdown.
-- Assign each required field from the shapefile attributes:
+    .. raw:: html
 
-  - Example: `Inlet Name` → `name`, `Type` → `type`, etc.
+        <h3> Step 2: Assign Shapefile Fields <h3>
 
-- Turn off unused or null-value fields to avoid unnecessary entries.
+    Open the **Storm Drain Editor** and click **Select Components from Shapefile**.
 
-.. image:: ../img/shg/5a/shg_sstorm003.jpg
+    .. image:: ../img/shg/5a/shg_sstorm002.jpg
 
-.. image:: ../img/shg/5a/shg_sstorm004.jpg
+    - Point layers like inlets and outfalls will show up in the dropdown.
+    - Assign each required field from the shapefile attributes:
 
-.. image:: ../img/shg/5a/shg_sstorm005.jpg
+      - Example: `Inlet Name` → `name`, `Type` → `type`, etc.
 
-Click **Assign Selected Fields**, then click **OK** for the warning that follows.
+    - Turn off unused or null-value fields to avoid unnecessary entries.
 
-.. image:: ../img/shg/5a/shg_sstorm006.jpg
+    .. image:: ../img/shg/5a/shg_sstorm003.jpg
 
-Step 3: Assign Nodes to Links
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the **Auto-Assign Links and Nodes** button.
+    .. image:: ../img/shg/5a/shg_sstorm004.jpg
 
-.. image:: ../img/shg/5a/shg_sstorm007.jpg
+    .. image:: ../img/shg/5a/shg_sstorm005.jpg
 
-- This assigns start and end nodes to each conduit.
-- Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.
+    Click **Assign Selected Fields**, then click **OK** for the warning that follows.
 
-.. warning::
-   - Make sure conduit directions are correct using the **Reverse Line Tool** in the **Advanced Digitizing Toolbar**.
-   - Use the **Snapping Tool** to ensure precise vertex-node connections.
+    .. image:: ../img/shg/5a/shg_sstorm006.jpg
 
-Check the **Simulate Storm Drain** box to turn it on.
+    .. raw:: html
 
-.. image:: ../img/shg/5a/shg_sstorm008.jpg
+        <h3> Step 3: Assign Nodes to Links <h3>
 
-Step 4: Add Type 4 Rating Tables and Culverts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Click the **Auto-Assign Links and Nodes** button.
 
-- Go to the **Type 4 Table Editor**.
+    .. image:: ../img/shg/5a/shg_sstorm007.jpg
 
-.. image:: ../img/shg/5a/shg_sstorm009.jpg
+    - This assigns start and end nodes to each conduit.
+    - Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.
 
-- Import rating tables for one type 4 inlet.
+    .. warning::
+       - Make sure conduit directions are correct using the **Reverse Line Tool** in the **Advanced Digitizing Toolbar**.
+       - Use the **Snapping Tool** to ensure precise vertex-node connections.
 
-.. image:: ../img/shg/5a/shg_sstorm010.jpg
+    Check the **Simulate Storm Drain** box to turn it on.
 
-- File names must match inlet names (e.g., ``41.txt`` for inlet 41).
-- Format for rating tables: Depth on the left, Discharge on the right.
+    .. image:: ../img/shg/5a/shg_sstorm008.jpg
 
+    .. raw:: html
 
-Step 5: Set Storm Drain Control Parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Set the **start and end time** of your simulation (e.g., 10 hours).
-- Ensure it matches any time series used.
-- Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
-- Leave advanced defaults unless needed.
+        <h3> Step 4: Add Type 4 Rating Tables and Culverts <h3>
 
-.. image:: ../img/shg/5a/shg_sstorm011.jpg
+    - Go to the **Type 4 Table Editor**.
 
+    .. image:: ../img/shg/5a/shg_sstorm009.jpg
 
-Step 6: Schematize and Run
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
+    - Import rating tables for one type 4 inlet.
 
-.. image:: ../img/shg/5a/shg_sstorm012.jpg
+    .. image:: ../img/shg/5a/shg_sstorm010.jpg
 
-- Click **Quick Run** to simulate.
-- Output files will populate your designated folder.
+    - File names must match inlet names (e.g., ``41.txt`` for inlet 41).
+    - Format for rating tables: Depth on the left, Discharge on the right.
 
-.. image:: ../img/shg/5a/shg_sstorm013.jpg
+    .. raw:: html
 
-.. image:: ../img/shg/5a/shg_sstorm014.jpg
+        <h3> Step 5: Set Storm Drain Control Parameters <h3>
 
-.. tip::
-   If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
+    - Set the **start and end time** of your simulation (e.g., 10 hours).
+    - Ensure it matches any time series used.
+    - Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
+    - Leave advanced defaults unless needed.
+
+    .. image:: ../img/shg/5a/shg_sstorm011.jpg
+
+    .. raw:: html
+
+        <h3> Step 6: Schematize and Run <h3>
+
+    - Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
+
+    .. image:: ../img/shg/5a/shg_sstorm012.jpg
+
+    - Click **Quick Run** to simulate.
+    - Output files will populate your designated folder.
+
+    .. image:: ../img/shg/5a/shg_sstorm013.jpg
+
+    .. image:: ../img/shg/5a/shg_sstorm014.jpg
+
+    .. tip::
+       If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
 
