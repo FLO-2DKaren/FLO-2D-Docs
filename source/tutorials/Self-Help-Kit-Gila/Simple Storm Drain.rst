@@ -1,14 +1,17 @@
-Simple Storm Drain
-=====================
+.. dropdown:: Simple Storm Drain
 
-This simple lesson shows how to create a simple storm drain from Shapefiles.
+    .. raw:: html
 
-.. Note:: It will be easier to view these videos on YouTube.
+        <h>Create a Storm Drain from Shapefiles</h2>
 
-   Set the video playback speed to 2x to complete the lessons faster.
+    This simple lesson shows how to create a simple storm drain from Shapefiles.
 
-   The videos are more detailed whereas the text gives the minimum steps needed
-   to complete the project.
+    .. Note:: It will be easier to view these videos on YouTube.
+
+        Set the video playback speed to 2x to complete the lessons faster.
+
+        The videos are more detailed whereas the text gives the minimum steps needed
+        to complete the project.
 
 
 Create a Storm Drain from Shapefiles

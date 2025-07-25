@@ -1,9 +1,6 @@
 Storm Drain
 ============
 
-.. dropdown:: Simple Storm Drain
-
-    .. include:: Simple Storm Drain.rst
 
 
 
