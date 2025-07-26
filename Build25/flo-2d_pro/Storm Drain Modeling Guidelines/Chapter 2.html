@@ -68,10 +68,9 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">2. Chapter 2: FLO-2D Storm Drain Features</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview-of-inlets-and-outfalls">2.1. Overview of Inlets and Outfalls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#storm-drain-inlets">2.2. Storm Drain Inlets</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#inlet-types">2.3. Inlet Types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#storm-drain-outfalls">2.4. Storm Drain Outfalls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#elevations-and-datum">2.5. Elevations and Datum</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#conduit-offsets">2.6. Conduit Offsets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#storm-drain-outfalls">2.3. Storm Drain Outfalls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#elevations-and-datum">2.4. Elevations and Datum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conduit-offsets">2.5. Conduit Offsets</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">3. Chapter 3: FLO-2D Storm Drain Data Files</a></li>
@@ -182,11 +181,10 @@ Combination of a Curb Opening at Grade with a Grate.</em></p>
 <p>The manhole is a special inlet type that represents a service access point to the storm drain system.
 Manholes are modeled as inlets with an additional surcharge depth that represents the equivalent pressure required to displace the cover.
 When the surcharge depth is exceeded, the manhole is popped, and the manhole behaves as an inlet type 3.</p>
-</section>
 <section id="inlet-types">
-<h2><span class="section-number">2.3. </span>Inlet Types<a class="headerlink" href="#inlet-types" title="Link to this heading"></a></h2>
+<h3><span class="section-number">2.2.1. </span>Inlet Types<a class="headerlink" href="#inlet-types" title="Link to this heading"></a></h3>
 <section id="type-1-curb-opening-inlet-at-grade">
-<h3><span class="section-number">2.3.1. </span>Type 1 - Curb Opening Inlet at Grade<a class="headerlink" href="#type-1-curb-opening-inlet-at-grade" title="Link to this heading"></a></h3>
+<h4><span class="section-number">2.2.1.1. </span>Type 1 - Curb Opening Inlet at Grade<a class="headerlink" href="#type-1-curb-opening-inlet-at-grade" title="Link to this heading"></a></h4>
 <p>The following are the input parameters for a Type 1 inlet (Figure 28):</p>
 <ul class="simple">
 <li><p>Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)</p></li>
@@ -221,7 +219,7 @@ Curb Opening at Grade (Type 1 inlet).</em></p>
 </ol>
 </section>
 <section id="type-2-curb-opening-inlet-with-sag">
-<h3><span class="section-number">2.3.2. </span>Type 2 - Curb Opening Inlet with Sag<a class="headerlink" href="#type-2-curb-opening-inlet-with-sag" title="Link to this heading"></a></h3>
+<h4><span class="section-number">2.2.1.2. </span>Type 2 - Curb Opening Inlet with Sag<a class="headerlink" href="#type-2-curb-opening-inlet-with-sag" title="Link to this heading"></a></h4>
 <p>The following are the input parameters for a Type 2 inlet (Figure 29):</p>
 <ul class="simple">
 <li><p>Weir coefficient: 2.30 (1.25 metric)</p></li>
@@ -274,7 +272,7 @@ For weir flow (Johnson and Fred, 1984):</p>
 </div></blockquote>
 </section>
 <section id="type-3-grate-gutter-inlet-with-without-sag">
-<h3><span class="section-number">2.3.3. </span>Type 3 - Grate (Gutter) Inlet with/without Sag<a class="headerlink" href="#type-3-grate-gutter-inlet-with-without-sag" title="Link to this heading"></a></h3>
+<h4><span class="section-number">2.2.1.3. </span>Type 3 - Grate (Gutter) Inlet with/without Sag<a class="headerlink" href="#type-3-grate-gutter-inlet-with-without-sag" title="Link to this heading"></a></h4>
 <p>The following are the input parameters for a Type 3 inlet (Figure 30):</p>
 <ul class="simple">
 <li><p>Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric)</p></li>
@@ -289,7 +287,7 @@ Grate Inlet in a Street (Type 3 Inlet, Johnson, and Fred, 1984).</em></p>
 <p>The smaller of two discharges (weir or orifice) calculated for a grate (gutter) inlet with/without sag is applied for the inlet discharge computation
 (Johnson and Fred, 1984):</p>
 <section id="weir-flow">
-<h4><span class="section-number">2.3.3.1. </span>Weir Flow:<a class="headerlink" href="#weir-flow" title="Link to this heading"></a></h4>
+<h5><span class="section-number">2.2.1.3.1. </span>Weir Flow:<a class="headerlink" href="#weir-flow" title="Link to this heading"></a></h5>
 <p>If <span class="math notranslate nohighlight">\(H \leq h\)</span>, then:</p>
 <div class="math notranslate nohighlight" id="equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-3">
 <span class="eqno">(2.24)<a class="headerlink" href="#equation-flo-2d-pro-storm-drain-modeling-guidelines-chapter-2-3" title="Link to this equation"></a></span>\[Q_w = CPH^m\]</div>
@@ -307,7 +305,7 @@ Grate Inlet in a Street (Type 3 Inlet, Johnson, and Fred, 1984).</em></p>
 </div></blockquote>
 </section>
 <section id="orifice-flow">
-<h4><span class="section-number">2.3.3.2. </span>Orifice Flow:<a class="headerlink" href="#orifice-flow" title="Link to this heading"></a></h4>
+<h5><span class="section-number">2.2.1.3.2. </span>Orifice Flow:<a class="headerlink" href="#orifice-flow" title="Link to this heading"></a></h5>
 <blockquote>
 <div><p>If <span class="math notranslate nohighlight">\(H \leq h\)</span>, then:</p>
 </div></blockquote>
@@ -338,7 +336,7 @@ Grate Inlet in a Street (Type 3 Inlet, Johnson, and Fred, 1984).</em></p>
 </section>
 </section>
 <section id="type-4-unique-inlet-with-stage-discharge-rating-table">
-<h3><span class="section-number">2.3.4. </span>Type 4 – Unique Inlet with Stage-Discharge Rating Table<a class="headerlink" href="#type-4-unique-inlet-with-stage-discharge-rating-table" title="Link to this heading"></a></h3>
+<h4><span class="section-number">2.2.1.4. </span>Type 4 – Unique Inlet with Stage-Discharge Rating Table<a class="headerlink" href="#type-4-unique-inlet-with-stage-discharge-rating-table" title="Link to this heading"></a></h4>
 <p>Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharge defined by a rating table.
 Some storm drain inlets may include entrance types like that of a culvert with a vertical opening (Figure 31.
 ).
@@ -353,7 +351,7 @@ Storm Drain Vertical Inlet with a Culvert Entrance.</em></p>
 0.</p>
 </section>
 <section id="type-5-manhole">
-<h3><span class="section-number">2.3.5. </span>Type 5 – Manhole<a class="headerlink" href="#type-5-manhole" title="Link to this heading"></a></h3>
+<h4><span class="section-number">2.2.1.5. </span>Type 5 – Manhole<a class="headerlink" href="#type-5-manhole" title="Link to this heading"></a></h4>
 <p>Manholes are a special case of inlets.
 Storm drains under high pressure during flooding can result in the manhole covers being popped off (Figure 32.
 and Figure 33).
@@ -402,8 +400,9 @@ Assuming a diameter of 2 ft (0.61 m) and a weight of 100 pounds, what surcharge 
 <img alt="../../_images/image191.jpeg" src="../../_images/image191.jpeg" />
 </section>
 </section>
+</section>
 <section id="storm-drain-outfalls">
-<h2><span class="section-number">2.4. </span>Storm Drain Outfalls<a class="headerlink" href="#storm-drain-outfalls" title="Link to this heading"></a></h2>
+<h2><span class="section-number">2.3. </span>Storm Drain Outfalls<a class="headerlink" href="#storm-drain-outfalls" title="Link to this heading"></a></h2>
 <p>A variety of outfall conditions are available.
 For the outfall to discharge back to the surface water, the boundary condition must be set to ‘free’ in the SWMM.inp file and the ‘allow discharge’
 switch set ON in the SWMMOUTF.DAT file.
@@ -446,7 +445,7 @@ entire simulation.</p>
 <p>For all free outfall configurations, the discharge to the surface is based on the comparison between PH with FLO-2D surface conditions.</p>
 </section>
 <section id="elevations-and-datum">
-<h2><span class="section-number">2.5. </span>Elevations and Datum<a class="headerlink" href="#elevations-and-datum" title="Link to this heading"></a></h2>
+<h2><span class="section-number">2.4. </span>Elevations and Datum<a class="headerlink" href="#elevations-and-datum" title="Link to this heading"></a></h2>
 <p>The elevation and location of the inlets and outfalls are required to exchange flow with the surface water.
 The floodplain water surface elevation is compared to the storm drain pressure head based on a common reference such as the inlet rim elevation, inlet
 invert elevation (Vertical Type 4 Inlets) or the outfall invert elevation.
@@ -504,7 +503,7 @@ They are reported to the FPLAIN_SDElev.RGH and TOPO_SDElev.RGH,</p>
 elevation adjustments to the next simulation.</p>
 </section>
 <section id="conduit-offsets">
-<h2><span class="section-number">2.6. </span>Conduit Offsets<a class="headerlink" href="#conduit-offsets" title="Link to this heading"></a></h2>
+<h2><span class="section-number">2.5. </span>Conduit Offsets<a class="headerlink" href="#conduit-offsets" title="Link to this heading"></a></h2>
 <p>The swmm.inp file uses offset heights to connect the conduits to the nodes.
 The inlet and outlet offsets can be zero if there is no offset or any height above zero to set the offset.</p>
 <img alt="../../_images/Chapte015.png" src="../../_images/Chapte015.png" />

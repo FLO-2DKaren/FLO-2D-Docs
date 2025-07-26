@@ -90,10 +90,10 @@ Manholes are modeled as inlets with an additional surcharge depth that represent
 When the surcharge depth is exceeded, the manhole is popped, and the manhole behaves as an inlet type 3.
 
 Inlet Types
------------
+~~~~~~~~~~~~~~
 
 Type 1 - Curb Opening Inlet at Grade
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++
 
 The following are the input parameters for a Type 1 inlet (Figure 28):
 
@@ -139,7 +139,7 @@ The discharge is calculated using the weir and orifice equations as follows:
 
 
 Type 2 - Curb Opening Inlet with Sag
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++
 
 The following are the input parameters for a Type 2 inlet (Figure 29):
 
@@ -222,7 +222,7 @@ Type 2 inlet discharge is determined from the following criteria:
    If :math:`H \geq 1.4h`, discharge= :math:`Q_{o}`
 
 Type 3 - Grate (Gutter) Inlet with/without Sag
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++++++++++++++++++++++++++++++++++++++++++++++
 
 The following are the input parameters for a Type 3 inlet (Figure 30):
 
@@ -319,7 +319,7 @@ The discharge is determined using the following criteria for Type 3:
    If :math:`H \geq 1.8`, discharge= :math:`Q_{o}`
 
 Type 4 – Unique Inlet with Stage-Discharge Rating Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Inlets that cannot be represented by Types 1, 2 or 3 can have an inflow discharge defined by a rating table.
 Some storm drain inlets may include entrance types like that of a culvert with a vertical opening (Figure 31.
@@ -341,7 +341,7 @@ Note: The stage-discharge data is assigned in pairs with the first pair being: 0
 0.
 
 Type 5 – Manhole
-~~~~~~~~~~~~~~~~
++++++++++++++++++
 
 Manholes are a special case of inlets.
 Storm drains under high pressure during flooding can result in the manhole covers being popped off (Figure 32.
