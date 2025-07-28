@@ -7,6 +7,9 @@ Setup up Buildings and Walls using Open Street Map Downloader, QGIS, and the FLO
 
    Set the video playback speed to 2x to complete the lessons faster.
 
+   The videos are **more detailed** whereas the text gives the minimum steps needed
+   to complete the project.
+
 Load and Assign Data
 -----------------------
 
@@ -45,6 +48,7 @@ Step 3: Calculate Reduction Factors Using Grid Tools
 1. Open **Grid Tools**.
 2. Click the **Calculate Reduction Factors** button.
 3. Set the following parameters:
+
    - **Layer**: buildings
    - **Collapse Field**: ``collapse``
    - **Area Reduction Field**: ``ARF``
