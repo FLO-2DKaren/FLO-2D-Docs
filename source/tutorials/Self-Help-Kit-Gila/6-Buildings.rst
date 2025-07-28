@@ -53,8 +53,7 @@ Step 3: Calculate Reduction Factors Using Grid Tools
    - **Collapse Field**: ``collapse``
    - **Area Reduction Field**: ``ARF``
    - **Width Reduction Field**: ``WRF``
-
-- Click **OK** to apply.
+4. Click **OK** to apply.
 
 .. image:: ../img/shg/6/Bshg03_003.png
 
