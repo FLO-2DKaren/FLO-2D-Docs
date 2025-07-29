@@ -237,11 +237,11 @@ Download Building Polygons (Optional)
 
         <h3> Step 10: Review the `ARF.DAT` File </h3>
 
-    - After exporting building reductions, open ``arf.dat`` in Notepad++.
+    - Exporting building reductions.
 
-    .. image:: ../img/shg/6/Bshg03_0026.png
+    .. image:: ../img/shg/6/Bshg03_0022.png
 
-    - Key sections:
+    - Open ``arf.dat`` in Notepad++. Key sections:
 
         - ``S`` line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
         - ``T`` lines: fully blocked cells.
