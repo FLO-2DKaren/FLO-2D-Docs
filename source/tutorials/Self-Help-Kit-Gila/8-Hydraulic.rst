@@ -247,6 +247,8 @@ Step 2: Create Elevation Polygons
 - Set the elevation using the previously copied value.
 - Set the correction method to ``grid`` and give the polygon a name like ``head wall``.
 
+.. image:: ../img/shg/8/shg_hydaulic015.png
+
 Step 3: Setup Minimum Elevation Polygons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For complex corrections, select multiple grid cells and draw a polygon.
