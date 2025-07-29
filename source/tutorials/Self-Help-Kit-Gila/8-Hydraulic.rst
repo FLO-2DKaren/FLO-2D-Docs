@@ -151,7 +151,7 @@ Step 3: Name and Review Each Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Use the **Center on structure** button to step through.
-- Rename each one based on the provided naming convention (``CLV_*``).
+- Rename each one based on the provided naming convention (``CULV_*``).
 - Set labels to ``structname`` field with 12pt font for visibility.
 
 .. image:: ../img/shg/8/shg_hydaulic008.png
@@ -160,15 +160,26 @@ Step 3: Name and Review Each Structure
 
 Step 4: Assign Structure Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 - Identify structure types:
-  - **Floodplain to Floodplain**
-  - **Floodplain to Channel** (must be on a **Left Bank node**)
-  - **Channel to Channel** (usually already handled in the channel lesson)
+
+    - **Floodplain to Floodplain**
+
+    .. image:: ../img/shg/8/shg_hydaulic009a.png
+
+    - **Floodplain to Channel** (must be on a **Left Bank node**)
+
+    .. image:: ../img/shg/8/shg_hydaulic009c.png
+
+    - **Channel to Channel** (usually already handled in the channel lesson)
+
+    .. image:: ../img/shg/8/shg_hydaulic009d.png
+
 - Set the type to **Rating Table** using the drop-down menu.
 
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
+
+.. image:: ../img/shg/8/shg_hydaulic009b.png
 
 Step 5: Schematic Correction and Recheck
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
