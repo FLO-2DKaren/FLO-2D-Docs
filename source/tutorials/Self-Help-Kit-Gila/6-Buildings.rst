@@ -157,10 +157,12 @@ Download Building Polygons
 
         <h3> Step 5: Crop to Project Boundary </h3>
 
-    .. image:: ../img/shg/6/Bshg03_0014.pn
+    .. image:: ../img/shg/6/Bshg03_0014.png
+
     - Use **Select by Location**:
-    - Select features from ``osm_buildings``.
-    - Where the feature is **within** the computational domain layer.
+
+        - Select features from ``osm_buildings``.
+        - Where the feature is **within** the computational domain layer.
 
     .. image:: ../img/shg/6/Bshg03_0015.png
 
