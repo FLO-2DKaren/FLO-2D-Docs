@@ -203,21 +203,19 @@ Download Building Polygons (Optional)
 
     .. image:: ../img/shg/6/Bshg03_0022.png
 
-    .. raw:: html
+    .. dropdown:: Step 8: Fill in Missing Buildings (Optional)
 
-        <h3> Step 8: Fill in Missing Buildings (Optional) </h3>
+        - Turn on a satellite basemap (e.g., Google Satellite).
+        - Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
+        - Digitize missing buildings.
+        - Use ``Rectangle from Extent`` for fast creation.
+        - Use ``Digitize with Segment`` for complex shapes.
 
-    - Turn on a satellite basemap (e.g., Google Satellite).
-    - Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
-    - Digitize missing buildings.
-    - Use ``Rectangle from Extent`` for fast creation.
-    - Use ``Digitize with Segment`` for complex shapes.
+        .. image:: ../img/shg/6/Bshg03_0023.png
 
-    .. image:: ../img/shg/6/Bshg03_0023.png
+        .. tip:: Or you can try the **Add Polygon** tool to draw buildings manually.
 
-    .. tip:: Or you can try the **Add Polygon** tool to draw buildings manually.
-
-    .. image:: ../img/shg/6/Bshg03_0024.png
+        .. image:: ../img/shg/6/Bshg03_0024.png
 
     .. raw:: html
 
