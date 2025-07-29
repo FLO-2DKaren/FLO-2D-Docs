@@ -66,7 +66,7 @@
 <li class="toctree-l3"><a class="reference internal" href="5-Storm%20Drain.html">Storm Drain</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Buildings and Walls</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#load-and-assign-data">Load and Assign Data</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#download-building-polygons">Download Building Polygons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#download-building-polygons-optional">Download Building Polygons (Optional)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#review-and-assign-walls">Review and Assign Walls</a></li>
 </ul>
 </li>
@@ -126,6 +126,8 @@
 <p class="admonition-title">Note</p>
 <p>It will be easier to view these videos on YouTube. The step by step instructions are faster to follow but the videos are more detailed.</p>
 <p>Set the video playback speed to 2x to complete the lessons faster.</p>
+<p>The videos are <strong>more detailed</strong> whereas the text gives the minimum steps needed
+to complete the project.</p>
 </div>
 <section id="load-and-assign-data">
 <h2>Load and Assign Data<a class="headerlink" href="#load-and-assign-data" title="Link to this heading"></a></h2>
@@ -159,15 +161,16 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <ol class="arabic simple">
 <li><p>Open <strong>Grid Tools</strong>.</p></li>
 <li><p>Click the <strong>Calculate Reduction Factors</strong> button.</p></li>
-<li><p>Set the following parameters:
-- <strong>Layer</strong>: buildings
-- <strong>Collapse Field</strong>: <code class="docutils literal notranslate"><span class="pre">collapse</span></code>
-- <strong>Area Reduction Field</strong>: <code class="docutils literal notranslate"><span class="pre">ARF</span></code>
-- <strong>Width Reduction Field</strong>: <code class="docutils literal notranslate"><span class="pre">WRF</span></code></p></li>
-</ol>
+<li><p>Set the following parameters:</p>
 <ul class="simple">
-<li><p>Click <strong>OK</strong> to apply.</p></li>
+<li><p><strong>Layer</strong>: buildings</p></li>
+<li><p><strong>Collapse Field</strong>: <code class="docutils literal notranslate"><span class="pre">collapse</span></code></p></li>
+<li><p><strong>Area Reduction Field</strong>: <code class="docutils literal notranslate"><span class="pre">ARF</span></code></p></li>
+<li><p><strong>Width Reduction Field</strong>: <code class="docutils literal notranslate"><span class="pre">WRF</span></code></p></li>
 </ul>
+</li>
+<li><p>Click <strong>OK</strong> to apply.</p></li>
+</ol>
 <img alt="../../_images/Bshg03_003.png" src="../../_images/Bshg03_003.png" />
 <p>This process will:</p>
 <blockquote>
@@ -194,177 +197,148 @@ surrounding grid elements.  The grid elevation will determine the flow direction
 <img alt="../../_images/Bshg03_005.png" src="../../_images/Bshg03_005.png" />
 </section>
 </section>
-<section id="download-building-polygons">
-<h2>Download Building Polygons<a class="headerlink" href="#download-building-polygons" title="Link to this heading"></a></h2>
+<section id="download-building-polygons-optional">
+<h2>Download Building Polygons (Optional)<a class="headerlink" href="#download-building-polygons-optional" title="Link to this heading"></a></h2>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Download Building Polygons</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h-mN4m8rJnw?si=ieWhEVt5BZDst-AM"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.</p>
-</div>
-</details><section id="step-1-install-the-osm-downloader-plugin">
-<h3>Step 1: Install the OSM Downloader Plugin<a class="headerlink" href="#step-1-install-the-osm-downloader-plugin" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Go to <strong>Plugins &gt; Manage and Install Plugins</strong>.</p></li>
-<li><p>Search for <strong>OSM Downloader</strong>.</p></li>
-<li><p>Click <strong>Install</strong>.</p></li>
+<h3> Step 1: Install the OSM Downloader Plugin </h3><ul class="simple">
+<li><p class="sd-card-text">Go to <strong>Plugins &gt; Manage and Install Plugins</strong>.</p></li>
+<li><p class="sd-card-text">Search for <strong>OSM Downloader</strong>.</p></li>
+<li><p class="sd-card-text">Click <strong>Install</strong>.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_006.png" src="../../_images/Bshg03_006.png" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.</p>
+<p class="sd-card-text">The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.</p>
 </div>
-</div></blockquote>
-</section>
-<section id="step-2-download-data">
-<h3>Step 2: Download Data<a class="headerlink" href="#step-2-download-data" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Activate the <strong>OSM Downloader tool</strong>.</p></li>
+<h3> Step 2: Download Data </h3><ul class="simple">
+<li><p class="sd-card-text">Activate the <strong>OSM Downloader tool</strong>.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_007.png" src="../../_images/Bshg03_007.png" />
 <ul class="simple">
-<li><p>Draw a rectangle around your project area.</p></li>
+<li><p class="sd-card-text">Draw a rectangle around your project area.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_008.png" src="../../_images/Bshg03_008.png" />
 <ul class="simple">
-<li><p>Save the file with a clear name like <code class="docutils literal notranslate"><span class="pre">osm_file.geojson</span></code>.</p></li>
-<li><p>The data is downloaded in EPSG:4326 and will be reprojected later.</p></li>
+<li><p class="sd-card-text">Save the file with a clear name like <code class="docutils literal notranslate"><span class="pre">osm_file.geojson</span></code>.</p></li>
+<li><p class="sd-card-text">The data is downloaded in EPSG:4326 and will be reprojected later.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_009.png" src="../../_images/Bshg03_009.png" />
-</div></blockquote>
-</section>
-<section id="step-3-export-polygons">
-<h3>Step 3: Export Polygons<a class="headerlink" href="#step-3-export-polygons" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Turn off unnecessary OSM sublayers (e.g., roads).</p></li>
-<li><p>Right-click the <strong>polygons</strong> layer &gt; <strong>Export &gt; Save Features As…</strong></p></li>
+<h3> Step 3: Export Polygons </h3><ul class="simple">
+<li><p class="sd-card-text">Turn off unnecessary OSM sublayers (e.g., roads).</p></li>
+<li><p class="sd-card-text">Right-click the <strong>polygons</strong> layer &gt; <strong>Export &gt; Save Features As…</strong></p></li>
 </ul>
 <img alt="../../_images/Bshg03_0010.png" src="../../_images/Bshg03_0010.png" />
 <ul class="simple">
-<li><p>Save as <code class="docutils literal notranslate"><span class="pre">osm_buildings</span></code>.</p></li>
-<li><p>Change the CRS to your project CRS (e.g., EPSG:2223).</p></li>
-<li><p>Remove irrelevant fields before exporting.</p></li>
+<li><p class="sd-card-text">Save as <code class="docutils literal notranslate"><span class="pre">osm_buildings</span></code>.</p></li>
+<li><p class="sd-card-text">Change the CRS to your project CRS (e.g., EPSG:2223).</p></li>
+<li><p class="sd-card-text">Remove irrelevant fields before exporting.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_0011.png" src="../../_images/Bshg03_0011.png" />
-</div></blockquote>
-</section>
-<section id="step-4-filter-for-buildings">
-<h3>Step 4: Filter for Buildings<a class="headerlink" href="#step-4-filter-for-buildings" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Open the attribute table.</p></li>
-<li><p>Sort by the <code class="docutils literal notranslate"><span class="pre">building</span></code> field.</p></li>
-<li><p>Select rows where <code class="docutils literal notranslate"><span class="pre">building</span></code> is null or empty and delete them.</p></li>
-<li><p>Save your edits.</p></li>
+<h3> Step 4: Filter for Buildings </h3><ul class="simple">
+<li><p class="sd-card-text">Open the attribute table.</p></li>
+<li><p class="sd-card-text">Sort by the <code class="docutils literal notranslate"><span class="pre">building</span></code> field.</p></li>
+<li><p class="sd-card-text">Select rows where <code class="docutils literal notranslate"><span class="pre">building</span></code> is null or empty and delete them.</p></li>
+<li><p class="sd-card-text">Save your edits.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_0012.png" src="../../_images/Bshg03_0012.png" />
 <img alt="../../_images/Bshg03_0013.png" src="../../_images/Bshg03_0013.png" />
-</div></blockquote>
-</section>
-<section id="step-5-crop-to-project-boundary">
-<h3>Step 5: Crop to Project Boundary<a class="headerlink" href="#step-5-crop-to-project-boundary" title="Link to this heading"></a></h3>
-<blockquote>
-<div><img alt="../../_images/Bshg03_0014.png" src="../../_images/Bshg03_0014.png" />
-<ul class="simple">
-<li><p>Use <strong>Select by Location</strong>:</p></li>
-<li><p>Select features from <code class="docutils literal notranslate"><span class="pre">osm_buildings</span></code>.</p></li>
-<li><p>Where the feature is <strong>within</strong> the computational domain layer.</p></li>
-</ul>
-<img alt="../../_images/Bshg03_0015.png" src="../../_images/Bshg03_0015.png" />
-<ul class="simple">
-<li><p>Delete unselected features (those outside your project area).</p></li>
-</ul>
-<img alt="../../_images/Bshg03_0016.png" src="../../_images/Bshg03_0016.png" />
-<img alt="../../_images/Bshg03_0017.png" src="../../_images/Bshg03_0017.png" />
-</div></blockquote>
-</section>
-<section id="step-6-clean-building-types">
-<h3>Step 6: Clean Building Types<a class="headerlink" href="#step-6-clean-building-types" title="Link to this heading"></a></h3>
+<h3> Step 5: Crop to Project Boundary </h3><ul>
+<li><p class="sd-card-text">Use <strong>Select by Location</strong>:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Review building types.</p></li>
-<li><p>Delete features such as <code class="docutils literal notranslate"><span class="pre">carports</span></code>, <code class="docutils literal notranslate"><span class="pre">gas</span> <span class="pre">islands</span></code>, etc., which don’t obstruct flow.</p></li>
+<li><p class="sd-card-text">Select features from <code class="docutils literal notranslate"><span class="pre">osm_buildings</span></code>.</p></li>
+<li><p class="sd-card-text">Where the feature is <strong>within</strong> the computational domain layer.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="../../_images/Bshg03_0014.png" src="../../_images/Bshg03_0014.png" />
+<img alt="../../_images/Bshg03_0015.png" src="../../_images/Bshg03_0015.png" />
+<ul class="simple">
+<li><p class="sd-card-text">Use <strong>Invert Feature Selection</strong> tool and the <strong>Delete</strong> button to
+delete unselected features (those outside the project area).</p></li>
+</ul>
+<img alt="../../_images/Bshg03_0016.png" src="../../_images/Bshg03_0016.png" />
+<h3> Step 6: Clean Building Types </h3><ul class="simple">
+<li><p class="sd-card-text">Review building types.</p></li>
+<li><p class="sd-card-text">Delete features such as <code class="docutils literal notranslate"><span class="pre">carports</span></code>, <code class="docutils literal notranslate"><span class="pre">gas</span> <span class="pre">islands</span></code>, etc., which don’t obstruct flow.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_0018.png" src="../../_images/Bshg03_0018.png" />
 <img alt="../../_images/Bshg03_0019.png" src="../../_images/Bshg03_0019.png" />
-</div></blockquote>
-</section>
-<section id="step-7-add-required-fields">
-<h3>Step 7: Add Required Fields<a class="headerlink" href="#step-7-add-required-fields" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Add the following integer fields:</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">collapse</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ARF</span></code> (Area Reduction Factor)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">WRF</span></code> (Width Reduction Factor)</p></li>
-</ul>
-<img alt="../../_images/Bshg03_0020.png" src="../../_images/Bshg03_0020.png" />
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Step 7: Fill in Missing Buildings (Optional)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <ul class="simple">
-<li><p>Use the <strong>Field Calculator</strong> to:</p></li>
-<li><p>Set <code class="docutils literal notranslate"><span class="pre">collapse</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
-<li><p>Set <code class="docutils literal notranslate"><span class="pre">ARF</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
-<li><p>Set <code class="docutils literal notranslate"><span class="pre">WRF</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
-</ul>
-<img alt="../../_images/Bshg03_0021.png" src="../../_images/Bshg03_0021.png" />
-<img alt="../../_images/Bshg03_0022.png" src="../../_images/Bshg03_0022.png" />
-</div></blockquote>
-</section>
-<section id="step-8-fill-in-missing-buildings-optional">
-<h3>Step 8: Fill in Missing Buildings (Optional)<a class="headerlink" href="#step-8-fill-in-missing-buildings-optional" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>Turn on a satellite basemap (e.g., Google Satellite).</p></li>
-<li><p>Use the <strong>Add Polygon tool</strong> or <strong>Shape Digitizing Toolbar</strong> to:</p></li>
-<li><p>Digitize missing buildings.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">Rectangle</span> <span class="pre">from</span> <span class="pre">Extent</span></code> for fast creation.</p></li>
-<li><p>Use <code class="docutils literal notranslate"><span class="pre">Digitize</span> <span class="pre">with</span> <span class="pre">Segment</span></code> for complex shapes.</p></li>
+<li><p class="sd-card-text">Turn on a satellite basemap (e.g., Google Satellite).</p></li>
+<li><p class="sd-card-text">Use the <strong>Add Polygon tool</strong> or <strong>Shape Digitizing Toolbar</strong> to:</p></li>
+<li><p class="sd-card-text">Digitize missing buildings.</p></li>
+<li><p class="sd-card-text">Use <code class="docutils literal notranslate"><span class="pre">Rectangle</span> <span class="pre">from</span> <span class="pre">Extent</span></code> for fast creation.</p></li>
+<li><p class="sd-card-text">Use <code class="docutils literal notranslate"><span class="pre">Digitize</span> <span class="pre">with</span> <span class="pre">Segment</span></code> for complex shapes.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_0023.png" src="../../_images/Bshg03_0023.png" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Or you can try the <strong>Add Polygon</strong> tool to draw buildings manually.</p>
+<p class="sd-card-text">Or you can try the <strong>Add Polygon</strong> tool to draw buildings manually.</p>
 </div>
 <img alt="../../_images/Bshg03_0024.png" src="../../_images/Bshg03_0024.png" />
-</div></blockquote>
-</section>
-<section id="step-9-export-the-final-building-layer">
-<h3>Step 9: Export the Final Building Layer<a class="headerlink" href="#step-9-export-the-final-building-layer" title="Link to this heading"></a></h3>
+</div>
+</details><h3> Step 8: Add Required Fields </h3><ul>
+<li><p class="sd-card-text">Add the following integer fields:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Save your edited buildings as a new layer if desired.</p></li>
-<li><p>This layer can now be used with the <strong>Grid Tools &gt; Assign Buildings</strong> tool.</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">collapse</span></code></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">ARF</span></code> (Area Reduction Factor)</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">WRF</span></code> (Width Reduction Factor)</p></li>
 </ul>
-<img alt="../../_images/Bshg03_0025.png" src="../../_images/Bshg03_0025.png" />
 </div></blockquote>
-</section>
-<section id="step-10-review-the-arf-dat-file">
-<h3>Step 10: Review the <cite>ARF.DAT</cite> File<a class="headerlink" href="#step-10-review-the-arf-dat-file" title="Link to this heading"></a></h3>
-<blockquote>
-<div><ul class="simple">
-<li><p>After exporting building reductions, open <code class="docutils literal notranslate"><span class="pre">arf.dat</span></code> in Notepad++.</p></li>
+</li>
 </ul>
-<img alt="../../_images/Bshg03_0026.png" src="../../_images/Bshg03_0026.png" />
-<ul class="simple">
-<li><p>Key sections:</p>
+<img alt="../../_images/Bshg03_0020.png" src="../../_images/Bshg03_0020.png" />
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">S</span></code> line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> lines: fully blocked cells.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">P</span></code> lines: partial blocks with ARF values &lt; 1.0.</p></li>
+<li><p class="sd-card-text">Use the <strong>Field Calculator</strong> to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="sd-card-text">Set <code class="docutils literal notranslate"><span class="pre">collapse</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
+<li><p class="sd-card-text">Set <code class="docutils literal notranslate"><span class="pre">ARF</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+<li><p class="sd-card-text">Set <code class="docutils literal notranslate"><span class="pre">WRF</span> <span class="pre">=</span> <span class="pre">0</span></code></p></li>
 </ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="../../_images/Bshg03_0021.png" src="../../_images/Bshg03_0021.png" />
+<h3> Step 9: Evaluate reduction factors </h3><ul class="simple">
+<li><p class="sd-card-text">Open the <strong>Grid Tools</strong> and use the <strong>Calculate reduction factors (ARF and WRF)</strong> tool to calculate ARF and WRF.</p></li>
+<li><p class="sd-card-text">Set the parameters as shown below.</p></li>
+</ul>
+<img alt="../../_images/Bshg03_0017.png" src="../../_images/Bshg03_0017.png" />
+<h3> Step 10: Export the Final Building Layer </h3><ul class="simple">
+<li><p class="sd-card-text">Save the edited buildings as a new layer if desired.</p></li>
+<li><p class="sd-card-text">Export reduction factors.</p></li>
+</ul>
+<img alt="../../_images/Bshg03_0022.png" src="../../_images/Bshg03_0022.png" />
+<h3> Step 11: Review the `ARF.DAT` File </h3><ul>
+<li><p class="sd-card-text">Open <code class="docutils literal notranslate"><span class="pre">arf.dat</span></code> in Notepad++. Key sections:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">S</span></code> line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">T</span></code> lines: fully blocked cells.</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">P</span></code> lines: partial blocks with ARF values &lt; 1.0.</p></li>
+</ul>
+</div></blockquote>
 </li>
 </ul>
 <img alt="../../_images/Bshg03_0027.png" src="../../_images/Bshg03_0027.png" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The model will automatically convert cells with high ARF values (e.g., &gt; 0.95) to fully blocked.</p>
+<p class="sd-card-text">The model will automatically convert cells with high ARF values (e.g., &gt; 0.95) to fully blocked.</p>
 </div>
-</div></blockquote>
-</section>
-</section>
+</div>
+</details></section>
 <section id="review-and-assign-walls">
 <h2>Review and Assign Walls<a class="headerlink" href="#review-and-assign-walls" title="Link to this heading"></a></h2>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/JA--spRi98c?si=j0ZawN6nZxP2L_Qt"
@@ -382,8 +356,7 @@ Walls are common features in urban flood studies, especially in the southwestern
 <section id="step-1-review-wall-data">
 <h2>Step 1: Review Wall Data<a class="headerlink" href="#step-1-review-wall-data" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Open the <strong>walls</strong> layer provided by the Flood Control District.</p></li>
-<li><p>Right-click the layer and select <strong>Open Attribute Table</strong>.</p></li>
+<li><p>Right-click the walls layer and select <strong>Open Attribute Table</strong>.</p></li>
 </ul>
 <img alt="../../_images/Bshg03_0030.png" src="../../_images/Bshg03_0030.png" />
 <ul>
@@ -397,6 +370,10 @@ Walls are common features in urban flood studies, especially in the southwestern
 </div></blockquote>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the wall elevation is null, the processor will use the wall height to determine it.</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Only keep hydraulically significant walls. Remove walls that do not affect flood routing, such as those inside large neighborhoods.</p>

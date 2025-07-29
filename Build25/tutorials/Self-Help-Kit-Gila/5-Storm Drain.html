@@ -110,120 +110,7 @@
 <h1>Storm Drain<a class="headerlink" href="#storm-drain" title="Link to this heading"></a></h1>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Simple Storm Drain</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<h2>Create a Storm Drain from Shapefiles</h2><p class="sd-card-text">This simple lesson shows how to create a simple storm drain from Shapefiles.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">It will be easier to view these videos on YouTube.</p>
-<p class="sd-card-text">Set the video playback speed to 2x to complete the lessons faster.</p>
-<p class="sd-card-text">The videos are more detailed whereas the text gives the minimum steps needed
-to complete the project.</p>
-</div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through building a simple storm drain system from shapefiles.</p>
-<h3> Step 1: Load Shapefiles </h3><ul class="simple">
-<li><p class="sd-card-text">Open the <strong>Simple Storm Drain Layers</strong> folder.</p></li>
-<li><p class="sd-card-text">Drag and drop the appropriate shapefiles into QGIS.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm001.jpg" src="../../_images/shg_sstorm001.jpg" />
-<ul class="simple">
-<li><p class="sd-card-text">Do <strong>not</strong> add them to the GeoPackage. Keep them in the User Layers.</p></li>
-<li><p class="sd-card-text">Save when prompted and select <strong>Yes</strong> to embed data into the GeoPackage for portability.</p></li>
-</ul>
-<h3> Step 2: Assign Shapefile Fields </h3><p class="sd-card-text">Open the <strong>Storm Drain Editor</strong> and click <strong>Select Components from Shapefile</strong>.</p>
-<img alt="../../_images/shg_sstorm002.jpg" src="../../_images/shg_sstorm002.jpg" />
-<ul class="simple">
-<li><p class="sd-card-text">Point layers like inlets and outfalls will show up in the dropdown.</p></li>
-<li><p class="sd-card-text">Assign each required field from the shapefile attributes:</p>
-<ul>
-<li><p class="sd-card-text">Example: <cite>Inlet Name</cite> → <cite>name</cite>, <cite>Type</cite> → <cite>type</cite>, etc.</p></li>
-</ul>
-</li>
-<li><p class="sd-card-text">Turn off unused or null-value fields to avoid unnecessary entries.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm003.jpg" src="../../_images/shg_sstorm003.jpg" />
-<img alt="../../_images/shg_sstorm004.jpg" src="../../_images/shg_sstorm004.jpg" />
-<img alt="../../_images/shg_sstorm005.jpg" src="../../_images/shg_sstorm005.jpg" />
-<p class="sd-card-text">Click <strong>Assign Selected Fields</strong>, then click <strong>OK</strong> for the warning that follows.</p>
-<img alt="../../_images/shg_sstorm006.jpg" src="../../_images/shg_sstorm006.jpg" />
-<h3> Step 3: Assign Nodes to Links </h3><p class="sd-card-text">Click the <strong>Auto-Assign Links and Nodes</strong> button.</p>
-<img alt="../../_images/shg_sstorm007.jpg" src="../../_images/shg_sstorm007.jpg" />
-<ul class="simple">
-<li><p class="sd-card-text">This assigns start and end nodes to each conduit.</p></li>
-<li><p class="sd-card-text">Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.</p></li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<ul class="simple">
-<li><p class="sd-card-text">Make sure conduit directions are correct using the <strong>Reverse Line Tool</strong> in the <strong>Advanced Digitizing Toolbar</strong>.</p></li>
-<li><p class="sd-card-text">Use the <strong>Snapping Tool</strong> to ensure precise vertex-node connections.</p></li>
-</ul>
-</div>
-<p class="sd-card-text">Check the <strong>Simulate Storm Drain</strong> box to turn it on.</p>
-<img alt="../../_images/shg_sstorm008.jpg" src="../../_images/shg_sstorm008.jpg" />
-<h3> Step 4: Add Type 4 Rating Tables and Culverts </h3><ul class="simple">
-<li><p class="sd-card-text">Go to the <strong>Type 4 Table Editor</strong>.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm009.jpg" src="../../_images/shg_sstorm009.jpg" />
-<ul class="simple">
-<li><p class="sd-card-text">Import rating tables for one type 4 inlet.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm010.jpg" src="../../_images/shg_sstorm010.jpg" />
-<ul class="simple">
-<li><p class="sd-card-text">File names must match inlet names (e.g., <code class="docutils literal notranslate"><span class="pre">41.txt</span></code> for inlet 41).</p></li>
-<li><p class="sd-card-text">Format for rating tables: Depth on the left, Discharge on the right.</p></li>
-</ul>
-<h3> Step 5: Set Storm Drain Control Parameters </h3><ul class="simple">
-<li><p class="sd-card-text">Set the <strong>start and end time</strong> of your simulation (e.g., 10 hours).</p></li>
-<li><p class="sd-card-text">Ensure it matches any time series used.</p></li>
-<li><p class="sd-card-text">Adjust the <strong>report step</strong>, <strong>flow units</strong> (CFS/CMS), and <strong>routing method</strong>.</p></li>
-<li><p class="sd-card-text">Leave advanced defaults unless needed.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm011.jpg" src="../../_images/shg_sstorm011.jpg" />
-<h3> Step 6: Schematize and Run <h3><ul class="simple">
-<li><p class="sd-card-text">Click <strong>Schematize Storm Drain</strong> to export <code class="docutils literal notranslate"><span class="pre">SWMM.OUTF</span></code>, <code class="docutils literal notranslate"><span class="pre">SWMM.FLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">DROPBOX.DAT</span></code>, etc.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm012.jpg" src="../../_images/shg_sstorm012.jpg" />
-<ul class="simple">
-<li><p class="sd-card-text">Click <strong>Quick Run</strong> to simulate.</p></li>
-<li><p class="sd-card-text">Output files will populate your designated folder.</p></li>
-</ul>
-<img alt="../../_images/shg_sstorm013.jpg" src="../../_images/shg_sstorm013.jpg" />
-<img alt="../../_images/shg_sstorm014.jpg" src="../../_images/shg_sstorm014.jpg" />
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p class="sd-card-text">If errors occur, check your shapefile connections, field assignments, or go to a <strong>FLO-2D Troubleshooting</strong> video in the series.</p>
-</div>
-</div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
-<summary class="sd-summary-title sd-card-header">
-<span class="sd-summary-text">Advanced Storm Drain</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">This advanced lesson shows how to create a storm drain from Shapefiles.
-Stay tuned for more lessons that will
-show how to set up a storm drain from a swmm.inp.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">It will be easier to view these videos on YouTube.</p>
-<p class="sd-card-text">Set the video playback speed to 2x to complete the lessons faster.</p>
-<p class="sd-card-text">The videos are more detailed whereas the text gives the minimum steps needed
-to complete the project.</p>
-</div>
-<p class="sd-card-text">Storm drain checklist.</p>
-<p class="sd-card-text">For those of you who love a challenge, it’s good practice to do a “Speed Run” of the Self-Help
-Kit.  Here is a checklist of tasks that might get skipped during storm drain model building.</p>
-<ul class="simple">
-<li><p class="sd-card-text">[ ] Adjust outfall location so all outfalls rest on a left bank node.</p></li>
-<li><p class="sd-card-text">[ ] Add a storage unit volume table and assign <cite>Storage1</cite> to all storage units.</p></li>
-<li><p class="sd-card-text">[ ] Ensure conduit length is a minimum of 30 ft, which is the cell size.</p></li>
-<li><p class="sd-card-text">[ ] Add Type 4 rating tables to the Type 4 inlets.</p></li>
-<li><p class="sd-card-text">[ ] Add a pump table and assign it to <cite>P1</cite>.</p></li>
-<li><p class="sd-card-text">[ ] Auto-assign nodes.</p></li>
-<li><p class="sd-card-text">[ ] Carefully inspect shapefile fields.</p></li>
-<li><p class="sd-card-text">[ ] Check storm drain control settings.</p></li>
-<li><p class="sd-card-text">[ ] Schematize the network.</p></li>
-<li><p class="sd-card-text">[ ] Perform a test run.</p></li>
-</ul>
+<span class="sd-summary-text">Storm Drain Lectures</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <h2>Data and Resources</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/YGHUA2fgIFA?si=hJIfJgNR7BOciJuL"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.</p>
@@ -767,6 +654,123 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p class="sd-card-text">Use the <strong>EPA SWMM GUI</strong> to preview expected inputs and verify how fields work together.</p></li>
 <li><p class="sd-card-text">Field types and required formats should follow SWMM rules.</p></li>
 <li><p class="sd-card-text">Curves (for pumps and orifices) are configured in a separate step.</p></li>
+</ul>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Simple Storm Drain Tutorial</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<h2>Create a Storm Drain from Shapefiles</h2><p class="sd-card-text">This simple lesson shows how to create a simple storm drain from Shapefiles.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">It will be easier to view these videos on YouTube.</p>
+<p class="sd-card-text">Set the video playback speed to 2x to complete the lessons faster.</p>
+<p class="sd-card-text">The videos are more detailed whereas the text gives the minimum steps needed
+to complete the project.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through building a simple storm drain system from shapefiles.</p>
+<h3> Step 1: Load Shapefiles </h3><ul class="simple">
+<li><p class="sd-card-text">Open the <strong>Simple Storm Drain Layers</strong> folder.</p></li>
+<li><p class="sd-card-text">Drag and drop the appropriate shapefiles into QGIS.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm001.jpg" src="../../_images/shg_sstorm001.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">Do <strong>not</strong> add them to the GeoPackage. Keep them in the User Layers.</p></li>
+<li><p class="sd-card-text">Save when prompted and select <strong>Yes</strong> to embed data into the GeoPackage for portability.</p></li>
+</ul>
+<h3> Step 2: Assign Shapefile Fields </h3><p class="sd-card-text">Open the <strong>Storm Drain Editor</strong> and click <strong>Select Components from Shapefile</strong>.</p>
+<img alt="../../_images/shg_sstorm002.jpg" src="../../_images/shg_sstorm002.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">Point layers like inlets and outfalls will show up in the dropdown.</p></li>
+<li><p class="sd-card-text">Assign each required field from the shapefile attributes:</p>
+<ul>
+<li><p class="sd-card-text">Example: <cite>Inlet Name</cite> → <cite>name</cite>, <cite>Type</cite> → <cite>type</cite>, etc.</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">Turn off unused or null-value fields to avoid unnecessary entries.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm003.jpg" src="../../_images/shg_sstorm003.jpg" />
+<img alt="../../_images/shg_sstorm004.jpg" src="../../_images/shg_sstorm004.jpg" />
+<img alt="../../_images/shg_sstorm005.jpg" src="../../_images/shg_sstorm005.jpg" />
+<p class="sd-card-text">Click <strong>Assign Selected Fields</strong>, then click <strong>OK</strong> for the warning that follows.</p>
+<img alt="../../_images/shg_sstorm006.jpg" src="../../_images/shg_sstorm006.jpg" />
+<h3> Step 3: Assign Nodes to Links </h3><p class="sd-card-text">Click the <strong>Auto-Assign Links and Nodes</strong> button.</p>
+<img alt="../../_images/shg_sstorm007.jpg" src="../../_images/shg_sstorm007.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">This assigns start and end nodes to each conduit.</p></li>
+<li><p class="sd-card-text">Uses the closest node within a 3-ft radius from the first and last vertex of a conduit.</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p class="sd-card-text">Make sure conduit directions are correct using the <strong>Reverse Line Tool</strong> in the <strong>Advanced Digitizing Toolbar</strong>.</p></li>
+<li><p class="sd-card-text">Use the <strong>Snapping Tool</strong> to ensure precise vertex-node connections.</p></li>
+</ul>
+</div>
+<p class="sd-card-text">Check the <strong>Simulate Storm Drain</strong> box to turn it on.</p>
+<img alt="../../_images/shg_sstorm008.jpg" src="../../_images/shg_sstorm008.jpg" />
+<h3> Step 4: Add Type 4 Rating Tables and Culverts </h3><ul class="simple">
+<li><p class="sd-card-text">Go to the <strong>Type 4 Table Editor</strong>.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm009.jpg" src="../../_images/shg_sstorm009.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">Import rating tables for one type 4 inlet.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm010.jpg" src="../../_images/shg_sstorm010.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">File names must match inlet names (e.g., <code class="docutils literal notranslate"><span class="pre">41.txt</span></code> for inlet 41).</p></li>
+<li><p class="sd-card-text">Format for rating tables: Depth on the left, Discharge on the right.</p></li>
+</ul>
+<h3> Step 5: Set Storm Drain Control Parameters </h3><ul class="simple">
+<li><p class="sd-card-text">Set the <strong>start and end time</strong> of your simulation (e.g., 10 hours).</p></li>
+<li><p class="sd-card-text">Ensure it matches any time series used.</p></li>
+<li><p class="sd-card-text">Adjust the <strong>report step</strong>, <strong>flow units</strong> (CFS/CMS), and <strong>routing method</strong>.</p></li>
+<li><p class="sd-card-text">Leave advanced defaults unless needed.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm011.jpg" src="../../_images/shg_sstorm011.jpg" />
+<h3> Step 6: Schematize and Run </h3><ul class="simple">
+<li><p class="sd-card-text">Click <strong>Schematize Storm Drain</strong> to export <code class="docutils literal notranslate"><span class="pre">SWMM.OUTF</span></code>, <code class="docutils literal notranslate"><span class="pre">SWMM.FLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">DROPBOX.DAT</span></code>, etc.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm012.jpg" src="../../_images/shg_sstorm012.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">Click <strong>Quick Run</strong> to simulate.</p></li>
+<li><p class="sd-card-text">Output files will populate your designated folder.</p></li>
+</ul>
+<img alt="../../_images/shg_sstorm013.jpg" src="../../_images/shg_sstorm013.jpg" />
+<img alt="../../_images/shg_sstorm014.jpg" src="../../_images/shg_sstorm014.jpg" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p class="sd-card-text">If errors occur, check your shapefile connections, field assignments, or go to a <strong>FLO-2D Troubleshooting</strong> video in the series.</p>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Advanced Storm Drain Tutorial</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">This advanced lesson shows how to create a storm drain from Shapefiles.
+Stay tuned for more lessons that will
+show how to set up a storm drain from a swmm.inp.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p class="sd-card-text">It will be easier to view these videos on YouTube.</p>
+<p class="sd-card-text">Set the video playback speed to 2x to complete the lessons faster.</p>
+<p class="sd-card-text">The videos are more detailed whereas the text gives the minimum steps needed
+to complete the project.</p>
+</div>
+<p class="sd-card-text">Storm drain checklist.</p>
+<p class="sd-card-text">For those of you who love a challenge, it’s good practice to do a “Speed Run” of the Self-Help
+Kit.  Here is a checklist of tasks that might get skipped during storm drain model building.</p>
+<ul class="simple">
+<li><p class="sd-card-text">[ ] Adjust outfall location so all outfalls rest on a left bank node.</p></li>
+<li><p class="sd-card-text">[ ] Add a storage unit volume table and assign <cite>Storage1</cite> to all storage units.</p></li>
+<li><p class="sd-card-text">[ ] Ensure conduit length is a minimum of 30 ft, which is the cell size.</p></li>
+<li><p class="sd-card-text">[ ] Add Type 4 rating tables to the Type 4 inlets.</p></li>
+<li><p class="sd-card-text">[ ] Add a pump table and assign it to <cite>P1</cite>.</p></li>
+<li><p class="sd-card-text">[ ] Auto-assign nodes.</p></li>
+<li><p class="sd-card-text">[ ] Carefully inspect shapefile fields.</p></li>
+<li><p class="sd-card-text">[ ] Check storm drain control settings.</p></li>
+<li><p class="sd-card-text">[ ] Schematize the network.</p></li>
+<li><p class="sd-card-text">[ ] Perform a test run.</p></li>
 </ul>
 <h2>Create a Storm Drain from Shapefiles</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
