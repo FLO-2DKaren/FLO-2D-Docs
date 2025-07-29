@@ -151,10 +151,12 @@ Step 3: Name and Review Each Structure
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Use the **Center on structure** button to step through.
-- Rename each one based on the provided naming convention (e.g., ``CLV_001`` to ``CLV_012``).
+- Rename each one based on the provided naming convention (``CLV_*``).
 - Set labels to ``structname`` field with 12pt font for visibility.
 
 .. image:: ../img/shg/8/shg_hydaulic008.png
+
+.. image:: ../img/shg/8/shg_hydaulic008b.png
 
 Step 4: Assign Structure Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
