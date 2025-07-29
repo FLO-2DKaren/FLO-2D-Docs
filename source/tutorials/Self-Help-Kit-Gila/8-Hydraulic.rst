@@ -204,12 +204,19 @@ Step 6: Import Rating Tables
 Step 7: Manually Modify a Rating Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Example: reduce max headwater for ``129A``, ``129B``, ``129C`` to approx. 3 feet.
+- Example: reduce max headwater for ``129``, ``129B``, ``129C`` to approx. 3 feet.
 - Delete rows from 3.0+ ft.
-- Copy and paste modified table to the other two structures.
+
+.. image:: ../img/shg/8/shg_hydaulic012.png
+
+- Copy and paste modified table to the other two structures (``129B``, ``129C``).
+
+.. image:: ../img/shg/8/shg_hydaulic013.png
 
 .. note::
    Use ``Ctrl+C`` and ``Ctrl+V`` or **Copy/Paste** buttons.
+
+   If need be, use "Auto Range" button to have a better plot.
 
 Next Step
 ---------
