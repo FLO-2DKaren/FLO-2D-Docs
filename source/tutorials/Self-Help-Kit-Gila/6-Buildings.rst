@@ -81,37 +81,35 @@ surrounding grid elements.  The grid elevation will determine the flow direction
 .. note::Optional video "Advanced"
    - This video covers advanced building setup, including assigning buildings to the grid and adjusting parameters.
 
-Download Building Polygons (Optional)
----------------------------------------
+Download Building Polygons
+------------------------------
 
 .. dropdown:: Download Building Polygons
 
-   .. raw:: html
+    .. raw:: html
 
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/h-mN4m8rJnw?si=ieWhEVt5BZDst-AM"
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-      gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h-mN4m8rJnw?si=ieWhEVt5BZDst-AM"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-   This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
+    This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
 
-.. raw:: html
+    .. raw:: html
 
-    <h3> Step 1: Install the OSM Downloader Plugin <h3>
+        <h3> Step 1: Install the OSM Downloader Plugin <h3>
 
-   - Go to **Plugins > Manage and Install Plugins**.
-   - Search for **OSM Downloader**.
-   - Click **Install**.
+    - Go to **Plugins > Manage and Install Plugins**.
+    - Search for **OSM Downloader**.
+    - Click **Install**.
 
-   .. image:: ../img/shg/6/Bshg03_006.png
+    .. image:: ../img/shg/6/Bshg03_006.png
 
-   .. tip::
-      The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.
+    .. tip::
+        The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.
 
-.. raw:: html
-
-    <h3> Step 2: Download Data <h3>
-
+Step 2: Download Data
+~~~~~~~~~~~~~~~~~~~~~~~~
    - Activate the **OSM Downloader tool**.
 
    .. image:: ../img/shg/6/Bshg03_007.png
