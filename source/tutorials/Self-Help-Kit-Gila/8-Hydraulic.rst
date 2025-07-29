@@ -185,9 +185,13 @@ Step 5: Schematic Correction and Recheck
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - After assigning types:
-  - Save and click **Schematize** to update geometry.
-  - Check and re-validate structure assignments one more time.
-  - Use the Center button to cycle through and verify again.
+
+    - Save and click **Schematize** to update geometry.
+
+    .. image:: ../img/shg/8/shg_hydaulic010.png
+
+    - Check and re-validate structure assignments one more time.
+    - Use the Center button to cycle through and verify again.
 
 Step 6: Import Rating Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
