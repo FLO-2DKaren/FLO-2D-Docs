@@ -97,7 +97,7 @@ Download Building Polygons
 
     .. raw:: html
 
-        <h3> Step 1: Install the OSM Downloader Plugin <h3>
+        <h3> Step 1: Install the OSM Downloader Plugin </h3>
 
     - Go to **Plugins > Manage and Install Plugins**.
     - Search for **OSM Downloader**.
