@@ -9,6 +9,9 @@ Set up culverts using Rating Tables and Culvert Equations using QGIS and the FLO
 
    Set the video playback speed to 2x to complete the lessons faster.
 
+   The videos are **more detailed** whereas the text gives the minimum steps needed
+   to complete the project.
+
 Import and Review Culvert Data
 -------------------------------
 
