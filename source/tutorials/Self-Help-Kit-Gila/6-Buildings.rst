@@ -108,128 +108,142 @@ Download Building Polygons
     .. tip::
         The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.
 
-Step 2: Download Data
-~~~~~~~~~~~~~~~~~~~~~~~~
-   - Activate the **OSM Downloader tool**.
+.. raw:: html
 
-   .. image:: ../img/shg/6/Bshg03_007.png
+    <h3> Step 2: Download Data </h3>
 
-   - Draw a rectangle around your project area.
+- Activate the **OSM Downloader tool**.
 
-   .. image:: ../img/shg/6/Bshg03_008.png
+.. image:: ../img/shg/6/Bshg03_007.png
 
-   - Save the file with a clear name like ``osm_file.geojson``.
-   - The data is downloaded in EPSG:4326 and will be reprojected later.
+- Draw a rectangle around your project area.
 
-   .. image:: ../img/shg/6/Bshg03_009.png
+.. image:: ../img/shg/6/Bshg03_008.png
 
-Step 3: Export Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Turn off unnecessary OSM sublayers (e.g., roads).
-   - Right-click the **polygons** layer > **Export > Save Features As...**
+- Save the file with a clear name like ``osm_file.geojson``.
+- The data is downloaded in EPSG:4326 and will be reprojected later.
 
-   .. image:: ../img/shg/6/Bshg03_0010.png
+.. image:: ../img/shg/6/Bshg03_009.png
 
-   - Save as ``osm_buildings``.
-   - Change the CRS to your project CRS (e.g., EPSG:2223).
-   - Remove irrelevant fields before exporting.
+.. raw:: html
 
-   .. image:: ../img/shg/6/Bshg03_0011.png
+    <h3> Step 3: Export Polygons </h3>
 
-Step 4: Filter for Buildings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Open the attribute table.
-   - Sort by the ``building`` field.
-   - Select rows where ``building`` is null or empty and delete them.
-   - Save your edits.
+- Turn off unnecessary OSM sublayers (e.g., roads).
+- Right-click the **polygons** layer > **Export > Save Features As...**
 
-   .. image:: ../img/shg/6/Bshg03_0012.png
+.. image:: ../img/shg/6/Bshg03_0010.png
 
-   .. image:: ../img/shg/6/Bshg03_0013.png
+- Save as ``osm_buildings``.
+- Change the CRS to your project CRS (e.g., EPSG:2223).
+- Remove irrelevant fields before exporting.
 
+.. image:: ../img/shg/6/Bshg03_0011.png
 
-Step 5: Crop to Project Boundary
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
 
-   .. image:: ../img/shg/6/Bshg03_0014.png
+    <h3> Step 4: Filter for Buildings </h3>
 
-   - Use **Select by Location**:
-   - Select features from ``osm_buildings``.
-   - Where the feature is **within** the computational domain layer.
+- Open the attribute table.
+- Sort by the ``building`` field.
+- Select rows where ``building`` is null or empty and delete them.
+- Save your edits.
 
-   .. image:: ../img/shg/6/Bshg03_0015.png
+.. image:: ../img/shg/6/Bshg03_0012.png
 
-   - Delete unselected features (those outside your project area).
+.. image:: ../img/shg/6/Bshg03_0013.png
 
-   .. image:: ../img/shg/6/Bshg03_0016.png
+.. raw:: html
 
-   .. image:: ../img/shg/6/Bshg03_0017.png
+    <h3> Step 5: Crop to Project Boundary </h3>
 
-Step 6: Clean Building Types
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Review building types.
-   - Delete features such as ``carports``, ``gas islands``, etc., which don’t obstruct flow.
+.. image:: ../img/shg/6/Bshg03_0014.pn
+- Use **Select by Location**:
+- Select features from ``osm_buildings``.
+- Where the feature is **within** the computational domain layer.
 
-   .. image:: ../img/shg/6/Bshg03_0018.png
+.. image:: ../img/shg/6/Bshg03_0015.png
 
-   .. image:: ../img/shg/6/Bshg03_0019.png
+- Delete unselected features (those outside your project area).
 
+.. image:: ../img/shg/6/Bshg03_0016.png
 
-Step 7: Add Required Fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Add the following integer fields:
-   - ``collapse``
-   - ``ARF`` (Area Reduction Factor)
-   - ``WRF`` (Width Reduction Factor)
+.. image:: ../img/shg/6/Bshg03_0017.png
 
-   .. image:: ../img/shg/6/Bshg03_0020.png
+.. raw:: html
 
-   - Use the **Field Calculator** to:
-   - Set ``collapse = 0``
-   - Set ``ARF = 1``
-   - Set ``WRF = 0``
+    <h3> Step 6: Clean Building Types </h3>
 
-   .. image:: ../img/shg/6/Bshg03_0021.png
+- Review building types.
+- Delete features such as ``carports``, ``gas islands``, etc., which don’t obstruct flow.
 
-   .. image:: ../img/shg/6/Bshg03_0022.png
+.. image:: ../img/shg/6/Bshg03_0018.png
 
-Step 8: Fill in Missing Buildings (Optional)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Turn on a satellite basemap (e.g., Google Satellite).
-   - Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
-   - Digitize missing buildings.
-   - Use ``Rectangle from Extent`` for fast creation.
-   - Use ``Digitize with Segment`` for complex shapes.
+.. image:: ../img/shg/6/Bshg03_0019.png
 
-   .. image:: ../img/shg/6/Bshg03_0023.png
+.. raw:: html
 
-   .. tip:: Or you can try the **Add Polygon** tool to draw buildings manually.
+    <h3> Step 7: Add Required Fields </h3>
 
-   .. image:: ../img/shg/6/Bshg03_0024.png
+- Add the following integer fields:
+- ``collapse``
+- ``ARF`` (Area Reduction Factor)
+- ``WRF`` (Width Reduction Factor)
 
-Step 9: Export the Final Building Layer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - Save your edited buildings as a new layer if desired.
-   - This layer can now be used with the **Grid Tools > Assign Buildings** tool.
+.. image:: ../img/shg/6/Bshg03_0020.png
 
-   .. image:: ../img/shg/6/Bshg03_0025.png
+- Use the **Field Calculator** to:
+- Set ``collapse = 0``
+- Set ``ARF = 1``
+- Set ``WRF = 0``
 
-Step 10: Review the `ARF.DAT` File
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   - After exporting building reductions, open ``arf.dat`` in Notepad++.
+.. image:: ../img/shg/6/Bshg03_0021.png
 
-   .. image:: ../img/shg/6/Bshg03_0026.png
+.. image:: ../img/shg/6/Bshg03_0022.png
 
-   - Key sections:
+.. raw:: html
 
-     - ``S`` line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
-     - ``T`` lines: fully blocked cells.
-     - ``P`` lines: partial blocks with ARF values < 1.0.
+    <h3> Step 8: Fill in Missing Buildings (Optional) </h3>
 
-   .. image:: ../img/shg/6/Bshg03_0027.png
+- Turn on a satellite basemap (e.g., Google Satellite).
+- Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
+- Digitize missing buildings.
+- Use ``Rectangle from Extent`` for fast creation.
+- Use ``Digitize with Segment`` for complex shapes.
 
-   .. tip::
-      The model will automatically convert cells with high ARF values (e.g., > 0.95) to fully blocked.
+.. image:: ../img/shg/6/Bshg03_0023.png
+
+.. tip:: Or you can try the **Add Polygon** tool to draw buildings manually.
+
+.. image:: ../img/shg/6/Bshg03_0024.png
+
+.. raw:: html
+
+    <h3> Step 9: Export the Final Building Layer </h3>
+
+- Save your edited buildings as a new layer if desired.
+- This layer can now be used with the **Grid Tools > Assign Buildings** tool.
+
+.. image:: ../img/shg/6/Bshg03_0025.png
+
+.. raw:: html
+
+    <h3> Step 10: Review the `ARF.DAT` File </h3>
+
+- After exporting building reductions, open ``arf.dat`` in Notepad++.
+
+.. image:: ../img/shg/6/Bshg03_0026.png
+
+- Key sections:
+
+    - ``S`` line: global reduction factor (e.g., set to 0.5 to reduce all T lines to 50%).
+    - ``T`` lines: fully blocked cells.
+    - ``P`` lines: partial blocks with ARF values < 1.0.
+
+.. image:: ../img/shg/6/Bshg03_0027.png
+
+.. tip::
+    The model will automatically convert cells with high ARF values (e.g., > 0.95) to fully blocked.
 
 Review and Assign Walls
 ------------------------------
