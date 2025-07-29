@@ -544,7 +544,7 @@ Storm Drain
     - Curves (for pumps and orifices) are configured in a separate step.
 
 
-.. dropdown:: Simple Storm Drain
+.. dropdown:: Simple Storm Drain Tutorial
 
     .. raw:: html
 
@@ -670,7 +670,7 @@ Storm Drain
 
 
 
-.. dropdown:: Advanced Storm Drain
+.. dropdown:: Advanced Storm Drain Tutorial
 
 
     This advanced lesson shows how to create a storm drain from Shapefiles.
