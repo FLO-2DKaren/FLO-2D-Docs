@@ -220,7 +220,8 @@ Download Building Polygons (Optional)
 
         <h3> Step 9: Evaluate reduction factors </h3>
 
-    Open the **Grid Tools* and use the **Assign Buildings** tool to calculate ARF and WRF.
+    - Open the **Grid Tools** and use the **Calculate reduction factors (ARF and WRF)** tool to calculate ARF and WRF.
+    - Set the parameters as shown below.
 
     .. image:: ../img/shg/6/Bshg03_0017.png
 
