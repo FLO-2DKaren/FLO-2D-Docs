@@ -27,7 +27,13 @@ In this lesson, we begin setting up hydraulic structures (culverts, weirs) in th
 Add the Hydraulic Structures Layer
 ----------------------------------
 - Drag the ``hydraulic_structures.shp`` into the QGIS map.
+
+.. image:: ../img/shg/8/shg_hydaulic001.png
+
 - Change the symbology to **arrow** style to visualize the flow direction.
+
+.. image:: ../img/shg/8/shg_hydaulic002.png
+
 - Optionally, change the fill color for visibility.
 
 .. tip::
