@@ -81,8 +81,8 @@ surrounding grid elements.  The grid elevation will determine the flow direction
 .. note::Optional video "Advanced"
    - This video covers advanced building setup, including assigning buildings to the grid and adjusting parameters.
 
-Download Building Polygons
-------------------------------
+Download Building Polygons (Optional)
+--------------------------------------
 
 .. dropdown:: Download Building Polygons
 
