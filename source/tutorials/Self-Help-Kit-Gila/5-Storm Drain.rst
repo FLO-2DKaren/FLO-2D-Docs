@@ -652,7 +652,7 @@ Storm Drain
 
     .. raw:: html
 
-        <h3> Step 6: Schematize and Run <h3>
+        <h3> Step 6: Schematize and Run </h3>
 
     - Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
 
