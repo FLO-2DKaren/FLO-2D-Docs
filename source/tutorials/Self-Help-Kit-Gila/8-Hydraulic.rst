@@ -115,9 +115,15 @@ Step 1: Import the Hydraulic Structure Templates
 
 - Open **QGIS Lesson 6** project.
 - Drag and drop the ``hydraulic_structures.shp`` file from the lesson data folder onto the map.
+
+.. image:: ../img/shg/8/shg_hydaulic001.png
+
 - Change symbology:
+
   - Set to **Arrow symbol** to show flow direction.
   - Optionally brighten the line color.
+
+.. image:: ../img/shg/8/shg_hydaulic002.png
 
 .. tip::
    The arrowhead marks the **Outlet**, and the first vertex is the **Inlet**.
