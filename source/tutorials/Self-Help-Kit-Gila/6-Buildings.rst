@@ -182,27 +182,7 @@ Download Building Polygons (Optional)
 
     .. image:: ../img/shg/6/Bshg03_0019.png
 
-    .. raw:: html
-
-        <h3> Step 7: Add Required Fields </h3>
-
-    - Add the following integer fields:
-    - ``collapse``
-    - ``ARF`` (Area Reduction Factor)
-    - ``WRF`` (Width Reduction Factor)
-
-    .. image:: ../img/shg/6/Bshg03_0020.png
-
-    - Use the **Field Calculator** to:
-    - Set ``collapse = 0``
-    - Set ``ARF = 1``
-    - Set ``WRF = 0``
-
-    .. image:: ../img/shg/6/Bshg03_0021.png
-
-    .. image:: ../img/shg/6/Bshg03_0022.png
-
-    .. dropdown:: Step 8: Fill in Missing Buildings (Optional)
+    .. dropdown:: Step 7: Fill in Missing Buildings (Optional)
 
         - Turn on a satellite basemap (e.g., Google Satellite).
         - Use the **Add Polygon tool** or **Shape Digitizing Toolbar** to:
@@ -218,7 +198,35 @@ Download Building Polygons (Optional)
 
     .. raw:: html
 
-        <h3> Step 9: Export the Final Building Layer </h3>
+        <h3> Step 8: Add Required Fields </h3>
+
+    - Add the following integer fields:
+
+        - ``collapse``
+        - ``ARF`` (Area Reduction Factor)
+        - ``WRF`` (Width Reduction Factor)
+
+    .. image:: ../img/shg/6/Bshg03_0020.png
+
+    - Use the **Field Calculator** to:
+
+        - Set ``collapse = 0``
+        - Set ``ARF = 1``
+        - Set ``WRF = 0``
+
+    .. image:: ../img/shg/6/Bshg03_0021.png
+
+    .. raw:: html
+
+        <h3> Step 9: Evaluate reduction factors </h3>
+
+    Open the **Grid Tools* and use the **Assign Buildings** tool to calculate ARF and WRF.
+
+    .. image:: ../img/shg/6/Bshg03_0017.png
+
+    .. raw:: html
+
+        <h3> Step 10: Export the Final Building Layer </h3>
 
     - Save your edited buildings as a new layer if desired.
     - This layer can now be used with the **Grid Tools > Assign Buildings** tool.
