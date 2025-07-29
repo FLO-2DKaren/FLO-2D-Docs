@@ -73,7 +73,7 @@ Shared Culverts Between Floodplain and Channels
 Labeling Hydraulic Structures
 -----------------------------
 - Open layer properties and go to **Labels**.
-- Choose the field ``structure_name`` to display.
+- Choose the field ``structname`` to display.
 - Adjust font size and color for better visibility.
 
 .. image:: ../img/shg/8/shg_hydaulic004.png
@@ -132,22 +132,30 @@ Step 2: Copy from Template Layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Select features from the template layer:
-  - Use **Select Features** tool or ``Ctrl+A``.
+
+  - Use **Select All Features** tool or ``Ctrl+A``.
   - Copy with ``Ctrl+C``.
-- Activate the **Structure** layer from the **FLO-2D widget** editor.
+
+.. image:: ../img/shg/8/shg_hydaulic006.png
+
+- Activate the **Structure** layer from the **FLO-2D widget** editor:
+
   - Ensure editing mode is on.
   - Paste with ``Ctrl+V``.
+
 - Save the edits.
 
+.. image:: ../img/shg/8/shg_hydaulic007.png
+
 Step 3: Name and Review Each Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Use the **Center on structure** button to step through.
 - Rename each one based on the provided naming convention (e.g., ``CLV001`` to ``CLV012``).
 - Set labels to ``structure_name`` field with 12pt font for visibility.
 
 Step 4: Assign Structure Type
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Identify structure types:
   - **Floodplain to Floodplain**
