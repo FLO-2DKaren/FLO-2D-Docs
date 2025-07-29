@@ -196,8 +196,10 @@ Step 5: Schematic Correction and Recheck
 Step 6: Import Rating Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- From the ``ct_tables`` folder, select all files and import.
+- From the ``Culverts Tables`` folder, select all files and import.
 - Only rating tables that match existing structure names will be applied.
+
+.. image:: ../img/shg/8/shg_hydaulic011.png
 
 Step 7: Manually Modify a Rating Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
