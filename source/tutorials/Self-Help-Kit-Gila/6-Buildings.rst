@@ -229,14 +229,14 @@ Download Building Polygons (Optional)
 
         <h3> Step 10: Export the Final Building Layer </h3>
 
-    - Save your edited buildings as a new layer if desired.
-    - Export building reduction factors.
+    - Save the edited buildings as a new layer if desired.
+    - Export reduction factors.
 
     .. image:: ../img/shg/6/Bshg03_0022.png
 
     .. raw:: html
 
-        <h3> Step 10: Review the `ARF.DAT` File </h3>
+        <h3> Step 11: Review the `ARF.DAT` File </h3>
 
     - Open ``arf.dat`` in Notepad++. Key sections:
 
