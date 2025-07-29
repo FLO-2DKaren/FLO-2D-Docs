@@ -81,8 +81,8 @@ surrounding grid elements.  The grid elevation will determine the flow direction
 .. note::Optional video "Advanced"
    - This video covers advanced building setup, including assigning buildings to the grid and adjusting parameters.
 
-Download Building Polygons
-------------------------------
+Download Building Polygons (Optional)
+---------------------------------------
 
 .. dropdown:: Download Building Polygons
 
@@ -95,8 +95,9 @@ Download Building Polygons
 
    This tutorial covers how to obtain building data using OpenStreetMap (OSM) and prepare it for FLO-2D modeling. This process is useful when client-provided data is unavailable.
 
-Step 1: Install the OSM Downloader Plugin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3> Step 1: Install the OSM Downloader Plugin <h3>
 
    - Go to **Plugins > Manage and Install Plugins**.
    - Search for **OSM Downloader**.
@@ -107,8 +108,10 @@ Step 1: Install the OSM Downloader Plugin
    .. tip::
       The OSM Downloader button is nearly transparent. Toggle it on/off to locate it in your toolbar.
 
-Step 2: Download Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+    <h3> Step 2: Download Data <h3>
+
    - Activate the **OSM Downloader tool**.
 
    .. image:: ../img/shg/6/Bshg03_007.png
