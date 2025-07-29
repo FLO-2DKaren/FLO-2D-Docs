@@ -81,9 +81,10 @@ Labeling Hydraulic Structures
 Understanding Structure Types
 -----------------------------
 Each structure is categorized by flow type:
-- **Floodplain to Floodplain**
-- **Floodplain to Channel** (requires assignment to left bank)
-- **Channel to Channel** (handled earlier in the channel lesson)
+
+    - **Floodplain to Floodplain**
+    - **Floodplain to Channel** (requires assignment to left bank)
+    - **Channel to Channel** (handled earlier in the channel lesson)
 
 Switches and Advanced Setup
 ---------------------------
