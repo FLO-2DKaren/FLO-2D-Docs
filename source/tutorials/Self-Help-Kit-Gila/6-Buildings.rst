@@ -157,20 +157,19 @@ Download Building Polygons (Optional)
 
         <h3> Step 5: Crop to Project Boundary </h3>
 
-    .. image:: ../img/shg/6/Bshg03_0014.png
-
     - Use **Select by Location**:
 
         - Select features from ``osm_buildings``.
         - Where the feature is **within** the computational domain layer.
 
+    .. image:: ../img/shg/6/Bshg03_0014.png
+
     .. image:: ../img/shg/6/Bshg03_0015.png
 
-    - Delete unselected features (those outside your project area).
+    - Use Invert Feature Selection tool and the Delete button to
+      delete unselected features (those outside the project area).
 
     .. image:: ../img/shg/6/Bshg03_0016.png
-
-    .. image:: ../img/shg/6/Bshg03_0017.png
 
     .. raw:: html
 
