@@ -91,9 +91,7 @@ Switches and Advanced Setup
 - Tailwater switch: set to ``0`` by default, unless needed otherwise.
 - Head reference elevation and geometry parameters will be handled in the advanced culvert setup.
 
-Next Steps
-----------
-In the next video, we'll learn how to assign hydraulic structure attributes into the project database.
+.. image:: ../img/shg/8/shg_hydaulic005.png
 
 
 Set-up Culvert Structures
