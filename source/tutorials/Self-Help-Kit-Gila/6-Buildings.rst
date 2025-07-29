@@ -269,8 +269,8 @@ Walls are common features in urban flood studies, especially in the southwestern
 
 Step 1: Review Wall Data
 ----------------------------
-- Open the **walls** layer provided by the Flood Control District.
-- Right-click the layer and select **Open Attribute Table**.
+
+- Right-click the walls layer and select **Open Attribute Table**.
 
 .. image:: ../img/shg/6/Bshg03_0030.png
 
@@ -279,6 +279,9 @@ Step 1: Review Wall Data
    - Ignore: FID, crest elevation, correction, mixed elevation, mixed height, elevation, and fail elevation.
    - Use: Set **Wall height** for your wall data.
    - For collapse properties, use **fail depth** and set other failure rate fields to zero.
+
+.. note::
+   If the wall elevation is null, the processor will use the wall height to determine it.
 
 .. tip::
    Only keep hydraulically significant walls. Remove walls that do not affect flood routing, such as those inside large neighborhoods.
