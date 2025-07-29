@@ -45,6 +45,8 @@ Flow Direction and Invert Elevation
 - Verify and correct elevation to reflect true invert elevation of the structure.
 - Use **ID tool** to check elevation of individual grid cells and surrounding terrain.
 
+.. image:: ../img/shg/8/shg_hydaulic003.png
+
 .. note::
    The grid cell elevation is an average, but for culverts we need the **lowest** point (invert) for both inlet and outlet.
 
@@ -74,7 +76,7 @@ Labeling Hydraulic Structures
 - Choose the field ``structure_name`` to display.
 - Adjust font size and color for better visibility.
 
-**Put Image Here**
+.. image:: ../img/shg/8/shg_hydaulic004.png
 
 Understanding Structure Types
 -----------------------------
