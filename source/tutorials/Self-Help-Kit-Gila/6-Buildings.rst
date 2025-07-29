@@ -166,7 +166,7 @@ Download Building Polygons (Optional)
 
     .. image:: ../img/shg/6/Bshg03_0015.png
 
-    - Use Invert Feature Selection tool and the Delete button to
+    - Use **Invert Feature Selection** tool and the **Delete** button to
       delete unselected features (those outside the project area).
 
     .. image:: ../img/shg/6/Bshg03_0016.png
