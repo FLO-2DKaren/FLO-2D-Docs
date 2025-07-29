@@ -230,17 +230,13 @@ Download Building Polygons (Optional)
         <h3> Step 10: Export the Final Building Layer </h3>
 
     - Save your edited buildings as a new layer if desired.
-    - This layer can now be used with the **Grid Tools > Assign Buildings** tool.
+    - Export building reduction factors.
 
-    .. image:: ../img/shg/6/Bshg03_0025.png
+    .. image:: ../img/shg/6/Bshg03_0022.png
 
     .. raw:: html
 
         <h3> Step 10: Review the `ARF.DAT` File </h3>
-
-    - Exporting building reductions.
-
-    .. image:: ../img/shg/6/Bshg03_0022.png
 
     - Open ``arf.dat`` in Notepad++. Key sections:
 
