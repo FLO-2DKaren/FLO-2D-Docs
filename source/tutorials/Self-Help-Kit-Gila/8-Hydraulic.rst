@@ -216,18 +216,12 @@ Step 7: Manually Modify a Rating Table
 .. note::
    Use ``Ctrl+C`` and ``Ctrl+V`` or **Copy/Paste** buttons.
 
-   If need be, use "Auto Range" button to have a better plot.
-
-Next Step
----------
-
-The next step is to **Save, Export, and Run** the model. This is covered in the following video.
-
+   If need be, use "Auto Range" button to get a better plot.
 
 .. _correct_elevation:
 
 Correct Elevation
----------------------------------
+------------------
 
 .. raw:: html
 
@@ -239,12 +233,14 @@ Correct Elevation
 This lesson covers how to make elevation corrections for hydraulic structures, set up minimum elevations, apply levees, and prepare the model for export and run.
 
 Step 1: Copy Elevation Values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Identify Features** tool to get the elevation at the required location.
 - Right-click the value in the Identify panel and choose **Copy Attribute Value**.
 
+.. image:: ../img/shg/8/shg_hydaulic014.png
+
 Step 2: Create Elevation Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Elevation Polygons** layer.
 - Start editing and click **Add Polygon**.
 - Draw a polygon around the **centroid** of the grid element you want to modify.
@@ -252,13 +248,13 @@ Step 2: Create Elevation Polygons
 - Set the correction method to ``grid`` and give the polygon a name like ``head wall``.
 
 Step 3: Setup Minimum Elevation Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For complex corrections, select multiple grid cells and draw a polygon.
 - Set the name to ``min from elev raster`` or similar.
 - Set method to ``grid``; leave other values ``null``.
 
 Step 4: Apply a Levy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Levy Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
 - Reprocess the levies using:
