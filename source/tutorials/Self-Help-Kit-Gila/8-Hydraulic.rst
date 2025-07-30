@@ -276,7 +276,14 @@ Step 4: Apply a Levee
 Step 5: Adjust Hydraulic Structure Endpoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
+
+.. image:: ../img/shg/8/shg_hydaulic020a.png
+
+.. image:: ../img/shg/8/shg_hydaulic020b.png
+
 - After adjustment, save and **Schematize** the structure lines to update the schema.
+
+.. image:: ../img/shg/8/shg_hydaulic021.png
 
 Step 6: Apply Grid Element Corrections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
