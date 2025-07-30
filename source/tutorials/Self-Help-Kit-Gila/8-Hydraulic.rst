@@ -308,8 +308,13 @@ Step 6: Apply Grid Element Corrections
 
 Step 7: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Export DAT files with a name like: ``post_elevation_change_and_correction.dat``
+- Export DAT files to a folder with a name like: ``post elev change and correction``
+
+.. image:: ../img/shg/8/shg_hydaulic024.png
+
 - Run the model.
+
+.. image:: ../img/shg/8/shg_hydaulic025.png
 
 .. note::
    These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.
