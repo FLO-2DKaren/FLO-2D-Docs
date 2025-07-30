@@ -255,6 +255,10 @@ Step 3: Setup Minimum Elevation Polygons
 - Set the name to ``min from elev raster`` or similar.
 - Set method to ``grid``; leave other values ``null``.
 
+.. image:: ../img/shg/8/shg_hydaulic016a.png
+
+.. image:: ../img/shg/8/shg_hydaulic016b.png
+
 Step 4: Apply a Levy
 ~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Levy Line** tool to draw a line where flow should be restricted.
