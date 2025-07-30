@@ -337,7 +337,9 @@ This short lesson walks through saving hydraulic structures, exporting the data,
 
 Step 1: Save the Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+
+.. image:: ../img/shg/8/shg_hydaulic026.png
 
 .. note::
    You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.
@@ -346,15 +348,11 @@ Step 2: Export Data Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Import/Export** button.
 - Select **Option 3** to export data files.
-- Create a new folder inside your ``lesson6`` directory called:
-
-  ::
-
-    pre-elevation-change
+- Create a new folder inside your ``lesson6`` directory called: ``pre elevation change``
 
   This helps distinguish the export prior to making elevation corrections.
 
-- First, the D-series data files are exported.
+- First, the DAT-series data files are exported.
 - Then, the Storm Drain files are exported.
 - You should now see a complete set of exported files inside the folder.
 
