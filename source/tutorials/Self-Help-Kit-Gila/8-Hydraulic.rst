@@ -259,7 +259,7 @@ Step 3: Setup Minimum Elevation Polygons
 
 .. image:: ../img/shg/8/shg_hydaulic016b.png
 
-Step 4: Apply a Levy
+Step 4: Apply a Levee
 ~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Levy Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
@@ -274,7 +274,7 @@ Step 4: Apply a Levy
 .. image:: ../img/shg/8/shg_hydaulic019.png
 
 Step 5: Adjust Hydraulic Structure Endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
 - After adjustment, save and **Schematize** the structure lines to update the schema.
 
