@@ -263,8 +263,15 @@ Step 4: Apply a Levy
 ~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Levy Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
-- Reprocess the levies using:
-  ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levy Lines`` checked only.
+
+.. image:: ../img/shg/8/shg_hydaulic017.png
+
+.. image:: ../img/shg/8/shg_hydaulic018.png
+
+- Reprocess the levees using:
+  ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levee Lines`` checked only.
+
+.. image:: ../img/shg/8/shg_hydaulic019.png
 
 Step 5: Adjust Hydraulic Structure Endpoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
