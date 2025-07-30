@@ -9,6 +9,9 @@ Set up culverts using Rating Tables and Culvert Equations using QGIS and the FLO
 
    Set the video playback speed to 2x to complete the lessons faster.
 
+   The videos are **more detailed** whereas the text gives the minimum steps needed
+   to complete the project.
+
 Import and Review Culvert Data
 -------------------------------
 
@@ -24,7 +27,13 @@ In this lesson, we begin setting up hydraulic structures (culverts, weirs) in th
 Add the Hydraulic Structures Layer
 ----------------------------------
 - Drag the ``hydraulic_structures.shp`` into the QGIS map.
+
+.. image:: ../img/shg/8/shg_hydaulic001.png
+
 - Change the symbology to **arrow** style to visualize the flow direction.
+
+.. image:: ../img/shg/8/shg_hydaulic002.png
+
 - Optionally, change the fill color for visibility.
 
 .. tip::
@@ -35,6 +44,8 @@ Flow Direction and Invert Elevation
 - Each hydraulic structure moves flow from inlet to outlet.
 - Verify and correct elevation to reflect true invert elevation of the structure.
 - Use **ID tool** to check elevation of individual grid cells and surrounding terrain.
+
+.. image:: ../img/shg/8/shg_hydaulic003.png
 
 .. note::
    The grid cell elevation is an average, but for culverts we need the **lowest** point (invert) for both inlet and outlet.
@@ -62,17 +73,18 @@ Shared Culverts Between Floodplain and Channels
 Labeling Hydraulic Structures
 -----------------------------
 - Open layer properties and go to **Labels**.
-- Choose the field ``structure_name`` to display.
+- Choose the field ``structname`` to display.
 - Adjust font size and color for better visibility.
 
-**Put Image Here**
+.. image:: ../img/shg/8/shg_hydaulic004.png
 
 Understanding Structure Types
 -----------------------------
 Each structure is categorized by flow type:
-- **Floodplain to Floodplain**
-- **Floodplain to Channel** (requires assignment to left bank)
-- **Channel to Channel** (handled earlier in the channel lesson)
+
+    - **Floodplain to Floodplain**
+    - **Floodplain to Channel** (requires assignment to left bank)
+    - **Channel to Channel** (handled earlier in the channel lesson)
 
 Switches and Advanced Setup
 ---------------------------
@@ -80,9 +92,7 @@ Switches and Advanced Setup
 - Tailwater switch: set to ``0`` by default, unless needed otherwise.
 - Head reference elevation and geometry parameters will be handled in the advanced culvert setup.
 
-Next Steps
-----------
-In the next video, we'll learn how to assign hydraulic structure attributes into the project database.
+.. image:: ../img/shg/8/shg_hydaulic005.png
 
 
 Set-up Culvert Structures
@@ -105,9 +115,15 @@ Step 1: Import the Hydraulic Structure Templates
 
 - Open **QGIS Lesson 6** project.
 - Drag and drop the ``hydraulic_structures.shp`` file from the lesson data folder onto the map.
+
+.. image:: ../img/shg/8/shg_hydaulic001.png
+
 - Change symbology:
+
   - Set to **Arrow symbol** to show flow direction.
   - Optionally brighten the line color.
+
+.. image:: ../img/shg/8/shg_hydaulic002.png
 
 .. tip::
    The arrowhead marks the **Outlet**, and the first vertex is the **Inlet**.
@@ -116,66 +132,96 @@ Step 2: Copy from Template Layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Select features from the template layer:
-  - Use **Select Features** tool or ``Ctrl+A``.
+
+  - Use **Select All Features** tool or ``Ctrl+A``.
   - Copy with ``Ctrl+C``.
-- Activate the **Structure** layer from the **FLO-2D widget** editor.
+
+.. image:: ../img/shg/8/shg_hydaulic006.png
+
+- Activate the **Structure** layer from the **FLO-2D widget** editor:
+
   - Ensure editing mode is on.
   - Paste with ``Ctrl+V``.
+
 - Save the edits.
 
+.. image:: ../img/shg/8/shg_hydaulic007.png
+
 Step 3: Name and Review Each Structure
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Use the **Center on structure** button to step through.
-- Rename each one based on the provided naming convention (e.g., ``CLV001`` to ``CLV012``).
-- Set labels to ``structure_name`` field with 12pt font for visibility.
+- Rename each one based on the provided naming convention (``CULV_*``).
+- Set labels to ``structname`` field with 12pt font for visibility.
+
+.. image:: ../img/shg/8/shg_hydaulic008.png
+
+.. image:: ../img/shg/8/shg_hydaulic008b.png
 
 Step 4: Assign Structure Type
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Identify structure types:
-  - **Floodplain to Floodplain**
-  - **Floodplain to Channel** (must be on a **Left Bank node**)
-  - **Channel to Channel** (usually already handled in the channel lesson)
+
+    - **Floodplain to Floodplain**
+
+    .. image:: ../img/shg/8/shg_hydaulic009a.png
+
+    - **Floodplain to Channel** (must be on a **Left Bank node**)
+
+    .. image:: ../img/shg/8/shg_hydaulic009c.png
+
+    - **Channel to Channel** (usually already handled in the channel lesson)
+
+    .. image:: ../img/shg/8/shg_hydaulic009d.png
+
 - Set the type to **Rating Table** using the drop-down menu.
 
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
 
+.. image:: ../img/shg/8/shg_hydaulic009b.png
+
 Step 5: Schematic Correction and Recheck
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - After assigning types:
-  - Save and click **Schematize** to update geometry.
-  - Check and re-validate structure assignments one more time.
-  - Use the Center button to cycle through and verify again.
+
+    - Save and click **Schematize** to update geometry.
+
+    .. image:: ../img/shg/8/shg_hydaulic010.png
+
+    - Check and re-validate structure assignments one more time.
+    - Use the Center button to cycle through and verify again.
 
 Step 6: Import Rating Tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- From the ``ct_tables`` folder, select all files and import.
+- From the ``Culverts Tables`` folder, select all files and import.
 - Only rating tables that match existing structure names will be applied.
+
+.. image:: ../img/shg/8/shg_hydaulic011.png
 
 Step 7: Manually Modify a Rating Table
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Example: reduce max headwater for ``129A``, ``129B``, ``129C`` to approx. 3 feet.
+- Example: reduce max headwater for ``129``, ``129B``, ``129C`` to approx. 3 feet.
 - Delete rows from 3.0+ ft.
-- Copy and paste modified table to the other two structures.
+
+.. image:: ../img/shg/8/shg_hydaulic012.png
+
+- Copy and paste modified table to the other two structures (``129B``, ``129C``).
+
+.. image:: ../img/shg/8/shg_hydaulic013.png
 
 .. note::
    Use ``Ctrl+C`` and ``Ctrl+V`` or **Copy/Paste** buttons.
 
-Next Step
----------
-
-The next step is to **Save, Export, and Run** the model. This is covered in the following video.
-
+   If need be, use "Auto Range" button to get a better plot.
 
 .. _correct_elevation:
 
 Correct Elevation
----------------------------------
+------------------
 
 .. raw:: html
 
@@ -187,55 +233,88 @@ Correct Elevation
 This lesson covers how to make elevation corrections for hydraulic structures, set up minimum elevations, apply levees, and prepare the model for export and run.
 
 Step 1: Copy Elevation Values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Identify Features** tool to get the elevation at the required location.
 - Right-click the value in the Identify panel and choose **Copy Attribute Value**.
 
+.. image:: ../img/shg/8/shg_hydaulic014.png
+
 Step 2: Create Elevation Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Elevation Polygons** layer.
 - Start editing and click **Add Polygon**.
 - Draw a polygon around the **centroid** of the grid element you want to modify.
 - Set the elevation using the previously copied value.
-- Set the correction method to ``grid`` and give the polygon a name like ``head wall``.
+- Set the correction method to ``grid`` and give the polygon a name like ``headwall``.
+
+.. image:: ../img/shg/8/shg_hydaulic015.png
 
 Step 3: Setup Minimum Elevation Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For complex corrections, select multiple grid cells and draw a polygon.
 - Set the name to ``min from elev raster`` or similar.
 - Set method to ``grid``; leave other values ``null``.
 
-Step 4: Apply a Levy
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. image:: ../img/shg/8/shg_hydaulic016a.png
+
+.. image:: ../img/shg/8/shg_hydaulic016b.png
+
+Step 4: Apply a Levee
+~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Levy Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
-- Reprocess the levies using:
-  ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levy Lines`` checked only.
+
+.. image:: ../img/shg/8/shg_hydaulic017.png
+
+.. image:: ../img/shg/8/shg_hydaulic018.png
+
+- Reprocess the levees using:
+  ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levee Lines`` checked only.
+
+.. image:: ../img/shg/8/shg_hydaulic019.png
 
 Step 5: Adjust Hydraulic Structure Endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
+
+.. image:: ../img/shg/8/shg_hydaulic020a.png
+
+.. image:: ../img/shg/8/shg_hydaulic020b.png
+
 - After adjustment, save and **Schematize** the structure lines to update the schema.
 
+.. image:: ../img/shg/8/shg_hydaulic021.png
+
 Step 6: Apply Grid Element Corrections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For polygons with assigned elevation values:
-  - Use **Grid Element Correction Tool**
-  - Select: ``Elevation polygon attributes``
-  - Check: ``Only selected polygons``
+
+    - Use **Grid Element Correction Tool**
+    - Select: ``Elevation polygon attributes``
+    - Check: ``Only selected polygons``
+
+    .. image:: ../img/shg/8/shg_hydaulic022.png
 
 - For polygons pulling from raster values:
-  - Use **External Layer Mode**
-  - Set layer: ``Elevation Polygons``
-  - Check: ``Centroids within polygons``
-  - Select: ``Statistics from raster``
-  - Choose ``Minimum elevation``
-  - Check: ``Statistics per grid element`` and ``Only selected features``
+
+    - Use **External Layer Mode**
+    - Set layer: ``Elevation Polygons``
+    - Check: ``Centroids within polygons``
+    - Select: ``Statistics from raster``
+    - Choose ``Minimum elevation``
+    - Check: ``Statistics per grid element`` and ``Only selected features``
+
+    .. image:: ../img/shg/8/shg_hydaulic023.png
 
 Step 7: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Export DAT files with a name like: ``post_elevation_change_and_correction.dat``
+- Export DAT files to a folder with a name like: ``post elev change and correction``
+
+.. image:: ../img/shg/8/shg_hydaulic024.png
+
 - Run the model.
+
+.. image:: ../img/shg/8/shg_hydaulic025.png
 
 .. note::
    These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.
@@ -258,7 +337,9 @@ This short lesson walks through saving hydraulic structures, exporting the data,
 
 Step 1: Save the Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+
+.. image:: ../img/shg/8/shg_hydaulic026.png
 
 .. note::
    You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.
@@ -267,15 +348,11 @@ Step 2: Export Data Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Import/Export** button.
 - Select **Option 3** to export data files.
-- Create a new folder inside your ``lesson6`` directory called:
-
-  ::
-
-    pre-elevation-change
+- Create a new folder inside your ``lesson6`` directory called: ``pre elevation change``
 
   This helps distinguish the export prior to making elevation corrections.
 
-- First, the D-series data files are exported.
+- First, the DAT-series data files are exported.
 - Then, the Storm Drain files are exported.
 - You should now see a complete set of exported files inside the folder.
 
