@@ -245,7 +245,7 @@ Step 2: Create Elevation Polygons
 - Start editing and click **Add Polygon**.
 - Draw a polygon around the **centroid** of the grid element you want to modify.
 - Set the elevation using the previously copied value.
-- Set the correction method to ``grid`` and give the polygon a name like ``head wall``.
+- Set the correction method to ``grid`` and give the polygon a name like ``headwall``.
 
 .. image:: ../img/shg/8/shg_hydaulic015.png
 
@@ -286,19 +286,25 @@ Step 5: Adjust Hydraulic Structure Endpoints
 .. image:: ../img/shg/8/shg_hydaulic021.png
 
 Step 6: Apply Grid Element Corrections
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For polygons with assigned elevation values:
-  - Use **Grid Element Correction Tool**
-  - Select: ``Elevation polygon attributes``
-  - Check: ``Only selected polygons``
+
+    - Use **Grid Element Correction Tool**
+    - Select: ``Elevation polygon attributes``
+    - Check: ``Only selected polygons``
+
+    .. image:: ../img/shg/8/shg_hydaulic022.png
 
 - For polygons pulling from raster values:
-  - Use **External Layer Mode**
-  - Set layer: ``Elevation Polygons``
-  - Check: ``Centroids within polygons``
-  - Select: ``Statistics from raster``
-  - Choose ``Minimum elevation``
-  - Check: ``Statistics per grid element`` and ``Only selected features``
+
+    - Use **External Layer Mode**
+    - Set layer: ``Elevation Polygons``
+    - Check: ``Centroids within polygons``
+    - Select: ``Statistics from raster``
+    - Choose ``Minimum elevation``
+    - Check: ``Statistics per grid element`` and ``Only selected features``
+
+    .. image:: ../img/shg/8/shg_hydaulic023.png
 
 Step 7: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
