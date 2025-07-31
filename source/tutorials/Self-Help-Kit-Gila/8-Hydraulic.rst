@@ -173,16 +173,14 @@ Step 5(ii): Review the Generalized Culvert Equations
 
 .. note:: Culvert or conduit length can be measure directly in QGIS using the **Measure Line** tool.
 
-Schematic Correction and Recheck*******************************************************
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-    .. image:: ../img/shg/8/shg_hydaulic010a.png
+Schematic Correction and Recheck
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - After assigning types:
 
     - Save and click **Schematize** to update geometry.
 
-    .. image:: ../img/shg/8/shg_hydaulic010.png
+    .. image:: ../img/shg/8/shg_hydaulic014.png
 
     - Check and re-validate structure assignments one more time.
     - Use the Center button to cycle through and verify again.
@@ -191,6 +189,8 @@ Schematic Correction and Recheck************************************************
 
 Correct Elevation
 ------------------
+
+    .. image:: ../img/shg/8/shg_hydaulic014a.png
 
 .. raw:: html
 
