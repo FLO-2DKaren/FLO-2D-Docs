@@ -97,7 +97,7 @@ Step 3: Name and Review Each Structure
 
 Step 4: Assign Structure Type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Identify structure types:
+- Identify structure types as either one of the following:
 
     - **Floodplain to Floodplain**
     - **Floodplain to Channel** (must be on a **Left Bank node**)
