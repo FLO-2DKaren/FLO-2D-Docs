@@ -182,6 +182,9 @@ Schematic Correction and Recheck
 
 - Check and re-validate structure assignments one more time.
 - Use the Center button to cycle through and verify again.
+- Ignore the below error:
+
+    .. image:: ../img/shg/8/shg_hydaulic015.png
 
 .. _correct_elevation:
 
@@ -189,6 +192,8 @@ Correct Elevation
 ------------------
 
     .. image:: ../img/shg/8/shg_hydaulic014a.png
+
+    .. image:: ../img/shg/8/shg_hydaulic015a.png
 
 .. raw:: html
 
