@@ -155,10 +155,23 @@ Manually Modify a Rating Table
 
    If need be, use "Auto Range" button to get a better plot.
 
-Step 5(ii): Culvert Equations
-+++++++++++++++++++++++++++++++++
+Step 5(ii): Review the Generalized Culvert Equations
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+- For structures CULV_009 and CULV_122, use FLO-2D Data Input Manual and Hydraulic Design of Highway
+  Culverts manual to fill the following properties:
 
-.. _correct_elevation:
+    - TYPEC
+    - TYPEEN
+    - CULVERTIN
+    - KE
+    - CUBASE
+    - MULTBARRELS
+
+.. image:: ../img/shg/8/shg_hydaulic013a.png
+
+.. image:: ../img/shg/8/shg_hydaulic013b.png
+
+.. note:: Culvert or conduit length can be measure directly in QGIS using the **Measure Line** tool.
 
 Schematic Correction and Recheck*******************************************************
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -173,6 +186,8 @@ Schematic Correction and Recheck************************************************
 
     - Check and re-validate structure assignments one more time.
     - Use the Center button to cycle through and verify again.
+
+.. _correct_elevation:
 
 Correct Elevation
 ------------------
