@@ -127,8 +127,43 @@ Step 4: Assign Structure Type
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
 
-Step 5: Schematic Correction and Recheck
+Step 5: Rating Tables and Culvert Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Step 5(i): Import Rating Tables
++++++++++++++++++++++++++++++++++
+
+- From the ``Culverts Tables`` folder, select all files except CULV_009.txt and CULV_122.txt and import.
+- Only rating tables that match existing structure names will be applied.
+
+.. image:: ../img/shg/8/shg_hydaulic010.png
+
+Manually Modify a Rating Table
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- Example: reduce max headwater for ``129``, ``129B``, ``129C`` to approx. 3 feet.
+- Delete rows from 3.0+ ft.
+
+.. image:: ../img/shg/8/shg_hydaulic011.png
+
+- Copy and paste modified table to the other two structures (``129B``, ``129C``).
+
+.. image:: ../img/shg/8/shg_hydaulic012.png
+
+.. note::
+   Use ``Ctrl + C`` and ``Ctrl + V`` or **Copy/Paste** buttons.
+
+   If need be, use "Auto Range" button to get a better plot.
+
+Step 5(ii): Culvert Equations
++++++++++++++++++++++++++++++++++
+
+.. _correct_elevation:
+
+Schematic Correction and Recheck*******************************************************
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    .. image:: ../img/shg/8/shg_hydaulic010a.png
 
 - After assigning types:
 
@@ -138,33 +173,6 @@ Step 5: Schematic Correction and Recheck
 
     - Check and re-validate structure assignments one more time.
     - Use the Center button to cycle through and verify again.
-
-Step 6: Import Rating Tables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- From the ``Culverts Tables`` folder, select all files and import.
-- Only rating tables that match existing structure names will be applied.
-
-.. image:: ../img/shg/8/shg_hydaulic011.png
-
-Step 7: Manually Modify a Rating Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- Example: reduce max headwater for ``129``, ``129B``, ``129C`` to approx. 3 feet.
-- Delete rows from 3.0+ ft.
-
-.. image:: ../img/shg/8/shg_hydaulic012.png
-
-- Copy and paste modified table to the other two structures (``129B``, ``129C``).
-
-.. image:: ../img/shg/8/shg_hydaulic013.png
-
-.. note::
-   Use ``Ctrl + C`` and ``Ctrl + V`` or **Copy/Paste** buttons.
-
-   If need be, use "Auto Range" button to get a better plot.
-
-.. _correct_elevation:
 
 Correct Elevation
 ------------------
