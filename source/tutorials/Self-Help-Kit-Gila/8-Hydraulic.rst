@@ -133,7 +133,7 @@ Step 5: Rating Tables and Culvert Equations
 Step 5(i): Import Rating Tables
 +++++++++++++++++++++++++++++++++
 
-- From the ``Culverts Tables`` folder, select all files except CULV_009.txt and CULV_122.txt and import.
+- From the ``Culverts Tables`` folder, select all files  and import except CULV_009.txt and CULV_122.txt.
 - Only rating tables that match existing structure names will be applied.
 
 .. image:: ../img/shg/8/shg_hydaulic010.png
