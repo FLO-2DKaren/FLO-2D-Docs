@@ -100,23 +100,32 @@ Step 4: Assign Structure Type
 - Identify structure types:
 
     - **Floodplain to Floodplain**
+    - **Floodplain to Channel** (must be on a **Left Bank node**)
+    - **Channel to Channel** (usually already handled in the channel lesson)
 
     .. image:: ../img/shg/8/shg_hydaulic009a.png
 
-    - **Floodplain to Channel** (must be on a **Left Bank node**)
+    .. image:: ../img/shg/8/shg_hydaulic009b.png
 
     .. image:: ../img/shg/8/shg_hydaulic009c.png
 
-    - **Channel to Channel** (usually already handled in the channel lesson)
-
     .. image:: ../img/shg/8/shg_hydaulic009d.png
 
-- Set the type to **Rating Table** using the drop-down menu.
+    .. image:: ../img/shg/8/shg_hydaulic009e.png
+
+    .. image:: ../img/shg/8/shg_hydaulic009f.png
+
+    .. image:: ../img/shg/8/shg_hydaulic009g.png
+
+    .. image:: ../img/shg/8/shg_hydaulic009h.png
+
+    .. image:: ../img/shg/8/shg_hydaulic009i.png
+
+    .. image:: ../img/shg/8/shg_hydaulic009j.png
+
 
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
-
-.. image:: ../img/shg/8/shg_hydaulic009b.png
 
 Step 5: Schematic Correction and Recheck
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
