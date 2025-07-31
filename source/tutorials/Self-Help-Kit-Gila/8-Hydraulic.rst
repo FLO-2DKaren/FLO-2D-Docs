@@ -39,8 +39,8 @@ This part of the lesson shows how to import and configure hydraulic structures i
 .. note::
    Covert (culvert) data rarely comes as pre-formatted GIS line features. Most often, site surveys or as-built drawings are needed.
 
-Step 1: Import the Hydraulic Structure Templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1: Import the Hydraulic Structure Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Open **QGIS Lesson 6** project.
 - Drag and drop the ``hydraulic_structures.shp`` file from the lesson data folder onto the map.
@@ -57,7 +57,7 @@ Step 1: Import the Hydraulic Structure Templates
 .. tip::
    The arrowhead marks the **Outlet**, and the first vertex is the **Inlet**.
 
-- Labeling Hydraulic Structures:
+- Label hydraulic structures:
 
     - Open layer properties and go to Labels.
     - Choose the field structname to display.
@@ -70,15 +70,15 @@ Step 2: Copy from Template Layer
 
 - Select features from the template layer:
 
-  - Use **Select All Features** tool or ``Ctrl+A``.
-  - Copy with ``Ctrl+C``.
+  - Use **Select All Features** tool or ``Ctrl + A``.
+  - Copy with ``Ctrl + C``.
 
 .. image:: ../img/shg/8/shg_hydaulic006.png
 
 - Activate the **Structure** layer from the **FLO-2D widget** editor:
 
   - Ensure editing mode is on.
-  - Paste with ``Ctrl+V``.
+  - Paste with ``Ctrl + V``.
 
 - Save the edits.
 
@@ -151,7 +151,7 @@ Step 7: Manually Modify a Rating Table
 .. image:: ../img/shg/8/shg_hydaulic013.png
 
 .. note::
-   Use ``Ctrl+C`` and ``Ctrl+V`` or **Copy/Paste** buttons.
+   Use ``Ctrl + C`` and ``Ctrl + V`` or **Copy/Paste** buttons.
 
    If need be, use "Auto Range" button to get a better plot.
 
