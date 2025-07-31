@@ -22,7 +22,7 @@ Import and Review Culvert Data
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-In this lesson, we begin setting up hydraulic structures (culverts, weirs) in the FLO-2D project using QGIS. The workflow involves importing a shapefile, adjusting symbology, verifying flow direction, and preparing the geometry and elevation data.
+This video gives a review of the hydraulic structures lesson. Follow the steps below to complete the lesson.
 
 Set-up Culvert Structures
 -------------------------------
@@ -239,7 +239,7 @@ Step 6: Apply Grid Element Corrections
     - Check: ``Centroids within polygons``
     - Select: ``Statistics from raster``
     - Choose ``Minimum elevation``
-    - Check: ``Statistics per grid element`` and ``Only selected features``
+    - Check: ``Statistics per grid element``.
 
     .. image:: ../img/shg/8/shg_hydaulic023.png
 
