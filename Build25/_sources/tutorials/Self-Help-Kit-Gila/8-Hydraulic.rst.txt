@@ -22,78 +22,7 @@ Import and Review Culvert Data
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-In this lesson, we begin setting up hydraulic structures (culverts, weirs) in the FLO-2D project using QGIS. The workflow involves importing a shapefile, adjusting symbology, verifying flow direction, and preparing the geometry and elevation data.
-
-Add the Hydraulic Structures Layer
-----------------------------------
-- Drag the ``hydraulic_structures.shp`` into the QGIS map.
-
-.. image:: ../img/shg/8/shg_hydaulic001.png
-
-- Change the symbology to **arrow** style to visualize the flow direction.
-
-.. image:: ../img/shg/8/shg_hydaulic002.png
-
-- Optionally, change the fill color for visibility.
-
-.. tip::
-   The arrow is drawn from the first to last vertex of each polyline—first is **inlet**, last is **outlet**.
-
-Flow Direction and Invert Elevation
------------------------------------
-- Each hydraulic structure moves flow from inlet to outlet.
-- Verify and correct elevation to reflect true invert elevation of the structure.
-- Use **ID tool** to check elevation of individual grid cells and surrounding terrain.
-
-.. image:: ../img/shg/8/shg_hydaulic003.png
-
-.. note::
-   The grid cell elevation is an average, but for culverts we need the **lowest** point (invert) for both inlet and outlet.
-
-Elevation Correction Examples
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Example 1:
-  - Upstream: 1409 → Invert needed: 1405
-  - Use elevation correction tools to align DEM with true invert.
-- Example 2:
-  - A weir is used to filter sediment before reaching a stilling basin.
-  - Identify inlet (1390) and downstream invert (1385) and correct grid elevation accordingly.
-
-Scuppers and Elevation Transitions
-----------------------------------
-- Some inlets capture runoff from streets via scuppers.
-- Adjust elevation across roadways and localized channel segments so water reaches inlets correctly.
-
-Shared Culverts Between Floodplain and Channels
------------------------------------------------
-- When flow is routed to a **channel**, always assign the **left bank**.
-- This ensures proper mapping to the **cross-section**, not just the bank cell.
-- Right banks can contain multiple grid cells, which may lead to ambiguity.
-
-Labeling Hydraulic Structures
------------------------------
-- Open layer properties and go to **Labels**.
-- Choose the field ``structname`` to display.
-- Adjust font size and color for better visibility.
-
-.. image:: ../img/shg/8/shg_hydaulic004.png
-
-Understanding Structure Types
------------------------------
-Each structure is categorized by flow type:
-
-    - **Floodplain to Floodplain**
-    - **Floodplain to Channel** (requires assignment to left bank)
-    - **Channel to Channel** (handled earlier in the channel lesson)
-
-Switches and Advanced Setup
----------------------------
-- Set all structures initially to use a **rating table**.
-- Tailwater switch: set to ``0`` by default, unless needed otherwise.
-- Head reference elevation and geometry parameters will be handled in the advanced culvert setup.
-
-.. image:: ../img/shg/8/shg_hydaulic005.png
-
+This video gives a review of the hydraulic structures lesson. Follow the steps below to complete the lesson.
 
 Set-up Culvert Structures
 -------------------------------
@@ -110,8 +39,8 @@ This part of the lesson shows how to import and configure hydraulic structures i
 .. note::
    Covert (culvert) data rarely comes as pre-formatted GIS line features. Most often, site surveys or as-built drawings are needed.
 
-Step 1: Import the Hydraulic Structure Templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 1: Import the Hydraulic Structure Template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Open **QGIS Lesson 6** project.
 - Drag and drop the ``hydraulic_structures.shp`` file from the lesson data folder onto the map.
@@ -128,20 +57,28 @@ Step 1: Import the Hydraulic Structure Templates
 .. tip::
    The arrowhead marks the **Outlet**, and the first vertex is the **Inlet**.
 
+- Label hydraulic structures:
+
+    - Open layer properties and go to Labels.
+    - Choose the field structname to display.
+    - Adjust font size and color for better visibility.
+
+.. image:: ../img/shg/8/shg_hydaulic004.png
+
 Step 2: Copy from Template Layer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Select features from the template layer:
 
-  - Use **Select All Features** tool or ``Ctrl+A``.
-  - Copy with ``Ctrl+C``.
+  - Use **Select All Features** tool or ``Ctrl + A``.
+  - Copy with ``Ctrl + C``.
 
 .. image:: ../img/shg/8/shg_hydaulic006.png
 
 - Activate the **Structure** layer from the **FLO-2D widget** editor:
 
   - Ensure editing mode is on.
-  - Paste with ``Ctrl+V``.
+  - Paste with ``Ctrl + V``.
 
 - Save the edits.
 
@@ -158,65 +95,133 @@ Step 3: Name and Review Each Structure
 
 .. image:: ../img/shg/8/shg_hydaulic008b.png
 
-Step 4: Assign Structure Type
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Identify structure types:
+Step 4: Assign Structure Type and Review Structures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Identify structure types as either one of the following:
 
     - **Floodplain to Floodplain**
-
-    .. image:: ../img/shg/8/shg_hydaulic009a.png
-
     - **Floodplain to Channel** (must be on a **Left Bank node**)
-
-    .. image:: ../img/shg/8/shg_hydaulic009c.png
-
     - **Channel to Channel** (usually already handled in the channel lesson)
 
-    .. image:: ../img/shg/8/shg_hydaulic009d.png
+- Where necessary, adjust hydraulic structure endpoints:
 
-- Set the type to **Rating Table** using the drop-down menu.
+    - Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
+
+.. image:: ../img/shg/8/shg_hydaulic009a.png
+
+.. image:: ../img/shg/8/shg_hydaulic009b.png
+
+.. image:: ../img/shg/8/shg_hydaulic009c.png
+
+.. image:: ../img/shg/8/shg_hydaulic009d.png
+
+.. image:: ../img/shg/8/shg_hydaulic009e.png
+
+.. image:: ../img/shg/8/shg_hydaulic009f.png
+
+.. image:: ../img/shg/8/shg_hydaulic009g.png
+
+.. image:: ../img/shg/8/shg_hydaulic009h.png
+
+.. image:: ../img/shg/8/shg_hydaulic009i.png
+
+.. image:: ../img/shg/8/shg_hydaulic009j.png
 
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
 
-.. image:: ../img/shg/8/shg_hydaulic009b.png
+   For **Floodplain to Channel** hydraulic structures, assign the structures to the left bank because the
+   left bank is the reference to the cross-section.
 
-Step 5: Schematic Correction and Recheck
+Step 5: Rating Tables and Culvert Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- After assigning types:
+Step 5(i): Import Rating Tables
++++++++++++++++++++++++++++++++++
 
-    - Save and click **Schematize** to update geometry.
-
-    .. image:: ../img/shg/8/shg_hydaulic010.png
-
-    - Check and re-validate structure assignments one more time.
-    - Use the Center button to cycle through and verify again.
-
-Step 6: Import Rating Tables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- From the ``Culverts Tables`` folder, select all files and import.
+- From the ``Culverts Tables`` folder, select all files  and import except CULV_009.txt and CULV_122.txt.
 - Only rating tables that match existing structure names will be applied.
 
-.. image:: ../img/shg/8/shg_hydaulic011.png
+.. image:: ../img/shg/8/shg_hydaulic010.png
 
-Step 7: Manually Modify a Rating Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manually Modify a Rating Table
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - Example: reduce max headwater for ``129``, ``129B``, ``129C`` to approx. 3 feet.
 - Delete rows from 3.0+ ft.
 
-.. image:: ../img/shg/8/shg_hydaulic012.png
+.. image:: ../img/shg/8/shg_hydaulic011.png
 
 - Copy and paste modified table to the other two structures (``129B``, ``129C``).
 
-.. image:: ../img/shg/8/shg_hydaulic013.png
+.. image:: ../img/shg/8/shg_hydaulic012.png
 
 .. note::
-   Use ``Ctrl+C`` and ``Ctrl+V`` or **Copy/Paste** buttons.
+   Use ``Ctrl + C`` and ``Ctrl + V`` or **Copy/Paste** buttons.
 
    If need be, use "Auto Range" button to get a better plot.
+
+Step 5(ii): Review the Generalized Culvert Equations (GCE)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+- Fill the following properties for structures **CULV_009** and **CULV_122**:
+
+    - Conduit Length.
+    - Diameter/Height.
+    - Culvert Type (``TYPEC``).
+    - Entrance Type (``TYPEEN``).
+    - Culvert Manning's n (``CULVERTIN``).
+    - Entrance Loss Coefficient (``KE``).
+    - Base (``CUBASE``).
+    - Barels (``MULTBARRELS``).
+
+- For culvert **CULV_009** set the GCE parameters as follows:
+
+   - Conduit Length: Measured to be 252 ft (headwall to headwall).
+   - Diameter: 4 ft
+   - ``TYPEC``: 2 (circular)
+   - ``TYPEEN``: 1 (square edge with headwall)
+   - ``CULVERTIN``: 0.018
+   - ``KE``: 0.5
+   - ``CUBASE``: 0
+   - ``MULTBARRELS``: 3
+
+.. image:: ../img/shg/8/shg_hydaulic013a.png
+
+.. note::
+   These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.
+
+- For culvert **CULV_122** set the GCE parameters as follows:
+
+   - Conduit Length: 105 ft
+   - Height: 5 ft (Box Culvert)
+   - ``TYPEC``: 1 (wing wall 30°–75°)
+   - ``TYPEEN``: 1 (box)
+   - ``CULVERTIN``: 0.018
+   - ``KE``: 0.4
+   - ``CUBASE``: 8
+   - ``MULTBARRELS``: 1
+
+.. image:: ../img/shg/8/shg_hydaulic013b.png
+
+.. note::
+   - From highway design manuals and HY-8 documentation
+   - Image review confirms structure shape and inlet type
+
+.. tip:: Culvert or conduit length can be measure directly in QGIS using the **Measure Line** tool.
+
+Schematic Correction and Recheck
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Save and click **Schematize** to update geometry.
+
+.. image:: ../img/shg/8/shg_hydaulic014.png
+
+- Check and re-validate structure assignments one more time.
+- Use the Center button to cycle through and verify again.
+- Ignore the below error:
+
+    .. image:: ../img/shg/8/shg_hydaulic015.png
 
 .. _correct_elevation:
 
@@ -232,82 +237,85 @@ Correct Elevation
 
 This lesson covers how to make elevation corrections for hydraulic structures, set up minimum elevations, apply levees, and prepare the model for export and run.
 
-Step 1: Copy Elevation Values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Identify Features** tool to get the elevation at the required location.
-- Right-click the value in the Identify panel and choose **Copy Attribute Value**.
-
-.. image:: ../img/shg/8/shg_hydaulic014.png
-
-Step 2: Create Elevation Polygons
+Step 1: Create Elevation Polygons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Elevation Polygons** layer.
 - Start editing and click **Add Polygon**.
-- Draw a polygon around the **centroid** of the grid element you want to modify.
-- Set the elevation using the previously copied value.
-- Set the correction method to ``grid`` and give the polygon a name like ``headwall``.
-
-.. image:: ../img/shg/8/shg_hydaulic015.png
-
-Step 3: Setup Minimum Elevation Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- For complex corrections, select multiple grid cells and draw a polygon.
 - Set the name to ``min from elev raster`` or similar.
 - Set method to ``grid``; leave other values ``null``.
 
-.. image:: ../img/shg/8/shg_hydaulic016a.png
+    - For simple corrections, draw a polygon around the **centroid** of the grid element you want to modify.
 
-.. image:: ../img/shg/8/shg_hydaulic016b.png
+    .. image:: ../img/shg/8/shg_hydaulic016a.png
 
-Step 4: Apply a Levee
+    .. image:: ../img/shg/8/shg_hydaulic016b.png
+
+    - For complex corrections, select multiple grid cells and draw a polygon.
+
+    .. image:: ../img/shg/8/shg_hydaulic017a.png
+
+    .. image:: ../img/shg/8/shg_hydaulic017b.png
+
+    .. image:: ../img/shg/8/shg_hydaulic017c.png
+
+- The attributes table of ```Elevation Polygons``` should now be looking as the one shown below:
+
+    .. image:: ../img/shg/8/shg_hydaulic018.png
+
+Step 2: Apply a Levee
 ~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Levy Line** tool to draw a line where flow should be restricted.
+- Use the **Levee Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
 
-.. image:: ../img/shg/8/shg_hydaulic017.png
+.. image:: ../img/shg/8/shg_hydaulic019a.png
 
-.. image:: ../img/shg/8/shg_hydaulic018.png
+.. image:: ../img/shg/8/shg_hydaulic019b.png
 
 - Reprocess the levees using:
   ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levee Lines`` checked only.
 
-.. image:: ../img/shg/8/shg_hydaulic019.png
-
-Step 5: Adjust Hydraulic Structure Endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
-
-.. image:: ../img/shg/8/shg_hydaulic020a.png
-
-.. image:: ../img/shg/8/shg_hydaulic020b.png
-
-- After adjustment, save and **Schematize** the structure lines to update the schema.
+.. image:: ../img/shg/8/shg_hydaulic020.png
 
 .. image:: ../img/shg/8/shg_hydaulic021.png
 
-Step 6: Apply Grid Element Corrections
+Step 3: Apply Grid Element Corrections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- For polygons with assigned elevation values:
+- Use **External Layer Mode**
+- Set layer: ``Elevation Polygons``
+- Check: ``Centroids within polygons``
+- Select: ``Statistics from raster``
+- Choose ``Minimum elevation``
+- Check: ``Statistics per grid element``.
 
-    - Use **Grid Element Correction Tool**
-    - Select: ``Elevation polygon attributes``
-    - Check: ``Only selected polygons``
+.. image:: ../img/shg/8/shg_hydaulic022.png
 
-    .. image:: ../img/shg/8/shg_hydaulic022.png
+.. note::
+   These steps ensure correct invert elevations, allow headwalls to collect water properly,
+   and ensure flow can pass over levees or into hydraulic structures.
 
-- For polygons pulling from raster values:
+.. tip::
+   After corrections, verify grid elevations with the Identify tool to confirm changes.
 
-    - Use **External Layer Mode**
-    - Set layer: ``Elevation Polygons``
-    - Check: ``Centroids within polygons``
-    - Select: ``Statistics from raster``
-    - Choose ``Minimum elevation``
-    - Check: ``Statistics per grid element`` and ``Only selected features``
-
-    .. image:: ../img/shg/8/shg_hydaulic023.png
-
-Step 7: Export and Run
+Step 4: Save, Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/oPha4GTRnQ0?si=e3hM3dhDYahu69bN"
+   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+This short lesson walks through saving hydraulic structures, exporting the data, and running the model.
+It is part of the final steps for preparing your model.
+
+- Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+
+.. image:: ../img/shg/8/shg_hydaulic023.png
+
+.. note::
+   You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.
+
 - Export DAT files to a folder with a name like: ``post elev change and correction``
 
 .. image:: ../img/shg/8/shg_hydaulic024.png
@@ -317,224 +325,12 @@ Step 7: Export and Run
 .. image:: ../img/shg/8/shg_hydaulic025.png
 
 .. note::
-   These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.
-
-.. tip::
-   After corrections, verify grid elevations with the Identify tool to confirm changes.
-
-
-Save Export and Run Pre Elevation Change
------------------------------------------
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/oPha4GTRnQ0?si=e3hM3dhDYahu69bN"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This short lesson walks through saving hydraulic structures, exporting the data, and running the model. It is part of the final steps for preparing your model.
-
-Step 1: Save the Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
-
-.. image:: ../img/shg/8/shg_hydaulic026.png
-
-.. note::
-   You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.
-
-Step 2: Export Data Files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Go to the **Import/Export** button.
-- Select **Option 3** to export data files.
-- Create a new folder inside your ``lesson6`` directory called: ``pre elevation change``
-
-  This helps distinguish the export prior to making elevation corrections.
-
-- First, the DAT-series data files are exported.
-- Then, the Storm Drain files are exported.
-- You should now see a complete set of exported files inside the folder.
-
-Step 3: Run the Model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Run FLO-2D** to initiate the simulation.
-
-.. note::
    If there is **no error.check** file generated, it means your data was set up correctly.
 
 .. warning::
-   Although the model runs, the results may still be inaccurate due to elevation issues. These will be addressed in the next lesson.
-
-What's Next?
-----------------------------
-Now that we have run the model using the current elevations, we will compare it to a corrected version. Proceed to the next video to apply **elevation corrections** and re-run the model.
-
-
-Create Culverts with Culvert Equations
-----------------------------------------
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/rACaKUlcFKU?si=yJCouGxFaV-GE5CI"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson walks through how to convert culverts from rating tables to generalized culvert equations (GCE) in FLO-2D, and then run the model to compare the results.
-
-Convert a Culvert to GCE
-------------------------
-
-We are updating culvert **CL-009** from a rating table to a generalized culvert equation.
-
-1. **Change the Structure Type**:
-   - Open the structure editor.
-   - Set type to `Culvert Equation`.
-
-2. **Set GCE Parameters**:
-   - Diameter: 48 in (convert to 4 ft).
-   - Barrels: 3
-   - Conduit Length: Measured to be 250 ft (headwall to headwall).
-   - Entrance Type: 1 (square edge with headwall)
-   - Culvert Type (CType): 2 (circular)
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.5
-   - Base: 0
-
-.. note::
-   These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.
-
-Convert Another Culvert to GCE
-------------------------------
-
-Now convert **CL-122**:
-
-1. **Update Parameters**:
-   - Set to `Culvert Equation`
-   - Height: 5 ft (Box Culvert)
-   - Length: 100–110 ft
-   - Entrance Type: 1 (wing wall 30°–75°)
-   - Culvert Type: 1 (box)
-   - Barrels: 1
-   - Base: 8 ft
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.4
-
-2. **Justification**:
-   - From highway design manuals and HY-8 documentation
-   - Image review confirms structure shape and inlet type
-
-Apply and Export
-----------------
-
-- Click **Schematize** to update the structure layer.
-- Verify values are correctly saved.
-- Save and close prior runs if necessary.
-
-3. **Export Files**:
-   - Go to **Import/Export > Export .DAT files**
-   - Create new folder
-   - Create new folder named ``Generalized CT with Elevation Correction``
-
-
-Run the Model
--------------
-
-- Click **Run FLO-2D**
-- Ensure no errors are reported.
-- Compare results with earlier model using rating tables.
-
-.. tip::
-   Always back up your project after making changes.
-
-Next Steps
-----------
-
-Proceed to the **Summary** lesson, where the differences between rating tables and generalized culvert equation results will be reviewed.
+   Although the model runs, the results may still be inaccurate due to elevation issues.
+   These will be addressed in the next lesson.
 
 Summary and Review Project
 -------------------------------
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/Guo0N85qZlk?si=oQcqSHB5RVxrgQm5"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson walks through how to convert culverts from rating tables to generalized culvert equations (GCE) in FLO-2D, and then run the model to compare the results.
-
-Convert a Culvert to GCE
-------------------------
-
-We are updating culvert **CL-009** from a rating table to a generalized culvert equation.
-
-1. **Change the Structure Type**:
-   - Open the structure editor.
-   - Set type to `Culvert Equation`.
-
-2. **Set GCE Parameters**:
-   - Diameter: 48 in (convert to 4 ft).
-   - Barrels: 3
-   - Conduit Length: Measured to be 250 ft (headwall to headwall).
-   - Entrance Type: 1 (square edge with headwall)
-   - Culvert Type (CType): 2 (circular)
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.5
-   - Base: 0
-
-.. note::
-   These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.
-
-Convert Another Culvert to GCE
-------------------------------
-
-Now convert **CL-122**:
-
-1. **Update Parameters**:
-   - Set to `Culvert Equation`
-   - Height: 5 ft (Box Culvert)
-   - Length: 100–110 ft
-   - Entrance Type: 1 (wing wall 30°–75°)
-   - Culvert Type: 1 (box)
-   - Barrels: 1
-   - Base: 8 ft
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.4
-
-2. **Justification**:
-   - From highway design manuals and HY-8 documentation
-   - Image review confirms structure shape and inlet type
-
-Apply and Export
-----------------
-
-- Click **Schematize** to update the structure layer.
-- Verify values are correctly saved.
-- Save and close prior runs if necessary.
-
-3. **Export Files**:
-
-   - Go to **Import/Export > Export .DAT files**
-
-   - Create new folder:  
-     ``Generalized CT with Elevation Correction``
-
-   - Export project and storm drain layers
-
-
-Run the Model
--------------
-
-- Click **Run FLO-2D**
-- Ensure no errors are reported.
-- Compare results with earlier model using rating tables.
-
-.. tip::
-   Always back up your project after making changes.
-
-Next Steps
-----------
-
-Proceed to the **Summary** lesson, where the differences between rating tables and generalized culvert equation results will be reviewed.
+Coming soon!
