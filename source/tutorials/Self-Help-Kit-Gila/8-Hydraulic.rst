@@ -241,6 +241,7 @@ Step 2: Apply a Levee
 
 .. image:: ../img/shg/8/shg_hydaulic019.png
 
+.. image:: ../img/shg/8/shg_hydaulic020.png
 
 Step 3: Apply Grid Element Corrections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
