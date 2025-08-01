@@ -217,6 +217,8 @@ Step 1: Create Elevation Polygons
 
     .. image:: ../img/shg/8/shg_hydaulic017b.png
 
+    .. image:: ../img/shg/8/shg_hydaulic017c.png
+
 - Set the name to ``min from elev raster`` or similar.
 - Set method to ``grid``; leave other values ``null``.
 
