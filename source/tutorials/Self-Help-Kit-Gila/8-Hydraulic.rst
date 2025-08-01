@@ -259,26 +259,8 @@ Step 3: Apply Grid Element Corrections
 
 .. image:: ../img/shg/8/shg_hydaulic022.png
 
-Step 4: Export and Run
+Step 4: Save, Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Export DAT files to a folder with a name like: ``post elev change and correction``
-
-.. image:: ../img/shg/8/shg_hydaulic023.png
-
-- Run the model.
-
-.. image:: ../img/shg/8/shg_hydaulic024.png
-
-.. note::
-   These steps ensure correct invert elevations, allow headwalls to collect water properly,
-   and ensure flow can pass over levees or into hydraulic structures.
-
-.. tip::
-   After corrections, verify grid elevations with the Identify tool to confirm changes.
-
-
-Save Export and Run Pre Elevation Change
------------------------------------------
 
 .. raw:: html
 
@@ -293,36 +275,31 @@ Step 1: Save the Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
 
-.. image:: ../img/shg/8/shg_hydaulic026.png
+.. image:: ../img/shg/8/shg_hydaulic023.png
 
 .. note::
    You do not need to turn on the export switch again if it was already activated when setting up channel hydraulic structures.
 
-Step 2: Export Data Files
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Go to the **Import/Export** button.
-- Select **Option 3** to export data files.
-- Create a new folder inside your ``lesson6`` directory called: ``pre elevation change``
+- Export DAT files to a folder with a name like: ``post elev change and correction``
 
-  This helps distinguish the export prior to making elevation corrections.
+.. image:: ../img/shg/8/shg_hydaulic024.png
 
-- First, the DAT-series data files are exported.
-- Then, the Storm Drain files are exported.
-- You should now see a complete set of exported files inside the folder.
+- Run the model.
 
-Step 3: Run the Model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Click **Run FLO-2D** to initiate the simulation.
+.. image:: ../img/shg/8/shg_hydaulic025.png
+
+.. note::
+   These steps ensure correct invert elevations, allow headwalls to collect water properly,
+   and ensure flow can pass over levees or into hydraulic structures.
+
+.. tip::
+   After corrections, verify grid elevations with the Identify tool to confirm changes.
 
 .. note::
    If there is **no error.check** file generated, it means your data was set up correctly.
 
 .. warning::
    Although the model runs, the results may still be inaccurate due to elevation issues. These will be addressed in the next lesson.
-
-What's Next?
-----------------------------
-Now that we have run the model using the current elevations, we will compare it to a corrected version. Proceed to the next video to apply **elevation corrections** and re-run the model.
 
 
 Create Culverts with Culvert Equations
