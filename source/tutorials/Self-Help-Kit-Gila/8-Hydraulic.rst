@@ -228,9 +228,9 @@ Step 2: Apply a Levee
 - Use the **Levee Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
 
-.. image:: ../img/shg/8/shg_hydaulic017.png
+.. image:: ../img/shg/8/shg_hydaulic018a.png
 
-.. image:: ../img/shg/8/shg_hydaulic018.png
+.. image:: ../img/shg/8/shg_hydaulic018b.png
 
 - Reprocess the levees using:
   ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levee Lines`` checked only.
