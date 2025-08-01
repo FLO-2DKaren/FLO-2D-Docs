@@ -260,11 +260,11 @@ Step 4: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Export DAT files to a folder with a name like: ``post elev change and correction``
 
-.. image:: ../img/shg/8/shg_hydaulic024.png
+.. image:: ../img/shg/8/shg_hydaulic023.png
 
 - Run the model.
 
-.. image:: ../img/shg/8/shg_hydaulic025.png
+.. image:: ../img/shg/8/shg_hydaulic024.png
 
 .. note::
    These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.
