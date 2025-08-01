@@ -95,34 +95,38 @@ Step 3: Name and Review Each Structure
 
 .. image:: ../img/shg/8/shg_hydaulic008b.png
 
-Step 4: Assign Structure Type
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Step 4: Assign Structure Type and Review Structures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 - Identify structure types as either one of the following:
 
     - **Floodplain to Floodplain**
     - **Floodplain to Channel** (must be on a **Left Bank node**)
     - **Channel to Channel** (usually already handled in the channel lesson)
 
-    .. image:: ../img/shg/8/shg_hydaulic009a.png
+- Where necessary, adjust hydraulic structure endpoints:
 
-    .. image:: ../img/shg/8/shg_hydaulic009b.png
+    - Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
 
-    .. image:: ../img/shg/8/shg_hydaulic009c.png
+.. image:: ../img/shg/8/shg_hydaulic009a.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009d.png
+.. image:: ../img/shg/8/shg_hydaulic009b.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009e.png
+.. image:: ../img/shg/8/shg_hydaulic009c.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009f.png
+.. image:: ../img/shg/8/shg_hydaulic009d.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009g.png
+.. image:: ../img/shg/8/shg_hydaulic009e.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009h.png
+.. image:: ../img/shg/8/shg_hydaulic009f.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009i.png
+.. image:: ../img/shg/8/shg_hydaulic009g.png
 
-    .. image:: ../img/shg/8/shg_hydaulic009j.png
+.. image:: ../img/shg/8/shg_hydaulic009h.png
 
+.. image:: ../img/shg/8/shg_hydaulic009i.png
+
+.. image:: ../img/shg/8/shg_hydaulic009j.png
 
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
@@ -237,19 +241,8 @@ Step 2: Apply a Levee
 
 .. image:: ../img/shg/8/shg_hydaulic019.png
 
-Step 3: Adjust Hydraulic Structure Endpoints
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
 
-.. image:: ../img/shg/8/shg_hydaulic020a.png
-
-.. image:: ../img/shg/8/shg_hydaulic020b.png
-
-- After adjustment, save and **Schematize** the structure lines to update the schema.
-
-.. image:: ../img/shg/8/shg_hydaulic021.png
-
-Step 4: Apply Grid Element Corrections
+Step 3: Apply Grid Element Corrections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For polygons with assigned elevation values:
 
@@ -270,7 +263,7 @@ Step 4: Apply Grid Element Corrections
 
     .. image:: ../img/shg/8/shg_hydaulic023.png
 
-Step 5: Export and Run
+Step 4: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Export DAT files to a folder with a name like: ``post elev change and correction``
 
