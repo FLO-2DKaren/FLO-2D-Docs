@@ -164,7 +164,7 @@ Manually Modify a Rating Table
 
 Step 5(ii): Review the Generalized Culvert Equations (GCE)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-- Fill the following properties for structures CULV_009 and CULV_122:
+- Fill the following properties for structures **CULV_009** and **CULV_122**:
 
     - Conduit Length.
     - Diameter/Height.
