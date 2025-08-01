@@ -191,10 +191,6 @@ Schematic Correction and Recheck
 Correct Elevation
 ------------------
 
-    .. image:: ../img/shg/8/shg_hydaulic014a.png
-
-    .. image:: ../img/shg/8/shg_hydaulic015a.png
-
 .. raw:: html
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/u41PNLBt8mk?si=0f7P3iE_7gwMFfuu"
@@ -204,36 +200,30 @@ Correct Elevation
 
 This lesson covers how to make elevation corrections for hydraulic structures, set up minimum elevations, apply levees, and prepare the model for export and run.
 
-Step 1: Copy Elevation Values
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Identify Features** tool to get the elevation at the required location.
-- Right-click the value in the Identify panel and choose **Copy Attribute Value**.
-
-.. image:: ../img/shg/8/shg_hydaulic014.png
-
-Step 2: Create Elevation Polygons
+Step 1: Create Elevation Polygons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Elevation Polygons** layer.
 - Start editing and click **Add Polygon**.
-- Draw a polygon around the **centroid** of the grid element you want to modify.
-- Set the elevation using the previously copied value.
-- Set the correction method to ``grid`` and give the polygon a name like ``headwall``.
 
-.. image:: ../img/shg/8/shg_hydaulic015.png
+    - For simple corrections, draw a polygon around the **centroid** of the grid element you want to modify.
 
-Step 3: Setup Minimum Elevation Polygons
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- For complex corrections, select multiple grid cells and draw a polygon.
+    .. image:: ../img/shg/8/shg_hydaulic016a.png
+
+    .. image:: ../img/shg/8/shg_hydaulic016b.png
+
+    - For complex corrections, select multiple grid cells and draw a polygon.
+
+    .. image:: ../img/shg/8/shg_hydaulic017a.png
+
+    .. image:: ../img/shg/8/shg_hydaulic017b.png
+
 - Set the name to ``min from elev raster`` or similar.
 - Set method to ``grid``; leave other values ``null``.
 
-.. image:: ../img/shg/8/shg_hydaulic016a.png
 
-.. image:: ../img/shg/8/shg_hydaulic016b.png
-
-Step 4: Apply a Levee
+Step 2: Apply a Levee
 ~~~~~~~~~~~~~~~~~~~~~~
-- Use the **Levy Line** tool to draw a line where flow should be restricted.
+- Use the **Levee Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
 
 .. image:: ../img/shg/8/shg_hydaulic017.png
@@ -245,7 +235,7 @@ Step 4: Apply a Levee
 
 .. image:: ../img/shg/8/shg_hydaulic019.png
 
-Step 5: Adjust Hydraulic Structure Endpoints
+Step 3: Adjust Hydraulic Structure Endpoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Vertex Tool** to move hydraulic structure endpoints to correct elevations or grid elements.
 
@@ -257,7 +247,7 @@ Step 5: Adjust Hydraulic Structure Endpoints
 
 .. image:: ../img/shg/8/shg_hydaulic021.png
 
-Step 6: Apply Grid Element Corrections
+Step 4: Apply Grid Element Corrections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - For polygons with assigned elevation values:
 
@@ -278,7 +268,7 @@ Step 6: Apply Grid Element Corrections
 
     .. image:: ../img/shg/8/shg_hydaulic023.png
 
-Step 7: Export and Run
+Step 5: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Export DAT files to a folder with a name like: ``post elev change and correction``
 
