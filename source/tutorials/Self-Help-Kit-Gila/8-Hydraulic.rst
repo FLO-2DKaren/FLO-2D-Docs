@@ -289,6 +289,13 @@ Step 3: Apply Grid Element Corrections
 
 .. image:: ../img/shg/8/shg_hydaulic022.png
 
+.. note::
+   These steps ensure correct invert elevations, allow headwalls to collect water properly,
+   and ensure flow can pass over levees or into hydraulic structures.
+
+.. tip::
+   After corrections, verify grid elevations with the Identify tool to confirm changes.
+
 Step 4: Save, Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -299,11 +306,10 @@ Step 4: Save, Export and Run
    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-This short lesson walks through saving hydraulic structures, exporting the data, and running the model. It is part of the final steps for preparing your model.
+This short lesson walks through saving hydraulic structures, exporting the data, and running the model.
+It is part of the final steps for preparing your model.
 
-Step 1: Save the Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
+- Click the QGIS **Save** button to commit your hydraulic structures to the layer in the GeoPackage.
 
 .. image:: ../img/shg/8/shg_hydaulic023.png
 
@@ -319,100 +325,12 @@ Click the QGIS **Save** button to commit your hydraulic structures to the layer 
 .. image:: ../img/shg/8/shg_hydaulic025.png
 
 .. note::
-   These steps ensure correct invert elevations, allow headwalls to collect water properly,
-   and ensure flow can pass over levees or into hydraulic structures.
-
-.. tip::
-   After corrections, verify grid elevations with the Identify tool to confirm changes.
-
-.. note::
    If there is **no error.check** file generated, it means your data was set up correctly.
 
 .. warning::
-   Although the model runs, the results may still be inaccurate due to elevation issues. These will be addressed in the next lesson.
+   Although the model runs, the results may still be inaccurate due to elevation issues.
+   These will be addressed in the next lesson.
 
 Summary and Review Project
 -------------------------------
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/Guo0N85qZlk?si=oQcqSHB5RVxrgQm5"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson walks through how to convert culverts from rating tables to generalized culvert equations (GCE) in FLO-2D, and then run the model to compare the results.
-
-Convert a Culvert to GCE
-------------------------
-
-We are updating culvert **CL-009** from a rating table to a generalized culvert equation.
-
-1. **Change the Structure Type**:
-   - Open the structure editor.
-   - Set type to `Culvert Equation`.
-
-2. **Set GCE Parameters**:
-   - Diameter: 48 in (convert to 4 ft).
-   - Barrels: 3
-   - Conduit Length: Measured to be 250 ft (headwall to headwall).
-   - Entrance Type: 1 (square edge with headwall)
-   - Culvert Type (CType): 2 (circular)
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.5
-   - Base: 0
-
-.. note::
-   These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.
-
-Convert Another Culvert to GCE
-------------------------------
-
-Now convert **CL-122**:
-
-1. **Update Parameters**:
-   - Set to `Culvert Equation`
-   - Height: 5 ft (Box Culvert)
-   - Length: 100–110 ft
-   - Entrance Type: 1 (wing wall 30°–75°)
-   - Culvert Type: 1 (box)
-   - Barrels: 1
-   - Base: 8 ft
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.4
-
-2. **Justification**:
-   - From highway design manuals and HY-8 documentation
-   - Image review confirms structure shape and inlet type
-
-Apply and Export
-----------------
-
-- Click **Schematize** to update the structure layer.
-- Verify values are correctly saved.
-- Save and close prior runs if necessary.
-
-3. **Export Files**:
-
-   - Go to **Import/Export > Export .DAT files**
-
-   - Create new folder:  
-     ``Generalized CT with Elevation Correction``
-
-   - Export project and storm drain layers
-
-
-Run the Model
--------------
-
-- Click **Run FLO-2D**
-- Ensure no errors are reported.
-- Compare results with earlier model using rating tables.
-
-.. tip::
-   Always back up your project after making changes.
-
-Next Steps
-----------
-
-Proceed to the **Summary** lesson, where the differences between rating tables and generalized culvert equation results will be reviewed.
+Coming soon!
