@@ -162,23 +162,53 @@ Manually Modify a Rating Table
 
    If need be, use "Auto Range" button to get a better plot.
 
-Step 5(ii): Review the Generalized Culvert Equations
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
-- For structures CULV_009 and CULV_122, use FLO-2D Data Input Manual and Hydraulic Design of Highway
-  Culverts manual to fill the following properties:
+Step 5(ii): Review the Generalized Culvert Equations (GCE)
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+- Fill the following properties for structures CULV_009 and CULV_122:
 
-    - TYPEC
-    - TYPEEN
-    - CULVERTIN
-    - KE
-    - CUBASE
-    - MULTBARRELS
+    - Conduit Length.
+    - Diameter/Height.
+    - Culvert Type (``TYPEC``).
+    - Entrance Type (``TYPEEN``).
+    - Culvert Manning's n (``CULVERTIN``).
+    - Entrance Loss Coefficient (``KE``).
+    - Base (``CUBASE``).
+    - Barels (``MULTBARRELS``).
+
+- For culvert **CULV_009** set the GCE parameters as follows:
+
+   - Conduit Length: Measured to be 252 ft (headwall to headwall).
+   - Diameter: 4 ft.
+   - ``TYPEC``: 2 (circular)
+   - ``TYPEEN``: 1 (square edge with headwall)
+   - ``CULVERTIN``: 0.018
+   - ``KE``: 0.5
+   - ``CUBASE``: 0
+   - ``MULTBARRELS``: 3
 
 .. image:: ../img/shg/8/shg_hydaulic013a.png
 
+.. note::
+   These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.
+
+- For culvert **CULV_122** set the GCE parameters as follows:
+
+   - Conduit Length: 105 ft
+   - Height: 5 ft (Box Culvert)
+   - ``TYPEC``: 1 (wing wall 30°–75°)
+   - ``TYPEEN``: 1 (box)
+   - ``CULVERTIN``: 0.018
+   - ``KE``: 0.4
+   - ``CUBASE``: 8
+   - ``MULTBARRELS``: 1
+
 .. image:: ../img/shg/8/shg_hydaulic013b.png
 
-.. note:: Culvert or conduit length can be measure directly in QGIS using the **Measure Line** tool.
+.. note::
+   - From highway design manuals and HY-8 documentation
+   - Image review confirms structure shape and inlet type
+
+.. tip:: Culvert or conduit length can be measure directly in QGIS using the **Measure Line** tool.
 
 Schematic Correction and Recheck
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -300,89 +330,6 @@ Click the QGIS **Save** button to commit your hydraulic structures to the layer 
 
 .. warning::
    Although the model runs, the results may still be inaccurate due to elevation issues. These will be addressed in the next lesson.
-
-
-Create Culverts with Culvert Equations
-----------------------------------------
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/rACaKUlcFKU?si=yJCouGxFaV-GE5CI"
-   title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-   gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-This lesson walks through how to convert culverts from rating tables to generalized culvert equations (GCE) in FLO-2D, and then run the model to compare the results.
-
-Convert a Culvert to GCE
-------------------------
-
-We are updating culvert **CL-009** from a rating table to a generalized culvert equation.
-
-1. **Change the Structure Type**:
-   - Open the structure editor.
-   - Set type to `Culvert Equation`.
-
-2. **Set GCE Parameters**:
-   - Diameter: 48 in (convert to 4 ft).
-   - Barrels: 3
-   - Conduit Length: Measured to be 250 ft (headwall to headwall).
-   - Entrance Type: 1 (square edge with headwall)
-   - Culvert Type (CType): 2 (circular)
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.5
-   - Base: 0
-
-.. note::
-   These values are based on as-built drawings and Table C2 from HDS-5, 3rd Edition.
-
-Convert Another Culvert to GCE
-------------------------------
-
-Now convert **CL-122**:
-
-1. **Update Parameters**:
-   - Set to `Culvert Equation`
-   - Height: 5 ft (Box Culvert)
-   - Length: 100–110 ft
-   - Entrance Type: 1 (wing wall 30°–75°)
-   - Culvert Type: 1 (box)
-   - Barrels: 1
-   - Base: 8 ft
-   - Manning's n: 0.018
-   - Entrance Loss Coefficient (K): 0.4
-
-2. **Justification**:
-   - From highway design manuals and HY-8 documentation
-   - Image review confirms structure shape and inlet type
-
-Apply and Export
-----------------
-
-- Click **Schematize** to update the structure layer.
-- Verify values are correctly saved.
-- Save and close prior runs if necessary.
-
-3. **Export Files**:
-   - Go to **Import/Export > Export .DAT files**
-   - Create new folder
-   - Create new folder named ``Generalized CT with Elevation Correction``
-
-
-Run the Model
--------------
-
-- Click **Run FLO-2D**
-- Ensure no errors are reported.
-- Compare results with earlier model using rating tables.
-
-.. tip::
-   Always back up your project after making changes.
-
-Next Steps
-----------
-
-Proceed to the **Summary** lesson, where the differences between rating tables and generalized culvert equation results will be reviewed.
 
 Summary and Review Project
 -------------------------------
