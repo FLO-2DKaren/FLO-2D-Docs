@@ -208,6 +208,8 @@ Step 1: Create Elevation Polygons
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - Go to the **Elevation Polygons** layer.
 - Start editing and click **Add Polygon**.
+- Set the name to ``min from elev raster`` or similar.
+- Set method to ``grid``; leave other values ``null``.
 
     - For simple corrections, draw a polygon around the **centroid** of the grid element you want to modify.
 
@@ -223,46 +225,36 @@ Step 1: Create Elevation Polygons
 
     .. image:: ../img/shg/8/shg_hydaulic017c.png
 
-- Set the name to ``min from elev raster`` or similar.
-- Set method to ``grid``; leave other values ``null``.
+- The attributes table of ```Elevation Polygons``` should now be looking as the one shown below:
 
+    .. image:: ../img/shg/8/shg_hydaulic018.png
 
 Step 2: Apply a Levee
 ~~~~~~~~~~~~~~~~~~~~~~
 - Use the **Levee Line** tool to draw a line where flow should be restricted.
 - Assign the crest elevation based on sampled raster value (e.g., 1396.5).
 
-.. image:: ../img/shg/8/shg_hydaulic018a.png
+.. image:: ../img/shg/8/shg_hydaulic019a.png
 
-.. image:: ../img/shg/8/shg_hydaulic018b.png
+.. image:: ../img/shg/8/shg_hydaulic019b.png
 
 - Reprocess the levees using:
   ``Plugins > FLO-2D > Create Schematic Layers from User Layers`` with ``Levee Lines`` checked only.
 
-.. image:: ../img/shg/8/shg_hydaulic019.png
-
 .. image:: ../img/shg/8/shg_hydaulic020.png
+
+.. image:: ../img/shg/8/shg_hydaulic021.png
 
 Step 3: Apply Grid Element Corrections
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- For polygons with assigned elevation values:
+- Use **External Layer Mode**
+- Set layer: ``Elevation Polygons``
+- Check: ``Centroids within polygons``
+- Select: ``Statistics from raster``
+- Choose ``Minimum elevation``
+- Check: ``Statistics per grid element``.
 
-    - Use **Grid Element Correction Tool**
-    - Select: ``Elevation polygon attributes``
-    - Check: ``Only selected polygons``
-
-    .. image:: ../img/shg/8/shg_hydaulic022.png
-
-- For polygons pulling from raster values:
-
-    - Use **External Layer Mode**
-    - Set layer: ``Elevation Polygons``
-    - Check: ``Centroids within polygons``
-    - Select: ``Statistics from raster``
-    - Choose ``Minimum elevation``
-    - Check: ``Statistics per grid element``.
-
-    .. image:: ../img/shg/8/shg_hydaulic023.png
+.. image:: ../img/shg/8/shg_hydaulic022.png
 
 Step 4: Export and Run
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
