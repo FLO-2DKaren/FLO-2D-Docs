@@ -131,6 +131,9 @@ Step 4: Assign Structure Type and Review Structures
 .. note::
    For grouped culverts (e.g., simple storm drain systems), assign a **storm drain capacity** in CFS.
 
+   For **Floodplain to Channel** hydraulic structures, assign the structures to the left bank because the
+   left bank is the reference to the cross-section.
+
 Step 5: Rating Tables and Culvert Equations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -267,7 +270,8 @@ Step 4: Export and Run
 .. image:: ../img/shg/8/shg_hydaulic024.png
 
 .. note::
-   These steps ensure correct invert elevations, allow headwalls to collect water properly, and ensure flow can pass over levees or into hydraulic structures.
+   These steps ensure correct invert elevations, allow headwalls to collect water properly,
+   and ensure flow can pass over levees or into hydraulic structures.
 
 .. tip::
    After corrections, verify grid elevations with the Identify tool to confirm changes.
