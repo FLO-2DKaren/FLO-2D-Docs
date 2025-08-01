@@ -178,7 +178,7 @@ Step 5(ii): Review the Generalized Culvert Equations (GCE)
 - For culvert **CULV_009** set the GCE parameters as follows:
 
    - Conduit Length: Measured to be 252 ft (headwall to headwall).
-   - Diameter: 4 ft.
+   - Diameter: 4 ft
    - ``TYPEC``: 2 (circular)
    - ``TYPEEN``: 1 (square edge with headwall)
    - ``CULVERTIN``: 0.018
