@@ -54,27 +54,15 @@ Data Input Manual PRO
         - OUTFLOW.DAT
 
 
-   There are two new data files in the Pro model to assist with GIS and 
+   There are two new data files in the Pro model to assist with
+    GIS and  CADD program integration:  TOPO.DAT (coordinate data and elevation) and
+   MANNINGS_N.DAT (cell and roughness n-value).   These files can be used in lieu of the FPLAIN.
+   DAT and CADPTS. DAT files.  The user is encouraged to start simple with a basic overland flow simulation
+   and build the flood detail into the model one  component at a time to observe the
+    effects of each feature.  Pre-processor programs such as the QGIS/FLO-2D Plugin, Grid
+   Developer System (GDS), and PROFILES facilitate developing and graphically  | editing the data files.
 
-   CADD program integration:  TOPO.DAT (coordinate data and el-
-
-   evation) and MANNINGS_N.DAT (cell and roughness n-value).  
-
-   These files can be used in lieu of the FPLAIN.DAT and CADPTS.
-
-   DAT files.  The user is encouraged to start simple with a basic over-
-
-   land flow simulation and build the flood detail into the model one 
-
-   component at a time to observe the effects of each feature.  Pre-pro-
-
-   cessor programs such as the QGIS/FLO-2D Plugin, Grid Developer 
-
-   System (GDS), and PROFILES facilitate developing and graphically 
-
-   | editing the data files.  
-   | There are several ways to edit the FLO-2D data files.  Since the
-     data 
+    | There are several ways to edit the FLO-2D data files.  Since the data 
 
    files are written in ASCII format, they can be edited in any ASCII 
 
