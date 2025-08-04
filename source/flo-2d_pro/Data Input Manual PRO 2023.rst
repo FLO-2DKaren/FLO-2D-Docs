@@ -30,36 +30,25 @@ Data Input Manual PRO
    breach or other components.  Flood simulation detail can be enhanced by adding rainfall,
     infiltration, hydraulic structures, levees, 
    mudflows, sediment transport, rills and gullies, storm drains, buildings and flow obstructions.
-    These components are initiated through 
-
-   on-off switches found in the control data file (CONT.DAT).  If the 
-
-   component options are “turned on”, then the appropriate data files 
-
-   | must be created.
-   | To conduct a basic FLO-2D flood simulation, eight data files must 
-
-   be created.  These files can be generated using the FLO-2D Plugin 
-
-   for QGIS.  The six required files for basic overland flow simulation 
+    These components are initiated through  on-off switches found in the control data file (CONT.DAT).
+    If the  component options are “turned on”, then the appropriate data files  must be created.
+   To conduct a basic FLO-2D flood simulation, eight data files must  be created.
+    These files can be generated using the FLO-2D Plugin  for QGIS.  The six required files for basic overland flow simulation 
 
    are:  
 
-    · TOPO.DAT
+        · TOPO.DAT
 
-    · MANNINGS_N.DAT
+        · MANNINGS_N.DAT
 
-    · FPLAIN.DAT  
+        · FPLAIN.DAT  
 
 .. container::
    :name: page4-div
 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023003.png
-   **ii**
 
-   **P**
-
-   **reface**
+   **Preface**
 
     · CADPTS.DAT  
 
