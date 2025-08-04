@@ -37,21 +37,21 @@ Data Input Manual PRO
     These files can be generated using the FLO-2D Plugin  for QGIS.  The six required files for basic overland flow simulation 
    are:
 
-        -TOPO.DAT
+        - TOPO.DAT
 
-        -MANNINGS_N.DAT
+        - MANNINGS_N.DAT
 
-        -FPLAIN.DAT
+        - FPLAIN.DAT
 
-        -CADPTS.DAT
+        - CADPTS.DAT
 
-        -CONT.DAT
+        - CONT.DAT
 
-        -TOLER.DAT
+        - TOLER.DAT
 
-        -INFLOW.DAT
+        - INFLOW.DAT
 
-        -OUTFLOW.DAT
+        - OUTFLOW.DAT
 
 
    There are two new data files in the Pro model to assist with GIS and 
