@@ -1,10 +1,8 @@
 .. _data_input_manual:
 
-Data Input Manual
-=================
+Data Input Manual PRO
+=====================
 
-Data Input Manual PRO 2023
-===========================
 .. container::
    :name: page1-div
 
