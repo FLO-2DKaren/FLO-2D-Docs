@@ -17,29 +17,20 @@ Data Input Manual PRO
    :name: page3-div
 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023002.png
-   **PREFACE**
 
-   **i**
+   **PREFACE**
 
    **FLO-2D INPUT DATA OVERVIEW**
 
-   This manual describes the FLO-2D Pro Model data input param-
-
-   eters and their format. The FLO-2D data base consists of a series of 
-
+   This manual describes the FLO-2D Pro Model data input parameters 
+   and their format. The FLO-2D data base consists of a series of 
    ASCII files organized by model components.  A flood model starts 
-
    with routing a hydrograph over an unconfined floodplain surface.  
-
    This model can then be expanded with channel flow, levee or dam 
-
-   breach or other components.  Flood simulation detail can be en-
-
-   hanced by adding rainfall, infiltration, hydraulic structures, levees, 
-
-   mudflows, sediment transport, rills and gullies, storm drains, build-
-
-   ings and flow obstructions.  These components are initiated through 
+   breach or other components.  Flood simulation detail can be enhanced by adding rainfall,
+    infiltration, hydraulic structures, levees, 
+   mudflows, sediment transport, rills and gullies, storm drains, buildings and flow obstructions.
+    These components are initiated through 
 
    on-off switches found in the control data file (CONT.DAT).  If the 
 
