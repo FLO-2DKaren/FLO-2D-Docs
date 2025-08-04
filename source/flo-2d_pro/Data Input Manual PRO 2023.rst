@@ -6,7 +6,6 @@ Data Input Manual PRO
 .. container::
    :name: page1-div
 
-   |background image|
    O c t o b e r   2 0 2 3   -   B u i l d   2 3
 
 .. container::
