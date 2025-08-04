@@ -62,7 +62,7 @@ Data Input Manual PRO
     effects of each feature.  Pre-processor programs such as the QGIS/FLO-2D Plugin, Grid
    Developer System (GDS), and PROFILES facilitate developing and graphically  editing the data files.
 
-    There are several ways to edit the FLO-2D data files.  Since the data files are written in
+   There are several ways to edit the FLO-2D data files.  Since the data files are written in
    ASCII format, they can be edited in any ASCII  editor such as Microsoft NotePad®, TextPad®, UltraEdit®,
    and others.  The FLO-2D Plugin enables multiple selections of grid elements to edit spatially variable
    data with mouse point and click commands.   The PROFILES program can be used to edit channel and
