@@ -60,47 +60,22 @@ Data Input Manual PRO
    DAT and CADPTS. DAT files.  The user is encouraged to start simple with a basic overland flow simulation
    and build the flood detail into the model one  component at a time to observe the
     effects of each feature.  Pre-processor programs such as the QGIS/FLO-2D Plugin, Grid
-   Developer System (GDS), and PROFILES facilitate developing and graphically  | editing the data files.
+   Developer System (GDS), and PROFILES facilitate developing and graphically  editing the data files.
 
-    | There are several ways to edit the FLO-2D data files.  Since the data 
+     There are several ways to edit the FLO-2D data files.  Since the data files are written in
+   ASCII format, they can be edited in any ASCII  editor such as Microsoft NotePad®, TextPad®, UltraEdit®,
+   and others.  The FLO-2D Plugin enables multiple selections of grid elements to edit spatially variable
+   data with mouse point and click commands.   The PROFILES program can be used to edit channel and
+   cross section data.
 
-   files are written in ASCII format, they can be edited in any ASCII 
-
-   editor such as Microsoft NotePad®, TextPad®, UltraEdit®, and oth-
-
-   ers.  The FLO-2D Plugin enables multiple selections of grid elements 
-
-   to edit spatially variable data with mouse point and click
-   commands.  
-
-   The PROFILES program can be used to edit channel and cross section 
-
-   | data.
-   | There are two ways to run a FLO-2D simulation once the data files 
-
-   are constructed.  1) The Pro model can be initiated from the FLO-2D 
-
-   Plugin; or 2) a FLO-2D flood simulation can be started by copying 
-
-   the FLOPRO.EXE file and its respective dlls into a project folder
-   and 
-
-   double-clicking on the executable.  When the model is running the 
-
-   user has the option of graphically viewing the flood progression
-   over 
-
-   the grid system.  An inflow hydrograph and the rainfall temporally
-   dis-
-
-   tribution is also displayed.  Upon completion of the flood
-   simulation, 
-
-   there are post-processor programs (FLO-2D MapCrafter, MAPPER, 
-
-   MAXPLOT, PROFILES, The QGIS Mesh tool, and HYDROG) that 
-
-   will assist in reviewing the results. 
+   There are two ways to run a FLO-2D simulation once the data files  are constructed.  1)
+   The Pro model can be initiated from the FLO-2D Plugin; or 2) a FLO-2D flood simulation
+   can be started by copying the FLOPRO.EXE file and its respective dlls into a project folder and 
+   double-clicking on the executable.  When the model is running the user has the option of
+   graphically viewing the flood progression over the grid system.  An inflow hydrograph and the
+   rainfall temporally distribution is also displayed.  Upon completion of the flood simulation, 
+   there are post-processor programs (FLO-2D MapCrafter, MAPPER, MAXPLOT, PROFILES, The QGIS Mesh
+   tool, and HYDROG) that  will assist in reviewing the results. 
 
 .. container::
    :name: page5-div
