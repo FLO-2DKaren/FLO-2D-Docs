@@ -254,11 +254,8 @@ TABLE 1.1 GRID SYSTEM SIZE
 
 +-------------------+------------------------+
 | Number of         | Model Simulation Speed |
-| Grid Elements     | Grid Elements          |
-| Grid Elements     | Grid Elements          |
-| Number of         | Model Simulation Speed |
-| Grid Elements     | Grid Elements          |
-| Grid Elements     | Grid Elements          |
+|                   |                        |
+| Grid Elements     |                        |
 +===================+========================+
 | < 50,000          | Fast (minutes)         |
 +-------------------+------------------------+
@@ -268,30 +265,6 @@ TABLE 1.1 GRID SYSTEM SIZE
 +-------------------+------------------------+
 | >1,000,000        | Very slow(>1 day)      |
 +-------------------+------------------------+
-
-   Table 1.1.  Grid System Size
-
-   Number of 
-
-   Grid Elements
-
-   Model Simulation Speed
-
-   < 50,000 
-
-   Fast (minutes)
-
-   50,000 – 250,000
-
-   Moderate (<12 hours)
-
-   250,000 – 1,000,000
-
-   Slow (> 12 hours)
-
-   > 1,000,000
-
-   Very Slow (> 1 day)
 
 .. container::
    :name: page15-div
