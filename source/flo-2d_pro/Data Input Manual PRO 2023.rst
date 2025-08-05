@@ -91,10 +91,8 @@ Data Input Manual PRO
 
    **nPut**
 
-   This Data Input Manual includes descriptions of the processor pro-
-
-   grams, data variables and file format, and output files.  Each data
-   file 
+   This Data Input Manual includes descriptions of the processor programs, data variables 
+and file format, and output files.  Each data file 
 
    description contains a list of variables, variable definitions and
    instruc-
@@ -159,69 +157,25 @@ Data Input Manual PRO
 
    **eneral**
 
-   Use this document to help create the FLO-2D input data and review the
-   output 
+   Use this document to help create the FLO-2D input data and review the output  data.  It has chapters on
+   getting started, resources, preprocessor programs, data  files, output files, post-processor programs and
+   troubleshooting.  Chapter 4 is  useful when learning to build data files.  It breaks down each data
+   file into a set of variables and gives a definition and instructional comments for the data files. FLO-2D is
+   recommended for use with Windows 10 or higher with 64-Bit operating systems, multiple processors and steady state
+   hard drives.  To generate and edit the data files, the QGIS/FLO-2D Plugin is used.  QGIS
+   facilitates assigning spatially variable data that can be interpolated from shape files, points and rasters.  
+   PROFILES is used to edit channel geometry data.  Data files can also be edited  using an ASCII text editor
+   such as UltraEdit© or NotePad++©.
 
-   data.  It has chapters on getting started, resources, preprocessor
-   programs, data 
+   1.2 Flo-2D Installation
 
-   files, output files, post-processor programs and troubleshooting.
-    Chapter 4 is 
-
-   useful when learning to build data files.  It breaks down each data
-   file into a set 
-
-   | of variables and gives a definition and instructional comments for
-     the data files.
-   | FLO-2D is recommended for use with Windows 10 or higher with 64-Bit
-     oper-
-
-   ating systems, multiple processors and steady state hard drives.  To
-   generate and 
-
-   edit the data files, the QGIS/FLO-2D Plugin is used.  QGIS
-   facilitates assigning 
-
-   spatially variable data that can be interpolated from shape files,
-   points and rasters.  
-
-   PROFILES is used to edit channel geometry data.  Data files can also
-   be edited 
-
-   using an ASCII text editor such as UltraEdit© or NotePad++©.
-
-   **1.2 **
-
-   **flo-2D I**
-
-   **nstallatIon**
-
-   The FLO-2D Pro model has been compiled for 64 bit multi-core
-   processor 
-
-   computers. It cannot be run on a 32-bit computer. Recommended
-   minimum 
-
-   computer requirements are at least 4 GB RAM.  To install the FLO-2D
-   on the 
-
-   computer hard drive, unzip the installation file and double click the
-   file FLO-2D-
-
-   PRO-Setup.exe file.  Follow the installation instructions as they
-   appear in the 
-
-   dialog boxes on the screen.  The default directory is C:\\PROGRAM
-   FILES(x86)\\
-
-   FLO-2D PRO.  The FLO-2D model, and the processor programs are loaded
-   into 
-
-   the FLO-2D Pro folder.  The FLO-2D resource files are saved to the
-   FLO-2D 
-
-   Documentation folder under C:\\Users\\Public\\Public
-   Documents\\FLO-2D PRO 
+   The FLO-2D Pro model has been compiled for 64 bit multi-core processor computers. It cannot be run on a 32-bit
+   computer. Recommended minimum computer requirements are at least 4 GB RAM.  To install the FLO-2D
+   on the computer hard drive, unzip the installation file and double click the file FLO-2D-PRO-Setup.exe file.
+    Follow the installation instructions as the appear in the dialog boxes on the screen.  The default
+    directory is C:\\PROGRAM FILES(x86)\\FLO-2D PRO.  The FLO-2D model, and the processor programs are loaded
+   into the FLO-2D Pro folder.  The FLO-2D resource files are saved to the FLO-2D Documentation folder
+   under C:\\Users\\Public\\Public Documents\\FLO-2D PRO 
 
 .. container::
    :name: page12-div
