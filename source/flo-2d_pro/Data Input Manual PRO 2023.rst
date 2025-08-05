@@ -360,6 +360,7 @@ element A surf should be in the range:
    Chapter 1
    Getting Started
 
+
    *Run the FLO-2D model  *
 
         The required data files for a basic overland flood model are: ·
@@ -382,7 +383,7 @@ element A surf should be in the range:
 
         The INFLOW.DAT and OUTFLOW.DAT files are optional but are typically necessary for most applications.
          Run a FLO-2D simulation by: 
-   |    i) QGIS - click on ‘Run FLO-2D’  command in the File menu.
+   |     i) QGIS - click on ‘Run FLO-2D’  command in the File menu.
 
         ii) Copy the ‘FLOPRO.EXE’  file in the project folder and double click it.
 
@@ -390,57 +391,37 @@ element A surf should be in the range:
 
    *Data Input*
 
-   When the data format appears confusing, review the data files
-   provided in 
-
-   the Example Projects subdirectory of the FLO-2D  folder using an ASCII 
-
-   editor such as NotePad++©.  
+            When the data format appears confusing, review the data files provided in the Example Projects 
+            subdirectory of the FLO-2D  folder using an ASCII editor such as NotePad++©.  
 
    *File Management*
 
-   The output files are always generated with the same name and will be over-
-
-   written  in subsequent model runs.  To save any output files that
-   could 
-
-   be overwritten, rename the file or create a new project folder, copy
-   all the 
-
-   \*.DAT files into it and then run the new flood simulation in that
-   folder.
+             The output files are always generated with the same name and will
+              be over-written  in subsequent model runs.  To save any output files that could  be
+             overwritten, rename the file or create a new project folder, copy all the \*.DAT files into it and
+             then run the new flood simulation in that folder.
 
    *Graphics Mode*
 
-   To view the floodwave progression during the simulation, run the
-   simula-
-
-   tion in graphics mode.  This switch is set in the QGIS/FLO-2D Plugin
-   by 
-
-   clicking the Control Variables button.  Then check the Graphics
-   Display 
-
-   mode and the Run button.
+             To view the floodwave progression during the simulation, run the simulation in graphics mode.  
+             This switch is set in the QGIS/FLO-2D Plugin by clicking the Control Variables button.  
+             Then check the Graphics Display mode and the Run button.
 
    Things to check when creating the data files:
 
    *Grid System*
 
-   The grid system should begin with grid element #1 and have no
-   missing 
+            The grid system should begin with grid element #1 and have no missing grid element numbers. There
+            should be no dangling grid elements connected only by a diagonal. 
+   *Inflow/Outflow Nodes*
 
-   grid element numbers. There should be no dangling grid elements con-
-
-   nected only by a diagonal. 
+            Inflow and outflow nodes should not have other components assigned to them such as hydraulic
+            structures, streets, ARF’s, etc. Outflow nodes should not be doubled up.   Use a single line of
+            outflow nodes.  
 
    Hint: 
 
-   Test initial model runs with 
-
-   a simple steady state inflow 
-
-   hydrograph.
+   Test initial model runs with a simple steady state inflow hydrograph.
 
 .. container::
    :name: page17-div
@@ -448,68 +429,18 @@ element A surf should be in the range:
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023016.png
    7
 
-   **D**
+   Data input
+   Getting Started
 
-   **ata**
-
-   ** I**
-
-   **nPut**
-
-   **G**
-
-   **ettin**
-
-   **G**
-
-   ** S**
-
-   **tarted**
-
-   *Inflow/Outflow Nodes*
-
-   Inflow and outflow nodes should not have other components assigned
-   to 
-
-   them such as hydraulic structures, streets, ARF’s, etc. Outflow nodes
-   should 
-
-   not be doubled up.   Use a single line of outflow nodes.  
-
-   **1.5 **
-
-   **M**
-
-   **oDel**
-
-   ** c**
-
-   **oMPonent**
-
-   ** c**
-
-   **onsIDeratIons**
+   1.5 Model component considerations
 
    **Channel Modeling **
 
-   The 1-D channel component can simulate flow in channels defined by
-   various ge-
-
-   ometries.  The flow shares between the channel banks and the
-   floodplain.  Channels 
-
-   are defined in FLO-2D whenever 1-D flow is more accurate than
-   overland flow.  
-
-   They can reduce flooding and help the water move downstream mare
-   quickly than 
-
-   flow on the floodplain.  An extensive Channel Guidelines document is
-   available in 
-
-   | the Manuals Folder.  C:\\users\\Public\\Public Documents\\FLO-2D
-     Pro Documenta-
-   | tion\\flo_help\\Manuals.
+   The 1-D channel component can simulate flow in channels defined by various ge-ometries.
+    The flow shares between the channel banks and the floodplain.  Channels are defined in FLO-2D whenever
+   1-D flow is more accurate than overland flow.  They can reduce flooding and help the water move downstream
+    mare quickly than flow on the floodplain.  An extensive Channel Guidelines document is available in 
+   the Manuals Folder.  C:\\users\\Public\\Public Documents\\FLO-2 Pro Documentation\\flo_help\\Manuals.
 
    **Street Flow **
 
