@@ -3,24 +3,15 @@
 Data Input Manual PRO
 =====================
 
-.. container::
-   :name: page1-div
-
-   O c t o b e r   2 0 2 3   -   B u i l d   2 3
-
-.. container::
-   :name: page2-div
-
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023001.png
 
-.. container::
-   :name: page3-div
 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023002.png
 
-   **PREFACE**
+PREFACE
+========
 
-   **FLO-2D INPUT DATA OVERVIEW**
+FLO-2D INPUT DATA OVERVIEW
 
    This manual describes the FLO-2D Pro Model data input parameters 
    and their format. The FLO-2D data base consists of a series of 
