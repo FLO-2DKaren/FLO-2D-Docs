@@ -104,9 +104,10 @@ Data Input Manual PRO
    :name: page11-div
 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023010.png
-   **CHAPTER 1**
 
-   Flo-2D Installation and Getting Started
+CHAPTER 1
+=============
+
 
    1.1 General
 
