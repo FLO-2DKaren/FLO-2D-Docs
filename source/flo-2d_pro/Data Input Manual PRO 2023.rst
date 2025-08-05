@@ -178,23 +178,9 @@ Data Input Manual PRO
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023012.png
    3
 
-   **D**
+  Data Input
 
-   **ata**
-
-   ** I**
-
-   **nPut**
-
-   **G**
-
-   **ettin**
-
-   **G**
-
-   ** S**
-
-   **tarted**
+  Getting started
 
    Hydrology, Base Mapping and DTM Points
 
@@ -222,182 +208,47 @@ Data Input Manual PRO
         Additional data may be required for these components including bridge and 
        culvert rating curves or tables, streets width and curb height, and river cross section surveys.
 
-   **Estimate the project area**
+   Estimate the project area
 
-   To create a computationally efficient model, it is best to minimize
-   the grid system 
+   To create a computationally efficient model, it is best to minimize the grid system around the project area.
+    The project computational domain (or grid system) can be outlined using the aerial photography.
+     The grid system boundary should be located so that the project area it is not
+   affected by either inflow or outflow conditions. The inflow and outflow nodes should be considered as
+   non-essential nodes (sources and sinks) and these should be located away from the project area.  If the
+   project area is relatively small compared to the entire hydrologic basin that may  need to be modeled,
+   more than one FLO-2D simulation could be considered.  A coarse grid system can
+    be established for watershed or river system and a more detailed grid system
+   created for the local project area where flood detail may be important.  The outflow from the course grid system
+   will constitute the inflow to the detailed grid system.  
 
-   around the project area.  The project computational domain (or grid
-   system) can be 
+   Hint: Use any ASCII editor such as NotePad™ to edit the data files.   
 
-   outlined using the aerial photography.  The grid system boundary should be located 
-
-   so that the project area it is not affected by either inflow or
-   outflow conditions. The 
-
-   inflow and outflow nodes should be considered as non-essential nodes
-   (sources and 
-
-   | sinks) and these should be located away from the project area.  
-   | If the project area is relatively small compared to the entire
-     hydrologic basin that 
-
-   may  need to be modeled, more than one FLO-2D simulation could be
-   considered.  
-
-   A coarse grid system can be established for watershed or river system and a more 
-
-   Hint: 
-
-   Use any ASCII editor 
-
-   such as NotePad™ to edit 
-
-   the data files.   
-
-   Hint: 
-
-   An alternate method to 
-
-   run the model is to copy 
-
-   the FLO.EXE file into the 
-
-   project folder and double 
-
-   click on it from a browser. 
+   Hint: An alternate method to run the model is to copy the FLO.EXE file into the project folder and
+   double click on it from a browser. 
 
 .. container::
    :name: page14-div
 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023013.png
-   4
 
-   **c**
+   Selecting the grid element size
 
-   **haPter**
+   See the FLO-2D Reference Manual for more instructions.  Once the overall project  area has been identified,
+estimate the grid system size (as a rough rectangle) and determine the approximate number of grid 
+elements that would be required for different size square grid elements such as 50 ft, 100 ft, 200 ft, etc.  The
+grid element size will control how fast the FLO-2D flood simulation will run.     To help 
+with the grid element size selection, the following criteria are suggested based
+on a rough estimate of peak discharge.  The peak discharge Q peak divided by the surface area of the grid
+element A surf should be in the range:
 
-   ** 1**
+    Q peak/A surf < 10.0 cfs/ft 2 
+        or in metric:  
+    Q peak/A surf < 0.3 cms/m2 
 
-   **G**
-
-   **ettInG**
-
-   ** s**
-
-   **tarteD**
-
-   detailed grid system created for the local project area where flood
-   detail may be im-
-
-   portant.  The outflow from the course grid system will constitute the
-   inflow to the 
-
-   detailed grid system.  
-
-   **Selecting the grid element size**
-
-   See the FLO-2D Reference Manual for more instructions.  Once the
-   overall project 
-
-   area has been identified, estimate the grid system size (as a rough
-   rectangle) and 
-
-   determine the approximate number of grid elements that would be
-   required for dif-
-
-   ferent size square grid elements such as 50 ft, 100 ft, 200 ft, etc.
-    The grid element 
-
-   | size will control how fast the FLO-2D flood simulation will run.  
-        
-   | To help with the grid element size selection, the following criteria are suggested 
-
-   based on a rough estimate of peak discharge.  The peak discharge Q
-
-   peak
-
-    divided by 
-
-   the surface area of the grid element A
-
-   surf
-
-    should be in the range:
-
-   Q
-
-   peak
-
-   /A
-
-   surf 
-
-   < 10.0 cfs/ft
-
-   2
-
-    
-
-   or in metric:  
-
-   Q
-
-   peak
-
-   /A
-
-   surf
-
-    < 0.3 cms/m
-
-   2
-
-    
-
-   The closer Q
-
-   peak
-
-   /A
-
-   surf
-
-    is to 3.0 cfs/ft
-
-   2
-
-    (0.1 cms/m
-
-   2
-
-   ),  the faster the model will run.  If 
-
-   the Q
-
-   peak
-
-   /A
-
-   surf
-
-    is much greater than 10.0 cfs/ft
-
-   2
-
-    or 0.3 cms/m
-
-   2
-
-   , the model will run 
-
-   more slowly.  After the grid element size has been selected, proceed
-   with establishing 
-
-   the grid system using the QGIS/FLO-2D Plugin.  There are QGIS
-   workshop lessons 
-
-   to assist in getting started on a new project. 
+   The closer Q peak/A surf is to 3.0 cfs/f 2  (0.1 cms/m2),  the faster the model will run.  If  the Q
+   peak/A surf is much greater than 10.0 cfs/ft2 or 0.3 cms/m2, the model will run more slowly.  
+   After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D
+   Plugin.  There are QGIS workshop lessons to assist in getting started on a new project. 
 
    Table 1.1.  Grid System Size
 
@@ -429,95 +280,43 @@ Data Input Manual PRO
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023014.png
    5
 
-   **D**
+   Data Input
+   Getting Started
 
-   **ata**
+   Start simple, then add detail
 
-   ** I**
+   The first flood simulation for any project will be a simple overland flow model upon which a more detailed
+   flood simulation will be built.  
+   A suggested order of component construction is as follows:   · 
+      - Rainfall/Infiltration 
 
-   **nPut**
+      - Channels
 
-   **G**
+      - Levees
 
-   **ettin**
+      - Streets
 
-   **G**
+      - Buildings
 
-   ** S**
+      - Hydraulic Structures (culverts, weirs and bridges)
 
-   **tarted**
+      - Storm Drains
 
-   **Start simple, then add detail**
+      - Multiple Channel (rills and gullies)
 
-   The first flood simulation for any project will be a simple overland
-   flow model upon 
+      - Mud and debris flows/sediment transport
 
-   | which a more detailed flood simulation will be built.  
-   | A suggested order of component construction is as follows:  
+   As new components are added to a model and tested, other components switches can be turned off in the
+   CONT.DAT file. FLO-2D routes flows in eight directions as shown in the sidebar
+    figure.  The four  compass directions are numbered 1 to 4 and the four diagonal
+   directions are numbered 5 to 8.  Some components such as levees are placed on boundaries of the grid 
+   element.  The grid element boundaries constitute an octagon for components associated with
+   the boundary.
 
-    ·
-
-    Rainfall/Infiltration
-
-    ·
-
-    Channels
-
-    ·
-
-    Levees
-
-    ·
-
-    Streets 
-
-    ·
-
-    Buildings
-
-    ·
-
-    Hydraulic Structures (culverts, weirs and bridges)
-
-    ·
-
-    Storm Drains
-
-    ·
-
-    Multiple Channel (rills and gullies)
-
-    ·
-
-    Mud and debris flows/sediment transport 
-
-   As new components are added to a model and tested, other components
-   switches 
-
-   | can be turned off in the CONT.DAT file. 
-   | FLO-2D routes flows in eight directions as shown in the sidebar figure.  The four 
-
-   compass directions are numbered 1 to 4 and the four diagonal
-   directions are num-
-
-   bered 5 to 8.  Some components such as levees are placed on
-   boundaries of the grid 
-
-   element.  The grid element boundaries constitute an octagon for
-   components associ-
-
-   ated with the boundary.
-
-   **Saving data**
-
-   When creating or editing the data files, it is suggested that the
-   data files saved 
-
-   frequently and that one folder for testing a project and another one
-   for editing a 
-
-   project.  It is suggested that the data files be saved after
-   finishing each component.
+   Saving data
+   When creating or editing the data files, it is suggested that the data files saved frequently and that one
+   folder for testing a project and another one for editing a project.  It is suggested that the data files be
+   saved after finishing each component.
 
    **Develop the Project Files**
 
