@@ -106,11 +106,9 @@ Data Input Manual PRO
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023010.png
    **CHAPTER 1**
 
-   **flo-2D InstallatIon ****anD**** G****ettInG**** s****tarteD**
+   Flo-2D Installation and Getting Started
 
-   1**G***ettin***G*** S****tarted**
-
-   **1.1 ****G****eneral**
+   1.1 General
 
    Use this document to help create the FLO-2D input data and review the output  data.  It has chapters on
    getting started, resources, preprocessor programs, data  files, output files, post-processor programs and
@@ -130,151 +128,46 @@ Data Input Manual PRO
     Follow the installation instructions as the appear in the dialog boxes on the screen.  The default
     directory is C:\\PROGRAM FILES(x86)\\FLO-2D PRO.  The FLO-2D model, and the processor programs are loaded
    into the FLO-2D Pro folder.  The FLO-2D resource files are saved to the FLO-2D Documentation folder
-   under C:\\Users\\Public\\Public Documents\\FLO-2D PRO 
+   under C:\\Users\\Public\\Public Documents\\FLO-2D PRO Documentation.  These files include helpful resources
+   such as user manuals, example projects, lessons and PowerPoint presentations and instructional handouts. 
 
-.. container::
-   :name: page12-div
+   1.3  Uninstalling the  Flo-2D software
 
-   .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023011.png
-   2
+   Remove the FLO-2D program and all of its attendant software from the computer with the Windows system
+    Add Remove Programs tool.  When removing the model, if the option appears to keep
+   shared DLL/OCX files, do not remove them from the computer. To completely remove the FLO-2D files, delete the
+   FLO-2D Pro Folder from the Program Files (x86).  
 
-   **c**
+   1.4 Getting Started
 
-   **haPter**
+   Updates  
 
-   ** 1**
+   When starting a new FLO-2D project, first visit the Sharefile FTP and download any executable updates.
+   New features are frequently added to the model.  Do not hesitate to notify FLO-2D Staff of
+    any apparent programming bugs or problems that are encountered.  These will be addressed
+   as soon as possible. Program revisions are listed in the FLO-2D Pro Model Revisions document.
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Handouts
 
-   **G**
+   Tutorials and Lessons
 
-   **ettInG**
-
-   ** s**
-
-   **tarteD**
-
-   Documentation.  These files include helpful resources such as user
-   manuals, example 
-
-   projects, lessons and PowerPoint presentations and instructional
-   handouts. 
-
-   **1.3 **
-
-   **u**
-
-   **n**
-
-   **-**
-
-   **InstallInG**
-
-   ** **
-
-   **the**
-
-   ** flo-2D s**
-
-   **oftware**
-
-   Remove the FLO-2D program and all of its attendant software from the
-   computer 
-
-   with the Windows system Add Remove Programs tool.  When removing the model, 
-
-   if the option appears to keep shared DLL/OCX files, do not remove
-   them from the 
-
-   computer. To completely remove the FLO-2D files, delete the FLO-2D
-   Pro Folder 
-
-   from the Program Files (x86).  
-
-   **1.4 **
-
-   **G**
-
-   **ettInG**
-
-   ** s**
-
-   **tarteD**
-
-   **Updates  **
-
-   When starting a new FLO-2D project, first visit the Sharefile FTP
-   and download 
-
-   any executable updates. New features are frequently added to the
-   model.  Do not 
-
-   hesitate to notify FLO-2D Staff of any apparent programming bugs or problems 
-
-   that are encountered.  These will be addressed as soon as possible.
-    Program revisions 
-
-   are listed in the FLO-2D Pro Model Revisions document.
-   C:\\Users\\Public\\Docu-
-
-   ments\\FLO-2D PRO Documentation\\flo_help\\Handouts
-
-   **Tutorials and Lessons**
-
-   Tutorials and training videos are available for the FLO-2D Plugin.  The Plugin is the 
-
-   recommended data editor.
-
-   C:\\users\\public\\public documents\\flo-2d pro documentation
-
+   Tutorials and training videos are available for the FLO-2D Plugin.  The Plugin
+    is the recommended data editor.C:\\users\\public\\public documents\\flo-2d pro documentation
    https://documentation.flo-2d.com
 
-   **Seeking Assistance – Technical Support**
+   Seeking Assistance – Technical Support
 
-   Send technical support questions by e-mail to contact@flo-2d.com.  If
-   there is a 
+   Send technical support questions by e-mail to contact@flo-2d.com.  If there is a 
+   specific problem that needs to be resolved, zip the data files (only the \*.DAT files,  no output files \*.OUT)
+   and attach them to the e-mail along with a brief description of the problem and the project.  Before sending
+   the files, try to reduce the problem to its simplest form by turning off all components that are not contributing
+   to the problem.  For example, if the problem involves channel volume conservation, turn off
+   the streets, buildings and levees and run the simulation again to determine if the problem still persists.
+    Try to identify when the problem is first observed during the simulation (review SUMMARY.OUT) so
+   that it is not necessary to run the entire simulation.
 
-   specific problem that needs to be resolved, zip the data files (only
-   the \*.DAT files, 
-
-   no output files \*.OUT) and attach them to the e-mail along with a
-   brief description 
-
-   of the problem and the project.  Before sending the files, try to
-   reduce the problem 
-
-   to its simplest form by turning off all components that are not
-   contributing to the 
-
-   problem.  For example, if the problem involves channel
-   volume conservation, turn 
-
-   off the streets, buildings and levees and run the simulation again to
-   determine if the 
-
-   problem still persists.  Try to identify when the problem is first
-   observed during the 
-
-   simulation (review SUMMARY.OUT) so that it is not necessary to run
-   the entire 
-
-   simulation.
-
-   Questions regarding a project application are considered to be
-   technical consult-
-
-   ing and outside the scope of data input
-   technical support.  If assistance is needed 
-
-   Hint: 
-
-   When sending data files 
-
-   for tech support, zip 
-
-   together only \*.DAT 
-
-   files and send them to 
-
-   contact@flo-2.d.com
+   Questions regarding a project application are considered to be technical consulting and outside the scope of 
+   data input technical support.  If assistance is needed Hint: When sending data files for
+    tech support, zip together only \*.DAT files and send them to contact@flo-2.d.com
 
 .. container::
    :name: page13-div
