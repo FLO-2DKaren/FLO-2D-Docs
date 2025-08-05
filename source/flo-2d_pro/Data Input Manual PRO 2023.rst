@@ -254,8 +254,11 @@ TABLE 1.1 GRID SYSTEM SIZE
 
 +-------------------+------------------------+
 | Number of         | Model Simulation Speed |
-|                   |                        |
-| Grid Elements     |                        |
+| Grid Elements     | Grid Elements          |
+| Grid Elements     | Grid Elements          |
+| Number of         | Model Simulation Speed |
+| Grid Elements     | Grid Elements          |
+| Grid Elements     | Grid Elements          |
 +===================+========================+
 | < 50,000          | Fast (minutes)         |
 +-------------------+------------------------+
