@@ -166,8 +166,11 @@ Data Input Manual PRO
    that it is not necessary to run the entire simulation.
 
    Questions regarding a project application are considered to be technical consulting and outside the scope of 
-   data input technical support.  If assistance is needed Hint: When sending data files for
-    tech support, zip together only \*.DAT files and send them to contact@flo-2.d.com
+   data input technical support.  If assistance is needed  on a project, reasonable consulting fees can be discussed to provide guidance and
+   oversight.
+
+   Hint: When sending data files for tech support, zip together only \*.DAT files and send them
+   to contact@flo-2.d.com
 
 .. container::
    :name: page13-div
@@ -193,78 +196,31 @@ Data Input Manual PRO
 
    **tarted**
 
-   on a project, reasonable consulting fees can be discussed to provide
-   guidance and 
+   Hydrology, Base Mapping and DTM Points
 
-   oversight.  
+   DTM data
 
-   **Hydrology, Base Mapping and DTM Points**
+       To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model
+       (DTM) data which might consist of LiDAR data, point shape files, rasters, contour maps or digital elevation
+       model DEM data.  The imagery and DTM points must have the same coordinate system.  The most common formats
+       for digital imagery are \*.tif, \*.sid and \*.jpg  files and the images must have corresponding world 
+       files (e.g. \*.tfw, \*.sdw and \*.jgw).  If photogrametric or LiDAR data are not available, DEM data can be
+       used.  Elevation data formats that are accepted by the QGIS/FLO-2D Plugin and GDS are ASCII Grid, ASCII xyz
+       data  sets and ArcGIS elevation shapefiles and Elevation Raster GeoTiff files.  
 
-   *DTM data*
+   Hydrologic data
 
-   To start a FLO-2D model, define the project area and compile
-   available 
+       Hydrologic data for a flood simulation can include both rainfall an discharge hydrographs.  The rainfall
+       runoff from a watershed model can be the desired product or the watershed model can be used to generate
+       inflow flood hydrographs for downstream flood routing.  In either case the hydrologic data should be carefully
+       reviewed because the area of inundation is determined by the flood and rainfall volume. 
 
-   mapping, imagery and digital terrain model (DTM) data which might 
+   Floodplain and channel detail
 
-   consist of LiDAR data, point shape files, rasters, contour maps or
-   digital 
-
-   elevation model DEM data.  The imagery and DTM points must have the 
-
-   same coordinate system.  The most common formats for digital imagery
-   are 
-
-   \*.tif, \*.sid and \*.jpg  files and the images must have
-   corresponding world 
-
-   files (e.g. \*.tfw, \*.sdw and \*.jgw).  If photogrametric or LiDAR
-   data are not 
-
-   available, DEM data can be used.  Elevation data formats that are
-   accepted 
-
-   by the QGIS/FLO-2D Plugin and GDS are ASCII Grid, ASCII xyz data 
-
-   sets and ArcGIS elevation shapefiles and Elevation Raster GeoTiff
-   files.  
-
-   *Hydrologic data*
-
-   Hydrologic data for a flood simulation can include both rainfall and
-   dis-
-
-   charge hydrographs.  The rainfall runoff from a watershed model can
-   be 
-
-   the desired product or the watershed model can be used to generate
-   inflow 
-
-   flood hydrographs for downstream flood routing.  In either case the
-   hydro-
-
-   logic data should be carefully reviewed because the area of
-   inundation is 
-
-   determined by the flood and rainfall volume. 
-
-   *Floodplain and channel detail*
-
-   If river channels, bridges, culverts, buildings and streets are to be
-   simulated, 
-
-   the user must be able to locate these features with respect to
-   individual grid 
-
-   elements.  Aerial imagery and shape files are used for this purpose.
-    Ad-
-
-   ditional data may be required for these components including bridge and 
-
-   culvert rating curves or tables, streets width and curb height, and
-   river cross 
-
-   section surveys.
+       If river channels, bridges, culverts, buildings and streets are to be simulated, the user must be able to locate
+       these features with respect to individual grid elements.  Aerial imagery and shape files are used for this purpose.
+        Additional data may be required for these components including bridge and 
+       culvert rating curves or tables, streets width and curb height, and river cross section surveys.
 
    **Estimate the project area**
 
