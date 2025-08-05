@@ -442,13 +442,15 @@ element A surf should be in the range:
     mare quickly than flow on the floodplain.  An extensive Channel Guidelines document is available in 
    the Manuals Folder.  C:\\users\\Public\\Public Documents\\FLO-2 Pro Documentation\\flo_help\\Manuals.
 
-.. tip::
-   Hellow world
-
-.. important:: hello world 2
-
-
-.. note:: hellow world 3
++---------------+-------+-----------+
+| Student name  | Marks | College   |
++===============+=======+===========+
+| Wafula        | 350  |  College 1 |
++---------------+------+------------+
+| Naomi         | 390  |  College 3 |
++---------------+------+------------+
+| Kenneth       | 350  |  College 1 |
++---------------+------+------------+
 
 
 
