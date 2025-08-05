@@ -249,13 +249,14 @@ element A surf should be in the range:
    peak/A surf is much greater than 10.0 cfs/ft2 or 0.3 cms/m2, the model will run more slowly.  
    After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D
    Plugin.  There are QGIS workshop lessons to assist in getting started on a new project. 
-+--------------------------------------------+
-| TABLE 1.1 GRID SYSTEM SIZE                 |
-=============================================+
+
+TABLE 1.1 GRID SYSTEM SIZE
+
++-------------------+------------------------+
 | Number of         | Model Simulation Speed |
 |                   |                        |
 | Grid Elements     |                        |
-+-------------------+------------------------+
++===================+========================+
 | < 50,000          | Fast (minutes)         |
 +-------------------+------------------------+
 | 50,000-250,000    | Moderate (<12hours)    |
