@@ -81,31 +81,14 @@ Data Input Manual PRO
    :name: page5-div
 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023004.png
-   **iii**
 
-   **D**
+   iii Data  Input**
 
-   **ata**
-
-   ** I**
-
-   **nPut**
-
-   This Data Input Manual includes descriptions of the processor programs, data variables 
-and file format, and output files.  Each data file 
-
-   description contains a list of variables, variable definitions and
-   instruc-
-
-   tional comments.  The instruction comments at the end of each file 
-
-   description provide hints for data organization, range of data
-   values 
-
-   and data limitations.  For a discussion of the physical processes
-   being 
-
-   simulated please refer to the FLO-2D Reference Manual.
+   This Data Input Manual includes descriptions of the processor programs, data variables and file
+   format, and output files.  Each data file description contains a list of variables, variable definitions
+   and instructional comments.  The instruction comments at the end of each file description provide hints for
+   data organization, range of data values and data limitations.  For a discussion of the physical processes
+   being  simulated please refer to the FLO-2D Reference Manual.
 
 .. container::
    :name: page6-div
@@ -123,39 +106,11 @@ and file format, and output files.  Each data file 
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023010.png
    **CHAPTER 1**
 
-   **flo-2D I**
+   **flo-2D InstallatIon ****anD**** G****ettInG**** s****tarteD**
 
-   **nstallatIon**
+   1**G***ettin***G*** S****tarted**
 
-   ** **
-
-   **anD**
-
-   ** G**
-
-   **ettInG**
-
-   ** s**
-
-   **tarteD**
-
-   1
-
-   **G**
-
-   **ettin**
-
-   **G**
-
-   ** S**
-
-   **tarted**
-
-   **1.1 **
-
-   **G**
-
-   **eneral**
+   **1.1 ****G****eneral**
 
    Use this document to help create the FLO-2D input data and review the output  data.  It has chapters on
    getting started, resources, preprocessor programs, data  files, output files, post-processor programs and
