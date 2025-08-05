@@ -322,71 +322,34 @@ element A surf should be in the range:
 
    *Create a Project Folder*
 
-   Start by creating a subdirectory for the project data files and
-   import the 
-
-   DTM data base files, map images and aerial photos. 
+       Start by creating a subdirectory for the project data files and import the  DTM data base files, map images
+       and aerial photos. 
 
    *Build the Project Files*
 
-   Use the QGIS/FLO-2D Plugin to graphically create and edit the grid
-   sys-
+       Use the QGIS/FLO-2D Plugin to graphically create and edit the grid system   Follow the QGIS Lesson 1
+       “Getting Started” lesson.   
 
-   tem   Follow the QGIS Lesson 1 “Getting Started” lesson.   
+            Hint:
+    Basic Data Files:  
 
-   Hint: 
+       ·FPLAIN.DAT 
 
-   Basic Data Files:
+       ·CADPTS.DAT 
 
-    
+       ·CONT.DAT 
 
-   ·
+       ·TOLER.DAT 
 
-   FPLAIN.DAT
+       ·TOPO.DAT 
 
-    
+       ·MANNINGS_N.DAT
 
-   ·
+   Optional 
 
-   CADPTS.DAT
+       ·INFLOW.DAT  
 
-    
-
-   ·
-
-   CONT.DAT
-
-    
-
-   ·
-
-   TOLER.DAT
-
-    
-
-   ·
-
-   TOPO.DAT
-
-    
-
-   ·
-
-   MANNINGS_N.DAT
-
-   Optional
-
-    
-
-   ·
-
-   INFLOW.DAT 
-
-    
-
-   ·
-
-   OUTFLOW.DAT
+       ·]OUTFLOW.DAT
 
 .. container::
    :name: page16-div
@@ -394,71 +357,34 @@ element A surf should be in the range:
    .. image:: ./img/Data_Input_Manual_PRO_2023/Data_Input_Manual_PRO_2023015.png
    6
 
-   **c**
-
-   **haPter**
-
-   ** 1**
-
-   **G**
-
-   **ettInG**
-
-   ** s**
-
-   **tarteD**
+   Chapter 1
+   Getting Started
 
    *Run the FLO-2D model  *
 
-   The required data files for a basic overland flood model are:
+        The required data files for a basic overland flood model are: ·
 
-    ·
+           . FPLAIN.DAT ·
 
-   FPLAIN.DAT
+           . CADPTS.DAT ·
 
-    ·
+           . CONT.DAT ·
 
-   CADPTS.DAT
+           . TOLER.DAT ·
 
-    ·
+           . INFLOW.DAT ·
 
-   CONT.DAT
+           . OUTFLOW.DAT ·
 
-    ·
+           . TOPO.DAT ·
 
-   TOLER.DAT
+           . MANNINGS_N.DAT
 
-    ·
+        The INFLOW.DAT and OUTFLOW.DAT files are optional but are typically necessary for most applications.
+         Run a FLO-2D simulation by: 
+   |    i) QGIS - click on ‘Run FLO-2D’  command in the File menu.
 
-   INFLOW.DAT
-
-    ·
-
-   OUTFLOW.DAT
-
-    ·
-
-   TOPO.DAT
-
-    ·
-
-   MANNINGS_N.DAT
-
-   The INFLOW.DAT and OUTFLOW.DAT files are optional but are typi-
-
-   | cally necessary for most applications.  Run a FLO-2D simulation by:
-      
-   | i) QGIS - click on ‘
-
-   Run FLO-2D’  
-
-   command in the File menu.
-
-   ii) Copy the ‘
-
-   FLOPRO.EXE
-
-   ’  file in the project folder and double click it.
+        ii) Copy the ‘FLOPRO.EXE’  file in the project folder and double click it.
 
    **Some General Guidelines**
 
