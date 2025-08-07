@@ -78,8 +78,9 @@ Hydrology, Base Mapping and DTM Points
 
 **DTM data**
 
-To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model (DTM) data which might consist of
-LiDAR data, point shape files, rasters, contour maps or digital elevation model DEM data.
+To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model
+(DTM) data which might consist of LiDAR data, point shape files, rasters, contour maps or digital elevation model
+DEM data.
 The imagery and DTM points must have the same coordinate system.
 The most common formats for digital imagery are; \*.tif, \*.sid and \*.jpg files
 
@@ -93,10 +94,11 @@ The most common formats for digital imagery are; \*.tif, \*.sid and \*.jpg files
 
 **Hydrologic data**
 
-Hydrologic data for a flood simulation can include both rainfall and dis- charge hydrographs.
-The rainfall runoff from a watershed model can be the desired product or the watershed model can be used to generate inflow flood hydrographs for
-downstream flood routing.
-In either case the hydro- logic data should be carefully reviewed because the area of inundation is determined by the flood and rainfall volume.
+Hydrologic data for a flood simulation can include both rainfall and discharge hydrographs.
+The rainfall runoff from a watershed model can be the desired product or the watershed model can be used to
+generate inflow flood hydrographs for downstream flood routing.
+In either case the hydrologic data should be carefully reviewed because the area of inundation is determined by
+the flood and rainfall volume.
 
 **Floodplain and channel detail**
 
