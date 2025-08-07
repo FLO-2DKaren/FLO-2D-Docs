@@ -53,7 +53,6 @@ commands. The PROFILES program can be used to edit channel and cross section dat
 There are two ways to run a FLO-2D simulation once the data files are constructed:
 
 1) The Pro model can be initiated from the FLO-2D Plugin.
-
 2) FLO-2D flood simulation can be started by copying the FLOPRO.EXE file and its respective .dlls into a
 project folder and double-clicking on the executable.
 
