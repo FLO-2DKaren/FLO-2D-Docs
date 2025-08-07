@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 1: Flo-2d Installation and Getting Started
+Chapter 1: FLO-2D Installation and Getting Started
 ===================================================
 
 General
