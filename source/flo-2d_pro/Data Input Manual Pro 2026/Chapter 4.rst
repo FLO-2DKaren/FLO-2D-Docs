@@ -153,56 +153,32 @@ but can still be used).
 +-----------------+-----------------------+--------------------+-----------------------------------+
 
 
-.. raw:: html
-
-   Line 1.<br>
-   Line 2.<br>
-   Line 3.
-
-
-
 *CONT.DAT File Variables*
 
+.. raw:: html
 
-               24.0 0.10 2 0 0 Line 1: **SIMUL TOUT LGPLOT METRIC IBACKUP**
-
-               1 1 0 0 0 Line 2: **ICHANNEL MSTREET LEVEE IWRFS IMULTC**
-
-               0 1 0 0 0 0 0 Line 3: **IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM**
-
-               0 0 0 Line 4: **IHYDRSTRUCT IFLOODWAY IDEBRV**
-
-               0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL SHALLOWN ENCROACH**
-
-               2 3.0 Line 6: **NOPRTFP DEPRESSDEPTH**
-
-               2 Line 7: **NOPRTC**
-
-               0 0.0 Line 8: **ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP**
-
-               0.1 Line 9: **GRAPTIM**
+    24.0 0.10 2 0 0 Line 1: **SIMUL TOUT LGPLOT METRIC IBACKUP** <br>
+    1 1 0 0 0 Line 2: **ICHANNEL MSTREET LEVEE IWRFS IMULTC** <br>
+    0 1 0 0 0 0 0 Line 3: **IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM** <br>
+    0 0 0 Line 4: **IHYDRSTRUCT IFLOODWAY IDEBRV** <br>
+    0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL SHALLOWN ENCROACH** <br>
+    2 3.0 Line 6: **NOPRTFP DEPRESSDEPTH** <br>
+    2 Line 7: **NOPRTC** <br>
+    0 0.0 Line 8: **ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP** <br>
+    0.1 Line 9: **GRAPTIM** <br><br>
 
    Notes:
 
-       Line 5: If IFLOODWAY = 0 omit ENCROACH
-
-       Line 7: If ICHANNEL = 0 omit Line 7
-
-       Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required
-
-       Line 8: If ITIMTEP = 11, 21, 31, 41, or 51 add STARTTIMTEP and ENDTIMTEP
-
-       Line 9: If LPLOT = 0 omit Line 9
+       Line 5: If IFLOODWAY = 0 omit ENCROACH <br>
+       Line 7: If ICHANNEL = 0 omit Line 7 <br>
+       Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required <br>
+       Line 8: If ITIMTEP = 11, 21, 31, 41, or 51 add STARTTIMTEP and ENDTIMTEP <br>
+       Line 9: If LPLOT = 0 omit Line 9 <br>
 
 
 .. raw:: html
 
    <br><br>
-
-.. raw:: html
-
-   <br><br>
-
 
 *CONT.DAT File Example*
 
