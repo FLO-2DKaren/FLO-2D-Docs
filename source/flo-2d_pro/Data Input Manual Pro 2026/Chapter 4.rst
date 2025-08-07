@@ -164,9 +164,7 @@ but can still be used).
 
                0 0 0 Line 4: **IHYDRSTRUCT IFLOODWAY IDEBRV**
 
-               0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL**
-
-                                                     **SHALLOWN ENCROACH**
+               0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL SHALLOWN ENCROACH**
 
                2 3.0 Line 6: **NOPRTFP DEPRESSDEPTH**
 
