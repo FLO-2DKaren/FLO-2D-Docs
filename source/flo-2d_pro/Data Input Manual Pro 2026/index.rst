@@ -2,7 +2,7 @@
 .. _data_input_manual:
 
 =====================
-DATA Input Manual Pro
+Data Input Manual Pro
 =====================
 
 .. toctree::
