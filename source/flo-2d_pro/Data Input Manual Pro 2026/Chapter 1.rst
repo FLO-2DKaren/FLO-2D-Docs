@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-Chapter 1: Flo-2d Installation And Getting Started.
+Chapter 1: Flo-2d Installation And Getting Started
 ===================================================
 
 1.1 General
@@ -139,7 +139,6 @@ There are QGIS workshop lessons to assist in getting started on a new project.
 
 .. table:: .1. Grid System Size
 
-   ..
    list-table::
       :widths: 50 50
       :header-rows: 0
