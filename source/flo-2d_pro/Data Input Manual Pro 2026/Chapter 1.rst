@@ -144,30 +144,21 @@ If the Q\ :sub:`peak`/A\ :sub:`surf` is much greater than 10.0 cfs/ft\ :sup:`2` 
 After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D Plugin.
 There are QGIS workshop lessons to assist in getting started on a new project.
 
-.. table:: .1. Grid System Size
 
-   ..
+*Table 1.1.
+Grid System Size*
 
-   list-table::
-      :widths: 50 50
-      :header-rows: 0
-
-
-      * - Number of Grid Elements
-        - Model Simulation Speed
-
-      * - < 50,000
-        - Fast (minutes)
-
-      * - 50,000 – 250,000
-        - Moderate (<12 hours)
-
-      * - 250,000 – 1,000,000
-        - Slow (> 12 hours)
-
-      * - > 1,000,000
-        - Very Slow (> 1 day)
-
++---------------------------------+---------------------------------+
+| Number of Grid Elements         | Model Simulation Speed          |
++=================================+=================================+
+| < 50,000                        | Fast (minutes)                  |
++---------------------------------+---------------------------------+
+| 50,000 – 250,000                | Moderate (<12 hours)            |
++---------------------------------+---------------------------------+
+| 250,000 – 1,000,000             | Slow (> 12 hours)               |
++---------------------------------+---------------------------------+
+| 1,000,000                       | Very Slow (> 1 day)             |
++---------------------------------+---------------------------------+
 
 Start simple, then add detail
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
