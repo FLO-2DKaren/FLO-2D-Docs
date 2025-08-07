@@ -1,14 +1,14 @@
 .. vim: syntax=rst
 .. _data_input_manual:
 
-Data Input Manual PRO
+DATA INPUT MANUAL PRO
 =====================
 
 
-PREFACE
+Preface
 -------
 
-FLO-2D INPUT DATA OVERVIEW
+FLO-2D Input Data Overview
 --------------------------
 
 This manual describes the FLO-2D Pro Model data input parameters and their format.
