@@ -112,13 +112,15 @@ Estimate the project area
 
 To create a computationally efficient model, it is best to minimize the grid system around the project area.
 The project computational domain (or grid system) can be outlined using the aerial photography.
-The grid system boundary should be located so that the project area it is not affected by either inflow or outflow conditions.
-The inflow and outflow nodes should be considered as non-essential nodes (sources and sinks) and these should be located away from the project area.
+The grid system boundary should be located so that the project area it is not affected by either inflow or outflow
+conditions.
+The inflow and outflow nodes should be considered as non-essential nodes (sources and sinks) and these should be
+located away from the project area.
 
-If the project area is relatively small compared to the entire hydrologic basin that may need to be modeled, more than one FLO-2D simulation could be
-considered.
-A coarse grid system can be established for watershed or river system and a more detailed grid system created for the local project area where flood
-detail may be important.
+If the project area is relatively small compared to the entire hydrologic basin that may need to be modeled, more
+than one FLO-2D simulation could be considered.
+A coarse grid system can be established for watershed or river system and a more detailed grid system created for
+the local project area where flood detail may be important.
 The outflow from the course grid system will constitute the inflow to the detailed grid system.
 
 Selecting the grid element size
