@@ -272,15 +272,15 @@ Channel Modeling
 The 1-D channel component can simulate flow in channels defined by various geometries.
 The flow shares between the channel banks and the floodplain.
 Channels are defined in FLO-2D whenever 1-D flow is more accurate than overland flow.
-They can reduce flooding and help the water move downstream mare quickly than flow on the floodplain.
+They can reduce flooding and help the water move downstream quicker than flow on the floodplain.
 An extensive Channel Guidelines document is available in the Manuals Folder.
 C:\\users\\Public\\Public Documents\\FLO-2D Pro Documenta- tion\\flo_help\\Manuals.
 
 Street Flow
 ~~~~~~~~~~~
 
-Streets may convey or store only a small portion of the total flood volume, but may be important for distributing the flow to remote areas of the grid
-system.
+Streets may convey or store only a small portion of the total flood volume, but may be important for distributing
+the flow to remote areas of the grid system.
 Street flow is simulated as a shallow rectangular channel with curbs.
 Street width and n-values are spatially variable.
 Streets are important to flood distribution in urban areas.
