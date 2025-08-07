@@ -232,36 +232,35 @@ Develop the Project Files
 Some General Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-**Data Input**
+*Data Input*
 
-When the data format appears confusing, review the data files provided in the Example Projects subdirectory of the FLO-2D folder using an ASCII editor
-such as NotePad++©.
+    When the data format appears confusing, review the data files provided in the Example Projects subdirectory of
+    the FLO-2D folder using an ASCII editor such as NotePad++©.
 
-**File Management**
+*File Management*
 
-The output files are always generated with the same name and will be over- written in subsequent model runs.
-To save any output files that could be overwritten, rename the file or create a new project folder, copy all the
+    The output files are always generated with the same name and will be over- written in subsequent model runs.
+    To save any output files that could be overwritten, rename the file or create a new project folder, copy all the
+    \*.DAT files into it and then run the new flood simulation in that folder.
 
-\*.DAT files into it and then run the new flood simulation in that folder.
+*Graphics Mode*
 
-**Graphics Mode**
-
-To view the floodwave progression during the simulation, run the simulation in graphics mode.
-This switch is set in the QGIS/FLO-2D Plugin by clicking the Control Variables button.
-Then check the Graphics Display mode and the Run button.
+    To view the floodwave progression during the simulation, run the simulation in graphics mode.
+    This switch is set in the QGIS/FLO-2D Plugin by clicking the Control Variables button.
+    Then check the Graphics Display mode and the Run button.
 
 **Things to check when creating the data files:**
 
-   **Grid System**
+   *Grid System*
 
-   The grid system should begin with grid element #1 and have no missing grid element numbers.
-   There should be no dangling grid elements connected only by a diagonal.
+       The grid system should begin with grid element #1 and have no missing grid element numbers.
+       There should be no dangling grid elements connected only by a diagonal.
 
-   **Inflow/Outflow Nodes**
+   *Inflow/Outflow Nodes*
 
-   Inflow and outflow nodes should not have other components assigned to them such as hydraulic structures, streets, ARF’s, etc.
-   Outflow nodes should not be doubled up.
-   Use a single line of outflow nodes.
+       Inflow and outflow nodes should not have other components assigned to them such as hydraulic structures, streets, ARF’s, etc.
+       Outflow nodes should not be doubled up.
+       Use a single line of outflow nodes.
 
 Model Component considerations
 ----------------------------------
