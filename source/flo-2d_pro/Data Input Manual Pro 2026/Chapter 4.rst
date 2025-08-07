@@ -167,7 +167,7 @@ but can still be used).
 
    0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL**
 
-   **SHALLOWN ENCROACH**
+                                         **SHALLOWN ENCROACH**
 
    2 3.0 Line 6: **NOPRTFP DEPRESSDEPTH**
 
@@ -177,19 +177,21 @@ but can still be used).
 
    0.1 Line 9: **GRAPTIM**
 
-Notes:
+   Notes:
 
-   Line 5: If IFLOODWAY = 0 omit ENCROACH
+       Line 5: If IFLOODWAY = 0 omit ENCROACH
 
-   Line 7: If ICHANNEL = 0 omit Line 7
+       Line 7: If ICHANNEL = 0 omit Line 7
 
-   Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required
+       Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required
 
-   Line 8: If ITIMTEP = 11, 21, 31, 41, or 51 add STARTTIMTEP and ENDTIMTEP
+       Line 8: If ITIMTEP = 11, 21, 31, 41, or 51 add STARTTIMTEP and ENDTIMTEP
 
-   Line 9: If LPLOT = 0 omit Line 9
+       Line 9: If LPLOT = 0 omit Line 9
 
-   CONT.DAT File Example
+
+
+CONT.DAT File Example
 
 24.0 0.10 2 0 0
 
