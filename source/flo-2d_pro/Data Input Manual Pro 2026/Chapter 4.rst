@@ -27,7 +27,9 @@ Array variables are indexed as shown in the following example from the INFLOW.DA
 
        I and J (array indices) represent element number and hydrograph pair.
 
-       **H(I,J,1)** = time (hrs) start of the discretized interval of inflow hydrograph; H(I,J,2) = discharge (cfs).
+       **H(I,J,1)** = time (hrs) start of the discretized interval of inflow hydrograph.
+
+       **H(I,J,2)** = discharge (cfs).
 
        **H(I,J,3)** = mudflow sediment concentration by volume inflow hydrograph.
 
