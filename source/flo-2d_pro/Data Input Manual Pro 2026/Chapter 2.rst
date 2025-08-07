@@ -54,52 +54,59 @@ Run these projects using the Run for FLO-2D Project folder.
 
    *Working with Geo-referenced Images – Goat Camp Creek, Gila County, Ari- zona (Goat subdirectory)*
 
-   This project provides an opportunity to work with the GDS editor compo- nents and capabilities.
-   The aerial photos can be imported and used to edit the various model components such as channels, streets, ARF’s and WRF’s, and levees.
-   This flood simulation includes channel overbank flow from a small river through an urban area.
+   - This project provides an opportunity to work with the GDS editor components and capabilities.
+     The aerial photos can be imported and used to edit the various model components such as channels,
+     streets, ARF’s and WRF’s, and levees.
+     This flood simulation includes channel overbank flow from a small river through an urban area.
 
    *Large River Flooding – Rio Grande, New Mexico (Rio Grande subdirectory)*
 
-   Over 173 miles of the Middle Rio Grande is simulated using surveyed channel cross section data.
-   The river floodplain is confined by levees along most of its length.
-   Use this flood simulation to review the data input in the XSEC.
-   DAT and CHAN.DAT files and river-floodplain discharge exchange.
+   - Over 173 miles of the Middle Rio Grande is simulated using surveyed channel cross section data.
+     The river floodplain is confined by levees along most of its length.
+     Use this flood simulation to review the data input in the XSEC.
+     DAT and CHAN.DAT files and river-floodplain discharge exchange.
 
    *Urban Watershed Flooding – Waikiki Beach, Oahu, Hawaii (Alawai subdirectory)*
 
-   This urban flooding example includes street flow and numerous buildings.
-   Alawai Canal runs through the center of the project area and is open to the ocean.
-   Excess rainfall runs off steep watersheds and enters channels that join the canal system in Waikiki beach.
-   The Alawai Canal is nearly flat and is filled with water from the ocean at the start of the simulation.
+   - This urban flooding example includes street flow and numerous buildings.
+     Alawai Canal runs through the center of the project area and is open to the ocean.
+     Excess rainfall runs off steep watersheds and enters channels that join the canal system in Waikiki beach.
+     The Alawai Canal is nearly flat and is filled with water from the ocean at the start of the simulation.
 
    *Urban Fan and Mudflow Simulation - Barnard Creek, Utah (BARN subdirectory)*
 
-   An example mudflow simulation is provided for an urbanized alluvial fan (Barnard Creek) near Centerville, Utah.
-   This model simulates a mudflow debouching from a small watershed ravine onto a very steep alluvial fan with numerous streets and buildings.
-   The mudflow enters the grid system at a debris basin, flows down a steep street and spreads out into the residential area.
-   The mudflow is viewed overflowing the street, entering side streets and developed lots and becoming more fluid as the floodwave progresses downslope.
-   Buildings have been simulated to account for the loss of storage and flow redirection.
-   The mudflow simulation includes variable sediment concentration and the computation of viscosity and yield stresses.
-   This flood simulation is a good example to review for mudflow, buildings and streets.
+   - An example mudflow simulation is provided for an urbanized alluvial fan (Barnard Creek) near
+     Centerville, Utah.
+     This model simulates a mudflow debouching from a small watershed ravine onto a very steep alluvial fan
+     with numerous streets and buildings.
+     The mudflow enters the grid system at a debris basin, flows down a steep street and spreads out into the
+     residential area.
+     The mudflow is viewed overflowing the street, entering side streets and developed lots and becoming more
+     fluid as the floodwave progresses downslope.
+     Buildings have been simulated to account for the loss of storage and flow redirection.
+     The mudflow simulation includes variable sediment concentration and the computation of viscosity
+     and yield stresses.
+     This flood simulation is a good example to review for mudflow, buildings and streets.
 
    *Ocean Storm Surge/Tsunami Model in an Urban Area – Waikiki Beach, Oahu, Hawaii (Alawai-Tsunami subdirectory)*
 
-   By assigning stage-time relationships to the outflow elements along the Waikiki coast line, the Alawai watershed model is converted to an ocean storm
-   surge or tsunami model.
-   A high-water surface elevation is specified for the coastal elements for a short duration.
-   This results in a rapid progression of the ocean storm surge over the urban area.
-   The ocean surge enters streets and the Alawai Canal in the center of the city.
-   The model demonstrates the application of the FLO-2D model to simulate the overland progression of hurricane storm surges or tsunami waves in urban
-   areas.
+   - By assigning stage-time relationships to the outflow elements along the Waikiki coast line, the Alawai
+     watershed model is converted to an ocean storm surge or tsunami model.
+     A high-water surface elevation is specified for the coastal elements for a short duration.
+     This results in a rapid progression of the ocean storm surge over the urban area.
+     The ocean surge enters streets and the Alawai Canal in the center of the city.
+     The model demonstrates the application of the FLO-2D model to simulate the overland progression of
+     hurricane storm surges or tsunami waves in urban areas.
 
    *Urban Shallow Flooding - Urban Project Example*
 
-   Small isolated portion of a large urban study.
-   This project has examples of trapezoidal channels, culvert, walls, buildings, urban n-values and a simple storm drain system.
+   - Small isolated portion of a large urban study.
+     This project has examples of trapezoidal channels, culvert, walls, buildings, urban n-values and a
+     simple storm drain system.
 
    *Sediment Transport - Sediment Transport Channel Example*
 
-   Fully functional example of sediment transport routing in a 1-D channel.
+   - Fully functional example of sediment transport routing in a 1-D channel.
 
 FLO-2D PowerPoint presentation
 ----------------------------------
