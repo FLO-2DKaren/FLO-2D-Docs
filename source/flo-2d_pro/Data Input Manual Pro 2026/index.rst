@@ -6,6 +6,7 @@ Data Input Manual Pro
 =====================
 
 .. toctree::
+   :maxdepth: 1
 
    Preface
 
