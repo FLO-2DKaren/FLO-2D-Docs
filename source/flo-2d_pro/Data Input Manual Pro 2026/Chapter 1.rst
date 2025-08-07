@@ -3,7 +3,7 @@
 Chapter 1: Flo-2d Installation and Getting Started
 ===================================================
 
-1.1 General
+General
 -----------
 
 Use this document to help create the FLO-2D input data and review the output data.
@@ -17,7 +17,7 @@ QGIS facilitates assigning spatially variable data that can be interpolated from
 PROFILES is used to edit channel geometry data.
 Data files can also be edited using an ASCII text editor such as UltraEdit© or NotePad++©.
 
-1.2 FLO-2D Installation
+FLO-2D Installation
 -----------------------
 
 The FLO-2D Pro model has been compiled for 64-bit multi-core processor computers.
@@ -30,14 +30,14 @@ The FLO-2D model, and the processor programs are loaded into the FLO-2D Pro fold
 The FLO-2D resource files are saved to the FLO-2D Documentation folder under C:\\Users\\Public\\Public Documents\\FLO-2D PRO Documentation.
 These files include helpful resources such as user manuals, example projects, lessons and PowerPoint presentations and instructional handouts.
 
-1.3 Un-installing the FLO-2D Software
+Un-installing the FLO-2D Software
 -------------------------------------
 
 Remove the FLO-2D program and all of its attendant software from the computer with the Windows system Add Remove Programs tool.
 When removing the model, if the option appears to keep shared DLL/OCX files, do not remove them from the computer.
 To completely remove the FLO-2D files, delete the FLO-2D Pro Folder from the Program Files (x86).
 
-1.4 Getting Started
+Getting Started
 -------------------
 
 Updates
@@ -274,7 +274,7 @@ Then check the Graphics Display mode and the Run button.
    Outflow nodes should not be doubled up.
    Use a single line of outflow nodes.
 
-1.5 Model Component considerations
+Model Component considerations
 ----------------------------------
 
 Channel Modeling
