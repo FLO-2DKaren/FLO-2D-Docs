@@ -74,7 +74,7 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
        profile at this point.
        Following interpolation, the slope profile will be more representative of the actual river profile.
 
-    .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_002.png
+        .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_002.png
 
     2. PROFILES will automatically locate the surveyed cross-section data and interpolate the cross-section
        geometry and elevation (thalweg slope) for all
