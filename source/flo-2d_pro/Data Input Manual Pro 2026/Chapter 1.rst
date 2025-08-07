@@ -183,8 +183,8 @@ FLO-2D routes flows in eight directions as shown in figure 1.1 below.
 
     .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter1/DIM_Pro_2026_Chapter1_001.png
 
-*Figure 1.1.
-Flow directions.*
+    *Figure 1.1.
+    Flow directions.*
 
 The four compass directions are numbered 1 to 4 and the four diagonal directions are numbered 5 to 8.
 Some components such as levees are placed on boundaries of the grid element.
