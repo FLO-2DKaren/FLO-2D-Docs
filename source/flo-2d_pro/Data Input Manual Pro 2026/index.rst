@@ -14,7 +14,6 @@ Data Input Manual Pro
    :numbered:
    :maxdepth: 1
 
-   Preface
    Chapter 1
 
 
