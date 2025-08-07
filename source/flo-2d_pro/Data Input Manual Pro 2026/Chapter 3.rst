@@ -32,104 +32,98 @@ A Sharefile account is given to all end users and IT Admin.
 Profiles
 ------------
 
-The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel bed elevation, channel depth, channel
-n-values and channel geometry.
-It will display the channel cross section geometry and interpolate the slope and cross section geometry between surveyed cross sections.
+The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel
+bed elevation, channel depth, channel n-values and channel geometry.
+It will display the channel cross section geometry and interpolate the slope and cross-section geometry
+between surveyed cross sections.
 PRO- FILES can also be used to view output water surface profiles (see the Post-Processor Programs Section).
 Run Profiles from the FLO-2D Plugin.
 
 Before using the PROFILES program, the basic FLO-2D files plus the CHAN.
 DAT file have to be created.
-The XSEC.DAT will also have to be created if surveyed cross section data will be used.
+The XSEC.DAT will also have to be created if surveyed cross-section data will be used.
 The general procedure for using the PRO- FILES program is as follows:
 
-1. Create the six basic FLO-2D data files.
+    1. Create the six basic FLO-2D data files.
+    2. Develop the XSEC.DAT file for surveyed cross section data if necessary.
+    3. Complete the channel data file (CHAN.DAT) based on rectangular, trapezoidal or surveyed (natural)
+       cross-sections.
+    4. For surveyed cross-sections, identify the channel element cross section number XSECNUM in the
+       CHAN.DAT file to represent the cross-section.
+       All other XSECNUM’s will be assigned a zero ‘0’ value.
+    5. Run the PROFILES program from the FLO-2D Plugin or Explorer.
+    6. The model bed slope can be compared with surveyed bed elevations by developing the WSURF.DAT file.
+    7. Save data in PROFILES using the Save menu.
+       This option is activated after an edit has been made.
+       The save option allows for two datasets.
+       The data can be overwritten or saved as new.
+       The data is not written to file until PROFILES is closed.
 
-2. Develop the XSEC.DAT file for surveyed cross section data if necessary.
+Initially the PROFILES program will display a blank screen with a Main Menu showing options to ‘View Segment
+Bed Slope’ or ‘Interpolate Segment Slope/Shape’.
 
-3. Complete the channel data file (CHAN.DAT) based on rectangular, trapezoidal or surveyed (natural) cross sections.
+Interpolating a New Channel with Surveyed Cross-Sections
 
-4. For surveyed cross sections, identify the channel element cross section number XSECNUM in the CHAN.DAT file to represent the cross section.
-   All other XSECNUM’s will be assigned a zero ‘0’ value.
+To interpolate the cross-sections and slope and assign a cross-section to every channel element in PROFILES,
+use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
 
-5. Run the PROFILES program from the FLO-2D Plugin or Explorer.
+    1. Select a channel segment from the list provided in the dialog box shown in the sidebar.
+       If there is only one channel segment, the interpolation will be completed directly.
+       Note that before interpolation, the channel slope profile may look like a stair case because only the
+       surveyed cross-sections define the channel
+       profile at this point.
+       Following interpolation, the slope profile will be more representative of the actual river profile.
 
-6. The model bed slope can be compared with surveyed bed elevations by developing the WSURF.DAT file.
+    .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_002.png
 
-7. Save data in PROFILES using the Save menu.
-   This option is activated after an edit has been made.
-   The save option allows for two datasets.
-   The data can be overwritten or saved as new.
-   The data is not written to file until PROFILES is closed.
+    2. PROFILES will automatically locate the surveyed cross-section data and interpolate the cross-section
+       geometry and elevation (thalweg slope) for all
+       those channel elements between the surveyed cross sections within the segment.
+       The following dialog box will appear indicating that the original cross-sections have been renamed with
+       a prefix ‘X-’ before each cross-section name.
 
-Initially the PROFILES program will display a blank screen with a Main Menu showing options to ‘View Segment Bed Slope’ or ‘Interpolate Segment Slope/
-Shape’.
+    3. Click ‘OK’ in the dialog box to view the interpolated bedslope.
 
-Interpolating a New Channel with Surveyed Cross Sections
+       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_003.png
 
-To interpolate the cross sections and slope and assign a cross section to every channel element in PROFILES, use the ‘Interpolate Segment Slope/Shape’
-menu option as follows:
+    4. Click on the ‘View Local Reach’ button on the menu bar.
+       Click anywhere along the bedslope profile to zoom in on a local reach of 10 channel elements.
 
-1. Select a channel segment from the list provided in the dialog box shown in the sidebar.
-   If there is only one channel segment, the interpolation will be completed directly.
-   Note that before interpolation, the channel slope profile may look like a stair case because only the surveyed cross sections define the channel
-   profile at this point.
-   Following interpolation, the slope profile will be more representative of the actual river profile.
+       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_004.png
 
-..
+    5. Click on ‘View/Edit Cross-Section Data’ to view the following dialog box displaying the channel element
+       characteristics:
 
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_002.png
+       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_005.png
 
+    6. Click on the ‘Xsec’ button in the dialog box to view the cross-section data and image.
 
-2. PROFILES will automatically locate the surveyed cross section data and interpolate the cross-section geometry and elevation (thalweg slope) for all
-   those channel elements between the surveyed cross sections within the segment.
-   The following dialog box will appear indicating that the original cross sections have been renamed with a prefix ‘X-’ before each cross-section name.
+       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_006.png
 
-3. Click ‘OK’ in the dialog box to view the interpolated bedslope.
+    7. View additional cross-sections by clicking on the “Up” and “Down” but- tons in the dialog box.
+       The computed cross section geometry and all the cross-section station and elevation data can be
+       reviewed and edited.
+       Edit the channel and cross-section data by adding or deleting stations and elevations, revising the
+       Manning’s n-value, or raising or lowering the entire cross-section.
 
-..
+    8. Interpolate bedslope and or channel geometry.
+       Identify the Upstream and Downstream channel elements in the group boxes labeled ‘Slope and Xsection
+       Interpolation’.
+       Use ‘Up’ and ‘Down’ buttons to locate one of the surveyed cross sections and then type in the other either
+       upstream or down- stream channel elements.
+       There may be several channel elements between two cross-sections selected for interpolation.
+       Click on either the ‘Slope Only’ or ‘Shape/Slope’ buttons to interpolate either the channel bed slope or
+       slope and the cross-section shape.
+       The cross-section geometry is linearly interpolated according to top width and distance and is adjusted
+       for the weighted flow area.
+       One cross-section is overlaid on the other cross-section, stretched or contracted and the elevations
+       averaged.
 
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_003.png
+       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_007.png
 
-4. Click on the ‘View Local Reach’ button on the menu bar.
-   Click anywhere along the bedslope profile to zoom in on a local reach of 10 channel elements.
+    9.  Save the results frequently by clicking on ‘Save’ on the menu bar.
+        The saved data will not be written to file until the program is closed.
 
-..
-
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_004.png
-
-5. Click on ‘View/Edit Cross Section Data’ to view the following dialog box displaying the channel element characteristics:
-
-..
-
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_005.png
-
-6. Click on the ‘Xsec’ button in the dialog box to view the cross-section data and image.
-
-..
-
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_006.png
-
-7. View additional cross sections by clicking on the “Up” and “Down” but- tons in the dialog box.
-   The computed cross section geometry and all the cross-section station and elevation data can be reviewed and edited.
-   Edit the channel and cross section data by adding or deleting stations and elevations, revising the Manning’s n-value, or raising or lowering the
-   entire cross section.
-
-8. Interpolate bedslope and or channel geometry.
-   Identify the Upstream and Downstream channel elements in the group boxes labeled ‘Slope and Xsection Interpolation’.
-   Use ‘Up’ and ‘Down’ buttons to locate one of the surveyed cross sections and then type in the other either upstream or down- stream channel elements.
-   There may be several channel elements between two cross sections selected for interpolation.
-   Click on either the ‘Slope Only’ or ‘Shape/Slope’ buttons to interpolate either the channel bed slope or slope and the cross-section shape.
-   The cross-section geometry is linearly interpolated according to top width and distance and is adjusted for the weighted flow area.
-   One cross section is overlaid on the other cross section, stretched or contracted and the elevations averaged.
-
-..
-
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_007.png
-
-9.  Save the results frequently by clicking on ‘Save’ on the menu bar.
-    The saved data will not be written to file until the program is closed.
-
-10.
-NOTE: Perform the initial channel interpolation of the cross sections automatically with the FLO-2D plugin.
+    .. note::
+       Perform the initial channel interpolation of the cross sections automatically with the FLO-2D plugin.
 
