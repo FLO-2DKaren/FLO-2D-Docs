@@ -153,7 +153,9 @@ but can still be used).
 +-----------------+-----------------------+--------------------+-----------------------------------+
 
 
-   CONT.DAT File Variables
+*CONT.DAT File Variables*
+
+.. code-block::
 
    24.0 0.10 2 0 0 Line 1: **SIMUL TOUT LGPLOT METRIC IBACKUP**
 
