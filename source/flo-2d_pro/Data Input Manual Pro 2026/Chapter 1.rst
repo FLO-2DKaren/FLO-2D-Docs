@@ -127,8 +127,9 @@ Selecting the grid element size
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 See the FLO-2D Reference Manual for more instructions.
-Once the overall project area has been identified, estimate the grid system size (as a rough rectangle) and determine the approximate number of grid
-elements that would be required for different size square grid elements such as 50 ft, 100 ft, 200 ft, etc.
+Once the overall project area has been identified, estimate the grid system size (as a rough rectangle) and determine
+the approximate number of grid elements that would be required for different size square grid elements such as 50 ft,
+100 ft, 200 ft, etc.
 The grid element size will control how fast the FLO-2D flood simulation will run.
 
 To help with the grid element size selection, the following criteria are suggested based on a rough estimate of peak discharge.
