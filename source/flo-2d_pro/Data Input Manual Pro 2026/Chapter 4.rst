@@ -19,7 +19,7 @@ The variables are listed line by line and each line may contain several variable
 bold text and capital letters.
 Array variables are indexed as shown in the following example from the INFLOW.DAT file, Line 3:
 
-   **Line 3 HYDCHAR = ‘H’, HP(I,J,1), HP(I,J,2), HP(I,J,3)**
+   Line 3 **HYDCHAR = ‘H’, HP(I,J,1), HP(I,J,2), HP(I,J,3)**
 
    *I = 1, J = 1, Number of inflow hydrograph pairs*
 
