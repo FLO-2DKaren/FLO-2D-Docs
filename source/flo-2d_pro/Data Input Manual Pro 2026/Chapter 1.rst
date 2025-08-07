@@ -102,11 +102,10 @@ the flood and rainfall volume.
 
 **Floodplain and channel detail**
 
-If river channels, bridges, culverts, buildings and streets are to be simulated, the user must be able to locate these features with respect to
-individual grid elements.
-Aerial imagery and shape files are used for this purpose.
-Additional data may be required for these components including bridge and culvert rating curves or tables, streets width and curb height, and river
-cross section surveys.
+If river channels, bridges, culverts, buildings and streets are to be simulated, the user must be able to locate
+these features with respect to individual grid elements. Aerial imagery and shapefiles are used for this purpose.
+Additional data may be required for these components including bridge and culvert rating curves or tables, streets
+width and curb height, and river cross-section surveys.
 
 Estimate the project area
 ~~~~~~~~~~~~~~~~~~~~~~~~~
