@@ -167,27 +167,22 @@ The first flood simulation for any project will be a simple overland flow model 
 
 A suggested order of component construction is as follows:
 
-- Rainfall/Infiltration
-
-- Channels
-
-- Levees
-
-- Streets
-
-- Buildings
-
-- Hydraulic Structures (culverts, weirs and bridges)
-
-- Storm Drains
-
-- Multiple Channel (rills and gullies)
-
-- Mud and debris flows/sediment transport
+    - Rainfall/Infiltration
+    - Channels
+    - Levees
+    - Streets
+    - Buildings
+    - Hydraulic Structures (culverts, weirs and bridges)
+    - Storm Drains
+    - Multiple Channel (rills and gullies)
+    - Mud and debris flows/sediment transport
 
 As new components are added to a model and tested, other components switches can be turned off in the CONT.DAT file.
 
-FLO-2D routes flows in eight directions as shown in the sidebar figure.
+FLO-2D routes flows in eight directions as shown in figure 1.1 below.
+
+.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter1/DIM_Pro_2026_Chapter1_001.png
+
 The four compass directions are numbered 1 to 4 and the four diagonal directions are numbered 5 to 8.
 Some components such as levees are placed on boundaries of the grid element.
 The grid element boundaries constitute an octagon for components associated with the boundary.
