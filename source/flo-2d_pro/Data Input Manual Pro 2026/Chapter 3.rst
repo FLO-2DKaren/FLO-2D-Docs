@@ -128,7 +128,7 @@ menu option as follows:
 .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_007.png
 
 9.  Save the results frequently by clicking on ‘Save’ on the menu bar.
-   The saved data will not be written to file until the program is closed.
+    The saved data will not be written to file until the program is closed.
 
 10.
 NOTE: Perform the initial channel interpolation of the cross sections automatically with the FLO-2D plugin.
