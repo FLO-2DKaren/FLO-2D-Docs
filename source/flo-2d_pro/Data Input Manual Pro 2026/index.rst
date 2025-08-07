@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 .. _data_input_manual:
 
-DATA INPUT MANUAL PRO
+DATA Input Manual Pro
 =====================
 
 
