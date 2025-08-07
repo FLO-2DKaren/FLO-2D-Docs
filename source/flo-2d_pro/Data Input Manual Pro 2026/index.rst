@@ -6,6 +6,11 @@ Data Input Manual Pro
 =====================
 
 .. toctree::
+   :maxdepth: 1
+
+   Preface
+
+.. toctree::
    :numbered:
    :maxdepth: 1
 
