@@ -117,18 +117,17 @@ The files can be found in FLO-2D Pro Documentation\\flo_help\\PowerPoint Present
 Other help documents
 ------------------------
 
-Several documents in the FLO-2D Handout folder provide advanced model guidance and discussion of specific components and model techniques.
+Several documents in the FLO-2D Handout folder provide advanced model guidance and discussion of specific
+components and model techniques.
 They can be found in FLO-2D Pro Documentation\\flo_help\\Handouts.
 
 Metric option
 -----------------
 
-The user can choose either the English or Metric system of units (for the Metric system set METRIC = 1 in the CONT.DAT file).
+The user can choose either the English or Metric system of units (for the Metric system set METRIC = 1 in
+the CONT.DAT file).
 When using the Metric system, substitute the appropriate metric unit for the English unit in the data files.
 The following basic units are used in the model:
-
-Manning’s n-Value is the same for both English and Metric units.
-The conversion is part of the flood routing equation.
 
 *Table 2.1. ENGLISH/METRIC.*
 
@@ -164,3 +163,7 @@ The conversion is part of the flood routing equation.
    * - yield stress
      - dynes/cm\ :sup:`2`
      - dynes/cm\ :sup:`2`
+
+
+Manning’s n-Value is the same for both English and Metric units.
+The conversion is part of the flood routing equation.
