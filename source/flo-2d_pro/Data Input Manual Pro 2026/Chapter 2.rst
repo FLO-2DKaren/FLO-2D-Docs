@@ -124,27 +124,37 @@ The following basic units are used in the model:
 Manning’s n-Value is the same for both English and Metric units.
 The conversion is part of the flood routing equation.
 
-*TABLE 2.1.
-ENGLISH/METRIC.*
+*Table 2.1. ENGLISH/METRIC.*
 
-+-------------------+-----------------------------+----------------------+
-| Variable          | English                     | Metric               |
-+===================+=============================+======================+
-| discharge         | ft\ :sup: `3`/s (cfs)       | m\ :sup: `3`/s (cms) |
-+-------------------+-----------------------------+----------------------+
-| hydraulic         | inches/hr                   | mm/hr**              |
-|conductivity       |                             |                      |
-+-------------------+-----------------------------+----------------------+
-| rainfall          | inches                      | mm                   |
-| abstraction       |                             |                      |
-+-------------------+-----------------------------+----------------------+
-| soil suction      | inches                      | mm                   |
-+-------------------+-----------------------------+----------------------+
-| velocity          | ft/s (fps)                   m/s (mps)             |
-+-------------------+-----------------------------+----------------------+
-| volume            | acre-ft                     | m3 (cu-m)            |
-+-------------------+-----------------------------+----------------------+
-| viscosity         | dynes-s/cm2                 | dynes-s/cm2          |
-+-------------------+-----------------------------+----------------------+
-| yield stress      | dynes/cm2                   | dynes/cm2            |
-+-------------------+-----------------------------+----------------------+
+.. list-table::
+   :widths: 25 25 25
+   :header-rows: 1
+   :class: longtable
+
+   * - **Variable**
+     - **English**
+     - **Metric**
+   * - discharge
+     - ft\ :sup:`3`/s (cfs)
+     - m\ :sup:`3`/s (cms)
+   * - hydraulic conductivity
+     - inches/hr
+     - mm/hr
+   * - rainfall abstraction
+     - inches
+     - mm
+   * - soil suction
+     - inches
+     - mm
+   * - velocity
+     - ft/s (fps)
+     - m/s (mps)
+   * - volume
+     - acre-ft
+     - m\ :sup:`3` (cu-m)
+   * - viscosity
+     - dynes-s/cm\ :sup:`2`
+     - dynes-s/cm\ :sup:`2`
+   * - yield stress
+     - dynes/cm\ :sup:`2`
+     - dynes/cm\ :sup:`2`
