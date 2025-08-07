@@ -200,41 +200,34 @@ It is suggested that the data files be saved after finishing each component.
 Develop the Project Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Create a Project Folder**
+*Create a Project Folder*
 
-Start by creating a subdirectory for the project data files and import the DTM data base files, map images and aerial photos.
+    Start by creating a subdirectory for the project data files and import the DTM data base files, map images and
+    aerial photos.
 
-**Build the Project Files**
+*Build the Project Files*
 
-Use the QGIS/FLO-2D Plugin to graphically create and edit the grid system Follow the QGIS Lesson 1 “Getting Started” lesson.
+    Use the QGIS/FLO-2D Plugin to graphically create and edit the grid system Follow the QGIS Lesson 1
+    “Getting Started” lesson.
 
-**Run the FLO-2D model**
+*Run the FLO-2D model*
 
-The required data files for a basic overland flood model are:
+    The required data files for a basic overland flood model are:
 
-- FPLAIN.DAT
+        - FPLAIN.DAT
+        - CADPTS.DAT
+        - CONT.DAT
+        - TOLER.DAT
+        - INFLOW.DAT
+        - OUTFLOW.DAT
+        - TOPO.DAT
+        - MANNINGS_N.DAT
 
-- CADPTS.DAT
+    The INFLOW.DAT and OUTFLOW.DAT files are optional but are typically necessary for most applications.
+    Run a FLO-2D simulation by:
 
-- CONT.DAT
-
-- TOLER.DAT
-
-- INFLOW.DAT
-
-- OUTFLOW.DAT
-
-- TOPO.DAT
-
-- MANNINGS_N.DAT
-
-The INFLOW.DAT and OUTFLOW.DAT files are optional but are typically necessary for most applications.
-Run a FLO-2D simulation by:
-
-i.  QGIS - click on ‘\ *Run FLO-2D’* command in the File menu.
-
-ii.
-Copy the ‘\ *FLOPRO.EXE’* file in the project folder and double click it.
+        i.  QGIS - click on ‘\ *Run FLO-2D’* command in the File menu.
+        ii. Copy the ‘\ *FLOPRO.EXE’* file in the project folder and double click it.
 
 Some General Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~~
