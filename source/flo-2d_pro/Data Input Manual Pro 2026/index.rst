@@ -6,7 +6,7 @@ Data Input Manual PRO
 
 
 PREFACE
-=======
+-------
 
 FLO-2D INPUT DATA OVERVIEW
 --------------------------
