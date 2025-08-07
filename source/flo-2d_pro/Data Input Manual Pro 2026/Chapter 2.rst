@@ -16,33 +16,32 @@ Access lessons here: https://documentation.flo-2d.com/
 
    *QGIS Lesson 1 – Getting Started*
 
-   Part 1 of this lesson is setting up the grid and assigning elevation, roughness and saving the project.
-
-   Part 2 of this lesson shows the user how to build recovery and backup files.
-
-   Part 3 of this lesson shows the user how to add inflow nodes, assign rainfall and add infiltration.
+   - Part 1 of this lesson is setting up the grid and assigning elevation, roughness and saving the project.
+   - Part 2 of this lesson shows the user how to build recovery and backup files.
+   - Part 3 of this lesson shows the user how to add inflow nodes, assign rainfall and add infiltration.
 
    *QGIS Lesson 2 – Channels, Culverts*
 
-   This lesson outlines the process of setting up channels, hydraulic structures and in QGIS using the FLO-2D Plugin.
+   - This lesson outlines the process of setting up channels, hydraulic structures and in QGIS using the
+     FLO-2D Plugin.
 
    *QGIS Lesson 3 – Storm Drain Urban*
 
-   This lesson outlines the process of converting a storm drain network from
-
-   shapefile into a FLO-2D Storm Drain system in QGIS using the FLO-2D Plugin.
+   - This lesson outlines the process of converting a storm drain network from
+     shapefile into a FLO-2D Storm Drain system in QGIS using the FLO-2D Plugin.
 
    *QGIS Lesson 4 – Buildings and Walls*
 
-   This lesson shows the user how to set up buildings and walls using QGIS and the FLO-2D Plugin.
+   - This lesson shows the user how to set up buildings and walls using QGIS and the FLO-2D Plugin.
 
    *QGIS Lesson 5 – Realtime Rainfall*
 
-   This lesson outlines the process of generating real-time rainfall data for each cell in QGIS using the FLO-2D Plugin.
+   - This lesson outlines the process of generating real-time rainfall data for each cell in QGIS using the
+     FLO-2D Plugin.
 
    *QGIS Lesson 6 – Hydraulic Structures*
 
-   This lesson outlines the process to create culverts using rating tables in QGIS with the FLO-2D Plugin.
+   - This lesson outlines the process to create culverts using rating tables in QGIS with the FLO-2D Plugin.
 
 FLO-2D example flood simulations
 ------------------------------------
