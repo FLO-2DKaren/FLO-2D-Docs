@@ -81,12 +81,15 @@ Hydrology, Base Mapping and DTM Points
 To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model (DTM) data which might consist of
 LiDAR data, point shape files, rasters, contour maps or digital elevation model DEM data.
 The imagery and DTM points must have the same coordinate system.
-The most common formats for digital imagery are:
+The most common formats for digital imagery are; \*.tif, \*.sid and \*.jpg files
 
-\*.tif, \*.sid and \*.jpg files and the images must have corresponding world files (e.g. \*.tfw, \*.sdw and \*.jgw).
-If photogrametric or LiDAR data are not available, DEM data can be used.
-Elevation data formats that are accepted by the QGIS/FLO-2D Plugin are ASCII Grid, ASCII xyz data sets and ArcGIS elevation shapefiles and Elevation
-Raster GeoTiff files.
+.. note::
+   Images must have corresponding world files (e.g. \*.tfw, \*.sdw and \*.jgw).
+
+   If photogrametric or LiDAR data are not available, DEM data can be used.
+
+   Elevation data formats that are accepted by the QGIS/FLO-2D Plugin are ASCII Grid, ASCII xyz data sets and
+   ArcGIS elevation shapefiles and Elevation Raster GeoTiff files.
 
 **Hydrologic data**
 
