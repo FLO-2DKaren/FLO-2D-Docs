@@ -1,20 +1,22 @@
 .. vim: syntax=rst
 
-CHAPTER 4: INPUT DATA FILE DESCRIPTION
+Chapter 4: Input Data File Description
 ======================================
 
-4.1 General
+General
 -----------
 
 The FLO-2D data file variables and format are described in this chapter.
 These files are accessed directly by the model.
-For each data file a list of the variables, a portion of an example data file, and an alphabetical description of the variables are presented.
+For each data file a list of the variables, a portion of an example data file, and an alphabetical description of
+the variables are presented.
 Some instructional comments follow the variable descriptions for clarification.
 QGIS or any ASCII text editor can be used to create or edit the data files.
 
-All of the data entries, integers (i) or real numbers (r) are in free format space de- limited.
+All of the data entries, integers (i) or real numbers (r) are in free format space delimited.
 The ID characters (letters) are case sensitive.
-The variables are listed line by line and each line may contain several variables that are highlighted by bold text and capital letters.
+The variables are listed line by line and each line may contain several variables that are highlighted by
+bold text and capital letters.
 Array variables are indexed as shown in the following example from the INFLOW.DAT file, Line 3:
 
    **Line 3 HYDCHAR = ‘H’, HP(I,J,1), HP(I,J,2), HP(I,J,3)**
@@ -23,16 +25,16 @@ Array variables are indexed as shown in the following example from the INFLOW.DA
 
    where:
 
-   I and J (array indices) represent element number and hydrograph pair;
+       I and J (array indices) represent element number and hydrograph pair;
 
-   **H(I,J,1)** = time (hrs) start of the discretized interval of inflow hydrograph; H(I,J,2) = discharge (cfs);
+       **H(I,J,1)** = time (hrs) start of the discretized interval of inflow hydrograph; H(I,J,2) = discharge (cfs);
 
-   **H(I,J,3)** = mudflow sediment concentration by volume inflow hydrograph.
+       **H(I,J,3)** = mudflow sediment concentration by volume inflow hydrograph.
 
-   **HDYCHAR** is a line identifier character ‘H’.
+       **HDYCHAR** is a line identifier character ‘H’.
 
-The variables in Line 3 on the INFLOW.DAT file represent one line of a discretized inflow hydrograph that is repeated for each of the hydrograph pairs
-for each inflow grid element.
+The variables in Line 3 on the INFLOW.DAT file represent one line of a discretized inflow hydrograph that is
+repeated for each of the hydrograph pairs for each inflow grid element.
 The Line 3 data for the first four-time steps is as follows:
 
 .. list-table::
@@ -60,13 +62,13 @@ The Line 3 data for the first four-time steps is as follows:
 Backup files of the data files (\*.BAC) can be created when program reads the data.
 The backup option is invoked by a switch (IBACKUP) in the CONT.DAT file.
 
-4.2 List of Program file units
+List of Program file units
 ------------------------------
 
 The following table lists the data and output file (‘Unit’) numbers that are assigned by the FLO-2D model at runtime.
 These unit numbers may be reported in error messages and referring to these numbers may help to locate input data errors.
 
-4.3 Data files
+Data files
 --------------
 
 Four data files are required for every flood simulation: CONT.DAT, TOLER.
