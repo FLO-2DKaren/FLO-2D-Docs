@@ -224,6 +224,7 @@ Develop the Project Files
         - MANNINGS_N.DAT
 
     The INFLOW.DAT and OUTFLOW.DAT files are optional but are typically necessary for most applications.
+
     Run a FLO-2D simulation by:
 
         i.  QGIS - click on ‘\ *Run FLO-2D’* command in the File menu.
