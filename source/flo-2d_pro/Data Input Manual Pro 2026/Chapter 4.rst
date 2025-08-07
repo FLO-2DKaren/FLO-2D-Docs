@@ -155,27 +155,26 @@ but can still be used).
 
 *CONT.DAT File Variables*
 
-.. code-block::
 
-   24.0 0.10 2 0 0 Line 1: **SIMUL TOUT LGPLOT METRIC IBACKUP**
+               24.0 0.10 2 0 0 Line 1: **SIMUL TOUT LGPLOT METRIC IBACKUP**
 
-   1 1 0 0 0 Line 2: **ICHANNEL MSTREET LEVEE IWRFS IMULTC**
+               1 1 0 0 0 Line 2: **ICHANNEL MSTREET LEVEE IWRFS IMULTC**
 
-   0 1 0 0 0 0 0 Line 3: **IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM**
+               0 1 0 0 0 0 0 Line 3: **IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM**
 
-   0 0 0 Line 4: **IHYDRSTRUCT IFLOODWAY IDEBRV**
+               0 0 0 Line 4: **IHYDRSTRUCT IFLOODWAY IDEBRV**
 
-   0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL**
+               0.000 0.0 0.0 0.30 0.70 0.150 Line 5: **AMANN DEPTHDUR XCONC XARF FROUDL**
 
-                                         **SHALLOWN ENCROACH**
+                                                     **SHALLOWN ENCROACH**
 
-   2 3.0 Line 6: **NOPRTFP DEPRESSDEPTH**
+               2 3.0 Line 6: **NOPRTFP DEPRESSDEPTH**
 
-   2 Line 7: **NOPRTC**
+               2 Line 7: **NOPRTC**
 
-   0 0.0 Line 8: **ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP**
+               0 0.0 Line 8: **ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP**
 
-   0.1 Line 9: **GRAPTIM**
+               0.1 Line 9: **GRAPTIM**
 
    Notes:
 
