@@ -3,7 +3,7 @@
 Chapter 2: Help and Resources
 =============================
 
-2.1 FLO-2D Tutorials
+FLO-2D Tutorials
 --------------------
 
 **Tutorials**
@@ -44,7 +44,7 @@ Access lessons here: https://documentation.flo-2d.com/
 
    This lesson outlines the process to create culverts using rating tables in QGIS with the FLO-2D Plugin.
 
-2.2 FLO-2D example flood simulations
+FLO-2D example flood simulations
 ------------------------------------
 
 .. _section-1:
@@ -102,19 +102,19 @@ Run these projects using the Run for FLO-2D Project folder.
 
    Fully functional example of sediment transport routing in a 1-D channel.
 
-2.3 FLO-2D PowerPoint presentation
+FLO-2D PowerPoint presentation
 ----------------------------------
 
 These presentations discuss most of the FLO-2D components.
 The files can be found in FLO-2D Pro Documentation\\flo_help\\PowerPoint Presentations.
 
-2.4 Other help documents
+Other help documents
 ------------------------
 
 Several documents in the FLO-2D Handout folder provide advanced model guidance and discussion of specific components and model techniques.
 They can be found in FLO-2D Pro Documentation\\flo_help\\Handouts.
 
-2.5 Metric option
+Metric option
 -----------------
 
 The user can choose either the English or Metric system of units (for the Metric system set METRIC = 1 in the CONT.DAT file).
@@ -124,31 +124,27 @@ The following basic units are used in the model:
 Manning’s n-Value is the same for both English and Metric units.
 The conversion is part of the flood routing equation.
 
-.. list-table::
-   :widths: 100
-   :header-rows: 0
+*TABLE 2.1.
+ENGLISH/METRIC.*
 
-
-   * - TABLE 2.1.
-       ENGLISH/METRIC
-
-   * - **Variable**         |    **English**          |    **Metric**
-
-   * - **discharge**        |    **ft3/s (cfs)**      |    **m3/s (cms)**
-
-   * - **depth**            |    **ft**               |    **m**
-
-   * - **hydraulic          |    **inches/hr**        |    **mm/hr**conductivity**       |                         |
-
-   * - **rainfall and       |    **inches**           |    **mm**abstraction**        |                         |
-
-   * - **soil suction**     |    **inches**           |    **mm**
-
-   * - **velocity**         |    **ft/s (fps)**       |    **m/s (mps)**
-
-   * - **volume**           |    **acre-ft**          |    **m3 (cu-m)**
-
-   * - **viscosity**        |    **dynes-s/cm2**      |    **dynes-s/cm2**
-
-   * - **yield stress**     |    **dynes/cm2**        |    **dynes/cm2**
-
++-------------------+-----------------------------+----------------------+
+| Variable          | English                     | Metric               |
++===================+=============================+======================+
+| discharge         | ft\ :sup: `3`/s (cfs)       | m\ :sup: `3`/s (cms) |
++-------------------+-----------------------------+----------------------+
+| hydraulic         | inches/hr                   | mm/hr**              |
+|conductivity       |                             |                      |
++-------------------+-----------------------------+----------------------+
+| rainfall          | inches                      | mm                   |
+| abstraction       |                             |                      |
++-------------------+-----------------------------+----------------------+
+| soil suction      | inches                      | mm                   |
++-------------------+-----------------------------+----------------------+
+| velocity          | ft/s (fps)                   m/s (mps)             |
++-------------------+-----------------------------+----------------------+
+| volume            | acre-ft                     | m3 (cu-m)            |
++-------------------+-----------------------------+----------------------+
+| viscosity         | dynes-s/cm2                 | dynes-s/cm2          |
++-------------------+-----------------------------+----------------------+
+| yield stress      | dynes/cm2                   | dynes/cm2            |
++-------------------+-----------------------------+----------------------+
