@@ -258,38 +258,50 @@ but can still be used).
        **0.003 - 30**
      - Flow depth (ft or m) for a depth-duration analysis. When a flow depth greater than DEPTHDUR is computed,
 
-       the time duration of inundation for that grid element is tracked and reported in the DEPTHDUR.OUT
-       file (see comment 8).
+       the time duration of inundation for that grid element is tracked and reported in the DEPTHDUR.OUT file
+
+       (see comment 8).
 
    * - ENCROACH
      - **r**
      - **0 - 10**
 
        **0 - 3**
-     - The floodway encroachment increase in flow depth (ft or m).
-       The IFLOODWAY switch must be set to 1 and a previous FLO-2D simulation must be completed for the project to generate the maximum water surface
+     - The floodway encroachment increase in flow depth (ft or m). The IFLOODWAY switch must be set to 1 and
+
+       a previous FLO-2D simulation must be completed for the project to generate the maximum water surface
+
        elevations.
 
    * - ENDTIMTEP
      - r
      -
-     - The end time for the delayed time series output data (hours).
-       Should be greater than STARTTIMTEP and up to SIMUL.
+     - The end time for the delayed time series output data (hours). Should be greater than STARTTIMTEP and
+
+       up to SIMUL.
+
        To shorten the timeseries output, set the value to a lower time limit than SIMUL.
 
    * - FROUDL
      - r
      - **0 - 5**
-     - Limiting Froude number for overland flow.
-       When FROUDL is exceeded, the floodplain n-value is increased by 0.001 for that grid element for the next timestep (see comment 3).
+     - Limiting Froude number for overland flow. When FROUDL is exceeded, the floodplain n-value is
+
+       increased by 0.001 for that grid element for the next timestep (see comment 3).
+
        The increased n-values are reported in the ROUGH.OUT and FPLAIN.RGH files (see comments 3 and 4).
 
    * - GRAPTIM
      - r
      - **0.01 - 10.**
-     - Time interval in hours that the graphics display is updated (e.g. set GRAPTIM = 0.02 for a frequent update).
+     - Time interval in hours that the graphics display is updated (e.g. set GRAPTIM = 0.02 for a
+
+       frequent update).
+
        GRAPH- TIM is required when LGPLOT = 2.
+
        This variable will not affect the file output data time interval (TOUT).
+
        The graphics mode is limited to a 48-day inflow hydrograph.
 
    * - IBACKUP
@@ -299,9 +311,15 @@ but can still be used).
        **1 = on**
 
        **2**
-     - IBACKUP = 1 creates a backup file of all the data files with a \*.BAC extension for data error troubleshooting.
+     - IBACKUP = 1 creates a backup file of all the data files with a \*.BAC extension for data
+
+       error troubleshooting.
+
        It also enables the model to be resumed following termination from the last output interval.
-       IBACKUP = 2 enables elevation changes for outflow nodes made at runtime to be permanently written to the FPLAIN.RGH file (see comment 10).
+
+       IBACKUP = 2 enables elevation changes for outflow nodes made at runtime to be permanently
+
+       written to the FPLAIN.RGH file (see comment 10).
 
    * - ICHANNEL
      - s
@@ -335,12 +353,18 @@ but can still be used).
 
        An initial FLO-2D flood simulation must be completed prior to a floodway simulation (see comment 5).
 
-       If IFLOODWAY = 2, the floodway base flow condition is defined by the DEPFP.OUT from a previous run that lists the maximum flow depth associated with
-       an inflow hydro- graph that represents only the base flow.
+       If IFLOODWAY = 2, the floodway base flow condition is defined by the DEPFP.OUT from a previous run
+
+       that lists the maximum flow depth associated with an inflow hydro- graph that represents only the
+
+       base flow.
 
        Run the baseflow run first and then set the IFLOODWAY
 
-       = 2 and run the flood simulation in the same folder so that a flood arrival time and a peak flood time are reported separately.
+       = 2 and run the flood simulation in the same folder so that a flood arrival time and a peak flood time
+
+       are reported separately.
+
        Results in TIME_TO_ABOVE_BASFLOW.OUT
 
    * - IHYDRSTRUCT
@@ -349,15 +373,18 @@ but can still be used).
 
        **1 = on**
      - Set IHYDRSTRUCT = 1 to simulate hydraulic structures either on the floodplain or in the channel.
-       The HYSTRUC.
-       DAT file must be created.
+
+       The HYSTRUC.DAT file must be created.
 
    * - IMULTC
      - s
      - **0 = off**
 
        **1 = on**
-     - Set IMULTC = 1 to simulate multiple channel (rill and gully flow) rather than overland sheet flow between multiple channel elements.
+     - Set IMULTC = 1 to simulate multiple channel (rill and gully flow) rather than overland sheet flow
+
+       between multiple channel elements.
+
        The MULT.DAT file must be created.
 
    * - IMODFLOW
@@ -365,15 +392,18 @@ but can still be used).
      - **0 = off**
 
        **1 = on**
-     - Set IMODFLOW = 1 to simulate surface-groundwater exchange.
-       This switch initiated the linked MODFLOW groundwater model a during the FLO-2D simulation.
+     - Set IMODFLOW = 1 to simulate surface-groundwater exchange. This switch initiated the linked MODFLOW
+
+       groundwater model a during the FLO-2D simulation.
 
    * - INFIL
      - s
      - **0 = off**
 
        **1 = on**
-     - INFIL = 1 initiates an infiltration subroutine using the Green-Ampt infiltration model for either channel or over- land infiltration.
+     - INFIL = 1 initiates an infiltration subroutine using the Green-Ampt infiltration model for either
+
+       channel or over- land infiltration.
        The INFIL.DAT file must be created.
 
    * - IRAIN
