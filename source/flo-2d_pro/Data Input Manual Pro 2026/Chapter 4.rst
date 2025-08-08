@@ -456,10 +456,7 @@ but can still be used).
 
        41 = All time series output is written for the time interval.
 
-       51 = Extract a time series during the time interval for specific
-
-       cells.
-       Requires TIMDEPCELL.DAT
+       51 = Extract a time series during the time interval for specific cells. Requires TIMDEPCELL.DAT
 
    * - IWRFS
      - s
