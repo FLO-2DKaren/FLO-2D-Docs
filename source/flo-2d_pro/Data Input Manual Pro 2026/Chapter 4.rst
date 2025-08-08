@@ -608,14 +608,14 @@ but can still be used).
      - r
      - **0 - 0.60**
      - Volumetric concentration to bulk the inflow discharge hydrograph (channel or floodplain).
-       For example, set XCONC
 
-       = 0.20 for a concentration of 20% by volume.
-       This will account for sediment bulking without initiating the hyper- concentrated sediment transport routine.
+       For example, set XCONC = 0.20 for a concentration of 20% by volume. This will account
+
+       for sediment bulking without initiating the hyperconcentrated sediment transport routine.
+
        If simulating clear water flooding, set XCONC = 0.
-       If MUD = 2, XCONC is the global mudflow or tailings sediment concentration by
 
-       volume.
+       If MUD = 2, XCONC is the global mudflow or tailings sediment concentration by volume.
 
 
 **Instructional Comments**
