@@ -715,7 +715,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
        0.0 &lt; flow depth &lt; 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
        0.2 ft (0.06 m) &lt; flow depth &lt; 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2.<br>
-       0.5 ft (0.15 m) &lt; flow depth &lt; 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = nb *1.5* e-(0.4 depth/dmax)<br>
+       0.5 ft (0.15 m) &lt; flow depth &lt; 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = nb *1.5* e<sup>-(0.4 depth/dmax)</sup><br>
        3 ft (1 m) &lt; flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
 
    10.
