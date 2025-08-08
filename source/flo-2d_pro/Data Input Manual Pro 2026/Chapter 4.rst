@@ -249,7 +249,6 @@ but can still be used).
 
        A typical value of DEPRESSDEPTH 3.0 (default value = zero).
 
-
        (see comments 11 and 12).
 
    * - DEPTHDUR
@@ -257,8 +256,9 @@ but can still be used).
      - **0.01 - 100**
 
        **0.003 - 30**
-     - Flow depth (ft or m) for a depth-duration analysis.
-       When a flow depth greater than DEPTHDUR is computed, the time duration of inundation for that grid element is tracked and reported in the DEPTHDUR.OUT
+     - Flow depth (ft or m) for a depth-duration analysis. When a flow depth greater than DEPTHDUR is computed,
+
+       the time duration of inundation for that grid element is tracked and reported in the DEPTHDUR.OUT
        file (see comment 8).
 
    * - ENCROACH
