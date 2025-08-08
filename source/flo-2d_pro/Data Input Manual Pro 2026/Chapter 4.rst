@@ -218,17 +218,19 @@ but can still be used).
        **-99 > 1.0**
      - Increments the floodplain Manning’s n roughness coefficient at runtime.
 
-       If AMANN is 0, n = n
+       If AMANN is 0, n = n.
 
-       If the ABS(AMANN) < 1, n = n + AMANN (positive or negative)
+       If the ABS(AMANN) < 1, n = n + AMANN (positive or negative).
 
-       If the AMANN > 1, n = n \* AMANN (positive)
+       If the AMANN > 1, n = n \* AMANN (positive).
 
-       If the AMANN < -1, n = n \* (1 + AMANN) where AMANN is negative
+       If the AMANN < -1, n = n \* (1 + AMANN) where AMANN is negative.
 
-       After AMANN is applied, the shallow n is applied
+       After AMANN is applied, the shallow n is applied.
 
-       If AMANN is -99 no depth integrate n-value adjustment and no adjustment for exceeding Courant number.
+       If AMANN is -99 no depth integrate n-value adjustment and no adjustment for
+
+       exceeding Courant number.
 
    * - DEPRESS-DEPTH
      - **r**
@@ -241,9 +243,9 @@ but can still be used).
 
        A value of DEPRESSDEPTH = 3.0 ft is suggested.
 
-       Depressed elements may be real, but in most cases isolated depressed elements are a result of poor
+       Depressed elements may be real, but in most cases isolated depressed elements are a result
 
-       topographic data.
+       of poor topographic data.
 
        Identifies low levee crest elevations.
 
@@ -298,7 +300,7 @@ but can still be used).
 
        frequent update).
 
-       GRAPH- TIM is required when LGPLOT = 2.
+       GRAPHTIM is required when LGPLOT = 2.
 
        This variable will not affect the file output data time interval (TOUT).
 
@@ -355,15 +357,13 @@ but can still be used).
 
        If IFLOODWAY = 2, the floodway base flow condition is defined by the DEPFP.OUT from a previous run
 
-       that lists the maximum flow depth associated with an inflow hydro- graph that represents only the
+       that lists the maximum flow depth associated with an inflow hydrograph that represents only the
 
        base flow.
 
-       Run the baseflow run first and then set the IFLOODWAY
+       Run the baseflow run first and then set the IFLOODWAY = 2 and run the flood simulation in the same
 
-       = 2 and run the flood simulation in the same folder so that a flood arrival time and a peak flood time
-
-       are reported separately.
+      folder so that a flood arrival time and a peak flood time are reported separately.
 
        Results in TIME_TO_ABOVE_BASFLOW.OUT
 
@@ -403,7 +403,8 @@ but can still be used).
        **1 = on**
      - INFIL = 1 initiates an infiltration subroutine using the Green-Ampt infiltration model for either
 
-       channel or over- land infiltration.
+       channel or overland infiltration.
+
        The INFIL.DAT file must be created.
 
    * - IRAIN
