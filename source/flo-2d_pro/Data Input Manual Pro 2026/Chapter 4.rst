@@ -711,15 +711,13 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
    The following rules apply:
 
-   0.0 < flow depth < 0.2 ft (0.06 m) n = SHALLOWN value
+   0.0 < flow depth < 0.2 ft (0.06 m) \, \, \, n = SHALLOWN value
 
-   0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m) n = SHALLOWN/2.
+   0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m) \, \, \, n = SHALLOWN/2.
 
-   0.5 ft (0.15 m) < flow depth < 3 ft (1 m) n = nb \*1.5 \* e-(0.4 depth/dmax)
+   0.5 ft (0.15 m) < flow depth < 3 ft (1 m) \, \, \, n = nb \*1.5 \* e-(0.4 depth/dmax)
 
-   3 ft (1 m) < flow depth n = n-value in
-
-   MANNINGS_N.DAT
+   3 ft (1 m) < flow depth \, \, \, n = n-value in MANNINGS_N.DAT
 
    10.
    The IBACKUP = 1 switch is used to create a backup file with an \*.BAC extension.
