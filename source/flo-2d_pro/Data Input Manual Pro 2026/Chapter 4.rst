@@ -509,9 +509,14 @@ but can still be used).
      - **0 = off**
 
        **1 = on**
-     - Set MUD = 0 for clear water and MUD = 1 for hyper- concentrated sediment flow.
-       If MUD = 1 the sediment load (volume or concentration by volume) for either the floodplain hydrograph HP(I,J,3) or the channel hydrograph H(I,J,3)
+     - Set MUD = 0 for clear water and MUD = 1 for hyperconcentrated sediment flow.
+
+       If MUD = 1 the sediment load (volume or concentration by volume) for either the
+
+       floodplain hydrograph HP(I,J,3) or the channel hydrograph H(I,J,3)
+
        must be assigned to each inflow hydrograph pair (comments 1 and 3).
+
        The SED.DAT file must be created.
 
    * - NOPRTC
