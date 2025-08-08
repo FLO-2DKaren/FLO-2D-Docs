@@ -328,7 +328,9 @@ but can still be used).
      - **0 = off**
 
        **1 = on**
-     - If ICHANNEL = 1, the channel component will be used and the CHAN.DAT must be created (comments 1 and 6).
+     - If ICHANNEL = 1, the channel component will be used and the CHAN.DAT must be created.
+
+       (comments 1 and 6).
 
    * - IDEBRV
      - s
@@ -463,7 +465,9 @@ but can still be used).
      - **0 = off**
 
        **1 = on**
-     - IWRFS = 1 specifies that area and width reduction factors (ARFs and WRFs) will be assigned in the ARF.DAT file.
+     - IWRFS = 1 specifies that area and width reduction factors (ARFs and WRFs) will be assigned in
+
+       the ARF.DAT file.
 
    * - LEVEE
      - s
