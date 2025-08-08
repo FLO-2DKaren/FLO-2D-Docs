@@ -750,12 +750,11 @@ FILE: TOLER.DAT
 .. raw:: html
 
     <pre>
-    0.1  0.00                   Line 1: TOLGLOBAL   DEPTOL
-    C  0.6   0.6   0.6          Line 2:   COURCHAR = ‘C’  COURANTFP   COURANTC
-                                          COURANTST
-    T   0.1                     Line 3: COURCHAR = “T”   TIME_ACCEL
+    0.1  0.00                   Line 1: <b>TOLGLOBAL   DEPTOL<b>
+    C  0.6   0.6   0.6          <b>Line 2: COURCHAR = ‘C’  COURANTFP   COURANTC<b>
+                                        <b>COURANTST<b>
+    T   0.1                     <b>Line 3: COURCHAR = “T”   TIME_ACCEL<b>
     </pre>
-
 
 NUMERICAL STABILITY CONTROL DATA
 
