@@ -167,7 +167,7 @@ but can still be used).
             2 Line 7: <b> NOPRTC</b>
             0 0.0 Line 8: <b> ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP</b>
             0.1 Line 9: <b> GRAPTIM</b><br>
-   Notes: <br>
+   Notes:
        Line 5: If IFLOODWAY = 0 omit ENCROACH
        Line 7: If ICHANNEL = 0 omit Line 7
        Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required
