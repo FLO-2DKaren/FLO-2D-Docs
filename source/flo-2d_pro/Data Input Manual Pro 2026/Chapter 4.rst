@@ -195,9 +195,7 @@ but can still be used).
     0.1
     </pre>
 
-**Variable Descriptions for the**
-
-**CONT.DAT File**
+**Variable Descriptions for the CONT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -240,10 +238,13 @@ but can still be used).
      - The DEPRESSDEPTH variable has two functions:
 
        DEPRESSDEPTH identifies depressed grid elements that are lower than all contiguous nodes.
-       A value of DEPRESS- DEPTH = 3.0 ft is suggested.
+
+       A value of DEPRESSDEPTH = 3.0 ft is suggested.
+
        Depressed elements may be real, but in most cases isolated depressed elements are a result of poor topographic data.
 
        Identifies low levee crest elevations.
+
        A typical value of DEPRESSDEPTH 3.0 (default value = zero).
 
 
