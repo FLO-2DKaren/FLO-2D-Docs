@@ -361,9 +361,9 @@ but can still be used).
 
        base flow.
 
-       Run the baseflow run first and then set the IFLOODWAY = 2 and run the flood simulation in the same
+       Run the baseflow run first and then set the IFLOODWAY = 2 and run the flood simulation in the same folder so that a flood arrival time and a peak flood time
 
-      folder so that a flood arrival time and a peak flood time are reported separately.
+       are reported separately.
 
        Results in TIME_TO_ABOVE_BASFLOW.OUT
 
@@ -403,8 +403,7 @@ but can still be used).
        **1 = on**
      - INFIL = 1 initiates an infiltration subroutine using the Green-Ampt infiltration model for either
 
-       channel or overland infiltration.
-
+       channel or over- land infiltration.
        The INFIL.DAT file must be created.
 
    * - IRAIN
