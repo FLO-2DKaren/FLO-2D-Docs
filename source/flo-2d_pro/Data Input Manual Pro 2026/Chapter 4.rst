@@ -158,7 +158,7 @@ but can still be used).
 .. raw:: html
 
     <pre>
-            24.0 0.10 2 0 0 Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b> <br>
+            24.0 0.10 2 0 0 Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b>
             1 1 0 0 0 Line 2: <b> ICHANNEL MSTREET LEVEE IWRFS IMULTC</b> <br>
             0 1 0 0 0 0 0 Line 3: <b> IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM</b> <br>
             0 0 0 Line 4: <b> IHYDRSTRUCT IFLOODWAY IDEBRV</b> <br>
