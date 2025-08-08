@@ -718,53 +718,41 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
        0.5 ft (0.15 m) &lt; flow depth &lt; 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = nb *1.5* e<sup>-(0.4 depth/dmax)</sup><br>
        3 ft (1 m) &lt; flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
 
-   10.
-   The IBACKUP = 1 switch is used to create a backup file with an \*.BAC extension.
-   The\*.BAC files can be reviewed to see if the model is correctly reading the data.
-   This is a data file format troubleshooting tool.
-   These files can be
+   10. The IBACKUP = 1 switch is used to create a backup file with an \*.BAC extension. The\*.BAC files can be reviewed to see if the model
+       is correctly reading the data.This is a data file format troubleshooting tool. These files can be renamed to \*.DAT and the model can
+       be run with them.
+       IBACKUP = 1 will also generate a series of binary files that represent the model results at the last output interval.
+       The binary files are overwritten at the end of each output inter- val so if the model is terminated prior to the end of the run for
+       any reason, the simulation can be restarted from the last interval.
+       Setting the switch to 1 can significantly lengthen the model run time.
+       Setting IBACKUP = 2 will write all elevation changes associated with the outflow nodes and channel top-of-bank revisions to
+       the FPLAIN.RGH file which can be renamed to the FPLAIN.DAT file to run the model.
 
-   renamed to \*.DAT and the model can be run with them.
-   IBACKUP = 1 will also generate a series of binary files that represent the model results at the last output interval.
-   The binary files are overwritten at the end of each output inter- val so if the model is terminated prior to the end of the run for any reason, the
-   simulation can be restarted from the last interval.
-   Setting the switch to 1 can significantly lengthen the model run time.
-   Setting IBACKUP = 2 will write all elevation changes associated with the outflow nodes and channel top-of-bank revisions to the FPLAIN.RGH file which
-   can be renamed to the FPLAIN.DAT
+   11. The DEPRESSDEPTH parameter can be used to either identify depressed elements or low levee crest elevations.
+      Set SIMUL = 0.01 hrs for separate values for each filter.
+      Set DEPRESSDEPTH = 3.0 ft to review the depressed elements in the DEPRESSED_ELEMENTS.OUT ﬁle, rename the file and reassign
+      DEPRESSDEPTH to 1.0 ft or so and rerun the model to generate LOW_LEVEE\_ CREST_ELEVATIONS.OUT ﬁle.
 
-   file to run the model.
+   12. If a grid element is lower than every neighboring cell, to the depth of DE- PRESSDEPTH, the grid element is considered to be a
+       topographical depression and a probable error.
+       The grid element is listed in DEPRESSED_ELE- MENTS.OUT file.
 
-   11.
-   The DEPRESSDEPTH parameter can be used to either identify depressed elements or low levee crest elevations.
-   Set SIMUL = 0.01 hrs for separate values for each filter.
-   Set DEPRESSDEPTH = 3.0 ft to review the depressed elements in the DEPRESSED_ELEMENTS.OUT ﬁle, rename the file and reassign DEPRESSDEPTH to 1.0 ft or
-   so and rerun the model to generate LOW_LEVEE\_ CREST_ELEVATIONS.OUT ﬁle.
+   13. DEPRESSDEPTH is also used to identify levees that have a low crest elevation.
+      A levee or wall that is only 0.1 ft above the ground is superfluous.
+      The low levee warning message and action has three options:
 
-   12.
-   If a grid element is lower than every neighboring cell, to the depth of DE- PRESSDEPTH, the grid element is considered to be a topographical
-   depression and a probable error.
-   The grid element is listed in DEPRESSED_ELE- MENTS.OUT file.
+          a. DEPRESSDEPTH = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in LOW_LEVEE_CREST\_ ELEVATIONS.OUT
+             file.
+          b. DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is assigned to determine if the
+             levee height is lower than the DEPRESSDEPTH value.
+          c. DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is lower than DEPRESSDEPTH
+             (1 ft to 10 ft).
+          d. If DEPRESSDEPTH is negative, LEVEE.BAC file is written as a backup file omitting the low levees that can be renamed as LEVEE. DAT.
 
-   13.
-   DEPRESSDEPTH is also used to identify levees that have a low crest elevation.
-   A levee or wall that is only 0.1 ft above the ground is superfluous.
-   The low levee warning message and action has three options:
-
-   a. DEPRESSDEPTH = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in LOW_LEVEE_CREST\_ ELEVATIONS.OUT file.
-
-   b. DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is assigned to determine if the levee height is lower than
-      the DEPRESSDEPTH value.
-
-   c. DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is lower than DEPRESSDEPTH (1 ft to 10 ft).
-
-   d. If DEPRESSDEPTH is negative, LEVEE.BAC file is written as a backup file omitting the low levees that can be renamed as LEVEE.
-      DAT.
-
-   14.
-   Multiple channels IMULTC have various conditions depending on the switch position and which multiple channel data files exist.
-   If IMULTC = 1, the engine checks for MULT.DAT, and SIMPLE_MULT.DAT.
-   Data can be as- signed to both files for separate grid elements.
-   If IMULTC = 2, then multiple channels can be used alongside separate gutter cells in GUTTER.DAT.
+   14. Multiple channels IMULTC have various conditions depending on the switch position and which multiple channel data files exist.
+       If IMULTC = 1, the engine checks for MULT.DAT, and SIMPLE_MULT.DAT.
+       Data can be as- signed to both files for separate grid elements.
+       If IMULTC = 2, then multiple channels can be used alongside separate gutter cells in GUTTER.DAT.
 
 FILE: TOLER.DAT
 
