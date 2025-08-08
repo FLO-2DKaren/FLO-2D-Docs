@@ -747,6 +747,16 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
 FILE: TOLER.DAT
 
+.. raw:: html
+
+    <pre>
+    0.1  0.00                   Line 1: TOLGLOBAL   DEPTOL
+    C  0.6   0.6   0.6          Line 2:   COURCHAR = ‘C’  COURANTFP   COURANTC
+                                          COURANTST
+    T   0.1                     Line 3: COURCHAR = “T”   TIME_ACCEL
+    </pre>
+
+
 NUMERICAL STABILITY CONTROL DATA
 
 Variable Descriptions for the TOLER.DAT File
