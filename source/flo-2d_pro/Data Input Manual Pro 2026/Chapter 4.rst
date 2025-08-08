@@ -453,6 +453,7 @@ but can still be used).
        21 = TIMDEP.HDF5 files is written for the time interval.
 
        31 = TIMDEPNC.HDF5 file is written for the time interval.
+
        41 = All time series output is written for the time interval.
 
        51 = Extract a time series during the time interval for specific
@@ -487,7 +488,9 @@ but can still be used).
        LGPLOT = 1 will display nothing.
        Use this switch position with batch runs.
 
-       LGPLOT = 2 displays the graphical floodwave progression over the grid system (flow depth) and inflow hydrograph.
+       LGPLOT = 2 displays the graphical floodwave progression over the grid system (flow depth)
+
+       and inflow hydrograph.
 
    * - METRIC
      - s
@@ -544,7 +547,7 @@ but can still be used).
 
    * - SIMUL
      - r
-     - **0.01 -** |CHAPTE002|
+     - **0.01 -** Infinity
      - Simulation time (hours).
 
    * - STARTIMTEP
@@ -552,6 +555,7 @@ but can still be used).
      - **0 to ENDTIM- TEP**
      - Start time for the time series output data (hours).
        Set this value to any time 0 to ENDTIMTEP.
+
        It should represent the delayed start of time dependent data.
 
    * - SWMM
@@ -564,10 +568,13 @@ but can still be used).
    * - TIMTEP
      - r
      - **0 - 100**
-     - Output interval (hrs) that the flow depth, resolved velocity, x-velocity, y-velocity and water surface elevation datasets are reported to the
-       TIMDEP.OUT file for a post-simulation flood animation.
-       TIMTEP should be a multiple of TOUT.
-       The switch ITIMTEP is required.
+     - Output interval (hrs) that the flow depth, resolved velocity, x-velocity, y-velocity and
+
+       water surface elevation datasets are reported to the TIMDEP.OUT file for a post-simulation
+
+       flood animation.
+
+       TIMTEP should be a multiple of TOUT.The switch ITIMTEP is required.
 
    * - TOUT
      - r
@@ -578,17 +585,22 @@ but can still be used).
      - r
      - **0.
        - 1.**
-     - Global area reduction factor applied to all grid elements.
-       This factor reduces the grid element surface area available for flood volume storage.
+     - Global area reduction factor applied to all grid elements. This factor reduces the
+
+       grid element surface area available for flood volume storage.
+
        XARF can be used to account irregular surface topography, dense vegetation or other features.
 
        Range: 0 < XARF < 1.
-       A typical value for XARF of 0.10 indicates that 10% of each grid element surface is not avail- able for flood storage.
-       The XARF value is overridden by the ARF variable specified for the individual grid elements in the ARF.DAT file.
-       Assign XARF = 0.
-       to flood the entire surface
+       A typical value for XARF of 0.10 indicates that 10% of each grid element surface is not
 
-       area of the grid elements.
+       avail- able for flood storage.
+
+       The XARF value is overridden by the ARF variable specified for the individual grid elements
+
+       in the ARF.DAT file.
+
+       Assign XARF = 0. to flood the entire surface area of the grid elements.
 
    * - XCONC
      - r
