@@ -628,76 +628,77 @@ but can still be used).
 
 These instructions will aid in assigning of the CONT.DAT file parameters:
 
-   1. If any of the switches MUD, ISED, IRAIN, IMULT, INFIL, MSTREET, LEVEE, ICHANNEL, IWRFS, IMODFLOW, SWMM or IHYDRSTRUCT
-
-   are set to 0 “off”, then the corresponding data file can be omitted.
-   For example, set MSTREET = 0 and the STREET.DAT file can be omitted.
+   1. If any of the switches MUD, ISED, IRAIN, IMULT, INFIL, MSTREET, LEVEE, ICHANNEL, IWRFS, IMODFLOW, SWMM or
+      IHYDRSTRUCT are set to 0 “off”, then the corresponding data file can be omitted. For example,
+      set MSTREET = 0 and the STREET.DAT file can be omitted.
 
    2. Streets, groundwater, mudflow, levees, and rill and gully flow can be simulated with or without a channel.
 
    3. Supercritical flow is uncommon on alluvial surfaces and may be inhibited by sediment entrainment.
       There are three possible approaches to a high Froude number flow analysis:
 
-   a. Allow supercritical flow and do not limit the Froude number.
+       a. Allow supercritical flow and do not limit the Froude number.
 
-   b. Increase the grid element roughness by assigning AMANN or setting higher individual grid element n-values to reduce the Froude number (assign
-      spatially variable n-values).
+       b. Increase the grid element roughness by assigning AMANN or setting higher individual grid element n-values to reduce the Froude number (assign
+          spatially variable n-values).
 
-   c. Set the Limiting Froude number or the floodplain (e.g. set FROUDL = 0.99 or 1.11).
-      When FROUDL is exceeded the grid element roughness value will be increased by 0.001 for the next timestep.
-      After a flood simulation, review ROUGH.OUT to determine where FROUDL was exceeded and the maximum n-values for that cell were computed.
-      Consider revising the n-values in the MANNINGS_N.DAT file to match those in the ROUGH.OUT file.
-      This will ensure that FROUDL is not exceeded.
-      Re- name the MANNINGS_N.RGH file to MANNINGS_N.DAT.
+       c. Set the Limiting Froude number or the floodplain (e.g. set FROUDL = 0.99 or 1.11).
+          When FROUDL is exceeded the grid element roughness value will be increased by 0.001 for the next timestep.
+          After a flood simulation, review ROUGH.OUT to determine where FROUDL was exceeded and the maximum n-values
+          for that cell were computed.
+          Consider revising the n-values in the MANNINGS_N.DAT file to match those in the ROUGH.OUT file.
+          This will ensure that FROUDL is not exceeded.
+          Re- name the MANNINGS_N.RGH file to MANNINGS_N.DAT.
 
-   d. Spatially variable limiting Froude numbers can also be assigned to individual grid elements in FPFROUDE.DAT.
+       d. Spatially variable limiting Froude numbers can also be assigned to individual grid elements in FPFROUDE.DAT.
 
-   e. The shallow n-value is off when SHALLOWN = 0.
-      or when AMANN =
-
-   -99.
-   The limiting Froude number is off if you set FROUDL = 0.
-   for the floodplain.
-   AMANN= -99 turns off the depth variable n-value, but not the limiting Froude number n-value adjustments.
+       e. The shallow n-value is off when SHALLOWN = 0. or when AMANN = -99.
+          The limiting Froude number is off if you set FROUDL = 0.for the floodplain.
+          AMANN= -99 turns off the depth variable n-value, but not the limiting Froude number n-value adjustments.
 
    4. The floodwave travel time should be reviewed to determine if it is appropriate.
       The travel time can also be used to calibrate the n-values.
       Adjusting n-values with FROUDL will slow the arrival of the frontal wave.
-      During the hydro- graph recessional limb when the Froude number is less than 0.5 and the flow is shallow, the n-value decreases by 0.0005 until the
-      original n-value is reached
+      During the hydro- graph recessional limb when the Froude number is less than 0.5 and the flow is shallow,
+      the n-value decreases by 0.0005 until the original n-value is reached.
 
    5. IFLOODWAY initiates the floodway routine.
-      Flow will not be exchanged be- tween floodplain grid elements unless the maximum water surface plus the encroachment depth (ENCROACH) from a previous
-      FLO-2D simulation is exceeded.
+      Flow will not be exchanged be- tween floodplain grid elements unless the maximum water surface plus the
+      encroachment depth (ENCROACH) from a previous FLO-2D simulation is exceeded.
       An initial FLO-2D simulation is required to establish the maximum water surface elevations.
       See the Floodway discussion in the Reference Manual component section.
       IFLOODWAY is also used to set up the base flood condition for reporting flood arrival time and peak arrival time.
       Run the model twice in the same folder.
-      The first run should establish the baseflow condition so do not use the breach hydrographs or breach conditions in the first run.
-      The second run uses DEPFP.OUT to set the base flood condition so that the flood arrival times can be calculated in the file BASEFLOWFP_TIME.OUT.
+      The first run should establish the baseflow condition so do not use the breach hydrographs or breach conditions
+      in the first run.
+      The second run uses DEPFP.OUT to set the base flood condition so that the flood arrival times can be calculated
+      in the file BASEFLOWFP_TIME.OUT.
 
    6. If channel flow is simulated (ICHANNEL = 1), then the NOPRTC variable must be set in CONT.DAT.
       In addition, channel outflow control can be as- signed in OUTFLOW.DAT.
 
-   7. ITIMTEP will enable a simple animation (time and space output) of the over- land flow to be displayed in Mapper, MAXPLOT or other map software.
+   7. ITIMTEP will enable a simple animation (time and space output) of the over- land flow to be displayed in Mapper,
+      MAXPLOT or other map software.
       The animation will be based on a time interval TIMTEP specified by the user.
 
-   8. The depth duration analysis is used to determine how long a floodplain grid element is inundated at a flow depth greater than the DEPTHDUR variable.
+   8. The depth duration analysis is used to determine how long a floodplain grid element is inundated at a flow depth
+      greater than the DEPTHDUR variable.
       If DEPTHDUR = 1 ft, the output file DEPTHDUR.OUT has the total du- ration in hours that the depth exceeded 1 ft.
       The results can be reviewed in MAXPLOT.
-      If the depth duration analysis is activated, then a second output file DEPTHDURATION2.OUT is generated for the cumulative time duration above 2 ft
-      (0.61 m).
+      If the depth duration analysis is activated, then a second output file DEPTHDURATION2.OUT is generated for the
+      cumulative time duration above 2 ft (0.61 m).
 
-   9. To improve the timing of the floodwave progression through the grid system, a depth variable roughness can be assigned.
+   9. To improve the timing of the floodwave progression through the grid system, a depth variable roughness can be
+      assigned.
       The basic equation for the grid element roughness nd as function of flow depth is:
 
-   nd = nb \*1.5 \* e -(0.4 depth/dmax)
+        nd = nb \*1.5 \* e \ :sup: `-(0.4 depth/dmax)`
 
-   where:
+        where:
 
-   nb = bankfull discharge roughness depth = flow depth
+            nb = bankfull discharge roughness depth = flow depth
 
-   dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
    This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
    roughness elements (assumed to be 3 ft or 1 m).
