@@ -157,6 +157,7 @@ but can still be used).
 
 .. raw:: html
 
+    <pre>
     24.0 0.10 2 0 0 Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b> <br>
     1 1 0 0 0 Line 2: <b> ICHANNEL MSTREET LEVEE IWRFS IMULTC</b> <br>
     0 1 0 0 0 0 0 Line 3: <b> IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM</b> <br>
@@ -167,7 +168,6 @@ but can still be used).
     0 0.0 Line 8: <b> ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP</b> <br>
     0.1 Line 9: <b> GRAPTIM</b>  <br><br>
 
-   <pre>
    Notes: <br>
        Line 5: If IFLOODWAY = 0 omit ENCROACH <br>
        Line 7: If ICHANNEL = 0 omit Line 7 <br>
