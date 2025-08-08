@@ -44,15 +44,15 @@ The Line 3 data for the first four-time steps is as follows:
 .. raw:: html
 
     <pre>
-      <b>HP(J,1)</b>            <b>HP(J,2)</b>             <b>HP(J,3)</b>
+      <b>HP(J,1)</b>           <b>HP(J,2)</b>              <b>HP(J,3)</b>
     Time (hrs)      Discharge (cfs)     Sediment Conc. (% by Volume)
-        0.0                 0.0                     0.00
+        0.0                0.0                      0.00
 
-        0.1                 10.0                    0.00
+        0.1                10.0                     0.00
 
-        0.2                 25.0                    0.20
+        0.2                25.0                     0.20
 
-        0.3                 50.0                    0.25
+        0.3                50.0                     0.25
     </pre>
 
 Backup files of the data files (\*.BAC) can be created when program reads the data.
