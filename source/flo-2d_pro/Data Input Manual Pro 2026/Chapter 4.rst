@@ -729,17 +729,17 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
        the FPLAIN.RGH file which can be renamed to the FPLAIN.DAT file to run the model.
 
    11. The DEPRESSDEPTH parameter can be used to either identify depressed elements or low levee crest elevations.
-      Set SIMUL = 0.01 hrs for separate values for each filter.
-      Set DEPRESSDEPTH = 3.0 ft to review the depressed elements in the DEPRESSED_ELEMENTS.OUT ﬁle, rename the file and reassign
-      DEPRESSDEPTH to 1.0 ft or so and rerun the model to generate LOW_LEVEE\_ CREST_ELEVATIONS.OUT ﬁle.
+       Set SIMUL = 0.01 hrs for separate values for each filter.
+       Set DEPRESSDEPTH = 3.0 ft to review the depressed elements in the DEPRESSED_ELEMENTS.OUT ﬁle, rename the file and reassign
+       DEPRESSDEPTH to 1.0 ft or so and rerun the model to generate LOW_LEVEE\_ CREST_ELEVATIONS.OUT ﬁle.
 
    12. If a grid element is lower than every neighboring cell, to the depth of DE- PRESSDEPTH, the grid element is considered to be a
        topographical depression and a probable error.
        The grid element is listed in DEPRESSED_ELE- MENTS.OUT file.
 
    13. DEPRESSDEPTH is also used to identify levees that have a low crest elevation.
-      A levee or wall that is only 0.1 ft above the ground is superfluous.
-      The low levee warning message and action has three options:
+       A levee or wall that is only 0.1 ft above the ground is superfluous.
+       The low levee warning message and action has three options:
 
           a. DEPRESSDEPTH = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in LOW_LEVEE_CREST\_ ELEVATIONS.OUT
              file.
