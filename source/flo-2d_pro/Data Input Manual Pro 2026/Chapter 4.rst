@@ -179,7 +179,7 @@ but can still be used).
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>       CONT.DAT File Example</pre></i></div>
+        <div><i><pre>CONT.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     24.0 0.10 2 0 0
@@ -197,6 +197,7 @@ but can still be used).
 .. raw:: html
 
    <br><br>
+
 **Variable Descriptions for the CONT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
