@@ -1032,27 +1032,22 @@ FLOODPLAIN GRID ELEMENT DATA
             </tr>
           </table>
         </div>
-
+        Line 1:
+        1 = grid element,
+        0 = cell to the north,
+        2 = cell to the east,
+        10 = cell to the south,
+        0 = cell to the west
+        0.060 = n-value for the cell
+        4005.23 = cell elevation
         </pre>
     </div>
 
 
 
-Line 1:
 
-Example Grid 1 = grid element,
 
-1 2 3 4 5 6 7 8 9 0 = cell to the north,
 
-2 = cell to the east, 10 = cell to the south, 0 = cell to the west
-
-0.060 = n-value for the cell 4005.23 = cell elevation
-
-10 11 12 13 14 15 16 17 18
-
-19 20 21 22 23 24 25 26 27
-
-28 29 30 31 32 33 34 35 36
 
 
 
