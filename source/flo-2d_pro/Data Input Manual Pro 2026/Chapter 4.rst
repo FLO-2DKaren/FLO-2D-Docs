@@ -983,7 +983,7 @@ FLOODPLAIN GRID ELEMENT DATA
         Note:  FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
         boundary elements.
 
-        <div style="border: 1px solid black; display: inline-block; padding: 5px;">
+
           <table style="border-collapse: collapse; margin-top: 5px;">
             <tr>
               <td style="border: 1px solid black; padding: 4px; text-align: center;">1</td>
@@ -1030,7 +1030,6 @@ FLOODPLAIN GRID ELEMENT DATA
               <td style="border: 1px solid black; padding: 4px; text-align: center;">36</td>
             </tr>
           </table>
-        </div>
 
         </pre>
     </div>
