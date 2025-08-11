@@ -1119,20 +1119,15 @@ FLOODPLAIN GRID ELEMENT DATA
 
 FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The model verifies the following files:
 
-- If FPLAIN.DAT, CADPTS.DAT, and, NEIGHBORS.DAT, exist, the engine will use them and ignore TOPO.DAT AND MANNINGS_N.DAT.
-
-- If TOPO exists, the model reads it to count the number of grid elements and grid element size.
-
-- If NEIGHBORS.DAT exists, the model reads this file to define the neighbors.
-  If it does not exist, FLOPRO uses TOPO.DAT to define the neighbors and creates NEIGHBORS.DAT.
-  The model starts faster when the file is present.
-
-- If MANNINGS_N.DAT exists, the model reads it to define the floodplain roughness.
-  If the file does not exist but all others do, the model will generate a fatal error message and stop.
-
-- If CADPTS.DAT and FPLAIN.DAT do not exist, the model will generate them.
-
-- If TOPO.DAT and MANNINGS_N.DAT do not exist, the model will use FPLAIN.DAT and CADPTS.DAT to create them.
+    - If FPLAIN.DAT, CADPTS.DAT, and, NEIGHBORS.DAT, exist, the engine will use them and ignore TOPO.DAT AND MANNINGS_N.DAT.
+    - If TOPO exists, the model reads it to count the number of grid elements and grid element size.
+    - If NEIGHBORS.DAT exists, the model reads this file to define the neighbors.
+      If it does not exist, FLOPRO uses TOPO.DAT to define the neighbors and creates NEIGHBORS.DAT.
+      The model starts faster when the file is present.
+    - If MANNINGS_N.DAT exists, the model reads it to define the floodplain roughness.
+      If the file does not exist but all others do, the model will generate a fatal error message and stop.
+    - If CADPTS.DAT and FPLAIN.DAT do not exist, the model will generate them.
+    - If TOPO.DAT and MANNINGS_N.DAT do not exist, the model will use FPLAIN.DAT and CADPTS.DAT to create them.
 
 **Instructional Comments for the FPLAIN.DAT File**
 
@@ -1149,16 +1144,16 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
    depth of 3 ft (1 m) or greater.
    The model automatically computes a depth variable roughness for depths less than 3 ft ap- proximately as follows:
 
-    .. math::
-        :label:
+        .. math::
+            :label:
 
-        nd = nb \*1.5 \* e-(0.4 depth/dmax)
+            n_d = n_b \, ^* \, 1.5 \, ^* \, e^{-(\frac{0.4 depth}{dmax})}
 
-where:
+        where:
 
-nb = bankfull discharge roughness depth = flow depth
+            n\ :sub:`b` = bankfull discharge roughness depth = flow depth
 
-dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
 To turn off the depth variable roughness set AMANN = -99.
 See the Comment 9 in the CONT.DAT file.
