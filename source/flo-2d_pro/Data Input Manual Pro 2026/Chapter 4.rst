@@ -835,8 +835,7 @@ Variable Descriptions for the TOLER.DAT File
 
     * - COURCHAR
       - **r**
-      - **c**
-      - C, T
+      - **C, T**
       - Character ‘C’ that identifies Line 2 with the Courant stability parameter.
 
         This variable is case sensitive. It must be upper case.
