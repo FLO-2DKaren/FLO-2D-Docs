@@ -1296,7 +1296,7 @@ TOPOGRAPHICAL ELEVATION DATA
 
 .. raw:: html
 
-    <div style="border:2px;padding:5px;display:inline-block;">
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>       TOPO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
