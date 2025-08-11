@@ -39,12 +39,12 @@ The variables in Line 3 on the INFLOW.DAT file represent one line of a discretiz
 repeated for each of the hydrograph pairs for each inflow grid element.
 The Line 3 data for the first four-time steps is as follows:
 
-*INFLOW.DAT Variable Example*
+
 
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><b>INFLOW.DAT Variable Example</b></div>
+        <div><i>INFLOW.DAT Variable Example</i></div>
         <hr style="margin:4px 0;">
     <pre>
       <b>HP(J,1)</b>           <b>HP(J,2)</b>              <b>HP(J,3)</b>
