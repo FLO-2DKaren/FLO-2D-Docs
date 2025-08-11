@@ -1371,7 +1371,7 @@ INFLOW HYDROGRAPH DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;dispay:inline-block;">
-        <div><i><pre>                       INFLOW.DAT File Variables</pre></i></div>
+        <div><i><pre>                                           INFLOW.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0 4335                  Line 1: <b>IHOURDAILY IDEPLT</b>
