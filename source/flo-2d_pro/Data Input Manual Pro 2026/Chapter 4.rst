@@ -902,9 +902,7 @@ Variable Descriptions for the TOLER.DAT File
     .. math::
         :label:
 
-        \Delta t = C \Delta x / (\beta V + c)
-
-Δt = C \, Δx / (βV + c)
+        \Delta t = frac{C \Delta x{{(\beta V + c)}
 
     where:
 
