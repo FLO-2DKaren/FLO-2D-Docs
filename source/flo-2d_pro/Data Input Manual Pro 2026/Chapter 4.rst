@@ -757,6 +757,7 @@ FILE: TOLER.DAT
         T   0.1                     <b>Line 3: COURCHAR = “T”   TIME_ACCEL</b>
         </pre>
     </div>
+
 NUMERICAL STABILITY CONTROL DATA
 
 Variable Descriptions for the TOLER.DAT File
