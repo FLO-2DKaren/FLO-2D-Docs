@@ -967,7 +967,7 @@ FLOODPLAIN GRID ELEMENT DATA
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>                       FPLAIN.DAT File Variables</pre></i></div>
+        <div><i><pre>                               FPLAIN.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
 
         <pre>
@@ -984,7 +984,6 @@ FLOODPLAIN GRID ELEMENT DATA
         boundary elements.
 
         <div style="border: 1px solid black; display: inline-block; padding: 5px;">
-          <strong>Example Grid</strong>
           <table style="border-collapse: collapse; margin-top: 5px;">
             <tr>
               <td style="border: 1px solid black; padding: 4px; text-align: center;">1</td>
