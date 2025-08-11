@@ -1189,6 +1189,30 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
         </pre>
     </div>
 
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;style:inline-block;">
+        <div><i><pre>MANNINGS_N.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black>
+        <pre>
+        1 0.040
+        2 0.040
+        3 0.040
+        4 0.040
+        ...
+        33 0.040
+        34 0.040
+        35 0.040
+        36 0.040
+        ...
+        </pre>
+    </div>
+
+
 Variable Descriptions for the
 
 MANNINGS_N.DAT File
