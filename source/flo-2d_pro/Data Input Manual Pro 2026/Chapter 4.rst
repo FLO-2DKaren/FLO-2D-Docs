@@ -151,8 +151,8 @@ but can still be used).
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-            <div><i><pre>                                     CONT.DAT File Variables</pre></i></div>
-            <hr style="margin:4px 0;border:2px solid black;">
+        <div><i><pre>                                     CONT.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
     <pre>
             24.0 0.10 2 0 0 Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b>
             1 1 0 0 0 Line 2: <b> ICHANNEL MSTREET LEVEE IWRFS IMULTC</b>
