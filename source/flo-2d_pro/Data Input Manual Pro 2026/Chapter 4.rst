@@ -759,10 +759,12 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
 FILE: TOLER.DAT
 
+NUMERICAL STABILITY CONTROL DATA
+
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>                           FILE: TOLER.DAT</pre></i></div>
+        <div><i><pre>                           TOLER.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0.1  0.00                   Line 1: <b>TOLGLOBAL   DEPTOL</b>
@@ -772,7 +774,20 @@ FILE: TOLER.DAT
         </pre>
     </div>
 
-NUMERICAL STABILITY CONTROL DATA
+
+.. raw:: html
+
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>TOLER.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0.1 0.00
+        C 0.6 0.6 0.6
+        T 0.1
+        </pre>
+    </div>
+
+
 
 Variable Descriptions for the TOLER.DAT File
 
