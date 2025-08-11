@@ -802,10 +802,10 @@ Variable Descriptions for the TOLER.DAT File
     :widths: 25 25 25 25
     :header-rows: 0
 
-    * - VARIABLE
-      - FMT
-      - RANGE
-      - DESCRIPTION
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
     * - COURANTC
       - **r**
