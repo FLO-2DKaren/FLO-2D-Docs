@@ -1173,13 +1173,13 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
         <div><i><pre>   MANNINGS_N.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        1 0.04      Line 1: **DUM   FP(I, J)**
-        2 0.04      Line 1: **DUM   FP(I, J)**
-        3 0.04      Line 1: **DUM   FP(I, J)**
+        1 0.04      Line 1: <b>DUM   FP(I, J)</b>
+        2 0.04      Line 1: <b>DUM   FP(I, J)</b>
+        3 0.04      Line 1: <b>DUM   FP(I, J)</b>
         ...
         ...
         ...
-        18   0.04     Line 1: **DUM   FP(I, J)**
+        18   0.04     Line 1: <b>DUM   FP(I, J)*</b>
 
 
         Note:  MANNINGS_N.DAT is a list of the grid elements and their n-values.  This file is automatically
