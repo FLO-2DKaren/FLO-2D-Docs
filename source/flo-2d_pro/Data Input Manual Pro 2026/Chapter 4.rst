@@ -1077,6 +1077,10 @@ FLOODPLAIN GRID ELEMENT DATA
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
+
     * - **VARIABLE**
       - **FMT**
       - **RANGE**
