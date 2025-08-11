@@ -802,7 +802,7 @@ NUMERICAL STABILITY CONTROL DATA
 
     <br><br>
 
-Variable Descriptions for the TOLER.DAT File
+**Variable Descriptions for the TOLER.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -1069,20 +1069,11 @@ FLOODPLAIN GRID ELEMENT DATA
     </div>
 
 
+.. raw:: html
 
+    <br><br>
 
-
-
-
-
-
-
-
-
-
-
-
-Variable Descriptions for the FPLAIN.DAT File
+**Variable Descriptions for the FPLAIN.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
