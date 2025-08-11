@@ -774,6 +774,9 @@ NUMERICAL STABILITY CONTROL DATA
         </pre>
     </div>
 
+.. raw:: html
+
+    <br><br>
 
 .. raw:: html
 
