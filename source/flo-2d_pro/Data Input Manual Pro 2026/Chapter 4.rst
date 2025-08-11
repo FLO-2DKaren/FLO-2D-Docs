@@ -1077,51 +1077,57 @@ FLOODPLAIN GRID ELEMENT DATA
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
-DUM
+    * - DUM
+      - **i**
+      - **1 - NNOD**
+      - Grid element number (I) of the floodplain grid system.This is a dummy variable that is not used
 
-i
+        by the model. It is only used for the convenience of viewing the input data file.
 
-1 - NNOD Grid element number (I) of the floodplain grid system.
-This is a dummy variable that is not used by the model.
-It is only used for the convenience of viewing the input data file.
+    * - FP(I,J)
+      - **i**
+      - **1 - NNOD**
+      - Floodplain element contiguous to grid element I (where I = 1, NNOD) and located in the J-direction
 
-FP(I,J)
+        (where J = 1,4). The J-direction corresponds to one of the four compass directions (see comments 1 thru 5).
 
-i
+    * - FP(I,5)
+      - **r**
+      - **0.010 - 0.4**
+      - Manning’s n roughness coefficient assigned to grid element I (see comment 6).
 
-1 - NNOD Floodplain element contiguous to grid element I (where I = 1, NNOD) and located in the J-direction (where J = 1,4).
-The J-direction corresponds to one of the four compass directions (see comments 1 thru 5).
+    * - FP(I,6)
+      - **r**
+      - **Infinity**
+      - Ground surface elevation for grid element I (ft or m).
 
-FP(I,5) r 0.010 - 0.4 Manning’s n roughness coefficient assigned to grid element I (see comment 6).
-
-FP(I,6) r
-
-Ground surface elevation for grid element I (ft or m).
-
-IMPORTANT NOTE: If a grid size, shape, elevation or roughness is adjusted with the FLO-2D Plugin, the exported data will not overwrite FPLAIN.DAT,
-CADPTS.DAT, or NEIGHBORS.DAT.
-Those files should be deleted prior to running the engine.
+.. important::
+    If a grid size, shape, elevation or roughness is adjusted with the FLO-2D Plugin, the exported data will
+    not overwrite FPLAIN.DAT,CADPTS.DAT, or NEIGHBORS.DAT. Those files should be deleted prior to running the engine.
 
 FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The model verifies the following files:
 
-· If FPLAIN.DAT, CADPTS.DAT, and, NEIGHBORS.DAT, exist, the engine will use them and ignore TOPO.DAT AND MANNINGS_N.DAT.
+- If FPLAIN.DAT, CADPTS.DAT, and, NEIGHBORS.DAT, exist, the engine will use them and ignore TOPO.DAT AND MANNINGS_N.DAT.
 
-· If TOPO exists, the model reads it to count the number of grid elements and grid element size.
+- If TOPO exists, the model reads it to count the number of grid elements and grid element size.
 
-· If NEIGHBORS.DAT exists, the model reads this file to define the neighbors.
-If it does not exist, FLOPRO uses TOPO.DAT to define the neighbors and creates NEIGHBORS.DAT.
-The model starts faster when the file is present.
+- If NEIGHBORS.DAT exists, the model reads this file to define the neighbors.
+  If it does not exist, FLOPRO uses TOPO.DAT to define the neighbors and creates NEIGHBORS.DAT.
+  The model starts faster when the file is present.
 
-· If MANNINGS_N.DAT exists, the model reads it to define the floodplain roughness.
-If the file does not exist but all others do, the model will generate a fatal error message and stop.
+- If MANNINGS_N.DAT exists, the model reads it to define the floodplain roughness.
+  If the file does not exist but all others do, the model will generate a fatal error message and stop.
 
-· If CADPTS.DAT and FPLAIN.DAT do not exist, the model will generate them.
+- If CADPTS.DAT and FPLAIN.DAT do not exist, the model will generate them.
 
-· If TOPO.DAT and MANNINGS_N.DAT do not exist, the model will use FPLAIN.DAT and CADPTS.DAT to create them.
+- If TOPO.DAT and MANNINGS_N.DAT do not exist, the model will use FPLAIN.DAT and CADPTS.DAT to create them.
 
-Instructional Comments for the FPLAIN.DAT File
+**Instructional Comments for the FPLAIN.DAT File**
 
 1. There should be no elements in the grid system that do not have at least one neighbor element sharing one side.
    In other words, no element should be connected only by a single diagonal corner.
@@ -1132,10 +1138,14 @@ Instructional Comments for the FPLAIN.DAT File
 
 4. Any additional grid elements in the FPLAIN.DAT file must have corresponding grid elements in the CADPTS.DAT file.
 
-5. The roughness assigned to the floodplain grid element should represent the flow resistance associated with a flow depth of 3 ft (1 m) or greater.
+5. The roughness assigned to the floodplain grid element should represent the flow resistance associated with a flow
+   depth of 3 ft (1 m) or greater.
    The model automatically computes a depth variable roughness for depths less than 3 ft ap- proximately as follows:
 
-nd = nb \*1.5 \* e-(0.4 depth/dmax)
+    .. math::
+        :label:
+
+        nd = nb \*1.5 \* e-(0.4 depth/dmax)
 
 where:
 
@@ -1145,6 +1155,9 @@ dmax = flow depth for drowning the roughness elements and vegetation (hardwired 
 
 To turn off the depth variable roughness set AMANN = -99.
 See the Comment 9 in the CONT.DAT file.
+
+
+
 
 FILE: MANNINGS_N.DAT
 
