@@ -866,7 +866,9 @@ Variable Descriptions for the TOLER.DAT File
     * - TOLGLOBAL
       - **r**
       - 0.004 - 0.5
-      - typ 0.0012 - 0.03
+
+       typ 0.0012 - 0.03
+
       - Surface detention. TOLGLOBAL is a minimum value of the flow depth for flood routing.
 
         A typical value river flooding is 0.10 ft (see comment 1).
