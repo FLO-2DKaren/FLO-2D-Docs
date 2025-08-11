@@ -43,7 +43,10 @@ The Line 3 data for the first four-time steps is as follows:
 
 .. raw:: html
 
-    <ddiv style="border:2px solid black; padding:5px; display:inline-block;">
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div style="border:2px solid black; padding:5px; display:inline-block;">
+            <pre> *INFLOW.DAT Variable Example* </pre>
+        </div>
     <pre>
       <b>HP(J,1)</b>           <b>HP(J,2)</b>              <b>HP(J,3)</b>
     Time (hrs)      Discharge (cfs)     Sediment Conc. (% by Volume)
