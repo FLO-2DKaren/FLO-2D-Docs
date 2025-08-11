@@ -1223,6 +1223,26 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
+
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
+
+    * - DUM
+      - **i**
+      - **1 - NNOD**
+      - Grid element number (I) of the floodplain grid system.  This is a dummy variable that is not
+        used by the model.  It is only used for the convenience of viewing the input data file.
+
+    * - FPNVALUE
+      - **r**
+      - **0.010 - 0.4**
+      - Manning’s n roughness coefficient assigned to grid element I (see comment 1).
+
 **Instructional Comments for the MANNINGS_N.DAT File**
 
 This file is prepared and edited by the FLO-2D Plugin for spatially variable n-values.
