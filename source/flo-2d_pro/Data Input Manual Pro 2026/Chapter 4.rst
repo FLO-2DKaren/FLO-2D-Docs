@@ -982,6 +982,57 @@ FLOODPLAIN GRID ELEMENT DATA
 
         Note:  FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
         boundary elements.
+
+        <div style="border: 1px solid black; display: inline-block; padding: 5px;">
+          <strong>Example Grid</strong>
+          <table style="border-collapse: collapse; margin-top: 5px;">
+            <tr>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">1</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">2</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">3</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">4</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">5</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">6</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">7</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">8</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">9</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">10</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">11</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">12</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">13</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">14</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">15</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">16</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">17</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">18</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">19</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">20</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">21</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">22</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">23</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">24</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">25</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">26</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">27</td>
+            </tr>
+            <tr>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">28</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">29</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">30</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">31</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">32</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">33</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">34</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">35</td>
+              <td style="border: 1px solid black; padding: 4px; text-align: center;">36</td>
+            </tr>
+          </table>
+        </div>
+
         </pre>
     </div>
 
