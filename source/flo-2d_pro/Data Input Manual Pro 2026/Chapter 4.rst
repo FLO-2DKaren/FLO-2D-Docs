@@ -1322,7 +1322,7 @@ TOPOGRAPHICAL ELEVATION DATA
 
 .. list-table::
     :widths: 25 25 25 25
-    :header-row: 0
+    :header-rows: 0
 
     * - **VARIABLE**
       - **FMT**
