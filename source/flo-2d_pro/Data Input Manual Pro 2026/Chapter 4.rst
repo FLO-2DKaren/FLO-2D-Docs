@@ -44,8 +44,8 @@ The Line 3 data for the first four-time steps is as follows:
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div style="border:2px solid black; padding:5px; display:inline-block;">
-            <pre> *INFLOW.DAT Variable Example* </pre>
+        <div><b>INFLOW.DAT Variable Example</b></div>
+        <hr style="margin:4px 0;">
         </div>
     <pre>
       <b>HP(J,1)</b>           <b>HP(J,2)</b>              <b>HP(J,3)</b>
