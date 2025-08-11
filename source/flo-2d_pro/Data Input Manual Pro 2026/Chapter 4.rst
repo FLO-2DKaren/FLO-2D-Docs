@@ -1273,6 +1273,28 @@ FILE: TOPO.DAT
 TOPOGRAPHICAL ELEVATION DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       TOPO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        551397.50 44608.95 6.00	<b>Line 1:	XCOORD(I), YCOORD(I) FP(I, J)</b>
+
+
+        Note: TOPO.DAT is a list of the grid element x- and y-coordinates and their elevations.
+        The elevations are interpolated from topographical data by the FLO-2D Plugin. This file contains
+        the same data as the FPLAIN.DAT and CADPTS.DAT files except for the neighbor grid elements and n-value.
+        It is automatically generated and edited by the FLO-2D Plugin when the FPLAIN.DAT is written. Use this file
+        together with Mannings_N.DAT for GIS and CADD applications.
+        </pre>
+    </div>
+
+
+
+
+
+
 Variable Descriptions for the TOPO.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
