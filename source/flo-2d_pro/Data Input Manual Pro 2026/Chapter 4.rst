@@ -46,7 +46,6 @@ The Line 3 data for the first four-time steps is as follows:
     <div style="border:2px solid black; padding:5px; display:inline-block;">
         <div><b>INFLOW.DAT Variable Example</b></div>
         <hr style="margin:4px 0;">
-        </div>
     <pre>
       <b>HP(J,1)</b>           <b>HP(J,2)</b>              <b>HP(J,3)</b>
     Time (hrs)      Discharge (cfs)     Sediment Conc. (% by Volume)
