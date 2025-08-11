@@ -148,6 +148,12 @@ but can still be used).
 
     <br>
 
+FILE:  CONT.DAT
+~~~~~~~~~~~~~~~~
+
+SYSTEM CONTROL DATA
+^^^^^^^^^^^^^^^^^^^^^^^
+
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
@@ -758,8 +764,10 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
        If IMULTC = 2, then multiple channels can be used alongside separate gutter cells in GUTTER.DAT.
 
 FILE: TOLER.DAT
+~~~~~~~~~~~~~~~~
 
 NUMERICAL STABILITY CONTROL DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
@@ -950,8 +958,38 @@ Variable Descriptions for the TOLER.DAT File
 
 
 FILE: FPLAIN.DAT
+~~~~~~~~~~~~~~~~~~~
 
 FLOODPLAIN GRID ELEMENT DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>                           TOLER.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+
+.. raw:: html
+
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>           FPLAIN.DAT File Variables</pre></i></pre>
+        <hr style="margin:4px 0;border:2px solid black;">
+
+        <pre>
+        1 0 2 10 0 0.060 4005.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+        2 0 3 11 1 0.065 4008.65 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+        3 0 4 12 2 0.065 4002.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+        ...
+        ...
+        ...
+        18 9 0 27 17 0.065 4010.78 Line 1:  <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+        Note:  FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
+        boundary elements.
+        </pre>
+    </div>
+
+
 
 Line 1:
 
@@ -968,6 +1006,15 @@ Example Grid 1 = grid element,
 19 20 21 22 23 24 25 26 27
 
 28 29 30 31 32 33 34 35 36
+
+
+
+
+
+
+
+
+
 
 Variable Descriptions for the FPLAIN.DAT File
 
