@@ -1316,23 +1316,33 @@ TOPOGRAPHICAL ELEVATION DATA
     <br><br>
 
 
-Variable Descriptions for the TOPO.DAT File
+**Variable Descriptions for the TOPO.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+    :widths: 25 25 25 25
+    :header-row: 0
 
-XCOORD(I) r
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
-X coordinate of grid element node at center.
+    * - XCOORD(I)
+      - **r**
+      - ∞
+      - X coordinate of grid element node at center.
 
-YCOORD(I) r
+    * - YCOORD(I)
+      - **r**
+      - ∞
+      - Y coordinate of grid element node at center.
 
-Y coordinate of grid element node at center.
-
-ELEV(I) r
-
-Elevation of grid element.
+    * - ELEV(I)
+      - **r**
+      - ∞
+      - Elevation of grid element.
 
 Instructional Comments for the TOPO.DAT File
 
