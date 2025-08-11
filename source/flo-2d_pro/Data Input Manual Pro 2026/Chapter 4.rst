@@ -701,6 +701,11 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
       assigned.
       The basic equation for the grid element roughness nd as function of flow depth is:
 
+        .. math::
+            :label:
+
+            nd = nb * 1.5 e^{-(\frac{0.4 depth}{dmax})}
+
         nd = nb \*1.5 \* e\ :sup:`-(0.4 depth/dmax)`
 
         where:
