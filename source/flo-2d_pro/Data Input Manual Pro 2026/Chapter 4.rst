@@ -790,21 +790,33 @@ NUMERICAL STABILITY CONTROL DATA
         </pre>
     </div>
 
+.. raw:: html
 
+    <br><br>
 
 Variable Descriptions for the TOLER.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
 
-COURANTC
+    * - VARIABLE
+      - FMT
+      - RANGE
+      - DESCRIPTION
 
-r
+    * - COURANTC
+      - **r**
+      - 0.2 - 0.9
+      - Courant number for channels.
+        Courant-Friedrich-Lewy numerical stability parameter that relates the floodwave movement in channels to the
 
-0. 2 - 0.9 Courant number for channels.
-   Courant-Friedrich-Lewy numerical stability parameter that relates the floodwave movement in channels to the discretized model in space and time (see
-   comments 3 thru 5).
+        discretized model in space and time (see comments 3 thru 5).
+
+
+0. 2 - 0.9
 
 COURANTFP
 
