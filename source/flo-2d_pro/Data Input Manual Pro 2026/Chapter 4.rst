@@ -875,7 +875,7 @@ Variable Descriptions for the TOLER.DAT File
         Use a small value for rainfall runoff (0.004 ft to 0.10 ft; 0.0012 m to 0.030m).
 
 
-Instructional Comments for the TOLER.DAT File
+**Instructional Comments for the TOLER.DAT File**
 
 1. The TOLGLOBAL value prescribes the flow depth for a floodplain or channel grid element below which no flood routing will be performed.
    TOLGLOBAL is analogous to a depression storage rainfall abstraction.
