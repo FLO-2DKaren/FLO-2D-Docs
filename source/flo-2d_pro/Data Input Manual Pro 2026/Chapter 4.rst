@@ -1046,6 +1046,9 @@ FLOODPLAIN GRID ELEMENT DATA
     </div>
 
 .. raw:: html
+    <br><br>
+
+.. raw:: html
 
     <div style="border: 2px solid black; padding: 5px; display: inline-block;">
         <div><pre><i>   FPLAIN.DAT File Example </i></pre></div>
@@ -1059,7 +1062,7 @@ FLOODPLAIN GRID ELEMENT DATA
         33 24  34  0	32	0.065	4000.22
         34 25  35  0	33	0.065	4000.56
         35 26  36  0	34	0.065	4001.00
-        36 27  0	0	35	0.065	4001.45
+        36 27  0   0	35	0.065	4001.45
         </pre>
     </div>
 
