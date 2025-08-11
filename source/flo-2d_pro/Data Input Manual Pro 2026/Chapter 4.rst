@@ -992,7 +992,7 @@ FLOODPLAIN GRID ELEMENT DATA
                                                                                 0.060 = n-value for the cell
                                                                                 4005.23 = cell elevation
 
-        <div style="border: 0px solid black; display: inline-block; padding: 1px;">
+        <div style="border: 0px solid black; display: inline-block; padding: 0px;">
           <strong>Example Grid</strong>
           <table style="border-collapse: collapse; margin-top: 5px;">
             <tr>
