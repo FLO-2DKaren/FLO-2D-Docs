@@ -1276,10 +1276,10 @@ TOPOGRAPHICAL ELEVATION DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                       TOPO.DAT File Variables</pre></i></div>
+        <div><i><pre>                                   TOPO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        551397.50 44608.95 6.00                             <b>Line 1:	XCOORD(I), YCOORD(I) FP(I, J)</b>
+        551397.50 44608.95 6.00                                   <b>Line 1:	XCOORD(I), YCOORD(I) FP(I, J)</b>
 
 
         Note: TOPO.DAT is a list of the grid element x- and y-coordinates and their elevations.
