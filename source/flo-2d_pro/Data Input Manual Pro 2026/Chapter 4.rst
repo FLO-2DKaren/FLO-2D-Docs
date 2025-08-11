@@ -811,6 +811,7 @@ Variable Descriptions for the TOLER.DAT File
       - **r**
       - 0.2 - 0.9
       - Courant number for channels.
+
         Courant-Friedrich-Lewy numerical stability parameter that relates the floodwave movement
 
         in channels to the discretized model in space and time (see comments 3 thru 5).
@@ -818,7 +819,7 @@ Variable Descriptions for the TOLER.DAT File
     * - COURANTFP
       - **r**
       - 0.2 - 0.9
-      - Courant number for floodplain.Numerical stability parameter that relates the floodwave
+      - Courant number for floodplain. Numerical stability parameter that relates the floodwave
 
         movement for overland flow to the discretized model in space and time
 
@@ -835,7 +836,7 @@ Variable Descriptions for the TOLER.DAT File
 
     * - COURCHAR
       - **r**
-      - **C, T**
+      - C, T
       - Character ‘C’ that identifies Line 2 with the Courant stability parameter.
 
         This variable is case sensitive. It must be upper case.
@@ -865,6 +866,7 @@ Variable Descriptions for the TOLER.DAT File
     * - TOLGLOBAL
       - **r**
       - 0.004 - 0.5
+
         typ 0.0012 - 0.03
       - Surface detention. TOLGLOBAL is a minimum value of the flow depth for flood routing.
 
