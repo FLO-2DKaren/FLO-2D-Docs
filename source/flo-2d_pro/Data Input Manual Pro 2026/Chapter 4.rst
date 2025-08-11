@@ -1290,9 +1290,30 @@ TOPOGRAPHICAL ELEVATION DATA
         </pre>
     </div>
 
+.. raw:: html
 
+    <br><br>
 
+.. raw:: html
 
+    <div style="border:2px;padding:5px;display:inline-block;">
+        <div><i><pre>       TOPO.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        551397.50 44608.95 6.00
+        551397.50 44708.95 6.05
+        551397.50 44808.95 6.06
+        551397.50 44908.95 6.06
+        551397.50 45008.95 6.11
+        551397.50 45108.95 6.09
+        551397.50 45208.95 6.12
+        551397.50 45308.95 6.14
+        </pre>
+    </div>
+
+..  raw:: html
+
+    <br><br>
 
 
 Variable Descriptions for the TOPO.DAT File
