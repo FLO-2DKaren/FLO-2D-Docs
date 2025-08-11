@@ -207,10 +207,10 @@ but can still be used).
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - AMANN
      - **r**
