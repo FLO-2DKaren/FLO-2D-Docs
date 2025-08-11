@@ -811,65 +811,68 @@ Variable Descriptions for the TOLER.DAT File
       - **r**
       - 0.2 - 0.9
       - Courant number for channels.
-        Courant-Friedrich-Lewy numerical stability parameter that relates the floodwave movement in channels to the
+        Courant-Friedrich-Lewy numerical stability parameter that relates the floodwave movement
 
-        discretized model in space and time (see comments 3 thru 5).
+        in channels to the discretized model in space and time (see comments 3 thru 5).
 
+    * - COURANTFP
+      - **r**
+      - 0.2 - 0.9
+      - Courant number for floodplain.Numerical stability parameter that relates the floodwave
 
-0. 2 - 0.9
+        movement for overland flow to the discretized model in space and time
 
-COURANTFP
+        (see comments 3 thru 5).
 
-r
+    * - COURANTST
+      - **r**
+      - 0.2 - 0.9
+      - Courant number for streets.Courant number for floodplain.Numerical stability parameter
 
-0.2 - 0.9 Courant number for floodplain.
-Numerical stability parameter that relates the floodwave movement for overland flow to the discretized model in space and time (see comments 3 thru
-5).
+        that relates the floodwave movement in streets to the discretized model in space and time.
 
-COURANTST
+        (see comments 3 thru 5).
 
-r
+    * - COURCHAR
+      - **r**
+      - **c**
+      - C, T
+      - Character ‘C’ that identifies Line 2 with the Courant stability parameter.
 
-0.2 - 0.9 Courant number for streets.
-Courant number for floodplain.
-Numerical stability parameter that relates the floodwave movement in streets to the discretized model in space and time.
-(see comments 3 thru 5).
+        This variable is case sensitive. It must be upper case.
 
-COURCHAR
+    * - DEPTOL
+      - **r**
+      - 0.1 - 0.5
+      - Tolerance value for the percent change in the flow depth for a given timestep.
 
-c
+        When a given element DEPTOL is exceeded, the timestep will be reduced.
 
-C, T Character ‘C’ that identifies Line 2 with the Courant stability parameter.
-This variable is case sensitive.
-It must be upper case.
+        If DEPTOL = 0, then the timestep is governed by the Courant numerical stability criteria.
 
-DEPTOL
+        It is recommended that DEPTOL only be used for specific ponded flow conditions where the
 
-r
+        Courant number is ineffective (see comment 2).
 
-0.1 - 0.5 Tolerance value for the percent change in the flow depth for a given timestep.
-When a given element DEPTOL is exceeded, the timestep will be reduced.
-If DEPTOL = 0, then the timestep is governed by the Courant numerical stability criteria.
-It is recommended that DEPTOL only be used for specific ponded flow conditions where the Courant number is ineffective (see comment 2).
+    * - TIME_ACCEL
+      - **r**
+      - 0.1 - 2
+      - Coefficient to increase the rate of incremental timestep change.
 
-TIME_ACCEL
+        Default value = 0.1 A value of 0.1 may result in a a more stable simulation time.
 
-r
+        A value of 0.2 or higher may result in a faster simulation.
 
-0.1 to 2 Coefficient to increase the rate of incremental timestep change.
-Default value = 0.1 A value of 0.1 may result in a a more stable simulation time.
-A value of 0.2 or higher may result in a faster simulation.
+    * - TOLGLOBAL
+      - **r**
+      - 0.004 - 0.5
+      - typ 0.0012 - 0.03
+      - Surface detention. TOLGLOBAL is a minimum value of the flow depth for flood routing.
 
-TOLGLOBAL
+        A typical value river flooding is 0.10 ft (see comment 1).
 
-r 0.004 - 0.5
+        Use a small value for rainfall runoff (0.004 ft to 0.10 ft; 0.0012 m to 0.030m).
 
-typ 0.0012 -
-
-0.03 Surface detention.
-TOLGLOBAL is a minimum value of the flow depth for flood routing.
-A typical value river flooding is 0.10 ft (see comment 1).
-Use a small value for rainfall runoff (0.004 ft to 0.10 ft; 0.0012 m to 0.030m).
 
 Instructional Comments for the TOLER.DAT File
 
