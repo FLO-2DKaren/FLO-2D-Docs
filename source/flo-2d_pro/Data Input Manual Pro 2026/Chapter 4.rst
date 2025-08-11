@@ -148,8 +148,6 @@ but can still be used).
 
     <br>
 
-**
-
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
@@ -178,10 +176,12 @@ but can still be used).
 
    <br><br>
 
-*CONT.DAT File Example*
 
 .. raw:: html
 
+    <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>   CONT.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     24.0 0.10 2 0 0
     1 1 0 0 0
@@ -193,6 +193,7 @@ but can still be used).
     0 0.0
     0.1
     </pre>
+    </div>
 
 **Variable Descriptions for the CONT.DAT File**
 
