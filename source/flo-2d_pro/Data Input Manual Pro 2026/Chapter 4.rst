@@ -899,52 +899,50 @@ Instructional Comments for the TOLER.DAT File
 
 5. Using the Courant criteria, the timestep Δt is limited by: Δt = C Δx / (βV + c)
 
-where:
+   where:
 
-C is the Courant number (C ≤ 1.0) Δx is the square grid element width
+    C is the Courant number (C ≤ 1.0) Δx is the square grid element width.
 
-V is the computed average cross section velocity
+    V is the computed average cross section velocity.
 
-β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity
+    β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
 
-The Courant coefficient C may vary from 0.2 to 0.9 depending on the size of the grid element and floodwave velocity.
-If C is set to 1.0, artificial or numerical diffusivity is assumed to be zero.
-A typical value of the Courant number is 0.6 to
+   The Courant coefficient C may vary from 0.2 to 0.9 depending on the size of the grid element and floodwave velocity.
+   If C is set to 1.0, artificial or numerical diffusivity is assumed to be zero.
+   A typical value of the Courant number is 0.6 to 0.7.
+   Start with the default value of 0.6.
 
-0.7.
-Start with the default value of 0.6.
+   Use the following approach to improve numerical stability:
 
-Use the following approach to improve numerical stability:
+    - Initially run the model with the Courant numbers = 0.6.
+      If the model is unstable, reduce the appropriate Courant number by 0.1 increments in successive runs until the Courant number reaches 0.2.
 
-· Initially run the model with the Courant numbers = 0.6.
-If the model is unstable, reduce the appropriate Courant number by 0.1 increments in successive runs until the Courant number reaches 0.2.
+    - Run the model with an appropriate limiting Froude number (e.g. FROUDL in CONT>DAT = 0.9 subcritical flow on an alluvial surface).
+      This will calibrate the model n-values for reasonable Froude numbers.
 
-· Run the model with an appropriate limiting Froude number (e.g. FROUDL in CONT>DAT = 0.9 subcritical flow on an alluvial surface).
-This will calibrate the model n-values for reasonable Froude numbers.
+    - Review the maximum velocities in VELTIMEC.OUT, VELTIMEFP.
+      OUT and VELTIMEST.OUT (or in MAXPLOT or Mapper) and the maximum Froude numbers in SUPER.OUT to determine the location of any inappropriate high
+      velocities related to numerical surging and increase the n-values in the vicinity of the grid elements with high velocities.
 
-· Review the maximum velocities in VELTIMEC.OUT, VELTIMEFP.
-OUT and VELTIMEST.OUT (or in MAXPLOT or Mapper) and the maximum Froude numbers in SUPER.OUT to determine the location of any inappropriate high
-velocities related to numerical surging and increase the n-values in the vicinity of the grid elements with high velocities.
+    - Review the n-values in ROUGH.OUT and MANNINGS_N.DAT.
+      Make n-value adjustments in MANNINGS_N.DAT based on exceedingly high n-values in ROUGH.OUT then replace MANNINGS_NDAT with MANNINGS.RGH.
 
-· Review the n-values in ROUGH.OUT and MANNINGS_N.DAT.
-Make n-value adjustments in MANNINGS_N.DAT based on exceedingly high n-values in ROUGH.OUT then replace MANNINGS_NDAT with MANNINGS.RGH.
-
-· Run the simulation and repeat steps 3 and 4 making adjustments to MANNINGS_N.DAT until ROUGH.OUT is essentially empty.
-A few incremental n-value changes will not affect the simulation.
-Make adjustments to FROUDL to decrease the number of n-value adjustments.
+    - Run the simulation and repeat steps 3 and 4 making adjustments to MANNINGS_N.DAT until ROUGH.OUT is essentially empty.
+      A few incremental n-value changes will not affect the simulation.
+      Make adjustments to FROUDL to decrease the number of n-value adjustments.
 
 6. Increase the model speed:
 
-· Increase the Courant numbers in 0.1 increments until C = 0.9.
+    - Increase the Courant numbers in 0.1 increments until C = 0.9.
 
-· Increase the TIME_ACCEL parameter in TOLER.DAT in 0.1 increments to increase the computational timesteps increments.
+    - Increase the TIME_ACCEL parameter in TOLER.DAT in 0.1 increments to increase the computational timesteps increments.
 
-· Review the model numerical stability with the maximum velocity and Froude number output files.
-Decrease the TIME_ACCEL parameter if unreasonable increases in the maximum velocity and Froude number are reported.
+    - Review the model numerical stability with the maximum velocity and Froude number output files.
+      Decrease the TIME_ACCEL parameter if unreasonable increases in the maximum velocity and Froude number are reported.
 
-· Review the computational runtime in the SUMMARY.OUT file and balance the increased Courant numbers and TIME_ACCEL parameter to achieve the best
-runtime.
-This may require only an increase in TIME_AC- CEL.
+    - Review the computational runtime in the SUMMARY.OUT file and balance the increased Courant numbers and TIME_ACCEL parameter to achieve the best
+      runtime. This may require only an increase in TIME_ACCEL.
+
 
 FILE: FPLAIN.DAT
 
