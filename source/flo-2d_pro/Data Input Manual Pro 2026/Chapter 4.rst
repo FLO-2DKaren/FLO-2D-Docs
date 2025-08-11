@@ -1107,7 +1107,7 @@ FLOODPLAIN GRID ELEMENT DATA
 
     * - FP(I,6)
       - **r**
-      - **Infinity**
+      - **∞**
       - Ground surface elevation for grid element I (ft or m).
 
 .. important::
