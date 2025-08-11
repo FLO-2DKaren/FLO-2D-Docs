@@ -762,6 +762,8 @@ FILE: TOLER.DAT
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
+        <div><i><pre>    FILE: TOLER.DAT</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0.1  0.00                   Line 1: <b>TOLGLOBAL   DEPTOL</b>
         C  0.6   0.6   0.6          <b>Line 2: COURCHAR = ‘C’  COURANTFP   COURANTC</b>
