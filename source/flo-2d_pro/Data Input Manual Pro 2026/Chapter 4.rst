@@ -1197,7 +1197,7 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>MANNINGS_N.DAT File Example</pre></i></div>
-        <hr style="margin:4px 0;border:2px solid black>
+        <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         1 0.040
         2 0.040
@@ -1217,13 +1217,13 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
     <br><br>
 
 
-Variable Descriptions for the
+**Variable Descriptions for the**
 
-MANNINGS_N.DAT File
+**MANNINGS_N.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the MANNINGS_N.DAT File
+**Instructional Comments for the MANNINGS_N.DAT File**
 
 This file is prepared and edited by the FLO-2D Plugin for spatially variable n-values.
 
