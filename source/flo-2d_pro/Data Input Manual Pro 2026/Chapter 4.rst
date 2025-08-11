@@ -1371,18 +1371,18 @@ INFLOW HYDROGRAPH DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;dispay:inline-block;">
-        <div><i><pre>       INFLOW.DAT File Variables</pre></i></div>
+        <div><i><pre>                       INFLOW.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        0 4335                  Line 1:  <b>IHOURDAILY IDEPLT</b>
-        C  0 4335               Line 2:  <b>IFC(I) = ‘F’ or ‘C’ INOUTFC(I) KHIN(I)</b>
+        0 4335                  Line 1: <b>IHOURDAILY IDEPLT</b>
+        C  0 4335               Line 2: <b>IFC(I) = ‘F’ or ‘C’ INOUTFC(I) KHIN(I)</b>
                                         <i>I = Number of inflow nodes.</i>
         H  0  0                 Line 3: <b>HYDCHAR = ‘H’ HP(J,1) HP(J,2) HP(J,3) J=1</b>
         H  1  50.00             Line 3: <b>HYDCHAR = ‘H’ HP(J,1) HP(J,2) HP(J,3) J=2</b>
         H  24 1553.0            Line 3: <b>HYDCHAR = ‘H’ HP(J,1) HP(J,2) HP(J,3) J=3</b>
         R 5232 3320 0.250       Line 4: <b>RESCHAR = ‘R’ IRESGRID(II) RESERVOIREL(II)</b>
                                         <b>RESERVOIRN(II)</b>
-        R 6528 3295 3292 0.250  Line 4:  <b>RESCHAR = ‘R’ IRESGRID(II) RESERVOIREL(II)</b>
+        R 6528 3295 3292 0.250  Line 4: <b>RESCHAR = ‘R’ IRESGRID(II) RESERVOIREL(II)</b>
                                         <b>TAILINGSELEV(II) RESERVOIRN(II)</b>
                                         <i>II = Number of data pairs.</i>
         ....
@@ -1395,10 +1395,6 @@ INFLOW HYDROGRAPH DATA
             Line 4: Tailings elevation is optional is optional the n value is required.
         </pre>
     </div>
-
-
-
-
 
 Variable Descriptions for the INFLOW.DAT File
 
