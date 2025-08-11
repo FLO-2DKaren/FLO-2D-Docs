@@ -1393,7 +1393,8 @@ INFLOW HYDROGRAPH DATA
             Line 2, 3: Repeat these lines for each inflow grid element.
             Line 3: If MUD = 0, HP(I,J,3) is omitted.
             Line 4: Tailings elevation is optional is optional the n value is required.
-
+        </pre>
+    </div>
 
 
 
