@@ -704,9 +704,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
         .. math::
             :label:
 
-            nd = nb \* 1.5 \* e^{-(\frac{0.4 depth}{dmax})}
-
-        nd = nb \*1.5 \* e\ :sup:`-(0.4 depth/dmax)`
+            n_d = n_b \* 1.5 \* e^{-(\frac{0.4 depth}{dmax})}
 
         where:
 
