@@ -897,9 +897,16 @@ Variable Descriptions for the TOLER.DAT File
 
 4. If the model is unstable, reduce the appropriate Courant number by 0.1 in successive runs until the Courant number reaches 0.2.
 
-5. Using the Courant criteria, the timestep Δt is limited by: Δt = C Δx / (βV + c)
+5. Using the Courant criteria, the timestep Δt is limited by:
 
-   where:
+    .. math::
+        :label:
+
+        \Delta = C \Delta x / (\Beta V + c)
+
+Δt = C Δx / (βV + c)
+
+    where:
 
     C is the Courant number (C ≤ 1.0) Δx is the square grid element width.
 
