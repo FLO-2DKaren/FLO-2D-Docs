@@ -2290,7 +2290,7 @@ RAINCELLRAW.DAT File
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>               RAINCELLRAW.DAT File Variables </pre></i></div>
+        <div><i><pre>                       RAINCELLRAW.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
           15min   96 intervals          Line 1: RAININTIME   IRINTERS
