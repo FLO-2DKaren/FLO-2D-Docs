@@ -2045,30 +2045,35 @@ RAINFALL DATA
 
         at the time interval R_TIME(I) (see comment 1).
 
-Instructional Comments for the RAIN.DAT File
+**Instructional Comments for the RAIN.DAT File**
 
 1. The rainfall distribution has to be correlated to the flood simulation time.
    The rainfall may occur for only a portion of the total flood simulation and may start after the flood simulation begins.
    For most rain storms, the start of the simulation correlates with the start of the rainfall.
    In those cases where the rainfall and the simulation time are not correlated, it may be necessary to use
-
-0.0 cumulative rainfall at the beginning of the flood simulation for a period of time.
-Similarly the final cumulative rainfall at the end of the simulation could be set equal to 1.0.
+   0.0 cumulative rainfall at the beginning of the flood simulation for a period of time.
+   Similarly the final cumulative rainfall at the end of the simulation could be set equal to 1.0.
 
 2. If infiltration is being simulated, set the RAINABS = 0 and assign the rainfall abstraction in the INFIL.DAT file.
 
-3. When rainfall occurs on a grid element with a complete storage loss assigned (ARF = 1 value), the model removes that rainfall volume from the surface
-   water in that cell.
+3. When rainfall occurs on a grid element with a complete storage loss assigned (ARF = 1 value), the model removes that
+   rainfall volume from the surface water in that cell.
    It assumes that the rainfall on buildings enters the storm drain system and is eliminated as runoff.
-   Setting IRAINBUILDING = 1 enables the model to add the building rainfall to the surface water of the grid element with an ARF value.
+   Setting IRAINBUILDING = 1 enables the model to add the building rainfall to the surface water of the grid element
+   with an ARF value.
    It assumes that the buildings have a gutter system that discharges the water to the ground.
 
 4. RAINARF values are used for design storm data.
-   The variable is a percentage of the total depth for the cell or the total depth for the cell when using a design storm event in the RAIN.DAT file.
+   The variable is a percentage of the total depth for the cell or the total depth for the cell when using a design
+   storm event in the RAIN.DAT file.
    For example, set the variable to zero, no rain will fall on the cell.
-   Set it to 0.5, half of the assigned rainfall on that element will be computed for that interval and set the RAINARF value to 1 and all of the rain
-   will fall on the cell.
+   Set it to 0.5, half of the assigned rainfall on that element will be computed for that interval and set the
+   RAINARF value to 1 and all of the rain will fall on the cell.
    The realtime rainfall (spatially and temporally variable) is also reduced by the RAINARF value over each rainfall interval.
+
+
+
+
 
 FILE: RAINCELL.DAT
 
