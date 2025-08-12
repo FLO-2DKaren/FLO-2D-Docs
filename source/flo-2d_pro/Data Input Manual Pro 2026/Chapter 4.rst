@@ -1769,14 +1769,18 @@ OUTFLOW HYDROGRAPH DATA
       - 1 - NNOD
       - Array of channel outflow elements.
 
-        These elements discharge flow out of the grid system from the channel (see comments 1 and 2).
+        These elements discharge flow out of the grid system from the channel
+
+        (see comments 1 and 2).
 
     * - NODDC
       - **i**
       - 1 - NDC
       - Array of floodplain outflow grid elements.
 
-        These elements discharge flow out of the grid system from the floodplain (see comments 1 and 2).
+        These elements discharge flow out of the grid system from the floodplain
+
+        (see comments 1 and 2).
 
     * - NOSTA
       - **i**
