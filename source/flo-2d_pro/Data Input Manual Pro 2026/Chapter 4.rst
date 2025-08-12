@@ -1842,9 +1842,7 @@ OUTFLOW HYDROGRAPH DATA
 
         Q = a hb
 
-    where the coefficient (a) and exponent (b) are required input and h is the flow depth.
-
-    The coefficient (a) and exponent (b) can be used to established critical flow at the outflow grids.
+    where the coefficient (a) and exponent (b) are required input and h is the flow depth. The coefficient (a) and exponent (b) can be used to established critical flow at the outflow grids.
 
 4. A discretized time-stage relationship can be employed to specify a water surface elevation for at various channel or
    floodplain locations in the grid system.
