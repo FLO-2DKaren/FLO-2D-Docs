@@ -1736,7 +1736,9 @@ OUTFLOW HYDROGRAPH DATA
     * - CHDEPTH(J)
       - **r**
       - 0.0 -
-      - Array of channel maximum depths above the thalweg (not water surface elevation) for the outflow rating table.
+      - Array of channel maximum depths above the thalweg (not water surface elevation) for the
+
+        outflow rating table.
 
     * - CQTABLE(J)
       - **r**
@@ -1746,12 +1748,16 @@ OUTFLOW HYDROGRAPH DATA
     * - HOUT(J,1)
       - **r**
       - 0.01 -
-      - Array of channel maximum depths for which a channel outflow stage-discharge relationship is valid.
+      - Array of channel maximum depths for which a channel outflow stage-discharge relationship
+
+        is valid.
 
     * - HOUT(J,2)
       - **r**
       - 0.0 -
-      - Array of coefficients for the channel element outflow stage- discharge relationship (see comment 3).
+      - Array of coefficients for the channel element outflow stage- discharge relationship
+
+        (see comment 3).
 
     * - HOUT(J,3)
       - **r**
@@ -1777,7 +1783,9 @@ OUTFLOW HYDROGRAPH DATA
       - 1 - NNOD
       - Array of grid elements with stage-time relationships.
 
-        If NOSTA is a inflow element, assign NOSTA as a negative value to compute inflow volume (see comments 4, 5 and 6).
+        If NOSTA is a inflow element, assign NOSTA as a negative value to compute inflow volume
+
+        (see comments 4, 5 and 6).
 
     * - NOSTACFP
       - **s**
