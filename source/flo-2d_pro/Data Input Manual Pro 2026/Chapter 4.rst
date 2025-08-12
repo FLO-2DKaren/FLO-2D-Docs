@@ -2509,6 +2509,7 @@ INFILTRATION DATA
 
        **0 - 25**
      - SCS global floodplain rainfall abstraction or interception (inches or mm).
+
        Assign ABSTRSCS = 0 for automatic computation
 
        of the initial abstraction (see comments 7 and 10).
@@ -2798,39 +2799,34 @@ INFILTRATION DATA
 8. Use HYDCX(IC) and all other parameters on Line 4 to specify channel infiltration data by reach.
    Use line 8 HYDCON parameter to specify spatially variable hydraulic conductivity in the channel grid elements that will supersede the HYDCX(IC) value
    in Line 4.
-   It is not necessary to specify individual channel
-
-element soil suction, initial or final saturation values when assigning channel infiltration.
-If SOILD is = 0, use Line 4, where IC is the number of channel segments or reaches each entered on a new line.
-If SOILD is greater than 0, use line 4a where IC is the number of segments or reaches.
+   It is not necessary to specify individual channel element soil suction, initial or final saturation values when assigning channel infiltration.
+   If SOILD is = 0, use Line 4, where IC is the number of channel segments or reaches each entered on a new line.
+   If SOILD is greater than 0, use line 4a where IC is the number of segments or reaches.
 
 9. If SCS curve number method (INFMETHOD = 2) is used, it is assumed that the channel infiltration is negligible.
    Simulate channel infiltration with the Green-Ampt method.
 
-10.
-With the SCS curve number method (INFMETHOD = 2), assign the AB- STRSCS variable in Line 5 to the abstraction (inches or mm).
-If ABSTRSCS = 0.0, the abstraction value is automatically computed using the SCS method.
+10. With the SCS curve number method (INFMETHOD = 2), assign the AB- STRSCS variable in Line 5 to the abstraction (inches or mm).
+    If ABSTRSCS = 0.0, the abstraction value is automatically computed using the SCS method.
 
-11.
-The infiltration parameters can be estimated from the tables in the Reference Manual.
-The user must distinguish whether soil moisture deficit parameter DTHETA will represent the volumetric soil moisture deficit (soil moisture deficit
-times the porosity) as prescribed from a drainage manual or if DTHETA will be defined as just the soil moisture deficit (SATF-SATI).
-If the volumetric soil moisture deficit (SATF-SATI)*POROS is being applied, set POROS = 0.0 in Line 1 and assign a DTHETA value in the range from 0.0
-to 0.5.
-If the only soil moisture deficit is being used, then assign a typical porosity (POROS) in the range: 0.35 to 0.45.
+11. The infiltration parameters can be estimated from the tables in the Reference Manual.
+    The user must distinguish whether soil moisture deficit parameter DTHETA will represent the volumetric soil moisture deficit (soil moisture deficit
+    times the porosity) as prescribed from a drainage manual or if DTHETA will be defined as just the soil moisture deficit (SATF-SATI).
+    If the volumetric soil moisture deficit (SATF-SATI)*POROS is being applied, set POROS = 0.0 in Line 1 and assign a DTHETA value in the range from 0.0
+    to 0.5.
+    If the only soil moisture deficit is being used, then assign a typical porosity (POROS) in the range: 0.35 to 0.45.
 
-12.
-The Green-Ampt infiltration will cease when the wetting front reaches the limiting soil depth either SOILD, SOIL_DEPTH or SOIL_DEPTHCX for the
-channel.
+12. The Green-Ampt infiltration will cease when the wetting front reaches the limiting soil depth either SOILD, SOIL_DEPTH or SOIL_DEPTHCX for the
+    channel.
 
-13.
-It is not necessary to specify the soil suction, initial or final saturation values when simulating channel infiltration.
-These values are assumed not to be important to the channel bed seepage or bank infiltration.
+13. It is not necessary to specify the soil suction, initial or final saturation values when simulating channel infiltration.
+    These values are assumed not to be important to the channel bed seepage or bank infiltration.
 
-14.
-Horton’s infiltration model is defined by the equation:
+14. Horton’s infiltration model is defined by the equation:
 
-f = fn + (fi - fn) e-at
+        .. math::
+            :label:
+        f = fn + (fi - fn) e-at
 
 where:
 
