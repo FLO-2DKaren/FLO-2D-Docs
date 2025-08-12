@@ -1448,108 +1448,111 @@ INFLOW HYDROGRAPH DATA
 
         The first hydrograph time-discharge set should be 0.0 and 0.0.
 
-HP(I,J,2) r 0.0 - Floodplain discharge (cfs or cms) corresponding to the time interval which starts at HP(I,J,1).
+    * - HP(I,J,2)
+      - **r**
+      - 0.0 - ∞
+      - Floodplain discharge (cfs or cms) corresponding to the time interval which starts at HP(I,J,1).
 
-HP(I,J,3) r 0 - 1 Sediment concentration by volume or sediment volume for a mudflow simulation (see comment 2).
+    * - HP(I,J,3)
+      - **r**
+      - 0 - 1
+      - Sediment concentration by volume or sediment volume for a mudflow simulation (see comment 2).
 
-HYDCHAR
+    * - HYDCHAR
+      - **c**
+      - H
+      - Character ‘H’ that identifies Line 3 inflow hydrograph time and discharge pairs.
 
-c
+        Each line of the hydrograph begins with ‘H’. Variable is case sensitive. It must be upper case.
 
-H Character ‘H’ that identifies Line 3 inflow hydrograph time and discharge pairs.
-Each line of the hydrograph begins with ‘H’.
-Variable is case sensitive.
-It must be upper case.
+    * - IDEPLT
 
-IDEPLT
+      - **i**
+      - 1 - NNOD
+      - Inflow grid element number whose hydrograph is to be graphically displayed at runtime.
 
-i
+        Only one inflow grid element hydrograph can be plotted on the screen.
 
-1 - NNOD Inflow grid element number whose hydrograph is to be graphically displayed at runtime.
-Only one inflow grid element hydrograph can be plotted on the screen.
-If no graphic display is desired (LGPLOT = 0) set IDEPLT = 0 (see comment 3).
+        If no graphic display is desired (LGPLOT = 0) set IDEPLT = 0 (see comment 3).
 
-IFC(I)
+    * - IFC(I)
+      - **c**
+      - F or C
+      - Character ‘F’ or ‘C’ to identify the inflow hydrograph grid element as a floodplain ‘F’ or a channel ‘C (see comment 1).
 
-c
+        Variable is Case Sensitive. It must be upper case.
 
-F or C Character ‘F’ or ‘C’ to identify the inflow hydrograph grid element as a floodplain ‘F’ or a channel ‘C (see comment 1).
+    * - INOUTFC(I)
+      - **s**
+      - 0, 1, 2, or 3
+      - Floodplain
 
-Variable is Case Sensitive.
-It must be upper case.
+        INOUTFC = 0 Inflow INOUTFC = 1 Diversion
 
-INOUTFC(I)
+        INOUTFC = 2 Source from groundwater INOUTFC = 3 Sink to groundwater
 
-s
+        Channel
 
-0, 1, 2, or 3 Floodplain
+        INOUTFC = 0 Inflow INOUTFC = 1 Diversion
 
-INOUTFC = 0 Inflow INOUTFC = 1 Diversion
+        INOUTFC = 2 MODFLOW Source INOUTFC = 3 MODFLOW Sink
 
-INOUTFC = 2 Source from groundwater INOUTFC = 3 Sink to groundwater
+        (see Comment 7, 8 and 9)
 
-Channel
+    * - IHOURDAILY
+      - **s**
+      - 0 = hourly
 
-INOUTFC = 0 Inflow INOUTFC = 1 Diversion
+        1 = daily
+      - IHOURDAILY = 0 for inflow hydrograph hourly intervals HP (I,J,1).
 
-INOUTFC = 2 MODFLOW Source INOUTFC = 3 MODFLOW Sink
+        IHOURDAILY = 1 for daily (24hr) intervals of HP (I,J,1).
 
-(see Comment 7, 8 and 9)
+    * - KHIN(I)
+      - **i**
+      - 1 - NNOD
+      - Array of grid elements with a inflow hydrograph (in- flow nodes).
 
-Variable Descriptions for the INFLOW.DAT File
+    * - RESCHAR
+      - **c**
+      - R
+      - Character ‘R’ that identifies Line 4 for reservoir or ponded area water surface assignment.
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+        Variable is Case Sensitive. It must be upper case.
 
-VARIABLE FMT RANGE DESCRIPTION
+    * - IRESGRID
+      - **i**
+      - 1 - NNOD
+      - Grid element located somewhere inside the reservoir or ponded water area.
 
-IHOURDAILY
+        Only one grid element has to be assigned a water surface elevation (see comment 5).
 
-s 0 = hourly
+    * - RESERVOIREL
+      - **r**
+      - 0 - ∞
 
-1 = daily IHOURDAILY = 0 for inflow hydrograph hourly intervals HP (I,J,1).
-IHOURDAILY = 1 for daily (24hr) intervals of HP (I,J,1).
+        0 - (-∞)
+      -Water surface elevation (ft or m) of the reservoir or ponded water area.
 
-KHIN(I) i 1 - NNOD Array of grid elements with a inflow hydrograph (in- flow nodes).
+        Negative water surface elevation assigns the reservoir bed elevations below the breach foundation elevation
 
-RESCHAR
+        as dead pool ground and reduces the reservoir starting flow depth for those dead pool elements.
 
-c
+    * - RESERVOIRN
+      - **r**
+      - 0.1 - 0.4
+      - Optional reservoir n-value for all reservoir elements assigned a starting water surface elevation.
 
-R Character ‘R’ that identifies Line 4 for reservoir or ponded area water surface assignment.
+        If RESERVOIRN is not assigned, the model will use the floodplain element n-value.
 
-Variable is Case Sensitive.
-It must be upper case.
+        The n-value should be high enough to reduce reservoir velocities to less than 2.0 fps (0.67 mps).
 
-IRESGRID
+        A value of 0.25 is suggested (see Comment 6).
 
-i
-
-1 - NNOD Grid element located somewhere inside the reservoir or ponded water area.
-Only one grid element has to be assigned a water surface elevation (see comment 5).
-
-RESERVOIREL
-
-r 0 -
-
-0 - (- ) Water surface elevation (ft or m) of the reservoir or ponded water area.
-
-Negative water surface elevation assigns the reservoir bed elevations below the breach foundation elevation as dead pool ground and re- duces the
-reservoir starting flow depth for those dead pool elements.
-
-RESERVOIRN
-
-r
-
-0.1 - 0.4 Optional reservoir n-value for all reservoir elements assigned a starting water surface elevation.
-If RES- ERVOIRN is not assigned, the model will use the floodplain element n- value.
-The n-value should be high enough to reduce reservoir velocities to less than
-
-2.0 fps (0.67 mps).
-A value of 0.25 is suggested (see
-
-Comment 6).
-
-TAILINGSELEV(II) r 0 - Tailings dam material surface elevation (ft or m).
+    * - TAILINGSELEV(II)
+      - **r**
+      - 0 - ∞
+      - Tailings dam material surface elevation (ft or m).
 
 Instructional Comments for the INFLOW.DAT File
 
