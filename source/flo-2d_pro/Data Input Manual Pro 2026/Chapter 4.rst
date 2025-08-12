@@ -2083,7 +2083,7 @@ FILE: RAINCELL.DAT
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                                   RAINCELL.DAT File Variables</pre></i></div>
+        <div><i><pre>                               RAINCELL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
          15   96  1/1/2000     12:00:00 AM   1/2/2000     12:00:00 AM
@@ -2091,6 +2091,7 @@ FILE: RAINCELL.DAT
          1   0.0                        Line 2: IRAINDUM (I)   RRGRID(I,K)
         </pre>
     </div>
+
 .. raw:: html
 
     <br><br>
@@ -2098,7 +2099,7 @@ FILE: RAINCELL.DAT
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                               RAINCELL.DAT File Example</pre></i></div>
+        <div><i><pre>                           RAINCELL.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
          1             73           4/17/2013     12:00:00 AM   4/20/2013     2:00:00 AM
@@ -2197,13 +2198,58 @@ FILE: RAINCELL.DAT
    A complete dataset is stored in the data file RAINCELL.HDF5 using a Hierarchical binary Data Format.
    The HDF5 data is primarily stored using two types of objects: datasets and groups.
 
+.. raw:: html
 
+    <br><br>
 
 FILE: FLO2DRAINCELL.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FLO2DRAINCELL.DAT File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>FLO2DRAINCELL.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1   10055330    Line 1: IRAINDUM (I)   NXRDGD(I)
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
+
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>FLO2DRAINCELL.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         1 10055330
+         2 10055330
+         3 10055330
+         .
+         .
+         .
+         NNOD   10054387
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
+
+
+
+
+
+
 
 VARIABLE FMT RANGE DESCRIPTION
 
