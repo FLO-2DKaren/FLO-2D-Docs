@@ -1641,12 +1641,37 @@ INFLOW HYDROGRAPH DATA
 
 
 FILE: OUTFLOW.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 OUTFLOW HYDROGRAPH DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-FILE: OUTFLOW.DAT
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>OUTFLOW.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        K   374                 Line 1:  <b>OUTCHAR = ‘K’ KOUT</b>
+        H  10.0  2.6  0.35      Line 2:  <b>OUTCHAR = ‘H’ HOUT(J,1) HOUT(J,2) HOUT(J,3)</b>
+        K   1007                Line 1:  <b>OUTCHAR = ‘K’ KOUT</b>
+        T  0.0  0.00            Line 3: <b>OUTCHAR = ‘T’ CHDEPTH(J) CQTABLE(J) J=1 T  3.0  50.35   Line 3: OUTCHAR = ‘T’ CHDEPTH(J) CQTABLE(J) J=2 T  5.0  157.67  Line 3: OUTCHAR = ‘T’ CHDEPTH(J) CQTABLE(J) J=3 K  567  Line 1: OUTCHAR = ‘K’ KOUT</b>
+        N   567  1              Line 4:  <b>OUTCHAR = ‘N’ NOSTA NOSTACFP</b>
+        S  0.00 0.00            Line 5: <b>OUTCHAR = ‘S’ STA_TIME(J) STA_STAGE(J) J=1 S  0.50 10.00    Line 5: OUTCHAR = ‘S’ STA_TIME(J) STA_STAGE(J) J=2 O  273    Line 6 OUTCHAR = ‘O’ NODDC(J) J=1</b>
+        O1 373                  Line 6:  <b>OUTCHAR = ‘O1’ NODDC(J) J=2</b>
+        O2 374                  Line 6:  <b>OUTCHAR = ‘O2’ NODDC(J) J=3</b>
+        O3 567                  Line 6: <b>OUTCHAR = ‘O3’ NODDC(J) J=4</b>
+                                         <i>J = number of parameters</i>
 
-OUTFLOW HYDROGRAPH DATA
+        Notes:
+            Line 1, 2 and 3: If ICHANNEL = 0 in CONT.DAT omit these lines. Line 1: Repeat for each channel outflow element.
+            Line 2: Omit line if no stage-discharge control relationship is required for the channel outflow.
+            Line 3: Omit line if no stage-discharge control is required for the channel outflow. If Lines 2 and 3
+                    are omitted, the channel outflow will be discharge from the grid system as normal flow.
+            Line 4 and 5: Repeat lines for each element with a time-stage relationship.
+            Line 6: Repeat for each floodplain outflow grid element and each outflow node that will generate a
+                    hydrograph to a downstream grid system.
+        </pre>
+    </div>
 
 Variable Descriptions for the OUTFLOW.DAT File
 
