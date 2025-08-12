@@ -1466,7 +1466,6 @@ INFLOW HYDROGRAPH DATA
         Each line of the hydrograph begins with ‘H’. Variable is case sensitive. It must be upper case.
 
     * - IDEPLT
-
       - **i**
       - 1 - NNOD
       - Inflow grid element number whose hydrograph is to be graphically displayed at runtime.
