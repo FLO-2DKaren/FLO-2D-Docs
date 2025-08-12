@@ -2208,8 +2208,6 @@ FILE: FLO2DRAINCELL.DAT
 FLO2DRAINCELL.DAT File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
@@ -2245,18 +2243,27 @@ FLO2DRAINCELL.DAT File
 
     <br><br>
 
+**Variable Descriptions for the FLO2DRAINCELL.DAT File**
 
+(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
 
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
+    * - IRAINDUM (I)
+      - **i**
+      - i - NNOD
+      - FLO-2D grid element number of the floodplain grid system.
 
-
-
-VARIABLE FMT RANGE DESCRIPTION
-
-IRAINDUM (I) i i - NNOD FLO-2D grid element number of the floodplain grid system.
-
-NXRDGD (I) i i - NNOD NEXRAD grid element intersecting IRAINDUM.
-(see comment 1)
+    * - NXRDGD (I)
+      - **i**
+      - i - NNOD
+      - NEXRAD grid element intersecting IRAINDUM. (see comment 1)
 
 Instructional Comments for the FLO2DRAINCELL.DAT File
 
