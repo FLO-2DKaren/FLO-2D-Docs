@@ -1396,18 +1396,57 @@ INFLOW HYDROGRAPH DATA
         </pre>
     </div>
 
-Variable Descriptions for the INFLOW.DAT File
+
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>INFLOW.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0 4335
+        C	0  4335
+        H	0	0
+        H	1	55.30
+        H	2	155.30
+        H	3	253.78
+        H	4	537.8
+        H	5	522.7
+        H	6	507.5
+        H	7	492.4
+        R	5232 1734.02 0.250
+        ....
+        </pre>
+    </div>
+
+
+.. raw:: html
+
+    <br><br>
+
+
+**Variable Descriptions for the INFLOW.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
 
-HP(I,J,1)
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
-r
+    * - HP(I,J,1)
+      - **r**
+      - 0.0 - ∞
+      - Time corresponding to the start of the floodplain inflow hydrograph interval (hours or days).
 
-0.0 - Time corresponding to the start of the floodplain inflow hydrograph interval (hours or days).
-The first hydrograph time-discharge set should be 0.0 and 0.0.
+        The first hydrograph time-discharge set should be 0.0 and 0.0.
 
 HP(I,J,2) r 0.0 - Floodplain discharge (cfs or cms) corresponding to the time interval which starts at HP(I,J,1).
 
