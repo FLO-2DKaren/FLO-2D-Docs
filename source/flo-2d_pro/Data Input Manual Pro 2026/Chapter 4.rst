@@ -1908,6 +1908,30 @@ RAINFALL DATA
     </div>
 
 
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>   RAIN.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         0    0
+         3.100     0.000     1     1
+         R   0.000        0.000
+         R   0.083        0.050
+         R   0.167        0.110
+         R   0.250        0.300
+         R   0.330        0.450
+         R....
+         2.0   5
+        2558   0.50
+        </pre>
+    </div>
+
+
 Variable Descriptions for the RAIN.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
