@@ -1686,13 +1686,13 @@ OUTFLOW HYDROGRAPH DATA
         <div><i><pre>OUTFLOW.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        K	374
-        H  10.0  2.6  0.35
+        K   374
+        H   10.0  2.6  0.35
         K	1007
         T	0.0	0.00
         T	3.0	50.35
         T	5.0	157.67
-        T  10.0	366.58
+        T   10.0	366.58
         K	567
         N	567	1
         S	0.00	0.00
