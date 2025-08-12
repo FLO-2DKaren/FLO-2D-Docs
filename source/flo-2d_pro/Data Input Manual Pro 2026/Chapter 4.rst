@@ -1490,6 +1490,7 @@ INFLOW HYDROGRAPH DATA
 
         INOUTFC = 2 Source from groundwater INOUTFC = 3 Sink to groundwater
 
+
         Channel
 
         INOUTFC = 0 Inflow INOUTFC = 1 Diversion
