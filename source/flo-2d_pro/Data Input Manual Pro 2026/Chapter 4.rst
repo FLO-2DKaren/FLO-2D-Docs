@@ -2398,14 +2398,14 @@ INFILTRATION DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                   INFIL.DAT File Variables </pre></i></div>
+        <div><i><pre>                               INFIL.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
          3                                  Line 1:  <b>INFMETHOD</b>
          0   0.7   1   0.4  10.0  1         Line 2:  <b>ABSTR   SATI   SATF   POROS  SOILD  INFCHAN</b>
          0.1   4.3   0                      Line 3:  <b>HYDCALL   SOILALL   HYDCADJ</b>
          0.03                               Line 4:  <b>HYDCXX   *See Notes</b>
-         R   0.03                           Line 4a: <b>INFILCHAR = ‘R’   HYDC<b>X(IC)   *See Notes</b>
+         R   0.03                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
          R   0.03   0.3   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC)
                                                      SOIL_DEPTHCX(IC)</b>
                                                      <i>IC= number of channel segments or reaches</i>
