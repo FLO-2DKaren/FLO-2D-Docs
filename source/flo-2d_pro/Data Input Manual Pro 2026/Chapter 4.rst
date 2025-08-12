@@ -1639,6 +1639,7 @@ INFLOW HYDROGRAPH DATA
     At model runtime, the model will automatically assign the same tailings surface or tailings depth to all the grid
     elements that are inside the tailings dam storage area.
 
+
 FILE: OUTFLOW.DAT
 
 OUTFLOW HYDROGRAPH DATA
