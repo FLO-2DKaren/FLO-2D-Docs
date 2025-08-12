@@ -1676,6 +1676,46 @@ OUTFLOW HYDROGRAPH DATA
         </pre>
     </div>
 
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>OUTFLOW.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        K	374
+        H  10.0  2.6  0.35
+        K	1007
+        T	0.0	0.00
+        T	3.0	50.35
+        T	5.0	157.67
+        T  10.0	366.58
+        K	567
+        N	567	1
+        S	0.00	0.00
+        S	0.50	10.00
+        S	1.00	20.00
+        S	1.50	10.00
+        S	2.00	0.00
+        O	273
+        O	373
+        O	374
+        O	564
+        O	565
+        O	566
+        O	566
+        O	567
+        O	568
+        O1	1005
+        O1	1006
+        O1  1007.....
+        </pre>
+    </div>
+
+
 Variable Descriptions for the OUTFLOW.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
