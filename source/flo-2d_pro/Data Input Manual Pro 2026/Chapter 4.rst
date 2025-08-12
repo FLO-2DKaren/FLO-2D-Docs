@@ -1711,7 +1711,7 @@ OUTFLOW HYDROGRAPH DATA
         O	568
         O1	1005
         O1	1006
-        O1  1007.....
+        O1      1007.....
         </pre>
     </div>
 
