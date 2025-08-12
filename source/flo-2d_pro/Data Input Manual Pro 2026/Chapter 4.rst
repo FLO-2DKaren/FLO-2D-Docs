@@ -1554,15 +1554,19 @@ INFLOW HYDROGRAPH DATA
       - 0 - ∞
       - Tailings dam material surface elevation (ft or m).
 
-Instructional Comments for the INFLOW.DAT File
+.. raw:: html
+
+    <br><br>
+
+**Instructional Comments for the INFLOW.DAT File**
 
 1. Either the channel or the floodplain grid elements can be used to input the inflow hydrograph to grid system.
 
-2. The user has a choice to input either the sediment concentration by volume associated with the inflow water discharge or a sediment volume for the
-   time interval HP(I,J,1).
+2. The user has a choice to input either the sediment concentration by volume associated with the inflow water discharge
+   or a sediment volume for the time interval HP(I,J,1).
    The mudflow volume (ft3 or m3) can represent erosion, hillslope failure, or any other type of mass sediment loading.
-   When HP(I,J,3) is less than 1.0, HP (I,J,3) corresponds to the sediment concentration by volume for floodplain discharge HP(I,J,2) for the time
-   interval which starts at HP(I,J,1).
+   When HP(I,J,3) is less than 1.0, HP (I,J,3) corresponds to the sediment concentration by volume for floodplain
+   discharge HP(I,J,2) for the time interval which starts at HP(I,J,1).
    If HP(I,J,3) is greater than 1.0, then HP(I,J,3) represents a sediment inflow volume.
    If a mudflow scenario is being used each hydrograph should have concentration data.
    If one hydrograph does not have mudflow, give it the minimum amount of 0.10 concentration.
@@ -1572,48 +1576,49 @@ Instructional Comments for the INFLOW.DAT File
 4. If the channel inflow hydrograph is to be plotted at runtime on the screen.
    Set LGPLOT = 2 in the CONT.DAT file.
 
-5. To create a filled reservoir, pond, or tailings dam, simply assign the desired water or tailings surface elevation to one grid element (IRESGRID)
-   within the reservoir or ponded area.
-   At model runtime, the model will automatically as- sign the same water surface to all the grid elements in an expanding circle of elements around
-   IRESGRID that have a ground elevation less than the prescribed water surface elevation RESERVOIREL and/or the tailings surface elevation
-   TAILINGSELEV(II).
+5. To create a filled reservoir, pond, or tailings dam, simply assign the desired water or tailings surface elevation
+   to one grid element (IRESGRID) within the reservoir or ponded area.
+   At model runtime, the model will automatically as- sign the same water surface to all the grid elements in an
+   expanding circle of elements around IRESGRID that have a ground elevation less than the prescribed water surface
+   elevation RESERVOIREL and/or the tailings surface elevation TAILINGSELEV(II).
 
-6. Flooding routing a deep reservoir pool is essentially frictionless flow and should not be simulated using a friction slope given by Manning’s equation.
+6. Flooding routing a deep reservoir pool is essentially frictionless flow and should not be simulated using a friction
+   slope given by Manning’s equation.
    Friction- less flow cannot be predicted with the full dynamic equation without a friction slope term.
-   In order to apply the revised Manning’s equation for ponded flow, it is recommended that a high n-value be used on the order of 0.1 to 0.4.
-   This will result in reservoir velocities of approximately 1 fps (0.3 mps) which will be representing for filling or draining the reservoir when the
-   water surface slope is almost flat.
+   In order to apply the revised Manning’s equation for ponded flow, it is recommended that a high n-value be used on
+   the order of 0.1 to 0.4.
+   This will result in reservoir velocities of approximately 1 fps (0.3 mps) which will be representing for filling o3r
+   draining the reservoir when the water surface slope is almost flat.
    RESERVOIRN is a required variable in Build 22 and on.
 
-7. INOUTFC can be set up for a floodplain or channel inflow, diversion, sink, source, or MODFLOW conditions.
+7. INOUTFC can be set up for a floodplain or channel inflow, diversion, sink, source, or MODFLOW conditions:
 
-a. INOUTFC = 0; Floodplain inflow hydrograph, a cell can be either source or sink at a given time, for this condition.
-   The grid cell can become a source
+        a. INOUTFC = 0; Floodplain inflow hydrograph, a cell can be either source or sink at a given time, for this condition.
+           The grid cell can become a source at one time-step and a sink at another time-step during a simulation.
+           Sink (negative) and sources (positive) at a given time.
 
-at one time-step and a sink at another time-step during a simulation.
-Sink (negative) and sources (positive) at a given time.
+        b. INOUTFC = 1; Floodplain diversion will be removed from the cell but not added to groundwater.
 
-b. INOUTFC = 1; Floodplain diversion will be removed from the cell but not added to groundwater.
+        c. INOUTFC = 2; Floodplain node, the source of this discharge comes from groundwater.
+           The following source flow condition at a given time step will be added to the surface grid.
 
-c. INOUTFC = 2; Floodplain node, the source of this discharge comes from groundwater.
-   The following source flow condition at a given time step will be added to the surface grid.
+        d. INOUTFC = 3; Floodplain, this sink flow condition is subtracted from the surface grid.
+           If the cell is dry, no outflow will be subtracted from the cell.
+           If the discharge at the grid cell is less than the sink outflow condition, then only the available flow in the
+           cell is subtracted from the surface.
 
-d. INOUTFC = 3; Floodplain, this sink flow condition is subtracted from the surface grid.
-   If the cell is dry, no outflow will be subtracted from the cell.
-   If the discharge at the grid cell is less than the sink outflow condition, then only the available flow in the cell is subtracted from the surface.
+        e. INOUTFC = 0; Channel inflow hydrograph a cell can either be a source or a sink for this condition.
+           The channel cross section can become a source at one time-step and a sink at another time-step during a simulation.
+           Sink (negative) and sources (positive) at a given time.
 
-e. INOUTFC = 0; Channel inflow hydrograph a cell can either be a source or a sink for this condition.
-   The channel cross section can become a source at one time-step and a sink at another time-step during a simulation.
-   Sink (negative) and sources (positive) at a given time.
+        f. INOUTFC = 1; Channel, the diversion will act as a sink but not added to ground water.
 
-f. INOUTFC = 1; Channel, the diversion will act as a sink but not added to ground water.
+        g. INOUTFC = 2; MODFLOW Source (See Comment 8).
+           Channel node, the source of this discharge comes from groundwater.
+           The source flow will be added to the cross-section flow.
 
-g. INOUTFC = 2; MODFLOW Source (See Comment 8).
-   Channel node, the source of this discharge comes from groundwater.
-   The source flow will be added to the cross-section flow.
-
-h. INOUTFC = 3; MODFLOW Sink (See Comment 8).
-   Channel, the sink of this discharge condition to groundwater from the channel cross section.
+        h. INOUTFC = 3; MODFLOW Sink (See Comment 8).
+           Channel, the sink of this discharge condition to groundwater from the channel cross section.
 
 8. A floodplain cell can be either source or sink at a given time-step.
    It may be source at one time-step and sink at another time-step during a simulation.
@@ -1624,14 +1629,15 @@ h. INOUTFC = 3; MODFLOW Sink (See Comment 8).
 9. Source and sink discharges from/to groundwater for an uncoupled simulation.
    A source and sink discharge cannot be assigned to the same channel element.
    The channel element is either a source or a sink, but it cannot be both.
-   That means that if you have a switch occur in a reach from source to sink, you will need to select those channel elements that you want to be sources
-   and those you want to be sinks.
-   You can just assign a group of channel elements as a source and another group as a sink in the reach and assign different times.
+   That means that if you have a switch occur in a reach from source to sink, you will need to select those channel
+   elements that you want to be sources and those you want to be sinks.
+   You can just assign a group of channel elements as a source and another group as a sink in the reach and assign
+   different times.
 
-10.
-To create a tailing dam storage area with uniform tailings surface, the tailings elevation or depth should be assigned to the grid element (IRESGRID).
-At model runtime, the model will automatically assign the same tailings surface or tailings depth to all the grid elements that are inside the
-tailings dam storage area.
+10. To create a tailing dam storage area with uniform tailings surface, the tailings elevation or depth should be
+    assigned to the grid element (IRESGRID).
+    At model runtime, the model will automatically assign the same tailings surface or tailings depth to all the grid
+    elements that are inside the tailings dam storage area.
 
 FILE: OUTFLOW.DAT
 
