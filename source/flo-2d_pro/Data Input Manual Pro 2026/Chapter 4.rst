@@ -2864,10 +2864,12 @@ INFILTRATION DATA
 
 
 FILE: EVAPOR.DAT
+~~~~~~~~~~~~~~~~~
 
 EVAPORATION DATA
+^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the EVAPOR.DAT File
+**Variable Descriptions for the EVAPOR.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -2902,6 +2904,7 @@ Variable Descriptions for the EVAPOR.DAT File
      - **r**
      - **0.0 - 1.0**
      - Hourly percentage of the daily total evaporation for each month.
+
        There will be 24 values that will total 1.00 for each of the twelve months.
 
    * - IEVAPMONTH
