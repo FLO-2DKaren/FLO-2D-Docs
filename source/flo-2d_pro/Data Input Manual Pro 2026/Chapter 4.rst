@@ -2159,34 +2159,45 @@ FILE: RAINCELL.DAT
 
         (see comment 3)
 
-Instructional Comments for the RAINCELL.DAT File
+**Instructional Comments for the RAINCELL.DAT File**
 
-1. Real-time rainfall, specifically NEXRAD rainfall data, is rainfall information that varies both in space and time and is applied to individual cells
-   within a grid system.
+1. Real-time rainfall, specifically NEXRAD rainfall data, is rainfall information that varies both in space and time
+   and is applied to individual cells within a grid system.
    The rainfall data is usually recorded at fifteen-minute intervals over a specific duration.
    All the relevant data for this rainfall, forming a comprehensive dataset, is stored within the RAINCELL.DAT file.
 
-2. Rainfall data obtained from radar systems is typically collected on relatively large grids, such as 400 m by 400 m, 1 km by 1 km, or even larger, like
-   2 km by 2 km grid resolutions.
-   To determine the rainfall amount at each FLO-2D grid cell for a specific time interval and rainfall period, the NEXRAD grid cells are overlaid with
-   the FLO-2D grid cells.
+2. Rainfall data obtained from radar systems is typically collected on relatively large grids, such as 400 m by 400 m,
+   1 km by 1 km, or even larger, like 2 km by 2 km grid resolutions.
+   To determine the rainfall amount at each FLO-2D grid cell for a specific time interval and rainfall period,
+   the NEXRAD grid cells are overlaid with the FLO-2D grid cells.
    The comprehensive dataset resulting from this process is stored in the RAINCELL.DAT data file.
    This file can be generated using the FLO-2D QGIS plugin.
 
 3. A small sample of the catalog data is shown below.
-   7/13/2008 10:00 7/13/2008 15:00 1 5
 
-C:\\Projects\\NexRAD\\Min1.asc C:\\Projects\\NexRAD\\Min2.asc C:\\Projects\\NexRAD\\Min3.asc C:\\Projects\\NexRAD\\Min4.asc
-C:\\Projects\\NexRAD\\Min5.asc
+    7/13/2008 10:00 7/13/2008 15:00 1 5
+
+    C:\\Projects\\NexRAD\\Min1.asc
+
+    C:\\Projects\\NexRAD\\Min2.asc
+
+    C:\\Projects\\NexRAD\\Min3.asc
+
+    C:\\Projects\\NexRAD\\Min4.asc
+
+    C:\\Projects\\NexRAD\\Min5.asc
 
 4. The timestamp is not used by the FLO-2D Plugin or FLOPRO.EXE engine.
    It is a reference variable.
    It can be used to synchronize the raincell storm data to inflow hydrographs.
 
 5. RAINCELL data is also stored as RAINCELL.HDF5.
-   Realtime rainfall (NEXRAD rainfall data) is spatially and temporally variable rainfall data that is applied to each cell of the grid system.
+   Realtime rainfall (NEXRAD rainfall data) is spatially and temporally variable rainfall data that is applied to each
+   cell of the grid system.
    A complete dataset is stored in the data file RAINCELL.HDF5 using a Hierarchical binary Data Format.
    The HDF5 data is primarily stored using two types of objects: datasets and groups.
+
+
 
 FILE: FLO2DRAINCELL.DAT
 
