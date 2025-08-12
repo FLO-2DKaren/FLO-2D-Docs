@@ -2246,6 +2246,7 @@ FLO2DRAINCELL.DAT File
 **Variable Descriptions for the FLO2DRAINCELL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+
 .. list-table::
     :widths: 25 25 25 25
     :header-rows: 0
