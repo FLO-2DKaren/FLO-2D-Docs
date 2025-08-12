@@ -2826,36 +2826,42 @@ INFILTRATION DATA
 
         .. math::
             :label:
-        f = fn + (fi - fn) e-at
 
-where:
+            f = f_n \, + \, (f_i \, - \, f_n) e^{-at}
 
-   f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
+    where:
 
-   fn = final infiltration rate (in/hr)
+        f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
 
-   a = decay coefficient (1/sec)
+        fn = final infiltration rate (in/hr)
 
-   t = time from start of rainfall (sec)
+        a = decay coefficient (1/sec)
 
-There are no metric equivalent values so if using Horton on a metric project, use in/hr even if IMETRIC = 1.
+        t = time from start of rainfall (sec)
 
-15.
-As the channel infiltration storage fills, the infiltration rate declines but does not cease.
-The decay of the hydraulic conductivity Hc from the initially as- signed hydraulic conductivity Hi to a final saturated hydraulic conductivity Hf is
-based on the following equation:
+    There are no metric equivalent values so if using Horton on a metric project, use in/hr even if IMETRIC = 1.
 
-Hc = Hf + (Hi - Hf) e-at
+15. As the channel infiltration storage fills, the infiltration rate declines but does not cease.
+    The decay of the hydraulic conductivity Hc from the initially as- signed hydraulic conductivity Hi to a final saturated hydraulic conductivity Hf is
+    based on the following equation:
 
-where:
+        .. math::
+            :label:
 
-   a = decay coefficient hardwired to 0.00002, selected to have the decay from the initial to the final hydraulic conductivity over a 72 hr period with
-   the decay to half the original hydraulic conductivity in 12 hours.
+            H_c = H_f + (H_i - H_f) e^{-at}
 
-   t = time (seconds) from when the wetting front reaches the limiting soil depth
+    where:
 
-16.
-Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file..
+        a = decay coefficient hardwired to 0.00002, selected to have the decay from the initial to the final hydraulic conductivity over a 72 hr period with
+        the decay to half the original hydraulic conductivity in 12 hours.
+
+        t = time (seconds) from when the wetting front reaches the limiting soil depth
+
+16. Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file..
+
+
+
+
 
 FILE: EVAPOR.DAT
 
