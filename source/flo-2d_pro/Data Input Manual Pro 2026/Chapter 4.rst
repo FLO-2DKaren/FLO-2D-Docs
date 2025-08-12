@@ -1820,51 +1820,65 @@ OUTFLOW HYDROGRAPH DATA
 
 
 
-Instructional Comments for the OUTFLOW.DAT File
+**Instructional Comments for the OUTFLOW.DAT File**
 
 1. Either the channel or the floodplain outflow elements can be used to discharge the flow off the grid system.
    The outflow node is an artificial grid element whose sole purpose is to discharge flow off the grid system.
    The outflow nodes should not contain hydraulic structures, streets or other attributes.
-   The flood- plain elevation of the outflow node is automatically set to an elevation lower (0.25 ft or 0.1 m) than the lowest upstream grid element
-   unless it is already lower than all the upstream grid elements.
+   The flood- plain elevation of the outflow node is automatically set to an elevation lower (0.25 ft or 0.1 m) than
+   the lowest upstream grid element unless it is already lower than all the upstream grid elements.
 
-2. Omitting Lines 2 and 3 will cause all the inflow to the outflow elements to dis- charge from the grid system at normal flow conditions.
-   This outflow is equal to the sum of the inflow from the contiguous elements that are not outflow nodes and enables an approximation of normal flow
-   depth in the outflow elements.
-   This is a simple method to ensure that backwater related to artificial boundary conditions does not occur in the upstream elements.
+2. Omitting Lines 2 and 3 will cause all the inflow to the outflow elements to dis- charge from the grid system at
+   normal flow conditions.
+   This outflow is equal to the sum of the inflow from the contiguous elements that are not outflow nodes and enables
+   an approximation of normal flow depth in the outflow elements.
+   This is a simple method to ensure that backwater related to artificial boundary conditions does not occur in the
+   upstream elements.
 
-3. Channel boundary outflow condition may be established by specifying a stage- discharge relationship given by Q = a hb where the coefficient (a) and
-   exponent
+3. Channel boundary outflow condition may be established by specifying a stage- discharge relationship given by
 
-(b) are required input and h is the flow depth.
-The coefficient (a) and exponent
+    .. math::
+        :label:
 
-(b) can be used to established critical flow at the outflow grids.
+        Q = a hb
 
-4. A discretized time-stage relationship can be employed to specify a water surface elevation for at various channel or floodplain locations in the grid
-   system.
+    where the coefficient (a) and exponent (b) are required input and h is the flow depth.
+
+    The coefficient (a) and exponent (b) can be used to established critical flow at the outflow grids.
+
+4. A discretized time-stage relationship can be employed to specify a water surface elevation for at various channel or
+   floodplain locations in the grid system.
    This is a simple method by which to simulate storm surge flooding on the coastal floodplain.
    Floodplain or channel elements can be specified with increasing tides or storm surge water surface elevations.
 
-5. If coastal flooding (storm surges or tsunamis) is being simulated with a time- stage hydraulic control, assign the time-stage control to the outflow
-   nodes.
-   When the time-stage water surface elevation in OUTFLOW.DAT is higher than the model predicted stage, inflow to the grid system will occur with as-
-   signed time-stage elevation to the outflow node.
-   If the model predicted water surface is higher than the assigned time-stage elevation, the grid element will function as an outflow node discharging
-   flow off the grid system.
+5. If coastal flooding (storm surges or tsunamis) is being simulated with a time- stage hydraulic control, assign the
+   time-stage control to the outflow nodes.
+   When the time-stage water surface elevation in OUTFLOW.DAT is higher than the model predicted stage, inflow to the
+   grid system will occur with assigned time-stage elevation to the outflow node.
+   If the model predicted water surface is higher than the assigned time-stage elevation, the grid element will
+   function as an outflow node discharging flow off the grid system.
    It is permissible to assign NOSTA time-stage control to grid elements that are not outflow nodes.
 
-6. If a water surface elevation is specified for a NOSTA element, determine if it is an inflow element in the INFLOW.DAT file.
-   If NOSTA is an inflow element, set NOSTA as negative value to compute the inflow volume at this element which corresponds to the constant water
-   surface elevation.
+6. If a water surface elevation is specified for a NOSTA element, determine if it is an inflow element in the
+   INFLOW.DAT file.
+   If NOSTA is an inflow element, set NOSTA as negative value to compute the inflow volume at this element which
+   corresponds to the constant water surface elevation.
 
-7. If the OUTCHAR is O1-O9, these outflow grid elements will generate hydrographs that can be used as inflow hydrographs to a separate downstream FLO-2D
-   model with a different grid system (even if the downstream system has a different element size).
+7. If the OUTCHAR is O1-O9, these outflow grid elements will generate hydrographs that can be used as inflow
+   hydrographs to a separate downstream FLO-2D model with a different grid system (even if the downstream system has
+   a different element size).
    The inflow hydrograph will be in the format of the INFLOW.DAT file.
    This enables a row or column of outflow grid elements to be defined as inflow elements to the downstream grid system.
    Up to nine separate additional grid systems can be used.
    If only one downstream grid system will have the inflow hydrographs, set OUTCHAR = O1 for those boundary outflow nodes.
    The CADPTS.DAT file for the downstream grid system must be included in the project folder as CADPTSDS1.
+
+
+
+.. raw:: html
+
+    <br><br>
+
 
 FILE: RAIN.DAT
 
