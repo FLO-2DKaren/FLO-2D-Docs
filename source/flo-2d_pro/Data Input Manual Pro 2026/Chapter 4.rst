@@ -1715,51 +1715,96 @@ OUTFLOW HYDROGRAPH DATA
         </pre>
     </div>
 
+.. raw:: html
 
-Variable Descriptions for the OUTFLOW.DAT File
+    <br><br>
+
+**Variable Descriptions for the OUTFLOW.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
 
-CHDEPTH(J) r 0.0 - Array of channel maximum depths above the thalweg (not water surface elevation) for the outflow rating table.
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
 
-CQTABLE(J) r 0.0 - Array of discharges for the channel outflow rating table.
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
-HOUT(J,1) r 0.01 - Array of channel maximum depths for which a channel outflow stage-discharge relationship is valid.
+    * - CHDEPTH(J)
+      - **r**
+      - 0.0 -
+      - Array of channel maximum depths above the thalweg (not water surface elevation) for the outflow rating table.
 
-HOUT(J,2) r 0.0 - Array of coefficients for the channel element outflow stage- discharge relationship (see comment 3).
+    * - CQTABLE(J)
+      - **r**
+      - 0.0 -
+      - Array of discharges for the channel outflow rating table.
 
-HOUT(J,3) r 0.0 - Array of exponents for the channel element (I) outflow stage- discharge relationships
+    * - HOUT(J,1)
+      - **r**
+      - 0.01 -
+      - Array of channel maximum depths for which a channel outflow stage-discharge relationship is valid.
 
-KOUT i 1 - NNOD Array of channel outflow elements.
-These elements discharge flow out of the grid system from the channel (see comments 1 and 2).
+    * - HOUT(J,2)
+      - **r**
+      - 0.0 -
+      - Array of coefficients for the channel element outflow stage- discharge relationship (see comment 3).
 
-NODDC i 1 - NDC Array of floodplain outflow grid elements.
-These elements discharge flow out of the grid system from the floodplain (see comments 1 and 2).
+    * - HOUT(J,3)
+      - **r**
+      - 0.0 -
+      - Array of exponents for the channel element (I) outflow stage- discharge relationships
 
-NOSTA i 1 - NNOD Array of grid elements with stage-time relationships.
-If NOSTA is a inflow element, assign NOSTA as a negative value to compute inflow volume (see comments 4, 5 and 6).
+    * - KOUT
+      - **i**
+      - 1 - NNOD
+      - Array of channel outflow elements.
 
-NOSTACFP s 0 = flood- plain
+        These elements discharge flow out of the grid system from the channel (see comments 1 and 2).
 
-1 = channel Channel or floodplain identifier.
-If NOSTACFP = 0, the following stage-time relationship is for a floodplain element.
-If NOSTACFP = 1, the stage-time relationship is for a channel element.
+    * - NODDC
+      - **i**
+      - 1 - NDC
+      - Array of floodplain outflow grid elements.
 
-OUTCHAR c K, H, T, N, S, O
+        These elements discharge flow out of the grid system from the floodplain (see comments 1 and 2).
 
-O1 - O9 Character line identifier that initializes each line in the data file (see Comment 7).
-Variable is case sensitive.
-It must be upper case.
+    * - NOSTA
+      - **i**
+      - 1 - NNOD
+      - Array of grid elements with stage-time relationships.
 
-STA_TIME(J) r 0.0 -
+        If NOSTA is a inflow element, assign NOSTA as a negative value to compute inflow volume (see comments 4, 5 and 6).
 
-500 pairs Array of time intervals (hrs) for the grid element stage-time relationship.
+    * - NOSTACFP
+      - **s**
+      - 0 = flood- plain
 
-STA_STAGE(J) r 0.0 -
+        1 = channel Channel or floodplain identifier.
+      - If NOSTACFP = 0, the following stage-time relationship is for a floodplain element.
 
-500 pairs Array of water surface elevations (ft or m) for the stage-time relationship.
+        If NOSTACFP = 1, the stage-time relationship is for a channel element.
+    * - OUTCHAR
+      - **c**
+      - K, H, T, N, S, O
+
+        O1 - O9
+      - Character line identifier that initializes each line in the data file (see Comment 7).
+
+        Variable is case sensitive. It must be upper case.
+
+    * - STA_TIME(J)
+      - **r**
+      - 0.0 - 500 pairs
+      - Array of time intervals (hrs) for the grid element stage-time relationship.
+
+    * - STA_STAGE(J)
+      - **r**
+      - 0.0 - 500 pairs
+      - Array of water surface elevations (ft or m) for the stage-time relationship.
 
 Instructional Comments for the OUTFLOW.DAT File
 
