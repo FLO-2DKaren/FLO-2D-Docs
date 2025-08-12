@@ -1887,7 +1887,7 @@ RAINFALL DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>               RAIN.DAT File Variables</pre></i></div>
+        <div><i><pre>                           RAIN.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0   0                           Line 1: <b>IRAINREAL, IRAINBUILDING</b>
@@ -1936,7 +1936,15 @@ Variable Descriptions for the RAIN.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
+
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
+
 
 IRAINARF s 0 = off
 
