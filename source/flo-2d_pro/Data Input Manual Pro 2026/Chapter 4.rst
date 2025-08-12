@@ -2493,7 +2493,7 @@ INFILTRATION DATA
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 
-Instructional Comments for the INFIL.DAT File
+**Instructional Comments for the INFIL.DAT File**
 
 1. The Green-Ampt infiltration parameters including hydraulic conductivity HYDC, initial abstraction ABSTR, initial saturation SATI, and soil capillary
    suction head SOILS, can be estimated from the tables in the FLO-2D Reference Manual (Tables 3-6).
@@ -2513,7 +2513,7 @@ Instructional Comments for the INFIL.DAT File
    The street area is subtracted from the overland portion of the grid system.
 
 6. Channel infiltration is computed only if INFCHAN = 1.
-   Generally channel infiltration is negligible for channels with perennial flow.
+   Generally, channel infiltration is negligible for channels with perennial flow.
    The simulation of channel infiltration may be important for small flood events in ephemeral alluvial fan channels with porous bed material.
 
 7. Precipitation abstraction is an initial loss of rainfall that precedes infiltration and excess rainfall runoff.
@@ -2561,15 +2561,15 @@ Horton’s infiltration model is defined by the equation:
 
 f = fn + (fi - fn) e-at
 
-Where:
+where:
 
-f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
+   f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
 
-fn = final infiltration rate (in/hr)
+   fn = final infiltration rate (in/hr)
 
-a = decay coefficient (1/sec)
+   a = decay coefficient (1/sec)
 
-t = time from start of rainfall (sec)
+   t = time from start of rainfall (sec)
 
 There are no metric equivalent values so if using Horton on a metric project, use in/hr even if IMETRIC = 1.
 
@@ -2582,10 +2582,10 @@ Hc = Hf + (Hi - Hf) e-at
 
 where:
 
-a = decay coefficient hardwired to 0.00002, selected to have the decay from the initial to the final hydraulic conductivity over a 72 hr period with
-the decay to half the original hydraulic conductivity in 12 hours.
+   a = decay coefficient hardwired to 0.00002, selected to have the decay from the initial to the final hydraulic conductivity over a 72 hr period with
+   the decay to half the original hydraulic conductivity in 12 hours.
 
-t = time (seconds) from when the wetting front reaches the limiting soil depth
+   t = time (seconds) from when the wetting front reaches the limiting soil depth
 
 16.
 Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file..
@@ -2598,277 +2598,419 @@ Variable Descriptions for the EVAPOR.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-CLOCKTIME r 0.0 - 24.0 Starting clock time (hrs) of the simulation time during the day.
 
-EMONTH(I) c January Name of month for user identification purposes only.
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-EVAP(I) r 0 - 100
+   * - CLOCKTIME
+     - **r**
+     - **0.0 - 24.0**
+     - Starting clock time (hrs) of the simulation time during the day.
 
-0 - 2500 Monthly evaporation rate (in/month or mm/month).
+   * - EMONTH(I)
+     - **c**
+     - **January**
+     - Name of month for user identification purposes only.
 
-EVAPER(I,J)
+   * - EVAP(I)
+     - **r**
+     - **0 - 100**
 
-r 0.0 - 1.0 Hourly percentage of the daily total evaporation for each month.
-There will be 24 values that will total 1.00 for each of the twelve months.
+       **0 - 2500**
+     - Monthly evaporation rate (in/month or mm/month).
 
-IEVAPMONTH i 1 - 12 Starting month of simulation.
+   * - EVAPER(I,J)
+     - **r**
+     - **0.0 - 1.0**
+     - Hourly percentage of the daily total evaporation for each month.
+       There will be 24 values that will total 1.00 for each of the twelve months.
 
-IDAY i 1 - 7 Starting day of the week.
+   * - IEVAPMONTH
+     - **i**
+     - **1 - 12**
+     - Starting month of simulation.
+
+   * - IDAY
+     - **i**
+     - **1 - 7**
+     - Starting day of the week.
+
 
 FILE: CHAN.DAT
 
 CHANNEL DATA
 
-CHAN.DAT File Variables
+ CHAN.DAT File Variables
+ -----------------------
 
 Line 1: DEPINITIAL(K) FROUDC(K) ROUGHADJ ISEDN(K)
 
-0.00 0.50 0.20 0
 
-Line 2a: SHAPE ‘R’ = Rectangular ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I)
+   0.00 0.50 0.20 0
 
-R 50 4765.52 4765.00 0.031 22.54 6.32 100.00
+   Line 2a: **SHAPE** *‘R’ = Rectangular* **ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I)**
 
-Line 2b: SHAPE ‘V’ = Variable Area ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)
+   R 50 4765.52 4765.00 0.031 22.54 6.32 100.00
+
+   Line 2b: **SHAPE** *‘V’ = Variable Area* **ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)**
 
 C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
 
-V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
 
-Line 2c: SHAPE ‘T’ = Trapezoidal ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I) ZL(I) ZR(I)
+   V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
 
-T 50 4765.52 4765.00 0.031 22.54 6.32 100.00 2.40 1.50
+   Line 2c: **SHAPE** *‘T’ = Trapezoidal* **ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I) ZL(I) ZR(I)**
 
-Line 2d: SHAPE ‘N’ = Natural ICHANGRID(I) FCN(I) XLEN(I) NXECNUM(I)
+   T 50 4765.52 4765.00 0.031 22.54 6.32 100.00 2.40 1.50
 
-N 50 1 0.031 100.00 1
+   Line 2d: **SHAPE** *‘N’ = Natural* **ICHANGRID(I) FCN(I) XLEN(I) NXECNUM(I)**
 
-50 4763.00 Line 3a: ISTART WSELSTART
+   N 50 1 0.031 100.00 1
 
-77 4761.00 Line 3b: IEND WSELEND
+   50 4763.00 Line 3a: **ISTART WSELSTART**
 
-C 501 498 Line 4: CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)
+   77 4761.00 Line 3b: **IEND WSELEND**
 
-E 5112 Line 5: CHANCHAR = 'E' ICHANGRID(N)
+   C 501 498 Line 4: C\ **HANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)**
 
-B 12.3 Line 6: CHANCHAR = 'B' IBASEFLOW(K)
+   E 5112 Line 5: **CHANCHAR = 'E' ICHANGRID(N)**
 
-I = number of channel nodes.
+   B 12.3 Line 6: **CHANCHAR = 'B' IBASEFLOW(K)**
 
-J = number of channel confluences
+   *I = number of channel nodes.*
 
-K = number of channel segments
+   *J = number of channel confluences*
 
-N = number of nofloc and noexchange data sets
+   *K = number of channel segments*
 
-Notes:
+   *N = number of nofloc and noexchange data sets*
 
-If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+   Notes:
 
-Line 1: This line is repeated at the start of each channel segment.
-If ISED = 0 in the CONT.DAT file omit ISEDN(K).
+   If ICHANNEL = 0 in the CONT.DAT file, omit this file.
 
-Line 2: This line is repeated for each channel grid element.
-Use 2a, 2b, 2c, or 2d for this line.
+   Line 1: This line is repeated at the start of each channel segment.
+   If ISED = 0 in the CONT.DAT file omit ISEDN(K).
 
-Line 3: If not simulating an initial water surface elevation in the channel, omit this line.
-Repeat 3a and 3b for each channel segment.
+   Line 2: This line is repeated for each channel grid element.
+   Use 2a, 2b, 2c, or 2d for this line.
 
-FILE: CHAN.DAT
+   Line 3: If not simulating an initial water surface elevation in the channel, omit this line.
+   Repeat 3a and 3b for each channel segment.
 
-CHANNEL DATA
+   Line 3, 4 and 5: Multiple lines are grouped together.
 
-Variable Descriptions for the CHAN.DAT File
+   Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
+   Place Line 6 after each segment.
+
+   CHAN.DAT File Example
+
+   0.00 0.60 0.40
+
+   R 3170 4433.00 4433.00 0.032 40.00 9.30 520.00
+
+   R 3118 4431.00 4431.00 0.032 20.00 9.50 510.00
+
+   R 3066 4430.30 4430.30 0.032 35.00 11.00 500.00
+
+   R 3013 4430.00 4430.00 0.032 35.00 12.70 500.00 R ...
+
+   0.00 0.70 0.20
+
+   V 4560 4675.19 4675.19 0.060 10.59 550.00 36.774 1.630 63.369 0.491 63.261 0.486 0.00
+
+   V 4385 4673.10 4673.10 0.050 11.00 620.00 30.774 1.630 63.369 0.491 63.261 0.486 0.00
+
+   V 4212 4672.86 4672.86 0.040 13.56 560.00 24.439 1.905 53.016 0.749 42.886 0.745 0.00
+
+   V 4213 4672.46 4672.46 0.040 16.16 550.00 22.200 1.807 31.248 0.696 31.235 0.688 0.00
+
+   V ...
+
+   0.00 0.60 0.40
+
+   T 7170 4423.00 4423.00 0.032 40.00 9.30 520.00 1.60 1.90
+
+   T 7118 4421.00 4421.00 0.032 20.00 9.50 510.00 2.60 2.70
+
+   T 7066 4420.30 4420.30 0.032 35.00 11.00 500.00 1.60 1.20
+
+   T 7013 4420.00 4420.00 0.032 35.00 12.70 500.00 1.60 1.20 T ...
+
+   -1.00 0.60 0.20 5
+
+   N 7432 0.060 450.00 1
+
+   N 7389 0.059 450.00 2
+
+   N 7344 0.050 590.00 3
+
+   N 7298 0.060 590.00 4
+
+   N 7299 0.060 590.00 5 N ...
+
+7432 4432.00
+
+7160 4427.00
+
+   C 3669 3825
+
+   C 6296 6377 C ...
+
+**Variable Descriptions for the CHAN.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
-
-A1(I) r 0.0 - Coefficient for the variable area regression relationships (see comment 5).
-
-A2(I) r 0.0 - Exponent for the variable area regression relationships (see comment 5).
-
-A11(I) r 0.0 - Coefficient for the variable area regression relationships for flow depth above EXCDEP(I) (see comment 5).
-
-A22(I) r 0.0 - Exponent for the variable area regression relationships for flow depth above EXCDEP(I) (see comment 5).
-
-B1(I) r 0.0 - Coefficient for the variable wetted perimeter relationships (see comment 5).
-
-B2(I) r 0.0 - Exponent for the variable wetted perimeter relationships (see comment 5).
-
-B11(I) r 0.0 - Coefficient for the variable wetted perimeter relationships for flow above EXCDEP(I) (see comment 5).
-
-B22(I) r 0.0 - Exponent for the variable wetted perimeter relationships for flow above EXCDEP(I) (see comment 5).
-
-BANKELR(I) r 0.01 - Right bank elevation looking downstream (see comment 12).
-
-BANKELL(I) r 0.01 - Left bank elevation looking downstream (see comment 12).
-
-C1(I) r 0.0 - Coefficient for the variable top width relationships (see comment 5).
-
-C2(I) r 0.0 - Exponent for the variable top width relationships (see comment 5).
-
-C11(I) r 0.0 - Coefficient for the variable top width relationships for flow depth above EXCDEP(I) (see comment 5).
-
-C22(I) r 0.0 - Exponent for the variable top width relationships for flow depth above EXCDEP(I) (see comment 5).
-
-Variable Descriptions for the CHAN.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-CHANCHAR
-
-c
-
-C, E, B Char = C line identifier for ICONFLO ‘C’
-
-Char = E NOEXCHANGE ‘E’ channel elements.
-Char = B Baseflow after a segment.
-
-Variable is case sensitive and it must be upper case.
-
-NO Exchange (see comment 20).
-
-ICONFLO1(J) i 1 - NNOD Tributary channel element at confluence (see comment 8).
-
-ICONFLO2(J) i 1 - NNOD Main channel element at the confluence.
-
-DEPINITIAL(K)
-
-r
-
-0.0 -
-
-or
-
--1 DEPINITIAL(K) = 0 for no initial channel flow depth in the channel segment (default).
-
-DEPINITIAL(K) = Initial flow depth for the all channel elements in the channel segment (optional).
-
-DEPINITIAL(K) = -1 to assign an initial water surface elevation to a channel reach.
-Include Line 3 (see comment 2).
-
-EXCDEP(I)
-
-r
-
-0.0 - Channel depth above which a second variable area relation- ship will apply (see comment 4).
-If only one channel geometry relationship is used, set EXCDEP(I) = 0.
-
-FCN(I) r 0.01 - 0.15 Average Manning’s n roughness coefficient the channel in the grid element ICHANGRID (see comments 6 and 19).
-
-FCD(I)
-
-r
-
-.01 - 1000 Channel thalweg depth (ft or m).
-The thalweg depth is the deepest part of the channel measured from the lowest top of bank (see comment 1).
-
-FCW(I) r 0.1 - Set FCW(I) = channel width for rectangular channel.
-
-Set FCW(I) = width of channel base for trapezoidal channel.
-
-FROUDC(K)
-
-r
-
-0.0 - 5 Maximum channel Froude number if the Froude number exceeds FROUDC, the Manning’s n roughness value is increased by 0.001.
-Set FROUDC = 0 for no adjustments of the n-value in a given channel segment.
-The increased n- values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).
-
-Variable Descriptions for the CHAN.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-IBASEFLOW(K)
-
-i
-
-0.0 - Baseflow of a channel to establish a flow condition for floodwave arrival time.
-Place this line after each segment if more than one segment is used.
-
-ICHANGRID(I) i 1 - NNOD Channel grid element number.
-
-IEND i 1 - NNOD Last channel element for which a starting water surface elevation is specified.
-
-ISEDN(K)
-
-i
-
-0 - 10 Sediment transport equation or data group for routing by size fractions for the channel segment.
-Set ISED = 1 in the CONT.DAT file to use this option.
-Choose one of the two following options for each channel segment:
-
-For sediment routing without size fractions: Set ISEDN(K)
-
-= 1 - 11 (one of eleven sediment transport equations). or
-
-For sediment routing with size fractions: Set ISEDN(K) = sediment data group (Line 3 in SED.DAT which includes a
-
-sediment transport equation).
-
-ISTART i 1 - NNOD First channel element for which a starting water surface elevation is specified.
-
-NXSECNUM(I)
-
-i
-
-1
-
-to NNODC Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
-This variable is used only for the cross-section data option (see comments 14 and 18).
-Set NXSECNUM = 0, if there is no cross-section data for the channel element (I).
-The cross-section data is interpolated and assigned in the PROFILES program.
-
-ROUGHADJ r 0.00 - 1.2 A coefficient used in the depth adjustment of the Manning’s n-value and the shallown value for channel segments (see comment
-17).
-
-SHAPE
-
-c
-
-R, V, T or N Character line identifier (see comments 4 and 16);
-
-SHAPE = ‘R’, rectangular channel geometry (width and depth data).
-SHAPE = ‘V’, variable area channel geometry (power relationships).
-SHAPE = ‘T’, trapezoidal channel (bottom width, depth and slopes data).
-SHAPE = ‘N’, channel cross sections (cross section survey data).
-
-Variable is case sensitive and it must be upper case.
-
-Variable Descriptions for the CHAN.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-WSELEND r 0 - 30,000
-
-0 - 9,000 Ending water surface elevation for the channel element IEND (ft or m).
-
-WSELSTART r 0 - 30,000
-
-0 - 9,000 Starting water surface elevation for the channel element ISTART (ft or m).
-
-XLEN(I)
-
-r
-
-0.01 - Channel length contained within the grid element ICHANGRID (ft).
-If more than one channel exists in a given grid element, assign XLEN(I) equal to the average representative flow length in one direction (see comments
-9, 10, 13 and 15).
-
-ZL(I) r 0.01 - 100 ZL(I) is the left side slope of the trapezoidal channel.
-
-ZR(I) r 0.01 - 100 ZR(I) is the right side slope of the trapezoidal channel.
-
-Instructional Comments for the CHAN.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - A1(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Coefficient for the variable area regression relationships (see comment 5).
+
+   * - A2(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Exponent for the variable area regression relationships (see comment 5).
+
+   * - A11(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Coefficient for the variable area regression relationships for flow depth above EXCDEP(I) (see comment 5).
+
+   * - A22(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Exponent for the variable area regression relationships for flow depth above EXCDEP(I) (see comment 5).
+
+   * - B1(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Coefficient for the variable wetted perimeter relationships (see comment 5).
+
+   * - B2(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Exponent for the variable wetted perimeter relationships (see comment 5).
+
+   * - B11(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Coefficient for the variable wetted perimeter relationships for flow above EXCDEP(I) (see comment 5).
+
+   * - B22(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Exponent for the variable wetted perimeter relationships for flow above EXCDEP(I) (see comment 5).
+
+   * - BANKELR(I)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Right bank elevation looking downstream (see comment 12).
+
+   * - BANKELL(I)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Left bank elevation looking downstream (see comment 12).
+
+   * - C1(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Coefficient for the variable top width relationships (see comment 5).
+
+   * - C2(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Exponent for the variable top width relationships (see comment 5).
+
+   * - C11(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Coefficient for the variable top width relationships for flow depth above EXCDEP(I) (see comment 5).
+
+   * - C22(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Exponent for the variable top width relationships for flow depth above EXCDEP(I) (see comment 5).
+
+   * - CHANCHAR
+     - **c**
+     - **C, E, B**
+     - Char = C line identifier for ICONFLO ‘C’
+
+       Char = E NOEXCHANGE ‘E’ channel elements.
+       Char = B Baseflow after a segment.
+
+       Variable is case sensitive and it must be upper case.
+
+       NO Exchange (see comment 20).
+
+   * - ICONFLO1(J)
+     - **i**
+     - **1 - NNOD**
+     - Tributary channel element at confluence (see comment 8).
+
+   * - ICONFLO2(J)
+     - **i**
+     - **1 - NNOD**
+     - Main channel element at the confluence.
+
+   * - DEPINITIAL(K)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+
+       **or**
+
+       **-1**
+     - DEPINITIAL(K) = 0 for no initial channel flow depth in the channel segment (default).
+
+       DEPINITIAL(K) = Initial flow depth for the all channel elements in the channel segment (optional).
+
+       DEPINITIAL(K) = -1 to assign an initial water surface elevation to a channel reach.
+       Include Line 3 (see comment 2).
+
+   * - EXCDEP(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Channel depth above which a second variable area relation- ship will apply (see comment 4).
+       If only one channel geometry relationship is used, set EXCDEP(I) = 0.
+
+   * - FCN(I)
+     - **r**
+     - **0.01 - 0.15**
+     - Average Manning’s n roughness coefficient the channel in the grid element ICHANGRID (see comments 6 and 19).
+
+   * - FCD(I)
+     - **r**
+     - **.01 - 1000**
+     - Channel thalweg depth (ft or m).
+       The thalweg depth is the deepest part of the channel measured from the lowest top of bank (see comment 1).
+
+   * - FCW(I)
+     - **r**
+     - **0.1 -** |CHAPTE002|
+     - Set FCW(I) = channel width for rectangular channel.
+
+       Set FCW(I) = width of channel base for trapezoidal channel.
+
+   * - FROUDC(K)
+     - **r**
+     - **0.0 - 5**
+     - Maximum channel Froude number if the Froude number exceeds FROUDC, the Manning’s n roughness value is increased by 0.001.
+       Set FROUDC = 0 for no adjustments of the n-value in a given channel segment.
+       The increased n- values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).
+
+   * - IBASEFLOW(K)
+     - **i**
+     - **0.0 -** |CHAPTE002|
+     - Baseflow of a channel to establish a flow condition for floodwave arrival time.
+       Place this line after each segment if more than one segment is used.
+
+   * - ICHANGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - Channel grid element number.
+
+   * - IEND
+     - **i**
+     - **1 - NNOD**
+     - Last channel element for which a starting water surface elevation is specified.
+
+   * - ISEDN(K)
+     - **i**
+     - **0 - 10**
+     - Sediment transport equation or data group for routing by size fractions for the channel segment.
+       Set ISED = 1 in the CONT.DAT file to use this option.
+       Choose one of the two following options for each channel segment:
+
+       For sediment routing without size fractions: Set ISEDN(K)
+
+       = 1 - 11 (one of eleven sediment transport equations).
+       or
+
+       For sediment routing with size fractions: Set ISEDN(K) = sediment data group (Line 3 in SED.DAT which includes a
+
+       sediment transport equation).
+
+   * - ISTART
+     - **i**
+     - **1 - NNOD**
+     - First channel element for which a starting water surface elevation is specified.
+
+   * - NXSECNUM(I)
+     - **i**
+     - **1**
+
+       **to NNODC**
+     - Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
+       This variable is used only for the cross-section data option (see comments 14 and 18).
+       Set NXSECNUM = 0, if there is no cross-section data for the channel element (I).
+       The cross-section data is interpolated and assigned in the PROFILES program.
+
+   * - ROUGHADJ
+     - **r**
+     - **0.00 - 1.2**
+     - A coefficient used in the depth adjustment of the Manning’s n-value and the shallown value for channel segments (see comment 17).
+
+   * - SHAPE
+     - **c**
+     - **R, V, T or N**
+     - Character line identifier (see comments 4 and 16);
+
+       SHAPE = ‘R’, rectangular channel geometry (width and depth data).
+       SHAPE = ‘V’, variable area channel geometry (power relationships).
+       SHAPE = ‘T’, trapezoidal channel (bottom width, depth and slopes data).
+       SHAPE = ‘N’, channel cross sections (cross section survey data).
+
+       Variable is case sensitive and it must be upper case.
+
+   * - WSELEND
+     - **r**
+     - **0 - 30,000**
+
+       **0 - 9,000**
+     - Ending water surface elevation for the channel element IEND (ft or m).
+
+   * - WSELSTART
+     - **r**
+     - **0 - 30,000**
+
+       **0 - 9,000**
+     - Starting water surface elevation for the channel element ISTART (ft or m).
+
+   * - XLEN(I)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Channel length contained within the grid element ICHANGRID (ft).
+       If more than one channel exists in a given grid element, assign XLEN(I) equal to the average representative flow length in one direction (see comments
+       9, 10, 13 and 15).
+
+   * - ZL(I)
+     - **r**
+     - **0.01 - 100**
+     - ZL(I) is the left side slope of the trapezoidal channel.
+
+   * - ZR(I)
+     - **r**
+     - **0.01 - 100**
+     - ZR(I) is the right side slope of the trapezoidal channel.
+
+
+**Instructional Comments for the CHAN.DAT File**
 
 1. The channel bottom elevation is calculated by the model based on the input channel depth and the floodplain or bank elevation.
 
@@ -2888,7 +3030,7 @@ Instructional Comments for the CHAN.DAT File
 
 A = adb
 
-Where:
+where:
 
 A = area of the channel d = depth to thalweg
 
@@ -2906,9 +3048,7 @@ The second regression applies when the flow depth is greater than EXCDEP, but do
 The two variable area cross section relationships are unique and separate.
 The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
 The channel top width is computed directly from the second relationship.
-The area, wet- ted perimeter and top width are evaluated using the upper flow depth given
-
-by total depth - EXCDEP.
+The area, wet- ted perimeter and top width are evaluated using the upper flow depth given by total depth - EXCDEP.
 To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the EXCDEP depth are used.
 
 These channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
@@ -2916,7 +3056,7 @@ When the flow depth exceeds the top of bank, then the channel geometry above ban
 Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
 
 5. A preprocessor program XSEC is available in the FLO-2D subdirectory to determine the regression coefficient and exponents (A1, A2, A11, A22, B1, B2,
-   B11, B22, B2, C1,C11, C22) in Line 2b.
+   B11, B22, B2, C1, C11, C22) in Line 2b.
 
 6. A cross section width can exceed the width of the grid element.
    For example, a channel cross section that is 100 ft wide can be used in a 20 ft grid system.
@@ -2980,22 +3120,20 @@ nd = nb a e-(b depth/dmax)
 
 where:
 
-nb = bankfull discharge roughness depth = flow depth
+   nb = bankfull discharge roughness depth = flow depth
 
-dmax = bankfull flow depth
+   dmax = bankfull flow depth
 
-a = 1/e-b
+   a = 1/e-b
 
-b = roughness adjustment coefficient prescribed by the user (0 to 1.2)
+   b = roughness adjustment coefficient prescribed by the user (0 to 1.2)
 
 This equation prescribes that the variable depth channel roughness is equal to the roughness at bankfull discharge.
 If the user assigns a ROUGHADJ value (from 0 to 1.2) as the roughness adjustment coefficient b for a given reach, the roughness will increase with a
 decrease in flow depth.
 The higher the coefficient b, the greater the increase in roughness.
 This roughness adjustment will slow the progression of the floodwave by increasing the roughness for less than bankfull discharge.
-The plane bed roughness set for bankfull discharge will not
-
-be affected.
+The plane bed roughness set for bankfull discharge will not be affected.
 For example, if the depth is 20% of the bankfull discharge and the roughness adjustment coefficient b is set to 0.44, the hydraulic roughness
 Manning’s n-value will be 1.4 times the roughness prescribed for bankfull flow.
 Assigning a ROUGHADJ value may reduce high Froude numbers.
@@ -3034,11 +3172,85 @@ FILE: CHANBANK.DAT
 
 CHANNEL BANK DATA
 
+   CHANBANK.DAT File Variables
+
+   26 99 Line 1: **LEFTBANK(K) RIGHTBANK (K)** *K = 1, number of channel elements*
+
+Notes:
+
+   If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+
+Line 1: If a channel element width is contained within one grid element and no individual bank elements are assigned then **RIGHTBANK(K)** is set to
+zero.
+
+   CHANBANK.DAT File Example
+
+   26 99
+
+   39 136
+
+   54 156
+
+   71 176
+
+   90 196
+
+109 216
+
+127 236
+
+147 256
+
+167 276
+
+187 315
+
+207 336
+
+226 356
+
+247 377
+
+267 398
+
+286 418
+
+307 439
+
+327 460
+
+348 481
+
+369 502
+
 Variable Descriptions for the CHANBANK.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the CHANBANK.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - LEFTBANK
+     - **i**
+     - **1 - NNOD**
+     - Left bank channel grid element.
+       Assigned in CHAN.DAT as the ICHANGRID variable.
+       See comments 1 to 3.
+
+   * - RIGHTBANK
+     - **i**
+     - **1 - NNOD**
+     - Right bank channel grid element corresponding the LEFT- BANK element.
+
+
+**Instructional Comments for the CHANBANK.DAT File**
 
 1. The RIGHTBANK element is automatically assigned in the FLO-2D Plugin.
    Make adjustments to the right bank channel element if the channel is too wide or narrow by reassigning the right bank element in the FLO-2D Plugin.
@@ -3053,375 +3265,652 @@ Instructional Comments for the CHANBANK.DAT File
    DAT.
 
 FILE: XSEC.DAT
+~~~~~~~~~~~~~~
 
 CROSS SECTION DATA
+^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the XSEC.DAT File
+   XSEC.DAT File Variables
+
+   X 1 X-CI-27.1 Line 1: **XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..**
+
+   **n number of cross sections**
+
+   25.0 5234.90 Line 2: **XI(I,J) YI(I,J)**
+
+   30.0 5231.53 Line 2: **XI(I,J) YI(I,J)**
+
+   35.0 5230.20 Line 2: **XI(I,J) YI(I,J)**
+
+Notes:
+
+   If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+
+   Set SHAPE = ‘N’ (line 2d) in the CHAN.DAT file to use this file.
+   Line 1: This line is repeated for each cross section.
+
+   Line 2: This line is repeated for the Station, Elevation pairs.
+
+**XSEC.DAT File Example**
+
+X 1 X-CI-27.1
+
+0.0 5235.07
+
+10.0 5235.17
+
+25.0 5235.31
+
+30.0 5231.84
+
+...
+...
+
+...
+...
+
+288.0 5236.01
+
+294.0 5236.51
+
+313.0 5237.00
+
+X 2 CI-27.1
+
+25.0 5234.90
+
+30.0 5231.53
+
+35.0 5230.20
+
+40.0 5228.50
+
+45.0 5227.20
+
+50.0 5224.35
+
+...
+...
+
+**Variable Descriptions for the XSEC.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the XSEC.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - NXSECNUM(I)
+     - **i**
+     - **1**
+
+       **to NNODC**
+     - Cross section number starting with 1 and ending with the last surveyed cross section.
+       This number will be assigned to the channel element NXSECNUM in CHAN.DAT (see comment 1).
+
+   * - XI(I,J)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Cross section station distance from the left end point (ft or m).
+       The value of XI can be either positive or negative.
+
+   * - XSECHAR
+     - **c**
+     - **X**
+     - Character ‘X’ that identifies Line
+       1. Variable is case sensitive and it must be upper case.
+
+   * - XSECNAME(I)
+     - **c**
+     - **Alpha Numeric**
+     - Cross section name (less than 15 characters, not case sensitive).
+       This name is for cross section ID purposes only and it is not used by the model..
+       Do not use spaces in the name.
+
+   * - YI(I,J)
+     - **r**
+     - **0 - 30,000**
+
+       **0 - 9,000**
+     - Cross section elevation (ft or m) at each station.
+       The value of YI can either positive or negative indicating elevations below sea level.
+
+
+**Instructional Comments for the XSEC.DAT File**
 
 1. The NXSECNUM in XSEC.DAT and CHAN.DAT must match and be listed in order from 1 to N number of natural channel elements.
    The natural channel elements in the CHAN.DAT file must start at 1 and continue in sequence to NNODC from the top of the file to the end.
    Use the FLO-2D Plugin or PROFILES programs to interpolate a cross section to each channel element.
 
 FILE: HYSTRUC.DAT
+~~~~~~~~~~~~~~~~~
 
 HYDRAULIC STRUCTURE DATA
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 HYSTRUC.DAT File Variables
+--------------------------
 
-Line 1: STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
+**Line 1:** STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
 
-CLENGTH(I) CDIAMETER(I) I = number of structures
 
-S Patagonia 1 0 1713 1827 0 4425.23 0.0 0.0
+   **CLENGTH(I) CDIAMETER(I)** *I = number of structures*
 
-Line 2: STRUCHAR = ‘C’ HDEPEXC(I,J) COEFQ(I,J) EXPQ(I,J) COEFA(I,J)
+   S Patagonia 1 0 1713 1827 0 4425.23 0.0 0.0
 
-EXPA(I,J) I = number of structures, J = number of curves
+**Line 2:** STRUCHAR = ‘C’ HDEPEXC(I,J) COEFQ(I,J) EXPQ(I,J) COEFA(I,J)
 
-Line 2: STRUCHAR = ‘B’ IBTYPE(I) COEFFP(I) C_PRIME_USER(I) KF_COEF(I) KWW_COEF(I) KPHI_COEF(I) KY_COEF(I)
 
-KX_COEF(I) KJ_COEF(I) I = number of bridges in bridge routine
+   **EXPA(I,J)** *I = number of structures, J = number of curves*
 
-Line 3: STRUCHAR = ‘B’ BOPENING(I) BLENGTH(I) BN_VALUE(I) UPLENGTH12(I) LOWCHORD(I) DECKHT(I) DECKLENGTH(I) PIERWIDTH(I) SLUICECOEFADJ(I)
+**Line 2:** STRUCHAR = ‘B’ IBTYPE(I) COEFFP(I) C_PRIME_USER(I) KF_COEF(I) KWW_COEF(I) KPHI_COEF(I) KY_COEF(I)
+
+
+   **KX_COEF(I) KJ_COEF(I)** *I = number of bridges in bridge routine*
+
+**Line 3:** STRUCHAR = ‘B’ BOPENING(I) BLENGTH(I) BN_VALUE(I) UPLENGTH12(I) LOWCHORD(I) DECKHT(I) DECKLENGTH(I) PIERWIDTH(I) SLUICECOEFADJ(I)
 ORIFICECOEFADJ(I) COEFFWEIRB(I) WINGWALL_ANGLE(I) PHI_ANGLE(I) LBTOEABUT(I)
 
-RBTOEABUT(I) I = number of bridges in bridge routine
 
-C 20.0 3.543 0.890
+   **RBTOEABUT(I)** *I = number of bridges in bridge routine*
 
-Line 3: STRUCHAR = ‘R’ REPDEP(I,J) RQCOEFQ(I,J) RQEXP(I,J)
+   C 20.0 3.543 0.890
 
-RACOEF(I,J) RAEXP(I,J) I = number of structures, J = number of curves
+**Line 3:** STRUCHAR = ‘R’ REPDEP(I,J) RQCOEFQ(I,J) RQEXP(I,J)
 
-R 12.0 0.00 1.0
 
-Line 4: STRUCHAR = ‘T’ HDEPTH(I,J) QTABLE(I,J) ATABLE(I,J)
+   **RACOEF(I,J) RAEXP(I,J)** *I = number of structures, J = number of curves*
 
-I = number of structures, J = number of datasets in table
+   R 12.0 0.00 1.0
 
-T 0 0
+**Line 4:** STRUCHAR = ‘T’ HDEPTH(I,J) QTABLE(I,J) ATABLE(I,J)
 
-Line 5: STRUCHAR = ‘F’ TYPEC(I) TYPEEN(I) CULVERTN(I) KE(I) CUBASE(I) MULTBARRELS(I)
 
-I = number of structures, Set ICURVTABLE = 2 in Line 1.
+   *I = number of structures, J = number of datasets in table*
 
-F 1 2 0.040 0.1 0.0 1
+   T 0 0
 
-Line 6: STRUCHAR = ‘D’ ISTORMDOUT(I), STORMDMAXQ(I),
+**Line 5:** STRUCHAR = ‘F’ TYPEC(I) TYPEEN(I) CULVERTN(I) KE(I) CUBASE(I) MULTBARRELS(I)
 
-I = number of drain structures.
 
-D 4 15
+   *I = number of structures, Set ICURVTABLE = 2 in Line 1.*
 
-FILE: HYSTRUC.DAT
+   F 1 2 0.040 0.1 0.0 1
 
-HYDRAULIC STRUCTURE DATA
+**Line 6:** STRUCHAR = ‘D’ ISTORMDOUT(I), STORMDMAXQ(I),
 
-Variable Descriptions for the HYSTRUC.DAT File
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+   *I = number of drain structures.*
 
-VARIABLE FMT RANGE DESCRIPTION
+   D 4 15
 
-ATABLE (I,J)
+**HYSTRUC.DAT File Notes**
 
-r
+Notes:
 
-0.01 - When the long culvert routine is used (CLENGTH(I) > 1) must be in- cluded as data input.
-QTABLEA(I,J) is the hydraulic structure flow area for each headwater depth in the rating table (discharge).
+If IHYDRSTRUCT = 0 in the CONT.DAT file, omit this file.
 
-COEFA(I,J)
+Line 2: Include this line for rating curve.
+Repeat this line for each rating
 
-r
+curve.
 
-0 - When the long culvert routine is used (CLENGTH(I) > 1),.
-COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a power function of the headwater depth.
-A = COEFA(I,J) \* depthEXPA(I,J).
+Line 1, 2: If CLENGTH(I) = 0, ignore COEFA(I,J) AND EXPA(I,J)
 
-COEFQ(I,J)
+Line 3: If a replacement rating curve is required, include this line.
 
-r
+Line 1, 3: If CLENGTH(I) = 0, ignore RACOEF(I,J) and RAEXP(I,J).
 
-0 - Discharge rating curve coefficients as a power function of the headwater depth.
-Q = COEFQ(I,J) \* depthEXPQ(I,J) (see comment 1).
-If COEFQ(I,J)
+Line 5: For generalized culverts (ICURVTABLE(I) = 2), if TYPEC(I) = 2
 
-= 0, then the discharge is computed as normal depth flow routing.
+(round pipe), CUBASE(I) = 0,
 
-CDIAMETER(I,J)
+Line 4: If a rating table is used, include this line.
+Repeat for each depth and
 
-r 0.1 - Circular culvert diameter (ft or m).
-For the generalized culvert equations CDIAMETER is the circular culvert diameter or the box culvert height (see comment 12).
+discharge pair.
 
-CLENGTH(I)
+Line 1, 4: If CLENGTH(I) = 0, ignore ATABLE(I,J).
 
-r 1 -
+   HYSTRUC.DAT File Example
 
-1 - Culvert length (ft or m).
-When a long culvert is simulated (>500 ft or 152.4 m), CLENGTH must be assigned to that culvert’s length to activate the long culvert routing routine.
+   S BridgeA 1 0 1713 1827 0 4425.23 0.0 0.0
 
-CUBASE(I) r 0 - Flow width (ft or m) of box culvert for TYPEC(I) = 1.
-For a circular culvert, CUBASE = 0.
+   C 20.0 3.543 0.890
 
-CULVERTN(I) r 0.012 -
+   S BridgeB 0 0 2503 2725 1 0.0 0.0 0.0
 
-0.25 Culvert Manning’s roughness coefficient.
-Default = 0.03.
+   C 5.0 25.023 1.035
 
-EXPA(I,J)
+   C 10.0 30.00 1.4
 
-r
+   R 12.0 0.00 1.0
 
-0 - When the long culvert routine is used (CLENGTH(I) > 1), EXPQ(I,J) is the hydraulic structure flow area exponent where the flow area is expressed
-as a power function of the headwater depth.
+   S Wier 1 1 1856 1945 0 4421.18 0.0 0.0
 
-EXPQ(I,J) r 0 - Hydraulic structure discharge exponent where the discharge is expressed as a power function of the headwater depth.
+   T 0.0 0.0
 
-HDEPEXC (I,J) r .01 - 1000
+   T 5.0 250.0
 
-0.25 - 300 Maximum depth that a given hydraulic structure rating curve is valid (ft or m).
+   T 8.0 5500.0
 
-HDEPTH(I,J) r .01 - 1000
+   T 10.0 1000.0
 
-0.25 - 300 Headwater depth for the structure headwater depth-discharge rating table (ft or m) (see comment 2).
+   T 12.5 1500.0
 
-Variable Descriptions for the HYSTRUC.DAT File
+   S CulvertA 1 2 4417 4562 0 0.0 100.
+   6.
+
+F 1 2 0.004 0.1 0.0 1
+
+**Variable Descriptions for the HYSTRUC.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - ATABLE (I,J)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - When the long culvert routine is used (CLENGTH(I) > 1) must be included as data input.
+       QTABLEA(I,J) is the hydraulic structure flow area for each headwater depth in the rating table (discharge).
+
+   * - COEFA(I,J)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - When the long culvert routine is used (CLENGTH(I) > 1),.
+       COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a power function of the headwater depth.
+       A = COEFA(I,J) \* depthEXPA(I,J).
 
-HEADREFEL(I)
+   * - COEFQ(I,J)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Discharge rating curve coefficients as a power function of the headwater depth.
+       Q = COEFQ(I,J) \* depthEXPQ(I,J) (see comment 1).
+       If COEFQ(I,J)
 
-r .01 -
+       = 0, then the discharge is computed as normal depth flow routing.
 
-30,000
+   * - CDIAMETER(I,J)
+     - **r**
+     - **0.1 -** |CHAPTE002|
+     - Circular culvert diameter (ft or m).
+       For the generalized culvert equations CDIAMETER is the circular culvert diameter or the box culvert height (see comment 12).
 
-.25 - 9,000 Reference elevation above which the headwater depth is determined for either the discharge rating curve or rating table.
-Set HEADREFEL(I) =
+   * - CLENGTH(I)
+     - **r**
+     - **1 -** |CHAPTE002|
 
-0.0 to use the existing channel bed or floodplain elevation for the reference
+       **1 -** |CHAPTE002|
+     - Culvert length (ft or m).
+       When a long culvert is simulated (>500 ft or 152.4 m), CLENGTH must be assigned to that culvert’s length to activate the long culvert routing routine.
 
-elevation to compute the headwater depth (ft or m).
+   * - CUBASE(I)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Flow width (ft or m) of box culvert for TYPEC(I) = 1.
+       For a circular culvert, CUBASE = 0.
 
-ICURVTABLE(I)
+   * - CULVERTN(I)
+     - **r**
+     - **0.012 -**
 
-s 0 = curve
+       **0.25**
+     - Culvert Manning’s roughness coefficient.
+       Default = 0.03.
 
-1 = table
+   * - EXPA(I,J)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - When the long culvert routine is used (CLENGTH(I) > 1), EXPQ(I,J) is the hydraulic structure flow area exponent where the flow area is expressed as a
+       power function of the headwater depth.
 
-2 = culveq Set ICURVTABLE(I) = 0 for a structure rating curve.
-Set ICURVTABLE(I) = 1 for a structure rating table.
+   * - EXPQ(I,J)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Hydraulic structure discharge exponent where the discharge is expressed as a power function of the headwater depth.
 
-Set ICULVTABLE(I) = 2 to use the culvert equations (see comment 5).
+   * - HDEPEXC (I,J)
+     - **r**
+     - **.01 - 1000**
 
-IFPORCHAN(I)
+       **0.25 - 300**
+     - Maximum depth that a given hydraulic structure rating curve is valid (ft or m).
 
-s
+   * - HDEPTH(I,J)
+     - **r**
+     - **.01 - 1000**
 
-0, 1, 2 or 3 IFPORCHAN(I) = 0; for a floodplain structure (shares discharge between two floodplain elements).
+       **0.25 - 300**
+     - Headwater depth for the structure headwater depth-discharge rating table (ft or m) (see comment 2).
 
-IFPORCHAN(I) = 1; for a channel hydraulic structure (shares discharge between two channel elements).
+   * - HEADREFEL(I)
+     - **r**
+     - **.01 -**
 
-IFPORCHAN(I) = 2; for a floodplain to channel structure (shares dis- charge between a floodplain element {inflow} and channel structure {out-
-flow})(see comment 7).
+       **30,000**
 
-IFPORCHAN(I) = 3; for a channel to floodplain structure (shares discharge between a channel {inflow} element and a floodplain element
+       **.25 - 9,000**
+     - Reference elevation above which the headwater depth is determined for either the discharge rating curve or rating table.
+       Set HEADREFEL(I) =
+
+       0.0 to use the existing channel bed or floodplain elevation for the reference
 
-{outflow}) (see comment 13).
+       elevation to compute the headwater depth (ft or m).
+
+   * - ICURVTABLE(I)
+     - **s**
+     - **0 = curve**
 
-INFLONOD(I) i 1 - NNOD Grid element containing the hydraulic structure or structure inlet.
+       **1 = table**
 
-INOUTCONT(I,J)
+       **2 = culveq**
+     - Set ICURVTABLE(I) = 0 for a structure rating curve.
+       Set ICURVTABLE(I) = 1 for a structure rating table.
 
-s
+       Set ICULVTABLE(I) = 2 to use the culvert equations (see comment 5).
+
+   * - IFPORCHAN(I)
+     - **s**
+     - **0, 1, 2 or 3**
+     - IFPORCHAN(I) = 0; for a floodplain structure (shares discharge between two floodplain elements).
+
+       IFPORCHAN(I) = 1; for a channel hydraulic structure (shares discharge between two channel elements).
+
+       IFPORCHAN(I) = 2; for a floodplain to channel structure (shares dis- charge between a floodplain element {inflow} and channel structure {out-
+       flow})(see comment 7).
 
-0 = inlet
+       IFPORCHAN(I) = 3; for a channel to floodplain structure (shares discharge between a channel {inflow} element and a floodplain element
+
+       {outflow}) (see comment 13).
 
-1 = revised
-
-2 = outlet / revised INOUTCONT(I,J) = 0; to compute the discharge based on only the headwater depth above the appropriate floodplain or channel bed
-elevation (or reference elevation if assigned).
-Suggested revisions are listed in REVISED_RATING_TABLE.OUT.
-No tailwater effects or potential upstream flow are considered.
-
-INOUTCONT(I,J) = 1; reduced discharge for tailwater submergence,
-
-, but does not allow upstream flow.
-Suggested rating table revisions posted to REVISED_RATING\_ TABLE.OUT.
-
-INOUTCONT(I,J) = 2; reduced discharge for tailwater submergence.
-Upstream flow is possible.
-Suggested rating table revisions posted to REVISED_RATING_TABLE.OUT.
-
-Necessary for all structure types if submergence and upstream flow is
-
-required.
-
-Variable Descriptions for the HYSTRUC.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-ISTORMDOUT(I)
-
-i 1 - NNOD Hydraulic structure outflow grid element number used to simulate a simplified storm drain.
-ISTORMDOUT is a junction or outflow node for a number of inflow nodes (see comment 11).
-
-KE(I) r 0.01 - 1.0 Culvert entrance loss coefficient (see comment 9).
-
-MULTBARRELS(I)
-
-i
-
-1 - 100 Multiple barrel option for generalized culvert equation.
-The engine will multiply the Q by the number of barrels (see comment 20).
-
-OUTFLONOD(I)
-
-i 1 - NNOD Grid element receiving the hydraulic structure discharge (structure outlet).
-OUTFLONOD does not have to be contiguous to INFLONOD grid element.
-
-QTABLE(I,J) r 0.01 - Hydraulic structure discharges for the headwater depths in the rating table (discharge) (see comments 3 and 4).
-
-REPDEP(I,J)
-
-r
-
-0.01 - Flow depth (ft or m) that if exceeded will invoke the replacement structure rating curve parameters for simulating a blockage or a change in
-the rating curve.
-
-RACOEF(IJ)
-
-r
-
-0 - When the long culvert routine is used (CLENGTH(I) > 1), RACOEF(I,J) is the structure rating curve flow area replacement coefficient.
-There should be the same number of rating curve pairs of coefficients and exponents.
-
-RAEXP(IJ)
-
-r
-
-0 - When the long culvert routine is used (CLENGTH(I) > 1), RAEXP(I,J) is the structure rating curve flow area replacement exponents.
-There should be the same number of rating curve pairs of coefficients and exponents.
-
-RQCOEF(I,J) r 0 - Structure rating curve discharge replacement coefficients.
-There should be the same number of rating curve pairs of coefficients and exponents
-
-RQEXP(I,J) r 0 - Structure rating curve discharge replacement exponents.
-There should be the same number of rating curve pairs of coefficients and exponents.
-
-Variable Descriptions for the HYSTRUC.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-STRUCHAR
-
-c
-
-S, C, R, T
-
-or D Character that identifies the use of Line 2, 3, 4 or 6 where:
-
-STRUCHAR = ‘S’ for the structure control, (Line 1); STRUCHAR = ‘C’ for a rating curve (Line 2); STRUCHAR = ‘R’ for replacement rating curve (Line 3);
-STRUCHAR = ‘T’ for a rating table (Line 4); STRUCHAR = ‘F’ for culvert equations (Line 5); STRUCHAR = ‘D’ for storm drain (Line 6).
-
-Variable is case sensitive and it must be upper case.
-
-STORMDMAXQ(I) r 0 - Maximum allowable discharge (conveyance capacity) of the collection pipe represented by the ISTORMDOUT element.
-(cfs or cms)
-
-STRUCTNAME(I) c Alpha Numeric Hydraulic structure name (15 characters or less).
-This name is for user identification purposes only.
-No spaces allowed in the name.
-
-TYPEC(I) s 1 = box
-
-2 = pipe Culvert switch, either 1 or 2.
-Set TYPEC(I) = 1 for a box culvert and TYPEC(I) = 2 for a pipe culvert (see comment 8).
-
-TYPEEN(I) s 1, 2, 3 Culvert switch.
-Set TYPEEN(I) for entrance type 1, 2, or 3.
-(see comment 8).
-
-STRUCHAR c B Character identifier for the bridge routine (see comment 16).
-
-IBTYPE i 1 - 4 Type of bridge configuration (see White Paper graphics)
-
-COEFF\* r 0.1 - 1.0 Overall bridge discharge coefficient – assigned or computed (default = 0.).
-See comment 17.
-
-C_PRIME_USER\* r 0.5 - 1.0 Baseline bridge discharge coefficient to be adjusted with detail coefficients
-
-KF_COEF\* r 0.9 - 1.1 Froude number coefficient – assigned or computed (= 0.)
-
-KWW_COEF\* r 1.0 - 1.13 Wingwall coefficient – assigned or computed (= 0.)
-
-KPHI_COEF\* r 0.7 - 1.0 Flow angle with bridge coefficient – assigned or computed (= 0.)
-
-KY_COEF\* r 0.85 - 1.0 Coefficient associated with sloping embankments and vertical abutments (= 0.)
-
-KX_COEF\* r 1.0 - 1.13 Coefficient associated with sloping abutments – assigned or computed (= 0.)
-
-KJ_COEF\* r 0.6 - 1.0 Coefficient associated with pier and piles – assigned or computer (= 0.)
-
-Variable Descriptions for the HYSTRUC.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-BOPENING r 0.0 - ∞ Bridge opening width (ft or m)
-
-BLENGTH r 0.0 - ∞ Bridge length from upstream edge to downstream abutment (ft or m)
-
-BN_VALUE r 0.030 -
-
-0.200 Bridge reach n-value
-
-UPLENGTH r 0.0 - ∞ Distance to upstream cross section unaffected by bridge backwater (ft or m)
-
-LOWCHORD r 0.0 - ∞ Average elevation of the low chord (ft or m).
-
-DECKHT r 0.0 - ∞ Average elevation of the top of the deck railing for overtop flow (ft or m)
-
-DECKLENGTH r 0.0 - ∞ Deck weir length (ft or m)
-
-PIERWIDTH r 0.0 - ∞ Combined pier or pile cross section width (flow blockage width in ft or m)
-
-SLUICECOEFADJ r 0.0 - 2.0 Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Yu/Z = 1.0.
-See comment 18.
-
-ORIFICECOEF- ADJ r 0.0 - 2.0 Adjustment factor to raise or lower the orifice flow coefficient which is
-
-0.80 for Yu/Z = 1.0
-
-COEFFWEIRB r 2.65 - 3.21 Weir coefficient for flow over the bridge deck.
-For metric: COEFFWI- ERB x 0.552.
-Comment 19.
-
-WINGWALL_AN- GLE r 30⁰ - 60⁰ Angle the wingwall makes with the abutment perpendicular to the flow
-
-PHI_ANGLE r 0⁰ - 45⁰ Angle the flow makes with the bridge alignment perpendicular to the flow
-
-LBTOEABUT r ELEVA- TION Toe elevation of the left abutment (ft or m)
-
-RBTOEABUT r ELEVA- TION Toe elevation of the right abutment (ft or m)
-
-\* If the coefficient is assigned 1.0, that bridge coefficient is either not important or has no effect.
-
-Variable Descriptions for the HYSTRUC.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-Instructional Comments for the HYSTRUC.DAT File
+   * - INFLONOD(I)
+     - **i**
+     - **1 - NNOD**
+     - Grid element containing the hydraulic structure or structure inlet.
+
+   * - INOUTCONT(I,J)
+     - **s**
+     - **0 = inlet**
+
+       **1 = revised**
+
+       **2 = outlet / revised**
+     - INOUTCONT(I,J) = 0; to compute the discharge based on only the headwater depth above the appropriate floodplain or channel bed elevation (or reference
+       elevation if assigned).
+       Suggested revisions are listed in REVISED_RATING_TABLE.OUT.
+       No tailwater effects or potential upstream flow are considered.
+
+       INOUTCONT(I,J) = 1; reduced discharge for tailwater submergence,
+
+       , but does not allow upstream flow.
+       Suggested rating table revisions posted to REVISED_RATING\_ TABLE.OUT.
+
+       INOUTCONT(I,J) = 2; reduced discharge for tailwater submergence.
+       Upstream flow is possible.
+       Suggested rating table revisions posted to REVISED_RATING_TABLE.OUT.
+
+       Necessary for all structure types if submergence and upstream flow is
+
+       required.
+
+   * - ISTORMDOUT(I)
+     - **i**
+     - **1 - NNOD**
+     - Hydraulic structure outflow grid element number used to simulate a simplified storm drain.
+       ISTORMDOUT is a junction or outflow node for a number of inflow nodes (see comment 11).
+
+   * - KE(I)
+     - **r**
+     - **0.01 - 1.0**
+     - Culvert entrance loss coefficient (see comment 9).
+
+   * - MULTBARRELS(I)
+     - **i**
+     - **1 - 100**
+     - Multiple barrel option for generalized culvert equation.
+       The engine will multiply the Q by the number of barrels (see comment 20).
+
+   * - OUTFLONOD(I)
+     - **i**
+     - **1 - NNOD**
+     - Grid element receiving the hydraulic structure discharge (structure outlet).
+       OUTFLONOD does not have to be contiguous to INFLONOD grid element.
+
+   * - QTABLE(I,J)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Hydraulic structure discharges for the headwater depths in the rating table (discharge) (see comments 3 and 4).
+
+   * - REPDEP(I,J)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Flow depth (ft or m) that if exceeded will invoke the replacement structure rating curve parameters for simulating a blockage or a change in the
+       rating curve.
+
+   * - RACOEF(IJ)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - When the long culvert routine is used (CLENGTH(I) > 1), RACOEF(I,J) is the structure rating curve flow area replacement coefficient.
+       There should be the same number of rating curve pairs of coefficients and exponents.
+
+   * - RAEXP(IJ)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - When the long culvert routine is used (CLENGTH(I) > 1), RAEXP(I,J) is the structure rating curve flow area replacement exponents.
+       There should be the same number of rating curve pairs of coefficients and exponents.
+
+   * - RQCOEF(I,J)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Structure rating curve discharge replacement coefficients.
+       There should be the same number of rating curve pairs of coefficients and exponents
+
+   * - RQEXP(I,J)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Structure rating curve discharge replacement exponents.
+       There should be the same number of rating curve pairs of coefficients and exponents.
+
+   * - STRUCHAR
+     - **c**
+     - **S, C, R, T**
+
+       **or D**
+     - Character that identifies the use of Line 2, 3, 4 or 6 where:
+
+       STRUCHAR = ‘S’ for the structure control, (Line 1); STRUCHAR = ‘C’ for a rating curve (Line 2); STRUCHAR = ‘R’ for replacement rating curve (Line 3);
+       STRUCHAR = ‘T’ for a rating table (Line 4); STRUCHAR = ‘F’ for culvert equations (Line 5); STRUCHAR = ‘D’ for storm drain (Line 6).
+
+       Variable is case sensitive and it must be upper case.
+
+   * - STORMDMAXQ(I)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Maximum allowable discharge (conveyance capacity) of the collection pipe represented by the ISTORMDOUT element.
+       (cfs or cms)
+
+   * - STRUCTNAME(I)
+     - **c**
+     - **Alpha Numeric**
+     - Hydraulic structure name (15 characters or less).
+       This name is for user identification purposes only.
+       No spaces allowed in the name.
+
+   * - TYPEC(I)
+     - **s**
+     - **1 = box**
+
+       **2 = pipe**
+     - Culvert switch, either 1 or 2.
+       Set TYPEC(I) = 1 for a box culvert and TYPEC(I) = 2 for a pipe culvert (see comment 8).
+
+   * - TYPEEN(I)
+     - **s**
+     - **1, 2, 3**
+     - Culvert switch.
+       Set TYPEEN(I) for entrance type 1, 2, or 3.
+       (see comment 8).
+
+   * - STRUCHAR
+     - **c**
+     - **B**
+     - Character identifier for the bridge routine (see comment 16).
+
+   * - IBTYPE
+     - **i**
+     - **1 - 4**
+     - Type of bridge configuration (see White Paper graphics)
+
+   * - COEFF\*
+     - **r**
+     - **0.1 - 1.0**
+     - Overall bridge discharge coefficient – assigned or computed (default = 0.).
+       See comment 17.
+
+   * - C_PRIME_USER\*
+     - **r**
+     - **0.5 - 1.0**
+     - Baseline bridge discharge coefficient to be adjusted with detail coefficients
+
+   * - KF_COEF\*
+     - **r**
+     - **0.9 - 1.1**
+     - Froude number coefficient – assigned or computed (= 0.)
+
+   * - KWW_COEF\*
+     - **r**
+     - **1.0 - 1.13**
+     - Wingwall coefficient – assigned or computed (= 0.)
+
+   * - KPHI_COEF\*
+     - **r**
+     - **0.7 - 1.0**
+     - Flow angle with bridge coefficient – assigned or computed (= 0.)
+
+   * - KY_COEF\*
+     - **r**
+     - **0.85 - 1.0**
+     - Coefficient associated with sloping embankments and vertical abutments (= 0.)
+
+   * - KX_COEF\*
+     - **r**
+     - **1.0 - 1.13**
+     - Coefficient associated with sloping abutments – assigned or computed (= 0.)
+
+   * - KJ_COEF\*
+     - **r**
+     - **0.6 - 1.0**
+     - Coefficient associated with pier and piles – assigned or computer (= 0.)
+
+   * -
+     -
+     -
+     -
+
+   * - BOPENING
+     - **r**
+     - **0.0 - ∞**
+     - Bridge opening width (ft or m)
+
+   * - BLENGTH
+     - **r**
+     - **0.0 - ∞**
+     - Bridge length from upstream edge to downstream abutment (ft or m)
+
+   * - BN_VALUE
+     - **r**
+     - **0.030 -**
+
+       **0.200**
+     - Bridge reach n-value
+
+   * - UPLENGTH
+     - **r**
+     - **0.0 - ∞**
+     - Distance to upstream cross section unaffected by bridge backwater (ft or m)
+
+   * - LOWCHORD
+     - **r**
+     - **0.0 - ∞**
+     - Average elevation of the low chord (ft or m).
+
+   * - DECKHT
+     - **r**
+     - **0.0 - ∞**
+     - Average elevation of the top of the deck railing for overtop flow (ft or m)
+
+   * - DECKLENGTH
+     - **r**
+     - **0.0 - ∞**
+     - Deck weir length (ft or m)
+
+   * - PIERWIDTH
+     - **r**
+     - **0.0 - ∞**
+     - Combined pier or pile cross section width (flow blockage width in ft or m)
+
+   * - SLUICECOEFADJ
+     - **r**
+     - **0.0 - 2.0**
+     - Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Yu/Z = 1.0.
+       See comment 18.
+
+   * - ORIFICECOEF-ADJ
+     - **r**
+     - **0.0 - 2.0**
+     - Adjustment factor to raise or lower the orifice flow coefficient which is
+
+       0.80 for Yu/Z = 1.0
+
+   * - COEFFWEIRB
+     - **r**
+     - **2.65 - 3.21**
+     - Weir coefficient for flow over the bridge deck.
+       For metric: COEFFWI- ERB x 0.552.
+       Comment 19.
+
+   * - WINGWALL_AN-GLE
+     - **r**
+     - **30⁰ - 60⁰**
+     - Angle the wingwall makes with the abutment perpendicular to the flow
+
+   * - PHI_ANGLE
+     - **r**
+     - **0⁰ - 45⁰**
+     - Angle the flow makes with the bridge alignment perpendicular to the flow
+
+   * - LBTOEABUT
+     - **r**
+     - **ELEVA- TION**
+     - Toe elevation of the left abutment (ft or m)
+
+   * - RBTOEABUT
+     - **r**
+     - **ELEVA- TION**
+     - Toe elevation of the right abutment (ft or m)
+
+   * -
+     -
+     -
+     - \* If the coefficient is assigned 1.0, that bridge coefficient is either not important or has no effect.
+
+
+**Instructional Comments for the HYSTRUC.DAT File**
 
 1. There are two approaches for bridge flow, rating curve/table or computing the bridge flow hydraulics directly as free surface, pressure flow or
    pressure and weir flow.
@@ -3463,17 +3952,17 @@ Instructional Comments for the HYSTRUC.DAT File
 2. Finally is the hydraulic structure has an inlet in a channel element and an outlet in a floodplain element, IFPORCHAN =3.
 
 8. The Department of Transportation generalized culvert equations can be used to assess inlet and outlet control.
-   The type of culvert entrances are:.
+   The types of culvert entrances are:
 
-BOX entrance:
+   *BOX entrance:*
 
-type 1 - wingwall flare 30 to 75 degrees
+   type 1 - wingwall flare 30 to 75 degrees
 
-type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
+   type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
 
-PIPE entrance:
+   *PIPE entrance:*
 
-type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
+   type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
 9. The culvert equations use the conventional entrance loss coefficients KE values that be found in the literature.
 
@@ -3544,9 +4033,8 @@ soffit.
 19.
 When the water surface exceeds the bridge deck elevation, broadcrested weir flow is computed.
 This is added to the pressure flow to determine the total discharge through the bridge.
-It is recommended that the weir coefficient be
-
-estimated on the low side to account for spaced rails, walkways, debris and other non-uniform deck features.
+It is recommended that the weir coefficient be estimated on the low side to account for spaced rails, walkways, debris and other non-uniform deck
+features.
 
 20.
 If simulating culvert discharge using the generalized culvert equations with multiple barrels or openings, input the geometry of a single barrel or
@@ -3554,25 +4042,66 @@ opening and the MULTBARRELS parameter at the end of line F.
 It is assumed that each culvert barrel has identical geometry and invert elevation.
 If using only one barrel, this variable is not added.
 
-FILE: SUBMERGE_FACTOR.DAT
+ FILE: SUBMERGE_FACTOR.DAT
+ ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SUBMERGENCE DATA
+^^^^^^^^^^^^^^^^
+
+   SUBMERGE_FACTOR.DAT File Variables
+
+   1181 1.2 Line 1: **CELL SUBM_ADJ(I)**
+
+   *L = number of grid elements in each street segment.*
+
+Notes:
+
+   If MSTREET = 0 in the CONT.DAT file, omit this file.
+
+   SUBMERGE_FACTOR.DAT File Example
+
+   1811 1.2
+
+   1862 0.95
 
 Variable Descriptions for the SUBMERGE_FACTOR.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the SUBMERGE_FACTOR.DAT FILE
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - CELL
+     - **i**
+     - **1 - NNOD**
+     - Grid element number of the inlet node.
+
+   * - SUBM_ADJ(I)
+     - **r**
+     - **0.01
+       - 2**
+     - Submergence adjustment factor for increasing or decreasing the submergence factor when the headwater to tailwater relationship is almost level.
+       Typical values 0.85 to 1.5.
+
+
+**Instructional Comments for the SUBMERGE_FACTOR.DAT FILE**
 
 1. When the tailwater water approaches the headwater surface elevation and the
 
 headwater depth/tailwater depth approaches 1, then the submergence factor is change is
 
-HSUBFACTOR = HSUBFACTOR - 0.01 \* SUBM_ADJ
+   HSUBFACTOR = HSUBFACTOR - 0.01 \* SUBM_ADJ
 
-or
+   or
 
-HSUBFACTOR = HSUBFACTOR + 0.015 \* SUBM_ADJ
+   HSUBFACTOR = HSUBFACTOR + 0.015 \* SUBM_ADJ
 
 2. The submergence factor for hydraulic structures is not a DOT table but rather it adjusts on the fly during runtime.
    This is not new.
@@ -3580,128 +4109,206 @@ HSUBFACTOR = HSUBFACTOR + 0.015 \* SUBM_ADJ
    If SUBM_ADJ = 1.0, there is no change from the existing method.
    If a SUBMERGE_FACTOR only has
 
-1811 1.0
+   1811 1.0
 
-1862 1.0
+   1862 1.0
 
 Then an output file is written: HYDRAULIC STRUCTURE SUBFACTORS.
 OUT with only the listed cells and subfactor data including discharge but no subfactor acceleration.
 This gives the user the following choices:
 
-1. No changes at all without the SUBMERGE_FACTOR.DAT file.
-   Every- thing is exactly the way it is now.
+   1. No changes at all without the SUBMERGE_FACTOR.DAT file.
+      Every- thing is exactly the way it is now.
 
-2. Write out the subfactor changes for only the specified cells in the data file.
-   No acceleration if SUBM_ADJ = 1.0.
+   2. Write out the subfactor changes for only the specified cells in the data file.
+      No acceleration if SUBM_ADJ = 1.0.
 
-3. Write out the subfactor changes and use the acceleration to increase the rate of change in the subfactor SUBM_ADJ > 1.0 or decrease the rate of
-   change: SUBM_ADJ < 1.0.
+   3. Write out the subfactor changes and use the acceleration to increase the rate of change in the subfactor SUBM_ADJ > 1.0 or decrease the rate of
+      change: SUBM_ADJ < 1.0.
 
 FILE: STREET.DAT
+~~~~~~~~~~~~~~~~
 
 STREET DATA
+^^^^^^^^^^^
+
+   STREET.DAT File Variables
+
+   0.025 1 1.7 0.667 40 Line 1: **STRMAN ISTRFLO STRFNO DEPX WIDST**
+
+   N MAIN Line 2: **STCHAR = ‘N’ STNAME**
+
+   S 127 0 0 0 Line 3: **STRCHAR = ‘S’ IGRIDN(L) DEPX(L) STMAN(L)**
+
+   **ELSTR(L)**
+
+   W 1 40 Line 4: **STRCHAR = ‘w’, ISTDIR(K) WIDR(K)** *K = 1,8 street directions* W 2 50 Line 4: **STRCHAR = ‘w’, ISTDIR(K) WIDR(K)** *K = 1,8 street
+   directions* W 4 50 Line 4: **STRCHAR = ‘w’, ISTDIR(K) WIDR(K)** *K = 1,8 street directions* S 128 0 0 0 Line 3: **STRCHAR = ‘S’ IGRIDN(L) DEPX(L)
+   STMAN(L)**
+
+   **ELSTR(L)**
+
+   *L = number of grid elements in each street segment.*
+
+Notes:
+
+   If MSTREET = 0 in the CONT.DAT file, omit this file.
+
+   If DEPEX, STMAN, ELSTR, and WDIR = 0 the global values from Line 1 will be used.
+   Each grid element should be listed only once in this file.
+
+   Line 2 - 4: Repeat these lines for each street.
+
+   Line 4: Repeat this line for the number of grid elements before repeating Line 3.
+
+STREET.DAT File Example
+
+0.025 1 1.7 0.667 40
+
+N MAIN
+
+S127 0 0 0
+
+W 1 40
+
+W 2 50
+
+W 4 50
+
+S 128 0 0 0
+
+W 2 50
+
+W 4 50
+
+S 129 0 0 0
+
+W 2 50
+
+W 4 50
+
+S 131 0 0 0
+
+W 2 50
 
 Variable Descriptions for the STREET.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-DEPX
 
-r
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-0.0 - 2.0
+   * - DEPX
+     - **r**
+     - **0.0 - 2.0**
 
-0.0 - 0.6 Global street curb height (ft or m).
-If the street curb height is exceeded by the flow it will result in overland flow depth in the grid element containing the street.
-DEPX is used to assign a street curb height to all grid elements (see comment 7).
+       **0.0 - 0.6**
+     - Global street curb height (ft or m).
+       If the street curb height is exceeded by the flow it will result in overland flow depth in the grid element containing the street.
+       DEPX is used to assign a street curb height to all grid elements (see comment 7).
 
-DEPEX(L) r 0.01 - 2
+   * - DEPEX(L)
+     - **r**
+     - **0.01 - 2**
 
-0.25 - .6 Optional curb height (ft or m) for individual grid elements that supersedes the global curb height DEPX.
-Set DEPEX(L) = 0.0 to use DEPX.
+       **0.25 - .6**
+     - Optional curb height (ft or m) for individual grid elements that supersedes the global curb height DEPX.
+       Set DEPEX(L) = 0.0 to use DEPX.
 
-ELSTR(L)
+   * - ELSTR(L)
+     - **r**
+     - **0 - 30,000**
 
-r
+       **0 - 9,000**
+     - Optional street elevation (ft or m).
+       This elevation will supersede the flood- plain grid element elevation.
+       If ELSTR(L) = 0, the model will assign the street elevation as the grid element elevation, FP(I,6) minus the curb height DEPEX(L) or DEPX to the
+       street elevation ELSTR(L) (see comment 3).
 
-0 - 30,000
+   * - IGRIDN(L)
+     - **i**
+     - **1 - NNOD**
+     - Grid element number.
+       Each grid element should be listed only once in the data file (see comment 6).
 
-0 - 9,000 Optional street elevation (ft or m).
-This elevation will supersede the flood- plain grid element elevation.
-If ELSTR(L) = 0, the model will assign the street elevation as the grid element elevation, FP(I,6) minus the curb height DEPEX(L) or DEPX to the
-street elevation ELSTR(L) (see comment 3).
+   * - ISTDIR(K)
+     - **i**
+     - **1 - 8**
+     - Street segment (flow direction) from the center of the grid element to a neighboring element.
+       IITDIR(k) will vary from 1 to 8 according to the following compass directions:
 
-IGRIDN(L) i 1 - NNOD Grid element number.
-Each grid element should be listed only once in the data file (see comment 6).
+       1 = north 5 = northeast
 
-ISTDIR(K)
+       2 = east 6 = southeast
 
-i
+       3 = south 7 = southwest
 
-1 - 8 Street segment (flow direction) from the center of the grid element to a neighboring element.
-IITDIR(k) will vary from 1 to 8 according to the following compass directions:
+       4 = west 8 = northwest
 
-1 = north 5 = northeast
+   * - ISTRFLO
+     - **s**
+     - **0 or 1**
+     - ISTRFLO = 1 specifies that the floodplain inflow hydrograph will enter the streets rather than entering the overland portion of the grid element.
 
-2 = east 6 = southeast
+   * - STRCHAR
+     - **c**
+     - **N, S or W**
+     - Character ‘N’, ‘S’ or ‘W’ to identify either Line 2, 3 or 4.
 
-3 = south 7 = southwest
+   * - STRFNO
+     - **r**
+     - **0.0 - 5**
+     - Maximum street Froude number.
+       When the computed Froude number for the street flow exceeds STRFNO, the n-value is increased by 0.001 for that grid node.
+       The increased n-values are reported in the ROUGH.OUT and STREET.RGH files
 
-4 = west 8 = northwest
+   * - STMAN(L)
+     - **r**
+     - **0.01 - 0.25**
+     - Optional spatially variable street n-value within a given grid element.
+       STMAN(L) supersedes the STRMAN value.
+       If STMAN(L) = 0, the global value STRMAN will be assigned to the grid element street segment.
 
-ISTRFLO s 0 or 1 ISTRFLO = 1 specifies that the floodplain inflow hydrograph will enter the streets rather than entering the overland portion of the
-grid element.
+   * - STRMAN
+     - **r**
+     - **0.01 - 0.25**
+     - Global n-value for street flow which that is assigned to all the grid element street segments (see comment 2).
 
-STRCHAR c N, S or W Character ‘N’, ‘S’ or ‘W’ to identify either Line 2, 3 or 4.
+   * - STNAME
+     - **c**
+     - **Alpha Numeric**
+     - Character name of the street.
+       Up to 15 characters can be used.
+       The street name is not used in the model.
+       No spaces allowed.
+       (see comment 1).
 
-STRFNO
+   * - WIDR(K)
+     - **r**
+     - **0.0 - 1,000**
 
-r
+       **0.0 - 300**
+     - Optional grid element street width in the ISTDIR direction.
+       If the grid element contains more than one street, Line 4 must be repeated.
+       If a given grid element has more than one street in one direction, modify WIDR(K) to represent the combined widths of the streets.
+       Up to 8 street segments, one for each of the 8 compass directions, can be assigned according to the ISTDIR variable.
+       By setting WIDR(K) = 0.0, the WIDST global width will be assigned to that street segment (see comments 4 and 5).
 
-0.0 - 5 Maximum street Froude number.
-When the computed Froude number for the street flow exceeds STRFNO, the n-value is increased by 0.001 for that grid node.
-The increased n-values are reported in the ROUGH.OUT and STREET.RGH files
+   * - WIDST
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Global assignment of street width to all streets.
+       This value is superseded by WIDR(K) when WIDR(K) is greater than zero (see comments 2 and 4).
 
-STMAN(L)
 
-r
-
-0.01 - 0.25 Optional spatially variable street n-value within a given grid element.
-STMAN(L) supersedes the STRMAN value.
-If STMAN(L) = 0, the global value STRMAN will be assigned to the grid element street segment.
-
-STRMAN r 0.01 - 0.25 Global n-value for street flow which that is assigned to all the grid element street segments (see comment 2).
-
-Variable Descriptions for the STREET.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-STNAME c Alpha Numeric Character name of the street.
-Up to 15 characters can be used.
-The street name is not used in the model.
-No spaces allowed.
-(see comment 1).
-
-WIDR(K)
-
-r
-
-0.0 - 1,000
-
-0.0 - 300 Optional grid element street width in the ISTDIR direction.
-If the grid element contains more than one street, Line 4 must be repeated.
-If a given grid element has more than one street in one direction, modify WIDR(K) to represent the combined widths of the streets.
-Up to 8 street segments, one for each of the 8 compass directions, can be assigned according to the ISTDIR variable.
-By setting WIDR(K) = 0.0, the WIDST global width will be assigned to that street segment (see comments 4 and 5).
-
-WIDST r 0.01 - Global assignment of street width to all streets.
-This value is superseded by WIDR(K) when WIDR(K) is greater than zero (see comments 2 and 4).
-
-Instructional Comments for the STREET.DAT FILE
+**Instructional Comments for the STREET.DAT FILE**
 
 1. The street name is provided for the user to separate the streets groups for easy
 
@@ -3735,78 +4342,139 @@ It is not used in the program.
    The user cannot adjust it.
 
 FILE: ARF.DAT
+~~~~~~~~~~~~~
 
 FLOODPLAIN AREA WIDTH REDUCTION DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   ARF.DAT File Variables
+
+   S 0 Line 1: **ITTCHAR = ‘S’ ARFBLOCKMOD**
+
+   T 49 Line 1: **ITTCHAR = ‘T’ ITTAWF(K)**
+
+   29 .2 .70 .50 1.0 0.
+   0.
+   0.
+   0.
+   0.
+   Line 2: **IDG(I) ARF(I) WRF(I,J)**
+
+   *K = number of totally blocked grid elements I = number of partially blocked grid elements J = 8 flow directions*
+
+Notes:
+
+   If IWRFS = 0 in the CONT.DAT file, omit this file.
+
+   Line 1: Repeat this line for each totally blocked grid element.
+   Line 2: Repeat this line for each partially blocked grid element.
+
+**ARF.DAT File Example**
+
+S 0.
+
+T 540
+
+T 2502
+
+T 3818
+
+T 3861
+
+T 4435
+
+T 4766
+
+46 .1 0 .5 0 .5 0 0 0 0
+
+69 .3 0 0 0 0 0 0 0 0
+
+119 .4 .5 .7 1 0 0 0 0 0
+
+120 0 0 0 0 1 0 .2 0 0
+
+142 .2 .2 0 0 0 0 0 0 0
+
+161 .5 0 0 0 0 0 0 0 0
+
+162 .5 .7 .2 1 0 0 0 0 1
+
+163 .1 0 0 0 1 0 0 0 0
+
+182 .3 0 0 0 0 0 0 .3 0
+
+....
 
 Variable Descriptions for the ARF.DAT File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-ARF(I)
 
-r
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-0 - 1
+   * - ARF(I)
+     - **r**
+     - **0 - 1**
 
-or
+       **or**
 
--1 - 0 Area reduction factors (ARF) is the percent of the grid element (I) area that cannot be covered by surface flows.
-Buildings or other physical features within the grid element that cannot store flow volume are accounted by using the ARF value.
-The maximum ARF value is limited according to cell size (see comments 1 and 3).
+       **-1 - 0**
+     - Area reduction factors (ARF) is the percent of the grid element (I) area that cannot be covered by surface flows.
+       Buildings or other physical features within the grid element that cannot store flow volume are accounted by using the ARF value.
+       The maximum ARF value is limited according to cell size (see comments 1 and 3).
 
-If the value is negative, the building collapse function is turned on (see comment 5).
+       If the value is negative, the building collapse function is turned on (see comment 5).
 
-ARFBLOCK- MOD
+   * - ARFBLOCK-MOD
+     - **r**
+     - **0.
+       - 1.**
+     - Global revision to the ARF = 1 value to the grid elements that are total blocked from receiving any flow (ITTAWF elements).
+       Setting IARFBLOCKMOD = 0.9 will change the ARF = 1.
+       to ARF = 0.9 for all the ITTAWF elements (see comment 4).
 
-r
+   * - IGD(I)
+     - **i**
+     - **1 - NNOD**
+     - Partially blocked grid element numbers.
 
-0. - 1.
-   Global revision to the ARF = 1 value to the grid elements that are total blocked from receiving any flow (ITTAWF elements).
-   Setting IARFBLOCKMOD = 0.9 will change the ARF = 1.
-   to ARF = 0.9 for all the ITTAWF elements (see comment 4).
+   * - ITTAWF(I)
+     - **i**
+     - **1 - NNOD**
+     - Grid elements that will not receive any flow.
+       Each grid element is totally blocked out and all ARF and WRF values are set equal to 1.0.
+       If this value is negative, the building collapse feature is turned on for the entire cell (see comment 5).
 
-IGD(I) i 1 - NNOD Partially blocked grid element numbers.
+   * - ITTCHAR
+     - **c**
+     - **S, T**
+     - Set ITTCHAR = ‘S’ to identify Line
+       1. Set ITTCHAR = ‘T’ to identify Line 2.
 
-ITTAWF(I)
+       Variable is case sensitive and it must be upper case.
 
-i
+   * - **WRF(I,J)**
+     - **r**
+     - **0 - 1**
+     - Width reduction factors (WRF).
+       The width reduction factor corresponds to the percentage of flow width blocked due to obstruction in the eight flow directions.
+       Assuming that the flow field is oriented with the north direction, use the following WRF assignment:
 
-1 - NNOD Grid elements that will not receive any flow.
-Each grid element is totally blocked out and all ARF and WRF values are set equal to 1.0.
-If this value is negative, the building collapse feature is turned on for the entire cell (see comment 5).
+       WRF(I,1) = North WRF(I,2) = East WRF(I,3) = South WRF(I,4) = West
 
-ITTCHAR
+       WRF(I,5) = Northeast WRF(I,6) = Southeast WRF(I,7) = Southwest WRF(I,8) = Northwest
 
-c
+       where I is the grid element number (see comment 2).
 
-S, T Set ITTCHAR = ‘S’ to identify Line 1.
-Set ITTCHAR = ‘T’ to identify Line 2.
 
-Variable is case sensitive and it must be upper case.
-
-Variable Descriptions for the ARF.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-WRF(I,J)
-
-r
-
-0 - 1 Width reduction factors (WRF).
-The width reduction factor corresponds to the percentage of flow width blocked due to obstruction in the eight flow directions.
-Assuming that the flow field is oriented with the north direction, use the following WRF assignment:
-
-WRF(I,1) = North WRF(I,2) = East WRF(I,3) = South WRF(I,4) = West
-
-WRF(I,5) = Northeast WRF(I,6) = Southeast WRF(I,7) = Southwest WRF(I,8) = Northwest
-
-where I is the grid element number (see comment 2).
-
-Instructional Comments for the ARF.DAT File
+**Instructional Comments for the ARF.DAT File**
 
 1. For a partially blocked grid element, those ARF and WRF values that are 0.0 must be entered.
    The graphical assignment and editing of ARF and WRF values are relatively easy with the FLO-2D Plugin.
@@ -3822,16 +4490,22 @@ Instructional Comments for the ARF.DAT File
    ARF values will be adjusted to prevent numerical instability.
    The following table lists the adjustment triggers.
 
-TABLE 4.2.
-ARF VALUES TRIGGER MAX
+.. list-table::
+   :widths: 100
+   :header-rows: 0
 
-Grid Element Size Maximum ARF Reset to 1
 
-Cell Side > 50 0.95
+   * - TABLE 4.2.
+       ARF VALUES TRIGGER MAX
 
-20 < to < 50 0.90
+   * - Grid Element Size                |    Maximum ARF Reset to 1
 
-20 > Cell Side 0.85
+   * - Cell Side > 50                   |    0.95
+
+   * - 20 < to < 50                     |    0.90
+
+   * - 20 > Cell Side                   |    0.85
+
 
 4. Instead of completely blocking any flow from entering the ITTAWF elements, assigning ARFBLOCKMOD < 1.
    will allow some flow storage in these completely blocked elements.
@@ -3840,91 +4514,161 @@ Cell Side > 50 0.95
 5. To assess the potential for building collapse, assign the totally blocked element (-ITTAWF) or the partially blocked ARF value (-ARF) in ARF.DAT as a
    negative value.
    Each building element that could collapse must be assigned a negative value.
-   If a building consists of multiple totally blocked elements (ITTAWF
+   If a building consists of multiple totally blocked elements (ITTAWF~ T-line in ARF.DAT), all of the ITTAWF grid element numbers must be assigned as
+   negative to completely remove the building.
 
-~ T-line in ARF.DAT), all of the ITTAWF grid element numbers must be assigned as negative to completely remove the building.
-
-FILE: MULT.DAT
+ FILE: MULT.DAT
+ ~~~~~~~~~~~~~~
 
 MULTIPLE CHANNEL (RILL AND GULLY) DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the MULT.DAT File
+   MULT.DAT File Variables
+
+   Line 1: **WMC WDRALL DMALL NODCHNSALL XNMULTALL SSLOPEMIN, SSLOPEMAX AVULD50**
+
+0 0.0 5.0 1 0.04 0.00 0.00 0.0
+
+   1961 3.0 5.0 1 0.04 Line 2: **IGRID(I) WDR(I) DM(I) NODCHNS(I) XNMULT(I)**
+
+   *I = number of grid elements with multiple channels*
+
+   Notes:
+
+   If IMULTC = 0 in the CONT.DAT file, omit this file.
+
+   If WDRALL = 0, no global assignment of the variables occurs.
+   Line 3: Repeat this line for each grid element revision.
+
+   MULT.DAT File Example
+
+   0 0.0 5.0 1 0.04 0.00 0.00 0.0
+
+   1961 3.0 5.0 1 0.04
+
+   1962 3.0 5.0 1 0.04
+
+   1963 3.0 5.0 1 0.04
+
+   1964 3.0 5.0 1 0.04
+
+   1965 3.0 5.0 1 0.04
+
+   1966 3.0 5.0 1 0.04
+
+   1967 3.0 5.0 1 0.04
+
+**Variable Descriptions for the MULT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-AVULD50
 
-r 0.00 -
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-100.0 Bed material D50 sediment size fraction (mm).
-Assignment of AVULD50 triggers the avulsion component that will allow a multiple channel to seek a new path if the channel conveyance capacity is
-exceeded (see comment 6).
+   * - AVULD50
+     - **r**
+     - **0.00 -**
 
-DM(K)
+       **100.0**
+     - Bed material D50 sediment size fraction (mm).
+       Assignment of AVULD50 triggers the avulsion component that will allow a multiple channel to seek a new path if the channel conveyance capacity is
+       exceeded (see comment 6).
 
-r
+   * - DM(K)
+     - **r**
+     - **0 - 1000**
 
-0 - 1000
+       **0 - 300**
+     - Maximum depth of multiple channels for individual grid elements (ft or m).
+       When the flow depth exceeds the multiple channel depth DM, the flow width WDR of the gully is increased by the incremental width WMC (see comments 2
+       and 3).
+       DM supersedes the DMALL depth assignment.
 
-0 - 300 Maximum depth of multiple channels for individual grid elements (ft or m).
-When the flow depth exceeds the multiple channel depth DM, the flow width WDR of the gully is increased by the incremental width WMC (see comments 2
-and 3).
-DM supersedes the DMALL depth assignment.
+   * - DMALL
+     - **r**
+     - **0 - 1000**
 
-DMALL r 0 - 1000
+       **0 - 300**
+     - Global assignment of the maximum depth to all grid elements (ft or m).
 
-0 - 300 Global assignment of the maximum depth to all grid elements (ft or m).
+   * - IGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - Floodplain grid element number (see comment 1).
 
-IGRID(I) i 1 - NNOD Floodplain grid element number (see comment 1).
+   * - NODCHNS(K)
+     - **i**
+     - **0 - 100**
+     - Number of multiple channels assigned in each grid element.
+       If NODCHNS is set equal to zero then the overland flow without multiple channels is assumed.
+       NODCHNS supersedes NODCHNSALL value.
 
-NODCHNS(K)
+   * - NODCHNSALL
+     - **i**
+     - **1 - 100**
+     - Global assignment of the number of multiple channels to all grid elements.
 
-i
+   * - SSLOPEMIN
+     - **r**
+     - **0.
+       - 1.**
+     - Minimum slope that multiple channel assignments will be made at run- time.
 
-0 - 100 Number of multiple channels assigned in each grid element.
-If NODCHNS is set equal to zero then the overland flow without multiple channels is assumed.
-NODCHNS supersedes NODCHNSALL value.
+   * - SSLOPEMAX
+     - **r**
+     - **0.
+       - 1.**
+     - Maximum slope that multiple channel assignments will be made at run- time.
 
-NODCHNSALL i 1 - 100 Global assignment of the number of multiple channels to all grid elements.
+   * - WDR(K)
+     - **r**
+     - **0 - 1000**
 
-SSLOPEMIN r 0.
-- 1.
-Minimum slope that multiple channel assignments will be made at run- time.
+       **0 - 300**
+     - Channel width for individual grid elements.
+       WDR supersedes WDRALL.
 
-SSLOPEMAX r 0.
-- 1.
-Maximum slope that multiple channel assignments will be made at run- time.
+   * - WDRALL
+     - **r**
+     - **0 - 1000**
 
-WDR(K) r 0 - 1000
+       **0 - 300**
+     - Global assignment of the multiple channel width to all grid elements.
+       If WDRALL = 0, all global variables are set to zero.
 
-0 - 300 Channel width for individual grid elements.
-WDR supersedes WDRALL.
+   * - WMC
+     - **r**
+     - **0 - 1000**
 
-WDRALL r 0 - 1000
+       **0 - 300**
+     - Incremental width by which multiple channels will be expanded when the maximum depth DM is exceeded (see comments 2 and 4).
 
-0 - 300 Global assignment of the multiple channel width to all grid elements.
-If WDRALL = 0, all global variables are set to zero.
+   * - XNMULT(K)
+     - **r**
+     - **0.01 - 0.5**
+     - Channel n-values for individual grid elements.
+       Supersedes XNMULTALL.
 
-WMC r 0 - 1000
+   * - XNMULTALL(K)
+     - **r**
+     - **0.01 - 0.5**
+     - Global assignment of the multiple channel n-values to all the grid elements.
 
-0 - 300 Incremental width by which multiple channels will be expanded when the maximum depth DM is exceeded (see comments 2 and 4).
 
-XNMULT(K) r 0.01 - 0.5 Channel n-values for individual grid elements.
-Supersedes XNMULTALL.
+**Instructional Comments for the MULT.DAT File**
 
-XNMULTALL(K) r 0.01 - 0.5 Global assignment of the multiple channel n-values to all the grid elements.
-
-Instructional Comments for the MULT.DAT File
-
-1. If a grid element is assigned multiple channels and, in addition, contains a main
-
-channel or buildings such that the available floodplain surface storage area is less than 50% of the original grid element surface area, then the
-model will reset that grid element to overland sheet flow (i.e.
-no multiple channels).
-The program will automatically eliminate any multiple channels in grid elements with streets.
-The available surface area and the assigned variable can be reviewed in the SURFAREA.OUT output file.
+1. If a grid element is assigned multiple channels and, in addition, contains a main channel or buildings such that the available floodplain surface
+   storage area is less than 50% of the original grid element surface area, then the model will reset that grid element to overland sheet flow (i.e.
+   no multiple channels).
+   The program will automatically eliminate any multiple channels in grid elements with streets.
+   The available surface area and the assigned variable can be reviewed in the SURFAREA.OUT output file.
 
 2. If a multiple channel fills and is about to overflow, it is assumed that it is an alluvial channel and will widen to accept more flow.
    Thus when the flow depth exceeds the maximum channel depth DM, the model increases the width by WMC to maintain the channel conveyance.
@@ -3932,46 +4676,87 @@ The available surface area and the assigned variable can be reviewed in the SURF
    The flood routing will then revert to overland flow in that element.
    The following rules govern the assignment of the multiple channel data:
 
-· When the flow depth exceeds the multiple channel (gully) depth, the flow width of the gully is increased by the incremental width.
+- When the flow depth exceeds the multiple channel (gully) depth, the flow width of the gully is increased by the incremental width.
 
-· If it is desired to force the flow to stay in a channel of fixed width, set the incremental width equal to zero.
+- If it is desired to force the flow to stay in a channel of fixed width, set the incremental width equal to zero.
 
-· If the number of multiple channels assigned in a grid element is set equal to zero, overland sheet flow without multiple channels is assumed.
+- If the number of multiple channels assigned in a grid element is set equal to zero, overland sheet flow without multiple channels is assumed.
 
-· The spatially variable grid element data will supersede the global data.
+- The spatially variable grid element data will supersede the global data.
 
 3. If it is desired to force the flow to stay in a channel of fixed width, set the variable WMC = 0.
 
 4. The total flow width is determined by multiplying the number of channels in each grid element by the corresponding width.
 
 5. SSLOPEMIN and SSLOPEMAX define a range of watershed slope in which the multiple channel width will be expanded.
-   This will limit the channel width growth to the middle portion of the basin and will not expand the other mul- tiple channels.
+   This will limit the channel width growth to the middle portion of the basin and will not expand the other multiple channels.
    By expanding the channels for increased conveyance capacity, the time of concentration can be reduced.
-   The default SSLOPEMIN = SS- LOPEMAX = 0.0 will result in width increases for all multiple channels.
+   The default SSLOPEMIN = SSLOPEMAX = 0.0 will result in width increases for all multiple channels.
 
 6. The avulsion component will be initiated if AVULD50 > 0.
    When a multiple channel conveyance capacity is exceeded in a given grid element, the model will search the other flow direction neighbor elements
-   without a multiple channel
-
-and will create a multiple channel in that grid element based on width and depth relationship as a function of bed material size (AVULD50).
-This will continue in the downslope direction until the multiple channel conveyance capacity is no longer exceeded.
-For more information, see the avulsion discussion white paper in the FLO-2D Handouts and Reference Manual.
+   without a multiple channel and will create a multiple channel in that grid element based on width and depth relationship as a function of bed material
+   size (AVULD50).
+   This will continue in the downslope direction until the multiple channel conveyance capacity is no longer exceeded.
+   For more information, see the avulsion discussion white paper in the FLO-2D Handouts and Reference Manual.
 
 FILE: SIMPLE_MULT.DAT
+~~~~~~~~~~~~~~~~~~~~~
 
 MULTIPLE CHANNEL DATA
+^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the SIMPLE_MULT.DAT File
+   SIMPLE_MULT.DAT File Variables
+
+   0.025 Line 1: **XNMULTTRICHN**
+
+1961 Line 2: **IMGRID(I)**
+
+   *I = number of grid elements with multiple channels*
+
+   Notes:
+
+   Line 2: Repeat this line for each grid element revision.
+
+   SIMPLE_MULT.DAT File Example
+
+   0.060
+
+   19612
+
+   19625
+
+   19458
+
+   ...
+
+**Variable Descriptions for the SIMPLE_MULT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-IMGRID(I) i 1 - NNOD A character to define a new bridge cross section dataset.
 
-XNMULTTRICHN r 0.01 - 0.5 Global assignment of the multiple channel n-values to all the grid elements.
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-Instructional Comments for the SIMPLE_MULT.DAT File
+   * - IMGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - A character to define a new bridge cross section dataset.
+
+   * - XNMULTTRICHN
+     - **r**
+     - **0.01
+       - 0.5**
+     - Global assignment of the multiple channel n-values to all the grid elements.
+
+
+**Instructional Comments for the SIMPLE_MULT.DAT File**
 
 1. Similar to the conventional multiple channel option, the simplified multiple channel switch IMULTC is set to 1 for the component to be activated.
    Again, IMULTC is the fifth parameter in line 2 of the CONT.DAT file.
@@ -4009,324 +4794,419 @@ They can be used together in the same project but for a different group of cells
 They both use the same variable data, but SIMPLE_MULT depth and width are hardwired.
 
 FILE: SED.DAT
+~~~~~~~~~~~~~
 
 MUDFLOW AND SEDIMENT TRANSPORT DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 SED.DAT File Variables
+----------------------
 
-Line 1: SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX
+**Line 1:** SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX
 
-M 0.000602 33.10 0.001720 29.50 2.74 0.00
 
-Line 2: SEDCHAR = ‘C’ ISEDEQG ISEDSIZEFRAC DFIFTY SGRAD SGST DRYSPWT CVFG ISEDSUPPLY ISEDISPLAY
+   M 0.000602 33.10 0.001720 29.50 2.74 0.00
 
-C 2 0.25 2.5 2.65 92.5 1 7232
+**Line 2:** SEDCHAR = ‘C’ ISEDEQG ISEDSIZEFRAC DFIFTY SGRAD SGST DRYSPWT CVFG ISEDSUPPLY ISEDISPLAY
 
-Z 2 5.0 0.15 Line 3: SEDCHAR = ‘Z’ ISEDEQI BEDTHICK CVFI
 
-P 0.062 0.010 Line 4: SEDCHAR = ‘P’ SEDIAM SEDPERCENT
+   C 2 0.25 2.5 2.65 92.5 1 7232
 
-D 111 20.0 Line 5: SEDCHAR = ‘D’ JDEBNOD DEBRISV
+   Z 2 5.0 0.15 Line 3: **SEDCHAR = ‘Z’ ISEDEQI BEDTHICK CVFI**
 
-E 1.0 Line 6: SEDCHAR = ‘E’ SCOURDEP
+   P 0.062 0.010 Line 4: **SEDCHAR = ‘P’ SEDIAM SEDPERCENT**
 
-R 9366 Line 7: SEDCHAR = ‘R’ ICRETIN(N) N = number of rigid bed nodes
+   D 111 20.0 Line 5: **SEDCHAR = ‘D’ JDEBNOD DEBRISV**
 
-S 23798 1 4.49 0.89 Line 8: SEDCHAR = ‘S’ ISEDGRID(N) ISEDCFP(N) ASED(N)
+   E 1.0 Line 6: **SEDCHAR = ‘E’ SCOURDEP**
 
-BSED(N) N = number of sediment supply rating curves.
+   R 9366 Line 7: **SEDCHAR = ‘R’ ICRETIN(N)** *N = number of rigid bed nodes*
 
-N 0.062 0.052 Line 9: SEDCHAR = ‘N’ SSEDIAM SSEDPERCENT
+   S 23798 1 4.49 0.89 Line 8: **SEDCHAR = ‘S’ ISEDGRID(N) ISEDCFP(N) ASED(N)**
 
-G 1 3 Line 10: SEDCHAR = ‘G’ ISEDUM ISEDGROUP(N)
+   **BSED(N)** *N = number of sediment supply rating curves.*
 
-N = number of sediment groups
+   N 0.062 0.052 Line 9: **SEDCHAR = ‘N’ SSEDIAM SSEDPERCENT**
 
-Notes:
+   G 1 3 Line 10: **SEDCHAR = ‘G’ ISEDUM ISEDGROUP(N)**
 
-Only a sediment transport ISED or mudflow MUD simulation can be applied in a project model.
-If MUD = 0 in the CONT.DAT file, omit line 1.
+   *N = number of sediment groups*
 
-If ISED = 0 in the CONT.DAT file, omit line 2, 3, 4, 6, 7, 8, and 9.
-If both MUD and ISED = zero in the CONT.DAT file, omit this file.
+   Notes:
 
-Line 2: If ISEDSIZEFRAC = 1, it is necessary to create a sediment group using Lines 3 and 4.
+   Only a sediment transport ISED or mudflow MUD simulation can be applied in a project model.
+   If MUD = 0 in the CONT.DAT file, omit line 1.
 
-Line 4: Repeat this line for each size fraction.
-Each group must have the same number of size fractions.
-Line 5: If debris basin IDEBRV = 0 in the CONT.DAT file, ignore this line.
+   If ISED = 0 in the CONT.DAT file, omit line 2, 3, 4, 6, 7, 8, and 9.
+   If both MUD and ISED = zero in the CONT.DAT file, omit this file.
 
-Line 8, 9: If ISEDSUPPLY = 0, ignore these lines.
+   Line 2: If ISEDSIZEFRAC = 1, it is necessary to create a sediment group using Lines 3 and 4.
 
-FILE: SED.DAT
+   Line 4: Repeat this line for each size fraction.
+   Each group must have the same number of size fractions.
+   Line 5: If debris basin IDEBRV = 0 in the CONT.DAT file, ignore this line.
 
-MUDFLOW AND SEDIMENT TRANSPORT DATA
+   Line 8, 9: If ISEDSUPPLY = 0, ignore these lines.
 
-Variable Descriptions for the SED.DAT File
+   SED.DAT File Example
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+   M 0.000602 33.10 0.001720 29.50 2.74 0.00 *(Mudflow)*
 
-VARIABLE FMT RANGE DESCRIPTION
+*or*
 
-ASED(N) r 0 - Sediment rating curve coefficient (see the BSED exponent below).
+   C 2 1 2.5 6.7 2.65 95.0 0.10 0 1961 *(Sediment Transport)*
 
-BEDTHICK
+   Z 2 1.
+   0.10
 
-r
+   P 0.074 0.058
 
-0 - 100
+   P 0.149 0.099
 
-0 - 30 Sediment bed thickness (ft or m) for sediment routing by size fraction.
-The available sediment volume for a size fraction within a grid element is defined by the bed thickness times the floodplain or channel element
-surface area times the percent size distribution.
-The default bed thickness is 10 ft (3 m) for the floodplain if bed thickness is less than 0.1 ft.
-If there is no available sediment volume for a given size fraction, no further scour of the bed will occur for that sediment size fraction (see
-comment 2).
+   P 0.297 0.156
 
-BSED(N)
+   P 0.590 0.230
 
-r
+   P 1.19 0.336
 
-0 - Sediment rating curve exponent.
-Qs = ASED\* Qw BSED
+   P 2.38 0.492
 
-where:
+   P 4.76 0.693
 
-Qw is the water discharge (cfs or cms)
+   P 9.53 0.808
 
-Qs is the sediment supply (tons/day or kg/day).
+   E 1.0
 
-CVFG
+   R 2062
 
-r
+   R 2063
 
-0 - 0.2 Fine sediment volumetric concentration for overland, channel, and streets.
-This value is superseded by CVFI in Line 3.
-Concentration by volume of sediment for sizes less than 0.0625 mm (sand-silt split).
-This concentration by volume generally ranges from 5% to 15% and is expressed as a decimal (0.05 for 5% concentration by volume).
-It is used only in Woo-MPM sediment transport equation.
+   R 2114
 
-CVFI
+   R 2115
 
-r
+   R 2166
 
-0 - 0.2 This variable is the same as CVFG except that it represents the fine sediment volumetric concentration for an individual channel segment(s).
-CVFI supersedes CVFG for a channel segment(s) as identified by ISEDN in CHAN.
-DAT.
-CVFI represents the concentration by volume of sediment for sizes less than 0.0625 mm (sand-silt split).
-This concentration by volume generally ranges from 5% to 15% and is expressed as a decimal (0.05 for 5% con- centration by volume).
-It is used only in the Woo-MPM sediment transport equation.
+   R 2167
 
-DEBRISV r 0 - Volume of the debris basin in ft3 or m3.
+   S 1228 1 4.49 0.89
 
-DFIFTY r 0 - Sediment size (D50) in mm for sediment routing.
+   N 0.074 0.022
 
-DRYSPWT r 70 - 130 Dry specific weight of the sediment (lb/ft3 or N/m3).
+   N 0.300 0.107
 
-ICRETN i 1 - NNOD Floodplain or channel grid elements with a rigid bed (e.g. spillway apron).
+   N 0.600 0.232
 
-Variable Descriptions for the SED.DAT File
+   N 2.000 0.528
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+   N 4.750 0.748
 
-VARIABLE FMT RANGE DESCRIPTION
+   N 9.530 0.852
 
-ISEDCFP(N) s 0 = fp
+   N 19.050 0.926
 
-1 = chan ISEDCFP(N) = 0 for a floodplain sediment supply rating curve ISEDCFP(N) = 1 for a channel sediment supply rating curve.
+   N 38.100 0.973
 
-ISEDEQG
+   N 76.200 1.000
 
-i
+   G 1 2
 
-1 - 11 Transport equation number used in sediment routing for overland flow, channels and streets (see comment 3).
-In Line 2 (Line ‘C’), ISEDEQG will set the sediment transport equation for floodplain sediment routing and channel routing.
-In Line 3 (Line ‘Z’), ISEDEQI will set the sediment transport equation for sediment routing by size fractions with a sediment transport equation
-assigned to each group.
-Set ISEDEQG or ISEDEQI as follows for the appropriate sediment transport equation:
+   G 2 2
 
-ISEDEQ = 1 Zeller and Fullerton ISEDEQ = 2 Yang
+   G 3 1
 
-ISEDEQ = 3 Englund and Hansen ISEDEQ = 4 Ackers and White ISEDEQ = 5 Laursen
-
-ISEDEQ = 6 Toffaleti
-
-ISEDEQ = 7 Woo-MPM
-
-ISEDEQ = 8 MPM-Smart
-
-ISEDEQ = 9 Karim-Kennedy
-
-ISEDEQ = 10 Parker, Klingeman & McLean ISEDEQ = 11 Van Rijn
-
-Variable Descriptions for the SED.DAT File
+**Variable Descriptions for the SED.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - ASED(N)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Sediment rating curve coefficient (see the BSED exponent below).
+
+   * - BEDTHICK
+     - **r**
+     - **0 - 100**
+
+       **0 - 30**
+     - Sediment bed thickness (ft or m) for sediment routing by size fraction.
+       The available sediment volume for a size fraction within a grid element is defined by the bed thickness times the floodplain or channel element
+       surface area times the percent size distribution.
+       The default bed thickness is 10 ft (3 m) for the floodplain if bed thickness is less than 0.1 ft.
+       If there is no available sediment volume for a given size fraction, no further scour of the bed will occur for that sediment size fraction (see
+       comment 2).
+
+   * - BSED(N)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Sediment rating curve exponent.
+       Qs = ASED\* Qw BSED
+
+       where:
+
+       Qw is the water discharge (cfs or cms)
+
+       Qs is the sediment supply (tons/day or kg/day).
+
+   * - CVFG
+     - **r**
+     - **0 - 0.2**
+     - Fine sediment volumetric concentration for overland, channel, and streets.
+       This value is superseded by CVFI in Line 3.
+       Concentration by volume of sediment for sizes less than 0.0625 mm (sand-silt split).
+       This concentration by volume generally ranges from 5% to 15% and is expressed as a decimal (0.05 for 5% concentration by volume).
+       It is used only in Woo-MPM sediment transport equation.
+
+   * - CVFI
+     - **r**
+     - **0 - 0.2**
+     - This variable is the same as CVFG except that it represents the fine sediment volumetric concentration for an individual channel segment(s).
+       CVFI supersedes CVFG for a channel segment(s) as identified by ISEDN in CHAN.
+       DAT.
+       CVFI represents the concentration by volume of sediment for sizes less than 0.0625 mm (sand-silt split).
+       This concentration by volume generally ranges from 5% to 15% and is expressed as a decimal (0.05 for 5% con- centration by volume).
+       It is used only in the Woo-MPM sediment transport equation.
+
+   * - DEBRISV
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Volume of the debris basin in ft3 or m3.
+
+   * - DFIFTY
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Sediment size (D\ :sub:`50`) in mm for sediment routing.
+
+   * - DRYSPWT
+     - **r**
+     - **70 - 130**
+     - Dry specific weight of the sediment (lb/ft3 or N/m3).
+
+   * - ICRETN
+     - **i**
+     - **1 - NNOD**
+     - Floodplain or channel grid elements with a rigid bed (e.g. spillway apron).
+
+   * - ISEDCFP(N)
+     - **s**
+     - **0 = fp**
+
+       **1 = chan**
+     - ISEDCFP(N) = 0 for a floodplain sediment supply rating curve ISEDCFP(N) = 1 for a channel sediment supply rating curve.
+
+   * - ISEDEQG
+     - **i**
+     - **1 - 11**
+     - Transport equation number used in sediment routing for overland flow, channels and streets (see comment 3).
+       In Line 2 (Line ‘C’), ISEDEQG will set the sediment transport equation for floodplain sediment routing and channel routing.
+       In Line 3 (Line ‘Z’), ISEDEQI will set the sediment transport equation for sediment routing by size fractions with a sediment transport equation
+       assigned to each group.
+       Set ISEDEQG or ISEDEQI as follows for the appropriate sediment transport equation:
+
+       ISEDEQ = 1 Zeller and Fullerton ISEDEQ = 2 Yang
+
+       ISEDEQ = 3 Englund and Hansen ISEDEQ = 4 Ackers and White ISEDEQ = 5 Laursen
+
+       ISEDEQ = 6 Toffaleti
+
+       ISEDEQ = 7 Woo-MPM
+
+       ISEDEQ = 8 MPM-Smart
 
-ISEDEQI
+       ISEDEQ = 9 Karim-Kennedy
 
-i
+       ISEDEQ = 10 Parker, Klingeman & McLean ISEDEQ = 11 Van Rijn
 
-1 - 11 This variable is the same as ISEDEQG except that it represents the sediment transport equation used for sediment routing by size fractions and
-it is used to identify the sediment transport equation for a specific channel segment or reach (comment 5).
-This value supersedes ISEDEQG in Line 2.
-In Line 3 (Line ‘Z’), ISEDEQ will set the sediment transport equation for sediment routing by size fractions with a sediment transport equation
-assigned to each group.
-If Line 3 and the following Line 4’s constitute only one group, then all sediment routing on the floodplain, in the channel and in the streets will
-use the same sediment size distribution.
-If there is more than one group of Line 3 and the following Line 4’s, then the first group will define the sediment size distribution for the
-floodplain, streets and any channel segments where ISEDN = 1 in CHAN.DAT.
-Successive channel segments can identify another set of sediment size fractions by setting ISEDN = 2 or higher.
-This will permit the channel bed material to vary throughout the river system.
-The ISEDEQI equation numbers are the same as ISEDEQG above.
-The number of size fraction intervals must be identical for all sediment groups (see comment 6).
-
-ISEDISPLAY
-
-i
-
-1 - NNOD Grid element (channel or floodplain) for which the sediment transport capacity for all the sediment transport equations will be listed by
-output interval TOUT in the SEDTRAN.OUT file.
-Note that only one equation is used in the actual sediment routing calculations, but the results of all equations are presented in SEDTRAN.OUT.
-
-ISEDGRID(N) i 1 - NNOD Grid element that will be a sediment supply node (channel or floodplain) with a sediment rating curve.
-
-ISEDGROUP(N) i 1- NNOD The sediment group ID for each set of size fraction data (see comment 5).
-
-ISEDSIZEFRAC
-
-s
-
-0 or 1 ISEDSIZEFRAC = 1, The sediment routing will be performed by size fraction.
-Requires data input from Lines 3 and 4 and Line 9 if a sediment supply is also input.
-
-ISEDSIZEFRAC = 0, No sediment routing by size fraction.
-Sediment routing is based on the median bed material size D50.
-For this case, the default bed thickness is 10 ft (3m) (see comment 1).
-
-Variable Descriptions for the SED.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-ISEDSUPPLY s 0 or 1 ISEDSUPPLY = 1 if a sediment rating curve will be used to define the sediment supply to a channel reach or floodplain area.
-
-ISEDUM i 1 - NNOD Grid element number for the sediment size fraction group.
-
-JDEBNOD i 1 - NNOD Grid element with the debris basin.
-The grid element must be a node listed in INFLOW.DAT (see comment 7).
-
-SCOURDEP i 0 - 100
-
-0 - 30 Maximum allowable scour depth (ft or m) for all floodplain elements.
-
-SEDCHAR
-
-c
-
-M C Z P D E R S N G Character line identifier:
-
-SEDCHAR = ‘M’ - Mudflow parameters in Line 1.
-SEDCHAR = ‘C’ - Sediment routing parameters in Line 2.
-
-SEDCHAR = ‘Z’ - Sediment routing by size fraction control parameters in Line 3.
-
-SEDCHAR = ‘P’ - Sediment routing by size fraction
-
-sediment distribution variables in Line 4.
-SEDCHAR = ‘D’ - Debris basin parameters in Line 5.
-
-SEDCHAR = ‘E’ - Sediment scour limitation parameter
-
-in Line 6.
-
-SEDCHAR = ‘R’ - Rigid bed grid elements in Line 7.
-SEDCHAR = ‘S’ - Sediment supply rating curves in Line 8.
-
-SEDCHAR = ‘N’ - Sediment supply rating curve size
-
-fraction distribution in Line 9.
-
-SEDCHAR = ‘G’ - Sediment group.
-
-Variable is case sensitive and it must be upper case.
-
-SEDIAM
-
-r
-
-0 - Representative sediment diameter (mm) for sediment routing by size fraction.
-The sediment diameter corresponds to a given size fraction percent finer and usually is a pan sieve size.
-
-SEDPERCENT
-
-r
-
-0 - 1 Sediment size distribution percentage (expressed as a decimal).
-The percent- age represents the percent of the bed material sediment that is finer than the representative size diameter.
-For example, SEDPERCENT = 0.456 defines that 45.6% of the sediment is finer than the 1 mm sediment size fraction.
-The last entry should be 1.00 (100% of the sediment is smaller than the corresponding sediment diameter).
-
-Variable Descriptions for the SED.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-SGRAD r 1.0 - 10.
-Sediment gradation coefficient (non-dimensional) for the sediment trans- port routine.
-
-SGSM r 2.5 - 2.8 Mudflow sediment specific gravity.
-
-SGST r 2.6 - 2.8 Sediment specific gravity.
-
-SSEDIAM r 0 - Representative sediment supply diameter (mm) for sediment routing by size fraction.
-See SEDIAM parameter above.
-
-SSEDPERCENT
-
-r
-
-0 - 1 Sediment supply size distribution percentage (expressed as a decimal).
-SSEDPERCENT represents the percent of the sediment that is finer than the representative size diameter.
-See SEDPERCENT parameter above.
-
-VA
-
-r 0 - Coefficient in the viscosity versus sediment concentration by volume relationship.
-The relationship is based on a viscosity given in poises (dynes-s/ cm2) for either the English or Metric system (see comment 4).
-
-VB r 0 - Exponent in the viscosity versus sediment concentration by volume relation- ship.
-
-XKX
-
-r
-
-24 -
-
-50,000 The laminar flow resistance parameter for overland flow.
-This value should range from 24 to 50,000 (see Table 8 in the FLO-2D Reference manual).
-It is suggested that a value of 2,480 initially be used for mudflows.
-If a value of XKX is entered, it will be used by the model.
-If XKX = 0, then XKX is computed by the following formulas where FPN is the floodplain grid element Manning’s n-value:
-
-FPN < 0.01 XKX = 24
-
-0.01 < FPN < 0.25 XKX = 1,460,865.81\* (FPN)2.381
-
-0.25 < FPN XKX = 2,480
-
-YSA
-
-r 0 - Coefficient of the yield stress versus sediment concentration by volume relationship.
-The relationship is based on a yield stress given in dynes/cm2 for either the English or Metric system.
-
-YSB r 0 - Exponent of yield stress versus sediment concentration by volume relation- ship.
-
-Instructional Comments for the SED.DAT File
+   * - ISEDEQI
+     - **i**
+     - **1 - 11**
+     - This variable is the same as ISEDEQG except that it represents the sediment transport equation used for sediment routing by size fractions and it is
+       used to identify the sediment transport equation for a specific channel segment or reach (comment 5).
+       This value supersedes ISEDEQG in Line 2.
+       In Line 3 (Line ‘Z’), ISEDEQ will set the sediment transport equation for sediment routing by size fractions with a sediment transport equation
+       assigned to each group.
+       If Line 3 and the following Line 4’s constitute only one group, then all sediment routing on the floodplain, in the channel and in the streets will
+       use the same sediment size distribution.
+       If there is more than one group of Line 3 and the following Line 4’s, then the first group will define the sediment size distribution for the
+       floodplain, streets and any channel segments where ISEDN = 1 in CHAN.DAT.
+       Successive channel segments can identify another set of sediment size fractions by setting ISEDN = 2 or higher.
+       This will permit the channel bed material to vary throughout the river system.
+       The ISEDEQI equation numbers are the same as ISEDEQG above.
+       The number of size fraction intervals must be identical for all sediment groups (see comment 6).
+
+   * - ISEDISPLAY
+     - **i**
+     - **1 - NNOD**
+     - Grid element (channel or floodplain) for which the sediment transport capacity for all the sediment transport equations will be listed by output
+       interval TOUT in the SEDTRAN.OUT file.
+       Note that only one equation is used in the actual sediment routing calculations, but the results of all equations are presented in SEDTRAN.OUT.
+
+   * - ISEDGRID(N)
+     - **i**
+     - **1 - NNOD**
+     - Grid element that will be a sediment supply node (channel or floodplain) with a sediment rating curve.
+
+   * - ISEDGROUP(N)
+     - **i**
+     - **1- NNOD**
+     - The sediment group ID for each set of size fraction data (see comment 5).
+
+   * - ISEDSIZEFRAC
+     - **s**
+     - **0 or 1**
+     - ISEDSIZEFRAC = 1, The sediment routing will be performed by size fraction.
+       Requires data input from Lines 3 and 4 and Line 9 if a sediment supply is also input.
+
+       ISEDSIZEFRAC = 0, No sediment routing by size fraction.
+       Sediment routing is based on the median bed material size D50.
+       For this case, the default bed thickness is 10 ft (3m) (see comment 1).
+
+   * - ISEDSUPPLY
+     - **s**
+     - **0 or 1**
+     - ISEDSUPPLY = 1 if a sediment rating curve will be used to define the sediment supply to a channel reach or floodplain area.
+
+   * - ISEDUM
+     - **i**
+     - **1 - NNOD**
+     - Grid element number for the sediment size fraction group.
+
+   * - JDEBNOD
+     - **i**
+     - **1 - NNOD**
+     - Grid element with the debris basin.
+       The grid element must be a node listed in INFLOW.DAT (see comment 7).
+
+   * - SCOURDEP
+     - **i**
+     - **0 - 100**
+
+       **0 - 30**
+     - Maximum allowable scour depth (ft or m) for all floodplain elements.
+
+   * - SEDCHAR
+     - **c**
+     - **M C Z P D E R S N G**
+     - Character line identifier:
+
+       SEDCHAR = ‘M’ - Mudflow parameters in Line 1.
+       SEDCHAR = ‘C’ - Sediment routing parameters in Line 2.
+
+       SEDCHAR = ‘Z’ - Sediment routing by size fraction control parameters in Line 3.
+
+       SEDCHAR = ‘P’ - Sediment routing by size fraction
+
+       sediment distribution variables in Line 4.
+       SEDCHAR = ‘D’ - Debris basin parameters in Line 5.
+
+       SEDCHAR = ‘E’ - Sediment scour limitation parameter
+
+       in Line 6.
+
+       SEDCHAR = ‘R’ - Rigid bed grid elements in Line 7.
+       SEDCHAR = ‘S’ - Sediment supply rating curves in Line 8.
+
+       SEDCHAR = ‘N’ - Sediment supply rating curve size
+
+       fraction distribution in Line 9.
+
+       SEDCHAR = ‘G’ - Sediment group.
+
+       Variable is case sensitive and it must be upper case.
+
+   * - SEDIAM
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Representative sediment diameter (mm) for sediment routing by size fraction.
+       The sediment diameter corresponds to a given size fraction percent finer and usually is a pan sieve size.
+
+   * - SEDPERCENT
+     - **r**
+     - **0 - 1**
+     - Sediment size distribution percentage (expressed as a decimal).
+       The percent- age represents the percent of the bed material sediment that is finer than the representative size diameter.
+       For example, SEDPERCENT = 0.456 defines that 45.6% of the sediment is finer than the 1 mm sediment size fraction.
+       The last entry should be 1.00 (100% of the sediment is smaller than the corresponding sediment diameter).
+
+   * - SGRAD
+     - **r**
+     - **1.0 - 10.**
+     - Sediment gradation coefficient (non-dimensional) for the sediment trans- port routine.
+
+   * - SGSM
+     - **r**
+     - **2.5 - 2.8**
+     - Mudflow sediment specific gravity.
+
+   * - SGST
+     - **r**
+     - **2.6 - 2.8**
+     - Sediment specific gravity.
+
+   * - SSEDIAM
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Representative sediment supply diameter (mm) for sediment routing by size fraction.
+       See SEDIAM parameter above.
+
+   * - SSEDPERCENT
+     - **r**
+     - **0 - 1**
+     - Sediment supply size distribution percentage (expressed as a decimal).
+       SSEDPERCENT represents the percent of the sediment that is finer than the representative size diameter.
+       See SEDPERCENT parameter above.
+
+   * - VA
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Coefficient in the viscosity versus sediment concentration by volume relationship.
+       The relationship is based on a viscosity given in poises (dynes-s/ cm2) for either the English or Metric system (see comment 4).
+
+   * - VB
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Exponent in the viscosity versus sediment concentration by volume relation- ship.
+
+   * - XKX
+     - **r**
+     - **24 -**
+
+       **50,000**
+     - The laminar flow resistance parameter for overland flow.
+       This value should range from 24 to 50,000 (see Table 8 in the FLO-2D Reference manual).
+       It is suggested that a value of 2,480 initially be used for mudflows.
+       If a value of XKX is entered, it will be used by the model.
+       If XKX = 0, then XKX is computed by the following formulas where FPN is the floodplain grid element Manning’s n-value:
+
+       FPN < 0.01 XKX = 24
+
+       0.01 < FPN < 0.25 XKX = 1,460,865.81\* (FPN)2.381
+
+       0.25 < FPN XKX = 2,480
+
+   * - YSA
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Coefficient of the yield stress versus sediment concentration by volume relationship.
+       The relationship is based on a yield stress given in dynes/cm2 for either the English or Metric system.
+
+   * - YSB
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Exponent of yield stress versus sediment concentration by volume relation- ship.
+
+
+**Instructional Comments for the SED.DAT File**
 
 1. Armouring is simulated for bed material sizes with a D90 > 16 mm.
    If D90 > 16 mm, then an armor exchange layer with a thickness (3 x D90) is established.
@@ -4362,270 +5242,329 @@ Instructional Comments for the SED.DAT File
 6. It is important to note that each sediment group will have the identical size fraction delineation.
    The SEDIAM variable will be the same for all the groups (i.e.
    the number of Line 4s in all groups will be the same).
-   If one group is missing a specific size fraction, then the sediment percentage for that group
-
-(SEDPERCENT variable) will either be the same as the previous value or only slightly different (see the above example data file).
+   If one group is missing a specific size fraction, then the sediment percentage for that group (SEDPERCENT variable) will either be the same as the
+   previous value or only slightly different (see the above example data file).
 
 7. The debris basin volume is assigned to an inflow node.
    The inflow node will not compute discharge to downstream cells until the basin volume is exceeded.
 
 FILE: LEVEE.DAT
+~~~~~~~~~~~~~~~
 
 LEVEE AND FAILURE DATA
+~~~~~~~~~~~~~~~~~~~~~~
 
-LEVEE.DAT File Variables
+**LEVEE.DAT File Variables**
 
-0.00 0 Line 1: RAISELEV ILEVFAIL
+   0.00 0 Line 1: **RAISELEV ILEVFAIL**
 
-L 1891 Line 2: LEVCHAR = ‘L’ LGRIDNO(L) L = number of levee grid elements
+   L 1891 Line 2: **LEVCHAR = ‘L’ LGRIDNO(L)** *L = number of levee grid elements*
 
-D 4 5029.00 Line 3: LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)
+   D 4 5029.00 Line 3: **LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)**
 
-L = number of levee grid elements
+   *L = number of levee grid elements*
 
-J = number of levee directions in grid element
+   *J = number of levee directions in grid element*
 
-F 1891 Line 4: LEVCHAR = ‘F’ LFAILGRID(LF)
+   F 1891 Line 4: **LEVCHAR = ‘F’ LFAILGRID(LF)**
 
-LF = number of failure grid elements
+   *LF = number of failure grid elements*
 
-Line 5: LEVCHAR = ‘W’ LFAILDIR(LF,LD) FAILEVEL(LF,LD) FAILTIME(LF,LD) LEVBASE(LF,LD) FAILWIDTHMAX(LF,LD) FAILRATE(LF,LD) FAILWIDRATE(LF,LD)
+**Line 5:** LEVCHAR = ‘W’ LFAILDIR(LF,LD) FAILEVEL(LF,LD) FAILTIME(LF,LD) LEVBASE(LF,LD) FAILWIDTHMAX(LF,LD) FAILRATE(LF,LD) FAILWIDRATE(LF,LD)
 
-LD = number of fail directions
 
-LF = number of failure grid elements
+   *LD = number of fail directions*
 
-W 4 5019.5 27.0 10 1 2 0.5
+   *LF = number of failure grid elements*
 
-C FS3 0.5 Line 6: LEVCHAR = ‘C’ GFRAGCHAR GFRAGPROB
+   W 4 5019.5 27.0 10 1 2 0.5
 
-P 3450 FS1 0.5 Line 7: LEVCHAR = ‘P’ LEVFRAGRID(LP) LEVFRAGCHAR (LP)
+   C FS3 0.5 Line 6: **LEVCHAR = ‘C’ GFRAGCHAR GFRAGPROB**
+
+   P 3450 FS1 0.5 Line 7: **LEVCHAR = ‘P’ LEVFRAGRID(LP) LEVFRAGCHAR (LP)**
 
 LEVFRAGPROB(LP)
 
-LP = number levee grid elements with fragility curve assignments
 
-Notes:
+   *LP = number levee grid elements with fragility curve assignments*
 
-If LEVEE = 0 in the CONT.DAT file, omit this file.
-Line 2: Repeat this line for each levee grid element.
+   Notes:
 
-Line 3: Repeat this line for each levee direction in a grid element.
-Line 4: Repeat this line for each LEVEEFAILURE grid element.
-Line 5: Repeat this line for each grid element failure direction.
+   If LEVEE = 0 in the CONT.DAT file, omit this file.
+   Line 2: Repeat this line for each levee grid element.
 
-FILE: LEVEE.DAT
+   Line 3: Repeat this line for each levee direction in a grid element.
+   Line 4: Repeat this line for each LEVEEFAILURE grid element.
+   Line 5: Repeat this line for each grid element failure direction.
 
-LEVEE DATA
+   LEVEE.DAT File Example
 
-Variable Descriptions for the LEVEE.DAT File
+   0.00 0
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+   L 1891
 
-VARIABLE FMT RANGE DESCRIPTION
+   D 4 5020.00
 
-FAILEVEL(LF,LD)
+   L 1896
 
-r 0.01
+   D 6 5020.00
 
-to
+   L 1897
 
-The maximum elevation of the prescribed levee failure if different than the levee crest (LEVELEV).
-Set FAILEVEL = 0 to fail the levee when over- topped.
+   D 2 5020.00
 
-FAILRATE(LF,LD)
+   D 3 5020.00
 
-r 0
+   D 5 5020.00
 
-.01 - 1000
+   D 6 5020.00
 
-0.25 - 300 The rate of vertical levee failure (ft/hr or m/hr).
-Set failrate = 0 for wall collapse.
+   L 1921
 
-FAILTIME(LF,LD)
+   D 1 5020.00
 
-r
+   D 4 5020.00
 
--99.0 to SIMUL
+   D 8 5020.00
 
--99.0 The duration (hr) that the levee will fail after the FAILEVEL elevation is exceeded by the flow depth.
+   L 1922
 
-If FAILTIME = 0.0 if the level erosion begins immediately when pipe elevation is exceeded.
+   D 8 5020.00
 
-If FAILTIME > 0.0, the start time for time to 1 ft and time to 2 ft is based on the model start time 0.0 hr.
+   L 1927
 
-If FAILTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time for multiple breaches.
+   D 2 5020.00
 
-If FAILTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time for multiple breaches and FAILTIME is reset
-to
+   D 6 5020.00
 
-0.0 hrs (see comment 9).
+   L ...
 
-FAILWIDRATE
+C FS3 0.5
 
-(LF,LD)
+   P 3450 S1 0.5
 
-r 0
+   P 3558 S1 0.9
 
-.01 - 1000
+   P 3559 S2 0.7
 
-0.25 - 300 The rate at which the levee breach widens (ft/hr or m/hr).
-Set failwidrate = 0 for wall collapse.
+   P 3669 S3 0.5
 
-FAILWIDTHMAX
+   P 3670 S4 0.5
 
-(LF,LD)
+   P 3782 C1 0.3
 
-r
+   P 3783 S1 0.5
 
-0 - The maximum breach width (ft or m).
-The breach can extend into more than one grid element direction if necessary and the failure width can be larger than one grid element (see comment
-3).
+   P 3815 J2 0.5
 
-GFRAGCHAR
+   P 3897 S1 0.5
 
-c Alpha Numeric Global levee fragility curve ID.
-One letter (e.g. S) and one number (e.g. 3) and must correspond to a levee fragility curve ID in the BREACH.DAT file.
-Variable is case sensitive and it must be upper case.
+   P ...
 
-GFRAGPROB
-
-r
-
-0 - 1 Global levee fragility curve failure probability.
-This is assigned to all levee grid elements.
-The levee fragility curves must be assigned in BREACH.
-DAT.
-
-Variable Descriptions for the LEVEE.DAT File
+**Variable Descriptions for the LEVEE.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-ILEVFAIL
 
-s
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-0, 1 or 2 Switch to identify levee failure mode (see comment 6).
+   * - FAILEVEL(LF,LD)
+     - **r**
+     - **0.01**
 
-ILEVFAIL = 0 no levee failure.
+       **to**
 
-ILEVFAIL = 1 prescribed level failure rates of breach opening or wall col- lapse.
+       |CHAPTE002|
+     - The maximum elevation of the prescribed levee failure if different than the levee crest (LEVELEV).
+       Set FAILEVEL = 0 to fail the levee when over- topped.
 
-ILEVFAIL = 2 initiate the levee or dam breach failure routine.
+   * - FAILRATE(LF,LD)
+     - **r**
+     - **0**
 
-LDIR(L,IM)
+       **.01 - 1000**
 
-i
+       **0.25 - 300**
+     - The rate of vertical levee failure (ft/hr or m/hr).
+       Set failrate = 0 for wall collapse.
 
-1 - 8 Flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee in a given grid element.
-The possible flow directions are:
+   * - FAILTIME(LF,LD)
+     - **r**
+     - **-99.0 to SIMUL**
 
-1 = north 5 = northeast
+       **-99.0**
+     - The duration (hr) that the levee will fail after the FAILEVEL elevation is exceeded by the flow depth.
 
-2 = east 6 = southeast
+       If FAILTIME = 0.0 if the level erosion begins immediately when pipe elevation is exceeded.
 
-3 = south 7 = southwest
+       If FAILTIME > 0.0, the start time for time to 1 ft and time to 2 ft is based on the model start time 0.0 hr.
 
-4 = west 8 = northwest
+       If FAILTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time for multiple breaches.
 
-LEVBASE(LF,LD)
+       If FAILTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time for multiple breaches and FAILTIME is reset
+       to
 
-r
+       0.0 hrs (see comment 9).
 
-0 or
+   * - FAILWIDRATE(LF,LD)
+     - **r**
+     - **0**
 
-0 - The prescribed final failure elevation.
-Vertical failure growth stops at this elevation.
+       **.01 - 1000**
 
-Set LEVBASE = 0 if the levee fails to the floodplain elevation.
+       **0.25 - 300**
+     - The rate at which the levee breach widens (ft/hr or m/hr).
+       Set failwidrate = 0 for wall collapse.
 
-LEVCHAR(L)
+   * - FAILWIDTHMAX(LF,LD)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - The maximum breach width (ft or m).
+       The breach can extend into more than one grid element direction if necessary and the failure width can be larger than one grid element (see comment
+       3).
 
-c
+   * - GFRAGCHAR
+     - **c**
+     - **Alpha Numeric**
+     - Global levee fragility curve ID.
+       One letter (e.g. S) and one number (e.g. 3) and must correspond to a levee fragility curve ID in the BREACH.DAT file.
+       Variable is case sensitive and it must be upper case.
 
-L, D, F, W,
+   * - GFRAGPROB
+     - **r**
+     - **0 - 1**
+     - Global levee fragility curve failure probability.
+       This is assigned to all levee grid elements.
+       The levee fragility curves must be assigned in BREACH.
+       DAT.
 
-C or P Character Identifier for Lines 2 - 7
+   * - ILEVFAIL
+     - s
+     - 0, 1 or 2
+     - Switch to identify levee failure mode (see comment 6).
 
-‘L’ = Line 2
+       ILEVFAIL = 0 no levee failure.
 
-‘D’ = Line 3
+       ILEVFAIL = 1 prescribed level failure rates of breach opening or wall col- lapse.
 
-‘F’ = Line 4 ‘W’ = Line 5 ‘C’ = Line 6
+       ILEVFAIL = 2 initiate the levee or dam breach failure routine.
 
-‘P’ = Line 7
+   * - LDIR(L,IM)
+     - i
+     - 1 - 8
+     - Flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee in a given grid element.
+       The possible flow directions are:
 
-Variable is case sensitive and it must be upper case.
+       1 = north 5 = northeast
 
-LEVCREST(L,IM)
+       2 = east 6 = southeast
 
-r .01 -
+       3 = south 7 = southwest
 
-30,000
+       4 = west 8 = northwest
 
-.25 - 9,000 The elevation of the levee crest (ft or m) (see comments 4 and 5).
+   * - LEVBASE(LF,LD)
+     - r
+     - 0 or
 
-LFAILDIR(LF,LD)
+       0 - |CHAPTE002|
+     - The prescribed final failure elevation.
+       Vertical failure growth stops at this elevation.
 
-i
+       Set LEVBASE = 0 if the levee fails to the floodplain elevation.
 
-1 - 8 The potential failure direction (see comment 3).
+   * - LEVCHAR(L)
+     - c
+     - L, D, F, W,
 
-1 = north 5 = northeast
+       C or P
+     - Character Identifier for Lines 2 - 7
 
-2 = east 6 = southeast
+       ‘L’ = Line 2
 
-3 = south 7 = southwest
+       ‘D’ = Line 3
 
-4 = west 8 = northwest
+       ‘F’ = Line 4 ‘W’ = Line 5 ‘C’ = Line 6
 
-Variable Descriptions for the
+       ‘P’ = Line 7
 
-LEVEE.DAT File
+       Variable is case sensitive and it must be upper case.
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+   * - LEVCREST(L,IM)
+     - r
+     - .01 -
 
-VARIABLE FMT RANGE DESCRIPTION
+       30,000
 
-LEVFRAGRID(LP) i 1 - NNOD Individual levee grid element with fragility curve assignment.
-The fragility curves must be assigned in BREACH.DAT.
+       .25 - 9,000
+     - The elevation of the levee crest (ft or m) (see comments 4 and 5).
 
-LFAILGRID(LF)
+   * - LFAILDIR(LF,LD)
+     - i
+     - 1 - 8
+     - The potential failure direction (see comment 3).
 
-i 1 - NNOD
+       1 = north 5 = northeast
 
-or
+       2 = east 6 = southeast
 
--1 to
+       3 = south 7 = southwest
 
--NNOD The floodplain grid element number with a levee that may potentially fail.
+       4 = west 8 = northwest
 
-LFAILGRID = 1 to NNOD; Prescribed failure starts at LFAILGRID.
+   * - LEVFRAGRID(LP)
+     - i
+     - 1 - NNOD
+     - Individual levee grid element with fragility curve assignment.
+       The fragility curves must be assigned in BREACH.DAT.
 
-LFAILGRID = -1 to -NNOD; Prescribed failure is globally assigned to all levee elements (see comment 1).
+   * - LFAILGRID(LF)
+     - i
+     - 1 - NNOD
 
-LGRIDNO(L)
+       or
 
-i 1 - NNOD
+       -1 to
 
-or
+       -NNOD
+     - The floodplain grid element number with a levee that may potentially fail.
 
--1 to
+       LFAILGRID = 1 to NNOD; Prescribed failure starts at LFAILGRID.
 
--NNOD The grid element number containing the levee segment.
-LGRIDNO = 1 to NNOD; default no overtop flows reported.
+       LFAILGRID = -1 to -NNOD; Prescribed failure is globally assigned to all levee elements (see comment 1).
 
-LGRIDNO = -1 to -NNOD; overtop flow rates reported to OVERTOP.
+   * - LGRIDNO(L)
+     - i
+     - 1 - NNOD
 
-OUT (see comment 8).
+       or
 
-RAISELEV r 0 - 100
+       -1 to
 
-0 - 30 Incremental height (ft or m) that all the levee grid element crest elevations are raised.
+       -NNOD
+     - The grid element number containing the levee segment.
+       LGRIDNO = 1 to NNOD; default no overtop flows reported.
 
-Instructional Comments for the LEVEE.DAT File
+       LGRIDNO = -1 to -NNOD; overtop flow rates reported to OVERTOP.
+
+       OUT (see comment 8).
+
+   * - RAISELEV
+     - r
+     - 0 - 100
+
+       0 - 30
+     - Incremental height (ft or m) that all the levee grid element crest elevations are raised.
+
+
+**Instructional Comments for the LEVEE.DAT File**
 
 1. The prescribed levee failure criteria are as follows:
 
@@ -4658,27 +5597,28 @@ i. If prescribed failure levee grid element is negative, the failure data for th
 3. Each levee grid element can have up to eight failure directions.
    The initial breach width is hardwired as 1.0 ft (0.3 m).
    The user specifies the maximum anticipated breach width with the parameter FAILWIDTHMAX.
-   If the maxi- mum failure width is greater than the grid element side width, the breach will extend into adjacent grid elements until the maximum
-   failure width is reached or the levee ends.
+   If the maximum failure width is greater than the grid element side width, the breach will extend into adjacent grid elements until the maximum failure
+   width is reached or the levee ends.
 
-4. Flow over a levee is computed as broadcrested weir flow using a coefficient of
-
-3.09 until the tailwater depth is 80% of the headwater depth.
-The discharge computation then reverts to overland flow based on the water surface elevations on each side of the levee and the flow depth over the
-levee.
+4. Flow over a levee is computed as broadcrested weir flow using a coefficient of 3.09 until the tailwater depth is 80% of the headwater depth.
+   The discharge computation then reverts to overland flow based on the water surface elevations on each side of the levee and the flow depth over the
+   levee.
 
 5. Levee freeboard deficit is reported in the output file LEVEEDEFIC.OUT.
    Five levels of freeboard deficit are listed in the file as follows:
 
-Level 0 > 3 ft
+i.   Level 0 > 3 ft
 
-1 2 ft < freeboard < 3 ft
+ii.
+2 ft < freeboard < 3 ft
 
-2 1 ft < freeboard < 2 ft
+iii.
+1 ft < freeboard < 2 ft
 
-3 freeboard < 1 ft
+iv.
+freeboard < 1 ft
 
-4 levee overtopped
+v.   levee overtopped
 
 6. There two options for specifying levee or dam breach failure.
    Set ILEVFAIL = 1 to assess the breach failure with prescribed rates of breach opening vertically and horizontally.
@@ -4708,117 +5648,168 @@ A wall failure tutorial is available online in the Self-Help Kit at https://docu
 11.
 Levee failure criteria:
 
-· Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance value of 0.1 ft or 0.03 m.
+- Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance value of 0.1 ft or 0.03 m.
 
-· Water surface elevation on the reservoir side of the levee must be higher than the downstream water surface elevation.
+- Water surface elevation on the reservoir side of the levee must be higher than the downstream water surface elevation.
 
-· The water surface elevation minus the ground elevation (flow deopth) on the reservoir side must be greater than the water surface elevation minus
-the ground elevation (flow depth) on the downstream side of the dam or levee.
+- The water surface elevation minus the ground elevation (flow depth) on the reservoir side must be greater than the water surface elevation minus the
+  ground elevation (flow depth) on the downstream side of the dam or levee.
 
 FILE: FPXSEC.DAT
+~~~~~~~~~~~~~~~~
 
 FLOODPLAIN CROSS SECTION DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the FPXSEC.DAT File
+   FPXSEC.DAT File Variables
+
+   P 0 Line 1: **FPXSECHAR = ‘P’ NXPRT**
+
+   X 3 11 284 ...
+   Line 2: **FPXSECHAR = ‘X’ IFLO(N) NNXSEC(N) NODX(N,J)**
+
+Notes:
+
+Line 2: Repeat this line for each cross section.
+
+   FPXSEC.DAT File Example
+
+   P 0
+
+   X 3 11 284 285 286 287 288 289 290 291 292 293 294
+
+   X 3 14 808 809 810 811 812 813 814 815 816 817 818 819 820 821
+
+   X 3 15 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 1109 1110 1111
+
+   X 3 10 1365 1366 1367 1368 1369 1370 1371 1372 1373 1374
+
+   X 3 26 1857 1858 1859 1860 1861 1862 1863 1864 1865 1866 1867 1868 1869 1870 1871
+
+   X 3 28 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 2504 2505
+
+   X 3 12 4224 4225 4226 4227 4228 4229 4230 4231 4232 4233 4234 4235
+
+   X 2 8 7373 7303 7236 7180 7124 7068 7012 6956
+
+   X 2 5 8233 8135 7941 7845 7749
+
+   X 3 6 9000 9001 9002 9003 9004 9005
+
+   X 3 ...
+
+**Variable Descriptions for the FPXSEC.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-FPXSECHAR
 
-c
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-P or X Character line identifier for Lines 1 and 2,
+   * - FPXSECHAR
+     - **c**
+     - **P or X**
+     - Character line identifier for Lines 1 and 2,
 
-‘P’ = Line 1
+       ‘P’ = Line 1
 
-‘X’ = Line 2
+       ‘X’ = Line 2
 
-Variable is case sensitive and it must be upper case.
+       Variable is case sensitive and it must be upper case.
 
-IFLO(N)
+   * - IFLO(N)
+     - **i**
+     - **1 - 8**
+     - Defines the general direction that the flow is expected to cross the floodplain cross section (See comment 1).
+       IFLO is set to one of the following:
 
-i
+       1 flow to the north 5 flow to the northeast
 
-1 - 8 Defines the general direction that the flow is expected to cross the floodplain cross section (See comment 1).
-IFLO is set to one of the following:
+       2 flow to the east 6 flow to the southeast
 
-1 flow to the north 5 flow to the northeast
+       3 flow to the south 7 flow to the southwest
 
-2 flow to the east 6 flow to the southeast
+       4 flow to the west 8 flow to the northwest
 
-3 flow to the south 7 flow to the southwest
+       If the output is desired from only one direction (i.e.
+       without the discharge components from the other component flow directions), set IFLO as negative.
+       IFLO is set to the following:
 
-4 flow to the west 8 flow to the northwest
+       -1 flow from south only -5 flow from southwest only
 
-If the output is desired from only one direction (i.e.
-without the discharge components from the other component flow directions), set IFLO as negative.
-IFLO is set to the following:
+       -2 flow from west only -6 flow from northwest only
 
--1 flow from south only -5 flow from southwest only
+       -3 flow from north only -7 flow from northeast only
 
--2 flow from west only -6 flow from northwest only
+       -4 flow from east only -8 flow from southeast only
 
--3 flow from north only -7 flow from northeast only
+   * - NODX(N,J)
+     - **i**
+     - **1 - NNOD**
+     - Array of grid elements that constitute a given floodplain cross section (see comment 2 and 3).
 
--4 flow from east only -8 flow from southeast only
+   * - NNXSEC(N)
+     - **i**
+     - **1 - 1,000**
+     - Number of floodplain elements in a given cross section.
+       The selected cross section grid elements do not have to extend across the entire grid system.
+       Only one grid element is necessary to constitute a floodplain cross section.
+       The cross section can include a channel element.
+       If one of the floodplain cross section grid elements is a channel element, the cross-section discharge hydrograph reported in HYCROSS will include the
+       channel element dis- charge.
 
-NODX(N,J) i 1 - NNOD Array of grid elements that constitute a given floodplain cross section (see comment 2 and 3).
+   * - NXPRT
+     - **s**
+     - **0 or 1**
+     - If NXPRT = 1, the cross-section summary information including cross-section discharge, average cross section velocity, width and depth will be re-
+       ported in the BASE.OUT file.
 
-NNXSEC(N)
 
-i
+**Instructional Comments for the FPXSEC.DAT File**
 
-1 - 1,000 Number of floodplain elements in a given cross section.
-The selected cross section grid elements do not have to extend across the entire grid system.
-Only one grid element is necessary to constitute a floodplain cross section.
-The cross section can include a channel element.
-If one of the floodplain cross section grid elements is a channel element, the cross-section discharge hydrograph reported in HYCROSS will include the
-channel element dis- charge.
+1. The floodplain grid elements can be combined to define a cross section across a floodplain or alluvial fan.
+   Each floodplain cross section is assigned flow dis- charge in only one flow direction given by IFLO.
+   This direction includes the flow contribution from the two contiguous directions.
+   The cross-section routine can be used to isolate the results for a single element.
+   The flow directions and associated discharge components are as follows:
 
-NXPRT
+.. list-table::
+   :widths: 100
+   :header-rows: 0
 
-s
 
-0 or 1 If NXPRT = 1, the cross-section summary information including cross-section discharge, average cross section velocity, width and depth will be
-re- ported in the BASE.OUT file.
+   * - **TABLE 4.3.
+       CROSS SECTION FLOW DIRECTION**
 
-Instructional Comments for the FPXSEC.DAT File
+   * - Selected Cross Section Flow      |    Flow Direction Components addedDirection                        |    to the Cross Section Discharge
 
-1. The floodplain grid elements can be combined to define a cross section across
+   * - north = 1                        |    northeast 5 and northwest 8
 
-a floodplain or alluvial fan.
-Each floodplain cross section is assigned flow dis- charge in only one flow direction given by IFLO.
-This direction includes the flow contribution from the two contiguous directions.
-The cross section routine can be used to isolate the results for a single element.
-The flow directions and associated discharge components are as follows:
+   * - east = 2                         |    northeast 5 and southeast 6
 
-TABLE 4.3.
-CROSS SECTION FLOW DIRECTION
+   * - south = 3                        |    southeast 6 and southwest 7
 
-Selected Cross Section Flow Direction Flow Direction Components added to the Cross Section Discharge
+   * - west = 4                         |    southwest 7 and northwest 8
 
-north = 1 northeast 5 and northwest 8
+   * - northeast = 5                    |    north 1 and east 2
 
-east = 2 northeast 5 and southeast 6
+   * - southeast = 6                    |    east 2 and south 3
 
-south = 3 southeast 6 and southwest 7
+   * - southwest = 7                    |    south 3 and west 4
 
-west = 4 southwest 7 and northwest 8
+   * - northwest = 8                    |    west 4 and north 1
 
-northeast = 5 north 1 and east 2
-
-southeast = 6 east 2 and south 3
-
-southwest = 7 south 3 and west 4
-
-northwest = 8 west 4 and north 1
 
 For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
-total dis- charge for the selected flow direction.
+total dis-charge for the selected flow direction.
 
-2. If a grid element is listed more than once, the simulation will fail and the ER- ROR.CHK file will report the redundant element.
+2. If a grid element is listed more than once, the simulation will fail and the ERROR.CHK file will report the redundant element.
 
 3. The floodplain cross section grid elements can be selected graphically with the FLO-2D Plugin.
    See FLO-2D Plugin User Manual for instructions.
@@ -4827,618 +5818,751 @@ total dis- charge for the selected flow direction.
    For example, if the cross-section orientation is East to West, the flow direction should be North or South only.
 
 FILE: BREACH.DAT
+~~~~~~~~~~~~~~~~
 
 DAM AND LEVEE BREACH DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-BREACH.DAT File Variables
+   **BREACH.DAT File Variables**
 
-Line 1: IBR = ‘B1’ IBREACHSEDEQN GBRATIO GWEIRCOEF GBREACHTIME
+**Line 1:** IBR = ‘B1’ IBREACHSEDEQN GBRATIO GWEIRCOEF GBREACHTIME
 
-B1 4 2.0 2.95 0.50
 
-Line 2: IBR = ‘G1’ GZU GZD GZC GCRESTWIDTH GCRESTLENGTH GBRBOTWIDMAX GBRTOPWIDMAX GBRBOTTOMEL
+   B1 4 2.0 2.95 0.50
 
-G1 2.0 2.0 0.
-5.
-0.
-0.
-0.
-1.5
+**Line 2:** IBR = ‘G1’ GZU GZD GZC GCRESTWIDTH GCRESTLENGTH GBRBOTWIDMAX GBRTOPWIDMAX GBRBOTTOMEL
 
-Line 3: IBR = ‘G2’ GD50C GPORC GUWC GCNC GAFRC GCOHC GUNFCC
 
-G2 0.
-0.
-0.
-0.
-0.
-0.
-0.
+   G1 2.0 2.0 0.
+   5.
+   0.
+   0.
+   0.
+   1.5
 
-Line 4: IBR = ‘G3’ GD50S GPORS GUWS GCNS GAFRS GCOHS GUNFCS
+**Line 3:** IBR = ‘G2’ GD50C GPORC GUWC GCNC GAFRC GCOHC GUNFCC
 
-G3 0.25 0.40 100.
-0.06 30.
-65.
-0.
 
-Line 5: IBR = ‘G4’ GGRASSLENGTH GGRASSCOND GGRASSVMAXP GSEDCONMAX D50DF GUNFCDF
+   G2 0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
 
-G4 4.
-1.
-4.
-0.
-0.
-0.
+**Line 4:** IBR = ‘G3’ GD50S GPORS GUWS GCNS GAFRS GCOHS GUNFCS
 
-Line 6: IBR = ‘B2’ IBREACHGRID IBREACHDIR
 
-B2 4015 7
+   G3 0.25 0.40 100.
+   0.06 30.
+   65.
+   0.
 
-Line 7: IBR = ‘D1’ ZU ZD ZC CRESTWIDTH CRESTLENGTH BRBOTWIDMAX BRTOPWIDMAX BRBOTTOMEL WEIRCOEF
+**Line 5:** IBR = ‘G4’ GGRASSLENGTH GGRASSCOND GGRASSVMAXP GSEDCONMAX D50DF GUNFCDF
 
-D1 2.0 2.0 0.
-8.
-0.
-0.
-0.
-83.25 3.05
 
-Line 8: IBR = ‘D2’ D50C PORC UWC CNC AFRC COHC UNFCC
+   G4 4.
+   1.
+   4.
+   0.
+   0.
+   0.
 
-D2 0.
-0.
-0.
-0.
-0.
-0.
-0.
-0.
-0.
-0.
+**Line 6:** IBR = ‘B2’ IBREACHGRID IBREACHDIR
 
-Line 9: IBR = ‘D3’ D50S PORS UWS CNS AFRS COHS UNFCS
 
-D3 0.25 0.40 100.
-0.10 25.
-100.
-0.
+   B2 4015 7
 
-Line 10: IBR = ‘D4’ BRATIO GRASSLENGTH GRASSCOND GRASSVMAXP SEDCONMAX D50DF UNFCDF BREACHTIME
+**Line 7:** IBR = ‘D1’ ZU ZD ZC CRESTWIDTH CRESTLENGTH BRBOTWIDMAX BRTOPWIDMAX BRBOTTOMEL WEIRCOEF
 
-D4 0.
-0.
-0.
-0.
-0.
-0.
-0.
 
-Line 11: IBR = ‘F’ FRAGCHAR(I) PRFAIL(I,J) PRDEPTH(I,J);
+   D1 2.0 2.0 0.
+   8.
+   0.
+   0.
+   0.
+   83.25 3.05
 
-I = number of levee fragility curves and J = number of points in each fragility curve
+**Line 8:** IBR = ‘D2’ D50C PORC UWC CNC AFRC COHC UNFCC
 
-F S1 0.03 6.0
 
-FILE: BREACH.DAT
+   D2 0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
 
-DAM AND LEVEE BREACH DATA
+**Line 9:** IBR = ‘D3’ D50S PORS UWS CNS AFRS COHS UNFCS
 
-Variable Descriptions for the BREACH.DAT File
+
+   D3 0.25 0.40 100.
+   0.10 25.
+   100.
+   0.
+
+**Line 10:** IBR = ‘D4’ BRATIO GRASSLENGTH GRASSCOND GRASSVMAXP SEDCONMAX D50DF UNFCDF BREACHTIME
+
+
+   D4 0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+
+**Line 11:** IBR = ‘F’ FRAGCHAR(I) PRFAIL(I,J) PRDEPTH(I,J)\ **;**
+
+
+   I = number of levee fragility curves and J = number of points in each fragility curve
+
+   F S1 0.03 6.0
+
+   BREACH.DAT File Example
+
+Notes:
+
+   Line 1: Required for a sediment erosion breach
+
+   Lines 2 - 5: Global data required to locate a breach.
+   Not required for a prescribed breach location.
+   Lines 6 - 10: Optional data for prescribed breach location.
+   Repeat these lines for each specified breach grid element.
+
+   Line 10: Repeat this line for each fragility curve listing
+
+   B1 4.0 2.0 2.95 0.50
+
+   G1 2.0 2.0 0.
+   5.
+   0.
+   0.
+   0.
+   3.
+   3.05
+
+   G2 0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+
+   G3 0.25 0.40 100.
+   0.06 30.
+   100.
+   0.
+
+   G4 1.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+
+   B2 4015 7
+
+   D1 2.0 2.0 0.
+   8.
+   0.
+   0.
+   0.
+   83.25 3.05
+
+   D2 0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+
+   D3 0.25 0.40 100.
+   0.10 25.
+   100.
+   0.
+
+   D4 2.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+   0.
+
+   F S1 0.03 6.0
+
+   F S1 0.15 3.5
+
+   F S1 0.50 2.5
+
+   F S1 0.85 1.0
+
+   F S1 0.95 0.0
+
+   F S2 0.03 9.0
+
+   F S2 0.15 5.5
+
+   F S2 0.50 4.0
+
+   F S2 0.85 2.0
+
+   F S2 0.98 0.0
+
+   F S3 0.03 12.0 F S3 ...
+
+**Variable Descriptions for the BREACH.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
-
-AFRC r 0 - 50 Angle (degrees) of internal friction of the core material for failure of a specific grid element flow direction.
-Set AFRC = 0.0 for no core.
-
-AFRS r 0 - 50 Angle (degrees) of internal friction of the shell material for failure of a specific grid element flow direction.
-
-BRATIO r 1 - 5 Ratio of the initial breach width to breach depth (see comments 2 and 3).
-
-BRBOTTOMEL r 0 - Initial breach or pipe bottom elevation (ft or m) (see comments 5 and 6).
-
-BRBOTWIDMAX
-
-r 0 - Maximum allowable breach bottom width (ft or m) as constrained by the valley cross section.
-Set BRBOTWIDWAX = 0.0 if the dam levee is continuous through adjoining grid elements (default = grid element octagon side).
-
-BREACHTIME
-
-r
-
-- SIMUL
-
-to SIMUL
-
--99 The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
-
-If BREACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
-
-If BREACHTIME > or = 0.0, the start time for time to 1 ft and time to 2 ft is based on the model start time 0.0 hr.
-
-If BREACHTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time for multiple breaches.
-
-If BREACHTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time for multiple breaches and BEACHTIME is
-reset to 0.0 hr.
-
-BRTOPWIDMAX
-
-r 0 - Maximum allowable breach top width (ft or m) as constrained by the valley cross section.
-Set BRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
-
-COHC r 0 - 750
-
-0 - 30,000 Cohesive strength (lb/ft2 or N/m2) of the levee or dam core material.
-If there is no core, COHC = 0.
-
-COHS r 0 - 750
-
-0 - 30,000 Cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material.
-If there is no core, COHS = 0.
-
-Variable Descriptions for the BREACH.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-CNC
-
-r
-
-0.02 - 0.25 Manning’s n-value of the levee or dam core material.
-If CNC = 0., Manning’s n-value for the core material will computed from Strickler’s equation.
-
-If CNC > 1., the n-value will be computed from a Moody diagram (Darcy f
-
-vs.
-D50).
-Set CNC = 0.0 for no core material.
-
-CNS
-
-r
-
-0.02 - 0.25 Manning’s n-value of the levee or dam shell material.
-See comment 4.
-If CNS = 0., Manning’s n-value for the shell material will computed from Strickler’s equation.
-If CNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
-D50).
-
-CRESTLENGTH
-
-r
-
-0 - Length of the crest of the levee or dam (ft or m).
-If CRESTLENGTH = 0., the crest length will default to the grid element octagon side.
-If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
-
-CRESTWIDTH r 0 - Crest width of the levee or dam (ft or m).
-The crest width can be zero.
-
-D50C r 0.0625 - 2 Mean sediment size (D50 in mm) of the levee or dam core material.
-
-D50S r 0.25 - 10 Mean sediment size (D50 in mm) of the levee or dam shell material.
-
-D50DF r 1.0 - 100 Mean sediment size (D50 in mm) of the top one foot (0.3 m) of the down- stream face (riprap material).
-If D50DF = 0.0, then D50DF = D50S.
-
-FRAGCHAR
-
-c
-
-S1, S2 ...
-Fragility curve ID.
-One letter and a number.
-For example: S1 is fragility curve 1 for the Sacramento River (see comment 7).
-Variable is case sensitive and it must be upper case.
-
-GAFRC r 0 - 50 Global angle (degrees) of internal friction of the core material for the entire levee or dam.
-Set AFRC = 0.0 for no core.
-
-GAFRS r 0 - 50 Global angle (degrees) of internal friction of the shell material for the entire levee or dam.
-
-GBRBOT- TOMEL
-
-r
-
-0 - Initial global breach or pipe bottom elevation (ft or m) for an unspecified failure location.
-If the model will locate the failure grid element instead of user specified failure location, then set GBRBOTTOMEL = distance below the dam or levee
-crest elevation (ft or m).
-In general, GBRBOTTOMEL be less than 10 ft (3 m) (see comments 1 and 6).
-
-Variable Descriptions for the BREACH.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-GBRBOTWID- MAX
-
-r
-
-0 - Maximum allowable global breach bottom width (ft or m) as constrained by the valley cross section for an unspecified failure location.
-Set GBRBOT- WIDWAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
-
-GBREACHTIME
-
-r
-
-0 - The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
-GB- REACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
-
-GBRTOPWID- MAX
-
-r
-
-0 - Maximum allowable global breach top width (ft or m) as constrained by the valley cross section for an unspecified failure location.
-GBRTOPWIDMAX
-
-= 0.0 if the levee is continuous through adjoining grid elements
-(default =
-
-grid element octagon side).
-
-GCOHC r 0 - 750
-
-0 - 30,000 Global cohesive strength (lb/ft2 or N/m2) of the levee or dam core material for an unspecified failure location.
-If there is no core, GCOHC = 0.
-
-GCOHS r 0 - 750
-
-0 - 30,000 Global cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material for an unspecified failure location.
-
-GCNC
-
-r
-
-0.03 - 0.1 Global Manning’s n-value of the levee or dam core material for an unspeci- fied failure location.
-See comment 4.
-If GCNC = 0.0 and a core is present, Manning’s n-value for the core material will computed from Strickler’s equa- tion.
-This results in a very low n-value and is not recommended.
-If GCNC
-
-> 1., the n-value will be computed from a Moody diagram (Darcy f vs.
-D50).
-
-Set GCNC = 0.0 for no core material.
-
-GCNS
-
-r
-
-0.03 - 0.1 Global Manning’s n-value of the levee or dam shell material for an unspecified failure location.
-See comment 4.
-If GCNS = 0., Manning’s n-value for the shell material will computed from Strickler’s equation.
-This is not recommended.
-If GCNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
-D50).
-
-GCRESTLENGTH
-
-r
-
-0 - Global crest length of the levee or dam (ft or m) for an unspecified failure location.
-If GCRESTLENGTH = 0.0, the crest length will default to the grid element octagon side.
-If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
-
-GCRESTWIDTH r 0 - Global crest width of the levee or dam (ft or m) for an unspecified failure location.
-The crest width can be zero.
-
-Variable Descriptions for the BREACH.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-GD50C r 0.0625 - 2 Mean sediment size (D50 in mm) of the levee or dam core material.
-
-GD50S r 0.25 - 10 Mean sediment size (D50 in mm) of the levee or dam shell material.
-
-GD50DF
-
-r
-
-1 - 100 Mean sediment size (D50 in mm) of the top one foot (0.3 m) of the downstream face (riprap material).
-If GD50DF = 0.0, then GD50DF = GD50S.
-
-GGRASSCOND
-
-r
-
-0 - 1 Global condition of the grass on the downstream face of the levee or dam for an unspecified failure location.
-0.0 for a poor stand or no grass;1.0 for a good stand of grass.
-
-GGRASSLENGTH
-
-r
-
-0 - 10 Global average length of grass (inches or mm) on downstream face for an unspecified failure location.
-Set GGRASSLENGTH = 0.0 for no grass on downstream face.
-
-GGRASSVMAXP
-
-r 3 - 6
-
-1 - 2 Global maximum permissible velocity (fps or mps) for a grass-lined down- stream face before the grass is eroded for an unspecified failure
-location.
-Range: 3 to 6 fps (1 to 2 mps).
-If no grass, set GGRASSVMAXP = 0.0.
-
-GPORC
-
-r
-
-0.35 - 0.45 Global porosity of the levee or dam core material for an unspecified failure location.
-Typical range: 0.35 to 0.45.
-Set GPORC = 0.0 for no core mate- rial.
-
-GPORS r 0.35 - 0.45 Global porosity of the levee or dam shell material for an unspecified failure location.
-Typical range: 0.35 to 0.45.
-
-GRASSCOND
-
-r
-
-0 - 1 Condition of the grass on the downstream face of the levee or dam for a prescribed failure location.
-0.0 for a poor stand or no grass; 1.0 for a good stand of grass.
-
-GRASSLENGTH
-
-r 0 - 1
-
-0 - 25 Average length of grass (inches or mm) on downstream face for a prescribed failure location.
-Set GRASSLENGTH = 0.0 for no grass on downstream face.
-
-GRASSVMAXP
-
-r 3 - 6
-
-1 - 2 Maximum permissible velocity (fps or mps) for a grass-lined downstream face before the grass is eroded for a prescribed failure location.
-Range: 3 to 6 fps (1 to 2 mps).
-If no grass, set GRASSVMAXP = 0.0.
-
-GSEDCONMAX
-
-r
-
-0.2 - 0.55 Global maximum sediment concentration by volume in the breach dis- charge for an unspecified failure location.
-Typical range = 0.2 to 0.55.
-If GSEDCONMAX = 0.0, a default value of 0.5 is used.
-
-Variable Descriptions for the BREACH.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-GUNFCC
-
-r
-
-1 - 20 Global sediment gradient, ratio of D90 to D30 of the levee or dam core material for an unspecified failure location.
-If there is no core material, set GUNFCC = 0.0.
-If the there is core material and GUNFCC = 0.0, it is reset to 10.0.
-
-GUNFCDF
-
-r
-
-1 - 20 Global sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of material (riprap) for an unspecified failure location.
-If GUN- FCDF = 0.0: GUNDFCDF = GUNFCS when GD50DF = 0.0 and GUN- DFCDF = 3.0 when GD50DF > 0.0.
-
-GUNFCS
-
-r
-
-1 - 20 Global sediment gradient, ratio of D90 to D30 of the levee or dam shell mate- rial for an unspecified failure location.
-If GUNFCS = 0.0, the default value is 10.0.
-
-GUWC
-
-r 85 - 120
-
-13,500 -
-
-19,000 Global unit weight (lb/ft3 or N/m3) of the levee or dam core material for an unspecified failure location.
-Set GUWC = 0.0 if there no core.
-
-GUWS
-
-r 85 - 120
-
-13,500 -
-
-19,000 Global unit weight (lb/ft3 or N/m3) of the levee or dam shell material for an unspecified failure location.
-
-GWEIRCOEF r 2.85 - 3.05 Global weir coefficient for piping or breach channel weir for an unspecified failure location.
-Typical range: 2.85 – 3.05.
-
-GZC
-
-r
-
-0.1 - 10 Global average slope of the upstream and downstream face of the levee or dam core material for an unspecified failure location.
-GZC is expressed as a ratio (horizontal:1 (vertical).
-For example: GZC = 2.0 represents 2.0 horizontal to 1.0 vertical.
-If there is no core set GZC = 0.0
-
-GZD
-
-r
-
-0.1 - 10 Global slope of the downstream face of the levee or dam for an unspecified failure location.
-GZD is expressed as a ratio (horizontal : vertical).
-For ex- ample: GZD = 2.0 represents 2.0 horizontal to 1.0 vertical.
-
-GZU
-
-r
-
-0.1 - 10 Global slope of the upstream face of the levee or dam for an unspecified failure location.
-GZU is expressed as a ratio (horizontal : vertical).
-For example: GZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
-
-Variable Descriptions for the BREACH.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-IBR
-
-c B1, B2,
-
-D1, D2,
-
-D3, D4,
-
-G1, G2, G3, G4
-
-or F Character line identifier:
-
-‘G1-G4’ = global data
-
-‘B1’ = Global data not related to local breach; ‘B2’ = Grid element and direction
-
-‘D1-D4’ = individual prescribed grid element breach data.
-‘F’ = fragility curve data
-
-Variable is case sensitive and it must be upper case.
-
-IBREACHDIR
-
-i
-
-1 - 8 Direction of the specified breach failure in a given grid element.
-The possible flow directions are:
-
-1 = north 5 = northeast
-
-2 = east 6 = southeast
-
-3 = south 7 = southwest
-
-4 = west 8 = northwest
-
-IBREACHGRID i 1 - NNOD Grid element of the specified breach failure location.
-See comment 8.
-
-IBREACHSED- EQN
-
-i
-
-1 - 11 Sediment transport equation that is used to compute the breach erosion.
-Out of eleven transport equations in FLO- 2D only Tofaletti and MPM-Woo are not available.
-See the list of sediment transport equation numbers in SED.DAT.
-
-PORC r 0.35 - 0.45 Porosity of the levee or dam core material for a prescribed grid element failure location.
-Set GPORC = 0.0 for no core material.
-
-PORS r 0.35 - 0.45 Porosity of the levee or dam shell material for an prescribed grid element failure location.
-
-PRDEPTH
-
-r 0.0 - Levee Crest Height Point of failure on the levee as defined by the distance or height below the le- vee crest (likely failure point according
-to the Corps of Engineers definition).
-Assigned with a corresponding fragility curve failure probability PRFAIL.
-
-PRFAIL
-
-r
-
-0.0 - 1.0 Levee fragility curve point of failure probability.
-Range: 0.0 to 1.0 where 80% indicates a higher probability of levee failure most likely corresponding to a higher elevation on the levee (see the
-levee fragility curve discussion in the FLO-2D Reference Manual).
-A low value of 10% would indicate a weak levee most likely corresponding to a levee piping failure close to the toe of the levee.
-
-Variable Descriptions for the BREACH.DAT File
-
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
-
-VARIABLE FMT RANGE DESCRIPTION
-
-SEDCONMAX
-
-r
-
-0.20 - 0.55 Maximum sediment concentration by volume in the breach discharge for a prescribed grid element failure location.
-Typical range = 0.2 to 0.55.
-If SEDCONMAX = 0.0, a default value of 0.5 is used.
-
-UNFCC
-
-r
-
-1 - 20 Sediment gradient, ratio of D90 to D30 of the levee or dam core material for a prescribed grid element failure location.
-If there is no core material, set UNFCC = 0.0.
-If the there is core material and UNFCC = 0.0, it is reset to 10.0.
-
-UNFCDF
-
-r
-
-1 - 20 Sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of material (riprap) for a prescribed grid element failure
-location.
-If UNFCDF = 0.0 : UNDFCDF = UNFCS when D50DF = 0.0 and UND- FCDF = 3.0 when D50DF > 0.0.
-
-UNFCS
-
-r
-
-1 - 20 Sediment gradient, ratio of D90 to D30 of the levee or dam shell material for a prescribed grid element failure location.
-If UNFCS = 0.0, the default value is 10.0.
-
-UWC r 85 -120
-
-13,500 -
-
-19,000 Unit weight (lb/ft3 or N/m3) of the levee or dam core material for a pre- scribed grid element failure location.
-Set UWC = 0.0 if there no core.
-
-UWS r 85 - 120
-
-13,500 -
-
-19,000 Unit weight (lb/ft3 or N/m3) of the levee or dam shell material for a pre- scribed grid element failure location.
-
-WEIRCOEF r 2.85 - 3.05 Weir coefficient for piping or breach channel weir for a prescribed grid element failure location.
-Typical range: 2.85 – 3.05.
-
-ZC
-
-r
-
-0.1 - 10 Average slope of the upstream and downstream face of the levee or dam core material for a prescribed failure location.
-ZC is expressed as a ratio (horizontal : vertical).
-For example: ZC = 2.0 represents 2.0 horizontal to 1.0 vertical.
-If there is no core set ZC = 0.
-
-ZD
-
-r
-
-0.1 - 10 Slope of the downstream face of the levee or dam for a prescribed grid element failure location.
-ZD is expressed as a ratio (horizontal : vertical).
-For example: ZD = 2.0 represents 2.0 horizontal to 1.0 vertical.
-
-ZU
-
-r
-
-0.1 - 10 Slope of the upstream face of the levee or dam for a prescribed grid element failure location.
-ZU is expressed as a ratio (horizontal : vertical).
-For ex- ample: ZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
-
-Instructional Comments for the BREACH.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - AFRC
+     - **r**
+     - **0 - 50**
+     - Angle (degrees) of internal friction of the core material for failure of a specific grid element flow direction.
+       Set AFRC = 0.0 for no core.
+
+   * - AFRS
+     - **r**
+     - **0 - 50**
+     - Angle (degrees) of internal friction of the shell material for failure of a specific grid element flow direction.
+
+   * - BRATIO
+     - **r**
+     - **1 - 5**
+     - Ratio of the initial breach width to breach depth (see comments 2 and 3).
+
+   * - BRBOTTOMEL
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Initial breach or pipe bottom elevation (ft or m) (see comments 5 and 6).
+
+   * - BRBOTWIDMAX
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Maximum allowable breach bottom width (ft or m) as constrained by the valley cross section.
+       Set BRBOTWIDWAX = 0.0 if the dam levee is continuous through adjoining grid elements (default = grid element octagon side).
+
+   * - BREACHTIME
+     - **r**
+     - **- SIMUL**
+
+       **to SIMUL**
+
+       **-99**
+     - The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
+
+       If BREACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
+
+       If BREACHTIME > or = 0.0, the start time for time to 1 ft and time to 2 ft is based on the model start time 0.0 hr.
+
+       If BREACHTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time for multiple breaches.
+
+       If BREACHTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time for multiple breaches and BEACHTIME is
+       reset to 0.0 hr.
+
+   * - BRTOPWIDMAX
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Maximum allowable breach top width (ft or m) as constrained by the valley cross section.
+       Set BRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
+
+   * - COHC
+     - **r**
+     - **0 - 750**
+
+       **0 - 30,000**
+     - Cohesive strength (lb/ft2 or N/m2) of the levee or dam core material.
+       If there is no core, COHC = 0.
+
+   * - COHS
+     - **r**
+     - **0 - 750**
+
+       **0 - 30,000**
+     - Cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material.
+       If there is no core, COHS = 0.
+
+   * - CNC
+     - **r**
+     - **0.02 - 0.25**
+     - Manning’s n-value of the levee or dam core material.
+       If CNC = 0., Manning’s n-value for the core material will computed from Strickler’s equation.
+
+       If CNC > 1., the n-value will be computed from a Moody diagram (Darcy f
+
+       vs.
+       D50).
+       Set CNC = 0.0 for no core material.
+
+   * - CNS
+     - **r**
+     - **0.02 - 0.25**
+     - Manning’s n-value of the levee or dam shell material.
+       See comment 4.
+       If CNS = 0., Manning’s n-value for the shell material will computed from Strickler’s equation.
+       If CNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
+       D50).
+
+   * - CRESTLENGTH
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Length of the crest of the levee or dam (ft or m).
+       If CRESTLENGTH = 0., the crest length will default to the grid element octagon side.
+       If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
+
+   * - CRESTWIDTH
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Crest width of the levee or dam (ft or m).
+       The crest width can be zero.
+
+   * - D50C
+     - **r**
+     - **0.0625 - 2**
+     - Mean sediment size (D50 in mm) of the levee or dam core material.
+
+   * - D50S
+     - **r**
+     - **0.25 - 10**
+     - Mean sediment size (D50 in mm) of the levee or dam shell material.
+
+   * - D50DF
+     - **r**
+     - **1.0 - 100**
+     - Mean sediment size (D50 in mm) of the top one foot (0.3 m) of the down- stream face (riprap material).
+       If D50DF = 0.0, then D50DF = D50S.
+
+   * - FRAGCHAR
+     - **c**
+     - **S1, S2 ...**
+     - Fragility curve ID.
+       One letter and a number.
+       For example: S1 is fragility curve 1 for the Sacramento River (see comment 7).
+       Variable is case sensitive and it must be upper case.
+
+   * - GAFRC
+     - **r**
+     - **0 - 50**
+     - Global angle (degrees) of internal friction of the core material for the entire levee or dam.
+       Set AFRC = 0.0 for no core.
+
+   * - GAFRS
+     - **r**
+     - **0 - 50**
+     - Global angle (degrees) of internal friction of the shell material for the entire levee or dam.
+
+   * - GBRBOT-TOMEL
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Initial global breach or pipe bottom elevation (ft or m) for an unspecified failure location.
+       If the model will locate the failure grid element instead of user specified failure location, then set GBRBOTTOMEL = distance below the dam or levee
+       crest elevation (ft or m).
+       In general, GBRBOTTOMEL be less than 10 ft (3 m) (see comments 1 and 6).
+
+   * - GBRBOTWID-MAX
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Maximum allowable global breach bottom width (ft or m) as constrained by the valley cross section for an unspecified failure location.
+       Set GBRBOT- WIDWAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
+
+   * - GBREACHTIME
+     - **r**
+     - **0 -** |CHAPTE002|
+     - The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
+       GB- REACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
+
+   * - GBRTOPWID-MAX
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Maximum allowable global breach top width (ft or m) as constrained by the valley cross section for an unspecified failure location.
+       GBRTOPWIDMAX
+
+       = 0.0 if the levee is continuous through adjoining grid elements (default =
+
+       grid element octagon side).
+
+   * - GCOHC
+     - **r**
+     - **0 - 750**
+
+       **0 - 30,000**
+     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam core material for an unspecified failure location.
+       If there is no core, GCOHC = 0.
+
+   * - GCOHS
+     - **r**
+     - **0 - 750**
+
+       **0 - 30,000**
+     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material for an unspecified failure location.
+
+   * - GCNC
+     - **r**
+     - **0.03 - 0.1**
+     - Global Manning’s n-value of the levee or dam core material for an unspecified failure location.
+       See comment 4.
+       If GCNC = 0.0 and a core is present, Manning’s n-value for the core material will computed from Strickler’s equation.
+       This results in a very low n-value and is not recommended.
+       If GCNC
+
+       > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
+       D50).
+
+       Set GCNC = 0.0 for no core material.
+
+   * - GCNS
+     - **r**
+     - **0.03 - 0.1**
+     - Global Manning’s n-value of the levee or dam shell material for an unspecified failure location.
+       See comment 4.
+       If GCNS = 0., Manning’s n-value for the shell material will computed from Strickler’s equation.
+       This is not recommended.
+       If GCNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
+       D50).
+
+   * - GCRESTLENGTH
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Global crest length of the levee or dam (ft or m) for an unspecified failure location.
+       If GCRESTLENGTH = 0.0, the crest length will default to the grid element octagon side.
+       If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
+
+   * - GCRESTWIDTH
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Global crest width of the levee or dam (ft or m) for an unspecified failure location.
+       The crest width can be zero.
+
+   * - VARIABLE
+     - **FMT**
+     - **RANGE**
+     - DESCRIPTION
+
+   * - GD50C
+     - **r**
+     - **0.0625 - 2**
+     - Mean sediment size (D50 in mm) of the levee or dam core material.
+
+   * - GD50S
+     - **r**
+     - **0.25 - 10**
+     - Mean sediment size (D50 in mm) of the levee or dam shell material.
+
+   * - GD50DF
+     - **r**
+     - **1 - 100**
+     - Mean sediment size (D50 in mm) of the top one foot (0.3 m) of the downstream face (riprap material).
+       If GD50DF = 0.0, then GD50DF = GD50S.
+
+   * - GGRASSCOND
+     - **r**
+     - **0 - 1**
+     - Global condition of the grass on the downstream face of the levee or dam for an unspecified failure location.
+       0.0 for a poor stand or no grass;1.0 for a good stand of grass.
+
+   * - GGRASSLENGTH
+     - **r**
+     - **0 - 10**
+     - Global average length of grass (inches or mm) on downstream face for an unspecified failure location.
+       Set GGRASSLENGTH = 0.0 for no grass on downstream face.
+
+   * - GGRASSVMAXP
+     - **r**
+     - **3 - 6**
+
+       **1 - 2**
+     - Global maximum permissible velocity (fps or mps) for a grass-lined down- stream face before the grass is eroded for an unspecified failure location.
+       Range: 3 to 6 fps (1 to 2 mps).
+       If no grass, set GGRASSVMAXP = 0.0.
+
+   * - GPORC
+     - **r**
+     - **0.35 - 0.45**
+     - Global porosity of the levee or dam core material for an unspecified failure location.
+       Typical range: 0.35 to 0.45.
+       Set GPORC = 0.0 for no core mate- rial.
+
+   * - GPORS
+     - **r**
+     - **0.35 - 0.45**
+     - Global porosity of the levee or dam shell material for an unspecified failure location.
+       Typical range: 0.35 to 0.45.
+
+   * - GRASSCOND
+     - **r**
+     - **0 - 1**
+     - Condition of the grass on the downstream face of the levee or dam for a prescribed failure location.
+       0.0 for a poor stand or no grass; 1.0 for a good stand of grass.
+
+   * - GRASSLENGTH
+     - **r**
+     - **0 - 1**
+
+       **0 - 25**
+     - Average length of grass (inches or mm) on downstream face for a prescribed failure location.
+       Set GRASSLENGTH = 0.0 for no grass on downstream face.
+
+   * - GRASSVMAXP
+     - **r**
+     - **3 - 6**
+
+       **1 - 2**
+     - Maximum permissible velocity (fps or mps) for a grass-lined downstream face before the grass is eroded for a prescribed failure location.
+       Range: 3 to 6 fps (1 to 2 mps).
+       If no grass, set GRASSVMAXP = 0.0.
+
+   * - GSEDCONMAX
+     - **r**
+     - **0.2 - 0.55**
+     - Global maximum sediment concentration by volume in the breach dis- charge for an unspecified failure location.
+       Typical range = 0.2 to 0.55.
+       If GSEDCONMAX = 0.0, a default value of 0.5 is used.
+
+   * - GUNFCC
+     - **r**
+     - **1 - 20**
+     - Global sediment gradient, ratio of D90 to D30 of the levee or dam core material for an unspecified failure location.
+       If there is no core material, set GUNFCC = 0.0.
+       If the there is core material and GUNFCC = 0.0, it is reset to 10.0.
+
+   * - GUNFCDF
+     - **r**
+     - **1 - 20**
+     - Global sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of material (riprap) for an unspecified failure location.
+       If GUN- FCDF = 0.0: GUNDFCDF = GUNFCS when GD50DF = 0.0 and GUN- DFCDF = 3.0 when GD50DF > 0.0.
+
+   * - GUNFCS
+     - **r**
+     - **1 - 20**
+     - Global sediment gradient, ratio of D90 to D30 of the levee or dam shell mate- rial for an unspecified failure location.
+       If GUNFCS = 0.0, the default value is 10.0.
+
+   * - GUWC
+     - **r**
+     - **85 - 120**
+
+       **13,500 -**
+
+       **19,000**
+     - Global unit weight (lb/ft3 or N/m3) of the levee or dam core material for an unspecified failure location.
+       Set GUWC = 0.0 if there no core.
+
+   * - GUWS
+     - **r**
+     - **85 - 120**
+
+       **13,500 -**
+
+       **19,000**
+     - Global unit weight (lb/ft3 or N/m3) of the levee or dam shell material for an unspecified failure location.
+
+   * - GWEIRCOEF
+     - **r**
+     - **2.85 - 3.05**
+     - Global weir coefficient for piping or breach channel weir for an unspecified failure location.
+       Typical range: 2.85 – 3.05.
+
+   * - GZC
+     - **r**
+     - **0.1 - 10**
+     - Global average slope of the upstream and downstream face of the levee or dam core material for an unspecified failure location.
+       GZC is expressed as a ratio (horizontal:1 (vertical).
+       For example: GZC = 2.0 represents 2.0 horizontal to 1.0 vertical.
+       If there is no core set GZC = 0.0
+
+   * - GZD
+     - **r**
+     - **0.1 - 10**
+     - Global slope of the downstream face of the levee or dam for an unspecified failure location.
+       GZD is expressed as a ratio (horizontal : vertical).
+       For ex- ample: GZD = 2.0 represents 2.0 horizontal to 1.0 vertical.
+
+   * - GZU
+     - **r**
+     - **0.1 - 10**
+     - Global slope of the upstream face of the levee or dam for an unspecified failure location.
+       GZU is expressed as a ratio (horizontal : vertical).
+       For example: GZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
+
+   * - IBR
+     - **c**
+     - **B1, B2,**
+
+       **D1, D2,**
+
+       **D3, D4,**
+
+       **G1, G2, G3, G4**
+
+       **or F**
+     - Character line identifier:
+
+       ‘G1-G4’ = global data
+
+       ‘B1’ = Global data not related to local breach; ‘B2’ = Grid element and direction
+
+       ‘D1-D4’ = individual prescribed grid element breach data.
+       ‘F’ = fragility curve data
+
+       Variable is case sensitive and it must be upper case.
+
+   * - IBREACHDIR
+     - **i**
+     - **1 - 8**
+     - Direction of the specified breach failure in a given grid element.
+       The possible flow directions are:
+
+       1 = north 5 = northeast
+
+       2 = east 6 = southeast
+
+       3 = south 7 = southwest
+
+       4 = west 8 = northwest
+
+   * - IBREACHGRID
+     - **i**
+     - **1 - NNOD**
+     - Grid element of the specified breach failure location.
+       See comment 8.
+
+   * - IBREACHSED-EQN
+     - **i**
+     - **1 - 11**
+     - Sediment transport equation that is used to compute the breach erosion.
+       Out of eleven transport equations in FLO- 2D only Tofaletti and MPM-Woo are not available.
+       See the list of sediment transport equation numbers in SED.DAT.
+
+   * - PORC
+     - **r**
+     - **0.35 - 0.45**
+     - Porosity of the levee or dam core material for a prescribed grid element failure location.
+       Set GPORC = 0.0 for no core material.
+
+   * - PORS
+     - **r**
+     - **0.35 - 0.45**
+     - Porosity of the levee or dam shell material for an prescribed grid element failure location.
+
+   * - PRDEPTH
+     - **r**
+     - **0.0 - Levee Crest Height**
+     - Point of failure on the levee as defined by the distance or height below the le- vee crest (likely failure point according to the Corps of Engineers
+       definition).
+       Assigned with a corresponding fragility curve failure probability PRFAIL.
+
+   * - PRFAIL
+     - **r**
+     - **0.0 - 1.0**
+     - Levee fragility curve point of failure probability.
+       Range: 0.0 to 1.0 where 80% indicates a higher probability of levee failure most likely corresponding to a higher elevation on the levee (see the
+       levee fragility curve discussion in the FLO-2D Reference Manual).
+       A low value of 10% would indicate a weak levee most likely corresponding to a levee piping failure close to the toe of the levee.
+
+   * - SEDCONMAX
+     - **r**
+     - **0.20 - 0.55**
+     - Maximum sediment concentration by volume in the breach discharge for a prescribed grid element failure location.
+       Typical range = 0.2 to 0.55.
+       If SEDCONMAX = 0.0, a default value of 0.5 is used.
+
+   * - UNFCC
+     - **r**
+     - **1 - 20**
+     - Sediment gradient, ratio of D90 to D30 of the levee or dam core material for a prescribed grid element failure location.
+       If there is no core material, set UNFCC = 0.0.
+       If the there is core material and UNFCC = 0.0, it is reset to 10.0.
+
+   * - UNFCDF
+     - **r**
+     - **1 - 20**
+     - Sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of material (riprap) for a prescribed grid element failure location.
+       If UNFCDF = 0.0 : UNDFCDF = UNFCS when D50DF = 0.0 and UND- FCDF = 3.0 when D50DF > 0.0.
+
+   * - UNFCS
+     - **r**
+     - **1 - 20**
+     - Sediment gradient, ratio of D90 to D30 of the levee or dam shell material for a prescribed grid element failure location.
+       If UNFCS = 0.0, the default value is 10.0.
+
+   * - UWC
+     - **r**
+     - **85 -120**
+
+       **13,500 -**
+
+       **19,000**
+     - Unit weight (lb/ft3 or N/m3) of the levee or dam core material for a pre- scribed grid element failure location.
+       Set UWC = 0.0 if there no core.
+
+   * - UWS
+     - **r**
+     - **85 - 120**
+
+       **13,500 -**
+
+       **19,000**
+     - Unit weight (lb/ft3 or N/m3) of the levee or dam shell material for a pre- scribed grid element failure location.
+
+   * - WEIRCOEF
+     - **r**
+     - **2.85 - 3.05**
+     - Weir coefficient for piping or breach channel weir for a prescribed grid element failure location.
+       Typical range: 2.85 – 3.05.
+
+   * - ZC
+     - **r**
+     - **0.1 - 10**
+     - Average slope of the upstream and downstream face of the levee or dam core material for a prescribed failure location.
+       ZC is expressed as a ratio (horizontal : vertical).
+       For example: ZC = 2.0 represents 2.0 horizontal to 1.0 vertical.
+       If there is no core set ZC = 0.
+
+   * - ZD
+     - **r**
+     - **0.1 - 10**
+     - Slope of the downstream face of the levee or dam for a prescribed grid element failure location.
+       ZD is expressed as a ratio (horizontal : vertical).
+       For example: ZD = 2.0 represents 2.0 horizontal to 1.0 vertical.
+
+   * - ZU
+     - **r**
+     - **0.1 - 10**
+     - Slope of the upstream face of the levee or dam for a prescribed grid element failure location.
+       ZU is expressed as a ratio (horizontal : vertical).
+       For ex- ample: ZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
+
+
+**Instructional Comments for the BREACH.DAT File**
 
 1. There is a choice of either identifying a global or local levee breach location.
    If the breach location is assigned locally, it is necessary to provide only the Local (D-Lines) 5-8 in the BREACH.DAT file.
    This data is entered in the Individual tab of the FLO-2D Plugin Breach dialog box.
    If the model locates all the potential breach locations based on the water surface elevation, then it is only necessary to assign the global
-   parameters (G-Lines) in lines 1-4 and the vari- able GBRBOTTOMEL = vertical distance (ft or m) below the levee or dam crest elevation.
+   parameters (G-Lines) in lines 1-4 and the variable GBRBOTTOMEL = vertical distance (ft or m) below the levee or dam crest elevation.
    If the water surface elevation exceeds GBRBOTTOMEL, then a levee piping failure will be initiated.
    One or more breach locations can be prescribed and still permit the model to determine any other potential breach locations to be initiated by setting
    GBBOTTOMEL to value less than about 10 ft (3 m) below the crest elevation.
@@ -5462,14 +6586,65 @@ Instructional Comments for the BREACH.DAT File
    (global breach data is not required)
 
 FILE: FPFROUDE.DAT
+~~~~~~~~~~~~~~~~~~
 
 FLOODPLAIN LIMITING FROUDE NUMBERS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the FPFROUDE.DAT File
+   FPFROUDE.DAT File Variables
+
+F 1 0.65 Line 1: **IFR = ‘F’ IDUM FROUDEFP (I = 1, NNOD)**
+
+   FPFROUDE.DAT File Example
+
+   F 1 0.65
+
+   F 2 0.88
+
+   F 3 0.90
+
+   F 43 0.90
+
+   F 54 0.90
+
+   F 56 1.05
+
+   F 107 0.90
+
+   F 108 0.90
+
+**Variable Descriptions for the FPFROUDE.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the FPFROUDE.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IDUM
+     - **i**
+     - **1 - NNOD**
+     - Grid element number (I) of the floodplain grid system.
+
+   * - IFR
+     - **c**
+     - **F**
+     - Character Line Identifier = ‘F’.
+       Variable is case sensitive and it must be upper case.
+
+   * - FROUDEFP
+     - **r**
+     - **0.1 - 2**
+     - Floodplain limiting Froude number.
+
+
+**Instructional Comments for the FPFROUDE.DAT File**
 
 1. The spatially variable limiting Froude number supersedes the global limiting Froude number (FROUDL) in CONT.DAT.
 
@@ -5481,91 +6656,132 @@ Instructional Comments for the FPFROUDE.DAT File
    RGH file to MANNINGS_N.DAT.
 
 FILE: SWMMFLO.DAT
+~~~~~~~~~~~~~~~~~
 
 STORM DRAIN DATA FILE
+^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the
+   SWMMFLO.DAT File Variables
 
-SWMMFLO.DAT File
+   Line 1: **SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),**
+
+   **SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I), FEATURE(I),CURBHEIGHT(I)**
+
+   I = number of storm drain inlet nodes.
+
+D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+
+   SWMMFLO.DAT File Example
+
+   D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+
+   D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+
+   D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+
+   D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+
+   D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+
+**Variable Descriptions for the SWMMFLO.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-CURBHEIGHT(I) r 0.0 - Curb height used to calculate discharge on inlets for all IN- TYPE inlets.
 
-FEATURE(I)
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-i
+   * - CURBHEIGHT(I)
+     - **r**
+     - **0.0 -** |CHAPTE002|
+     - Curb height used to calculate discharge on inlets for all IN- TYPE inlets.
 
-0, 1, 2,
+   * - FEATURE(I)
+     - **i**
+     - **0, 1, 2,**
 
-or 3 INTYPE = 4:
+       **or 3**
+     - INTYPE = 4:
 
-0 = default, no flap gate, no vertical inlet opening
+       0 = default, no flap gate, no vertical inlet opening
 
-1 = vertical inlet opening (see comment 3)
+       1 = vertical inlet opening (see comment 3)
 
-2 = vertical inlet with a flap gate
+       2 = vertical inlet with a flap gate
 
-For INTYPE = 1, 2, 3 and 5:
+       For INTYPE = 1, 2, 3 and 5:
 
-0 = default
+       0 = default
 
-3 = stop reducing discharge when dropbox capacity filled
+       3 = stop reducing discharge when dropbox capacity filled
 
-(see comment 4)
+       (see comment 4)
 
-INTYPE(I) i 1 - 5 Type of storm drain inlets (see comment 1).
+   * - INTYPE(I)
+     - **i**
+     - **1 - 5**
+     - Type of storm drain inlets (see comment 1).
 
-SWMMCHAR c D Character line identifier for the SWMM model inlets.
-Vari- able is case sensitive and it must be upper case.
+   * - SWMMCHAR
+     - **c**
+     - **D**
+     - Character line identifier for the SWMM model inlets.
+       Vari- able is case sensitive and it must be upper case.
 
-SWMMcoeff(I) r 2.50 - 3.50 Storm drain weir discharge coefficient (see comment 2).
+   * - SWMMcoeff(I)
+     - **r**
+     - **2.50 - 3.50**
+     - Storm drain weir discharge coefficient (see comment 2).
 
-SWMMheight(I)
+   * - SWMMheight(I)
+     - **r**
+     - **0.0 - 2.0**
+     - Type 1 and type 2 gutter inlets storm drain curb opening heights (typically less than 1 ft).
 
-r
+       Type 3 grate inlets, SWMMheight = grate sag height.
+       Type 5 manhole inlets, SWMMheight = surcharge depth.
 
-0.0 - 2.0 Type 1 and type 2 gutter inlets storm drain curb opening heights (typically less than 1 ft).
+   * - SWMM_JT(I)
+     - **i**
+     - **1 - NNOD**
+     - Grid elements that contains storm drain inlets or man- holes.
 
-Type 3 grate inlets, SWMMheight = grate sag height.
-Type 5 manhole inlets, SWMMheight = surcharge depth.
+   * - SWMMlength(I)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Type 1 and 2 - Storm drain inlet curb opening lengths along the curb.
 
-SWMM_JT(I) i 1 - NNOD Grid elements that contains storm drain inlets or man- holes.
+       Type 3 and 5 grate (gutter) inlets, SWMMlength = grate wetter perimeter or manhole wetted perimeter.
 
-SWMMlength(I)
+   * - SWMM_IDEN(I)
+     - **c**
+     - **Alpha Numeric**
+     - Storm drain inlet name.
+       Inlet name in the SWMM.inp file.
+       Variable is not case sensitive.
+       No spaces in data.
 
-r
+       Start the name with an i or I to indicate an inlet: im or IM for manholes.
+       This is mandatory.
+       (See comment 1)
 
-0.01 - Type 1 and 2 - Storm drain inlet curb opening lengths along the curb.
+   * - SWMMwidth(I)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Type 2 storm drain inlet curb opening sag width.
 
-Type 3 and 5 grate (gutter) inlets, SWMMlength = grate wetter perimeter or manhole wetted perimeter.
+       Type 3 grate (gutter) inlets, SWMMwidth = grate area.
 
-SWMM_IDEN(I)
+       Type 5 manhole area.
 
-c
 
-Alpha Numeric Storm drain inlet name.
-Inlet name in the SWMM.inp file.
-Variable is not case sensitive.
-No spaces in data.
-
-Start the name with an i or I to indicate an inlet: im or IM for manholes.
-This is mandatory.
-(See comment 1)
-
-SWMMwidth(I)
-
-r
-
-0 - Type 2 storm drain inlet curb opening sag width.
-
-Type 3 grate (gutter) inlets, SWMMwidth = grate area.
-
-Type 5 manhole area.
-
-Instructional Comments for the SWMMFLO.DAT File
+**Instructional Comments for the SWMMFLO.DAT File**
 
 1. The Storm Drain Guidelines manual offers a comprehensive overview of storm drain modeling using FLO-2D.
    The storm drain feature names must begin with an i or I to indicate an inlet, im or IM to indicate a manhole.
@@ -5591,35 +6807,47 @@ Instructional Comments for the SWMMFLO.DAT File
 
 5) Manhole with cover (Type 5) The storm drain inlet data requirements are:
 
-Type 1 - Curb opening inlet at grade
+..
 
-Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 Metric) Curb opening length
+   *Type 1 - Curb opening inlet at grade*
 
-Curb opening height
+- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 Metric) Curb opening length
 
-Type 2 - Curb opening inlet with sag Weir coefficient: 2.30 (1.25 metric) Curb opening length
+- Curb opening height
 
-Curb opening height Curb opening sag width
+..
 
-Type 3 - Grate (or grate with gutter) inlet with/without sag
+   *Type 2 - Curb opening inlet with sag*
 
-Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric) Grate perimeter (not including curb side)
+- Weir coefficient: 2.30 (1.25 metric) Curb opening length
 
-Grate open area
+- Curb opening height Curb opening sag width
 
-Grate sag height (zero for at grade)
+..
 
-Type 4 - Variable storm drain inlet geometry.
+   *Type 3 - Grate (or grate with gutter) inlet with/without sag*
 
-Weir coefficient: not required.
+- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric) Grate perimeter (not including curb side)
 
-The storm drain inlet rating table (line n with depth and discharge pairs) is required in the SWMMFLORT data file.
+- Grate open area
 
-Type 5 - Manhole.
+- Grate sag height (zero for at grade)
 
-Weir coefficient: 2.85 - 3.20 Manhole perimeter
+..
 
-Manhole flow area Surcharge depth
+   *Type 4 - Variable storm drain inlet geometry.*
+
+- Weir coefficient: not required.
+
+- The storm drain inlet rating table (line n with depth and discharge pairs) is required in the SWMMFLORT data file.
+
+..
+
+   *Type 5 - Manhole.*
+
+- Weir coefficient: 2.85 - 3.20 Manhole perimeter
+
+- Manhole flow area Surcharge depth
 
 Note: Orifice flow coefficient = 0.67 (hardwired) for all cases.
 
@@ -5637,95 +6865,128 @@ Note: Orifice flow coefficient = 0.67 (hardwired) for all cases.
 4. The feature switch = 3 will allow the storm drain engine to always try and feed water to the storm drain system even when the drop box is at capacity.
 
 FILE: SWMMFLORT.DAT
+~~~~~~~~~~~~~~~~~~~
 
 STORM DRAIN TYPE 4 RATING TABLE FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-D 254765 I4-33
+**SWMMFLO.DAT File Variables**
 
-N 0.00 0.00
+Line 1: SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),
 
-N 0.10 0.00
+SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I),
 
-N 1.46 10..00
+FEATURE(I),CURBHEIGHT(I)
 
-N 2.11 20.00
+I = number of storm drain inlet nodes.
 
-N 2.72 3.00
+D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-N 3.44 40.00
+**SWMMFLO.DAT File Example**
 
-N 4.35 50.00
+D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-N 5.48 60.00
+D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-N 6..79 70.00
+D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-N 8.23 90.00
+D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-Variable Descriptions for the SWMMFLORT.DAT File
+D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+
+**Variable Descriptions for the SWMMFLORT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-CDIAMETER- TYPE4 r 0 - Circular culvert diameter or box culvert height.
-TYPEC(I) defines the culvert shape.
-(ft or m)
 
-CUBASETYPE4
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-r
+   * - CDIAMETER-TYPE4
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Circular culvert diameter or box culvert height.
+       TYPEC(I) defines the culvert shape.
+       (ft or m)
 
-0 - 1 = Box culvert width
+   * - CUBASETYPE4
+     - **r**
+     - **0 -** |CHAPTE002|
+     - 1 = Box culvert width
 
-0 = No width for circular culvert.
-Use CDIAMETER(I)
+       0 = No width for circular culvert.
+       Use CDIAMETER(I)
 
-(ft or m)
+       (ft or m)
 
-DEPTH- SWMMRT (J,K) r 0 - Flow depths for the discharge rating table pairs.
-(ft or m)
+   * - DEPTH-SWMMRT (J,K)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Flow depths for the discharge rating table pairs.
+       (ft or m)
 
-MULTBARREL- STYPE4 i 1- #barrels Number of barrels.
-Default = 1.
+   * - MULTBARREL-STYPE4
+     - **i**
+     - **1- #barrels**
+     - Number of barrels.
+       Default = 1.
 
-QSWMMRT(J,K) r 0 - Discharge values for the storm drain inlet rating table.
+   * - QSWMMRT(J,K)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Discharge values for the storm drain inlet rating table.
 
-(cfs or cms)
+       (cfs or cms)
 
-STRUCTNAME\_ INLET c Alpha numeric Name of the type 4 inlet.
-No spaces allowed in the name.
+   * - STRUCTNAME\_INLET
+     - **c**
+     - **Alpha numeric**
+     - Name of the type 4 inlet.
+       No spaces allowed in the name.
 
-SWMMCHARRT
+   * - SWMMCHARRT
+     - **c**
+     - **N, D, S, F**
+     - Character line identifier.
 
-c
+       N = New line for rating table.
+       D = Rating table lines.
 
-N, D, S, F Character line identifier.
+       S = New line for generalized culvert equation.
 
-N = New line for rating table.
-D = Rating table lines.
+       F = Detailed line for generalized culvert equation.
 
-S = New line for generalized culvert equation.
+   * - SWMM_JT(I)
+     - **i**
+     - **1 - NNOD**
+     - Grid elements with storm drain inlets.
 
-F = Detailed line for generalized culvert equation.
+   * - TYPECTYPE4
+     - **s**
+     - **1 = box**
 
-SWMM_JT(I) i 1 - NNOD Grid elements with storm drain inlets.
+       **2 = pipe**
+     - Culvert switch.
 
-TYPECTYPE4
+       1 = rectangular
 
-s 1 = box
+       2 = circular
 
-2 = pipe Culvert switch.
+   * - TYPEEENTYPE4
+     - **s**
+     - **1, 2, 3**
+     - Culvert switch.
+       Set TYPEEN(I) for entrance type 1, 2, or 3.
+       (see comment 3).
 
-1 = rectangular
 
-2 = circular
-
-TYPEEENTYPE4 s 1, 2, 3 Culvert switch.
-Set TYPEEN(I) for entrance type 1, 2, or 3.
-(see comment 3).
-
-Instructional Comments for the SWMMFLORT.DAT File
+**Instructional Comments for the SWMMFLORT.DAT File**
 
 1. The SWMMFLORT.DAT file lists the rating table data for Type 4 inlets.
 
@@ -5735,25 +6996,78 @@ Instructional Comments for the SWMMFLORT.DAT File
    The downstream control is managed by the storm drain engine.
    The type of culvert entrances are:
 
-a. BOX entrance:
+*a.
+BOX entrance:*
 
-type 1 - wingwall flare 30 to 75 degrees
+- type 1 - wingwall flare 30 to 75 degrees
 
-type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
+- type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
 
-b. PIPE entrance:
+*b.
+PIPE entrance:*
 
-type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
+- type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
 FILE: SWMMOUTF.DAT
+~~~~~~~~~~~~~~~~~~
 
 STORM DRAIN OUTFALL ID DATA FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the SWMMOUTF.DAT File
+   SWMMOUTF.DAT File Variables
+
+   Line 1: **OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)**
+
+   JT = Number of outfalls.
+
+OUTFALL1 14292 1
+
+   SWMMOUTF.DAT File Example
+
+   OUTFALL1 14292 1
+
+   ...
+
+**Variable Descriptions for the SWMMOUTF.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the SWMMOUTF.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - OUTF_NAME(JT)
+     - **c**
+     - **Alpha Numeric**
+     - Name of the feature.
+       Variable is not case sensitive.
+       No spaces in the name.
+       (see comment 1).
+
+   * - OUTF_GRID(JT)
+     - **i**
+     - **1 - NNOD**
+     - Grid element corresponding to the location of the outfall.
+
+   * - OUTF\_FLO2DVOL(JT)
+     - **s**
+     - **0 or 1**
+     - Outfall discharge switch (see comments 2 and 3):
+
+       0 = off all discharge removed from storm drain system.
+
+       1 = on allows discharge to be returned to the FLO-2D
+
+       system.
+
+
+**Instructional Comments for the SWMMOUTF.DAT File**
 
 1. The list of outfall names and position should correspond to the SWMM.inp file.
    Do not add spaces to the name.
@@ -5763,8 +7077,18 @@ Instructional Comments for the SWMMOUTF.DAT File
 3. If the flow in the storm drain system can return to the surface, set the switch to the on position = 1.
 
 FILE: SDCLOGGING.DAT
+~~~~~~~~~~~~~~~~~~~~
 
 STORM DRAIN BLOCKAGE METHOD FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   SDCLOGGING.DAT File Variables
+
+   Line 1: **SWMMCHAR= ‘D’ SWMM_JT(I) SWMM_IDEN(I) SWMM_CLOGFAC(I) CLOGTIME(I)**
+
+D 2694 I1 25 0.50
+
+**SDCLOGGING.DAT File Example**
 
 D 2694 I1 25 0.50
 
@@ -5778,11 +7102,53 @@ D 10257 I5 25 0.50
 
 ...
 
-Variable Descriptions for the SDCLOGGING.DAT File
+...
+
+**Variable Descriptions for the SDCLOGGING.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the SDCLOGGING.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - CLOGTIME(I)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Time to initiate clogging specified by the user.
+       See comment 2.
+       (hours)
+
+   * - SWMM\_CLOGFAC(I)
+     - **r**
+     - **0 - 100.**
+     - Clogging factor for each inlet node.
+       The value is a percent- age (see comment 1).
+
+   * - SWMM_IDEN(I)
+     - **c**
+     - **Alpha Numeric**
+     - Inlet id of the connected inlet node.
+
+   * - SWMM_JT(I)
+     - **i**
+     - **1 - NNOD**
+     - Grid element with storm clogged storm drain inlets.
+
+   * - SWMMCHAR=‘D’
+     - **c**
+     - **D**
+     - Character line identifier for the SWMM model inlets.
+       Vari- able is case sensitive.
+
+
+**Instructional Comments for the SDCLOGGING.DAT File**
 
 1. The percent clogging is based on the available flow area of a storm drain inlet.
    The metal portion of the inlet grate is not included.
@@ -5790,41 +7156,143 @@ Instructional Comments for the SDCLOGGING.DAT File
 2. The time to initiate clogging is based on the starting time of the model not the time of inundation of the storm drain inlet.
 
 FILE: SWMMFLODROPBOX.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _storm-drain-blockage-method-file-1:
 
 STORM DRAIN BLOCKAGE METHOD FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the SWMMFLODROPBOX.DAT File
+   SWMMFLODROPBOX.DAT File Variables
+
+2694 I1 19.635 Line 1: **SWMMDBID SWMMNodeID SWMMDROPBOX(I)**
+
+   I = Number of drop box nodes.
+
+   SWMMFLODROPBOX.DAT File Example
+
+   2694 I1 19.566
+
+   3658 I2 19.566
+
+   224 I3 19.566
+
+   5286 I5 19.566
+
+   ...
+
+**Variable Descriptions for the SWMMFLODROPBOX.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the SWMMFLODROPBOX.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - SWMMDBID
+     - **i**
+     - **1 - NNOD**
+     - Grid element that contains the storm drain inlet.
+
+   * - SWMMDROPBOX(I)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Drop box surface area for inlet contain in grid element SWMMDBID (ft2 or m2)(see comment 1).
+
+   * - SWMMNodeID
+     - **c**
+     - **Alpha Numeric**
+     - Inlet id of the connected inlet node.
+
+
+**Instructional Comments for the SWMMFLODROPBOX.DAT File**
 
 1. SWMMFLODROPBOX.DAT is a data file that can be used to increase the dropbox surface area for inlets.
    The surface area is used in computing changes in water level at inlets.
    This file allows the user to create a non-uniform dropbox surface area for those inlets that have a large inlet surface opening and which default
    (12.566 ft2 dropbox surface area 4 ft diameter) does not represent the dropbox surface area.
 
-Pipe Diameter (ft) Dropbox Surf Area (ft2)
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
-5 19.635
 
-6 28.274
+   * - Pipe Diameter (ft)
+     - Dropbox Surf Area (ft2)
 
-7 38.485
+   * - 5
+     - 19.635
 
-8 50.265
+   * - 6
+     - 28.274
 
-10 78.54
+   * - 7
+     - 38.485
+
+   * - 8
+     - 50.265
+
+   * - 10
+     - 78.54
+
 
 FILE: TOLSPATIAL.DAT
+~~~~~~~~~~~~~~~~~~~~
 
 SPATIALLY VARIABLE TOLLERANCE VALUES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the TOLSPATIAL.DAT File
+   TOLSPATIAL.DAT File Variables
+
+4554 0.12 Line 1: **IDUM (I) TOL**
+
+   TOLSPATIAL.DAT File Example
+
+   4554 0.5
+
+   4556 0.5
+
+   4557 0.5
+
+   4889 0.5
+
+   ...
+
+**Variable Descriptions for the TOLSPATIAL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the TOLSPATIAL.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IDUM(I)
+     - **i**
+     - **1 - NNOD**
+     - Nodes that have a spatially variable TOL value.
+
+   * - TOL
+     - **r**
+     - **0.001
+       - 5.**
+     - Spatially variable TOL value (ft or m) that can range from
+
+       0.001 ft to 5 ft (0.0003 m to 1.52 m)
+
+
+**Instructional Comments for the TOLSPATIAL.DAT File**
 
 1. The TOLSPATIAL.DAT file can be used to create spatially variable depression storage.
    The TOL value prescribes the flow depth for a floodplain or channel grid element below which no flood routing will be performed.
@@ -5833,16 +7301,75 @@ Instructional Comments for the TOLSPATIAL.DAT File
 2. Global TOL is used if where a TOLSPATIAL.DAT grid element is not applied.
 
 FILE: WSURF.DAT
+~~~~~~~~~~~~~~~
 
 WATER SURFACE ELEVATION COMPARISON
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-chaPter 4 InPut fIles
+   WSURF.DAT File Variables
 
-Variable Descriptions for the WSURF.DAT File
+10 Line 1: **NWSGRIDS**
+
+4025 200.25 Line 2: **IGRIDXSEC(M) WSELEV(M)**
+
+   WSURF.DAT File Example
+
+   10
+
+   139 4793.00
+
+   1521 4786.00
+
+   4099 4775.00
+
+   5713 4767.00
+
+   7611 4760.00
+
+   9183 4752.00
+
+   10751 4745.00
+
+   12442 4736.00
+
+   14079 4730.00
+
+   15977 4722.00
+
+   18061 4711.00
+
+**Variable Descriptions for the WSURF.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the WSURF.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IGRIDXSEC(M)
+     - **i**
+     - **1 - NNOD**
+     - Nodes that have a known water surface elevation.
+
+   * - NWSGRIDS
+     - **i**
+     - **1 - NNOD**
+     - Number of rows in the table of water surface elevations.
+
+   * - WSELEV
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Water surface elevation at a given time.
+       (ft or m)
+
+
+**Instructional Comments for the WSURF.DAT File**
 
 1. The WSURF.DAT file is used as a calibration tool.
    It is set up with a known peak water surface elevation.
@@ -5855,16 +7382,83 @@ Instructional Comments for the WSURF.DAT File
    It is created by the user in a text editor program.
 
 FILE: WSTIME.DAT
+~~~~~~~~~~~~~~~~
+
+.. _water-surface-elevation-comparison-1:
 
 WATER SURFACE ELEVATION COMPARISON
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Data InPut
+**WSTIME.DAT File Variables**
 
-Variable Descriptions for the WSTIME.DAT File
+10 Line 1: NWSGRIDS
+
+4025 200.25 12.5 Line 2: IGRIDXSEC(M) WSELEVTIME(M) WSTIME(M)
+
+**WSTIME.DAT File Example**
+
+10
+
+139 4793.00 25
+
+1521 4786.00 25
+
+4099 4775.00 25
+
+5713 4767.00 25
+
+7611 4760.00 25
+
+9183 4752.00 25
+
+10751 4745.00 25
+
+12442 4736.00 25
+
+14079 4730.00 25
+
+15977 4722.00 25
+
+18061 4711.00 25
+
+**Variable Descriptions for the WSTIME.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the WSTIME.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IGRIDXSEC(M)
+     - **i**
+     - **1 - NNOD**
+     - Nodes that have a known water surface elevation.
+
+   * - NWSGRIDS
+     - **i**
+     - **1 - NNOD**
+     - Number of rows in the table.
+
+   * - WSELEVTIME
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Water surface elevation at a given time.
+       (hours)
+
+   * - WSTIME
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Time of known water surface elevation.
+       (hours)
+
+
+**Instructional Comments for the WSTIME.DAT File**
 
 1. The WSTIME.DAT file is used as a calibration tool.
    It is set up with a known water surface elevation and peak discharge time.
@@ -5876,14 +7470,58 @@ Instructional Comments for the WSTIME.DAT File
    It is created by the user in a text editor program.
 
 FILE: TIMDEPCELL.DAT
+~~~~~~~~~~~~~~~~~~~~
 
 ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the TIMDEPCELL.DAT File
+   TIMDEPCELL.DAT File Variables
+
+1521 Line 1: **IGRID(I)**
+
+   TIMDEPCELL.DAT File Example
+
+   1521
+
+   4099
+
+   5713
+
+   7611
+
+   9183
+
+   10751
+
+   12442
+
+   14079
+
+   15977
+
+   18061
+
+**Variable Descriptions for the TIMDEPCELL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the TIMDEPCELL.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - Nodes selected to generate the variable time output.
+
+
+**Instructional Comments for the TIMDEPCELL.DAT File**
 
 1. A time series of specific grid cell hydraulics can be created by generating the TIMDEPCELL.DAT file with a list of the grid cells.
    Change the ITIMTEP to 5 in the CONT.DAT file.
@@ -5895,30 +7533,62 @@ Instructional Comments for the TIMDEPCELL.DAT File
    It is created by the user in a text editor.
 
 FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW N
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   SHALLOWN_SPATIAL.DAT File Variables
+
+1521 0.100 Line 1: **IGRID(I) SHALLOWN(I)**
+
+   SHALLOWN_SPATIAL.DAT File Example
+
+   1521 0.200
+
+   4099 0.150
+
+   5713 0.220
+
+   7611 0.250
+
+   9183 0.190
 
 Variable Descriptions for the SHALLOWN_SPATIAL File
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-IGRID(I) i 1 - NNOD Nodes selected to assign spatially variable shallow
-n.
 
-SHALLOWN(I) r 0.01 - 0.99 Spatially variable shallow n-value (see comment 1)
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-Instructional Comments for the SHALLOWN_SPATIAL File
+   * - IGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - Nodes selected to assign spatially variable shallow n.
+
+   * - SHALLOWN(I)
+     - **r**
+     - **0.01
+       - 0.99**
+     - Spatially variable shallow n-value (see comment 1)
+
+
+**Instructional Comments for the SHALLOWN_SPATIAL File**
 
 1. To improve the timing of the floodwave progression through the grid system, a depth variable roughness can be assigned.
    The basic equation for the grid element roughness nd as function of flow depth is:
 
 nd = nb \*1.5 \* e -(0.4 depth/dmax)
 
-where:
+   where:
 
-nb = bankfull discharge roughness depth = flow depth
+   nb = bankfull discharge roughness depth = flow depth
 
-dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+   dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
 This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
 roughness elements (assumed to be 3 ft or 1 m).
@@ -5931,52 +7601,128 @@ Assigning a ROUGHADJ value may reduce unexpected high Froude numbers.
 
 The following rules apply:
 
-If the
+   If the
 
-0.0 < flow depth < 0.2 ft (0.06 m) n = SHALLOWN value
+   0.0 < flow depth < 0.2 ft (0.06 m) n = SHALLOWN value
 
-0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m) n = SHALLOWN/2.
+   0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m) n = SHALLOWN/2.
 
-0.5 ft (0.15 m) < flow depth < 3 ft (1 m) n = nb \*1.5 \* e-(0.4 depth/dmax)
+   0.5 ft (0.15 m) < flow depth < 3 ft (1 m) n = nb \*1.5 \* e-(0.4 depth/dmax)
 
-3 ft (1 m) < flow depth n = n-value in MANNINGS_N.DAT
+   3 ft (1 m) < flow depth n = n-value in MANNINGS_N.DAT
 
 FILE: GUTTER.DAT
+~~~~~~~~~~~~~~~~
 
 FLOODPLAIN STREET ELEMENT GUTTER DATA
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the GUTTER File
+   GUTTER.DAT File Variables
+
+   2 0.67 0.020 Line 1: **STRWIDTH CURBHEIGHT STREET_n-VALUE**
+
+   G 4525 25.0 0.67 0.025 8 Line 2: **GUTTERCHAR IGRID(I) WIDSTR(I)**
+
+   **CURBHT(I) XNSTR(I) ICURBDIR(J=1-8)**
+
+   I = number of grid elements with gutters J = curbside flow direction
+
+Notes:
+
+Repeat line 2 for each assigned gutter element.
+
+   GUTTER.DAT File Example
+
+   20.0 0.67 0.020
+
+   20 20.
+   0.67 0.025 1
+
+   27 20.
+   0.67 0.030 1
+
+   28 20.
+   0.67 0.025 1
+
+   29 20.
+   0.67 0.020 1
+
+   30 20.
+   0.67 0.020 1
+
+   50 10.
+   0.67 0.025 5
+
+**Variable Descriptions for the GUTTER File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-CURBHEIGHT r 0 – 1 Global assignment of the curb height to all the gutter elements (ft or m).
-See comment 6.
 
-CURBHT(K) r 0 – 1 Individual gutter element curb height that supersedes CURBHEIGHT (ft or m).
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-GUTTERCHAR c G Character line identifier for the gutter new line data.
-Variable is case sensitive and it must be upper case.
+   * - CURBHEIGHT
+     - **r**
+     - **0 – 1**
+     - Global assignment of the curb height to all the gutter elements (ft or m).
+       See comment 6.
 
-ICURBDIR i 1 - 8 The side of the gutter element that the curb is located.
-This is one of the eight flow directions (see comment 2).
+   * - CURBHT(K)
+     - **r**
+     - **0 – 1**
+     - Individual gutter element curb height that supersedes CURBHEIGHT (ft or m).
 
-IGRID(I) i 1 - NNOD Floodplain grid element number (see comment 1).
+   * - GUTTERCHAR
+     - **c**
+     - **G**
+     - Character line identifier for the gutter new line data.
+       Variable is case sensitive and it must be upper case.
 
-STRWIDTH r 0 – 100 Global assignment of the street width to all gutter elements (ft or m).
+   * - ICURBDIR
+     - **i**
+     - **1 - 8**
+     - The side of the gutter element that the curb is located.
+       This is one of the eight flow directions (see comment 2).
 
-STREET_n-VALUE r 0.01 - 0.5 Global assignment of the street n-value to all gutter elements.
-See comment 4.
+   * - IGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - Floodplain grid element number (see comment 1).
 
-WIDSTR(K) r 0 – 100 Street width for individual gutter elements.
-WIDSTR supersedes STRWIDTH (ft or m).
-See comment 3.
+   * - STRWIDTH
+     - **r**
+     - **0 – 100**
+     - Global assignment of the street width to all gutter elements (ft or m).
 
-XNSTR(K) r 0.01 - 0.5 Street n-values for individual gutter elements.
-Supersedes STREET_n-value.
+   * - STREET_n-VALUE
+     - **r**
+     - **0.01
+       - 0.5**
+     - Global assignment of the street n-value to all gutter elements.
+       See comment 4.
 
-Instructional Comments for the GUTTER File
+   * - WIDSTR(K)
+     - **r**
+     - **0 – 100**
+     - Street width for individual gutter elements.
+       WIDSTR supersedes STRWIDTH (ft or m).
+       See comment 3.
+
+   * - XNSTR(K)
+     - **r**
+     - **0.01
+       - 0.5**
+     - Street n-values for individual gutter elements.
+       Supersedes STREET_n-value.
+
+
+**Instructional Comments for the GUTTER File**
 
 1. The gutter elements are street elements defined by the floodplain (not street component) where the flow in the street will be based on the gutter
    height and a hard coded 2% cross slope in the street (triangular flow area).
@@ -5984,23 +7730,22 @@ Instructional Comments for the GUTTER File
    The discharge in the gutter flow area defined by the GUTTER.DAT file parameters is routed between gutter elements.
    This gutter routing algorithm is not the storm drain curb height option that only increases the head on the storm drain inlet.
    For the curb height option, the flow is still routed as a rectangular flow overland flow between street grid elements.
+   The gutter is assigned to one of the 8 sides of the gutter element.
+   The following rules govern the flow exchange of gutter street element with the other elements when the flow depth in the gutter element exceeds the
+   tolerance value (TOL):
 
-· The gutter is assigned to one of the 8 sides of the gutter element.
-The following rules govern the flow exchange of gutter street element with the other elements when the flow depth in the gutter element exceeds the
-tolerance value (TOL):
+- The flow is exchanged with a contiguous gutter element based on the flow depth against the curb.
 
-· The flow is exchanged with a contiguous gutter element based on the flow depth against the curb.
+- The flow is shared with a street element without a gutter based on the average depth between the two contiguous elements.
 
-· The flow is shared with a street element without a gutter based on the average depth between the two contiguous elements.
+- The flow is shared with a contiguous floodplain element that is not a street and is not a curb flow direction based on the average flow depth between
+  the two contiguous elements.
 
-· The flow is shared with a contiguous floodplain element that is not a street and is not a curb flow direction based on the average flow depth
-between the two contiguous elements.
-
-· If the flow direction is the curb direction or one of the two diagonal directions associated with the curb direction, the flow is first ex- changed
-to the sidewalk area within the gutter element when the flow depth exceeds the curb height.
-This exchange occurs in either direction from the street to the sidewalk or from the sidewalk to the street.
-After the internal flow exchange within the gutter element is complete the overland flow between the sidewalk area and the contiguous floodplain
-element in the curb direction is exchanged based on the average flow depth between the two grid elements.
+- If the flow direction is the curb direction or one of the two diagonal directions associated with the curb direction, the flow is first ex- changed to
+  the sidewalk area within the gutter element when the flow depth exceeds the curb height.
+  This exchange occurs in either direction from the street to the sidewalk or from the sidewalk to the street.
+  After the internal flow exchange within the gutter element is complete the overland flow between the sidewalk area and the contiguous floodplain
+  element in the curb direction is exchanged based on the average flow depth between the two grid elements.
 
 2. If the street width (WIDSTR) exceeds the grid element width, then the street width is limited to 0.90 times the grid element width to allow for the
    sidewalk surface area.
@@ -6012,14 +7757,86 @@ element in the curb direction is exchanged based on the average flow depth betwe
 4. The spatially variable or individual element assigned street width, curb height and n-value supersede the global values.
 
 FILE: BUILDING_COLLAPSE.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 BUILDING COLLAPSE PARAMETERS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the BUILDING_COLLAPSE.DAT File
+   BUILDING_COLLAPSE.DAT File Variables
+
+0 Line 2: **IARFSMASHGLOBAL**
+
+4025 1 Line 2: **IG(M) IARFSMASH(M)**
+
+   M = number of grid elements to be considered for collapse IG = grid element
+
+   BUILDING_COLLAPSE.DAT File Example
+
+   0
+
+   4563 2
+
+   6756 1
+
+   23145 1
+
+   23146 2
+
+   23147 3
+
+   25331 4
+
+   26345 1
+
+   …
+
+**Variable Descriptions for the BUILDING_COLLAPSE.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the BUILDING_COLLAPSE.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IG(M)
+     - **i**
+     - **1 - NNOD**
+     - Individual grid elements with building that are to be as- signed a vulnerability curve for potential collapse.
+
+   * - IARFSMASHGLOBAL
+     - **i**
+     - **1 - 4**
+     - Building global vulnerability curve (see Comment 1).
+
+       1 = Poor
+
+       2 = Moderate
+
+       3 = Good
+
+       4 = Clausen and Clark
+
+   * - IARFSMASH
+     - **i**
+     - **1 - 4**
+     - Individual global vulnerability curve (see Comment 1).
+
+       1 = Poor
+
+       2 = Moderate
+
+       3 = Good
+
+       4 = Clausen and Clark
+
+
+**Instructional Comments for the BUILDING_COLLAPSE.DAT File**
 
 1. During a flood event or a mud/debris flow, it is possible that a building could collapse and be removed.
    To predict the collapse of a building during flooding vulnerability curves are applied.
@@ -6032,14 +7849,85 @@ Instructional Comments for the BUILDING_COLLAPSE.DAT File
    in the ARF.DAT file.
 
 FILE: OUTRC.DAT
+~~~~~~~~~~~~~~~
 
 SURFACE WATER RATING TABLES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the OUTRC.DAT File
+   OUTRC.DAT File Variables
+
+N 13562 Line 1: **IVOLSTOCHAR NNODSTOVO**
+
+P 1.25 20.5 Line 2: **IVOLSTOCHAR DEPTHRT(I,K) VOLRT(I,K)**
+
+   I = Depths
+
+   K = Volume corresponding to I depths.
+
+   OUTRC.DAT File Example
+
+   N 25146
+
+   P 0.00 0.00
+
+   P 1.00 5.25
+
+   P 2.00 25.2
+
+   P 3.00 100.32
+
+   P 4.00 180.5
+
+   ...
+
+   P 20.5 736.00
+
+   N 14079
+
+   P 0.00 0.00
+
+   P 1.00 2.50
+
+   ...
+
+**Variable Descriptions for the OUTRC.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the OUTRC.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IGRIDXSEC(M)
+     - **c**
+     - **N or P**
+     - N = Node line
+
+       P = storage rating table pairs.
+
+   * - NODDSTOVO
+     - **i**
+     - **1 - NNOD**
+     - Grid element with a storage volume rating table (see comment 1).
+
+   * - DEPTHRT
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Increment flow depth for the volumetric rating table above the lowest elevation in the grid element topographic data base.
+
+   * - VOLRT
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Volume for each incremental depth.
+
+
+**Instructional Comments for the OUTRC.DAT File**
 
 1. Grid element storage volume rating tables defines variable volume as a function of flow depth instead of a cell having one uniform elevation.
    This enables the digital terrain data base within to be represented.
@@ -6049,14 +7937,59 @@ Instructional Comments for the OUTRC.DAT File
    The FLO-2D model will read this file if it is present.
 
 FILE: CHAN_INTERIOR_NODES.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ARRAY OF INTERIOR GRID ELEMENTS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the CHAN_INTERIOR_NODES.DAT File
+   CHAN_INTERIOR_NODES.DAT File Variables
+
+1521 Line 1: **IGRID(I)**
+
+   CHAN_INTERIOR_NODES.DAT File Example
+
+   1521
+
+   4099
+
+   5713
+
+   7611
+
+   9183
+
+   10751
+
+   12442
+
+   14079
+
+   15977
+
+   18061
+
+**Variable Descriptions for the CHAN_INTERIOR_NODES.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the CHAN_INTERIOR_NODES.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IGRID(I)
+     - **i**
+     - **1 - NNOD**
+     - Nodes that represent the interior of the channel.
+       (see Com- ment 1)
+
+
+**Instructional Comments for the CHAN_INTERIOR_NODES.DAT File**
 
 1. This list of cells are the cells that do not exchange flow with the grid system.
    they are removed from the overland routing because they are overlaid by the 1-D channel.
@@ -6065,29 +7998,153 @@ Instructional Comments for the CHAN_INTERIOR_NODES.DAT File
    can be added.
    Use NotePad, NotePad++, or UltraEdit to make adjustments.
 
-FILE: BRIDGE_XSEC.DAT
+ FILE: BRIDGE_XSEC.DAT
+ ~~~~~~~~~~~~~~~~~~~~~
 
 BRIDGE CROSS SECTIONS
+^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the BRIDGE_XSEC.DAT File
+   BRIDGE_XSEC.DAT File Variables
+
+X 6657 Line 1: **XSECCHAR = 'X' IBRIDGE(I)**
+
+0.00 957.08 954.11 Line 2: **XUP(I,J) YUP(I,J) YB(I,J)**
+
+   BRIDGE_XSEC.DAT File Example
+
+   X 6657
+
+   0.00 957.08 954.11
+
+   4.00 957.15 953.48
+
+   10.01 957.16 952.04
+
+   16.02 955.69 950.18
+
+   20.02 954.13 949.50
+
+   22.02 953.38 944.24
+
+   28.03 950.24 942.80
+
+   78.09 944.95 937.26
+
+   88.10 949.16 937.69
+
+   94.11 951.27 939.68
+
+   98.11 953.63 940.94
+
+   102.12 955.43 942.52
+
+   110.12 956.13 945.75
+
+   112.13 955.87 945.87
+
+   118.13 955.86 948.39
+
+   120.14 955.90 954.00
+
+**Variable Descriptions for the BRIDGE_XSEC.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the BRIDGE_XSEC.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IBRIDGE(i)
+     - **I**
+     - **1 - NNOD**
+     - Nodes that represent upstream element of the hydraulic structure.
+       (see Comment 1)
+
+   * - XSECCHAR
+     - **c**
+     - **X**
+     - A character to define a new bridge cross section dataset.
+
+   * - XUP(i,j)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Station left bank to right bank in ft or m.
+
+   * - YUP(i,j)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Upstream cross section elevation ft or m.
+
+   * - YB(i,j)
+     - **r**
+     - **0 -** |CHAPTE002|
+     - Downstream cross section elevation ft or m.
+
+
+**Instructional Comments for the BRIDGE_XSEC.DAT File**
 
 1. This is the grid element listed in HYSTRUC.DAT as an inflow node.
 
 2. See the bridge manual to know where to measure the cross-section data.
 
 FILE: TAILINGS.DAT
+~~~~~~~~~~~~~~~~~~
 
 TAILINGS DEPTH DATA
+^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the TAILINGS.DAT File
+   TAILINGS.DAT File Variables
+
+   7659 10 Line 1: **JGRIDUMMY TAILINGSDEPTH(I)**
+
+   *I = grid element that has a tailings depth assigned.*
+
+Notes:
+
+   Line 1: Repeat this line for each grid element has a tailings depth assigned.
+
+   TAILINGS.DAT File Example
+
+   7650 10
+
+7651 10
+
+7652 10
+
+   ...
+
+**Variable Descriptions for the TAILINGS.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the TAILINGS.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - JGRIDUMMY
+     - **i**
+     - **1 - NNOD**
+     - A grid element for which a tailings depth is assigned.
+
+   * - TAILINGSDEPTH
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Tailings depth for a specific grid element (ft or m).
+
+
+**Instructional Comments for the TAILINGS.DAT File**
 
 1. If tailings dam material is uniform, a single tailings dam depth or elevation is written to INFLOW.DAT file in line R.
    TAILINGSELEV is the 4th parameter of R line INFLOW.DAT file.
@@ -6096,14 +8153,62 @@ Instructional Comments for the TAILINGS.DAT File
    One or multiple cells in the tailings dam storage area might have a different tailings dam depth than uniform TAILINGSELEV read from INFLOW.DAT file.
 
 FILE: TAILINGS_CV.DAT
+~~~~~~~~~~~~~~~~~~~~~
 
 TAILINGS DATA
+^^^^^^^^^^^^^
 
-Variable Descriptions for the TAILINGS_CV.DAT File
+   TAILINGS_CV.DAT File Variables
+
+   7659 995 0.50 Line 1: **IDUM TAILINGSDEPTH(I) CVTFP(JTDUMMY)**
+
+   *I = grid element that has a tailings depth assigned.*
+
+Notes:
+
+   Line 1: Repeat this line for each grid element has a tailings depth assigned.
+
+   TAILINGS_CV.DAT File Example
+
+   7650 10 0.5
+
+   7651 10 0.5
+
+   7652 10 0.3
+
+   ...
+
+**Variable Descriptions for the TAILINGS_CV.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the TAILINGS_CV.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IDUM
+     - **i**
+     - **1 - NNOD**
+     - A grid element for which a tailings depth is assigned.
+
+   * - TAILINGSDEPTH
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Tailings depth for a specific grid element (ft or m).
+
+   * - CVTFP(JT)
+     - **i**
+     - **0 - 0.65**
+     - Concentration of tailing material for a single grid element.
+
+
+**Instructional Comments for the TAILINGS_CV.DAT File**
 
 1. TAILINGS_CV.DAT data file assigns flow depths and sediment concentrations to each FLO-2D grid cell within the tailing dam.
    For the first computation timestep, flow depths and tailings surface elevations are used to compute a surface slope to initiate motion.
@@ -6121,22 +8226,68 @@ Instructional Comments for the TAILINGS_CV.DAT File
    Only a portion of the tailings will actually flow through the breach.
 
 FILE: TAILINGS_STACK_DEPTH.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. _tailings-depth-data-1:
 
 TAILINGS DEPTH DATA
+^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the TAILINGS_STACK_DEPTH.DAT File
+   TAILINGS_STACK_DEPTH.DAT File Variables
+
+   7659 10 5 Line 1: **IDUM FPD(I) FPD_MUD(I)**
+
+   *I = grid element that has a tailings depth assigned.*
+
+Notes:
+
+   In CONT.DAT, If MUD = 1 FPD is water or tailings depth.
+
+   In CONT.DAT, If MUD = 2 FPD is water depth and FPD_MUD is the tailings depth
+
+   TAILINGS_STACK_DEPTH.DAT File Example
+
+Example MUD = 1
+
+   7650 10
+
+   7651 10
+
+   7652 10
+
+   ...
+
+**Variable Descriptions for the TAILINGS_STACK_DEPTH.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-IDUM i 1 - NNOD A grid element for which a tailings depth is assigned.
 
-FPD(I) r 0.01 - Water or mud depth for a specific grid element (ft or m).
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
 
-FPD_MUD(I) r 0.01 - Tailings depth for a specific grid element (ft or m).
+   * - IDUM
+     - **i**
+     - **1 - NNOD**
+     - A grid element for which a tailings depth is assigned.
 
-Instructional Comments for the TAILINGS_STACK_DEPTH.DAT File
+   * - FPD(I)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Water or mud depth for a specific grid element (ft or m).
+
+   * - FPD_MUD(I)
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Tailings depth for a specific grid element (ft or m).
+
+
+**Instructional Comments for the TAILINGS_STACK_DEPTH.DAT File**
 
 1. TAILINGS_STACK_DEPTH.DAT is used to simulate a static or seismic tailings dam failure where the tailings constitute the dam.
    This file will contain the tailing grid elements, water depth on the surface of the tailings and tailings depth.
@@ -6146,45 +8297,89 @@ Instructional Comments for the TAILINGS_STACK_DEPTH.DAT File
 
 2. The TAILINGS_STACK_DEPTH.DAT file can be created using a preparation FLO-2D model simulation in the following sequence:
 
-i. Create the tailings dam using the LEVEE.DAT to encompass the tailings reservoir area.
+i.    Create the tailings dam using the LEVEE.DAT to encompass the tailings reservoir area.
    The grid elevation is pre-dam construction.
 
 ii.
+ii.
 Assign the tailings stack depth using the R-line of INFLOW.DAT file to assign the tailings elevation.
 
+iii.
 iii.
 Set the simulation time SIMUL = 0.001 hr.
 and the output interval TOUT = 0.001 hr in CONT.DAT.
 
 iv.
+iv.
 Run the FLO-2D model to generate the TAILINGS_STACK_DEPTH.
 DAT file.
 
-v. Rename the INFLOW.DAT to INFLOW1.DAT or some other name.
+v.    Rename the INFLOW.DAT to INFLOW1.DAT or some other name.
 
 vi.
 Either turn the LEVEE switch off in CONT.DAT or select those levee crest elements for removal using QGIS.
 
 vii.
-Assign SIMUL = simulation model time with a representative TOUT =
+Assign SIMUL = simulation model time with a representative TOUT = 0.1 or some other value.
 
-0.1 or some other value.
-
-viii.
 viii.
 Run the FLO-2D model again and the assigned stack depths will begin to move at the initiation of the model.
 
 3. A second option is to assign the TAILINGS_STACK_DEPTH.DAT in QGIS and then follow steps vi thru viii above to initiate the stack failure.
 
 FILE: LID_VOLUME.DAT
+~~~~~~~~~~~~~~~~~~~~
 
 LOW IMPACT DEVELOPMENT DATA FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the LID_VOLUME.DAT File
+   LID_VOLUME.DAT File Variables
+
+   7659 10 Line 1: **IDUM LIDVOLUMEMAX(J)**
+
+   *J = grid element that has a LID volume assigned.*
+
+Notes:
+
+   Line 1: Repeat this line for each grid element has an LID volume.
+
+   LID_VOLUME.DAT File Example
+
+   7650 10
+
+7651 10
+
+7652 10
+
+   ...
+
+**Variable Descriptions for the LID_VOLUME.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the LID_VOLUME.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - IDUM
+     - **i**
+     - **1 - NNOD**
+     - A grid element for which a tailings depth is assigned.
+
+   * - LIDVOLUMEMAX
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - A volume assigned to a grid element that acts as a sink.
+       (ft2 or m2).
+
+
+**Instructional Comments for the LID_VOLUME.DAT File**
 
 1. Assign a storage volume to a grid element(s) that must be filled before sharing with other grid elements as overland flow.
    The storage can represent any type of LID facility.
@@ -6196,14 +8391,85 @@ Instructional Comments for the LID_VOLUME.DAT File
    DAT data to represent a LID storage volume because the flow depth will be not added to the grid element when considering rainfall runoff distribution.
 
 FILE: MULTDOMAIN.DAT
+~~~~~~~~~~~~~~~~~~~~
 
 MULTIPLE DOMAIN DATA FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the MULTDOMAIN.DAT File
+   MULTDOMAIN.DAT File Variables
+
+   N 6 Line 1: **OUTCHAR = 'N' NOFDOWNSDOMAIN**
+
+   D 3490 5707 Line 2: **OUTCHAR = 'D' UPSCONNECTIVITY(I,J)**
+
+   **DOWNCONNECTIVITY(I,J)**
+
+Notes:
+
+Line 1: This number is the number of the downstream domain
+
+   MULTDOMAIN.DAT File Example
+
+   N 1
+
+D 9877 1
+
+D 10054 2
+
+D 10231 3
+
+N 2
+
+D 95 7
+
+D 94 8
+
+D 93 9
+
+D 92 10
+
+D 91 11
+
+   ...
+
+**Variable Descriptions for the MULTDOMAIN.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the MULTDOMAIN.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - **NOFDOWNSDO-MAIN**
+     - **r**
+     - **0.01 -** |CHAPTE002|
+     - Downstream domain number.
+
+   * - **OUTCHAR**
+     - **c**
+     - **N or D**
+     - N = Domain number.
+
+       D = Connectivity line.
+
+   * - **UPSCONNEC-TIVITY**
+     - **i**
+     - **1 to NNOD**
+     - Upstream connected node.
+
+   * - **DOWNCON-NECTIVITY**
+     - **i**
+     - **1 to NNOD**
+     - Downstream connected node.
+
+
+**Instructional Comments for the MULTDOMAIN.DAT File**
 
 1. Downstream cells: it can be only 1 as it is shown in the example, or more than
 
@@ -6221,14 +8487,75 @@ Instructional Comments for the MULTDOMAIN.DAT File
    entire simulation, then the cell will not be written to the output file.
 
 FILE: STEEP_SLOPEN.DAT
+~~~~~~~~~~~~~~~~~~~~~~
 
 STEEP SLOPE N VALUE DATA FILE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Variable Descriptions for the STEEP_SLOPEN.DAT File
+   STEEP_SLOPEN.DAT File Variables
+
+   0 Line 1: **ISTEEPN_GLOBAL**
+
+   263 Line 2: **IDUM**
+
+   J = grid element that has a
+
+Notes:
+
+   Line 2: Repeat this line for each grid element has an steep slope.
+
+   STEEP_SLOPEN.DAT File Example
+
+   2
+
+263
+
+236
+
+245
+
+   ...
+
+**Variable Descriptions for the STEEP_SLOPEN.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-Instructional Comments for the STEEP_SLOPEN.DAT File
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - ISTEEPNGLOBAL
+     - **i**
+     - **0, 1, 2**
+     - ISTEEPN_GLOBAL = 0
+
+       No steep slope n-value analysis.
+       It is as if the steep slope meth- ods do not exist.
+
+       ISTEEPN_GLOBAL = 1
+
+       Global assignment to perform the steep slope n-value calcu- lation for all grid elements capable of sharing discharge in at least one of eight flow
+       directions.
+
+       ISTEEPN_GLOBAL = 2
+
+       The spatially variable steep slope n-value analysis is applied to the following list of grid elements beginning with line 2
+
+       of the data file.
+
+   * - IDUM
+     - **i**
+     - **1 - NNOD**
+     - A grid element for which a steep slope adjustment is made.
+
+
+**Instructional Comments for the STEEP_SLOPEN.DAT File**
 
 1. The FLO-2D engine will calculate the water surface slope between two grid elements.
    Each flow direction (1 of 8) is assigned a water surface slope for each computational timestep.
@@ -6242,6 +8569,3 @@ Instructional Comments for the STEEP_SLOPEN.DAT File
 
 4. Apply the steep slope regression equations 1 through 3 for each assigned cell flow direction.
    The most conservative n-value whether the original baseline n- value or the adjusted steep slope n-value will be applied in the FLO-2D model.
-
-.. |CHAPTE002| image:: media\CHAPTE002.jpeg
-   :width: 0.18532in
