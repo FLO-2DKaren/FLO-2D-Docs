@@ -2746,7 +2746,9 @@ INFILTRATION DATA
      - Global Green-Ampt infiltration soil limiting depth storage (ft or m).
 
        Maximum soil depth for infiltration.
-       Set SOILD = 0 to have unlimited infiltration and do not assign spatially variable SOIL_DEPTH(N).
+       Set SOILD = 0 to have unlimited infiltration
+
+       and do not assign spatially variable SOIL_DEPTH(N).
 
    * - SOILS(N)
      - **r**
