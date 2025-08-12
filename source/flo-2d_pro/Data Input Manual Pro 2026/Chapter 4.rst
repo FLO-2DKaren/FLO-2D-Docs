@@ -1835,7 +1835,7 @@ OUTFLOW HYDROGRAPH DATA
    This is a simple method to ensure that backwater related to artificial boundary conditions does not occur in the
    upstream elements.
 
-3. Channel boundary outflow condition may be established by specifying a stage- discharge relationship given by
+3. Channel boundary outflow condition may be established by specifying a stage- discharge relationship given by;
 
     .. math::
         :label:
@@ -1881,8 +1881,12 @@ OUTFLOW HYDROGRAPH DATA
 
 
 FILE: RAIN.DAT
+~~~~~~~~~~~~~~
 
 RAINFALL DATA
+^^^^^^^^^^^^^^^^^^
+
+
 
 Variable Descriptions for the RAIN.DAT File
 
