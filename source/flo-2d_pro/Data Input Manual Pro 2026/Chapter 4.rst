@@ -2416,10 +2416,10 @@ INFILTRATION DATA
                                                      RTIMPF(IF)   SOIL_DEPTH(IF)</b>
                                                      <i>F =  1 - number of infiltration data sets</i>
          S  320   82.00                     Line 7:  <b>INFILCHAR = ‘S’  INFGRID(IF)  SCSCN(IF)</b>
-        C  2   0.04                         Line 8:  <b>INFILCHAR = ‘C’  INFCH(N)   HYDCONCH(N)</b>
-        I  5.0   1.0   0.0007               Line 9:  <b>INFILCHAR = ‘I’  FHORTONI   FHORTONF
+         C  2   0.04                         Line 8: <b>INFILCHAR = ‘C’  INFCH(N)   HYDCONCH(N)</b>
+         I  5.0   1.0   0.0007               Line 9: <b>INFILCHAR = ‘I’  FHORTONI   FHORTONF
                                                      DECAYA</b>
-        H  3450   3.0   0.5   0.00018      Line 10:  <b>IFILCHAR = ‘H’  INFGRID(IF)
+         H  3450   3.0   0.5   0.00018      Line 10:  <b>IFILCHAR = ‘H’  INFGRID(IF)
                                                      FHORTI(INFGRID(IF))   FHORTF(INFGRID(IF))
                                                      DECA(INFGRID(IF))</b>
                                                      <i>IF =  1 - number of Horton infiltration elements</i>
@@ -2473,25 +2473,282 @@ INFILTRATION DATA
 
     <br><br>
 
-.. list-table::
-    :widths: 25 25 25 25
-    :header-rows: 0
 
-    * - **VARIABLE**
-      - **FMT**
-      - **RANGE**
-      - **DESCRIPTION**
-
-
-.. raw:: html
-
-    <br><br>
 
 
 **Variable Descriptions for the INFIL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
+
+   * - VARIABLE
+     - FMT
+     - RANGE
+     - DESCRIPTION
+
+   * - ABSTR
+     - **r**
+     - **0 - 1**
+
+       **0 - 25**
+     - Green Ampt global floodplain rainfall abstraction or interception (inches or mm) (see comments 1 and 7).
+
+       Horton infiltration also uses this variable for initial abstraction.
+
+   * - ABSTRINF(N)
+     - **r**
+     - **0 - 1**
+
+       **0 - 25**
+     - Grid element rainfall abstraction (inches or mm).
+
+   * - ABSTR1
+     - **r**
+     - **0 - 1**
+
+       **0 - 25**
+     - SCS global floodplain rainfall abstraction or interception (inches or mm).
+       Assign ABSTRSCS = 0 for automatic computation of the initial abstraction (see comments 7 and 10).
+
+   * - DECA(INFGRID(IF))
+     - **r**
+     - **0.0007 -**
+
+       **0.0018**
+     - Horton’s equation spatially variable decay coefficient (1/ second; no metric) (see comment 14).
+
+   * - DECAYA
+     - **r**
+     - **0.0007 -**
+
+       **0.0018**
+     - Horton’s equation decay coefficient (1/second; no metric) (see comment 14).
+
+   * - DTHETA(N)
+     - **r**
+     - **0.0 - 1**
+
+       **0.0 - 0.5**
+     - The grid element soil moisture deficit (SATF-SATI) is ex- pressed as a decimal with a range from 0.0 to 1.0.
+       It can also represent the grid element volumetric soil moisture deficit that is defined as the soil moisture deficit multiplied by the porosity (SATF-
+       SATI)*POROS with a range from 0.3 to 0.5 (see comment 11).
+       Set POROS = 0 for the volumetric soil moisture deficiency.
+
+   * - DTHETAC(I)
+     - **r**
+     - **0.0 - 1**
+
+       **0.0 - 0.5**
+     - The channel segment or reach soil moisture deficit (SATF- SATI) is expressed as a decimal with a range from 0.0 to
+
+       1.0.
+       It can also represent the channel reach volumetric soil moisture deficit that is defined as the soil moisture deficit multiplied by the porosity
+       (SATF-SATI)*POROS with a range from 0.3 to 0.5 (see comment 11).
+       Set POROS = 0 for
+
+       the volumetric soil moisture deficiency.
+
+   * - FHORTF(INFGRID(IF))
+     - **r**
+     - **0.5 - 1.0**
+     - Horton’s equation spatially variable floodplain final infiltration rate (inches/hr; no metric).
+
+   * - FHORTI(INFGRID(IF))
+     - **r**
+     - **3.0 - 5.0**
+     - Horton’s equation spatially variable floodplain initial infiltration rate (inches/hr, no metric).
+
+   * - FHORTONF
+     - **r**
+     - **0.5 - 1.0**
+     - Global Horton’s equation final infiltration rate (inches/hr; no metric)
+
+   * - FHORTONI
+     - **r**
+     - **3.0 - 5.0**
+     - Global Horton’s equation initial infiltration rate (inches/hr; no metric) (see comment 14).
+
+   * - HYDC(N)
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Grid element average hydraulic conductivity (inches/hr or mm/hr) (see comments 2, 4 and 5).
+
+   * - HYDCALL
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Average global floodplain hydraulic conductivity (inches/hr or mm/hr).
+
+   * - HYDCADJ
+     - **r**
+     - **0.01 - 1**
+
+       **1 - 100**
+
+       **-2.0 - (-1.0)**
+     - Hydraulic conductivity adjustment variable for spatially variable hydraulic conductivity:
+
+       0.01 – 1; HYDCON = HYDCON + HYDCADJ
+
+       1 – 100; HYDCON = HYDCON \* HYDCADJ
+
+       -2 TO -1; HYDCON = HYDCON \* 2.HYDCADJ
+
+   * - HYDCHN
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Average global hydraulic conductivity for the entire channel (inches/hr or mm/hr) (see comment 8).
+
+   * - HYDCHN(I)
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Channel reach hydraulic conductivity channel (inches/hr or mm/hr) (see comment 8).
+
+   * - HYDCONCH(N)
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Hydraulic conductivity for a channel element (inches/hr or mm/hr).
+
+   * - HYDCX(IC)
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Initial hydraulic conductivity for a channel segment (inches/ hr or mm/hr) (see comment 15).
+
+   * - HYDCXFINAL(IC)
+     - **r**
+     - **0.01 - 10**
+
+       **0.25 - 250**
+     - Final hydraulic conductivity for a channel segment (inches/ hr or mm/hr).
+
+   * - INFCH(N)
+     - **i**
+     - **1 - NNOD**
+     - Array of channel elements with a unique hydraulic conductivity
+
+   * - INFCHAN
+     - **s**
+     - **0 = off**
+
+       **1 = on**
+     - Set switch to 1 to simulate channel infiltration (comment 6).
+
+   * - INFGRID(IF)
+     - **i**
+     - **1 - NNOD**
+     - Array of floodplain grid elements with individual infiltration parameters (see comment 3).
+
+   * - INFILCHAR(N)
+     - **c**
+     - **F, S, C, R, I, H**
+     - ‘F’ = spatially variable floodplain Green-Ampt data (Line 6), ‘S’ = floodplain spatially variable SCS curve number (Line 7);
+
+       ‘C’ = channel spatially variable channel infiltration (Line 8); ‘R’ = channel reach infiltration data (Line 4 and 4a);
+
+       ‘I’ = Horton global parameters (Line 9);
+
+       ‘H’ = Horton spatially variable floodplain data (Line 10).
+
+       Variable is case sensitive and it must be upper case.
+
+   * - INFMETHOD
+     - **s**
+     - **1, 2, 3 or 4**
+     - 1: Green-Ampt method;
+
+       2: SCS curve number method;
+
+       3: Combined Green-Ampt and CN methods;
+
+       4: Horton method.
+
+   * - POROS
+     - **r**
+     - **0.3 - 0.5**
+     - Global floodplain soil porosity.
+       If using the volumetric soil moisture deficiency for DTHETA, set POROS =
+       0.
+
+   * - RTIMPF(N)
+     - **r**
+     - **0.0 - 1**
+     - Percent impervious floodplain area on a grid element.
+
+   * - SATF
+     - **r**
+     - **0.5 - 1**
+     - Global final saturation of the soil (decimal percentage) for computing infiltration.
+
+   * - SATI
+     - **r**
+     - **0.0 - 0.95**
+     - Global initial saturation of the soil (decimal percentage).
+
+   * - SCSCNALL
+     - **r**
+     - **1 - 99**
+     - Global floodplain SCS curve number for infiltration (see comment 9).
+       The variable can range from 1 to 99 but use engineering judgment.
+       Values lower than 67 will result in an excessive loss and variables higher than 99 will be reset to 99.
+
+   * - SCSCN(N)
+     - **r**
+     - **1 - 99**
+     - SCS curve numbers for spatially variable infiltration of the floodplain grid elements.
+       The variable can range from 1 to 99 but use engineering judgment.
+       Values lower than 67 will result in an excessive loss and variables higher than 99 will be reset to 99.
+
+   * - SOIL\_DEPTH(N)
+     - **r**
+     - **0.0 - 100.**
+     - Spatially variable Green-Ampt infiltration soil limiting depth storage (ft or m).
+       Maximum soil depth for infiltration on a grid element (see comment 12).
+
+   * - SOIL\_DEPTHCX(IC)
+     - **r**
+     - **0.0 - 100.**
+     - Maximum soil depth for the initial channel infiltration.
+       When SOIL_DEPTHCX is exceeded, the exponential decay from the initial hydraulic conductivity to the final hydraulic conductivity begins (see comment
+       12).
+
+   * - SOILD
+     - **r**
+     - **0.0 - 100.**
+     - Global Green-Ampt infiltration soil limiting depth storage (ft or m).
+       Maximum soil depth for infiltration.
+       Set SOILD
+
+       = 0 to have unlimited infiltration and do not assign spatially
+
+       variable SOIL_DEPTH(N).
+
+   * - SOILS(N)
+     - **r**
+     - **1 - 20**
+
+       **25 - 500**
+     - Capillary suction head for floodplain grid elements (inches or mm).
+
+   * - SOILALL
+     - **r**
+     - **1 - 20**
+
+       **25 - 500**
+     - Average global floodplain capillary suction head (inches or mm).
 
 **Instructional Comments for the INFIL.DAT File**
 
