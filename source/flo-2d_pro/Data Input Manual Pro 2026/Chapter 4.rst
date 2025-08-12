@@ -1531,7 +1531,7 @@ INFLOW HYDROGRAPH DATA
       - 0 - ∞
 
         0 - (-∞)
-      -Water surface elevation (ft or m) of the reservoir or ponded water area.
+      - Water surface elevation (ft or m) of the reservoir or ponded water area.
 
         Negative water surface elevation assigns the reservoir bed elevations below the breach foundation elevation
 
