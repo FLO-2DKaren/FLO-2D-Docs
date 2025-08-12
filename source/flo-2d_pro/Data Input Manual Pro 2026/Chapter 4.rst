@@ -2072,10 +2072,45 @@ RAINFALL DATA
    The realtime rainfall (spatially and temporally variable) is also reduced by the RAINARF value over each rainfall interval.
 
 
+.. raw:: html
 
+    <br><br>
 
 
 FILE: RAINCELL.DAT
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre> RAINCELL.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         15   96  1/1/2000     12:00:00 AM   1/2/2000     12:00:00 AM
+                                        Line 1: RAININTIME   IRINTERS   TIMESTAMP
+         1   0.0                        Line 2: IRAINDUM (I)   RRGRID(I,K)
+        </pre>
+    </div>
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>RAINCELL.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         1             73           4/17/2013     12:00:00 AM   4/20/2013     2:00:00 AM
+         1            0.0
+         2            0.0
+         3            0.0
+         4            0.0
+         5            0.0
+        </pre>
+    </div>
+.. raw:: html
+
+    <br><br>
 
 Variable Descriptions for the RAINCELL.DAT File
 
