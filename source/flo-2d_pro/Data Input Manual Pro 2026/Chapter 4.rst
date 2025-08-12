@@ -2479,6 +2479,7 @@ INFILTRATION DATA
 **Variable Descriptions for the INFIL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
