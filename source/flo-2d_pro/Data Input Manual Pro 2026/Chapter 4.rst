@@ -2473,9 +2473,6 @@ INFILTRATION DATA
 
     <br><br>
 
-
-
-
 **Variable Descriptions for the INFIL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
@@ -2512,7 +2509,9 @@ INFILTRATION DATA
 
        **0 - 25**
      - SCS global floodplain rainfall abstraction or interception (inches or mm).
-       Assign ABSTRSCS = 0 for automatic computation of the initial abstraction (see comments 7 and 10).
+       Assign ABSTRSCS = 0 for automatic computation
+
+       of the initial abstraction (see comments 7 and 10).
 
    * - DECA(INFGRID(IF))
      - **r**
@@ -2534,8 +2533,11 @@ INFILTRATION DATA
 
        **0.0 - 0.5**
      - The grid element soil moisture deficit (SATF-SATI) is ex- pressed as a decimal with a range from 0.0 to 1.0.
-       It can also represent the grid element volumetric soil moisture deficit that is defined as the soil moisture deficit multiplied by the porosity (SATF-
-       SATI)*POROS with a range from 0.3 to 0.5 (see comment 11).
+
+       It can also represent the grid element volumetric soil moisture deficit that is defined as the soil moisture
+
+       deficit multiplied by the porosity (SATF-SATI)*POROS with a range from 0.3 to 0.5 (see comment 11).
+
        Set POROS = 0 for the volumetric soil moisture deficiency.
 
    * - DTHETAC(I)
@@ -2543,14 +2545,15 @@ INFILTRATION DATA
      - **0.0 - 1**
 
        **0.0 - 0.5**
-     - The channel segment or reach soil moisture deficit (SATF- SATI) is expressed as a decimal with a range from 0.0 to
+     - The channel segment or reach soil moisture deficit (SATF- SATI) is expressed as a decimal with a range from
 
-       1.0.
-       It can also represent the channel reach volumetric soil moisture deficit that is defined as the soil moisture deficit multiplied by the porosity
-       (SATF-SATI)*POROS with a range from 0.3 to 0.5 (see comment 11).
-       Set POROS = 0 for
+       0.0 to 1.0.
 
-       the volumetric soil moisture deficiency.
+       It can also represent the channel reach volumetric soil moisture deficit that is defined as the soil moisture
+
+       deficit multiplied by the porosity (SATF-SATI)*POROS with a range from 0.3 to 0.5 (see comment 11).
+
+       Set POROS = 0 for the volumetric soil moisture deficiency.
 
    * - FHORTF(INFGRID(IF))
      - **r**
@@ -2656,9 +2659,13 @@ INFILTRATION DATA
    * - INFILCHAR(N)
      - **c**
      - **F, S, C, R, I, H**
-     - ‘F’ = spatially variable floodplain Green-Ampt data (Line 6), ‘S’ = floodplain spatially variable SCS curve number (Line 7);
+     - ‘F’ = spatially variable floodplain Green-Ampt data (Line 6), ‘S’ = floodplain spatially variable SCS
 
-       ‘C’ = channel spatially variable channel infiltration (Line 8); ‘R’ = channel reach infiltration data (Line 4 and 4a);
+        curve number (Line 7);
+
+       ‘C’ = channel spatially variable channel infiltration (Line 8); ‘R’ = channel reach infiltration data
+
+        (Line 4 and 4a);
 
        ‘I’ = Horton global parameters (Line 9);
 
@@ -2703,39 +2710,43 @@ INFILTRATION DATA
      - **r**
      - **1 - 99**
      - Global floodplain SCS curve number for infiltration (see comment 9).
+
        The variable can range from 1 to 99 but use engineering judgment.
+
        Values lower than 67 will result in an excessive loss and variables higher than 99 will be reset to 99.
 
    * - SCSCN(N)
      - **r**
      - **1 - 99**
      - SCS curve numbers for spatially variable infiltration of the floodplain grid elements.
+
        The variable can range from 1 to 99 but use engineering judgment.
+
        Values lower than 67 will result in an excessive loss and variables higher than 99 will be reset to 99.
 
    * - SOIL\_DEPTH(N)
      - **r**
      - **0.0 - 100.**
      - Spatially variable Green-Ampt infiltration soil limiting depth storage (ft or m).
+
        Maximum soil depth for infiltration on a grid element (see comment 12).
 
    * - SOIL\_DEPTHCX(IC)
      - **r**
      - **0.0 - 100.**
      - Maximum soil depth for the initial channel infiltration.
-       When SOIL_DEPTHCX is exceeded, the exponential decay from the initial hydraulic conductivity to the final hydraulic conductivity begins (see comment
-       12).
+
+       When SOIL_DEPTHCX is exceeded, the exponential decay from the initial hydraulic conductivity to the
+
+       final hydraulic conductivity begins (see comment 12).
 
    * - SOILD
      - **r**
      - **0.0 - 100.**
      - Global Green-Ampt infiltration soil limiting depth storage (ft or m).
+
        Maximum soil depth for infiltration.
-       Set SOILD
-
-       = 0 to have unlimited infiltration and do not assign spatially
-
-       variable SOIL_DEPTH(N).
+       Set SOILD = 0 to have unlimited infiltration and do not assign spatially variable SOIL_DEPTH(N).
 
    * - SOILS(N)
      - **r**
