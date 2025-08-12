@@ -1648,7 +1648,7 @@ OUTFLOW HYDROGRAPH DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                                                       OUTFLOW.DAT File Variables</pre></i></div>
+        <div><i><pre>                                               OUTFLOW.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         K   374                 Line 1: <b>OUTCHAR = ‘K’ KOUT</b>
@@ -1660,8 +1660,8 @@ OUTFLOW HYDROGRAPH DATA
         N   567  1              Line 4:  <b>OUTCHAR = ‘N’ NOSTA NOSTACFP</b>
         S  0.00 0.00            Line 5: <b>OUTCHAR = ‘S’ STA_TIME(J) STA_STAGE(J) J=1 S  0.50 10.00    Line 5: OUTCHAR = ‘S’
                                         STA_TIME(J) STA_STAGE(J) J=2 O  273    Line 6 OUTCHAR = ‘O’ NODDC(J) J=1</b>
-        O1 373                  Line 6:  <b>OUTCHAR = ‘O1’ NODDC(J) J=2</b>
-        O2 374                  Line 6:  <b>OUTCHAR = ‘O2’ NODDC(J) J=3</b>
+        O1 373                  Line 6: <b>OUTCHAR = ‘O1’ NODDC(J) J=2</b>
+        O2 374                  Line 6: <b>OUTCHAR = ‘O2’ NODDC(J) J=3</b>
         O3 567                  Line 6: <b>OUTCHAR = ‘O3’ NODDC(J) J=4</b>
                                          <i>J = number of parameters</i>
 
