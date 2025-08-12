@@ -1932,7 +1932,7 @@ RAINFALL DATA
     </div>
 
 
-Variable Descriptions for the RAIN.DAT File
+**Variable Descriptions for the RAIN.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -1946,77 +1946,104 @@ Variable Descriptions for the RAIN.DAT File
       - **DESCRIPTION**
 
 
-IRAINARF s 0 = off
+    * - IRAINARF
+      - **s**
+      - 0 = off
 
-1 = on IRAINARF = 1 indicates that individual grid element depth- area reduction values will be assigned.
+        1 = on
+      - IRAINARF = 1 indicates that individual grid element depth- area reduction values will be assigned.
 
-IRAINBUILDING
+    * - IRAINBUILDING
+      - **s**
+      - 0 = off
 
-s 0 = off
+        1 = on
+      - IRAINBUILDING = 1 indicates that rainfall on an ARF = 1 grid element will be contributed to the
 
-1 = on IRAINBUILDING = 1 indicates that rainfall on an ARF = 1 grid element will be contributed to the surface water runoff for that element (see
-comment 3).
+        surface water runoff for that element (see comment 3).
 
-IRAINDIR
+    * - IRAINDIR
+      - **i**
+      - 1 thru 8
+      - Direction of the moving storm. Directions are as follows:
 
-i
+        1 = N 5 = NE
 
-1 thru 8 Direction of the moving storm.
-Directions are as follows:
+        2 = E 6 = SE
 
-1 = N 5 = NE
+        3 = S 7 = SW
 
-2 = E 6 = SE
+        4 = W 8 = NW
 
-3 = S 7 = SW
+    * - IRAINREAL
+      - **s**
+      - 0 = off
 
-4 = W 8 = NW
+        1 = on
+      - IRAINREAL = 1 indicates that real-time rainfall (e.g. NEXRAD) will be simulated.
 
-IRAINREAL
+        The RAINCELL.DAT file containing the spatial and temporal rainfall data must be
 
-s
+        prepared by the FLO-2D Plugin.
 
-0 = off
+    * - IRGRID
+      - **i**
+      - 1 - NNOD
+      - Grid element with a spatially defined rainfall depth area reduction value.
 
-1 = on IRAINREAL = 1 indicates that real-time rainfall (e.g. NEXRAD) will be simulated.
-The RAINCELL.DAT file containing the spatial and temporal rainfall data must be prepared by the FLO-2D Plugin.
+        This data is automatically generated in the FLO-2D Plugin.
 
-IRGRID
+    * - MOVINGSTORM
+      - **s**
+      - 0 = off
 
-i
+        1 = on
+      - MOVINGSTORM = 1 indicates that a moving storm will be simulated.
 
-1 - NNOD Grid element with a spatially defined rainfall depth area reduction value.
-This data is automatically generated in the FLO-2D Plugin.
+    * - RAINABS
+      - **r**
+      - 0 - 1
+      - Rainfall interception and abstraction (inches or mm) if infiltration is not being
 
-MOVING- STORM s 0 = off
+        modeled (see comment 2).
 
-1 = on MOVINGSTORM = 1 indicates that a moving storm will be simulated.
+    * - RAINARF
+      - **r**
+      - 0 - 1
+      - Rainfall depth area reduction to create spatially variable rainfall.
 
-RAINABS r 0 - 1 Rainfall interception and abstraction (inches or mm) if infiltration is not being modeled (see comment 2).
+        This data is automatically generated in the FLO-2D Plugin (see comment 4).
 
-RAINARF
+    * - RAINCHAR
+      - **c**
+      - R
+      - Character ‘R’ that identifies Line 3.
 
-r
+        Variable is case sensitive and it must be upper case.
 
-0 - 1 Rainfall depth area reduction to create spatially variable rainfall.
-This data is automatically generated in the FLO-2D Plugin (see comment 4).
+    * - RAINSPEED
+      - **r**
+      - 0 - 100
 
-RAINCHAR c R Character ‘R’ that identifies Line 3.
-Variable is case sensitive and it must be upper case.
+        0 - 50
+      - Storm speed (mph or kph)
 
-RAINSPEED r 0 - 100
+    * - RTT
+      - **r**
+      - 0.0 - ∞
+      - Total storm rainfall (inches or mm).
 
-0 - 50 Storm speed (mph or kph)
+    * - R_TIME(I)
+      - -
+      - 0.0 - ∞
+      - Time (hrs) corresponding to the start of the specified rainfall interval.
 
-RTT r 0.0 - Total storm rainfall (inches or mm).
+    * - R_DISTR(I)
+      - **r**
+      - 0 - 1
+      - Rainfall distribution as a cumulative percentage of the total storm which initiates
 
-R_TIME(I) 0.0 - Time (hrs) corresponding to the start of the specified rainfall interval.
-
-R_DISTR(I)
-
-r
-
-0 - 1 Rainfall distribution as a cumulative percentage of the total storm which initiates at the time interval R_TIME(I) (see comment 1).
+        at the time interval R_TIME(I) (see comment 1).
 
 Instructional Comments for the RAIN.DAT File
 
