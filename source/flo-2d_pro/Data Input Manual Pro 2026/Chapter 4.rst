@@ -2112,29 +2112,51 @@ FILE: RAINCELL.DAT
 
     <br><br>
 
-Variable Descriptions for the RAINCELL.DAT File
+**Variable Descriptions for the RAINCELL.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
 
-IRAINDUM(I) r i - NNOD Repeated set of grid elements for each interval.
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
-IRINTERS r 0.0 - Number of intervals in the dataset.
-There will be a complete set of cell values and rain data repeated for each interval.
+    * - IRAINDUM(I)
+      - **r**
+      - i - NNOD
+      - Repeated set of grid elements for each interval.
 
-RAININTIME
+    * - IRINTERS
+      - **r**
+      - 0.0 - ∞
+      - Number of intervals in the dataset.
 
-r
+        There will be a complete set of cell values and rain data repeated for each interval.
 
-0.0 - Time interval in minutes of the realtime rainfall data.
-This is a single variable in line 1.
-The time interval starts at zero when the simulation starts.
+    * - RAININTIME
+      - **r**
+      - 0.0 - ∞
+      - Time interval in minutes of the realtime rainfall data.
 
-RRGRID(I,K) i 0.0 - Cumulative rainfall in inches or mm over the time interval.
+        This is a single variable in line 1.
 
-TIMESTAMP c Alpha Numeric Timestamp indicates the start and end time of the storm.
-(see comment 3)
+        The time interval starts at zero when the simulation starts.
+
+    * - RRGRID(I,K)
+      - **i**
+      - 0.0 - ∞
+      - Cumulative rainfall in inches or mm over the time interval.
+
+    * - TIMESTAMP
+      - **c**
+      - Alpha Numeric
+      - Timestamp indicates the start and end time of the storm.
+
+        (see comment 3)
 
 Instructional Comments for the RAINCELL.DAT File
 
