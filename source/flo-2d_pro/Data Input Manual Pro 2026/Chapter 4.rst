@@ -2282,41 +2282,112 @@ FLO2DRAINCELL.DAT File
 
 
 FILE: RAINCELLRAW.DAT
+~~~~~~~~~~~~~~~~~~~~~~
 
 RAINCELLRAW.DAT File
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre> RAINCELLRAW.DAT File Variables </pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+          15min   96 intervals          Line 1: RAININTIME   IRINTERS
+          N   10055330                  Line 2: RAINCHAR = ‘N' NXRGD(I)
+          R   0   0                     Line 3: RAINCHAR = ‘R’   R_TIME(K)   RRGRID(I,K) K=1
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre> RAINCELLRAW.DAT File Example </pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+          15min  96 intervals
+         N 10055330
+         R 0 0
+         R 0.25 0
+         R 0.5 0
+         R 0.75 0
+         R 1 0.01
+         R 1.25 0.01
+         R 1.5 0.01
+         R 1.75 0.01
+         R 2 0.01
+         ...
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
+
+**Variable Descriptions for the RAINCELLRAW.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
-VARIABLE FMT RANGE DESCRIPTION
+.. list-table::
+    :widths: 25 25 25 25
+    :header-rows: 0
 
-IRINTERS i 1 - n intervals Number of intervals in the dataset.
-There will be a complete set of cell values and rain data repeated for each interval.
+    * - **VARIABLE**
+      - **FMT**
+      - **RANGE**
+      - **DESCRIPTION**
 
-NXRDGD(I) i i - NNOD NEXRAD grid element.
+    * - IRINTERS
+      - **i**
+      - 1 - n intervals
+      - Number of intervals in the dataset.
 
-RAINCHAR
+        There will be a complete set of cell values and rain data repeated for each interval.
 
-c
+    * - NXRDGD(I)
+      - **i**
+      - i - NNOD
+      - NEXRAD grid element.
 
-N, R Character ‘N’ or ‘R’ that identifies Line 2 and Line 3 to the Number of rainfall lines.
-Variable is case sensitive and it must be upper case.
+    * - RAINCHA
+      - **c**
+      - N, R
+      - Character ‘N’ or ‘R’ that identifies Line 2 and Line 3 to the Number of rainfall lines.
 
-RAININTIME
+        Variable is case sensitive and it must be upper case.
 
-r
+    * - RAININTIME
+      - **r**
+      - 0.0 - ∞
+      - Time interval in minutes of the realtime rainfall data.
 
-0.0 - Time interval in minutes of the realtime rainfall data.
-This is a single variable in line 1.
-The time interval starts at zero when the simulation starts.
+        This is a single variable in line 1.
 
-R_TIME r 0.0 - Time (hrs) corresponding to the start of the specified rainfall interval.
+        The time interval starts at zero when the simulation starts.
 
-RRGRID(I,K) r 0.0 - Cumulative rainfall in inches or mm over the time interval.
+    * - R_TIME
+      - **r**
+      - 0.0 - ∞
+      - Time (hrs) corresponding to the start of the specified rainfall interval.
 
-Instructional Comments for the RAINCELLRAW.DAT File
+    * - RRGRID(I,K)
+      - **r**
+      - 0.0 - ∞
+      - Cumulative rainfall in inches or mm over the time interval.
+
+**Instructional Comments for the RAINCELLRAW.DAT File**
 
 1. This data file stores cumulative rainfall depth for each real-time rainfall grid and at each time interval.
    For each NEXRAD grid a rainfall table of time and depth is required.
+
+
+.. raw:: html
+
+    <br><br>
 
 FILE: INFIL.DAT
 
