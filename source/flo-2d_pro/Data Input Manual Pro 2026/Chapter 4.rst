@@ -4742,65 +4742,59 @@ FILE: ARF.DAT
 FLOODPLAIN AREA WIDTH REDUCTION DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   ARF.DAT File Variables
+   .. raw:: html
 
-   S 0 Line 1: **ITTCHAR = ‘S’ ARFBLOCKMOD**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                               ARF.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        S 0                                 Line 1: <b>ITTCHAR = ‘S’ ARFBLOCKMOD</b>
+        T 49                                Line 1: <b>ITTCHAR = ‘T’ ITTAWF(K)</b>
+        29 .2 .70 .50 1.0 0. 0. 0. 0. 0.    Line 2: <b>IDG(I) ARF(I) WRF(I,J)</b>
+                                                    <i>K = number of totally blocked grid elements
+                                                    I = number of partially blocked grid elements
+                                                    J = 8 flow directions</i>
 
-   T 49 Line 1: **ITTCHAR = ‘T’ ITTAWF(K)**
+        Notes:
+         If IWRFS = 0 in the CONT.DAT file, omit this file.
+         Line 1: Repeat this line for each totally blocked grid element.
+         Line 2: Repeat this line for each partially blocked grid element.
+        </pre>
+    </div>
 
-   29 .2 .70 .50 1.0 0.
-   0.
-   0.
-   0.
-   0.
-   Line 2: **IDG(I) ARF(I) WRF(I,J)**
+.. raw:: html
 
-   *K = number of totally blocked grid elements I = number of partially blocked grid elements J = 8 flow directions*
+    <br><br>
 
-Notes:
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>ARF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        S 0.
+        T 540
+        T 2502
+        T 3818
+        T 3861
+        T 4435
+        T 4766
+          46 .1 0 .5 0 .5 0 0 0 0
+          69 .3 0 0 0 0 0 0 0 0
+          119 .4 .5 .7 1 0 0 0 0 0
+          120 0 0 0 0 1 0 .2 0 0
+          142 .2 .2 0 0 0 0 0 0 0
+          161 .5 0 0 0 0 0 0 0 0
+          162 .5 .7 .2 1 0 0 0 0 1
+          163 .1 0 0 0 1 0 0 0 0
+          182 .3 0 0 0 0 0 0 .3 0
+          ....
+        </pre>
+    </div>
 
-   If IWRFS = 0 in the CONT.DAT file, omit this file.
+.. raw:: html
 
-   Line 1: Repeat this line for each totally blocked grid element.
-   Line 2: Repeat this line for each partially blocked grid element.
+    <br><br>
 
-**ARF.DAT File Example**
-
-S 0.
-
-T 540
-
-T 2502
-
-T 3818
-
-T 3861
-
-T 4435
-
-T 4766
-
-46 .1 0 .5 0 .5 0 0 0 0
-
-69 .3 0 0 0 0 0 0 0 0
-
-119 .4 .5 .7 1 0 0 0 0 0
-
-120 0 0 0 0 1 0 .2 0 0
-
-142 .2 .2 0 0 0 0 0 0 0
-
-161 .5 0 0 0 0 0 0 0 0
-
-162 .5 .7 .2 1 0 0 0 0 1
-
-163 .1 0 0 0 1 0 0 0 0
-
-182 .3 0 0 0 0 0 0 .3 0
-
-....
-
-Variable Descriptions for the ARF.DAT File
+**Variable Descriptions for the ARF.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -4809,10 +4803,10 @@ Variable Descriptions for the ARF.DAT File
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - ARF(I)
      - **r**
@@ -4821,8 +4815,13 @@ Variable Descriptions for the ARF.DAT File
        **or**
 
        **-1 - 0**
-     - Area reduction factors (ARF) is the percent of the grid element (I) area that cannot be covered by surface flows.
-       Buildings or other physical features within the grid element that cannot store flow volume are accounted by using the ARF value.
+     - Area reduction factors (ARF) is the percent of the grid element (I) area that cannot be
+
+       covered by surface flows.
+       Buildings or other physical features within the grid element that cannot store flow volume
+
+       are accounted by using the ARF value.
+
        The maximum ARF value is limited according to cell size (see comments 1 and 3).
 
        If the value is negative, the building collapse function is turned on (see comment 5).
@@ -4831,8 +4830,12 @@ Variable Descriptions for the ARF.DAT File
      - **r**
      - **0.
        - 1.**
-     - Global revision to the ARF = 1 value to the grid elements that are total blocked from receiving any flow (ITTAWF elements).
+     - Global revision to the ARF = 1 value to the grid elements that are total blocked from
+
+       receiving any flow (ITTAWF elements).
+
        Setting IARFBLOCKMOD = 0.9 will change the ARF = 1.
+
        to ARF = 0.9 for all the ITTAWF elements (see comment 4).
 
    * - IGD(I)
@@ -4844,7 +4847,9 @@ Variable Descriptions for the ARF.DAT File
      - **i**
      - **1 - NNOD**
      - Grid elements that will not receive any flow.
+
        Each grid element is totally blocked out and all ARF and WRF values are set equal to 1.0.
+
        If this value is negative, the building collapse feature is turned on for the entire cell (see comment 5).
 
    * - ITTCHAR
@@ -4859,8 +4864,14 @@ Variable Descriptions for the ARF.DAT File
      - **r**
      - **0 - 1**
      - Width reduction factors (WRF).
-       The width reduction factor corresponds to the percentage of flow width blocked due to obstruction in the eight flow directions.
-       Assuming that the flow field is oriented with the north direction, use the following WRF assignment:
+
+       The width reduction factor corresponds to the percentage of flow width blocked
+
+       due to obstruction in the eight flow directions.
+
+       Assuming that the flow field is oriented with the north direction,
+
+       use the following WRF assignment:
 
        WRF(I,1) = North WRF(I,2) = East WRF(I,3) = South WRF(I,4) = West
 
