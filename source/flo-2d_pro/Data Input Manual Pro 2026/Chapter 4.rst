@@ -4970,6 +4970,10 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
         </pre>
     </div>
 
+.. raw:: html
+
+    <br><br>
+
 **Variable Descriptions for the MULT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
