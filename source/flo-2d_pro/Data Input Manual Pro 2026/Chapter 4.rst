@@ -3400,70 +3400,64 @@ CHANNEL DATA
 9. Use the PROFILES program to review the channel slope and adjust the bed elevations to create a more uniform average channel reach slope.
    The PROFILES program can interpolate cross sections and slope for surveyed cross sections.
 
-10.
-The key to channel routing is to balance the relationship between the slope, flow area and roughness.
-Channel routing is more stable if the natural cross section routing routine is used (SHAPE = N).
-When one cross section is as- signed to several grid elements it will be necessary to interpolate both the slope and the cross-section geometry in the
-PROFILES program to create a smooth average channel slope.
-Review the PROFILES program instructions for cross section and channel bed slope interpolation.
-If there is more than one surveyed cross section per channel element, use the one that has the greatest hydraulic control to represent the channel.
+10. The key to channel routing is to balance the relationship between the slope, flow area and roughness.
+    Channel routing is more stable if the natural cross section routing routine is used (SHAPE = N).
+    When one cross section is as- signed to several grid elements it will be necessary to interpolate both the slope and the cross-section geometry in the
+    PROFILES program to create a smooth average channel slope.
+    Review the PROFILES program instructions for cross section and channel bed slope interpolation.
+    If there is more than one surveyed cross section per channel element, use the one that has the greatest hydraulic control to represent the channel.
 
-11.
-At a channel confluence, the next downstream channel element bed elevation must be lower than the confluence bed elevation creating a positive slope
-down- stream of the confluence.
+11.At a channel confluence, the next downstream channel element bed elevation must be lower than the confluence bed elevation creating a positive slope
+    downstream of the confluence.
 
-12.
-If different bank elevations are assigned, the model automatically extends the channel into separate grid elements, one grid element containing each
-bank.
-The model may be required to do this anyway if the channel is wider than the grid element.
+12. If different bank elevations are assigned, the model automatically extends the channel into separate grid elements, one grid element containing each
+    bank. The model may be required to do this anyway if the channel is wider than the grid element.
 
-13.
-The first two channel elements in a segment should have a positive slope in the downstream direction.
-This is important for inflow channel elements.
-There should also be a positive slope into the channel outflow nodes.
-This will im- prove the numerical stability around the inflow and outflow nodes.
+13. The first two channel elements in a segment should have a positive slope in the downstream direction.
+    This is important for inflow channel elements.
+    There should also be a positive slope into the channel outflow nodes.
+    This will im- prove the numerical stability around the inflow and outflow nodes.
 
-14.
-After deleting a channel element, remove the cross section for that channel element from the XSEC.DAT file and renumbered in the PROFILES program.
-If cross sections are mixed with other channel geometry (trapezoidal or rectangular), the cross-section elements should be grouped into segments to
-identify the reaches with similar channel geometry.
+14. After deleting a channel element, remove the cross section for that channel element from the XSEC.DAT file and renumbered in the PROFILES program.
+    If cross sections are mixed with other channel geometry (trapezoidal or rectangular), the cross-section elements should be grouped into segments to
+    identify the reaches with similar channel geometry.
 
-15.
-Eliminate channel elements that have a XLEN less than 50% of the SIDE (grid element width).
-This can be accomplished by connecting the channel elements across the diagonal and eliminating the middle channel element.
+15. Eliminate channel elements that have a XLEN less than 50% of the SIDE (grid element width).
+    This can be accomplished by connecting the channel elements across the diagonal and eliminating the middle channel element.
 
-16.
-If the channel routing is unstable or numerically surging, reduce the Courant number C in the TOLER.
-DAT by 0.1.
+16. If the channel routing is unstable or numerically surging, reduce the Courant number C in the TOLER.
+    DAT by 0.1.
 
-17.
-To improve the timing of the floodwave progression through the system, a depth variable roughness can be assigned on a reach basis.
-The basic equation for the channel element roughness nd as function of flow depth is:
+17. To improve the timing of the floodwave progression through the system, a depth variable roughness can be assigned on a reach basis.
+    The basic equation for the channel element roughness nd as function of flow depth is:
 
-nd = nb a e-(b depth/dmax)
+        .. math::
+            :label:
 
-where:
+            n_d = n_b \, a \, e^{-(b \, depth/dmax)}
 
-   nb = bankfull discharge roughness depth = flow depth
+        where:
 
-   dmax = bankfull flow depth
+           n\ :sub:`b` = bankfull discharge roughness depth = flow depth
 
-   a = 1/e-b
+           dmax = bankfull flow depth
 
-   b = roughness adjustment coefficient prescribed by the user (0 to 1.2)
+           a = 1/e\ :sup:`-b`
 
-This equation prescribes that the variable depth channel roughness is equal to the roughness at bankfull discharge.
-If the user assigns a ROUGHADJ value (from 0 to 1.2) as the roughness adjustment coefficient b for a given reach, the roughness will increase with a
-decrease in flow depth.
-The higher the coefficient b, the greater the increase in roughness.
-This roughness adjustment will slow the progression of the floodwave by increasing the roughness for less than bankfull discharge.
-The plane bed roughness set for bankfull discharge will not be affected.
-For example, if the depth is 20% of the bankfull discharge and the roughness adjustment coefficient b is set to 0.44, the hydraulic roughness
-Manning’s n-value will be 1.4 times the roughness prescribed for bankfull flow.
-Assigning a ROUGHADJ value may reduce high Froude numbers.
+           b = roughness adjustment coefficient prescribed by the user (0 to 1.2)
 
-A channel spatially variable shallow n-value assigned to the depths less than 0.2 ft (0.067 m) is defined by applying the ROUGHADJ to each channel
-reach.:
+    This equation prescribes that the variable depth channel roughness is equal to the roughness at bankfull discharge.
+    If the user assigns a ROUGHADJ value (from 0 to 1.2) as the roughness adjustment coefficient b for a given reach, the roughness will increase with a
+    decrease in flow depth.
+    The higher the coefficient b, the greater the increase in roughness.
+    This roughness adjustment will slow the progression of the floodwave by increasing the roughness for less than bankfull discharge.
+    The plane bed roughness set for bankfull discharge will not be affected.
+    For example, if the depth is 20% of the bankfull discharge and the roughness adjustment coefficient b is set to 0.44, the hydraulic roughness
+    Manning’s n-value will be 1.4 times the roughness prescribed for bankfull flow.
+    Assigning a ROUGHADJ value may reduce high Froude numbers.
+
+    A channel spatially variable shallow n-value assigned to the depths less than 0.2 ft (0.067 m) is defined by applying the ROUGHADJ to each channel
+    reach.:
 
 SHALLOWN = ROUGHADJ / 2
 
