@@ -2994,7 +2994,7 @@ CHANNEL DATA
 
               Line 2b: <b>SHAPE</b> <i>‘V’ = Variable Area</i> <b>ICHANGRID(I) BANKELL(I)
                        BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)
-                       C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)<b>
+                       C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)</b>
         V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
 
               Line 2c: <b>SHAPE</b> <i>‘T’ = Trapezoidal</i> <b>ICHANGRID(I) BANKELL(I)
