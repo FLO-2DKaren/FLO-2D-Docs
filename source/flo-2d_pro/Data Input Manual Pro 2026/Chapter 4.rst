@@ -2923,6 +2923,7 @@ EVAPORATION DATA
 .. raw:: html
 
     <br><br>
+
 **Variable Descriptions for the EVAPOR.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
@@ -2930,7 +2931,6 @@ EVAPORATION DATA
 .. list-table::
    :widths: 25 25 25 25
    :header-rows: 0
-
 
    * - VARIABLE
      - FMT
@@ -3350,15 +3350,18 @@ CHANNEL DATA
 
 4. If channel geometry is being simulated with regression relationships (SHAPE = ‘V’), then the area versus depth power relationships must be specified:
 
-A = adb
+    .. math::
+        :label:
 
-where:
+        A = adb
 
-A = area of the channel d = depth to thalweg
+    where:
 
-a = coefficient
+        A = area of the channel d = depth to thalweg
 
-b = exponent
+        a = coefficient
+
+        b = exponent
 
 Similar relationships are required for wetted perimeter and top width.
 There is a limit of two channel geometry relationships per channel element.
