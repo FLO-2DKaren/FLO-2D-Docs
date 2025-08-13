@@ -3594,7 +3594,7 @@ CROSS SECTION DATA
    .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                           XSEC.DAT File Variables </pre></i></div>
+        <div><i><pre>                               XSEC.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         X 1 X-CI-27.1                    Line 1: <b>XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..</b>
@@ -3675,9 +3675,9 @@ CROSS SECTION DATA
    * - XSECHAR
      - **c**
      - **X**
-     - Character ‘X’ that identifies Line
+     - Character ‘X’ that identifies Line 1.
 
-       1. Variable is case sensitive and it must be upper case.
+       Variable is case sensitive and it must be upper case.
 
    * - XSECNAME(I)
      - **c**
