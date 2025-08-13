@@ -5131,31 +5131,39 @@ FILE: SIMPLE_MULT.DAT
 
 MULTIPLE CHANNEL DATA
 ^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   SIMPLE_MULT.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                   SIMPLE_MULT.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0.025               Line 1: <b>XNMULTTRICHN</b>
+        1961                Line 2: <b>IMGRID(I)</b>
+                                    <i>I = number of grid elements with multiple channels</i>
 
-   0.025 Line 1: **XNMULTTRICHN**
+        Notes:
+           Line 2: Repeat this line for each grid element revision.
+        </pre>
+    </div>
 
-1961 Line 2: **IMGRID(I)**
+.. raw:: html
 
-   *I = number of grid elements with multiple channels*
+    <br><br>
 
-   Notes:
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SIMPLE_MULT.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           0.060
+           19612
+           19625
+           19458
+           ...
+        </pre>
+    </div>
+.. raw:: html
 
-   Line 2: Repeat this line for each grid element revision.
-
-   SIMPLE_MULT.DAT File Example
-
-   0.060
-
-   19612
-
-   19625
-
-   19458
-
-   ...
-
+    <br><br>
 **Variable Descriptions for the SIMPLE_MULT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
@@ -5165,10 +5173,10 @@ MULTIPLE CHANNEL DATA
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IMGRID(I)
      - **i**
@@ -5177,8 +5185,7 @@ MULTIPLE CHANNEL DATA
 
    * - XNMULTTRICHN
      - **r**
-     - **0.01
-       - 0.5**
+     - **0.01 - 0.5**
      - Global assignment of the multiple channel n-values to all the grid elements.
 
 
@@ -5207,17 +5214,15 @@ MULTIPLE CHANNEL DATA
 
 9. The shallow n-value for the rill channel is 0.100.
 
-10.
-A single global n-value can be user specified to represent the rill channels.
+10. A single global n-value can be user specified to represent the rill channels.
 
-11.
-The original multiple channel routine can be combined with the simplified component by simply created both multiple channel data files (MULT.DAT and
-SIMPLE_MULT.DAT).
+11. The original multiple channel routine can be combined with the simplified component by simply created both multiple channel data files (MULT.DAT and
+    SIMPLE_MULT.DAT).
 
-12.
-MULT.DAT and the SIMPLE_MULT.DAT files contain the multiple channel data.
-They can be used together in the same project but for a different group of cells.
-They both use the same variable data, but SIMPLE_MULT depth and width are hardwired.
+12. MULT.DAT and the SIMPLE_MULT.DAT files contain the multiple channel data.
+    They can be used together in the same project but for a different group of cells.
+    They both use the same variable data, but SIMPLE_MULT depth and width are hardwired.
+
 
 FILE: SED.DAT
 ~~~~~~~~~~~~~
