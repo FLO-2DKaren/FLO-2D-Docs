@@ -3591,67 +3591,76 @@ FILE: XSEC.DAT
 CROSS SECTION DATA
 ^^^^^^^^^^^^^^^^^^
 
-   XSEC.DAT File Variables
+   .. raw:: html
 
-   X 1 X-CI-27.1 Line 1: **XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre> XSEC.DAT File Variables </pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        X 1 X-CI-27.1                    Line 1: <b>XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..</b>
+                                                 <b>n number of cross sections</b>
+        25.0 5234.90                     Line 2: <b>XI(I,J) YI(I,J)</b>
+        30.0 5231.53                     Line 2: <b>XI(I,J) YI(I,J)</b>
+        35.0 5230.20                     Line 2: <b>XI(I,J) YI(I,J)</b>
 
-   **n number of cross sections**
+        Notes:
+           If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+           Set SHAPE = ‘N’ (line 2d) in the CHAN.DAT file to use this file.
+           Line 1: This line is repeated for each cross section.
+           Line 2: This line is repeated for the Station, Elevation pairs.
+        </pre>
+    </div>
 
-   25.0 5234.90 Line 2: **XI(I,J) YI(I,J)**
+.. raw:: html
 
-   30.0 5231.53 Line 2: **XI(I,J) YI(I,J)**
+    <br><br>
 
-   35.0 5230.20 Line 2: **XI(I,J) YI(I,J)**
+.. raw:: html
 
-Notes:
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre> XSEC.DAT File Example </pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        X 1 X-CI-27.1
 
-   If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+        0.0 5235.07
 
-   Set SHAPE = ‘N’ (line 2d) in the CHAN.DAT file to use this file.
-   Line 1: This line is repeated for each cross section.
+        10.0 5235.17
 
-   Line 2: This line is repeated for the Station, Elevation pairs.
+        25.0 5235.31
 
-**XSEC.DAT File Example**
+        30.0 5231.84
 
-X 1 X-CI-27.1
+        ...
+        ...
 
-0.0 5235.07
+        ...
+        ...
 
-10.0 5235.17
+        288.0 5236.01
 
-25.0 5235.31
+        294.0 5236.51
 
-30.0 5231.84
+        313.0 5237.00
 
-...
-...
+        X 2 CI-27.1
 
-...
-...
+        25.0 5234.90
 
-288.0 5236.01
+        30.0 5231.53
 
-294.0 5236.51
+        35.0 5230.20
 
-313.0 5237.00
+        40.0 5228.50
 
-X 2 CI-27.1
+        45.0 5227.20
 
-25.0 5234.90
+        50.0 5224.35
 
-30.0 5231.53
-
-35.0 5230.20
-
-40.0 5228.50
-
-45.0 5227.20
-
-50.0 5224.35
-
-...
-...
+        ...
+        ...
+        </pre>
+    </div>
 
 **Variable Descriptions for the XSEC.DAT File**
 
@@ -3662,10 +3671,10 @@ X 2 CI-27.1
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - NXSECNUM(I)
      - **i**
@@ -3708,6 +3717,8 @@ X 2 CI-27.1
 1. The NXSECNUM in XSEC.DAT and CHAN.DAT must match and be listed in order from 1 to N number of natural channel elements.
    The natural channel elements in the CHAN.DAT file must start at 1 and continue in sequence to NNODC from the top of the file to the end.
    Use the FLO-2D Plugin or PROFILES programs to interpolate a cross section to each channel element.
+
+
 
 FILE: HYSTRUC.DAT
 ~~~~~~~~~~~~~~~~~
