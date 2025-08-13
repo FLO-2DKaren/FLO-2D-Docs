@@ -3594,7 +3594,7 @@ CROSS SECTION DATA
    .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                   XSEC.DAT File Variables </pre></i></div>
+        <div><i><pre>                           XSEC.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         X 1 X-CI-27.1                    Line 1: <b>XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..</b>
@@ -3662,25 +3662,30 @@ CROSS SECTION DATA
 
        **to NNODC**
      - Cross section number starting with 1 and ending with the last surveyed cross section.
+
        This number will be assigned to the channel element NXSECNUM in CHAN.DAT (see comment 1).
 
    * - XI(I,J)
      - **r**
      - **0.0 - ∞**
      - Cross section station distance from the left end point (ft or m).
+
        The value of XI can be either positive or negative.
 
    * - XSECHAR
      - **c**
      - **X**
      - Character ‘X’ that identifies Line
+
        1. Variable is case sensitive and it must be upper case.
 
    * - XSECNAME(I)
      - **c**
      - **Alpha Numeric**
      - Cross section name (less than 15 characters, not case sensitive).
-       This name is for cross section ID purposes only and it is not used by the model..
+
+       This name is for cross section ID purposes only and it is not used by the model.
+
        Do not use spaces in the name.
 
    * - YI(I,J)
@@ -3689,8 +3694,12 @@ CROSS SECTION DATA
 
        **0 - 9,000**
      - Cross section elevation (ft or m) at each station.
+
        The value of YI can either positive or negative indicating elevations below sea level.
 
+.. raw:: html
+
+    <br><br>
 
 **Instructional Comments for the XSEC.DAT File**
 
