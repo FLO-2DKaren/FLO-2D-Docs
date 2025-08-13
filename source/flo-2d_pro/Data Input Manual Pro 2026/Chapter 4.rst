@@ -4375,7 +4375,7 @@ HYDRAULIC STRUCTURE DATA
 18. Bridge pressure flow is computed as either sluice gate flow or orifice flow de- pending on the water surface elevation with respect to the bridge
     soffit.
 
-19.When the water surface exceeds the bridge deck elevation, broadcrested weir flow is computed.
+19. When the water surface exceeds the bridge deck elevation, broadcrested weir flow is computed.
     This is added to the pressure flow to determine the total discharge through the bridge.
     It is recommended that the weir coefficient be estimated on the low side to account for spaced rails, walkways, debris and other non-uniform deck
     features.
