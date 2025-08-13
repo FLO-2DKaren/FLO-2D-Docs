@@ -3833,29 +3833,38 @@ HYDRAULIC STRUCTURE DATA
      - **r**
      - **0.01 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1) must be included as data input.
-       QTABLEA(I,J) is the hydraulic structure flow area for each headwater depth in the rating table (discharge).
+
+       QTABLEA(I,J) is the hydraulic structure flow area for each headwater depth in the rating
+
+       table (discharge).
 
    * - COEFA(I,J)
      - **r**
      - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1),.
-       COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a power function of the headwater depth.
+       COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a
+
+       power function of the headwater depth.
+
        A = COEFA(I,J) \* depthEXPA(I,J).
 
    * - COEFQ(I,J)
      - **r**
      - **0 - ∞**
      - Discharge rating curve coefficients as a power function of the headwater depth.
-       Q = COEFQ(I,J) \* depthEXPQ(I,J) (see comment 1).
-       If COEFQ(I,J)
 
-       = 0, then the discharge is computed as normal depth flow routing.
+       Q = COEFQ(I,J) \* depthEXPQ(I,J) (see comment 1).
+
+       If COEFQ(I,J) = 0, then the discharge is computed as normal depth flow routing.
 
    * - CDIAMETER(I,J)
      - **r**
      - **0.1 - ∞**
      - Circular culvert diameter (ft or m).
-       For the generalized culvert equations CDIAMETER is the circular culvert diameter or the box culvert height (see comment 12).
+
+       For the generalized culvert equations CDIAMETER is the circular culvert diameter or
+
+       the box culvert height (see comment 12).
 
    * - CLENGTH(I)
      - **r**
@@ -3863,12 +3872,16 @@ HYDRAULIC STRUCTURE DATA
 
        **1 - ∞**
      - Culvert length (ft or m).
-       When a long culvert is simulated (>500 ft or 152.4 m), CLENGTH must be assigned to that culvert’s length to activate the long culvert routing routine.
+
+       When a long culvert is simulated (>500 ft or 152.4 m), CLENGTH must be assigned to
+
+       that culvert’s length to activate the long culvert routing routine.
 
    * - CUBASE(I)
      - **r**
      - **0 - ∞**
      - Flow width (ft or m) of box culvert for TYPEC(I) = 1.
+
        For a circular culvert, CUBASE = 0.
 
    * - CULVERTN(I)
@@ -3882,13 +3895,18 @@ HYDRAULIC STRUCTURE DATA
    * - EXPA(I,J)
      - **r**
      - **0 - ∞**
-     - When the long culvert routine is used (CLENGTH(I) > 1), EXPQ(I,J) is the hydraulic structure flow area exponent where the flow area is expressed as a
+     - When the long culvert routine is used (CLENGTH(I) > 1), EXPQ(I,J) is the hydraulic
+
+       structure flow area exponent where the flow area is expressed as a
+
        power function of the headwater depth.
 
    * - EXPQ(I,J)
      - **r**
      - **0 - ∞**
-     - Hydraulic structure discharge exponent where the discharge is expressed as a power function of the headwater depth.
+     - Hydraulic structure discharge exponent where the discharge is expressed as a
+
+       power function of the headwater depth.
 
    * - HDEPEXC (I,J)
      - **r**
@@ -3911,12 +3929,13 @@ HYDRAULIC STRUCTURE DATA
        **30,000**
 
        **.25 - 9,000**
-     - Reference elevation above which the headwater depth is determined for either the discharge rating curve or rating table.
-       Set HEADREFEL(I) =
+     - Reference elevation above which the headwater depth is determined for either the discharge
 
-       0.0 to use the existing channel bed or floodplain elevation for the reference
+       rating curve or rating table.
 
-       elevation to compute the headwater depth (ft or m).
+       Set HEADREFEL(I) = 0.0 to use the existing channel bed or floodplain elevation for the
+
+       reference elevation to compute the headwater depth (ft or m).
 
    * - ICURVTABLE(I)
      - **s**
@@ -3926,6 +3945,7 @@ HYDRAULIC STRUCTURE DATA
 
        **2 = culveq**
      - Set ICURVTABLE(I) = 0 for a structure rating curve.
+
        Set ICURVTABLE(I) = 1 for a structure rating table.
 
        Set ICULVTABLE(I) = 2 to use the culvert equations (see comment 5).
@@ -3937,12 +3957,12 @@ HYDRAULIC STRUCTURE DATA
 
        IFPORCHAN(I) = 1; for a channel hydraulic structure (shares discharge between two channel elements).
 
-       IFPORCHAN(I) = 2; for a floodplain to channel structure (shares dis- charge between a floodplain element {inflow} and channel structure {out-
-       flow})(see comment 7).
+       IFPORCHAN(I) = 2; for a floodplain to channel structure (shares dis- charge between a floodplain
+       element {inflow} and channel structure {outflow})(see comment 7).
 
-       IFPORCHAN(I) = 3; for a channel to floodplain structure (shares discharge between a channel {inflow} element and a floodplain element
+       IFPORCHAN(I) = 3; for a channel to floodplain structure (shares discharge between a channel
 
-       {outflow}) (see comment 13).
+       {inflow} element and a floodplain element {outflow}) (see comment 13).
 
    * - INFLONOD(I)
      - **i**
@@ -3956,28 +3976,31 @@ HYDRAULIC STRUCTURE DATA
        **1 = revised**
 
        **2 = outlet / revised**
-     - INOUTCONT(I,J) = 0; to compute the discharge based on only the headwater depth above the appropriate floodplain or channel bed elevation (or reference
-       elevation if assigned).
+     - INOUTCONT(I,J) = 0; to compute the discharge based on only the headwater depth above the
+
+       appropriate floodplain or channel bed elevation (or reference elevation if assigned).
+
        Suggested revisions are listed in REVISED_RATING_TABLE.OUT.
+
        No tailwater effects or potential upstream flow are considered.
 
-       INOUTCONT(I,J) = 1; reduced discharge for tailwater submergence,
+       INOUTCONT(I,J) = 1; reduced discharge for tailwater submergence, but does not allow upstream flow.
 
-       , but does not allow upstream flow.
        Suggested rating table revisions posted to REVISED_RATING\_ TABLE.OUT.
 
        INOUTCONT(I,J) = 2; reduced discharge for tailwater submergence.
+
        Upstream flow is possible.
+
        Suggested rating table revisions posted to REVISED_RATING_TABLE.OUT.
 
-       Necessary for all structure types if submergence and upstream flow is
-
-       required.
+       Necessary for all structure types if submergence and upstream flow is required.
 
    * - ISTORMDOUT(I)
      - **i**
      - **1 - NNOD**
      - Hydraulic structure outflow grid element number used to simulate a simplified storm drain.
+
        ISTORMDOUT is a junction or outflow node for a number of inflow nodes (see comment 11).
 
    * - KE(I)
@@ -3989,47 +4012,60 @@ HYDRAULIC STRUCTURE DATA
      - **i**
      - **1 - 100**
      - Multiple barrel option for generalized culvert equation.
+
        The engine will multiply the Q by the number of barrels (see comment 20).
 
    * - OUTFLONOD(I)
      - **i**
      - **1 - NNOD**
      - Grid element receiving the hydraulic structure discharge (structure outlet).
+
        OUTFLONOD does not have to be contiguous to INFLONOD grid element.
 
    * - QTABLE(I,J)
      - **r**
      - **0.01 - ∞**
-     - Hydraulic structure discharges for the headwater depths in the rating table (discharge) (see comments 3 and 4).
+     - Hydraulic structure discharges for the headwater depths in the rating table (discharge)
+
+       (see comments 3 and 4).
 
    * - REPDEP(I,J)
      - **r**
      - **0.01 - ∞**
-     - Flow depth (ft or m) that if exceeded will invoke the replacement structure rating curve parameters for simulating a blockage or a change in the
-       rating curve.
+     - Flow depth (ft or m) that if exceeded will invoke the replacement structure rating curve
+
+       parameters for simulating a blockage or a change in the rating curve.
 
    * - RACOEF(IJ)
      - **r**
      - **0 - ∞**
-     - When the long culvert routine is used (CLENGTH(I) > 1), RACOEF(I,J) is the structure rating curve flow area replacement coefficient.
+     - When the long culvert routine is used (CLENGTH(I) > 1), RACOEF(I,J) is the structure
+
+       rating curve flow area replacement coefficient.
+
        There should be the same number of rating curve pairs of coefficients and exponents.
 
    * - RAEXP(IJ)
      - **r**
      - **0 - ∞**
-     - When the long culvert routine is used (CLENGTH(I) > 1), RAEXP(I,J) is the structure rating curve flow area replacement exponents.
+     - When the long culvert routine is used (CLENGTH(I) > 1), RAEXP(I,J) is the structure
+
+       rating curve flow area replacement exponents.
+
        There should be the same number of rating curve pairs of coefficients and exponents.
 
    * - RQCOEF(I,J)
      - **r**
      - **0 - ∞**
      - Structure rating curve discharge replacement coefficients.
+
        There should be the same number of rating curve pairs of coefficients and exponents
 
    * - RQEXP(I,J)
      - **r**
      - **0 - ∞**
      - Structure rating curve discharge replacement exponents.
+
        There should be the same number of rating curve pairs of coefficients and exponents.
 
    * - STRUCHAR
@@ -4039,22 +4075,36 @@ HYDRAULIC STRUCTURE DATA
        **or D**
      - Character that identifies the use of Line 2, 3, 4 or 6 where:
 
-       STRUCHAR = ‘S’ for the structure control, (Line 1); STRUCHAR = ‘C’ for a rating curve (Line 2); STRUCHAR = ‘R’ for replacement rating curve (Line 3);
-       STRUCHAR = ‘T’ for a rating table (Line 4); STRUCHAR = ‘F’ for culvert equations (Line 5); STRUCHAR = ‘D’ for storm drain (Line 6).
+       STRUCHAR = ‘S’ for the structure control, (Line 1);
+
+       STRUCHAR = ‘C’ for a rating curve (Line 2);
+
+       STRUCHAR = ‘R’ for replacement rating curve (Line 3);
+
+       STRUCHAR = ‘T’ for a rating table (Line 4);
+
+       STRUCHAR = ‘F’ for culvert equations (Line 5);
+
+       STRUCHAR = ‘D’ for storm drain (Line 6).
 
        Variable is case sensitive and it must be upper case.
 
    * - STORMDMAXQ(I)
      - **r**
      - **0 - ∞**
-     - Maximum allowable discharge (conveyance capacity) of the collection pipe represented by the ISTORMDOUT element.
+     - Maximum allowable discharge (conveyance capacity) of the collection pipe represented
+
+       by the ISTORMDOUT element.
+
        (cfs or cms)
 
    * - STRUCTNAME(I)
      - **c**
      - **Alpha Numeric**
      - Hydraulic structure name (15 characters or less).
+
        This name is for user identification purposes only.
+
        No spaces allowed in the name.
 
    * - TYPEC(I)
@@ -4063,6 +4113,7 @@ HYDRAULIC STRUCTURE DATA
 
        **2 = pipe**
      - Culvert switch, either 1 or 2.
+
        Set TYPEC(I) = 1 for a box culvert and TYPEC(I) = 2 for a pipe culvert (see comment 8).
 
    * - TYPEEN(I)
@@ -4122,11 +4173,6 @@ HYDRAULIC STRUCTURE DATA
      - **r**
      - **0.6 - 1.0**
      - Coefficient associated with pier and piles – assigned or computer (= 0.)
-
-   * -
-     -
-     -
-     -
 
    * - BOPENING
      - **r**
