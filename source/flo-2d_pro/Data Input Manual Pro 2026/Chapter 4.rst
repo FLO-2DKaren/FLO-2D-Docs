@@ -4568,7 +4568,11 @@ STREET DATA
 
        **0.0 - 0.6**
      - Global street curb height (ft or m).
-       If the street curb height is exceeded by the flow it will result in overland flow depth in the grid element containing the street.
+
+       If the street curb height is exceeded by the flow it will result in overland flow depth
+
+       in the grid element containing the street.
+
        DEPX is used to assign a street curb height to all grid elements (see comment 7).
 
    * - DEPEX(L)
@@ -4576,7 +4580,10 @@ STREET DATA
      - **0.01 - 2**
 
        **0.25 - .6**
-     - Optional curb height (ft or m) for individual grid elements that supersedes the global curb height DEPX.
+     - Optional curb height (ft or m) for individual grid elements that
+
+       supersedes the global curb height DEPX.
+
        Set DEPEX(L) = 0.0 to use DEPX.
 
    * - ELSTR(L)
@@ -4585,20 +4592,27 @@ STREET DATA
 
        **0 - 9,000**
      - Optional street elevation (ft or m).
+
        This elevation will supersede the flood- plain grid element elevation.
-       If ELSTR(L) = 0, the model will assign the street elevation as the grid element elevation, FP(I,6) minus the curb height DEPEX(L) or DEPX to the
+
+       If ELSTR(L) = 0, the model will assign the street elevation as the grid element
+
+       elevation, FP(I,6) minus the curb height DEPEX(L) or DEPX to the
+
        street elevation ELSTR(L) (see comment 3).
 
    * - IGRIDN(L)
      - **i**
      - **1 - NNOD**
      - Grid element number.
+
        Each grid element should be listed only once in the data file (see comment 6).
 
    * - ISTDIR(K)
      - **i**
      - **1 - 8**
      - Street segment (flow direction) from the center of the grid element to a neighboring element.
+
        IITDIR(k) will vary from 1 to 8 according to the following compass directions:
 
        1 = north 5 = northeast
@@ -4612,7 +4626,9 @@ STREET DATA
    * - ISTRFLO
      - **s**
      - **0 or 1**
-     - ISTRFLO = 1 specifies that the floodplain inflow hydrograph will enter the streets rather than entering the overland portion of the grid element.
+     - ISTRFLO = 1 specifies that the floodplain inflow hydrograph will enter the
+
+       streets rather than entering the overland portion of the grid element.
 
    * - STRCHAR
      - **c**
@@ -4623,28 +4639,40 @@ STREET DATA
      - **r**
      - **0.0 - 5**
      - Maximum street Froude number.
-       When the computed Froude number for the street flow exceeds STRFNO, the n-value is increased by 0.001 for that grid node.
+
+       When the computed Froude number for the street flow exceeds STRFNO,
+
+       the n-value is increased by 0.001 for that grid node.
+
        The increased n-values are reported in the ROUGH.OUT and STREET.RGH files
 
    * - STMAN(L)
      - **r**
      - **0.01 - 0.25**
      - Optional spatially variable street n-value within a given grid element.
+
        STMAN(L) supersedes the STRMAN value.
+
        If STMAN(L) = 0, the global value STRMAN will be assigned to the grid element street segment.
 
    * - STRMAN
      - **r**
      - **0.01 - 0.25**
-     - Global n-value for street flow which that is assigned to all the grid element street segments (see comment 2).
+     - Global n-value for street flow which that is assigned to all the grid element
+
+       street segments (see comment 2).
 
    * - STNAME
      - **c**
      - **Alpha Numeric**
      - Character name of the street.
+
        Up to 15 characters can be used.
+
        The street name is not used in the model.
+
        No spaces allowed.
+
        (see comment 1).
 
    * - WIDR(K)
@@ -4653,15 +4681,26 @@ STREET DATA
 
        **0.0 - 300**
      - Optional grid element street width in the ISTDIR direction.
+
        If the grid element contains more than one street, Line 4 must be repeated.
-       If a given grid element has more than one street in one direction, modify WIDR(K) to represent the combined widths of the streets.
-       Up to 8 street segments, one for each of the 8 compass directions, can be assigned according to the ISTDIR variable.
-       By setting WIDR(K) = 0.0, the WIDST global width will be assigned to that street segment (see comments 4 and 5).
+
+       If a given grid element has more than one street in one direction, modify WIDR(K)
+
+       to represent the combined widths of the streets.
+
+       Up to 8 street segments, one for each of the 8 compass directions,
+
+       can be assigned according to the ISTDIR variable.
+
+       By setting WIDR(K) = 0.0, the WIDST global width will be assigned to that street
+
+       segment (see comments 4 and 5).
 
    * - WIDST
      - **r**
      - **0.01 - ∞**
      - Global assignment of street width to all streets.
+
        This value is superseded by WIDR(K) when WIDR(K) is greater than zero (see comments 2 and 4).
 
 
