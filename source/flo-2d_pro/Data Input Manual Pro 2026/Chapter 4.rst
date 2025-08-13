@@ -3642,6 +3642,10 @@ CROSS SECTION DATA
         </pre>
     </div>
 
+.. raw:: html
+
+    <br><br>
+
 **Variable Descriptions for the XSEC.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
@@ -3806,6 +3810,10 @@ HYDRAULIC STRUCTURE DATA
         F 1 2 0.004 0.1 0.0 1
         </pre>
     </div>
+
+.. raw:: html
+
+    <br><br>
 
 **Variable Descriptions for the HYSTRUC.DAT File**
 
