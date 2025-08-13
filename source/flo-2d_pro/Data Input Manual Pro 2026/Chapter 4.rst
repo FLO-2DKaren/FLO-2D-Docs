@@ -5234,7 +5234,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>SED.DAT File Variables</pre></i></div>
+        <div><i><pre>                       SED.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                                 Line 1:  <b>SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX</b>
@@ -5273,7 +5273,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
     <br><br>
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>SED.DAT File Example</pre></i></div>
+        <div><i><pre>               SED.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
            M 0.000602 33.10 0.001720 29.50 2.74 0.00  <i>(Mudflow)</i>
