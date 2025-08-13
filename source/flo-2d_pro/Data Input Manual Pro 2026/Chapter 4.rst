@@ -3407,7 +3407,7 @@ CHANNEL DATA
     Review the PROFILES program instructions for cross section and channel bed slope interpolation.
     If there is more than one surveyed cross section per channel element, use the one that has the greatest hydraulic control to represent the channel.
 
-11.At a channel confluence, the next downstream channel element bed elevation must be lower than the confluence bed elevation creating a positive slope
+11. At a channel confluence, the next downstream channel element bed elevation must be lower than the confluence bed elevation creating a positive slope
     downstream of the confluence.
 
 12. If different bank elevations are assigned, the model automatically extends the channel into separate grid elements, one grid element containing each
