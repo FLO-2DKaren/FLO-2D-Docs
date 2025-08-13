@@ -3487,61 +3487,64 @@ CHANNEL DATA
 
 
 FILE: CHANBANK.DAT
+~~~~~~~~~~~~~~~~~~~
 
 CHANNEL BANK DATA
+^^^^^^^^^^^^^^^^^
 
-   CHANBANK.DAT File Variables
+.. raw:: html
 
-   26 99 Line 1: **LEFTBANK(K) RIGHTBANK (K)** *K = 1, number of channel elements*
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               CHANBANK.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        26 99 Line 1: <b>LEFTBANK(K) RIGHTBANK (K)</b> <i>K = 1, number of channel elements</i>
 
-Notes:
+        Notes:
+         If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+         Line 1: If a channel element width is contained within one grid element and no individual
+         bank elements are assigned then <b>RIGHTBANK(K)</b> is set to zero.
+        </pre>
+    </div>
 
-   If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+.. raw:: html
 
-Line 1: If a channel element width is contained within one grid element and no individual bank elements are assigned then **RIGHTBANK(K)** is set to
-zero.
+    <br><br>
 
-   CHANBANK.DAT File Example
 
-   26 99
+.. raw:: html
 
-   39 136
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>CHANBANK.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        26 99
+        39 136
+        54 156
+        71 176
+        90 196
+        109 216
+        127 236
+        147 256
+        167 276
+        187 315
+        207 336
+        226 356
+        247 377
+        267 398
+        286 418
+        307 439
+        327 460
+        348 481
+        369 502
+        </pre>
+    </div>
 
-   54 156
+.. raw:: html
 
-   71 176
+    <br><br>
 
-   90 196
-
-109 216
-
-127 236
-
-147 256
-
-167 276
-
-187 315
-
-207 336
-
-226 356
-
-247 377
-
-267 398
-
-286 418
-
-307 439
-
-327 460
-
-348 481
-
-369 502
-
-Variable Descriptions for the CHANBANK.DAT File
+**Variable Descriptions for the CHANBANK.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -3550,10 +3553,10 @@ Variable Descriptions for the CHANBANK.DAT File
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - LEFTBANK
      - **i**
