@@ -3715,120 +3715,97 @@ FILE: HYSTRUC.DAT
 HYDRAULIC STRUCTURE DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-HYSTRUC.DAT File Variables
---------------------------
+.. raw:: html
 
-**Line 1:** STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                               HYSTRUC.DAT File Variables </pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                Line 1:   <b>STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
+                          CLENGTH(I) CDIAMETER(I)</b> <i>I = number of structures</i>
+        S Patagonia 1 0 1713 1827 0 4425.23 0.0 0.0
 
+                Line 2:   <b>STRUCHAR = ‘C’ HDEPEXC(I,J) COEFQ(I,J) EXPQ(I,J) COEFA(I,J)
+                          EXPA(I,J)</b> <i>I = number of structures, J = number of curves</i>
 
-   **CLENGTH(I) CDIAMETER(I)** *I = number of structures*
+                Line 2:   <b>STRUCHAR = ‘B’ IBTYPE(I) COEFFP(I) C_PRIME_USER(I) KF_COEF(I) KWW_COEF(I) KPHI_COEF(I) KY_COEF(I)
+                          KX_COEF(I) KJ_COEF(I)</b> <i>I = number of bridges in bridge routine</i>
 
-   S Patagonia 1 0 1713 1827 0 4425.23 0.0 0.0
+                Line 3:   <b>STRUCHAR = ‘B’ BOPENING(I) BLENGTH(I) BN_VALUE(I)
+                          UPLENGTH12(I) LOWCHORD(I) DECKHT(I) DECKLENGTH(I)
+                          PIERWIDTH(I) SLUICECOEFADJ(I) ORIFICECOEFADJ(I)
+                          COEFFWEIRB(I) WINGWALL_ANGLE(I) PHI_ANGLE(I) LBTOEABUT(I)
+                          RBTOEABUT(I)</b> <i>I = number of bridges in bridge routine</i>
+           C 20.0 3.543 0.890
 
-**Line 2:** STRUCHAR = ‘C’ HDEPEXC(I,J) COEFQ(I,J) EXPQ(I,J) COEFA(I,J)
+                Line 3:   <b>STRUCHAR = ‘R’ REPDEP(I,J) RQCOEFQ(I,J) RQEXP(I,J)
+                          RACOEF(I,J) RAEXP(I,J)</b> <i>I = number of structures, J = number of curves</i>
+           R 12.0 0.00 1.0
 
+                Line 4:   <b>STRUCHAR = ‘T’ HDEPTH(I,J) QTABLE(I,J) ATABLE(I,J)</b>
+                          <i>I = number of structures, J = number of datasets in table</i>
+           T 0 0
 
-   **EXPA(I,J)** *I = number of structures, J = number of curves*
+                Line 5:   <b>STRUCHAR = ‘F’ TYPEC(I) TYPEEN(I) CULVERTN(I) KE(I) CUBASE(I) MULTBARRELS(I)</b>
+                          <i>I = number of structures, Set ICURVTABLE = 2 in Line 1.</i>
+           F 1 2 0.040 0.1 0.0 1
 
-**Line 2:** STRUCHAR = ‘B’ IBTYPE(I) COEFFP(I) C_PRIME_USER(I) KF_COEF(I) KWW_COEF(I) KPHI_COEF(I) KY_COEF(I)
+                Line 6:   <b>STRUCHAR = ‘D’ ISTORMDOUT(I), STORMDMAXQ(I),</b>
+                          <i>I = number of drain structures.</i>
+           D 4 15
+        </pre>
+    </div>
 
+.. raw:: html
 
-   **KX_COEF(I) KJ_COEF(I)** *I = number of bridges in bridge routine*
+    <br><br>
 
-**Line 3:** STRUCHAR = ‘B’ BOPENING(I) BLENGTH(I) BN_VALUE(I) UPLENGTH12(I) LOWCHORD(I) DECKHT(I) DECKLENGTH(I) PIERWIDTH(I) SLUICECOEFADJ(I)
-ORIFICECOEFADJ(I) COEFFWEIRB(I) WINGWALL_ANGLE(I) PHI_ANGLE(I) LBTOEABUT(I)
+.. raw:: html
 
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           HYSTRUC.DAT File Notes</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        Notes:
+            If IHYDRSTRUCT = 0 in the CONT.DAT file, omit this file.
+            Line 2: Include this line for rating curve.
+            Repeat this line for each rating curve.
+            Line 1, 2: If CLENGTH(I) = 0, ignore COEFA(I,J) AND EXPA(I,J)
+            Line 3: If a replacement rating curve is required, include this line.
+            Line 1, 3: If CLENGTH(I) = 0, ignore RACOEF(I,J) and RAEXP(I,J).
+            Line 5: For generalized culverts (ICURVTABLE(I) = 2), if TYPEC(I) = 2
+            (round pipe), CUBASE(I) = 0,
+            Line 4: If a rating table is used, include this line.
+            Repeat for each depth and discharge pair.
+            Line 1, 4: If CLENGTH(I) = 0, ignore ATABLE(I,J).
+        </pre>
+    </div>
 
-   **RBTOEABUT(I)** *I = number of bridges in bridge routine*
+.. raw:: html
 
-   C 20.0 3.543 0.890
+    <br><br>
+.. raw:: html
 
-**Line 3:** STRUCHAR = ‘R’ REPDEP(I,J) RQCOEFQ(I,J) RQEXP(I,J)
-
-
-   **RACOEF(I,J) RAEXP(I,J)** *I = number of structures, J = number of curves*
-
-   R 12.0 0.00 1.0
-
-**Line 4:** STRUCHAR = ‘T’ HDEPTH(I,J) QTABLE(I,J) ATABLE(I,J)
-
-
-   *I = number of structures, J = number of datasets in table*
-
-   T 0 0
-
-**Line 5:** STRUCHAR = ‘F’ TYPEC(I) TYPEEN(I) CULVERTN(I) KE(I) CUBASE(I) MULTBARRELS(I)
-
-
-   *I = number of structures, Set ICURVTABLE = 2 in Line 1.*
-
-   F 1 2 0.040 0.1 0.0 1
-
-**Line 6:** STRUCHAR = ‘D’ ISTORMDOUT(I), STORMDMAXQ(I),
-
-
-   *I = number of drain structures.*
-
-   D 4 15
-
-**HYSTRUC.DAT File Notes**
-
-Notes:
-
-If IHYDRSTRUCT = 0 in the CONT.DAT file, omit this file.
-
-Line 2: Include this line for rating curve.
-Repeat this line for each rating
-
-curve.
-
-Line 1, 2: If CLENGTH(I) = 0, ignore COEFA(I,J) AND EXPA(I,J)
-
-Line 3: If a replacement rating curve is required, include this line.
-
-Line 1, 3: If CLENGTH(I) = 0, ignore RACOEF(I,J) and RAEXP(I,J).
-
-Line 5: For generalized culverts (ICURVTABLE(I) = 2), if TYPEC(I) = 2
-
-(round pipe), CUBASE(I) = 0,
-
-Line 4: If a rating table is used, include this line.
-Repeat for each depth and
-
-discharge pair.
-
-Line 1, 4: If CLENGTH(I) = 0, ignore ATABLE(I,J).
-
-   HYSTRUC.DAT File Example
-
-   S BridgeA 1 0 1713 1827 0 4425.23 0.0 0.0
-
-   C 20.0 3.543 0.890
-
-   S BridgeB 0 0 2503 2725 1 0.0 0.0 0.0
-
-   C 5.0 25.023 1.035
-
-   C 10.0 30.00 1.4
-
-   R 12.0 0.00 1.0
-
-   S Wier 1 1 1856 1945 0 4421.18 0.0 0.0
-
-   T 0.0 0.0
-
-   T 5.0 250.0
-
-   T 8.0 5500.0
-
-   T 10.0 1000.0
-
-   T 12.5 1500.0
-
-   S CulvertA 1 2 4417 4562 0 0.0 100.
-   6.
-
-F 1 2 0.004 0.1 0.0 1
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       HYSTRUC.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        S BridgeA 1 0 1713 1827 0 4425.23 0.0 0.0
+        C 20.0 3.543 0.890
+        S BridgeB 0 0 2503 2725 1 0.0 0.0 0.0
+        C 5.0 25.023 1.035
+        C 10.0 30.00 1.4
+        R 12.0 0.00 1.0
+        S Wier 1 1 1856 1945 0 4421.18 0.0 0.0
+        T 0.0 0.0
+        T 5.0 250.0
+        T 8.0 5500.0
+        T 10.0 1000.0
+        T 12.5 1500.0
+        S CulvertA 1 2 4417 4562 0 0.0 100. 6.
+        F 1 2 0.004 0.1 0.0 1
+        </pre>
+    </div>
 
 **Variable Descriptions for the HYSTRUC.DAT File**
 
@@ -3839,10 +3816,10 @@ F 1 2 0.004 0.1 0.0 1
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - ATABLE (I,J)
      - **r**
