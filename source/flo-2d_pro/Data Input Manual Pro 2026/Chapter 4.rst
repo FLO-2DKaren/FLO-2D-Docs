@@ -4706,10 +4706,8 @@ STREET DATA
 
 **Instructional Comments for the STREET.DAT FILE**
 
-1. The street name is provided for the user to separate the streets groups for easy
-
-identification in the data file.
-It is not used in the program.
+1. The street name is provided for the user to separate the streets groups for easy identification in the data file.
+   It is not used in the program.
 
 2. The street depth, width and n-values can be assigned globally for all the street elements.
    The street depth, width, n-value and elevation can be spatially variable for the individual grid elements.
@@ -4736,6 +4734,7 @@ It is not used in the program.
 7. The street flow depth tolerance value TOLST below which no street flow routing computations are performed is 0.03 ft or 0.01 meters.
    This value is replacing the floodplain tolerance TOL value in TOLER.DAT and it is hardwired into the model.
    The user cannot adjust it.
+
 
 FILE: ARF.DAT
 ~~~~~~~~~~~~~
