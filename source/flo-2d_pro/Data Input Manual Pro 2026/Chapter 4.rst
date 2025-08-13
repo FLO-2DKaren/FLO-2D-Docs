@@ -4933,7 +4933,7 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i>                                <pre>MULT.DAT File Variables</pre></i></div>
+        <div><i>                                        <pre>MULT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                                 Line 1: <b>WMC WDRALL DMALL NODCHNSALL XNMULTALL
@@ -4956,7 +4956,7 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>       MULT.DAT File Example</pre></i></div>
+        <div><i><pre>               MULT.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
            0 0.0 5.0 1 0.04 0.00 0.00 0.0
