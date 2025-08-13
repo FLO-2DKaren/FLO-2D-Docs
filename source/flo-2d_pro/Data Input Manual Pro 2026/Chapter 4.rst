@@ -3072,10 +3072,10 @@ CHANNEL DATA
    :widths: 25 25 25 25
    :header-rows: 0
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - A1(I)
      - **r**
