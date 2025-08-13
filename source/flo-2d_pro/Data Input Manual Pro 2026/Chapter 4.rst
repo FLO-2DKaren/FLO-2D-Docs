@@ -5231,121 +5231,91 @@ FILE: SED.DAT
 MUDFLOW AND SEDIMENT TRANSPORT DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-SED.DAT File Variables
-----------------------
+.. raw:: html
 
-**Line 1:** SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SED.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                                Line 1:  <b>SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX</b>
+        M 0.000602 33.10 0.001720 29.50 2.74 0.00
 
+                                Line 2:  <b>SEDCHAR = ‘C’ ISEDEQG ISEDSIZEFRAC DFIFTY SGRAD
+                                         SGST DRYSPWT CVFG ISEDSUPPLY ISEDISPLAY</b>
+        C 2 0.25 2.5 2.65 92.5 1 7232
 
-   M 0.000602 33.10 0.001720 29.50 2.74 0.00
+        Z 2 5.0 0.15            Line 3:  <b>SEDCHAR = ‘Z’ ISEDEQI BEDTHICK CVFI</b>
+        P 0.062 0.010           Line 4:  <b>SEDCHAR = ‘P’ SEDIAM SEDPERCENT</b>
+        D 111 20.0              Line 5:  <b>SEDCHAR = ‘D’ JDEBNOD DEBRISV</b>
+        E 1.0                   Line 6:  <b>SEDCHAR = ‘E’ SCOURDEP</b>
+        R 9366                  Line 7:  <b>SEDCHAR = ‘R’ ICRETIN(N)</b> <i>N = number of rigid bed nodes</i>
+        S 23798 1 4.49 0.89     Line 8:  <b>SEDCHAR = ‘S’ ISEDGRID(N) ISEDCFP(N) ASED(N)
+                                         BSED(N)</b> <i>N = number of sediment supply rating curves.</i>
+        N 0.062 0.052           Line 9:  <b>SEDCHAR = ‘N’ SSEDIAM SSEDPERCENT</b>
+        G 1 3                   Line 10: <b>SEDCHAR = ‘G’ ISEDUM ISEDGROUP(N)</b>
+                                          <i>N = number of sediment groups</i>
 
-**Line 2:** SEDCHAR = ‘C’ ISEDEQG ISEDSIZEFRAC DFIFTY SGRAD SGST DRYSPWT CVFG ISEDSUPPLY ISEDISPLAY
+        Notes:
+         Only a sediment transport ISED or mudflow MUD simulation can be applied in a project model.
+         If MUD = 0 in the CONT.DAT file, omit line 1.
+         If ISED = 0 in the CONT.DAT file, omit line 2, 3, 4, 6, 7, 8, and 9.
+         If both MUD and ISED = zero in the CONT.DAT file, omit this file.
+         Line 2: If ISEDSIZEFRAC = 1, it is necessary to create a sediment group using Lines 3 and 4.
+         Line 4: Repeat this line for each size fraction.
+         Each group must have the same number of size fractions.
+         Line 5: If debris basin IDEBRV = 0 in the CONT.DAT file, ignore this line.
+         Line 8, 9: If ISEDSUPPLY = 0, ignore these lines.
+        </pre>
+    </div>
 
+.. raw:: html
 
-   C 2 0.25 2.5 2.65 92.5 1 7232
+    <br><br>
 
-   Z 2 5.0 0.15 Line 3: **SEDCHAR = ‘Z’ ISEDEQI BEDTHICK CVFI**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SED.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           M 0.000602 33.10 0.001720 29.50 2.74 0.00  <i>(Mudflow)</i>
+           <i>or</i>
+           C 2 1 2.5 6.7 2.65 95.0 0.10 0 1961  <i>(Sediment Transport)</i>
+           Z 2 1.
+           0.10
+           P 0.074 0.058
+           P 0.149 0.099
+           P 0.297 0.156
+           P 0.590 0.230
+           P 1.19 0.336
+           P 2.38 0.492
+           P 4.76 0.693
+           P 9.53 0.808
+           E 1.0
+           R 2062
+           R 2063
+           R 2114
+           R 2115
+           R 2166
+           R 2167
+           S 1228 1 4.49 0.89
+           N 0.074 0.022
+           N 0.300 0.107
+           N 0.600 0.232
+           N 2.000 0.528
+           N 4.750 0.748
+           N 9.530 0.852
+           N 19.050 0.926
+           N 38.100 0.973
+           N 76.200 1.000
+           G 1 2
+           G 2 2
+           G 3 1
+           G 4 2 ...
+        </pre>
+    </div>
 
-   P 0.062 0.010 Line 4: **SEDCHAR = ‘P’ SEDIAM SEDPERCENT**
+.. raw:: html
 
-   D 111 20.0 Line 5: **SEDCHAR = ‘D’ JDEBNOD DEBRISV**
-
-   E 1.0 Line 6: **SEDCHAR = ‘E’ SCOURDEP**
-
-   R 9366 Line 7: **SEDCHAR = ‘R’ ICRETIN(N)** *N = number of rigid bed nodes*
-
-   S 23798 1 4.49 0.89 Line 8: **SEDCHAR = ‘S’ ISEDGRID(N) ISEDCFP(N) ASED(N)**
-
-   **BSED(N)** *N = number of sediment supply rating curves.*
-
-   N 0.062 0.052 Line 9: **SEDCHAR = ‘N’ SSEDIAM SSEDPERCENT**
-
-   G 1 3 Line 10: **SEDCHAR = ‘G’ ISEDUM ISEDGROUP(N)**
-
-   *N = number of sediment groups*
-
-   Notes:
-
-   Only a sediment transport ISED or mudflow MUD simulation can be applied in a project model.
-   If MUD = 0 in the CONT.DAT file, omit line 1.
-
-   If ISED = 0 in the CONT.DAT file, omit line 2, 3, 4, 6, 7, 8, and 9.
-   If both MUD and ISED = zero in the CONT.DAT file, omit this file.
-
-   Line 2: If ISEDSIZEFRAC = 1, it is necessary to create a sediment group using Lines 3 and 4.
-
-   Line 4: Repeat this line for each size fraction.
-   Each group must have the same number of size fractions.
-   Line 5: If debris basin IDEBRV = 0 in the CONT.DAT file, ignore this line.
-
-   Line 8, 9: If ISEDSUPPLY = 0, ignore these lines.
-
-   SED.DAT File Example
-
-   M 0.000602 33.10 0.001720 29.50 2.74 0.00 *(Mudflow)*
-
-*or*
-
-   C 2 1 2.5 6.7 2.65 95.0 0.10 0 1961 *(Sediment Transport)*
-
-   Z 2 1.
-   0.10
-
-   P 0.074 0.058
-
-   P 0.149 0.099
-
-   P 0.297 0.156
-
-   P 0.590 0.230
-
-   P 1.19 0.336
-
-   P 2.38 0.492
-
-   P 4.76 0.693
-
-   P 9.53 0.808
-
-   E 1.0
-
-   R 2062
-
-   R 2063
-
-   R 2114
-
-   R 2115
-
-   R 2166
-
-   R 2167
-
-   S 1228 1 4.49 0.89
-
-   N 0.074 0.022
-
-   N 0.300 0.107
-
-   N 0.600 0.232
-
-   N 2.000 0.528
-
-   N 4.750 0.748
-
-   N 9.530 0.852
-
-   N 19.050 0.926
-
-   N 38.100 0.973
-
-   N 76.200 1.000
-
-   G 1 2
-
-   G 2 2
-
-   G 3 1
+    <br><br>
 
 **Variable Descriptions for the SED.DAT File**
 
@@ -5356,10 +5326,10 @@ SED.DAT File Variables
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - ASED(N)
      - **r**
@@ -5372,11 +5342,20 @@ SED.DAT File Variables
 
        **0 - 30**
      - Sediment bed thickness (ft or m) for sediment routing by size fraction.
-       The available sediment volume for a size fraction within a grid element is defined by the bed thickness times the floodplain or channel element
+
+       The available sediment volume for a size fraction within a grid element is defined by
+
+       the bed thickness times the floodplain or channel element
+
        surface area times the percent size distribution.
-       The default bed thickness is 10 ft (3 m) for the floodplain if bed thickness is less than 0.1 ft.
-       If there is no available sediment volume for a given size fraction, no further scour of the bed will occur for that sediment size fraction (see
-       comment 2).
+
+       The default bed thickness is 10 ft (3 m) for the floodplain if bed
+
+       thickness is less than 0.1 ft.
+
+       If there is no available sediment volume for a given size fraction, no further scour
+
+       of the bed will occur for that sediment size fraction (see comment 2).
 
    * - BSED(N)
      - **r**
@@ -5394,19 +5373,34 @@ SED.DAT File Variables
      - **r**
      - **0 - 0.2**
      - Fine sediment volumetric concentration for overland, channel, and streets.
+
        This value is superseded by CVFI in Line 3.
+
        Concentration by volume of sediment for sizes less than 0.0625 mm (sand-silt split).
-       This concentration by volume generally ranges from 5% to 15% and is expressed as a decimal (0.05 for 5% concentration by volume).
+
+       This concentration by volume generally ranges from 5% to 15% and is expressed as
+
+       a decimal (0.05 for 5% concentration by volume).
+
        It is used only in Woo-MPM sediment transport equation.
 
    * - CVFI
      - **r**
      - **0 - 0.2**
-     - This variable is the same as CVFG except that it represents the fine sediment volumetric concentration for an individual channel segment(s).
-       CVFI supersedes CVFG for a channel segment(s) as identified by ISEDN in CHAN.
-       DAT.
-       CVFI represents the concentration by volume of sediment for sizes less than 0.0625 mm (sand-silt split).
-       This concentration by volume generally ranges from 5% to 15% and is expressed as a decimal (0.05 for 5% con- centration by volume).
+     - This variable is the same as CVFG except that it represents the fine sediment
+
+       volumetric concentration for an individual channel segment(s).
+
+       CVFI supersedes CVFG for a channel segment(s) as identified by ISEDN in CHAN.DAT.
+
+       CVFI represents the concentration by volume of sediment for sizes less
+
+       than 0.0625 mm (sand-silt split).
+
+       This concentration by volume generally ranges from 5% to 15% and is expressed as a
+
+       decimal (0.05 for 5% con- centration by volume).
+
        It is used only in the Woo-MPM sediment transport equation.
 
    * - DEBRISV
@@ -5434,15 +5428,27 @@ SED.DAT File Variables
      - **0 = fp**
 
        **1 = chan**
-     - ISEDCFP(N) = 0 for a floodplain sediment supply rating curve ISEDCFP(N) = 1 for a channel sediment supply rating curve.
+     - ISEDCFP(N) = 0 for a floodplain sediment supply rating curve ISEDCFP(N) = 1
+
+       for a channel sediment supply rating curve.
 
    * - ISEDEQG
      - **i**
      - **1 - 11**
-     - Transport equation number used in sediment routing for overland flow, channels and streets (see comment 3).
-       In Line 2 (Line ‘C’), ISEDEQG will set the sediment transport equation for floodplain sediment routing and channel routing.
-       In Line 3 (Line ‘Z’), ISEDEQI will set the sediment transport equation for sediment routing by size fractions with a sediment transport equation
+     - Transport equation number used in sediment routing for overland flow,
+
+       channels and streets (see comment 3).
+
+       In Line 2 (Line ‘C’), ISEDEQG will set the sediment transport equation for
+
+       floodplain sediment routing and channel routing.
+
+       In Line 3 (Line ‘Z’), ISEDEQI will set the sediment transport equation for
+
+       sediment routing by size fractions with a sediment transport equation
+
        assigned to each group.
+
        Set ISEDEQG or ISEDEQI as follows for the appropriate sediment transport equation:
 
        ISEDEQ = 1 Zeller and Fullerton ISEDEQ = 2 Yang
@@ -5462,26 +5468,56 @@ SED.DAT File Variables
    * - ISEDEQI
      - **i**
      - **1 - 11**
-     - This variable is the same as ISEDEQG except that it represents the sediment transport equation used for sediment routing by size fractions and it is
-       used to identify the sediment transport equation for a specific channel segment or reach (comment 5).
+     - This variable is the same as ISEDEQG except that it represents the sediment transport
+
+       equation used for sediment routing by size fractions and it is
+
+       used to identify the sediment transport equation for a specific channel
+
+       segment or reach (comment 5).
+
        This value supersedes ISEDEQG in Line 2.
-       In Line 3 (Line ‘Z’), ISEDEQ will set the sediment transport equation for sediment routing by size fractions with a sediment transport equation
+
+       In Line 3 (Line ‘Z’), ISEDEQ will set the sediment transport equation for sediment
+
+       routing by size fractions with a sediment transport equation
+
        assigned to each group.
-       If Line 3 and the following Line 4’s constitute only one group, then all sediment routing on the floodplain, in the channel and in the streets will
+
+       If Line 3 and the following Line 4’s constitute only one group, then all sediment
+
+       routing on the floodplain, in the channel and in the streets will
+
        use the same sediment size distribution.
-       If there is more than one group of Line 3 and the following Line 4’s, then the first group will define the sediment size distribution for the
+
+       If there is more than one group of Line 3 and the following Line 4’s, then the
+
+       first group will define the sediment size distribution for the
+
        floodplain, streets and any channel segments where ISEDN = 1 in CHAN.DAT.
-       Successive channel segments can identify another set of sediment size fractions by setting ISEDN = 2 or higher.
+
+       Successive channel segments can identify another set of sediment size fractions
+
+       by setting ISEDN = 2 or higher.
+
        This will permit the channel bed material to vary throughout the river system.
+
        The ISEDEQI equation numbers are the same as ISEDEQG above.
+
        The number of size fraction intervals must be identical for all sediment groups (see comment 6).
 
    * - ISEDISPLAY
      - **i**
      - **1 - NNOD**
-     - Grid element (channel or floodplain) for which the sediment transport capacity for all the sediment transport equations will be listed by output
+     - Grid element (channel or floodplain) for which the sediment transport capacity for
+
+       all the sediment transport equations will be listed by output
+
        interval TOUT in the SEDTRAN.OUT file.
-       Note that only one equation is used in the actual sediment routing calculations, but the results of all equations are presented in SEDTRAN.OUT.
+
+       Note that only one equation is used in the actual sediment routing calculations,
+
+       but the results of all equations are presented in SEDTRAN.OUT.
 
    * - ISEDGRID(N)
      - **i**
@@ -5497,16 +5533,21 @@ SED.DAT File Variables
      - **s**
      - **0 or 1**
      - ISEDSIZEFRAC = 1, The sediment routing will be performed by size fraction.
+
        Requires data input from Lines 3 and 4 and Line 9 if a sediment supply is also input.
 
        ISEDSIZEFRAC = 0, No sediment routing by size fraction.
+
        Sediment routing is based on the median bed material size D50.
+
        For this case, the default bed thickness is 10 ft (3m) (see comment 1).
 
    * - ISEDSUPPLY
      - **s**
      - **0 or 1**
-     - ISEDSUPPLY = 1 if a sediment rating curve will be used to define the sediment supply to a channel reach or floodplain area.
+     - ISEDSUPPLY = 1 if a sediment rating curve will be used to define the sediment supply
+
+       to a channel reach or floodplain area.
 
    * - ISEDUM
      - **i**
@@ -5517,6 +5558,7 @@ SED.DAT File Variables
      - **i**
      - **1 - NNOD**
      - Grid element with the debris basin.
+
        The grid element must be a node listed in INFLOW.DAT (see comment 7).
 
    * - SCOURDEP
@@ -5532,6 +5574,7 @@ SED.DAT File Variables
      - Character line identifier:
 
        SEDCHAR = ‘M’ - Mudflow parameters in Line 1.
+
        SEDCHAR = ‘C’ - Sediment routing parameters in Line 2.
 
        SEDCHAR = ‘Z’ - Sediment routing by size fraction control parameters in Line 3.
@@ -5539,6 +5582,7 @@ SED.DAT File Variables
        SEDCHAR = ‘P’ - Sediment routing by size fraction
 
        sediment distribution variables in Line 4.
+
        SEDCHAR = ‘D’ - Debris basin parameters in Line 5.
 
        SEDCHAR = ‘E’ - Sediment scour limitation parameter
@@ -5546,6 +5590,7 @@ SED.DAT File Variables
        in Line 6.
 
        SEDCHAR = ‘R’ - Rigid bed grid elements in Line 7.
+
        SEDCHAR = ‘S’ - Sediment supply rating curves in Line 8.
 
        SEDCHAR = ‘N’ - Sediment supply rating curve size
@@ -5560,15 +5605,27 @@ SED.DAT File Variables
      - **r**
      - **0 - ∞**
      - Representative sediment diameter (mm) for sediment routing by size fraction.
-       The sediment diameter corresponds to a given size fraction percent finer and usually is a pan sieve size.
+
+       The sediment diameter corresponds to a given size fraction percent finer and
+
+       usually is a pan sieve size.
 
    * - SEDPERCENT
      - **r**
      - **0 - 1**
      - Sediment size distribution percentage (expressed as a decimal).
-       The percent- age represents the percent of the bed material sediment that is finer than the representative size diameter.
-       For example, SEDPERCENT = 0.456 defines that 45.6% of the sediment is finer than the 1 mm sediment size fraction.
-       The last entry should be 1.00 (100% of the sediment is smaller than the corresponding sediment diameter).
+
+       The percent- age represents the percent of the bed material sediment that is finer
+
+       than the representative size diameter.
+
+       For example, SEDPERCENT = 0.456 defines that 45.6% of the sediment is finer
+
+       than the 1 mm sediment size fraction.
+
+       The last entry should be 1.00 (100% of the sediment is smaller than the
+
+       corresponding sediment diameter).
 
    * - SGRAD
      - **r**
@@ -5589,20 +5646,28 @@ SED.DAT File Variables
      - **r**
      - **0 - ∞**
      - Representative sediment supply diameter (mm) for sediment routing by size fraction.
+
        See SEDIAM parameter above.
 
    * - SSEDPERCENT
      - **r**
      - **0 - 1**
      - Sediment supply size distribution percentage (expressed as a decimal).
-       SSEDPERCENT represents the percent of the sediment that is finer than the representative size diameter.
+
+       SSEDPERCENT represents the percent of the sediment that is finer than the
+
+       representative size diameter.
+
        See SEDPERCENT parameter above.
 
    * - VA
      - **r**
      - **0 - ∞**
      - Coefficient in the viscosity versus sediment concentration by volume relationship.
-       The relationship is based on a viscosity given in poises (dynes-s/ cm2) for either the English or Metric system (see comment 4).
+
+       The relationship is based on a viscosity given in poises (dynes-s/ cm2) for either
+
+       the English or Metric system (see comment 4).
 
    * - VB
      - **r**
@@ -5615,10 +5680,16 @@ SED.DAT File Variables
 
        **50,000**
      - The laminar flow resistance parameter for overland flow.
+
        This value should range from 24 to 50,000 (see Table 8 in the FLO-2D Reference manual).
+
        It is suggested that a value of 2,480 initially be used for mudflows.
+
        If a value of XKX is entered, it will be used by the model.
-       If XKX = 0, then XKX is computed by the following formulas where FPN is the floodplain grid element Manning’s n-value:
+
+       If XKX = 0, then XKX is computed by the following formulas where FPN is the floodplain grid
+
+       element Manning’s n-value:
 
        FPN < 0.01 XKX = 24
 
@@ -5630,6 +5701,7 @@ SED.DAT File Variables
      - **r**
      - **0 - ∞**
      - Coefficient of the yield stress versus sediment concentration by volume relationship.
+
        The relationship is based on a yield stress given in dynes/cm2 for either the English or Metric system.
 
    * - YSB
