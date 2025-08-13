@@ -3459,32 +3459,32 @@ CHANNEL DATA
     A channel spatially variable shallow n-value assigned to the depths less than 0.2 ft (0.067 m) is defined by applying the ROUGHADJ to each channel
     reach.:
 
-SHALLOWN = ROUGHADJ / 2
+        SHALLOWN = ROUGHADJ / 2
 
-where: ROUGHADJ is assigned to line 1 of each channel segment.
+        where: ROUGHADJ is assigned to line 1 of each channel segment.
 
-18.
-Instructions for creating the cross-section channel geometry data files are out- lined in Lesson 14 of the Workshop Lessons.
-The lessons are found in the FLO-2D Pro Documentation folder.
+18. Instructions for creating the cross-section channel geometry data files are out- lined in Lesson 14 of the Workshop Lessons.
+    The lessons are found in the FLO-2D Pro Documentation folder.
 
-19.
-Surveyed water surfaces can be automatically compared with the predicted water surface in the PROFILES program by creating a WSTIME.DAT file.
-This file contains a list of the channel element, water surface elevation and time.
-Create this file to calibrate the model to known water surface elevation data.
-The time of the surveyed water surface elevation must correspond to the model flood routing timing.
+19. Surveyed water surfaces can be automatically compared with the predicted water surface in the PROFILES program by creating a WSTIME.DAT file.
+    This file contains a list of the channel element, water surface elevation and time.
+    Create this file to calibrate the model to known water surface elevation data.
+    The time of the surveyed water surface elevation must correspond to the model flood routing timing.
 
-20.
-Channel elements that are not intended to share discharge with the floodplain should be designated as NOEXCHANGE cells.
-For these elements, no lateral exchange occurs: neither overbank discharge from the channel to the adjacent floodplain (left or right bank), nor
-return flow from the floodplain to the channel.
+20. Channel elements that are not intended to share discharge with the floodplain should be designated as NOEXCHANGE cells.
+    For these elements, no lateral exchange occurs: neither overbank discharge from the channel to the adjacent floodplain (left or right bank), nor
+    return flow from the floodplain to the channel.
 
-Additionally, NOEXCHANGE can be applied to channel elements at the up- stream or downstream termini.
-When this designation is used, flow will not enter the channel at the upstream end, nor exit at either the upstream or downstream ends.
+    Additionally, NOEXCHANGE can be applied to channel elements at the up- stream or downstream termini.
+    When this designation is used, flow will not enter the channel at the upstream end, nor exit at either the upstream or downstream ends.
 
-This feature is particularly useful at the upstream end of a channel segment when an inflow hydrograph is applied at a node.
-The FLO-2D engine will automatically set the first channel element as NOEXCHANGE if it has an inflow node assigned to it or if it has a hydraulic
-structure assigned to it.
-This ensures that the inflow is routed entirely downstream within the channel without spilling onto the floodplain.
+    This feature is particularly useful at the upstream end of a channel segment when an inflow hydrograph is applied at a node.
+    The FLO-2D engine will automatically set the first channel element as NOEXCHANGE if it has an inflow node assigned to it or if it has a hydraulic
+    structure assigned to it.
+    This ensures that the inflow is routed entirely downstream within the channel without spilling onto the floodplain.
+
+
+
 
 FILE: CHANBANK.DAT
 
