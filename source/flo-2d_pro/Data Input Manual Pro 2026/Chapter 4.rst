@@ -4302,102 +4302,91 @@ HYDRAULIC STRUCTURE DATA
 
 7. If the hydraulic structure is a bridge, culvert or weir between two floodplain elements, set IFPORCHAN = 0.
    If the structure in a channel, set IFPORCHAN = 1.
-   If the structure such as a culvert or pump collects discharge from a floodplain and discharges to a channel, set IFPORCHAN =
-2. Finally is the hydraulic structure has an inlet in a channel element and an outlet in a floodplain element, IFPORCHAN =3.
+   If the structure such as a culvert or pump collects discharge from a floodplain and discharges to a channel,
+   set IFPORCHAN = 2. Finally is the hydraulic structure has an inlet in a channel element and an outlet in a floodplain element, IFPORCHAN =3.
 
 8. The Department of Transportation generalized culvert equations can be used to assess inlet and outlet control.
    The types of culvert entrances are:
 
-   *BOX entrance:*
+       *BOX entrance:*
 
-   type 1 - wingwall flare 30 to 75 degrees
+       type 1 - wingwall flare 30 to 75 degrees
 
-   type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
+       type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
 
-   *PIPE entrance:*
+       *PIPE entrance:*
 
-   type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
+       type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
 9. The culvert equations use the conventional entrance loss coefficients KE values that be found in the literature.
 
-10.
-If INOUTCONT(I,J) = 0, then the hydraulic structure discharge is based solely on the upstream water surface elevation ( headwater depth above the
-reference elevation which is either assigned or represents the node elevation).
-This is equivalent to inlet control for a culvert.
-If INOUTCONT(I,J) = 1, then the tailwater submergence is evaluated.
-As the tailwater elevation approaches the upstream headwater elevation, the model adjusts the rating curve or table and gradually reduces the
-discharge as the outlet becomes submerged.
-When the switch INOUTCONT(I,J) = 2, submergence discharge reduction occurs and if the tailwater elevation exceeds the headwater elevation then flow
-upstream is possible.
-When the hydraulic structure discharge is greater than the upstream inflow, the headwater elevation decreases and the tailwater elevation increases.
-As the two water surface elevations on each side of the structure equilibrate, the submergence factor reduces the structure discharge.
-This may occur because of tailwater effects or because the structure discharge rating table was overestimated for the upstream flow conditions.
-The submergence modifications to the rating table are reported in the REVISED_RATING_TABLES.OUT file.
+10. If INOUTCONT(I,J) = 0, then the hydraulic structure discharge is based solely on the upstream water surface elevation ( headwater depth above the
+    reference elevation which is either assigned or represents the node elevation).
+    This is equivalent to inlet control for a culvert.
+    If INOUTCONT(I,J) = 1, then the tailwater submergence is evaluated.
+    As the tailwater elevation approaches the upstream headwater elevation, the model adjusts the rating curve or table and gradually reduces the
+    discharge as the outlet becomes submerged.
+    When the switch INOUTCONT(I,J) = 2, submergence discharge reduction occurs and if the tailwater elevation exceeds the headwater elevation then flow
+    upstream is possible.
+    When the hydraulic structure discharge is greater than the upstream inflow, the headwater elevation decreases and the tailwater elevation increases.
+    As the two water surface elevations on each side of the structure equilibrate, the submergence factor reduces the structure discharge.
+    This may occur because of tailwater effects or because the structure discharge rating table was overestimated for the upstream flow conditions.
+    The submergence modifications to the rating table are reported in the REVISED_RATING_TABLES.OUT file.
 
-11.
-By assigning ISTORMDOUT, the discharge from this outflow element will represent the collective inflow from any number of upstream inflow elements with
-the same outflow node.
-The discharge in the outflow element ISTORMDOUT can be limited to the maximum discharge value STORMDMAXQ.
-When the STORMDMAXQ is exceeded, no additional inflow discharge will be computed for successive downstream inflow nodes.
-This simplified storm drain routine does not include any pipe flow routing and does not use the storm drain component.
-The purpose of this component is to estimate the collected discharge in a large series of culverts or a limited storm drain net-
+11. By assigning ISTORMDOUT, the discharge from this outflow element will represent the collective inflow from any number of upstream inflow elements with
+    the same outflow node.
+    The discharge in the outflow element ISTORMDOUT can be limited to the maximum discharge value STORMDMAXQ.
+    When the STORMDMAXQ is exceeded, no additional inflow discharge will be computed for successive downstream inflow nodes.
+    This simplified storm drain routine does not include any pipe flow routing and does not use the storm drain component.
+    The purpose of this component is to estimate the collected discharge in a large series of culverts or a limited storm
+    drain network.
+    It will limit the potential inflow as the pipe capacity is reached without performing a pipe network discharge calculation.
+    For complex pipe networks, use the FLO-2D storm drain model.
 
-work.
-It will limit the potential inflow as the pipe capacity is reached without performing a pipe network discharge calculation.
-For complex pipe networks, use the FLO-2D storm drain model.
+12. CDIAMETER is primarily used to estimate the timing of flow through a long culvert.
+    This is accomplished with a Muskingum-Cunge method of storage routing.
+    When the culvert is longer than about 300 ft (100 m), the timing of the flow in the culvert may not match the timing of the floodwave progression.
+    Generally, the amount of storage in the culvert is not significant compared to the flood volume.
+    Use CDIAMETER for a box culvert width if the generalized culvert equations are used.
+    When using other culvert shapes such as an oval, define an approximate equivalent circular culvert diameter.
+    For multiple box culverts, define an equivalent single box culvert width (CUBASE) and height (CDIAMETER).
 
-12.
-CDIAMETER is primarily used to estimate the timing of flow through a long culvert.
-This is accomplished with a Muskingum-Cunge method of storage routing.
-When the culvert is longer than about 300 ft (100 m), the timing of the flow in the culvert may not match the timing of the floodwave progression.
-Generally, the amount of storage in the culvert is not significant compared to the flood volume.
-Use CDIAMETER for a box culvert width if the generalized culvert equations are used.
-When using other culvert shapes such as an oval, define an approximate equivalent circular culvert diameter.
-For multiple box culverts, define an equivalent single box culvert width (CUBASE) and height (CDIAMETER).
+13. A hydraulic structure can be set up to compute flow exchange from a channel element to a floodplain node.
+    For example, a channel may share flow through a weir structure to a retention basin represented by floodplain elements.
 
-13.
-A hydraulic structure can be set up to compute flow exchange from a channel element to a floodplain node.
-For example, a channel may share flow through a weir structure to a retention basin represented by floodplain elements.
+14. For hydraulic structures simulation of pumps, set the intake elevation as the Head Reference Elevation.
+    The default value is zero.
+    This setting will use the grid element elevation of the inlet node intake elevation for the pump.
+    That may be incorrect and result in a negative head on the intake.
 
-14.
-For hydraulic structures simulation of pumps, set the intake elevation as the Head Reference Elevation.
-The default value is zero.
-This setting will use the grid element elevation of the inlet node intake elevation for the pump.
-That may be incorrect and result in a negative head on the intake.
+15. For generalized culverts, the INOUTCONT should be set to 0, 1, or 2.
+    The tailwater conditions submergence and reversed flow direction will be allowed based on the switch position.
+    1 allows submergence and 2 allows flow in the upstream direction.
 
-15.
-For generalized culverts, the INOUTCONT should be set to 0, 1, or 2.
-The tailwater conditions submergence and reversed flow direction will be allowed based on the switch position.
-1 allows submergence and 2 allows flow in the upstream direction.
+16. The bridge hydraulic routine replaces the need for rating curves or rating tables and represents significant added detail in computing free surface
+    flow, pressure flow or combined pressure and weir discharge for flow over the deck.
+    See the White Paper “Bridge Hydraulics Component” for the details on the bridge flow routine that is available in the FLO-2D Help folder.
 
-16.
-The bridge hydraulic routine replaces the need for rating curves or rating tables and represents significant added detail in computing free surface
-flow, pressure flow or combined pressure and weir discharge for flow over the deck.
-See the White Paper “Bridge Hydraulics Component” for the details on the bridge flow routine that is available in the FLO-2D Help folder.
+17. In the bridge hydraulics component, the free surface flow is computed using various coefficients that represent the bridge features impact on the flow
+    as a function of water surface elevation (such as piers).
+    The user can assign the coefficients directly or use the automated interpolation of the USGS coefficients from the White Paper Appendix figures.
 
-17.
-In the bridge hydraulics component, the free surface flow is computed using various coefficients that represent the bridge features impact on the flow
-as a function of water surface elevation (such as piers).
-The user can assign the coefficients directly or use the automated interpolation of the USGS coefficients from the White Paper Appendix figures.
+18. Bridge pressure flow is computed as either sluice gate flow or orifice flow de- pending on the water surface elevation with respect to the bridge
+    soffit.
 
-18.
-Bridge pressure flow is computed as either sluice gate flow or orifice flow de- pending on the water surface elevation with respect to the bridge
-soffit.
+19.When the water surface exceeds the bridge deck elevation, broadcrested weir flow is computed.
+    This is added to the pressure flow to determine the total discharge through the bridge.
+    It is recommended that the weir coefficient be estimated on the low side to account for spaced rails, walkways, debris and other non-uniform deck
+    features.
 
-19.
-When the water surface exceeds the bridge deck elevation, broadcrested weir flow is computed.
-This is added to the pressure flow to determine the total discharge through the bridge.
-It is recommended that the weir coefficient be estimated on the low side to account for spaced rails, walkways, debris and other non-uniform deck
-features.
+20. If simulating culvert discharge using the generalized culvert equations with multiple barrels or openings, input the geometry of a single barrel or
+    opening and the MULTBARRELS parameter at the end of line F.
+    It is assumed that each culvert barrel has identical geometry and invert elevation.
+    If using only one barrel, this variable is not added.
 
-20.
-If simulating culvert discharge using the generalized culvert equations with multiple barrels or openings, input the geometry of a single barrel or
-opening and the MULTBARRELS parameter at the end of line F.
-It is assumed that each culvert barrel has identical geometry and invert elevation.
-If using only one barrel, this variable is not added.
 
- FILE: SUBMERGE_FACTOR.DAT
- ~~~~~~~~~~~~~~~~~~~~~~~~~
+FILE: SUBMERGE_FACTOR.DAT
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SUBMERGENCE DATA
 ^^^^^^^^^^^^^^^^
