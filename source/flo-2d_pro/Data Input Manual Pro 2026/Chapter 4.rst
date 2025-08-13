@@ -4457,38 +4457,33 @@ SUBMERGENCE DATA
 
 **Instructional Comments for the SUBMERGE_FACTOR.DAT FILE**
 
-1. When the tailwater water approaches the headwater surface elevation and the
+1. When the tailwater water approaches the headwater surface elevation and the headwater depth/tailwater depth
+   approaches 1, then the submergence factor is change is
 
-headwater depth/tailwater depth approaches 1, then the submergence factor is change is
+       HSUBFACTOR = HSUBFACTOR - 0.01 \* SUBM_ADJ
 
-   HSUBFACTOR = HSUBFACTOR - 0.01 \* SUBM_ADJ
+       or
 
-   or
-
-   HSUBFACTOR = HSUBFACTOR + 0.015 \* SUBM_ADJ
+       HSUBFACTOR = HSUBFACTOR + 0.015 \* SUBM_ADJ
 
 2. The submergence factor for hydraulic structures is not a DOT table but rather it adjusts on the fly during runtime.
-   This is not new.
-   What is new is SUBM\_ ADJ.
-   If SUBM_ADJ = 1.0, there is no change from the existing method.
+   This is not new. What is new is SUBM\_ ADJ. If SUBM_ADJ = 1.0, there is no change from the existing method.
    If a SUBMERGE_FACTOR only has
 
-   1811 1.0
+       1811 1.0
 
-   1862 1.0
+       1862 1.0
 
-Then an output file is written: HYDRAULIC STRUCTURE SUBFACTORS.
-OUT with only the listed cells and subfactor data including discharge but no subfactor acceleration.
-This gives the user the following choices:
+    Then an output file is written: HYDRAULIC STRUCTURE SUBFACTORS.
+    OUT with only the listed cells and subfactor data including discharge but no subfactor acceleration.
+    This gives the user the following choices:
 
-   1. No changes at all without the SUBMERGE_FACTOR.DAT file.
-      Every- thing is exactly the way it is now.
+       i. No changes at all without the SUBMERGE_FACTOR.DAT file. Every- thing is exactly the way it is now.
 
-   2. Write out the subfactor changes for only the specified cells in the data file.
-      No acceleration if SUBM_ADJ = 1.0.
+       ii. Write out the subfactor changes for only the specified cells in the data file. No acceleration if SUBM_ADJ = 1.0.
 
-   3. Write out the subfactor changes and use the acceleration to increase the rate of change in the subfactor SUBM_ADJ > 1.0 or decrease the rate of
-      change: SUBM_ADJ < 1.0.
+       iii. Write out the subfactor changes and use the acceleration to increase the rate of change in the subfactor SUBM_ADJ > 1.0 or decrease the rate of
+            change: SUBM_ADJ < 1.0.
 
 FILE: STREET.DAT
 ~~~~~~~~~~~~~~~~
