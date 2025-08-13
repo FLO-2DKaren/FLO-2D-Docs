@@ -2974,125 +2974,95 @@ EVAPORATION DATA
 
 
 FILE: CHAN.DAT
+~~~~~~~~~~~~~~~~~
 
 CHANNEL DATA
+^^^^^^^^^^^^^^^^
 
- CHAN.DAT File Variables
- -----------------------
+.. raw:: html
 
-Line 1: DEPINITIAL(K) FROUDC(K) ROUGHADJ ISEDN(K)
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                                   CHAN.DAT File Variables </pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+              Line 1: <b>DEPINITIAL(K) FROUDC(K) ROUGHADJ ISEDN(K)</b>
+        0.00 0.50 0.20 0
 
+              Line 2a: <b>SHAPE</b> <i>‘R’ = Rectangular</i> <b>ICHANGRID(I) BANKELL(I)
+                       BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I)</b>
+        R 50 4765.52 4765.00 0.031 22.54 6.32 100.00
 
-   0.00 0.50 0.20 0
+              Line 2b: <b>SHAPE</b> <i>‘V’ = Variable Area</i> <b>ICHANGRID(I) BANKELL(I)
+                       BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)
+                       C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)<b>
+        V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
 
-   Line 2a: **SHAPE** *‘R’ = Rectangular* **ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I)**
+              Line 2c: <b>SHAPE</b> <i>‘T’ = Trapezoidal</i> <b>ICHANGRID(I) BANKELL(I)
+                       BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I) ZL(I) ZR(I)</b>
+        T 50 4765.52 4765.00 0.031 22.54 6.32 100.00 2.40 1.50
 
-   R 50 4765.52 4765.00 0.031 22.54 6.32 100.00
+              Line 2d: <b>SHAPE</b> <i>‘N’ = Natural</i> <b>ICHANGRID(I) FCN(I) XLEN(I) NXECNUM(I)</b>
+        N 50 1 0.031 100.00 1
 
-   Line 2b: **SHAPE** *‘V’ = Variable Area* **ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)**
+        50 4763.00                      Line 3a: <b>ISTART WSELSTART</b>
+        77 4761.00                      Line 3b: <b>IEND WSELEND</b>
+        C 501 498                       Line 4:  <b>CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)</b>
+        E 5112                          Line 5:  <b>CHANCHAR = 'E' ICHANGRID(N)</b>
+        B 12.3                          Line 6:  <b>CHANCHAR = 'B' IBASEFLOW(K)</b>
+                                                 <i>I = number of channel nodes.</i>
+                                                 <i>J = number of channel confluences</i>
+                                                 <i>K = number of channel segments</i>
+                                                 <i>N = number of nofloc and noexchange data sets</i>
 
-C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
+        Notes:
+          If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+          Line 1: This line is repeated at the start of each channel segment.
+          If ISED = 0 in the CONT.DAT file omit ISEDN(K).
+          Line 2: This line is repeated for each channel grid element.
+          Use 2a, 2b, 2c, or 2d for this line.
+          Line 3: If not simulating an initial water surface elevation in the channel, omit this line.
+          Repeat 3a and 3b for each channel segment.
+          Line 3, 4 and 5: Multiple lines are grouped together.
+          Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
+          Place Line 6 after each segment.
+        </pre>
+    </div>
 
+.. raw:: html
 
-   V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
-
-   Line 2c: **SHAPE** *‘T’ = Trapezoidal* **ICHANGRID(I) BANKELL(I) BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I) ZL(I) ZR(I)**
-
-   T 50 4765.52 4765.00 0.031 22.54 6.32 100.00 2.40 1.50
-
-   Line 2d: **SHAPE** *‘N’ = Natural* **ICHANGRID(I) FCN(I) XLEN(I) NXECNUM(I)**
-
-   N 50 1 0.031 100.00 1
-
-   50 4763.00 Line 3a: **ISTART WSELSTART**
-
-   77 4761.00 Line 3b: **IEND WSELEND**
-
-   C 501 498 Line 4: C\ **HANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)**
-
-   E 5112 Line 5: **CHANCHAR = 'E' ICHANGRID(N)**
-
-   B 12.3 Line 6: **CHANCHAR = 'B' IBASEFLOW(K)**
-
-   *I = number of channel nodes.*
-
-   *J = number of channel confluences*
-
-   *K = number of channel segments*
-
-   *N = number of nofloc and noexchange data sets*
-
-   Notes:
-
-   If ICHANNEL = 0 in the CONT.DAT file, omit this file.
-
-   Line 1: This line is repeated at the start of each channel segment.
-   If ISED = 0 in the CONT.DAT file omit ISEDN(K).
-
-   Line 2: This line is repeated for each channel grid element.
-   Use 2a, 2b, 2c, or 2d for this line.
-
-   Line 3: If not simulating an initial water surface elevation in the channel, omit this line.
-   Repeat 3a and 3b for each channel segment.
-
-   Line 3, 4 and 5: Multiple lines are grouped together.
-
-   Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
-   Place Line 6 after each segment.
-
-   CHAN.DAT File Example
-
-   0.00 0.60 0.40
-
-   R 3170 4433.00 4433.00 0.032 40.00 9.30 520.00
-
-   R 3118 4431.00 4431.00 0.032 20.00 9.50 510.00
-
-   R 3066 4430.30 4430.30 0.032 35.00 11.00 500.00
-
-   R 3013 4430.00 4430.00 0.032 35.00 12.70 500.00 R ...
-
-   0.00 0.70 0.20
-
-   V 4560 4675.19 4675.19 0.060 10.59 550.00 36.774 1.630 63.369 0.491 63.261 0.486 0.00
-
-   V 4385 4673.10 4673.10 0.050 11.00 620.00 30.774 1.630 63.369 0.491 63.261 0.486 0.00
-
-   V 4212 4672.86 4672.86 0.040 13.56 560.00 24.439 1.905 53.016 0.749 42.886 0.745 0.00
-
-   V 4213 4672.46 4672.46 0.040 16.16 550.00 22.200 1.807 31.248 0.696 31.235 0.688 0.00
-
-   V ...
-
-   0.00 0.60 0.40
-
-   T 7170 4423.00 4423.00 0.032 40.00 9.30 520.00 1.60 1.90
-
-   T 7118 4421.00 4421.00 0.032 20.00 9.50 510.00 2.60 2.70
-
-   T 7066 4420.30 4420.30 0.032 35.00 11.00 500.00 1.60 1.20
-
-   T 7013 4420.00 4420.00 0.032 35.00 12.70 500.00 1.60 1.20 T ...
-
-   -1.00 0.60 0.20 5
-
-   N 7432 0.060 450.00 1
-
-   N 7389 0.059 450.00 2
-
-   N 7344 0.050 590.00 3
-
-   N 7298 0.060 590.00 4
-
-   N 7299 0.060 590.00 5 N ...
-
-7432 4432.00
-
-7160 4427.00
-
-   C 3669 3825
-
-   C 6296 6377 C ...
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       CHAN.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+          0.00 0.60 0.40
+         R 3170 4433.00 4433.00 0.032 40.00 9.30 520.00
+         R 3118 4431.00 4431.00 0.032 20.00 9.50 510.00
+         R 3066 4430.30 4430.30 0.032 35.00 11.00 500.00
+         R 3013 4430.00 4430.00 0.032 35.00 12.70 500.00 R ...
+         0.00 0.70 0.20
+         V 4560 4675.19 4675.19 0.060 10.59 550.00 36.774 1.630 63.369 0.491 63.261 0.486 0.00
+         V 4385 4673.10 4673.10 0.050 11.00 620.00 30.774 1.630 63.369 0.491 63.261 0.486 0.00
+         V 4212 4672.86 4672.86 0.040 13.56 560.00 24.439 1.905 53.016 0.749 42.886 0.745 0.00
+         V 4213 4672.46 4672.46 0.040 16.16 550.00 22.200 1.807 31.248 0.696 31.235 0.688 0.00
+         V ...
+          0.00 0.60 0.40
+         T 7170 4423.00 4423.00 0.032 40.00 9.30 520.00 1.60 1.90
+         T 7118 4421.00 4421.00 0.032 20.00 9.50 510.00 2.60 2.70
+         T 7066 4420.30 4420.30 0.032 35.00 11.00 500.00 1.60 1.20
+         T 7013 4420.00 4420.00 0.032 35.00 12.70 500.00 1.60 1.20 T ...
+          -1.00 0.60 0.20 5
+         N 7432 0.060 450.00 1
+         N 7389 0.059 450.00 2
+         N 7344 0.050 590.00 3
+         N 7298 0.060 590.00 4
+         N 7299 0.060 590.00 5 N ...
+        7432 4432.00
+        7160 4427.00
+         C 3669 3825
+         C 6296 6377
+         C ...
+        </pre>
+    </div>
 
 **Variable Descriptions for the CHAN.DAT File**
 
@@ -3110,72 +3080,72 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
 
    * - A1(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Coefficient for the variable area regression relationships (see comment 5).
 
    * - A2(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Exponent for the variable area regression relationships (see comment 5).
 
    * - A11(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Coefficient for the variable area regression relationships for flow depth above EXCDEP(I) (see comment 5).
 
    * - A22(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Exponent for the variable area regression relationships for flow depth above EXCDEP(I) (see comment 5).
 
    * - B1(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Coefficient for the variable wetted perimeter relationships (see comment 5).
 
    * - B2(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Exponent for the variable wetted perimeter relationships (see comment 5).
 
    * - B11(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Coefficient for the variable wetted perimeter relationships for flow above EXCDEP(I) (see comment 5).
 
    * - B22(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Exponent for the variable wetted perimeter relationships for flow above EXCDEP(I) (see comment 5).
 
    * - BANKELR(I)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Right bank elevation looking downstream (see comment 12).
 
    * - BANKELL(I)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Left bank elevation looking downstream (see comment 12).
 
    * - C1(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Coefficient for the variable top width relationships (see comment 5).
 
    * - C2(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Exponent for the variable top width relationships (see comment 5).
 
    * - C11(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Coefficient for the variable top width relationships for flow depth above EXCDEP(I) (see comment 5).
 
    * - C22(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Exponent for the variable top width relationships for flow depth above EXCDEP(I) (see comment 5).
 
    * - CHANCHAR
@@ -3202,7 +3172,7 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
 
    * - DEPINITIAL(K)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
 
        **or**
 
@@ -3212,12 +3182,14 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
        DEPINITIAL(K) = Initial flow depth for the all channel elements in the channel segment (optional).
 
        DEPINITIAL(K) = -1 to assign an initial water surface elevation to a channel reach.
+
        Include Line 3 (see comment 2).
 
    * - EXCDEP(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Channel depth above which a second variable area relation- ship will apply (see comment 4).
+
        If only one channel geometry relationship is used, set EXCDEP(I) = 0.
 
    * - FCN(I)
@@ -3229,11 +3201,12 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
      - **r**
      - **.01 - 1000**
      - Channel thalweg depth (ft or m).
+
        The thalweg depth is the deepest part of the channel measured from the lowest top of bank (see comment 1).
 
    * - FCW(I)
      - **r**
-     - **0.1 -** |CHAPTE002|
+     - **0.1 - ∞**
      - Set FCW(I) = channel width for rectangular channel.
 
        Set FCW(I) = width of channel base for trapezoidal channel.
@@ -3241,14 +3214,19 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
    * - FROUDC(K)
      - **r**
      - **0.0 - 5**
-     - Maximum channel Froude number if the Froude number exceeds FROUDC, the Manning’s n roughness value is increased by 0.001.
+     - Maximum channel Froude number if the Froude number exceeds FROUDC, the Manning’s n roughness
+
+       value is increased by 0.001.
+
        Set FROUDC = 0 for no adjustments of the n-value in a given channel segment.
+
        The increased n- values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).
 
    * - IBASEFLOW(K)
      - **i**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Baseflow of a channel to establish a flow condition for floodwave arrival time.
+
        Place this line after each segment if more than one segment is used.
 
    * - ICHANGRID(I)
@@ -3265,17 +3243,18 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
      - **i**
      - **0 - 10**
      - Sediment transport equation or data group for routing by size fractions for the channel segment.
+
        Set ISED = 1 in the CONT.DAT file to use this option.
+
        Choose one of the two following options for each channel segment:
 
-       For sediment routing without size fractions: Set ISEDN(K)
+       For sediment routing without size fractions: Set ISEDN(K) = 1 - 11 (one of eleven sediment
 
-       = 1 - 11 (one of eleven sediment transport equations).
-       or
+       transport equations). or
 
-       For sediment routing with size fractions: Set ISEDN(K) = sediment data group (Line 3 in SED.DAT which includes a
+       For sediment routing with size fractions: Set ISEDN(K) = sediment data group (Line 3 in SED.DAT
 
-       sediment transport equation).
+       which includes a sediment transport equation).
 
    * - ISTART
      - **i**
@@ -3286,16 +3265,23 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
      - **i**
      - **1**
 
-       **to NNODC**
+       **to**
+
+      **NNODC**
      - Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
+
        This variable is used only for the cross-section data option (see comments 14 and 18).
+
        Set NXSECNUM = 0, if there is no cross-section data for the channel element (I).
+
        The cross-section data is interpolated and assigned in the PROFILES program.
 
    * - ROUGHADJ
      - **r**
      - **0.00 - 1.2**
-     - A coefficient used in the depth adjustment of the Manning’s n-value and the shallown value for channel segments (see comment 17).
+     - A coefficient used in the depth adjustment of the Manning’s n-value and the shallown value for
+
+       channel segments (see comment 17).
 
    * - SHAPE
      - **c**
@@ -3303,8 +3289,11 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
      - Character line identifier (see comments 4 and 16);
 
        SHAPE = ‘R’, rectangular channel geometry (width and depth data).
+
        SHAPE = ‘V’, variable area channel geometry (power relationships).
+
        SHAPE = ‘T’, trapezoidal channel (bottom width, depth and slopes data).
+
        SHAPE = ‘N’, channel cross sections (cross section survey data).
 
        Variable is case sensitive and it must be upper case.
@@ -3325,10 +3314,12 @@ C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)
 
    * - XLEN(I)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Channel length contained within the grid element ICHANGRID (ft).
-       If more than one channel exists in a given grid element, assign XLEN(I) equal to the average representative flow length in one direction (see comments
-       9, 10, 13 and 15).
+
+       If more than one channel exists in a given grid element, assign XLEN(I) equal to the average
+
+       representative flow length in one direction (see comments 9, 10, 13 and 15).
 
    * - ZL(I)
      - **r**
@@ -3687,7 +3678,7 @@ X 2 CI-27.1
 
    * - XI(I,J)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Cross section station distance from the left end point (ft or m).
        The value of XI can be either positive or negative.
 
@@ -3856,20 +3847,20 @@ F 1 2 0.004 0.1 0.0 1
 
    * - ATABLE (I,J)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1) must be included as data input.
        QTABLEA(I,J) is the hydraulic structure flow area for each headwater depth in the rating table (discharge).
 
    * - COEFA(I,J)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1),.
        COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a power function of the headwater depth.
        A = COEFA(I,J) \* depthEXPA(I,J).
 
    * - COEFQ(I,J)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Discharge rating curve coefficients as a power function of the headwater depth.
        Q = COEFQ(I,J) \* depthEXPQ(I,J) (see comment 1).
        If COEFQ(I,J)
@@ -3878,21 +3869,21 @@ F 1 2 0.004 0.1 0.0 1
 
    * - CDIAMETER(I,J)
      - **r**
-     - **0.1 -** |CHAPTE002|
+     - **0.1 - ∞**
      - Circular culvert diameter (ft or m).
        For the generalized culvert equations CDIAMETER is the circular culvert diameter or the box culvert height (see comment 12).
 
    * - CLENGTH(I)
      - **r**
-     - **1 -** |CHAPTE002|
+     - **1 - ∞**
 
-       **1 -** |CHAPTE002|
+       **1 - ∞**
      - Culvert length (ft or m).
        When a long culvert is simulated (>500 ft or 152.4 m), CLENGTH must be assigned to that culvert’s length to activate the long culvert routing routine.
 
    * - CUBASE(I)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Flow width (ft or m) of box culvert for TYPEC(I) = 1.
        For a circular culvert, CUBASE = 0.
 
@@ -3906,13 +3897,13 @@ F 1 2 0.004 0.1 0.0 1
 
    * - EXPA(I,J)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1), EXPQ(I,J) is the hydraulic structure flow area exponent where the flow area is expressed as a
        power function of the headwater depth.
 
    * - EXPQ(I,J)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Hydraulic structure discharge exponent where the discharge is expressed as a power function of the headwater depth.
 
    * - HDEPEXC (I,J)
@@ -4024,36 +4015,36 @@ F 1 2 0.004 0.1 0.0 1
 
    * - QTABLE(I,J)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Hydraulic structure discharges for the headwater depths in the rating table (discharge) (see comments 3 and 4).
 
    * - REPDEP(I,J)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Flow depth (ft or m) that if exceeded will invoke the replacement structure rating curve parameters for simulating a blockage or a change in the
        rating curve.
 
    * - RACOEF(IJ)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1), RACOEF(I,J) is the structure rating curve flow area replacement coefficient.
        There should be the same number of rating curve pairs of coefficients and exponents.
 
    * - RAEXP(IJ)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1), RAEXP(I,J) is the structure rating curve flow area replacement exponents.
        There should be the same number of rating curve pairs of coefficients and exponents.
 
    * - RQCOEF(I,J)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Structure rating curve discharge replacement coefficients.
        There should be the same number of rating curve pairs of coefficients and exponents
 
    * - RQEXP(I,J)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Structure rating curve discharge replacement exponents.
        There should be the same number of rating curve pairs of coefficients and exponents.
 
@@ -4071,7 +4062,7 @@ F 1 2 0.004 0.1 0.0 1
 
    * - STORMDMAXQ(I)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Maximum allowable discharge (conveyance capacity) of the collection pipe represented by the ISTORMDOUT element.
        (cfs or cms)
 
@@ -4634,7 +4625,7 @@ Variable Descriptions for the STREET.DAT File
 
    * - WIDST
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Global assignment of street width to all streets.
        This value is superseded by WIDR(K) when WIDR(K) is greater than zero (see comments 2 and 4).
 
@@ -5262,7 +5253,7 @@ SED.DAT File Variables
 
    * - ASED(N)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Sediment rating curve coefficient (see the BSED exponent below).
 
    * - BEDTHICK
@@ -5279,7 +5270,7 @@ SED.DAT File Variables
 
    * - BSED(N)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Sediment rating curve exponent.
        Qs = ASED\* Qw BSED
 
@@ -5310,12 +5301,12 @@ SED.DAT File Variables
 
    * - DEBRISV
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Volume of the debris basin in ft3 or m3.
 
    * - DFIFTY
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Sediment size (D\ :sub:`50`) in mm for sediment routing.
 
    * - DRYSPWT
@@ -5457,7 +5448,7 @@ SED.DAT File Variables
 
    * - SEDIAM
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Representative sediment diameter (mm) for sediment routing by size fraction.
        The sediment diameter corresponds to a given size fraction percent finer and usually is a pan sieve size.
 
@@ -5486,7 +5477,7 @@ SED.DAT File Variables
 
    * - SSEDIAM
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Representative sediment supply diameter (mm) for sediment routing by size fraction.
        See SEDIAM parameter above.
 
@@ -5499,13 +5490,13 @@ SED.DAT File Variables
 
    * - VA
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Coefficient in the viscosity versus sediment concentration by volume relationship.
        The relationship is based on a viscosity given in poises (dynes-s/ cm2) for either the English or Metric system (see comment 4).
 
    * - VB
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Exponent in the viscosity versus sediment concentration by volume relation- ship.
 
    * - XKX
@@ -5527,13 +5518,13 @@ SED.DAT File Variables
 
    * - YSA
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Coefficient of the yield stress versus sediment concentration by volume relationship.
        The relationship is based on a yield stress given in dynes/cm2 for either the English or Metric system.
 
    * - YSB
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Exponent of yield stress versus sediment concentration by volume relation- ship.
 
 
@@ -5712,7 +5703,7 @@ C FS3 0.5
 
        **to**
 
-       |CHAPTE002|
+       ∞
      - The maximum elevation of the prescribed levee failure if different than the levee crest (LEVELEV).
        Set FAILEVEL = 0 to fail the levee when over- topped.
 
@@ -5756,7 +5747,7 @@ C FS3 0.5
 
    * - FAILWIDTHMAX(LF,LD)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - The maximum breach width (ft or m).
        The breach can extend into more than one grid element direction if necessary and the failure width can be larger than one grid element (see comment
        3).
@@ -5805,7 +5796,7 @@ C FS3 0.5
      - r
      - 0 or
 
-       0 - |CHAPTE002|
+       0 - ∞
      - The prescribed final failure elevation.
        Vertical failure growth stops at this elevation.
 
@@ -6387,12 +6378,12 @@ Notes:
 
    * - BRBOTTOMEL
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Initial breach or pipe bottom elevation (ft or m) (see comments 5 and 6).
 
    * - BRBOTWIDMAX
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Maximum allowable breach bottom width (ft or m) as constrained by the valley cross section.
        Set BRBOTWIDWAX = 0.0 if the dam levee is continuous through adjoining grid elements (default = grid element octagon side).
 
@@ -6416,7 +6407,7 @@ Notes:
 
    * - BRTOPWIDMAX
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Maximum allowable breach top width (ft or m) as constrained by the valley cross section.
        Set BRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
 
@@ -6459,14 +6450,14 @@ Notes:
 
    * - CRESTLENGTH
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Length of the crest of the levee or dam (ft or m).
        If CRESTLENGTH = 0., the crest length will default to the grid element octagon side.
        If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
 
    * - CRESTWIDTH
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Crest width of the levee or dam (ft or m).
        The crest width can be zero.
 
@@ -6507,7 +6498,7 @@ Notes:
 
    * - GBRBOT-TOMEL
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Initial global breach or pipe bottom elevation (ft or m) for an unspecified failure location.
        If the model will locate the failure grid element instead of user specified failure location, then set GBRBOTTOMEL = distance below the dam or levee
        crest elevation (ft or m).
@@ -6515,19 +6506,19 @@ Notes:
 
    * - GBRBOTWID-MAX
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Maximum allowable global breach bottom width (ft or m) as constrained by the valley cross section for an unspecified failure location.
        Set GBRBOT- WIDWAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
 
    * - GBREACHTIME
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
        GB- REACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
 
    * - GBRTOPWID-MAX
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Maximum allowable global breach top width (ft or m) as constrained by the valley cross section for an unspecified failure location.
        GBRTOPWIDMAX
 
@@ -6576,14 +6567,14 @@ Notes:
 
    * - GCRESTLENGTH
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Global crest length of the levee or dam (ft or m) for an unspecified failure location.
        If GCRESTLENGTH = 0.0, the crest length will default to the grid element octagon side.
        If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
 
    * - GCRESTWIDTH
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Global crest width of the levee or dam (ft or m) for an unspecified failure location.
        The crest width can be zero.
 
@@ -7030,7 +7021,7 @@ D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
    * - CURBHEIGHT(I)
      - **r**
-     - **0.0 -** |CHAPTE002|
+     - **0.0 - ∞**
      - Curb height used to calculate discharge on inlets for all IN- TYPE inlets.
 
    * - FEATURE(I)
@@ -7085,7 +7076,7 @@ D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
    * - SWMMlength(I)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Type 1 and 2 - Storm drain inlet curb opening lengths along the curb.
 
        Type 3 and 5 grate (gutter) inlets, SWMMlength = grate wetter perimeter or manhole wetted perimeter.
@@ -7104,7 +7095,7 @@ D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
    * - SWMMwidth(I)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Type 2 storm drain inlet curb opening sag width.
 
        Type 3 grate (gutter) inlets, SWMMwidth = grate area.
@@ -7241,14 +7232,14 @@ D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
 
    * - CDIAMETER-TYPE4
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Circular culvert diameter or box culvert height.
        TYPEC(I) defines the culvert shape.
        (ft or m)
 
    * - CUBASETYPE4
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - 1 = Box culvert width
 
        0 = No width for circular culvert.
@@ -7258,7 +7249,7 @@ D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
 
    * - DEPTH-SWMMRT (J,K)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Flow depths for the discharge rating table pairs.
        (ft or m)
 
@@ -7270,7 +7261,7 @@ D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
 
    * - QSWMMRT(J,K)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Discharge values for the storm drain inlet rating table.
 
        (cfs or cms)
@@ -7451,7 +7442,7 @@ D 10257 I5 25 0.50
 
    * - CLOGTIME(I)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Time to initiate clogging specified by the user.
        See comment 2.
        (hours)
@@ -7533,7 +7524,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
 
    * - SWMMDROPBOX(I)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Drop box surface area for inlet contain in grid element SWMMDBID (ft2 or m2)(see comment 1).
 
    * - SWMMNodeID
@@ -7695,7 +7686,7 @@ WATER SURFACE ELEVATION COMPARISON
 
    * - WSELEV
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Water surface elevation at a given time.
        (ft or m)
 
@@ -7778,13 +7769,13 @@ WATER SURFACE ELEVATION COMPARISON
 
    * - WSELEVTIME
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Water surface elevation at a given time.
        (hours)
 
    * - WSTIME
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Time of known water surface elevation.
        (hours)
 
@@ -8249,12 +8240,12 @@ P 1.25 20.5 Line 2: **IVOLSTOCHAR DEPTHRT(I,K) VOLRT(I,K)**
 
    * - DEPTHRT
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Increment flow depth for the volumetric rating table above the lowest elevation in the grid element topographic data base.
 
    * - VOLRT
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Volume for each incremental depth.
 
 
@@ -8404,17 +8395,17 @@ X 6657 Line 1: **XSECCHAR = 'X' IBRIDGE(I)**
 
    * - XUP(i,j)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Station left bank to right bank in ft or m.
 
    * - YUP(i,j)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Upstream cross section elevation ft or m.
 
    * - YB(i,j)
      - **r**
-     - **0 -** |CHAPTE002|
+     - **0 - ∞**
      - Downstream cross section elevation ft or m.
 
 
@@ -8471,7 +8462,7 @@ Notes:
 
    * - TAILINGSDEPTH
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Tailings depth for a specific grid element (ft or m).
 
 
@@ -8530,7 +8521,7 @@ Notes:
 
    * - TAILINGSDEPTH
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Tailings depth for a specific grid element (ft or m).
 
    * - CVTFP(JT)
@@ -8609,12 +8600,12 @@ Example MUD = 1
 
    * - FPD(I)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Water or mud depth for a specific grid element (ft or m).
 
    * - FPD_MUD(I)
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Tailings depth for a specific grid element (ft or m).
 
 
@@ -8705,7 +8696,7 @@ Notes:
 
    * - LIDVOLUMEMAX
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - A volume assigned to a grid element that acts as a sink.
        (ft2 or m2).
 
@@ -8779,7 +8770,7 @@ D 91 11
 
    * - **NOFDOWNSDO-MAIN**
      - **r**
-     - **0.01 -** |CHAPTE002|
+     - **0.01 - ∞**
      - Downstream domain number.
 
    * - **OUTCHAR**
