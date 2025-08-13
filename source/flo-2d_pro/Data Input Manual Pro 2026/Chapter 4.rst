@@ -4923,46 +4923,52 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
    If a building consists of multiple totally blocked elements (ITTAWF~ T-line in ARF.DAT), all of the ITTAWF grid element numbers must be assigned as
    negative to completely remove the building.
 
- FILE: MULT.DAT
- ~~~~~~~~~~~~~~
+FILE: MULT.DAT
+~~~~~~~~~~~~~~
 
 MULTIPLE CHANNEL (RILL AND GULLY) DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   MULT.DAT File Variables
 
-   Line 1: **WMC WDRALL DMALL NODCHNSALL XNMULTALL SSLOPEMIN, SSLOPEMAX AVULD50**
+.. raw:: html
 
-0 0.0 5.0 1 0.04 0.00 0.00 0.0
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>MULT.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                                Line 1: <b>WMC WDRALL DMALL NODCHNSALL XNMULTALL
+                                        SSLOPEMIN, SSLOPEMAX AVULD50</b>
+        0 0.0 5.0 1 0.04 0.00 0.00 0.0
 
-   1961 3.0 5.0 1 0.04 Line 2: **IGRID(I) WDR(I) DM(I) NODCHNS(I) XNMULT(I)**
+        1961 3.0 5.0 1 0.04     Line 2: <b>IGRID(I) WDR(I) DM(I) NODCHNS(I) XNMULT(I)</b>
+                                        <i>I = number of grid elements with multiple channels</i>
+        Notes:
+          If IMULTC = 0 in the CONT.DAT file, omit this file.
+          If WDRALL = 0, no global assignment of the variables occurs.
+          Line 3: Repeat this line for each grid element revision.
+        </pre>
+    </div>
 
-   *I = number of grid elements with multiple channels*
+.. raw:: html
 
-   Notes:
+    <br><br>
 
-   If IMULTC = 0 in the CONT.DAT file, omit this file.
+.. raw:: html
 
-   If WDRALL = 0, no global assignment of the variables occurs.
-   Line 3: Repeat this line for each grid element revision.
-
-   MULT.DAT File Example
-
-   0 0.0 5.0 1 0.04 0.00 0.00 0.0
-
-   1961 3.0 5.0 1 0.04
-
-   1962 3.0 5.0 1 0.04
-
-   1963 3.0 5.0 1 0.04
-
-   1964 3.0 5.0 1 0.04
-
-   1965 3.0 5.0 1 0.04
-
-   1966 3.0 5.0 1 0.04
-
-   1967 3.0 5.0 1 0.04
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>MULT.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           0 0.0 5.0 1 0.04 0.00 0.00 0.0
+           1961 3.0 5.0 1 0.04
+           1962 3.0 5.0 1 0.04
+           1963 3.0 5.0 1 0.04
+           1964 3.0 5.0 1 0.04
+           1965 3.0 5.0 1 0.04
+           1966 3.0 5.0 1 0.04
+           1967 3.0 5.0 1 0.04
+        </pre>
+    </div>
 
 **Variable Descriptions for the MULT.DAT File**
 
@@ -4973,10 +4979,10 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - AVULD50
      - **r**
@@ -4984,7 +4990,11 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
 
        **100.0**
      - Bed material D50 sediment size fraction (mm).
-       Assignment of AVULD50 triggers the avulsion component that will allow a multiple channel to seek a new path if the channel conveyance capacity is
+
+       Assignment of AVULD50 triggers the avulsion component that will allow a multiple
+
+       channel to seek a new path if the channel conveyance capacity is
+
        exceeded (see comment 6).
 
    * - DM(K)
@@ -4993,8 +5003,11 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
 
        **0 - 300**
      - Maximum depth of multiple channels for individual grid elements (ft or m).
-       When the flow depth exceeds the multiple channel depth DM, the flow width WDR of the gully is increased by the incremental width WMC (see comments 2
-       and 3).
+
+       When the flow depth exceeds the multiple channel depth DM, the flow width WDR
+
+       of the gully is increased by the incremental width WMC (see comments 2 and 3).
+
        DM supersedes the DMALL depth assignment.
 
    * - DMALL
@@ -5013,7 +5026,9 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
      - **i**
      - **0 - 100**
      - Number of multiple channels assigned in each grid element.
+
        If NODCHNS is set equal to zero then the overland flow without multiple channels is assumed.
+
        NODCHNS supersedes NODCHNSALL value.
 
    * - NODCHNSALL
@@ -5047,6 +5062,7 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
 
        **0 - 300**
      - Global assignment of the multiple channel width to all grid elements.
+
        If WDRALL = 0, all global variables are set to zero.
 
    * - WMC
@@ -5054,7 +5070,9 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
      - **0 - 1000**
 
        **0 - 300**
-     - Incremental width by which multiple channels will be expanded when the maximum depth DM is exceeded (see comments 2 and 4).
+     - Incremental width by which multiple channels will be expanded when the maximum
+
+       depth DM is exceeded (see comments 2 and 4).
 
    * - XNMULT(K)
      - **r**
@@ -5082,13 +5100,10 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
    The flood routing will then revert to overland flow in that element.
    The following rules govern the assignment of the multiple channel data:
 
-- When the flow depth exceeds the multiple channel (gully) depth, the flow width of the gully is increased by the incremental width.
-
-- If it is desired to force the flow to stay in a channel of fixed width, set the incremental width equal to zero.
-
-- If the number of multiple channels assigned in a grid element is set equal to zero, overland sheet flow without multiple channels is assumed.
-
-- The spatially variable grid element data will supersede the global data.
+       - When the flow depth exceeds the multiple channel (gully) depth, the flow width of the gully is increased by the incremental width.
+       - If it is desired to force the flow to stay in a channel of fixed width, set the incremental width equal to zero.
+       - If the number of multiple channels assigned in a grid element is set equal to zero, overland sheet flow without multiple channels is assumed.
+       - The spatially variable grid element data will supersede the global data.
 
 3. If it is desired to force the flow to stay in a channel of fixed width, set the variable WMC = 0.
 
@@ -5105,6 +5120,7 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
    size (AVULD50).
    This will continue in the downslope direction until the multiple channel conveyance capacity is no longer exceeded.
    For more information, see the avulsion discussion white paper in the FLO-2D Handouts and Reference Manual.
+
 
 FILE: SIMPLE_MULT.DAT
 ~~~~~~~~~~~~~~~~~~~~~
