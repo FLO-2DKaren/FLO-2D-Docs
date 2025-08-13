@@ -4222,9 +4222,10 @@ HYDRAULIC STRUCTURE DATA
      - **r**
      - **0.0 - 2.0**
      - Adjustment factor to raise or lower the sluice gate coefficient which is 0.33 for Yu/Z = 1.0.
+
        See comment 18.
 
-   * - ORIFICECOEF-ADJ
+   * - ORIFICECOEFADJ
      - **r**
      - **0.0 - 2.0**
      - Adjustment factor to raise or lower the orifice flow coefficient which is
@@ -4238,7 +4239,7 @@ HYDRAULIC STRUCTURE DATA
        For metric: COEFFWI- ERB x 0.552.
        Comment 19.
 
-   * - WINGWALL_AN-GLE
+   * - WINGWALL_ANGLE
      - **r**
      - **30⁰ - 60⁰**
      - Angle the wingwall makes with the abutment perpendicular to the flow
