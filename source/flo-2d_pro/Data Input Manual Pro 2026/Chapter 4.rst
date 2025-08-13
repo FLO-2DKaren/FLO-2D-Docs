@@ -5134,7 +5134,7 @@ MULTIPLE CHANNEL DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                   SIMPLE_MULT.DAT File Variables</pre></i></div>
+        <div><i><pre>                       SIMPLE_MULT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0.025               Line 1: <b>XNMULTTRICHN</b>
@@ -5164,6 +5164,7 @@ MULTIPLE CHANNEL DATA
 .. raw:: html
 
     <br><br>
+
 **Variable Descriptions for the SIMPLE_MULT.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
