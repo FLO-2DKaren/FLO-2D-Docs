@@ -3842,6 +3842,7 @@ HYDRAULIC STRUCTURE DATA
      - **r**
      - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1),.
+
        COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a
 
        power function of the headwater depth.
@@ -3957,7 +3958,8 @@ HYDRAULIC STRUCTURE DATA
 
        IFPORCHAN(I) = 1; for a channel hydraulic structure (shares discharge between two channel elements).
 
-       IFPORCHAN(I) = 2; for a floodplain to channel structure (shares dis- charge between a floodplain
+       IFPORCHAN(I) = 2; for a floodplain to channel structure (shares discharge between a floodplain
+
        element {inflow} and channel structure {outflow})(see comment 7).
 
        IFPORCHAN(I) = 3; for a channel to floodplain structure (shares discharge between a channel
