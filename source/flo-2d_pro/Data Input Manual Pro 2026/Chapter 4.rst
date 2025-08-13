@@ -3266,7 +3266,7 @@ CHANNEL DATA
 
        **to**
 
-      **NNODC**
+       **NNODC**
      - Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
 
        This variable is used only for the cross-section data option (see comments 14 and 18).
