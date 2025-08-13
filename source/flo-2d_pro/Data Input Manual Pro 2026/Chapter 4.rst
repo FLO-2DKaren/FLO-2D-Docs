@@ -3722,7 +3722,7 @@ HYDRAULIC STRUCTURE DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                               HYSTRUC.DAT File Variables </pre></i></div>
+        <div><i><pre>                                       HYSTRUC.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                 Line 1:   <b>STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
@@ -3767,7 +3767,7 @@ HYDRAULIC STRUCTURE DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           HYSTRUC.DAT File Notes</pre></i></div>
+        <div><i><pre>                   HYSTRUC.DAT File Notes</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         Notes:
@@ -3791,7 +3791,7 @@ HYDRAULIC STRUCTURE DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>       HYSTRUC.DAT File Example</pre></i></div>
+        <div><i><pre>           HYSTRUC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         S BridgeA 1 0 1713 1827 0 4425.23 0.0 0.0
