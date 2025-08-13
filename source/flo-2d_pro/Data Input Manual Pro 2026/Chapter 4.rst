@@ -4392,23 +4392,40 @@ FILE: SUBMERGE_FACTOR.DAT
 SUBMERGENCE DATA
 ^^^^^^^^^^^^^^^^
 
-   SUBMERGE_FACTOR.DAT File Variables
+.. raw:: html
 
-   1181 1.2 Line 1: **CELL SUBM_ADJ(I)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                   SUBMERGE_FACTOR.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1181 1.2 Line 1:    <b>CELL SUBM_ADJ(I)</b>
+                            <i>L = number of grid elements in each street segment.</i>
 
-   *L = number of grid elements in each street segment.*
+        Notes:
+          If MSTREET = 0 in the CONT.DAT file, omit this file.
+        </pre>
+    </div>
 
-Notes:
+.. raw:: html
 
-   If MSTREET = 0 in the CONT.DAT file, omit this file.
+    <br><br>
 
-   SUBMERGE_FACTOR.DAT File Example
+.. raw:: html
 
-   1811 1.2
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SUBMERGE_FACTOR.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1811 1.2
+        1862 0.95
+        </pre>
+    </div>
 
-   1862 0.95
+.. raw:: html
 
-Variable Descriptions for the SUBMERGE_FACTOR.DAT File
+    <br><br>
+
+**Variable Descriptions for the SUBMERGE_FACTOR.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -4417,10 +4434,10 @@ Variable Descriptions for the SUBMERGE_FACTOR.DAT File
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - CELL
      - **i**
@@ -4431,7 +4448,10 @@ Variable Descriptions for the SUBMERGE_FACTOR.DAT File
      - **r**
      - **0.01
        - 2**
-     - Submergence adjustment factor for increasing or decreasing the submergence factor when the headwater to tailwater relationship is almost level.
+     - Submergence adjustment factor for increasing or decreasing the submergence factor
+
+       when the headwater to tailwater relationship is almost level.
+
        Typical values 0.85 to 1.5.
 
 
