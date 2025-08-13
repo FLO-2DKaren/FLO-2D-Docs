@@ -3267,7 +3267,6 @@ CHANNEL DATA
        **to**
 
       **NNODC**
-
      - Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
 
        This variable is used only for the cross-section data option (see comments 14 and 18).
@@ -3353,7 +3352,7 @@ CHANNEL DATA
     .. math::
         :label:
 
-        A = adb
+        A = ad^b
 
     where:
 
@@ -3363,11 +3362,11 @@ CHANNEL DATA
 
         b = exponent
 
-Similar relationships are required for wetted perimeter and top width.
-There is a limit of two channel geometry relationships per channel element.
-A second geometry relationship may be useful if there is a significant change in the cross section (e.g. an island).
-If two power relationships are used to represent a natural cross section, then the maximum depth (EXCDEP) to which the first relationship applies must
-be specified.
+   Similar relationships are required for wetted perimeter and top width.
+   There is a limit of two channel geometry relationships per channel element.
+   A second geometry relationship may be useful if there is a significant change in the cross section (e.g. an island).
+   If two power relationships are used to represent a natural cross section, then the maximum depth (EXCDEP) to which the first relationship applies must
+   be specified.
 
 The second regression applies when the flow depth is greater than EXCDEP, but does not include the lower flow area.
 The two variable area cross section relationships are unique and separate.
