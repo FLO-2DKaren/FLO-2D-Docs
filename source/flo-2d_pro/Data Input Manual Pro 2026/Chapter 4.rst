@@ -4491,66 +4491,64 @@ FILE: STREET.DAT
 STREET DATA
 ^^^^^^^^^^^
 
-   STREET.DAT File Variables
+   .. raw:: html
 
-   0.025 1 1.7 0.667 40 Line 1: **STRMAN ISTRFLO STRFNO DEPX WIDST**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                               STREET.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0.025 1 1.7 0.667 40        Line 1: <b>STRMAN ISTRFLO STRFNO DEPX WIDST</b>
+        N MAIN                      Line 2: <b>STCHAR = ‘N’ STNAME</b>
+        S 127 0 0 025               Line 3: <b>STRCHAR = ‘S’ IGRIDN(L) DEPX(L) STMAN(L)
+                                            ELSTR(L)</b>
+        W 1 40                      Line 4: <b>STRCHAR = ‘w’, ISTDIR(K) WIDR(K)</b> <i>K = 1,8 street directions</i>
+        W 2 50                      Line 4: <b>STRCHAR = ‘w’, ISTDIR(K) WIDR(K)</b> <i>K = 1,8 street directions</i>
+        W 4 50                      Line 4: <b>STRCHAR = ‘w’, ISTDIR(K) WIDR(K)</b> <i>K = 1,8 street directions</i>
+        S 128 0 0 0                 Line 3: <b>STRCHAR = ‘S’ IGRIDN(L) DEPX(L) STMAN(L)
+                                            **ELSTR(L)</b>
+                                            <i>L = number of grid elements in each street segment.</i>
 
-   N MAIN Line 2: **STCHAR = ‘N’ STNAME**
+        Notes:
+           If MSTREET = 0 in the CONT.DAT file, omit this file.
+           If DEPEX, STMAN, ELSTR, and WDIR = 0 the global values from Line 1 will be used.
+           Each grid element should be listed only once in this file.
+           Line 2 - 4: Repeat these lines for each street.
+           Line 4: Repeat this line for the number of grid elements before repeating Line 3.
+        </pre>
+    </div>
 
-   S 127 0 0 0 Line 3: **STRCHAR = ‘S’ IGRIDN(L) DEPX(L) STMAN(L)**
+.. raw:: html
 
-   **ELSTR(L)**
+    <br><br>
 
-   W 1 40 Line 4: **STRCHAR = ‘w’, ISTDIR(K) WIDR(K)** *K = 1,8 street directions* W 2 50 Line 4: **STRCHAR = ‘w’, ISTDIR(K) WIDR(K)** *K = 1,8 street
-   directions* W 4 50 Line 4: **STRCHAR = ‘w’, ISTDIR(K) WIDR(K)** *K = 1,8 street directions* S 128 0 0 0 Line 3: **STRCHAR = ‘S’ IGRIDN(L) DEPX(L)
-   STMAN(L)**
+.. raw:: html
 
-   **ELSTR(L)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>STREET.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0.025 1 1.7 0.667 40
+        N MAIN
+        S127 0 0 0
+        W 1 40
+        W 2 50
+        W 4 50
+        S 128 0 0 0
+        W 2 50
+        W 4 50
+        S 129 0 0 0
+        W 2 50
+        W 4 50
+        S 131 0 0 0
+        W 2 50
+        </pre>
+    </div>
 
-   *L = number of grid elements in each street segment.*
+.. raw:: html
 
-Notes:
+    <br><br>
 
-   If MSTREET = 0 in the CONT.DAT file, omit this file.
-
-   If DEPEX, STMAN, ELSTR, and WDIR = 0 the global values from Line 1 will be used.
-   Each grid element should be listed only once in this file.
-
-   Line 2 - 4: Repeat these lines for each street.
-
-   Line 4: Repeat this line for the number of grid elements before repeating Line 3.
-
-STREET.DAT File Example
-
-0.025 1 1.7 0.667 40
-
-N MAIN
-
-S127 0 0 0
-
-W 1 40
-
-W 2 50
-
-W 4 50
-
-S 128 0 0 0
-
-W 2 50
-
-W 4 50
-
-S 129 0 0 0
-
-W 2 50
-
-W 4 50
-
-S 131 0 0 0
-
-W 2 50
-
-Variable Descriptions for the STREET.DAT File
+**Variable Descriptions for the STREET.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -4559,10 +4557,10 @@ Variable Descriptions for the STREET.DAT File
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - DEPX
      - **r**
