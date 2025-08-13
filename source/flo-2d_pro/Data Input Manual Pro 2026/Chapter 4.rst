@@ -3495,7 +3495,7 @@ CHANNEL BANK DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>               CHANBANK.DAT File Variables</pre></i></div>
+        <div><i><pre>                           CHANBANK.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         26 99 Line 1: <b>LEFTBANK(K) RIGHTBANK (K)</b> <i>K = 1, number of channel elements</i>
