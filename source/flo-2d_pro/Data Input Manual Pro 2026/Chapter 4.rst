@@ -3368,16 +3368,16 @@ CHANNEL DATA
    If two power relationships are used to represent a natural cross section, then the maximum depth (EXCDEP) to which the first relationship applies must
    be specified.
 
-The second regression applies when the flow depth is greater than EXCDEP, but does not include the lower flow area.
-The two variable area cross section relationships are unique and separate.
-The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
-The channel top width is computed directly from the second relationship.
-The area, wet- ted perimeter and top width are evaluated using the upper flow depth given by total depth - EXCDEP.
-To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the EXCDEP depth are used.
+   The second regression applies when the flow depth is greater than EXCDEP, but does not include the lower flow area.
+   The two variable area cross section relationships are unique and separate.
+   The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
+   The channel top width is computed directly from the second relationship.
+   The area, wet- ted perimeter and top width are evaluated using the upper flow depth given by total depth - EXCDEP.
+   To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the EXCDEP depth are used.
 
-These channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
-When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
-Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
+   These channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
+   When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
+   Abrupt transitions between contiguous channel elements should be avoided unless they actually exist.
 
 5. A preprocessor program XSEC is available in the FLO-2D subdirectory to determine the regression coefficient and exponents (A1, A2, A11, A22, B1, B2,
    B11, B22, B2, C1, C11, C22) in Line 2b.
