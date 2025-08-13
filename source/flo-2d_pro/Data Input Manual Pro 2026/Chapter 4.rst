@@ -3072,7 +3072,6 @@ CHANNEL DATA
    :widths: 25 25 25 25
    :header-rows: 0
 
-
    * - VARIABLE
      - FMT
      - RANGE
@@ -3268,6 +3267,7 @@ CHANNEL DATA
        **to**
 
       **NNODC**
+
      - Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
 
        This variable is used only for the cross-section data option (see comments 14 and 18).
