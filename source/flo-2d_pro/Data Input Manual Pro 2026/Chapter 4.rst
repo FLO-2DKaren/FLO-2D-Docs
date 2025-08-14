@@ -7772,10 +7772,10 @@ STORM DRAIN BLOCKAGE METHOD FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           SWMMFLODROPBOX.DAT File Variables</pre></i></div>
+        <div><i><pre>               SWMMFLODROPBOX.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        2694 I1 19.635      Line 1: <b>SWMMDBID SWMMNodeID SWMMDROPBOX(I)**</b>
+        2694 I1 19.635      Line 1: <b>SWMMDBID SWMMNodeID SWMMDROPBOX(I)</b>
                             <i>I = Number of drop box nodes.</i>
         </pre>
     </div>
@@ -7886,23 +7886,23 @@ SPATIALLY VARIABLE TOLLERANCE VALUES
 
     <br><br>
 
-    .. raw:: html
+.. raw:: html
 
-        <div style="border:2px solid black;padding:5px;display:inline-block;">
-            <div><i><pre>TOLSPATIAL.DAT File Example</pre></i></div>
-            <hr style="margin:4px 0;border:2px solid black;">
-            <pre>
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>TOLSPATIAL.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
            4554 0.5
            4556 0.5
            4557 0.5
            4889 0.5
            ...
-            </pre>
-        </div>
+        </pre>
+    </div>
 
-    .. raw:: html
+.. raw:: html
 
-        <br><br>
+    <br><br>
 
 **Variable Descriptions for the TOLSPATIAL.DAT File**
 
@@ -7946,11 +7946,23 @@ FILE: WSURF.DAT
 WATER SURFACE ELEVATION COMPARISON
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   WSURF.DAT File Variables
+.. raw:: html
 
-10 Line 1: **NWSGRIDS**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>WSURF.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        10 Line 1: <b>NWSGRIDS</b>
+        4025 200.25 Line 2: <b>IGRIDXSEC(M) WSELEV(M)</b>
+        </pre>
+    </div>
 
-4025 200.25 Line 2: **IGRIDXSEC(M) WSELEV(M)**
+.. raw:: html
+
+    <br><br>
+
+
+
 
    WSURF.DAT File Example
 
