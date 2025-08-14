@@ -6150,7 +6150,7 @@ FLOODPLAIN CROSS SECTION DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           FPXSEC.DAT File Variables</pre></i></div>
+        <div><i><pre>                       FPXSEC.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         P 0                 Line 1: <b>FPXSECHAR = ‘P’ NXPRT</b>
@@ -6165,12 +6165,10 @@ FLOODPLAIN CROSS SECTION DATA
 
     <br><br>
 
-
-   FPXSEC.DAT File Example
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre></pre></i></div>
+        <div><i><pre>                       FPXSEC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
            P 0
