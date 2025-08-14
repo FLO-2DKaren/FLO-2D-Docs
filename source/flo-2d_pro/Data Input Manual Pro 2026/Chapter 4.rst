@@ -8131,31 +8131,42 @@ FILE: TIMDEPCELL.DAT
 ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   TIMDEPCELL.DAT File Variables
+.. raw:: html
 
-1521 Line 1: **IGRID(I)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           TIMDEPCELL.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1521            Line 1: <b>IGRID(I)</b>
+        </pre>
+    </div>
 
-   TIMDEPCELL.DAT File Example
+.. raw:: html
 
-   1521
+    <br><br>
 
-   4099
+.. raw:: html
 
-   5713
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>TIMDEPCELL.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           1521
+           4099
+           5713
+           7611
+           9183
+           10751
+           12442
+           14079
+           15977
+           18061
+        </pre>
+    </div>
 
-   7611
+.. raw:: html
 
-   9183
-
-   10751
-
-   12442
-
-   14079
-
-   15977
-
-   18061
+    <br><br>
 
 **Variable Descriptions for the TIMDEPCELL.DAT File**
 
@@ -8166,10 +8177,10 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IGRID(I)
      - **i**
