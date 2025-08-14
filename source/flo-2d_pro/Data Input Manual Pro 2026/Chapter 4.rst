@@ -5761,7 +5761,7 @@ LEVEE AND FAILURE DATA
    .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                               LEVEE.DAT File Variables</pre></i></div>
+        <div><i><pre>                                       LEVEE.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0.00 00             Line 1:     <b>RAISELEV ILEVFAIL</b>
@@ -5920,6 +5920,7 @@ LEVEE AND FAILURE DATA
      - **c**
      - **Alpha Numeric**
      - Global levee fragility curve ID.
+
        One letter (e.g. S) and one number (e.g. 3) and must correspond to a levee fragility curve ID
 
        in the BREACH.DAT file.
@@ -6106,15 +6107,17 @@ LEVEE AND FAILURE DATA
 5. Levee freeboard deficit is reported in the output file LEVEEDEFIC.OUT.
    Five levels of freeboard deficit are listed in the file as follows:
 
-                       Level 0      > 3 ft
+        ::
 
-                            1       2 ft < freeboard < 3 ft
+           Level 0      > 3 ft
 
-                            2       1 ft < freeboard < 2 ft
+                 1       2 ft < freeboard < 3 ft
 
-                            3       freeboard < 1 ft
+                 2       1 ft < freeboard < 2 ft
 
-                            5       levee overtopped
+                 3       freeboard < 1 ft
+
+                 4       levee overtopped
 
 6. There two options for specifying levee or dam breach failure.
    Set ILEVFAIL = 1 to assess the breach failure with prescribed rates of breach opening vertically and horizontally.
