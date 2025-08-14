@@ -7138,27 +7138,40 @@ FILE: FPFROUDE.DAT
 FLOODPLAIN LIMITING FROUDE NUMBERS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   FPFROUDE.DAT File Variables
+.. raw:: html
 
-F 1 0.65 Line 1: **IFR = ‘F’ IDUM FROUDEFP (I = 1, NNOD)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                   FPFROUDE.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        F 1 0.65 Line 1: <b>IFR = ‘F’ IDUM FROUDEFP (I = 1, NNOD)</b>
+        </pre>
+    </div>
 
-   FPFROUDE.DAT File Example
+.. raw:: html
 
-   F 1 0.65
+    <br><br>
 
-   F 2 0.88
+.. raw:: html
 
-   F 3 0.90
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>FPFROUDE.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           F 1 0.65
+           F 2 0.88
+           F 3 0.90
+           F 43 0.90
+           F 54 0.90
+           F 56 1.05
+           F 107 0.90
+           F 108 0.90
+        </pre>
+    </div>
 
-   F 43 0.90
+.. raw:: html
 
-   F 54 0.90
-
-   F 56 1.05
-
-   F 107 0.90
-
-   F 108 0.90
+    <br><br>
 
 **Variable Descriptions for the FPFROUDE.DAT File**
 
@@ -7169,10 +7182,10 @@ F 1 0.65 Line 1: **IFR = ‘F’ IDUM FROUDEFP (I = 1, NNOD)**
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IDUM
      - **i**
