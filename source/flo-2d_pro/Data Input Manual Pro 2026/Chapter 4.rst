@@ -7952,8 +7952,8 @@ WATER SURFACE ELEVATION COMPARISON
         <div><i><pre>WSURF.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        10 Line 1: <b>NWSGRIDS</b>
-        4025 200.25 Line 2: <b>IGRIDXSEC(M) WSELEV(M)</b>
+        10                  Line 1: <b>NWSGRIDS</b>
+        4025 200.25         Line 2: <b>IGRIDXSEC(M) WSELEV(M)</b>
         </pre>
     </div>
 
@@ -7961,34 +7961,30 @@ WATER SURFACE ELEVATION COMPARISON
 
     <br><br>
 
+.. raw:: html
 
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>WSURF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           10
+           139 4793.00
+           1521 4786.00
+           4099 4775.00
+           5713 4767.00
+           7611 4760.00
+           9183 4752.00
+           10751 4745.00
+           12442 4736.00
+           14079 4730.00
+           15977 4722.00
+           18061 4711.00
+        </pre>
+    </div>
 
+.. raw:: html
 
-   WSURF.DAT File Example
-
-   10
-
-   139 4793.00
-
-   1521 4786.00
-
-   4099 4775.00
-
-   5713 4767.00
-
-   7611 4760.00
-
-   9183 4752.00
-
-   10751 4745.00
-
-   12442 4736.00
-
-   14079 4730.00
-
-   15977 4722.00
-
-   18061 4711.00
+    <br><br>
 
 **Variable Descriptions for the WSURF.DAT File**
 
@@ -7999,10 +7995,10 @@ WATER SURFACE ELEVATION COMPARISON
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IGRIDXSEC(M)
      - **i**
