@@ -6285,14 +6285,16 @@ FLOODPLAIN CROSS SECTION DATA
    The cross-section routine can be used to isolate the results for a single element.
    The flow directions and associated discharge components are as follows:
 
+    *TABLE 4.3. CROSS SECTION FLOW DIRECTION*
+
     .. list-table::
        :widths: 40 60
        :header-rows: 1
 
-       * - **TABLE 4.3. CROSS SECTION FLOW DIRECTION**
+       * - **Selected Cross Section Flow**
          - **Flow Direction Components Added to the Cross Section Discharge**
 
-       * - Selected Cross Section Flow: north = 1
+       * - north = 1
          - northeast 5 and northwest 8
 
        * - east = 2
@@ -6315,8 +6317,6 @@ FLOODPLAIN CROSS SECTION DATA
 
        * - northwest = 8
          - west 4 and north 1
-
-
 
   For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
   total dis-charge for the selected flow direction.
