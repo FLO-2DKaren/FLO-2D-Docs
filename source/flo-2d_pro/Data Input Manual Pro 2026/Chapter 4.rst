@@ -8205,7 +8205,7 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>       SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
+        <div><i><pre>   SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
@@ -8289,17 +8289,18 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 
    The following rules apply:
 
-    ::
+        .. list-table::
+       :widths: 40 60
+       :header-rows: 0
 
-       If the
-
-       0.0 < flow depth < 0.2 ft (0.06 m)               n = SHALLOWN value
-
-       0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)   n = SHALLOWN/2.
-
-       0.5 ft (0.15 m) < flow depth < 3 ft (1 m)        n = n\ :sub:`b` * 1.5 * e\ :sup:`-(0.4 depth/dmax)`
-
-       3 ft (1 m) < flow depth                          n = n-value in MANNINGS_N.DAT
+       * - 0.0 < flow depth < 0.2 ft (0.06 m)
+         - n = SHALLOWN value
+       * - 0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)
+         - n = SHALLOWN/2.
+       * - 0.5 ft (0.15 m) < flow depth < 3 ft (1 m)
+         - n = n\ :sub:`b` * 1.5 * e\ :sup:`-(0.4 depth/dmax)`
+       * - 3 ft (1 m) < flow depth
+         - n = n-value in MANNINGS_N.DAT
 
 FILE: GUTTER.DAT
 ~~~~~~~~~~~~~~~~
