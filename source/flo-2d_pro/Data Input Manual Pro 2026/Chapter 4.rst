@@ -6319,7 +6319,7 @@ FLOODPLAIN CROSS SECTION DATA
          - west 4 and north 1
 
   For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
-  total dis-charge for the selected flow direction.
+  total discharge for the selected flow direction.
 
 2. If a grid element is listed more than once, the simulation will fail and the ERROR.CHK file will report the redundant element.
 
