@@ -6339,7 +6339,7 @@ DAM AND LEVEE BREACH DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                               BREACH.DAT File Variables</pre></i></div>
+        <div><i><pre>                                       BREACH.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                     Line 1: <b>IBR = ‘B1’   IBREACHSEDEQN   GBRATIO   GWEIRCOEF
@@ -6355,7 +6355,7 @@ DAM AND LEVEE BREACH DATA
         G3   0.25   0.40   100.   0.06   30.   65.   0.
                     Line 5: <b>IBR = ‘G4’   GGRASSLENGTH   GGRASSCOND   GGRASSVMAXP
                             GSEDCONMAX   D50DF   GUNFCDF</b>
-        G4   4.   1.   4.   0.   0.   0.<b>
+        G4   4.   1.   4.   0.   0.   0.
                     Line 6: <b>IBR = ‘B2’   IBREACHGRID   IBREACHDIR</b>
         B2   4015   7
                     Line 7: <b>IBR = ‘D1’   ZU  ZD   ZC   CRESTWIDTH   CRESTLENGTH
@@ -6388,7 +6388,7 @@ DAM AND LEVEE BREACH DATA
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                       BREACH.DAT File Example</pre></i></div>
+        <div><i><pre>                           BREACH.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
          B1   4.0   2.0    2.95     0.50
@@ -6734,7 +6734,9 @@ DAM AND LEVEE BREACH DATA
    * - GGRASSCOND
      - **r**
      - **0 - 1**
-     - Global condition of the grass on the downstream face of the levee or dam for an unspecified failure location.
+     - Global condition of the grass on the downstream face of the levee or dam for an
+
+       unspecified failure location.
 
        0.0 for a poor stand or no grass;1.0 for a good stand of grass.
 
@@ -6832,7 +6834,9 @@ DAM AND LEVEE BREACH DATA
 
        material (riprap) for an unspecified failure location.
 
-       If GUN- FCDF = 0.0: GUNDFCDF = GUNFCS when GD50DF = 0.0 and GUN- DFCDF = 3.0 when GD50DF > 0.0.
+       If GUNFCDF = 0.0: GUNDFCDF = GUNFCS when GD50DF = 0.0 and GUNDFCDF = 3.0
+
+       when GD50DF > 0.0.
 
    * - GUNFCS
      - **r**
@@ -6863,7 +6867,9 @@ DAM AND LEVEE BREACH DATA
        **13,500 -**
 
        **19,000**
-     - Global unit weight (lb/ft3 or N/m3) of the levee or dam shell material for an unspecified failure location.
+     - Global unit weight (lb/ft3 or N/m3) of the levee or dam shell material for an unspecified
+
+       failure location.
 
    * - GWEIRCOEF
      - **r**
