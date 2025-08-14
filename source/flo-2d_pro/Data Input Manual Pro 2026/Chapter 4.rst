@@ -8319,9 +8319,6 @@ FLOODPLAIN STREET ELEMENT GUTTER DATA
                                                                J = curbside flow direction</i>
         Notes:
          Repeat line 2 for each assigned gutter element.
-
-
-
         </pre>
     </div>
 
