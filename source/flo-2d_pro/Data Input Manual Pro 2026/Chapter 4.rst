@@ -7221,27 +7221,44 @@ FILE: SWMMFLO.DAT
 STORM DRAIN DATA FILE
 ^^^^^^^^^^^^^^^^^^^^^
 
-   SWMMFLO.DAT File Variables
+.. raw:: html
 
-   Line 1: **SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           SWMMFLO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                    Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),
+                            SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I), FEATURE(I),CURBHEIGHT(I)</b>
+                            <i>I = number of storm drain inlet nodes.</i>
+        D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+        </pre>
+    </div>
 
-   **SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I), FEATURE(I),CURBHEIGHT(I)**
+.. raw:: html
 
-   I = number of storm drain inlet nodes.
+    <br><br>
 
-D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+.. raw:: html
 
-   SWMMFLO.DAT File Example
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>   SWMMFLO.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-   D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+           D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-   D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+           D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-   D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+           D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-   D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+           D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+        </pre>
+    </div>
 
-   D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+.. raw:: html
+
+    <br><br>
 
 **Variable Descriptions for the SWMMFLO.DAT File**
 
@@ -7252,10 +7269,10 @@ D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - CURBHEIGHT(I)
      - **r**
@@ -7357,59 +7374,41 @@ D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
    For an extensive discussion and guidelines, refer to the Storm Drain Manual.
    There are three storm drain inlet options:
 
-1) Curb opening inlet at grade (Type 1)
+        1) Curb opening inlet at grade (Type 1)
+        2) Curb opening inlet depressed or sag (Type 2)
+        3) Grate or grate with gutter inlet (at grade or depressed - Type 3)
+        4) Non-typical inlet e.g. headwall (Type 4)
+        5) Manhole with cover (Type 5)
 
-2) Curb opening inlet depressed or sag (Type 2)
+    The storm drain inlet data requirements are:
 
-3) Grate or grate with gutter inlet (at grade or depressed - Type 3)
+        **Type 1** - Curb opening inlet at grade
 
-4) Non-typical inlet e.g. headwall (Type 4)
+            - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 Metric) Curb opening length
+            - Curb opening height
 
-5) Manhole with cover (Type 5) The storm drain inlet data requirements are:
+        **Type 2** - Curb opening inlet with sag
 
-..
+            - Weir coefficient: 2.30 (1.25 metric) Curb opening length
+            - Curb opening height Curb opening sag width
 
-   *Type 1 - Curb opening inlet at grade*
+        **Type 3** - Grate (or grate with gutter) inlet with/without sag
 
-- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 Metric) Curb opening length
+            - Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric) Grate perimeter (not including curb side)
+            - Grate open area
+            - Grate sag height (zero for at grade)
 
-- Curb opening height
+        **Type 4** - Variable storm drain inlet geometry.*
 
-..
+            - Weir coefficient: not required.
+            - The storm drain inlet rating table (line n with depth and discharge pairs) is required in the SWMMFLORT data file.
 
-   *Type 2 - Curb opening inlet with sag*
+        **Type 5 - Manhole.**
 
-- Weir coefficient: 2.30 (1.25 metric) Curb opening length
+            - Weir coefficient: 2.85 - 3.20 Manhole perimeter
+            - Manhole flow area Surcharge depth
 
-- Curb opening height Curb opening sag width
-
-..
-
-   *Type 3 - Grate (or grate with gutter) inlet with/without sag*
-
-- Weir coefficient: 2.85 - 3.30 (suggested 3.00 English, 1.6 metric) Grate perimeter (not including curb side)
-
-- Grate open area
-
-- Grate sag height (zero for at grade)
-
-..
-
-   *Type 4 - Variable storm drain inlet geometry.*
-
-- Weir coefficient: not required.
-
-- The storm drain inlet rating table (line n with depth and discharge pairs) is required in the SWMMFLORT data file.
-
-..
-
-   *Type 5 - Manhole.*
-
-- Weir coefficient: 2.85 - 3.20 Manhole perimeter
-
-- Manhole flow area Surcharge depth
-
-Note: Orifice flow coefficient = 0.67 (hardwired) for all cases.
+.. note:: Orifice flow coefficient = 0.67 (hardwired) for all cases.
 
 3. The Feature switch = 0 allows a type 4 inlet to be horizontal.
    This means the inlet exchanges flow with the grid element at the rim elevation.
