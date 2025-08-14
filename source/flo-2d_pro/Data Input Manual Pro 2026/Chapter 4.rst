@@ -5758,112 +5758,90 @@ FILE: LEVEE.DAT
 LEVEE AND FAILURE DATA
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**LEVEE.DAT File Variables**
+   .. raw:: html
 
-   0.00 0 Line 1: **RAISELEV ILEVFAIL**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                               LEVEE.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0.00 00             Line 1:     <b>RAISELEV ILEVFAIL</b>
+        L 1891              Line 2:     <b>LEVCHAR = ‘L’ LGRIDNO(L)</b> <i>L = number of levee grid elements</i>
+        D 4 5029.00         Line 3:     <b>LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)<b>
+                                        <i>L = number of levee grid elements
+                                        J = number of levee directions in grid element</i>
+        F 1891              Line 4:     <b>LEVCHAR = ‘F’ LFAILGRID(LF)</b>
+                                        <i>LF = number of failure grid elements</i>
+                            Line 5:     <b>LEVCHAR = ‘W’ LFAILDIR(LF,LD) FAILEVEL(LF,LD)
+                                        FAILTIME(LF,LD) LEVBASE(LF,LD) FAILWIDTHMAX(LF,LD)
+                                        FAILRATE(LF,LD) FAILWIDRATE(LF,LD)</b>
+                                        <i>LD = number of fail directions
+                                        LF = number of failure grid elements</i>
+        W 4 5019.5 27.0 10 1 2 0.
 
-   L 1891 Line 2: **LEVCHAR = ‘L’ LGRIDNO(L)** *L = number of levee grid elements*
+        C FS3 0.5           Line 6:     <b>LEVCHAR = ‘C’ GFRAGCHAR GFRAGPROB</b>
+        P 3450 FS1 0.5      Line 7:     <b>LEVCHAR = ‘P’ LEVFRAGRID(LP) LEVFRAGCHAR (LP)
+                                        LEVFRAGPROB(LP)</b>
+                                        <i>LP = number levee grid elements with fragility curve assignments</i>
 
-   D 4 5029.00 Line 3: **LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)**
-
-   *L = number of levee grid elements*
-
-   *J = number of levee directions in grid element*
-
-   F 1891 Line 4: **LEVCHAR = ‘F’ LFAILGRID(LF)**
-
-   *LF = number of failure grid elements*
-
-**Line 5:** LEVCHAR = ‘W’ LFAILDIR(LF,LD) FAILEVEL(LF,LD) FAILTIME(LF,LD) LEVBASE(LF,LD) FAILWIDTHMAX(LF,LD) FAILRATE(LF,LD) FAILWIDRATE(LF,LD)
+        Notes:
+         If LEVEE = 0 in the CONT.DAT file, omit this file.
+         Line 2: Repeat this line for each levee grid element.
+         Line 3: Repeat this line for each levee direction in a grid element.
+         Line 4: Repeat this line for each LEVEEFAILURE grid element.
+         Line 5: Repeat this line for each grid element failure direction.
 
 
-   *LD = number of fail directions*
 
-   *LF = number of failure grid elements*
+        </pre>
+    </div>
 
-   W 4 5019.5 27.0 10 1 2 0.5
+.. raw:: html
 
-   C FS3 0.5 Line 6: **LEVCHAR = ‘C’ GFRAGCHAR GFRAGPROB**
+    <br><br>
 
-   P 3450 FS1 0.5 Line 7: **LEVCHAR = ‘P’ LEVFRAGRID(LP) LEVFRAGCHAR (LP)**
+.. raw:: html
 
-LEVFRAGPROB(LP)
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>LEVEE.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           0.00 0
+        L 1891
+        D 4 5020.00
+        L 1896
+        D 6 5020.00
+        L 1897
+        D 2 5020.00
+        D 3 5020.00
+        D 5 5020.00
+        D 6 5020.00
+        L 1921
+        D 1 5020.00
+        D 4 5020.00
+        D 8 5020.00
+        L 1922
+        D 8 5020.00
+        L 1927
+        D 2 5020.00
+        D 6 5020.00
+        L ...
+        C FS3 0.5
+        P 3450 S1 0.5
+        P 3558 S1 0.9
+        P 3559 S2 0.7
+        P 3669 S3 0.5
+        P 3670 S4 0.5
+        P 3782 C1 0.3
+        P 3783 S1 0.5
+        P 3815 J2 0.5
+        P 3897 S1 0.5
+        P ...
+        </pre>
+    </div>
 
+.. raw:: html
 
-   *LP = number levee grid elements with fragility curve assignments*
-
-   Notes:
-
-   If LEVEE = 0 in the CONT.DAT file, omit this file.
-   Line 2: Repeat this line for each levee grid element.
-
-   Line 3: Repeat this line for each levee direction in a grid element.
-   Line 4: Repeat this line for each LEVEEFAILURE grid element.
-   Line 5: Repeat this line for each grid element failure direction.
-
-   LEVEE.DAT File Example
-
-   0.00 0
-
-   L 1891
-
-   D 4 5020.00
-
-   L 1896
-
-   D 6 5020.00
-
-   L 1897
-
-   D 2 5020.00
-
-   D 3 5020.00
-
-   D 5 5020.00
-
-   D 6 5020.00
-
-   L 1921
-
-   D 1 5020.00
-
-   D 4 5020.00
-
-   D 8 5020.00
-
-   L 1922
-
-   D 8 5020.00
-
-   L 1927
-
-   D 2 5020.00
-
-   D 6 5020.00
-
-   L ...
-
-C FS3 0.5
-
-   P 3450 S1 0.5
-
-   P 3558 S1 0.9
-
-   P 3559 S2 0.7
-
-   P 3669 S3 0.5
-
-   P 3670 S4 0.5
-
-   P 3782 C1 0.3
-
-   P 3783 S1 0.5
-
-   P 3815 J2 0.5
-
-   P 3897 S1 0.5
-
-   P ...
+    <br><br>
 
 **Variable Descriptions for the LEVEE.DAT File**
 
@@ -5874,10 +5852,10 @@ C FS3 0.5
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - FAILEVEL(LF,LD)
      - **r**
@@ -5887,6 +5865,7 @@ C FS3 0.5
 
        ∞
      - The maximum elevation of the prescribed levee failure if different than the levee crest (LEVELEV).
+
        Set FAILEVEL = 0 to fail the levee when over- topped.
 
    * - FAILRATE(LF,LD)
@@ -5910,12 +5889,13 @@ C FS3 0.5
 
        If FAILTIME > 0.0, the start time for time to 1 ft and time to 2 ft is based on the model start time 0.0 hr.
 
-       If FAILTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time for multiple breaches.
+       If FAILTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time
 
-       If FAILTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time for multiple breaches and FAILTIME is reset
-       to
+       for multiple breaches.
 
-       0.0 hrs (see comment 9).
+       If FAILTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time
+
+       for multiple breaches and FAILTIME is reset to 0.0 hrs (see comment 9).
 
    * - FAILWIDRATE(LF,LD)
      - **r**
@@ -5931,23 +5911,29 @@ C FS3 0.5
      - **r**
      - **0 - ∞**
      - The maximum breach width (ft or m).
-       The breach can extend into more than one grid element direction if necessary and the failure width can be larger than one grid element (see comment
-       3).
+
+       The breach can extend into more than one grid element direction if necessary and the failure
+
+       width can be larger than one grid element (see comment 3).
 
    * - GFRAGCHAR
      - **c**
      - **Alpha Numeric**
      - Global levee fragility curve ID.
-       One letter (e.g. S) and one number (e.g. 3) and must correspond to a levee fragility curve ID in the BREACH.DAT file.
+       One letter (e.g. S) and one number (e.g. 3) and must correspond to a levee fragility curve ID
+
+       in the BREACH.DAT file.
+
        Variable is case sensitive and it must be upper case.
 
    * - GFRAGPROB
      - **r**
      - **0 - 1**
      - Global levee fragility curve failure probability.
+
        This is assigned to all levee grid elements.
-       The levee fragility curves must be assigned in BREACH.
-       DAT.
+
+       The levee fragility curves must be assigned in BREACH.DAT.
 
    * - ILEVFAIL
      - s
@@ -5963,7 +5949,10 @@ C FS3 0.5
    * - LDIR(L,IM)
      - i
      - 1 - 8
-     - Flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee in a given grid element.
+     - Flow direction (of the 8 possible overland flow directions) that will be cutoff by a levee
+
+       in a given grid element.
+
        The possible flow directions are:
 
        1 = north 5 = northeast
@@ -5980,6 +5969,7 @@ C FS3 0.5
 
        0 - ∞
      - The prescribed final failure elevation.
+
        Vertical failure growth stops at this elevation.
 
        Set LEVBASE = 0 if the levee fails to the floodplain elevation.
@@ -6027,6 +6017,7 @@ C FS3 0.5
      - i
      - 1 - NNOD
      - Individual levee grid element with fragility curve assignment.
+
        The fragility curves must be assigned in BREACH.DAT.
 
    * - LFAILGRID(LF)
@@ -6054,6 +6045,7 @@ C FS3 0.5
 
        -NNOD
      - The grid element number containing the levee segment.
+
        LGRIDNO = 1 to NNOD; default no overtop flows reported.
 
        LGRIDNO = -1 to -NNOD; overtop flow rates reported to OVERTOP.
@@ -6067,33 +6059,36 @@ C FS3 0.5
        0 - 30
      - Incremental height (ft or m) that all the levee grid element crest elevations are raised.
 
+.. raw:: html
+
+    <br><br>
 
 **Instructional Comments for the LEVEE.DAT File**
 
 1. The prescribed levee failure criteria are as follows:
 
-a. For the levee to fail when overtopped by the flow, set FAILELEV and FAILTIME = 0.
+    a. For the levee to fail when overtopped by the flow, set FAILELEV and FAILTIME = 0.
 
-b. To fail the levee at a specified elevation, set FAILELEV equal to the failure elevation.
+    b. To fail the levee at a specified elevation, set FAILELEV equal to the failure elevation.
 
-c. To fail the levee at a specified level below the top of the levee, set FAILELEV to a value less than 10 ft and the levee will fail at an elevation
-   equal to LEVCREST - FAILELEV.
+    c. To fail the levee at a specified level below the top of the levee, set FAILELEV to a value less than 10 ft and the levee will fail at an elevation
+       equal to LEVCREST - FAILELEV.
 
-d. To fail the levee at a specific level below the crest after the water surface reaches FAILELEV for a cumulative duration, assign FAILTIME.
+    d. To fail the levee at a specific level below the crest after the water surface reaches FAILELEV for a cumulative duration, assign FAILTIME.
 
-e. To fail the levee to a new base elevation that is different than the floodplain elevation, assign LEVBASE.
+    e. To fail the levee to a new base elevation that is different than the floodplain elevation, assign LEVBASE.
 
-f. To fail a levee to a specified maximum width, set the FAILWIDTHMAX to the limiting width.
+    f. To fail a levee to a specified maximum width, set the FAILWIDTHMAX to the limiting width.
 
-g. To simulate instantaneous collapse, set the FAILRATE and FAILWIDRATE to zero (see Comment 10).
+    g. To simulate instantaneous collapse, set the FAILRATE and FAILWIDRATE to zero (see Comment 10).
 
-h. Progressive levee failure is simulated by assigning a value to FAILRATE (ft/hr).
-   This computes the new levee crest elevation as failure proceeds.
-   FAILRATE is a vertical rate of decrease in the levee breach elevation.
+    h. Progressive levee failure is simulated by assigning a value to FAILRATE (ft/hr).
+       This computes the new levee crest elevation as failure proceeds.
+       FAILRATE is a vertical rate of decrease in the levee breach elevation.
 
-i. If prescribed failure levee grid element is negative, the failure data for that element is assumed to be global and applies to all the levee elements
-   and blocked flow directions.
-   In this case, the failure data needs only to be assigned to one element.
+    i. If prescribed failure levee grid element is negative, the failure data for that element is assumed to be global and applies to all the levee elements
+       and blocked flow directions.
+       In this case, the failure data needs only to be assigned to one element.
 
 2. No multiple channels will be assigned to grid elements with levees.
    Multiple channels in a levee grid element are eliminated automatically by the model.
@@ -6111,18 +6106,15 @@ i. If prescribed failure levee grid element is negative, the failure data for th
 5. Levee freeboard deficit is reported in the output file LEVEEDEFIC.OUT.
    Five levels of freeboard deficit are listed in the file as follows:
 
-i.   Level 0 > 3 ft
+                       Level 0      > 3 ft
 
-ii.
-2 ft < freeboard < 3 ft
+                            1       2 ft < freeboard < 3 ft
 
-iii.
-1 ft < freeboard < 2 ft
+                            2       1 ft < freeboard < 2 ft
 
-iv.
-freeboard < 1 ft
+                            3       freeboard < 1 ft
 
-v.   levee overtopped
+                            5       levee overtopped
 
 6. There two options for specifying levee or dam breach failure.
    Set ILEVFAIL = 1 to assess the breach failure with prescribed rates of breach opening vertically and horizontally.
@@ -6143,21 +6135,19 @@ v.   levee overtopped
    There can only be one start time.
    Distinguishing flows mixing from breaches, flood hydrographs, rainfall is impossible.
 
-10.
-Wall failure procedures are defined in the guidelines listed above.
-The procedures for setting up walls and wall failure, wall failure and grid element elevations, walls and ARFs, and the automatic controls applied by
-the FLO-2D engine are all explained in the guidelines.
-A wall failure tutorial is available online in the Self-Help Kit at https://documentation.flo-2.com/html.
+10. Wall failure procedures are defined in the guidelines listed above.
+    The procedures for setting up walls and wall failure, wall failure and grid element elevations, walls and ARFs, and the automatic controls applied by
+    the FLO-2D engine are all explained in the guidelines.
+    A wall failure tutorial is available online in the Self-Help Kit at https://documentation.flo-2.com/html.
 
-11.
-Levee failure criteria:
+11. Levee failure criteria:
 
-- Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance value of 0.1 ft or 0.03 m.
+        - Water surface elevation must be greater than the prescribed levee failure elevation plus a tolerance value of 0.1 ft or 0.03 m.
+        - Water surface elevation on the reservoir side of the levee must be higher than the downstream water surface elevation.
+        - The water surface elevation minus the ground elevation (flow depth) on the reservoir side must be greater than the water surface elevation minus the
+          ground elevation (flow depth) on the downstream side of the dam or levee.
 
-- Water surface elevation on the reservoir side of the levee must be higher than the downstream water surface elevation.
 
-- The water surface elevation minus the ground elevation (flow depth) on the reservoir side must be greater than the water surface elevation minus the
-  ground elevation (flow depth) on the downstream side of the dam or levee.
 
 FILE: FPXSEC.DAT
 ~~~~~~~~~~~~~~~~
