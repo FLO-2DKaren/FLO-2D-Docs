@@ -7224,7 +7224,7 @@ STORM DRAIN DATA FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           SWMMFLO.DAT File Variables</pre></i></div>
+        <div><i><pre>                               SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                     Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),
@@ -7241,7 +7241,7 @@ STORM DRAIN DATA FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>   SWMMFLO.DAT File Example</pre></i></div>
+        <div><i><pre>           SWMMFLO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
            D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
@@ -7408,7 +7408,7 @@ STORM DRAIN DATA FILE
             - Weir coefficient: 2.85 - 3.20 Manhole perimeter
             - Manhole flow area Surcharge depth
 
-.. note:: Orifice flow coefficient = 0.67 (hardwired) for all cases.
+        .. note:: Orifice flow coefficient = 0.67 (hardwired) for all cases.
 
 3. The Feature switch = 0 allows a type 4 inlet to be horizontal.
    This means the inlet exchanges flow with the grid element at the rim elevation.
