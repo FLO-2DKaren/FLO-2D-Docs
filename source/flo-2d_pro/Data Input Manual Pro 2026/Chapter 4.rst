@@ -7949,7 +7949,7 @@ WATER SURFACE ELEVATION COMPARISON
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>WSURF.DAT File Variables</pre></i></div>
+        <div><i><pre>           WSURF.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         10                  Line 1: <b>NWSGRIDS</b>
@@ -8040,7 +8040,7 @@ WATER SURFACE ELEVATION COMPARISON
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>       WSTIME.DAT File Variables</pre></i></div>
+        <div><i><pre>                   WSTIME.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         10                  Line 1: <b>NWSGRIDS</b>
