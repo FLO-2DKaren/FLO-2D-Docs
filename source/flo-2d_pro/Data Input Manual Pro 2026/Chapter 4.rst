@@ -7429,29 +7429,49 @@ FILE: SWMMFLORT.DAT
 STORM DRAIN TYPE 4 RATING TABLE FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**SWMMFLO.DAT File Variables**
+.. raw:: html
 
-Line 1: SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               SWMMFLO.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                Line 1: <b>SWMMCHARRT=’D’   SWMM_JT(I)   STRUCTNAME_INLET</b>
+         D   14292   I4-26
+                Line 2: <b>SWMMCHAR = ‘N’    DEPTHSWMMRT(J,K)   QSWMMRT(J,K)</b>
+         N    0.0     0.0
 
-SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I),
+                Line 1: <b>SWMMCHARRT=’S’   SWMM_JT(I)   STRUCTNAME_INLET   CDIAMETER(I)</b>
+         S   7545   I4-38   1.5
+                Line 2: <b>SWMMCHAR = ‘F’   TYPECTYP4   TYPEENTYP4   CUBASETYP4  MULTBARRELSTYP4</b>
+         F   2   1   0   1
+        </pre>
+    </div>
 
-FEATURE(I),CURBHEIGHT(I)
+.. raw:: html
 
-I = number of storm drain inlet nodes.
+    <br><br>
 
-D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+.. raw:: html
 
-**SWMMFLO.DAT File Example**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       SWMMFLO.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+        D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+        D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+        D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+        D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+        </pre>
+    </div>
 
-D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+.. raw:: html
+
+    <br><br>
 
 **Variable Descriptions for the SWMMFLORT.DAT File**
 
@@ -7462,10 +7482,10 @@ D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - CDIAMETER-TYPE4
      - **r**
@@ -7555,17 +7575,14 @@ D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
    The downstream control is managed by the storm drain engine.
    The type of culvert entrances are:
 
-*a.
-BOX entrance:*
+        a. BOX entrance:*
 
-- type 1 - wingwall flare 30 to 75 degrees
+            - type 1 - wingwall flare 30 to 75 degrees
+            - type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
 
-- type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
+        b. PIPE entrance:*
 
-*b.
-PIPE entrance:*
-
-- type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
+            - type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
 FILE: SWMMOUTF.DAT
 ~~~~~~~~~~~~~~~~~~
