@@ -7432,7 +7432,7 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>               SWMMFLO.DAT File Variables</pre></i></div>
+        <div><i><pre>                           SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                 Line 1: <b>SWMMCHARRT=’D’   SWMM_JT(I)   STRUCTNAME_INLET</b>
@@ -7454,7 +7454,7 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>       SWMMFLO.DAT File Example</pre></i></div>
+        <div><i><pre>               SWMMFLO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
@@ -7575,12 +7575,12 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
    The downstream control is managed by the storm drain engine.
    The type of culvert entrances are:
 
-        a. BOX entrance:*
+        a. BOX entrance:
 
             - type 1 - wingwall flare 30 to 75 degrees
             - type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
 
-        b. PIPE entrance:*
+        b. PIPE entrance:
 
             - type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
@@ -7589,20 +7589,36 @@ FILE: SWMMOUTF.DAT
 
 STORM DRAIN OUTFALL ID DATA FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   SWMMOUTF.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           SWMMOUTF.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                Line 1: <b>OUTF_NAME(JT)   OUTF_GRID(JT)   OUTF_FLO2DVOL(JT)</b>
+                        <i>JT = Number of outfalls.</i>
+        OUTFALL1  14292    1
+        </pre>
+    </div>
 
-   Line 1: **OUTF_NAME(JT) OUTF_GRID(JT) OUTF_FLO2DVOL(JT)**
+.. raw:: html
 
-   JT = Number of outfalls.
+    <br><br>
 
-OUTFALL1 14292 1
+.. raw:: html
 
-   SWMMOUTF.DAT File Example
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SWMMOUTF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        OUTFALL1  14292    1
+         ...
+        </pre>
+    </div>
 
-   OUTFALL1 14292 1
+.. raw:: html
 
-   ...
+    <br><br>
 
 **Variable Descriptions for the SWMMOUTF.DAT File**
 
@@ -7613,10 +7629,10 @@ OUTFALL1 14292 1
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - OUTF_NAME(JT)
      - **c**
