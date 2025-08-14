@@ -8037,37 +8037,45 @@ FILE: WSTIME.DAT
 WATER SURFACE ELEVATION COMPARISON
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**WSTIME.DAT File Variables**
+.. raw:: html
 
-10 Line 1: NWSGRIDS
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       WSTIME.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        10                  Line 1: <b>NWSGRIDS</b>
+        4025 200.25 12.5    Line 2: <b>IGRIDXSEC(M) WSELEVTIME(M) WSTIME(M)</b>
+        </pre>
+    </div>
 
-4025 200.25 12.5 Line 2: IGRIDXSEC(M) WSELEVTIME(M) WSTIME(M)
+.. raw:: html
 
-**WSTIME.DAT File Example**
+    <br><br>
 
-10
+.. raw:: html
 
-139 4793.00 25
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>WSTIME.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        10
+        139 4793.00 25
+        1521 4786.00 25
+        4099 4775.00 25
+        5713 4767.00 25
+        7611 4760.00 25
+        9183 4752.00 25
+        10751 4745.00 25
+        12442 4736.00 25
+        14079 4730.00 25
+        15977 4722.00 25
+        18061 4711.00 25
+        </pre>
+    </div>
 
-1521 4786.00 25
+.. raw:: html
 
-4099 4775.00 25
-
-5713 4767.00 25
-
-7611 4760.00 25
-
-9183 4752.00 25
-
-10751 4745.00 25
-
-12442 4736.00 25
-
-14079 4730.00 25
-
-15977 4722.00 25
-
-18061 4711.00 25
+    <br><br>
 
 **Variable Descriptions for the WSTIME.DAT File**
 
@@ -8078,10 +8086,10 @@ WATER SURFACE ELEVATION COMPARISON
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IGRIDXSEC(M)
      - **i**
