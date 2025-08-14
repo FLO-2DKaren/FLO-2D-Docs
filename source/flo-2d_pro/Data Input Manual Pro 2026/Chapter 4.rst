@@ -7674,27 +7674,41 @@ FILE: SDCLOGGING.DAT
 STORM DRAIN BLOCKAGE METHOD FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   SDCLOGGING.DAT File Variables
+.. raw:: html
 
-   Line 1: **SWMMCHAR= ‘D’ SWMM_JT(I) SWMM_IDEN(I) SWMM_CLOGFAC(I) CLOGTIME(I)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       SDCLOGGING.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                    Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I) SWMM_IDEN(I)
+                            SWMM_CLOGFAC(I) CLOGTIME(I)</b>
 
-D 2694 I1 25 0.50
+        D 2694 I1 25 0.50
+        </pre>
+    </div>
 
-**SDCLOGGING.DAT File Example**
+.. raw:: html
 
-D 2694 I1 25 0.50
+    <br><br>
 
-D 3658 I2 25 0.50
+.. raw:: html
 
-D 224 I3 25 0.50
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SDCLOGGING.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        D 2694 I1 25 0.50
+        D 3658 I2 25 0.50
+        D 224 I3 25 0.50
+        D 5286 I4 25 0.50
+        D 10257 I5 25 0.50
+        ...
+        </pre>
+    </div>
 
-D 5286 I4 25 0.50
+.. raw:: html
 
-D 10257 I5 25 0.50
-
-...
-
-...
+    <br><br>
 
 **Variable Descriptions for the SDCLOGGING.DAT File**
 
@@ -7705,10 +7719,10 @@ D 10257 I5 25 0.50
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - CLOGTIME(I)
      - **r**
