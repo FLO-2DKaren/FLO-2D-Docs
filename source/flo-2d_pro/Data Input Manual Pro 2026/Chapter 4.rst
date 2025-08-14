@@ -6090,7 +6090,6 @@ LEVEE AND FAILURE DATA
     i. If prescribed failure levee grid element is negative, the failure data for that element is assumed to be global and applies to all the levee elements
        and blocked flow directions.
        In this case, the failure data needs only to be assigned to one element.
-
 2. No multiple channels will be assigned to grid elements with levees.
    Multiple channels in a levee grid element are eliminated automatically by the model.
 
