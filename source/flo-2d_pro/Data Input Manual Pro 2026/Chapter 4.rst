@@ -8289,9 +8289,11 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 
    The following rules apply:
 
+    ::
+
        If the
 
-       0.0 < flow depth < 0.2 ft (0.06 m) \,  \,  \,  \,   \,  n = SHALLOWN value
+       0.0 < flow depth < 0.2 ft (0.06 m)               n = SHALLOWN value
 
        0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)   n = SHALLOWN/2.
 
