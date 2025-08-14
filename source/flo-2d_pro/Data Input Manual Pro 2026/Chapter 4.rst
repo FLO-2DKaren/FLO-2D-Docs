@@ -8462,33 +8462,45 @@ FILE: BUILDING_COLLAPSE.DAT
 BUILDING COLLAPSE PARAMETERS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   BUILDING_COLLAPSE.DAT File Variables
+.. raw:: html
 
-0 Line 2: **IARFSMASHGLOBAL**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               BUILDING_COLLAPSE.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0                           Line 2: <b>IARFSMASHGLOBAL</b>
+        4025 1                      Line 2: <b>IG(M) IARFSMASH(M)</b>
+                                    <i>M = number of grid elements to be considered for collapse
+                                    IG = grid element</i>
+        </pre>
+    </div>
 
-4025 1 Line 2: **IG(M) IARFSMASH(M)**
+.. raw:: html
 
-   M = number of grid elements to be considered for collapse IG = grid element
+    <br><br>
 
-   BUILDING_COLLAPSE.DAT File Example
+.. raw:: html
 
-   0
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>BUILDING_COLLAPSE.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           0
+           4563 2
+           6756 1
+           23145 1
+           23146 2
+           23147 3
+           25331 4
+           26345 1
+           …
+        </pre>
+    </div>
 
-   4563 2
+.. raw:: html
 
-   6756 1
+    <br><br>
 
-   23145 1
-
-   23146 2
-
-   23147 3
-
-   25331 4
-
-   26345 1
-
-   …
 
 **Variable Descriptions for the BUILDING_COLLAPSE.DAT File**
 
@@ -8499,10 +8511,10 @@ BUILDING COLLAPSE PARAMETERS
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IG(M)
      - **i**
