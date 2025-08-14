@@ -6069,27 +6069,20 @@ LEVEE AND FAILURE DATA
 1. The prescribed levee failure criteria are as follows:
 
     a. For the levee to fail when overtopped by the flow, set FAILELEV and FAILTIME = 0.
-
     b. To fail the levee at a specified elevation, set FAILELEV equal to the failure elevation.
-
     c. To fail the levee at a specified level below the top of the levee, set FAILELEV to a value less than 10 ft and the levee will fail at an elevation
        equal to LEVCREST - FAILELEV.
-
     d. To fail the levee at a specific level below the crest after the water surface reaches FAILELEV for a cumulative duration, assign FAILTIME.
-
     e. To fail the levee to a new base elevation that is different than the floodplain elevation, assign LEVBASE.
-
     f. To fail a levee to a specified maximum width, set the FAILWIDTHMAX to the limiting width.
-
     g. To simulate instantaneous collapse, set the FAILRATE and FAILWIDRATE to zero (see Comment 10).
-
     h. Progressive levee failure is simulated by assigning a value to FAILRATE (ft/hr).
        This computes the new levee crest elevation as failure proceeds.
        FAILRATE is a vertical rate of decrease in the levee breach elevation.
-
     i. If prescribed failure levee grid element is negative, the failure data for that element is assumed to be global and applies to all the levee elements
        and blocked flow directions.
        In this case, the failure data needs only to be assigned to one element.
+
 2. No multiple channels will be assigned to grid elements with levees.
    Multiple channels in a levee grid element are eliminated automatically by the model.
 
