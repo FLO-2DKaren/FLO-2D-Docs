@@ -5766,7 +5766,7 @@ LEVEE AND FAILURE DATA
         <pre>
         0.00 00             Line 1:     <b>RAISELEV ILEVFAIL</b>
         L 1891              Line 2:     <b>LEVCHAR = ‘L’ LGRIDNO(L)</b> <i>L = number of levee grid elements</i>
-        D 4 5029.00         Line 3:     <b>LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)<b>
+        D 4 5029.00         Line 3:     <b>LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)</b>
                                         <i>L = number of levee grid elements
                                         J = number of levee directions in grid element</i>
         F 1891              Line 4:     <b>LEVCHAR = ‘F’ LFAILGRID(LF)</b>
@@ -5789,9 +5789,6 @@ LEVEE AND FAILURE DATA
          Line 3: Repeat this line for each levee direction in a grid element.
          Line 4: Repeat this line for each LEVEEFAILURE grid element.
          Line 5: Repeat this line for each grid element failure direction.
-
-
-
         </pre>
     </div>
 
@@ -6150,42 +6147,50 @@ FILE: FPXSEC.DAT
 FLOODPLAIN CROSS SECTION DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   FPXSEC.DAT File Variables
+.. raw:: html
 
-   P 0 Line 1: **FPXSECHAR = ‘P’ NXPRT**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           FPXSEC.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        P 0                 Line 1: <b>FPXSECHAR = ‘P’ NXPRT</b>
+        X 3 11 284 ...      Line 2: <b>FPXSECHAR = ‘X’ IFLO(N) NNXSEC(N) NODX(N,J)</b>
 
-   X 3 11 284 ...
-   Line 2: **FPXSECHAR = ‘X’ IFLO(N) NNXSEC(N) NODX(N,J)**
+        Notes:
+         Line 2: Repeat this line for each cross section.
+        </pre>
+    </div>
 
-Notes:
+.. raw:: html
 
-Line 2: Repeat this line for each cross section.
+    <br><br>
+
 
    FPXSEC.DAT File Example
+.. raw:: html
 
-   P 0
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre></pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           P 0
+           X 3 11 284 285 286 287 288 289 290 291 292 293 294
+           X 3 14 808 809 810 811 812 813 814 815 816 817 818 819 820 821
+           X 3 15 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 1109 1110 1111
+           X 3 10 1365 1366 1367 1368 1369 1370 1371 1372 1373 1374
+           X 3 26 1857 1858 1859 1860 1861 1862 1863 1864 1865 1866 1867 1868 1869 1870 1871
+           X 3 28 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 2504 2505
+           X 3 12 4224 4225 4226 4227 4228 4229 4230 4231 4232 4233 4234 4235
+           X 2 8 7373 7303 7236 7180 7124 7068 7012 6956
+           X 2 5 8233 8135 7941 7845 7749
+           X 3 6 9000 9001 9002 9003 9004 9005
+           X 3 ...
+        </pre>
+    </div>
 
-   X 3 11 284 285 286 287 288 289 290 291 292 293 294
+.. raw:: html
 
-   X 3 14 808 809 810 811 812 813 814 815 816 817 818 819 820 821
-
-   X 3 15 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 1109 1110 1111
-
-   X 3 10 1365 1366 1367 1368 1369 1370 1371 1372 1373 1374
-
-   X 3 26 1857 1858 1859 1860 1861 1862 1863 1864 1865 1866 1867 1868 1869 1870 1871
-
-   X 3 28 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 2504 2505
-
-   X 3 12 4224 4225 4226 4227 4228 4229 4230 4231 4232 4233 4234 4235
-
-   X 2 8 7373 7303 7236 7180 7124 7068 7012 6956
-
-   X 2 5 8233 8135 7941 7845 7749
-
-   X 3 6 9000 9001 9002 9003 9004 9005
-
-   X 3 ...
+    <br><br>
 
 **Variable Descriptions for the FPXSEC.DAT File**
 
@@ -6196,10 +6201,10 @@ Line 2: Repeat this line for each cross section.
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - FPXSECHAR
      - **c**
@@ -6215,7 +6220,10 @@ Line 2: Repeat this line for each cross section.
    * - IFLO(N)
      - **i**
      - **1 - 8**
-     - Defines the general direction that the flow is expected to cross the floodplain cross section (See comment 1).
+     - Defines the general direction that the flow is expected to cross the floodplain
+
+       cross section (See comment 1).
+
        IFLO is set to one of the following:
 
        1 flow to the north 5 flow to the northeast
@@ -6227,7 +6235,9 @@ Line 2: Repeat this line for each cross section.
        4 flow to the west 8 flow to the northwest
 
        If the output is desired from only one direction (i.e.
+
        without the discharge components from the other component flow directions), set IFLO as negative.
+
        IFLO is set to the following:
 
        -1 flow from south only -5 flow from southwest only
@@ -6247,18 +6257,27 @@ Line 2: Repeat this line for each cross section.
      - **i**
      - **1 - 1,000**
      - Number of floodplain elements in a given cross section.
+
        The selected cross section grid elements do not have to extend across the entire grid system.
+
        Only one grid element is necessary to constitute a floodplain cross section.
+
        The cross section can include a channel element.
-       If one of the floodplain cross section grid elements is a channel element, the cross-section discharge hydrograph reported in HYCROSS will include the
-       channel element dis- charge.
+
+       If one of the floodplain cross section grid elements is a channel element, the cross-section
+
+       discharge hydrograph reported in HYCROSS will include the channel element discharge.
 
    * - NXPRT
      - **s**
      - **0 or 1**
-     - If NXPRT = 1, the cross-section summary information including cross-section discharge, average cross section velocity, width and depth will be re-
-       ported in the BASE.OUT file.
+     - If NXPRT = 1, the cross-section summary information including cross-section discharge,
 
+       average cross section velocity, width and depth will be reported in the BASE.OUT file.
+
+.. raw:: html
+
+    <br><br>
 
 **Instructional Comments for the FPXSEC.DAT File**
 
@@ -6295,8 +6314,8 @@ Line 2: Repeat this line for each cross section.
    * - northwest = 8                    |    west 4 and north 1
 
 
-For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
-total dis-charge for the selected flow direction.
+  For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
+  total dis-charge for the selected flow direction.
 
 2. If a grid element is listed more than once, the simulation will fail and the ERROR.CHK file will report the redundant element.
 
@@ -6305,6 +6324,7 @@ total dis-charge for the selected flow direction.
 
 4. Select a flow direction perpendicular to the cross section only.
    For example, if the cross-section orientation is East to West, the flow direction should be North or South only.
+
 
 FILE: BREACH.DAT
 ~~~~~~~~~~~~~~~~
