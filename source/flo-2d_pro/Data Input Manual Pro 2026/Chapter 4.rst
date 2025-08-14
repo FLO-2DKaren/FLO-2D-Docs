@@ -6286,30 +6286,36 @@ FLOODPLAIN CROSS SECTION DATA
    The flow directions and associated discharge components are as follows:
 
 .. list-table::
-   :widths: 100
-   :header-rows: 0
+   :widths: 40 60
+   :header-rows: 1
 
+   * - **TABLE 4.3. CROSS SECTION FLOW DIRECTION**
+     - **Flow Direction Components Added to the Cross Section Discharge**
 
-   * - **TABLE 4.3.
-       CROSS SECTION FLOW DIRECTION**
+   * - Selected Cross Section Flow: north = 1
+     - northeast 5 and northwest 8
 
-   * - Selected Cross Section Flow      |    Flow Direction Components addedDirection                        |    to the Cross Section Discharge
+   * - east = 2
+     - northeast 5 and southeast 6
 
-   * - north = 1                        |    northeast 5 and northwest 8
+   * - south = 3
+     - southeast 6 and southwest 7
 
-   * - east = 2                         |    northeast 5 and southeast 6
+   * - west = 4
+     - southwest 7 and northwest 8
 
-   * - south = 3                        |    southeast 6 and southwest 7
+   * - northeast = 5
+     - north 1 and east 2
 
-   * - west = 4                         |    southwest 7 and northwest 8
+   * - southeast = 6
+     - east 2 and south 3
 
-   * - northeast = 5                    |    north 1 and east 2
+   * - southwest = 7
+     - south 3 and west 4
 
-   * - southeast = 6                    |    east 2 and south 3
+   * - northwest = 8
+     - west 4 and north 1
 
-   * - southwest = 7                    |    south 3 and west 4
-
-   * - northwest = 8                    |    west 4 and north 1
 
 
   For the diagonal flow directions (5 thru 8), the discharge for the grid element between the two diagonal corners will be added to the cross-section
