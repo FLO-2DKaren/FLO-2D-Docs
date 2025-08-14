@@ -6336,206 +6336,89 @@ FILE: BREACH.DAT
 DAM AND LEVEE BREACH DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   **BREACH.DAT File Variables**
+.. raw:: html
 
-**Line 1:** IBR = ‘B1’ IBREACHSEDEQN GBRATIO GWEIRCOEF GBREACHTIME
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                               BREACH.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+                    Line 1: <b>IBR = ‘B1’   IBREACHSEDEQN   GBRATIO   GWEIRCOEF
+                            GBREACHTIME</b>
+        B1   4    2.0    2.95   0.50
+                    Line 2: <b>IBR = ‘G1’   GZU   GZD  GZC  GCRESTWIDTH   GCRESTLENGTH
+                            GBRBOTWIDMAX   GBRTOPWIDMAX   GBRBOTTOMEL</b>
+        G1   2.0    2.0   0.   5.   0.   0.   0.   1.5
+                    Line 3: <b>IBR = ‘G2’   GD50C   GPORC   GUWC   GCNC   GAFRC   GCOHC
+                            GUNFCC </b>
+        G2   0.   0.   0.   0.    0.   0.   0.
+                    Line 4: <b>IBR = ‘G3’   GD50S   GPORS   GUWS   GCNS   GAFRS   GCOHS   GUNFCS</b>
+        G3   0.25   0.40   100.   0.06   30.   65.   0.
+                    Line 5: <b>IBR = ‘G4’   GGRASSLENGTH   GGRASSCOND   GGRASSVMAXP
+                            GSEDCONMAX   D50DF   GUNFCDF</b>
+        G4   4.   1.   4.   0.   0.   0.<b>
+                    Line 6: <b>IBR = ‘B2’   IBREACHGRID   IBREACHDIR</b>
+        B2   4015   7
+                    Line 7: <b>IBR = ‘D1’   ZU  ZD   ZC   CRESTWIDTH   CRESTLENGTH
+                            BRBOTWIDMAX   BRTOPWIDMAX   BRBOTTOMEL   WEIRCOEF</b>
+        D1   2.0     2.0      0.      8.      0.      0.     0.    83.25    3.05
+                    Line 8:  <b>IBR = ‘D2’  D50C   PORC   UWC   CNC   AFRC   COHC   UNFCC</b>
+        D2   0.      0.       0.      0.      0.      0.     0.    0.    0.     0.
+                    Line 9: <b>IBR = ‘D3’   D50S   PORS   UWS   CNS   AFRS   COHS   UNFCS</b>
+        D3   0.25    0.40   100.      0.10   25.    100.     0.
+                    Line 10: <b>IBR = ‘D4’   BRATIO  GRASSLENGTH  GRASSCOND  GRASSVMAXP
+                             SEDCONMAX   D50DF   UNFCDF  BREACHTIME</b>
+        D4     0.       0.      0.      0.      0.     0.    0.
+                    Line 11: <b>IBR = ‘F’   FRAGCHAR(I)   PRFAIL(I,J)   PRDEPTH(I,J);</b>
+                             <i>I = number of levee fragility curves and J = number of points in each fragility curve</i>
+        F   S1  0.03  6.0
 
+        Notes:
+         Line 1:  Required for a sediment erosion breach
+         Lines 2 - 5:  Global data required to locate a breach.  Not required for a prescribed breach location.
+         Lines 6 - 10:  Optional data for prescribed breach location.  Repeat these lines for each specified breach
+         grid element.
+         Line 10:  Repeat this line for each fragility curve listing
+        </pre>
+    </div>
 
-   B1 4 2.0 2.95 0.50
+.. raw:: html
 
-**Line 2:** IBR = ‘G1’ GZU GZD GZC GCRESTWIDTH GCRESTLENGTH GBRBOTWIDMAX GBRTOPWIDMAX GBRBOTTOMEL
+    <br><br>
 
+.. raw:: html
 
-   G1 2.0 2.0 0.
-   5.
-   0.
-   0.
-   0.
-   1.5
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                       BREACH.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         B1   4.0   2.0    2.95     0.50
+         G1  2.0     2.0      0.      5.      0.      0.     0.     3.     3.05
+         G2  0.      0.       0.      0.      0.      0.     0.
+         G3  0.25    0.40   100.      0.06   30.     100.    0.
+         G4  1.      0.       0.      0.      0.      0.     0.
+         B2  4015   7
+         D1  2.0     2.0      0.      8.      0.      0.     0.    83.25    3.05
+         D2  0.      0.       0.      0.      0.      0.     0.    0.    0.     0.
+         D3  0.25    0.40   100.      0.10   25.    100.     0.
+         D4  2.      0.       0.      0.      0.      0.     0.    0.
+         F S1  0.03  6.0
+         F S1  0.15  3.5
+         F S1  0.50  2.5
+         F S1  0.85  1.0
+         F S1  0.95  0.0
+         F S2  0.03  9.0
+         F S2  0.15  5.5
+         F S2  0.50  4.0
+         F S2  0.85  2.0
+         F S2  0.98  0.0
+         F S3  0.03 12.0
+         F S3  ...
+        </pre>
+    </div>
 
-**Line 3:** IBR = ‘G2’ GD50C GPORC GUWC GCNC GAFRC GCOHC GUNFCC
+.. raw:: html
 
-
-   G2 0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-**Line 4:** IBR = ‘G3’ GD50S GPORS GUWS GCNS GAFRS GCOHS GUNFCS
-
-
-   G3 0.25 0.40 100.
-   0.06 30.
-   65.
-   0.
-
-**Line 5:** IBR = ‘G4’ GGRASSLENGTH GGRASSCOND GGRASSVMAXP GSEDCONMAX D50DF GUNFCDF
-
-
-   G4 4.
-   1.
-   4.
-   0.
-   0.
-   0.
-
-**Line 6:** IBR = ‘B2’ IBREACHGRID IBREACHDIR
-
-
-   B2 4015 7
-
-**Line 7:** IBR = ‘D1’ ZU ZD ZC CRESTWIDTH CRESTLENGTH BRBOTWIDMAX BRTOPWIDMAX BRBOTTOMEL WEIRCOEF
-
-
-   D1 2.0 2.0 0.
-   8.
-   0.
-   0.
-   0.
-   83.25 3.05
-
-**Line 8:** IBR = ‘D2’ D50C PORC UWC CNC AFRC COHC UNFCC
-
-
-   D2 0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-**Line 9:** IBR = ‘D3’ D50S PORS UWS CNS AFRS COHS UNFCS
-
-
-   D3 0.25 0.40 100.
-   0.10 25.
-   100.
-   0.
-
-**Line 10:** IBR = ‘D4’ BRATIO GRASSLENGTH GRASSCOND GRASSVMAXP SEDCONMAX D50DF UNFCDF BREACHTIME
-
-
-   D4 0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-**Line 11:** IBR = ‘F’ FRAGCHAR(I) PRFAIL(I,J) PRDEPTH(I,J)\ **;**
-
-
-   I = number of levee fragility curves and J = number of points in each fragility curve
-
-   F S1 0.03 6.0
-
-   BREACH.DAT File Example
-
-Notes:
-
-   Line 1: Required for a sediment erosion breach
-
-   Lines 2 - 5: Global data required to locate a breach.
-   Not required for a prescribed breach location.
-   Lines 6 - 10: Optional data for prescribed breach location.
-   Repeat these lines for each specified breach grid element.
-
-   Line 10: Repeat this line for each fragility curve listing
-
-   B1 4.0 2.0 2.95 0.50
-
-   G1 2.0 2.0 0.
-   5.
-   0.
-   0.
-   0.
-   3.
-   3.05
-
-   G2 0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-   G3 0.25 0.40 100.
-   0.06 30.
-   100.
-   0.
-
-   G4 1.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-   B2 4015 7
-
-   D1 2.0 2.0 0.
-   8.
-   0.
-   0.
-   0.
-   83.25 3.05
-
-   D2 0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-   D3 0.25 0.40 100.
-   0.10 25.
-   100.
-   0.
-
-   D4 2.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-   0.
-
-   F S1 0.03 6.0
-
-   F S1 0.15 3.5
-
-   F S1 0.50 2.5
-
-   F S1 0.85 1.0
-
-   F S1 0.95 0.0
-
-   F S2 0.03 9.0
-
-   F S2 0.15 5.5
-
-   F S2 0.50 4.0
-
-   F S2 0.85 2.0
-
-   F S2 0.98 0.0
-
-   F S3 0.03 12.0 F S3 ...
+    <br><br>
 
 **Variable Descriptions for the BREACH.DAT File**
 
@@ -6546,21 +6429,26 @@ Notes:
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - AFRC
      - **r**
      - **0 - 50**
-     - Angle (degrees) of internal friction of the core material for failure of a specific grid element flow direction.
+     - Angle (degrees) of internal friction of the core material for failure of a specific
+
+       grid element flow direction.
+
        Set AFRC = 0.0 for no core.
 
    * - AFRS
      - **r**
      - **0 - 50**
-     - Angle (degrees) of internal friction of the shell material for failure of a specific grid element flow direction.
+     - Angle (degrees) of internal friction of the shell material for failure of a specific
+
+       grid element flow direction.
 
    * - BRATIO
      - **r**
@@ -6576,7 +6464,10 @@ Notes:
      - **r**
      - **0 - ∞**
      - Maximum allowable breach bottom width (ft or m) as constrained by the valley cross section.
-       Set BRBOTWIDWAX = 0.0 if the dam levee is continuous through adjoining grid elements (default = grid element octagon side).
+
+       Set BRBOTWIDWAX = 0.0 if the dam levee is continuous through adjoining grid elements
+
+       (default = grid element octagon side).
 
    * - BREACHTIME
      - **r**
@@ -6585,22 +6476,32 @@ Notes:
        **to SIMUL**
 
        **-99**
-     - The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
+     - The cumulative duration (hrs) that the levee erosion will initiate after the water surface
+
+       exceeds the specified pipe elevation BRBOTTOMEL.
 
        If BREACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
 
-       If BREACHTIME > or = 0.0, the start time for time to 1 ft and time to 2 ft is based on the model start time 0.0 hr.
+       If BREACHTIME > or = 0.0, the start time for time to 1 ft and time to 2 ft is based on the
 
-       If BREACHTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or levee breach time for multiple breaches.
+       model start time 0.0 hr.
 
-       If BREACHTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee breach time for multiple breaches and BEACHTIME is
-       reset to 0.0 hr.
+       If BREACHTIME < 0.0, the start time for time to 1 ft and time to 2 ft is the first dam or
+
+       levee breach time for multiple breaches.
+
+       If BREACHTIME = -99.0, the start time for time to 1 ft and time to 2 is the first dam or levee
+
+       breach time for multiple breaches and BEACHTIME is reset to 0.0 hr.
 
    * - BRTOPWIDMAX
      - **r**
      - **0 - ∞**
      - Maximum allowable breach top width (ft or m) as constrained by the valley cross section.
-       Set BRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
+
+       Set BRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements
+
+       (default = grid element octagon side).
 
    * - COHC
      - **r**
@@ -6608,6 +6509,7 @@ Notes:
 
        **0 - 30,000**
      - Cohesive strength (lb/ft2 or N/m2) of the levee or dam core material.
+
        If there is no core, COHC = 0.
 
    * - COHS
@@ -6616,12 +6518,14 @@ Notes:
 
        **0 - 30,000**
      - Cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material.
+
        If there is no core, COHS = 0.
 
    * - CNC
      - **r**
      - **0.02 - 0.25**
      - Manning’s n-value of the levee or dam core material.
+
        If CNC = 0., Manning’s n-value for the core material will computed from Strickler’s equation.
 
        If CNC > 1., the n-value will be computed from a Moody diagram (Darcy f
@@ -6634,17 +6538,23 @@ Notes:
      - **r**
      - **0.02 - 0.25**
      - Manning’s n-value of the levee or dam shell material.
+
        See comment 4.
+
        If CNS = 0., Manning’s n-value for the shell material will computed from Strickler’s equation.
-       If CNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
-       D50).
+
+       If CNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.D50).
 
    * - CRESTLENGTH
      - **r**
      - **0 - ∞**
      - Length of the crest of the levee or dam (ft or m).
+
        If CRESTLENGTH = 0., the crest length will default to the grid element octagon side.
-       If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
+
+       If crest length is greater than the grid element octagon side, it will be reset to
+
+       the octagon side length.
 
    * - CRESTWIDTH
      - **r**
@@ -6666,6 +6576,7 @@ Notes:
      - **r**
      - **1.0 - 100**
      - Mean sediment size (D50 in mm) of the top one foot (0.3 m) of the down- stream face (riprap material).
+
        If D50DF = 0.0, then D50DF = D50S.
 
    * - FRAGCHAR
@@ -6673,13 +6584,16 @@ Notes:
      - **S1, S2 ...**
      - Fragility curve ID.
        One letter and a number.
+
        For example: S1 is fragility curve 1 for the Sacramento River (see comment 7).
+
        Variable is case sensitive and it must be upper case.
 
    * - GAFRC
      - **r**
      - **0 - 50**
      - Global angle (degrees) of internal friction of the core material for the entire levee or dam.
+
        Set AFRC = 0.0 for no core.
 
    * - GAFRS
@@ -6691,38 +6605,53 @@ Notes:
      - **r**
      - **0 - ∞**
      - Initial global breach or pipe bottom elevation (ft or m) for an unspecified failure location.
-       If the model will locate the failure grid element instead of user specified failure location, then set GBRBOTTOMEL = distance below the dam or levee
-       crest elevation (ft or m).
+
+       If the model will locate the failure grid element instead of user specified failure location,
+
+       then set GBRBOTTOMEL = distance below the dam or levee crest elevation (ft or m).
+
        In general, GBRBOTTOMEL be less than 10 ft (3 m) (see comments 1 and 6).
 
    * - GBRBOTWID-MAX
      - **r**
      - **0 - ∞**
-     - Maximum allowable global breach bottom width (ft or m) as constrained by the valley cross section for an unspecified failure location.
-       Set GBRBOT- WIDWAX = 0.0 if the levee is continuous through adjoining grid elements (default = grid element octagon side).
+     - Maximum allowable global breach bottom width (ft or m) as constrained by the valley
+
+       cross-section for an unspecified failure location.
+
+       Set GBRBOT- WIDWAX = 0.0 if the levee is continuous through adjoining grid elements
+
+       (default = grid element octagon side).
 
    * - GBREACHTIME
      - **r**
      - **0 - ∞**
-     - The cumulative duration (hrs) that the levee erosion will initiate after the water surface exceeds the specified pipe elevation BRBOTTOMEL.
+     - The cumulative duration (hrs) that the levee erosion will initiate after the water surface
+
+       exceeds the specified pipe elevation BRBOTTOMEL.
+
        GB- REACHTIME = 0 if the level erosion begins immediately when pipe elevation is exceeded.
 
    * - GBRTOPWID-MAX
      - **r**
      - **0 - ∞**
-     - Maximum allowable global breach top width (ft or m) as constrained by the valley cross section for an unspecified failure location.
-       GBRTOPWIDMAX
+     - Maximum allowable global breach top width (ft or m) as constrained by the valley cross-section
 
-       = 0.0 if the levee is continuous through adjoining grid elements (default =
+       for an unspecified failure location.
 
-       grid element octagon side).
+       GBRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements
+
+       (default = grid element octagon side).
 
    * - GCOHC
      - **r**
      - **0 - 750**
 
        **0 - 30,000**
-     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam core material for an unspecified failure location.
+     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam core material for an
+
+       unspecified failure location.
+
        If there is no core, GCOHC = 0.
 
    * - GCOHS
@@ -6730,19 +6659,24 @@ Notes:
      - **0 - 750**
 
        **0 - 30,000**
-     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material for an unspecified failure location.
+     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material for an
+
+       unspecified failure location.
 
    * - GCNC
      - **r**
      - **0.03 - 0.1**
      - Global Manning’s n-value of the levee or dam core material for an unspecified failure location.
-       See comment 4.
-       If GCNC = 0.0 and a core is present, Manning’s n-value for the core material will computed from Strickler’s equation.
-       This results in a very low n-value and is not recommended.
-       If GCNC
 
-       > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
-       D50).
+       See comment 4.
+
+       If GCNC = 0.0 and a core is present, Manning’s n-value for the core material will computed
+
+       from Strickler’s equation.
+
+       This results in a very low n-value and is not recommended.
+
+       If GCNC > 1., the n-value will be computed from a Moody diagram (Darcy f vs.D50).
 
        Set GCNC = 0.0 for no core material.
 
@@ -6750,23 +6684,29 @@ Notes:
      - **r**
      - **0.03 - 0.1**
      - Global Manning’s n-value of the levee or dam shell material for an unspecified failure location.
+
        See comment 4.
+
        If GCNS = 0., Manning’s n-value for the shell material will computed from Strickler’s equation.
+
        This is not recommended.
-       If GCNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.
-       D50).
+
+       If GCNS > 1., the n-value will be computed from a Moody diagram (Darcy f vs.D50).
 
    * - GCRESTLENGTH
      - **r**
      - **0 - ∞**
      - Global crest length of the levee or dam (ft or m) for an unspecified failure location.
+
        If GCRESTLENGTH = 0.0, the crest length will default to the grid element octagon side.
+
        If crest length is greater than the grid element octagon side, it will be reset to the octagon side length.
 
    * - GCRESTWIDTH
      - **r**
      - **0 - ∞**
      - Global crest width of the levee or dam (ft or m) for an unspecified failure location.
+
        The crest width can be zero.
 
    * - VARIABLE
@@ -6788,18 +6728,21 @@ Notes:
      - **r**
      - **1 - 100**
      - Mean sediment size (D50 in mm) of the top one foot (0.3 m) of the downstream face (riprap material).
+
        If GD50DF = 0.0, then GD50DF = GD50S.
 
    * - GGRASSCOND
      - **r**
      - **0 - 1**
      - Global condition of the grass on the downstream face of the levee or dam for an unspecified failure location.
+
        0.0 for a poor stand or no grass;1.0 for a good stand of grass.
 
    * - GGRASSLENGTH
      - **r**
      - **0 - 10**
      - Global average length of grass (inches or mm) on downstream face for an unspecified failure location.
+
        Set GGRASSLENGTH = 0.0 for no grass on downstream face.
 
    * - GGRASSVMAXP
@@ -6807,27 +6750,35 @@ Notes:
      - **3 - 6**
 
        **1 - 2**
-     - Global maximum permissible velocity (fps or mps) for a grass-lined down- stream face before the grass is eroded for an unspecified failure location.
+     - Global maximum permissible velocity (fps or mps) for a grass-lined down- stream face before
+
+       the grass is eroded for an unspecified failure location.
+
        Range: 3 to 6 fps (1 to 2 mps).
+
        If no grass, set GGRASSVMAXP = 0.0.
 
    * - GPORC
      - **r**
      - **0.35 - 0.45**
      - Global porosity of the levee or dam core material for an unspecified failure location.
+
        Typical range: 0.35 to 0.45.
+
        Set GPORC = 0.0 for no core mate- rial.
 
    * - GPORS
      - **r**
      - **0.35 - 0.45**
      - Global porosity of the levee or dam shell material for an unspecified failure location.
+
        Typical range: 0.35 to 0.45.
 
    * - GRASSCOND
      - **r**
      - **0 - 1**
      - Condition of the grass on the downstream face of the levee or dam for a prescribed failure location.
+
        0.0 for a poor stand or no grass; 1.0 for a good stand of grass.
 
    * - GRASSLENGTH
@@ -6836,6 +6787,7 @@ Notes:
 
        **0 - 25**
      - Average length of grass (inches or mm) on downstream face for a prescribed failure location.
+
        Set GRASSLENGTH = 0.0 for no grass on downstream face.
 
    * - GRASSVMAXP
@@ -6843,34 +6795,52 @@ Notes:
      - **3 - 6**
 
        **1 - 2**
-     - Maximum permissible velocity (fps or mps) for a grass-lined downstream face before the grass is eroded for a prescribed failure location.
+     - Maximum permissible velocity (fps or mps) for a grass-lined downstream face before the grass
+
+       is eroded for a prescribed failure location.
+
        Range: 3 to 6 fps (1 to 2 mps).
+
        If no grass, set GRASSVMAXP = 0.0.
 
    * - GSEDCONMAX
      - **r**
      - **0.2 - 0.55**
-     - Global maximum sediment concentration by volume in the breach dis- charge for an unspecified failure location.
+     - Global maximum sediment concentration by volume in the breach dis- charge for an unspecified
+
+       failure location.
+
        Typical range = 0.2 to 0.55.
+
        If GSEDCONMAX = 0.0, a default value of 0.5 is used.
 
    * - GUNFCC
      - **r**
      - **1 - 20**
-     - Global sediment gradient, ratio of D90 to D30 of the levee or dam core material for an unspecified failure location.
+     - Global sediment gradient, ratio of D90 to D30 of the levee or dam core material for an
+
+       unspecified failure location.
+
        If there is no core material, set GUNFCC = 0.0.
+
        If the there is core material and GUNFCC = 0.0, it is reset to 10.0.
 
    * - GUNFCDF
      - **r**
      - **1 - 20**
-     - Global sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of material (riprap) for an unspecified failure location.
+     - Global sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of
+
+       material (riprap) for an unspecified failure location.
+
        If GUN- FCDF = 0.0: GUNDFCDF = GUNFCS when GD50DF = 0.0 and GUN- DFCDF = 3.0 when GD50DF > 0.0.
 
    * - GUNFCS
      - **r**
      - **1 - 20**
-     - Global sediment gradient, ratio of D90 to D30 of the levee or dam shell mate- rial for an unspecified failure location.
+     - Global sediment gradient, ratio of D90 to D30 of the levee or dam shell material for an
+
+       unspecified failure location.
+
        If GUNFCS = 0.0, the default value is 10.0.
 
    * - GUWC
@@ -6880,7 +6850,10 @@ Notes:
        **13,500 -**
 
        **19,000**
-     - Global unit weight (lb/ft3 or N/m3) of the levee or dam core material for an unspecified failure location.
+     - Global unit weight (lb/ft3 or N/m3) of the levee or dam core material for an
+
+       unspecified failure location.
+
        Set GUWC = 0.0 if there no core.
 
    * - GUWS
@@ -6896,28 +6869,38 @@ Notes:
      - **r**
      - **2.85 - 3.05**
      - Global weir coefficient for piping or breach channel weir for an unspecified failure location.
+
        Typical range: 2.85 – 3.05.
 
    * - GZC
      - **r**
      - **0.1 - 10**
-     - Global average slope of the upstream and downstream face of the levee or dam core material for an unspecified failure location.
+     - Global average slope of the upstream and downstream face of the levee or dam core material
+
+       for an unspecified failure location.
+
        GZC is expressed as a ratio (horizontal:1 (vertical).
+
        For example: GZC = 2.0 represents 2.0 horizontal to 1.0 vertical.
+
        If there is no core set GZC = 0.0
 
    * - GZD
      - **r**
      - **0.1 - 10**
      - Global slope of the downstream face of the levee or dam for an unspecified failure location.
+
        GZD is expressed as a ratio (horizontal : vertical).
+
        For ex- ample: GZD = 2.0 represents 2.0 horizontal to 1.0 vertical.
 
    * - GZU
      - **r**
      - **0.1 - 10**
      - Global slope of the upstream face of the levee or dam for an unspecified failure location.
+
        GZU is expressed as a ratio (horizontal : vertical).
+
        For example: GZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
 
    * - IBR
@@ -6938,6 +6921,7 @@ Notes:
        ‘B1’ = Global data not related to local breach; ‘B2’ = Grid element and direction
 
        ‘D1-D4’ = individual prescribed grid element breach data.
+
        ‘F’ = fragility curve data
 
        Variable is case sensitive and it must be upper case.
@@ -6946,6 +6930,7 @@ Notes:
      - **i**
      - **1 - 8**
      - Direction of the specified breach failure in a given grid element.
+
        The possible flow directions are:
 
        1 = north 5 = northeast
@@ -6960,19 +6945,23 @@ Notes:
      - **i**
      - **1 - NNOD**
      - Grid element of the specified breach failure location.
+
        See comment 8.
 
    * - IBREACHSED-EQN
      - **i**
      - **1 - 11**
      - Sediment transport equation that is used to compute the breach erosion.
+
        Out of eleven transport equations in FLO- 2D only Tofaletti and MPM-Woo are not available.
+
        See the list of sediment transport equation numbers in SED.DAT.
 
    * - PORC
      - **r**
      - **0.35 - 0.45**
      - Porosity of the levee or dam core material for a prescribed grid element failure location.
+
        Set GPORC = 0.0 for no core material.
 
    * - PORS
@@ -6983,42 +6972,65 @@ Notes:
    * - PRDEPTH
      - **r**
      - **0.0 - Levee Crest Height**
-     - Point of failure on the levee as defined by the distance or height below the le- vee crest (likely failure point according to the Corps of Engineers
-       definition).
+     - Point of failure on the levee as defined by the distance or height below the levee crest
+
+       (likely failure point according to the Corps of Engineers definition).
+
        Assigned with a corresponding fragility curve failure probability PRFAIL.
 
    * - PRFAIL
      - **r**
      - **0.0 - 1.0**
      - Levee fragility curve point of failure probability.
-       Range: 0.0 to 1.0 where 80% indicates a higher probability of levee failure most likely corresponding to a higher elevation on the levee (see the
-       levee fragility curve discussion in the FLO-2D Reference Manual).
-       A low value of 10% would indicate a weak levee most likely corresponding to a levee piping failure close to the toe of the levee.
+
+       Range: 0.0 to 1.0 where 80% indicates a higher probability of levee failure most likely
+
+       corresponding to a higher elevation on the levee (see the levee fragility curve discussion
+
+       in the FLO-2D Reference Manual).
+
+       A low value of 10% would indicate a weak levee most likely corresponding to a levee piping
+
+       failure close to the toe of the levee.
 
    * - SEDCONMAX
      - **r**
      - **0.20 - 0.55**
-     - Maximum sediment concentration by volume in the breach discharge for a prescribed grid element failure location.
+     - Maximum sediment concentration by volume in the breach discharge for a prescribed
+
+       grid element failure location.
+
        Typical range = 0.2 to 0.55.
+
        If SEDCONMAX = 0.0, a default value of 0.5 is used.
 
    * - UNFCC
      - **r**
      - **1 - 20**
-     - Sediment gradient, ratio of D90 to D30 of the levee or dam core material for a prescribed grid element failure location.
+     - Sediment gradient, ratio of D90 to D30 of the levee or dam core material for a prescribed
+
+       grid element failure location.
+
        If there is no core material, set UNFCC = 0.0.
+
        If the there is core material and UNFCC = 0.0, it is reset to 10.0.
 
    * - UNFCDF
      - **r**
      - **1 - 20**
-     - Sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of material (riprap) for a prescribed grid element failure location.
+     - Sediment gradient, ratio of D90 to D30 of the downstream face upper one foot of
+
+       material (riprap) for a prescribed grid element failure location.
+
        If UNFCDF = 0.0 : UNDFCDF = UNFCS when D50DF = 0.0 and UND- FCDF = 3.0 when D50DF > 0.0.
 
    * - UNFCS
      - **r**
      - **1 - 20**
-     - Sediment gradient, ratio of D90 to D30 of the levee or dam shell material for a prescribed grid element failure location.
+     - Sediment gradient, ratio of D90 to D30 of the levee or dam shell material for
+
+       a prescribed grid element failure location.
+
        If UNFCS = 0.0, the default value is 10.0.
 
    * - UWC
@@ -7028,7 +7040,10 @@ Notes:
        **13,500 -**
 
        **19,000**
-     - Unit weight (lb/ft3 or N/m3) of the levee or dam core material for a pre- scribed grid element failure location.
+     - Unit weight (lb/ft3 or N/m3) of the levee or dam core material for a prescribed
+
+       grid element failure location.
+
        Set UWC = 0.0 if there no core.
 
    * - UWS
@@ -7038,34 +7053,46 @@ Notes:
        **13,500 -**
 
        **19,000**
-     - Unit weight (lb/ft3 or N/m3) of the levee or dam shell material for a pre- scribed grid element failure location.
+     - Unit weight (lb/ft3 or N/m3) of the levee or dam shell material for a prescribed grid
+
+       element failure location.
 
    * - WEIRCOEF
      - **r**
      - **2.85 - 3.05**
      - Weir coefficient for piping or breach channel weir for a prescribed grid element failure location.
+
        Typical range: 2.85 – 3.05.
 
    * - ZC
      - **r**
      - **0.1 - 10**
-     - Average slope of the upstream and downstream face of the levee or dam core material for a prescribed failure location.
+     - Average slope of the upstream and downstream face of the levee or dam core material for a
+
+       prescribed failure location.
+
        ZC is expressed as a ratio (horizontal : vertical).
+
        For example: ZC = 2.0 represents 2.0 horizontal to 1.0 vertical.
+
        If there is no core set ZC = 0.
 
    * - ZD
      - **r**
      - **0.1 - 10**
      - Slope of the downstream face of the levee or dam for a prescribed grid element failure location.
+
        ZD is expressed as a ratio (horizontal : vertical).
+
        For example: ZD = 2.0 represents 2.0 horizontal to 1.0 vertical.
 
    * - ZU
      - **r**
      - **0.1 - 10**
      - Slope of the upstream face of the levee or dam for a prescribed grid element failure location.
+
        ZU is expressed as a ratio (horizontal : vertical).
+
        For ex- ample: ZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
 
 
@@ -7097,6 +7124,7 @@ Notes:
 8. If Line 2 begins with G1, a global breach simulation is initiated to locate the potential breach based on the water surface elevation.
    If Line 2 has a B2 identifier, then a prescribed breach location will be simulated as defined by the breach element and flow direction in Line B2
    (global breach data is not required)
+
 
 FILE: FPFROUDE.DAT
 ~~~~~~~~~~~~~~~~~~
