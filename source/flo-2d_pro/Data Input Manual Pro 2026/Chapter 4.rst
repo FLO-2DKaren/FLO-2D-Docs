@@ -8305,41 +8305,55 @@ FILE: GUTTER.DAT
 FLOODPLAIN STREET ELEMENT GUTTER DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   GUTTER.DAT File Variables
+.. raw:: html
 
-   2 0.67 0.020 Line 1: **STRWIDTH CURBHEIGHT STREET_n-VALUE**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       GUTTER.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        2  0.67   0.020                             Line 1:    <b>STRWIDTH  CURBHEIGHT   STREET_n-VALUE</b>
+        G   4525   25.0   0.67   0.025   8          Line 2:    <b>GUTTERCHAR   IGRID(I)   WIDSTR(I)</b>
+                                                               <b>CURBHT(I)   XNSTR(I)   ICURBDIR(J=1-8)</b>
 
-   G 4525 25.0 0.67 0.025 8 Line 2: **GUTTERCHAR IGRID(I) WIDSTR(I)**
+                                                               <i>I = number of grid elements with gutters
+                                                               J = curbside flow direction</i>
+        Notes:
+         Repeat line 2 for each assigned gutter element.
 
-   **CURBHT(I) XNSTR(I) ICURBDIR(J=1-8)**
 
-   I = number of grid elements with gutters J = curbside flow direction
 
-Notes:
+        </pre>
+    </div>
 
-Repeat line 2 for each assigned gutter element.
+.. raw:: html
 
-   GUTTER.DAT File Example
+    <br><br>
 
-   20.0 0.67 0.020
+.. raw:: html
 
-   20 20.
-   0.67 0.025 1
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>GUTTER.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           20.0 0.67 0.020
+           20 20.
+           0.67 0.025 1
+           27 20.
+           0.67 0.030 1
+           28 20.
+           0.67 0.025 1
+           29 20.
+           0.67 0.020 1
+           30 20.
+           0.67 0.020 1
+           50 10.
+           0.67 0.025 5
+        </pre>
+    </div>
 
-   27 20.
-   0.67 0.030 1
+.. raw:: html
 
-   28 20.
-   0.67 0.025 1
-
-   29 20.
-   0.67 0.020 1
-
-   30 20.
-   0.67 0.020 1
-
-   50 10.
-   0.67 0.025 5
+    <br><br>
 
 **Variable Descriptions for the GUTTER File**
 
@@ -8350,10 +8364,10 @@ Repeat line 2 for each assigned gutter element.
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - CURBHEIGHT
      - **r**
@@ -8370,12 +8384,14 @@ Repeat line 2 for each assigned gutter element.
      - **c**
      - **G**
      - Character line identifier for the gutter new line data.
+
        Variable is case sensitive and it must be upper case.
 
    * - ICURBDIR
      - **i**
      - **1 - 8**
      - The side of the gutter element that the curb is located.
+
        This is one of the eight flow directions (see comment 2).
 
    * - IGRID(I)
@@ -8399,6 +8415,7 @@ Repeat line 2 for each assigned gutter element.
      - **r**
      - **0 – 100**
      - Street width for individual gutter elements.
+
        WIDSTR supersedes STRWIDTH (ft or m).
        See comment 3.
 
@@ -8407,6 +8424,7 @@ Repeat line 2 for each assigned gutter element.
      - **0.01
        - 0.5**
      - Street n-values for individual gutter elements.
+
        Supersedes STREET_n-value.
 
 
@@ -8422,18 +8440,15 @@ Repeat line 2 for each assigned gutter element.
    The following rules govern the flow exchange of gutter street element with the other elements when the flow depth in the gutter element exceeds the
    tolerance value (TOL):
 
-- The flow is exchanged with a contiguous gutter element based on the flow depth against the curb.
-
-- The flow is shared with a street element without a gutter based on the average depth between the two contiguous elements.
-
-- The flow is shared with a contiguous floodplain element that is not a street and is not a curb flow direction based on the average flow depth between
-  the two contiguous elements.
-
-- If the flow direction is the curb direction or one of the two diagonal directions associated with the curb direction, the flow is first ex- changed to
-  the sidewalk area within the gutter element when the flow depth exceeds the curb height.
-  This exchange occurs in either direction from the street to the sidewalk or from the sidewalk to the street.
-  After the internal flow exchange within the gutter element is complete the overland flow between the sidewalk area and the contiguous floodplain
-  element in the curb direction is exchanged based on the average flow depth between the two grid elements.
+        - The flow is exchanged with a contiguous gutter element based on the flow depth against the curb.
+        - The flow is shared with a street element without a gutter based on the average depth between the two contiguous elements.
+        - The flow is shared with a contiguous floodplain element that is not a street and is not a curb flow direction based on the average flow depth between
+          the two contiguous elements.
+        - If the flow direction is the curb direction or one of the two diagonal directions associated with the curb direction, the flow is first ex- changed to
+          the sidewalk area within the gutter element when the flow depth exceeds the curb height.
+          This exchange occurs in either direction from the street to the sidewalk or from the sidewalk to the street.
+          After the internal flow exchange within the gutter element is complete the overland flow between the sidewalk area and the contiguous floodplain
+          element in the curb direction is exchanged based on the average flow depth between the two grid elements.
 
 2. If the street width (WIDSTR) exceeds the grid element width, then the street width is limited to 0.90 times the grid element width to allow for the
    sidewalk surface area.
