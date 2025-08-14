@@ -7872,21 +7872,37 @@ FILE: TOLSPATIAL.DAT
 SPATIALLY VARIABLE TOLLERANCE VALUES
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   TOLSPATIAL.DAT File Variables
+.. raw:: html
 
-4554 0.12 Line 1: **IDUM (I) TOL**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>TOLSPATIAL.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        4554 0.12 Line 1: <b>IDUM (I) TOL</b>
+        </pre>
+    </div>
 
-   TOLSPATIAL.DAT File Example
+.. raw:: html
 
-   4554 0.5
+    <br><br>
 
-   4556 0.5
+    .. raw:: html
 
-   4557 0.5
+        <div style="border:2px solid black;padding:5px;display:inline-block;">
+            <div><i><pre>TOLSPATIAL.DAT File Example</pre></i></div>
+            <hr style="margin:4px 0;border:2px solid black;">
+            <pre>
+           4554 0.5
+           4556 0.5
+           4557 0.5
+           4889 0.5
+           ...
+            </pre>
+        </div>
 
-   4889 0.5
+    .. raw:: html
 
-   ...
+        <br><br>
 
 **Variable Descriptions for the TOLSPATIAL.DAT File**
 
@@ -7897,10 +7913,10 @@ SPATIALLY VARIABLE TOLLERANCE VALUES
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IDUM(I)
      - **i**
