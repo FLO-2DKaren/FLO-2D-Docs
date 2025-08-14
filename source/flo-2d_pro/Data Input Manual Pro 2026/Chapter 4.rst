@@ -8205,7 +8205,7 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
+        <div><i><pre>       SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
