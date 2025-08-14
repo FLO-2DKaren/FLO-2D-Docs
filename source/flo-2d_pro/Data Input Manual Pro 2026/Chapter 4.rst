@@ -7677,7 +7677,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>       SDCLOGGING.DAT File Variables</pre></i></div>
+        <div><i><pre>               SDCLOGGING.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
                     Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I) SWMM_IDEN(I)
@@ -7751,7 +7751,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
      - **c**
      - **D**
      - Character line identifier for the SWMM model inlets.
-       Vari- able is case sensitive.
+       Variable is case sensitive.
 
 
 **Instructional Comments for the SDCLOGGING.DAT File**
