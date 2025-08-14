@@ -6280,41 +6280,41 @@ FLOODPLAIN CROSS SECTION DATA
 **Instructional Comments for the FPXSEC.DAT File**
 
 1. The floodplain grid elements can be combined to define a cross section across a floodplain or alluvial fan.
-   Each floodplain cross section is assigned flow dis- charge in only one flow direction given by IFLO.
+   Each floodplain cross section is assigned flow discharge in only one flow direction given by IFLO.
    This direction includes the flow contribution from the two contiguous directions.
    The cross-section routine can be used to isolate the results for a single element.
    The flow directions and associated discharge components are as follows:
 
-.. list-table::
-   :widths: 40 60
-   :header-rows: 1
+    .. list-table::
+       :widths: 40 60
+       :header-rows: 1
 
-   * - **TABLE 4.3. CROSS SECTION FLOW DIRECTION**
-     - **Flow Direction Components Added to the Cross Section Discharge**
+       * - **TABLE 4.3. CROSS SECTION FLOW DIRECTION**
+         - **Flow Direction Components Added to the Cross Section Discharge**
 
-   * - Selected Cross Section Flow: north = 1
-     - northeast 5 and northwest 8
+       * - Selected Cross Section Flow: north = 1
+         - northeast 5 and northwest 8
 
-   * - east = 2
-     - northeast 5 and southeast 6
+       * - east = 2
+         - northeast 5 and southeast 6
 
-   * - south = 3
-     - southeast 6 and southwest 7
+       * - south = 3
+         - southeast 6 and southwest 7
 
-   * - west = 4
-     - southwest 7 and northwest 8
+       * - west = 4
+         - southwest 7 and northwest 8
 
-   * - northeast = 5
-     - north 1 and east 2
+       * - northeast = 5
+         - north 1 and east 2
 
-   * - southeast = 6
-     - east 2 and south 3
+       * - southeast = 6
+         - east 2 and south 3
 
-   * - southwest = 7
-     - south 3 and west 4
+       * - southwest = 7
+         - south 3 and west 4
 
-   * - northwest = 8
-     - west 4 and north 1
+       * - northwest = 8
+         - west 4 and north 1
 
 
 
