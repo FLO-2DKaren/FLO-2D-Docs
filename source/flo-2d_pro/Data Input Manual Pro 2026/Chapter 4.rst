@@ -8202,23 +8202,40 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW N
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   SHALLOWN_SPATIAL.DAT File Variables
+.. raw:: html
 
-1521 0.100 Line 1: **IGRID(I) SHALLOWN(I)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
+        </pre>
+    </div>
 
-   SHALLOWN_SPATIAL.DAT File Example
+.. raw:: html
 
-   1521 0.200
+    <br><br>
 
-   4099 0.150
+.. raw:: html
 
-   5713 0.220
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SHALLOWN_SPATIAL.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           1521 0.200
+           4099 0.150
+           5713 0.220
+           7611 0.250
+           9183 0.190
+        </pre>
+    </div>
 
-   7611 0.250
+.. raw:: html
 
-   9183 0.190
+    <br><br>
 
-Variable Descriptions for the SHALLOWN_SPATIAL File
+
+**Variable Descriptions for the SHALLOWN_SPATIAL File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
@@ -8227,10 +8244,10 @@ Variable Descriptions for the SHALLOWN_SPATIAL File
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IGRID(I)
      - **i**
@@ -8239,8 +8256,7 @@ Variable Descriptions for the SHALLOWN_SPATIAL File
 
    * - SHALLOWN(I)
      - **r**
-     - **0.01
-       - 0.99**
+     - **0.01 - 0.99**
      - Spatially variable shallow n-value (see comment 1)
 
 
@@ -8249,34 +8265,39 @@ Variable Descriptions for the SHALLOWN_SPATIAL File
 1. To improve the timing of the floodwave progression through the grid system, a depth variable roughness can be assigned.
    The basic equation for the grid element roughness nd as function of flow depth is:
 
-nd = nb \*1.5 \* e -(0.4 depth/dmax)
+        .. math::
+            :label:
 
-   where:
+            n_d = n_b \, *, 1.5 \, * \, e^{-(0.4 depth/dmax)}
 
-   nb = bankfull discharge roughness depth = flow depth
+        where:
 
-   dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+            n\ :sub:`b` = bankfull discharge roughness
 
-This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
-roughness elements (assumed to be 3 ft or 1 m).
-This equation is applied by the model as a default and the user can turn ‘off’ the depth roughness adjustment coefficient for all grid elements by
-assigning AMANN = -99.
-This roughness adjustment will slow the progression of the floodwave.
-It is valid for flow depths ranging from 0.5 ft (0.15 m) to 3 ft (1 m).
-For example, at 1 ft (0.3 m), the computed roughness will be about 1.31 times the assigned roughness for a flow depth of 3 ft.
-Assigning a ROUGHADJ value may reduce unexpected high Froude numbers.
+            depth = flow depth
 
-The following rules apply:
+            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
-   If the
+   This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
+   roughness elements (assumed to be 3 ft or 1 m).
+   This equation is applied by the model as a default and the user can turn ‘off’ the depth roughness adjustment coefficient for all grid elements by
+   assigning AMANN = -99.
+   This roughness adjustment will slow the progression of the floodwave.
+   It is valid for flow depths ranging from 0.5 ft (0.15 m) to 3 ft (1 m).
+   For example, at 1 ft (0.3 m), the computed roughness will be about 1.31 times the assigned roughness for a flow depth of 3 ft.
+   Assigning a ROUGHADJ value may reduce unexpected high Froude numbers.
 
-   0.0 < flow depth < 0.2 ft (0.06 m) n = SHALLOWN value
+   The following rules apply:
 
-   0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m) n = SHALLOWN/2.
+       If the
 
-   0.5 ft (0.15 m) < flow depth < 3 ft (1 m) n = nb \*1.5 \* e-(0.4 depth/dmax)
+       0.0 < flow depth < 0.2 ft (0.06 m) \,  \,  \,  \,   \,  n = SHALLOWN value
 
-   3 ft (1 m) < flow depth n = n-value in MANNINGS_N.DAT
+       0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)   n = SHALLOWN/2.
+
+       0.5 ft (0.15 m) < flow depth < 3 ft (1 m)        n = n\ :sub:`b` \*1.5 \* e-(0.4 depth/dmax)
+
+       3 ft (1 m) < flow depth                          n = n-value in MANNINGS_N.DAT
 
 FILE: GUTTER.DAT
 ~~~~~~~~~~~~~~~~
