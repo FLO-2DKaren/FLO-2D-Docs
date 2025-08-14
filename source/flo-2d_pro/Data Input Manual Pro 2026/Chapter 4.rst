@@ -7769,23 +7769,38 @@ FILE: SWMMFLODROPBOX.DAT
 STORM DRAIN BLOCKAGE METHOD FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   SWMMFLODROPBOX.DAT File Variables
+.. raw:: html
 
-2694 I1 19.635 Line 1: **SWMMDBID SWMMNodeID SWMMDROPBOX(I)**
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           SWMMFLODROPBOX.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        2694 I1 19.635      Line 1: <b>SWMMDBID SWMMNodeID SWMMDROPBOX(I)**</b>
+                            <i>I = Number of drop box nodes.</i>
+        </pre>
+    </div>
 
-   I = Number of drop box nodes.
+.. raw:: html
 
-   SWMMFLODROPBOX.DAT File Example
+    <br><br>
 
-   2694 I1 19.566
+.. raw:: html
 
-   3658 I2 19.566
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>SWMMFLODROPBOX.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           2694 I1 19.566
+           3658 I2 19.566
+           224 I3 19.566
+           5286 I5 19.566
+           ...
+        </pre>
+    </div>
 
-   224 I3 19.566
+.. raw:: html
 
-   5286 I5 19.566
-
-   ...
+    <br><br>
 
 **Variable Descriptions for the SWMMFLODROPBOX.DAT File**
 
@@ -7816,6 +7831,9 @@ STORM DRAIN BLOCKAGE METHOD FILE
      - **Alpha Numeric**
      - Inlet id of the connected inlet node.
 
+.. raw:: html
+
+    <br><br>
 
 **Instructional Comments for the SWMMFLODROPBOX.DAT File**
 
@@ -7829,8 +7847,8 @@ STORM DRAIN BLOCKAGE METHOD FILE
    :header-rows: 0
 
 
-   * - Pipe Diameter (ft)
-     - Dropbox Surf Area (ft2)
+   * - **Pipe Diameter (ft)**
+     - **Dropbox Surf Area (ft2)**
 
    * - 5
      - 19.635
