@@ -8585,31 +8585,36 @@ SURFACE WATER RATING TABLES
 
     <br><br>
 
-   OUTRC.DAT File Example
 
-   N 25146
+.. raw:: html
 
-   P 0.00 0.00
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>OUTRC.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           N 25146
+           P 0.00 0.00
+           P 1.00 5.25
+           P 2.00 25.2
+           P 3.00 100.32
+           P 4.00 180.5
+           ...
+           P 20.5 736.00
+           N 14079
+           P 0.00 0.00
+           P 1.00 2.50
+           ...
 
-   P 1.00 5.25
 
-   P 2.00 25.2
 
-   P 3.00 100.32
 
-   P 4.00 180.5
+        </pre>
+    </div>
 
-   ...
+.. raw:: html
 
-   P 20.5 736.00
+    <br><br>
 
-   N 14079
-
-   P 0.00 0.00
-
-   P 1.00 2.50
-
-   ...
 
 **Variable Descriptions for the OUTRC.DAT File**
 
