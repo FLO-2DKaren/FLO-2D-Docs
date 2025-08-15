@@ -8566,15 +8566,24 @@ FILE: OUTRC.DAT
 SURFACE WATER RATING TABLES
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   OUTRC.DAT File Variables
 
-N 13562 Line 1: **IVOLSTOCHAR NNODSTOVO**
 
-P 1.25 20.5 Line 2: **IVOLSTOCHAR DEPTHRT(I,K) VOLRT(I,K)**
+.. raw:: html
 
-   I = Depths
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>OUTRC.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         N   13562              Line 1: <b>IVOLSTOCHAR   NNODSTOVO</b>
+         P   1.25   20.5        Line 2: <b>IVOLSTOCHAR   DEPTHRT(I,K)   VOLRT(I,K)</b>
+                                <i>I = Depths
+                                K = Volume corresponding to I depths.</i>
+        </pre>
+    </div>
 
-   K = Volume corresponding to I depths.
+.. raw:: html
+
+    <br><br>
 
    OUTRC.DAT File Example
 
