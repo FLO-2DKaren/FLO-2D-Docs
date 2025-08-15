@@ -8604,10 +8604,6 @@ SURFACE WATER RATING TABLES
            P 0.00 0.00
            P 1.00 2.50
            ...
-
-
-
-
         </pre>
     </div>
 
@@ -8625,10 +8621,10 @@ SURFACE WATER RATING TABLES
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IGRIDXSEC(M)
      - **c**
