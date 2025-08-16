@@ -9405,4 +9405,4 @@ STEEP SLOPE N VALUE DATA FILE
    These internal computations will establish the baseline n-value in the FLO-2D model.
 
 4. Apply the steep slope regression equations 1 through 3 for each assigned cell flow direction.
-   The most conservative n-value whether the original baseline n- value or the adjusted steep slope n-value will be applied in the FLO-2D model.
+   The most conservative n-value whether the original baseline n-value or the adjusted steep slope n-value will be applied in the FLO-2D model.
