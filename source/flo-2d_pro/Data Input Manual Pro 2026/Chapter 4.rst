@@ -8714,10 +8714,10 @@ ARRAY OF INTERIOR GRID ELEMENTS
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IGRID(I)
      - **i**
