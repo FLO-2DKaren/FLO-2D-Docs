@@ -9352,10 +9352,6 @@ STEEP SLOPE N VALUE DATA FILE
 
     <br><br>
 
-
-
-
-
 **Variable Descriptions for the STEEP_SLOPEN.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
@@ -9365,10 +9361,10 @@ STEEP SLOPE N VALUE DATA FILE
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - ISTEEPNGLOBAL
      - **i**
