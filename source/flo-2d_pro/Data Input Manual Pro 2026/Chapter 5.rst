@@ -43,7 +43,7 @@ Use NotePad© , NotePad++© or any other ASCII editor to view the output files.
 A brief description of all the output files follows:
 
 *Table 5.1.
-       List of General \*.OUT Files and Unit Numbers*
+        List of General \*.OUT Files and Unit Numbers*
 
 .. list-table::
    :widths: 25 25 25 25
@@ -64,8 +64,27 @@ A brief description of all the output files follows:
      - 55
      - SURFAREA.OUT
 
+*Table 5.2.
+        List of 2-D Overland Output
 
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
+
+   * - Depth
+     -
+     - Velocity
+     -
+
+   * - 20
+     - DEPTH.OUT
+     - 118
+     -  VELTIMEFP.OUT
 
 .. list-table::
    :widths: 100
