@@ -59,14 +59,12 @@ A brief description of all the output files follows:
      - 19
      - TIME.OUT
 
+   * - 11
+     - SUMMARY.OUT
+     - 55
+     - SURFAREA.OUT
 
-* - File No.
-       |    File Name             |    File No.
-       |    File Name
 
-   * - 2               |    BASE.OUT              |    19              |    TIME.OUT
-
-   * - 11              |    SUMMARY.OUT           |    55              |    SURFAREA.OUT
 
 
 .. list-table::
