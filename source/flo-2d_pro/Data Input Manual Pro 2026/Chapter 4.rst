@@ -9175,10 +9175,10 @@ LOW IMPACT DEVELOPMENT DATA FILE
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IDUM
      - **i**
@@ -9208,42 +9208,52 @@ FILE: MULTDOMAIN.DAT
 
 MULTIPLE DOMAIN DATA FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   MULTDOMAIN.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>        MULTDOMAIN.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        N 6 Line 1: <b>OUTCHAR = 'N' NOFDOWNSDOMAIN</b>
+        D 3490 5707 Line 2: <b>OUTCHAR = 'D' UPSCONNECTIVITY(I,J)
+                            DOWNCONNECTIVITY(I,J)</b>
 
-   N 6 Line 1: **OUTCHAR = 'N' NOFDOWNSDOMAIN**
+        Notes:
+        Line 1: This number is the number of the downstream domain
+        </pre>
+    </div>
 
-   D 3490 5707 Line 2: **OUTCHAR = 'D' UPSCONNECTIVITY(I,J)**
+.. raw:: html
 
-   **DOWNCONNECTIVITY(I,J)**
+    <br><br>
+.. raw:: html
 
-Notes:
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           MULTDOMAIN.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        N 1
+        D 9877 1
+        D 10054 2
+        D 10231 3
+        N 2
+        D 95 7
+        D 94 8
+        D 93 9
+        D 92 10
+        D 91 11
+           ...
+        </pre>
+    </div>
 
-Line 1: This number is the number of the downstream domain
+.. raw:: html
 
-   MULTDOMAIN.DAT File Example
+    <br><br>
 
-   N 1
 
-D 9877 1
 
-D 10054 2
 
-D 10231 3
 
-N 2
-
-D 95 7
-
-D 94 8
-
-D 93 9
-
-D 92 10
-
-D 91 11
-
-   ...
 
 **Variable Descriptions for the MULTDOMAIN.DAT File**
 
