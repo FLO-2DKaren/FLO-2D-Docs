@@ -8592,18 +8592,18 @@ SURFACE WATER RATING TABLES
         <div><i><pre>OUTRC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-           N 25146
-           P 0.00 0.00
-           P 1.00 5.25
-           P 2.00 25.2
-           P 3.00 100.32
-           P 4.00 180.5
-           ...
-           P 20.5 736.00
-           N 14079
-           P 0.00 0.00
-           P 1.00 2.50
-           ...
+        N 25146
+        P 0.00 0.00
+        P 1.00 5.25
+        P 2.00 25.2
+        P 3.00 100.32
+        P 4.00 180.5
+        ...
+        P 20.5 736.00
+        N 14079
+        P 0.00 0.00
+        P 1.00 2.50
+        ...
         </pre>
     </div>
 
@@ -8671,23 +8671,14 @@ ARRAY OF INTERIOR GRID ELEMENTS
    CHAN_INTERIOR_NODES.DAT File Example
 
    1521
-
    4099
-
    5713
-
    7611
-
    9183
-
    10751
-
    12442
-
    14079
-
    15977
-
    18061
 
 **Variable Descriptions for the CHAN_INTERIOR_NODES.DAT File**
