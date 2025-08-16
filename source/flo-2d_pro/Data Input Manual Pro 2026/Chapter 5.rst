@@ -323,63 +323,84 @@ List of Levee and Breach Output
      - 699
      - PRESCRIBED_BREACHQ.OUT
 
+*Table 5.6.
+ List of Storm Drain Output
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.6.
-       List of Storm Drain Output**
+   * - 1560
+     - SWMMQIN.OUT
+     - 1574
+     - MANHOLEPOP.OUT
 
-   * - File No.
-       |    File Name             |    File No.
-       |    File Name
+   * - 1565
+     - SWMMOUTFIN.OUT
+     -
+     - SWMM.RPT
 
-   * - 1560            |    SWMMQIN.OUT           |    1574            |    MANHOLEPOP.OUT
+   * - 1563
+     - FPRIMELEV.OUT
+     -
+     - SWMM.OUT
 
-   * - 1565            |    SWMMOUTFIN.OUT        |                    |    SWMM.RPT
+   * - 1570
+     - SD MANHOLEPOPUP.OUT
 
-   * - 1563            |    FPRIMELEV.OUT         |                    |    SWMM.OUT
-
-   * - 1570            |    SD MANHOLEPOPUP.
-       OUT  |                    |
-
+*Table 5.7.
+ List of Multiple Channel Output
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.7.
-       List of Multiple Channel Output**
+   * - 25
+     - MULTCHN.OUT
+     -
+     -
 
-   * - cFile No.
-       |    File Name             |    File No.
-       |    File Name
+   * - 205
+     - MULTSTEEP.OUT
+     -
+     -
 
-   * - 25              |    MULTCHN.OUT           |                    |
-
-   * - 205             |    MULTSTEEP.OUT         |                    |
-
+*Table 5.8.
+ List of Sediment Transport and Mudflow Output
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.8.
-       List of Sediment Transport and Mudflow Output**
+   * - 17
+     - SEDFP.OUT
+     - 88
+     - SEDTRAN.OUT
 
-   * - File No.
-       |    File Name             |    File No.
-       |    File Name
+   * - 18
+     - SEDCHAN.OUT
+     - 139
+     - FPSEDSIZE.OUT
 
-   * - 17              |    SEDFP.OUT             |    88              |    SEDTRAN.OUT
-
-   * - 18              |    SEDCHAN.OUT           |    139             |    FPSEDSIZE.OUT
-
-   * - 77              |    SEDCONSERV.OUT        |                    |
+   * - 77
+     - SEDCONSERV.OUT
+     -
+     -
 
 
 .. list-table::
