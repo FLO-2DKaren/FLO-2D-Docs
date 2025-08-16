@@ -600,32 +600,52 @@ List of Levee and Breach Output
      -
      -
 
+*Table 5.13.
+ List of \*.TMP Files and Unit Numbers
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.13.
-       List of \*.TMP Files and Unit Numbers**
+   * - 8
+     - CHMAX2.TMP
+     - 112
+     - OUTNQMAX.TMP
 
-   * - File            |    File Name              |    File No.
-       |    File Name|                           |                    |No.
-       |                           |                    |
+   * - 12
+     - OUTNQ.TMP
+     - 122
+     - HYSTREET.TMP
 
-   * - 8                  | CHMAX2.TMP                | 112                | OUTNQMAX.TMP
+   * - 13
+     - HYCHAN.TMP
+     - 159
+     - LEVOVERTOP.TMP
 
-   * - 12              |    OUTNQ.TMP              |    122             |    HYSTREET.TMP
+   * - 15
+     - HYCROSS.TMP
+     - 254
+     - BREACH.TMP
 
-   * - 13              |    HYCHAN.TMP             |    159             |    LEVOVERTOP.TMP
+   * - 16
+     - CROSSQ.TMP
+     - 1561
+     - SWMMQIN.TMP
 
-   * - 15              |    HYCROSS.TMP            |    254             |    BREACH.TMP
+   * - 71
+     - HYDROSTRUCT.TMP
+     - 1566
+     - SWMMOUTFIN.TMP
 
-   * - 16              |    CROSSQ.TMP             |    1561            |    SWMMQIN.TMP
-
-   * - 71              |    HYDROSTRUCT.TMP        |    1566            |    SWMMOUTFIN.TMP
-
-   * - 76              |    OUTNQ2.TMP             |                    |
+   * - 76
+     - OUTNQ2.TMP
+     -
+     -
 
 
 2 PHASE SEDIMENT VOLUME CONSERVATION.OUT
