@@ -9013,7 +9013,7 @@ TAILINGS DEPTH DATA
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         7659 10 5 Line 1: <b>IDUM FPD(I) FPD_MUD(I)</b>
-        <i>I = grid element that has a tailings depth assigned.<i/>
+        <i>I = grid element that has a tailings depth assigned.</i>
 
         Notes:
 
