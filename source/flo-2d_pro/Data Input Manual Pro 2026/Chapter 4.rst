@@ -9334,19 +9334,27 @@ STEEP SLOPE N VALUE DATA FILE
     <br><br>
 
 
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           STEEP_SLOPEN.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        2
+        263
+        236
+        245
+        ...
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
 
 
-   STEEP_SLOPEN.DAT File Example
 
-   2
 
-263
-
-236
-
-245
-
-   ...
 
 **Variable Descriptions for the STEEP_SLOPEN.DAT File**
 
