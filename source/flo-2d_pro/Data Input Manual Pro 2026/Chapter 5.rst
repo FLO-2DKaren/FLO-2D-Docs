@@ -128,75 +128,113 @@ A brief description of all the output files follows:
      - 1401
      - VEL_X_DEPTH.OUT
 
-    * - 101
-      - IMPACT.OUT
-      - Discharge
-      -
+   * - 101
+     - IMPACT.OUT
+     - Discharge
+     -
 
-    * - 102
-      - STATICPRESS.OUT
-      - 105
-      - MAXQHYD.OUT
+   * - 102
+     - STATICPRESS.OUT
+     - 105
+     - MAXQHYD.OUT
 
-    * - 289
-      - INFIL_DEPTH.OUT
-      - 106
-      - MAXQBYDIR.OUT
+   * - 289
+     - INFIL_DEPTH.OUT
+     - 106
+     - MAXQBYDIR.OUT
 
-    * - 82
-      - OUTNQ.OUT
-      - 107
-      - MAXQRESOLVED.OUT
+   * - 82
+     - OUTNQ.OUT
+     - 107
+     - MAXQRESOLVED.OUT
 
-    * - 92
-      - INTERGWS.OUT
-      - 124
-      - MAXWSELEV.OUT
+   * - 92
+     - INTERGWS.OUT
+     - 124
+     - MAXWSELEV.OUT
 
-    * - 67
-      - INFILHY.OUT
-      - Time
-      -
+   * - 67
+     - INFILHY.OUT
+     - Time
+     -
 
-    * - 104
-      - SPECENERGY.OUT
-      - 21
-      - TIMDEP.OUT
+   * - 104
+     - SPECENERGY.OUT
+     - 21
+     - TIMDEP.OUT
 
-     * - 111
-FPINFILTRATION.
--
--
-
-       78
-TIMDEP_NC4.OUT
-OUT
+   * - 111
+     - FPINFILTRATION.
+     - 78
+     - TIMDEP_NC4.OUT
 -
 
-* - Review
--
--181
-WSTIME.OUT
+   * - Review
+     -
+     - 181
+     - WSTIME.OUT
 
-* - 1131
-EVACUATEDFP.OUT
-190
-TIMETWOFT.OUT
+   * - 1131
+     - EVACUATEDFP.OUT
+     - 190
+     - TIMETWOFT.OUT
 
    * - 1597
-FLOODPLAIN_CON-
-191
-TIMETOPEAK.OUT|    VERGENCE.OUT                       |
+     - FLOODPLAIN_CONVERGENCE.OUT
+     - 191
+     - TIMETOPEAK.OUT
 
-   * - 1598            |    DEPRESSED_ELE-   |    192             |    TIMEONEFT.OUT|    MENTS.OUT        |                    |
+   * - 1598
+     - DEPRESSED_ELEMENTS.OUT
+     - 192
+     - TIMEONEFT.OUT
 
-   * - 22              |    ROUGH.OUT        |    193             |    FLOODWAVETIME.OUT
+   * - 22
+     - ROUGH.OUT
+     - 193
+     - FLOODWAVETIME.OUT
 
-   * - 65              |    SUPER.OUT        |    528             |    DEPTHDUR2.OUT
+   * - 65
+     - SUPER.OUT
+     - 528
+     - DEPTHDUR2.OUT
 
-   * - 288             |    BUILDING_COL-    |    1921            |    TIME_TO_ABOVE_BASE-|    LAPSE.OUT        |                    |    FLOW.OUT
+   * - 288
+     - BUILDING_COLLAPSE.OUT
+     - 1921
+     - TIME_TO_ABOVE_BASE-FLOW.OUT
 
-   * - |                     |    201             |    BASEFLOWFP_TIME.OUT
+   * -
+     -
+     - 201
+     - BASEFLOWFP_TIME.OUT
+
+*Table 5.3.
+        List of 1-D Channel Output
+
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
+
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
+
+   * - 14
+     - CHANMAX.OUT
+     - 94
+     - XSEC.OUT
+
+   * - 24
+     - VELOC.OUT
+     - 103
+     - CONFLUENCE.OUT
+
+   * - 61
+     - DEPCH.OUT
+     - 140
+     - CHANSEDSIZE.OUT
 
 
 .. list-table::
