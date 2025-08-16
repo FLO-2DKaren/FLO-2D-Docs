@@ -84,7 +84,25 @@ A brief description of all the output files follows:
    * - 20
      - DEPTH.OUT
      - 118
-     -  VELTIMEFP.OUT
+     - VELTIMEFP.OUT
+
+   * - 27
+     - DEPTHTOL.OUT
+     - 641
+     - VELRESMAX.OUT
+
+   * - 28
+     - DEPTHDUR.OUT
+     - 81
+     - FINALVEL.OUT
+
+   * - 62
+     - FINALDEP.OUT
+     - 83
+     - FINALDIR.OUT
+
+
+
 
 .. list-table::
    :widths: 100
