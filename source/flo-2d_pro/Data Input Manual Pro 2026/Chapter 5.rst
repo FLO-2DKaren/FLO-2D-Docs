@@ -518,7 +518,6 @@ List of Levee and Breach Output
      - **File No.**
      - **File Name**
 
-
    * - 108
      - FPLAIN.RGH
      - 109
@@ -539,38 +538,67 @@ List of Levee and Breach Output
      - 2229
      - STEEPROUGH.RGH
 
+*Table 5.12.
+ List of Batch Files and Unit Numbers
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.12.
-       List of Batch Files and Unit Numbers**
+   * - 195
+     - DEPFP_ANTERIOR.OUT
+     - 213
+     - DIFF_VELOC.OUT
 
-   * - File            |    File Name              |    File            |    File Name|                           |                    |No.
-       |                           |    No.
-       |
+   * - 196
+     - DIFF_DEPFP.OUT
+     - 214                 \
+     - VELTIMEFP_ANTERIOR.OUT
 
-   * - 195             |    DEPFP_ANTERIOR.OUT     |    213             |    DIFF_VELOC.OUT
+   * - 197
+     - FINALDEP_ANTERIOR.OUT
+     - 215
+     - DIFF_VELTIMEFP.OUT
 
-   * - 196             |    DIFF_DEPFP.OUT         |    214             |    VELTIMEFP_ANTERIOR.OUT
+   * - 198
+     - DIFF_FINALDEP.OUT
+     - 216
+     - VELTIMEC_ANTERIOR.OUT
 
-   * - 197             |    FINALDEP_ANTERIOR.OUT  |    215             |    DIFF_VELTIMEFP.OUT
+   * - 199
+     - ENDRUNBATCHTEST.OUT
+     - 217
+     - DIFF_VELTIMEC.OUT
 
-   * - 198             |    DIFF_FINALDEP.OUT      |    216             |    VELTIMEC_ANTERIOR.OUT
+   * - 206
+     - VELFP_ANTERIOR.OUT
+     - 218
+     - DEPCH_ANTERIOR.OUT
 
-   * - 199             |    ENDRUNBATCHTEST.OUT    |    217             |    DIFF_VELTIMEC.OUT
+   * - 207
+     - DIFF_VELFP.OUT
+     - 219
+     - DIFF_DEPCH.OUT
 
-   * - 206             |    VELFP_ANTERIOR.OUT     |    218             |    DEPCH_ANTERIOR.OUT
+   * - 209
+     - DEPTH_ANTERIOR.OUT
+     - 220
+     - DEPCHFINAL_ANTERIOR.OUT
 
-   * - 207             |    DIFF_VELFP.OUT         |    219             |    DIFF_DEPCH.OUT
+   * - 210
+     - DIFF_DEPTH.OUT
+     - 221
+     - DIFF_DEPCHFINAL.OUT
 
-   * - 209             |    DEPTH_ANTERIOR.OUT     |    220             |    DEPCHFINAL_ANTERIOR.OUT
-
-   * - 210             |    DIFF_DEPTH.OUT         |    221             |    DIFF_DEPCHFINAL.OUT
-
-   * - 212             |    VELOC_ANTERIOR.OUT     |                    |
+   * - 212
+     - VELOC_ANTERIOR.OUT
+     -
+     -
 
 
 .. list-table::
