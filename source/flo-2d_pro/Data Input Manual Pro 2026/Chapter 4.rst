@@ -8843,8 +8843,8 @@ TAILINGS DEPTH DATA
         <div><i><pre>           TAILINGS.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-           7659 10              Line 1: **JGRIDUMMY TAILINGSDEPTH(I)**
-                                *I = grid element that has a tailings depth assigned.*
+           7659 10              Line 1: <b>JGRIDUMMY TAILINGSDEPTH(I)</b>
+                                <i>I = grid element that has a tailings depth assigned.</i>
         </pre>
     </div>
 
