@@ -8837,12 +8837,21 @@ FILE: TAILINGS.DAT
 
 TAILINGS DEPTH DATA
 ^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   TAILINGS.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           TAILINGS.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           7659 10              Line 1: **JGRIDUMMY TAILINGSDEPTH(I)**
+                                *I = grid element that has a tailings depth assigned.*
+        </pre>
+    </div>
 
-   7659 10 Line 1: **JGRIDUMMY TAILINGSDEPTH(I)**
+.. raw:: html
 
-   *I = grid element that has a tailings depth assigned.*
+    <br><br>
+
 
 Notes:
 
