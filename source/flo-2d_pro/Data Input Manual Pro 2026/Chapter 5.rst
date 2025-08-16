@@ -108,30 +108,35 @@ A brief description of all the output files follows:
    :widths: 25 25 25 25
    :header-rows: 0
 
-   * - 60
-     - DEPFP.OUT
-     - 63
-     - VELDIREC.OUT
+    * - **File No.**
+      - **File Name**
+      - **File No.**
+      - **File Name**
 
-   * - General
-     -
-     - 64
-     - VELFP.OUT
+    * - 60
+      - DEPFP.OUT
+      - 63
+      - VELDIREC.OUT
 
-   * - 45
-     - FLOODWAY.OUT
-     - 1401
-     - VEL_X_DEPTH.OUT
+    * - General
+      -
+      - 64
+      - VELFP.OUT
 
-   * - 101
-     - IMPACT.OUT
-     - Discharge
-     -
+    * - 45
+      - FLOODWAY.OUT
+      - 1401
+      - VEL_X_DEPTH.OUT
 
-   * - 102
-     - STATICPRESS.OUT
-     - 105
-     - MAXQHYD.OUT
+    * - 101
+      - IMPACT.OUT
+      - Discharge
+      -
+
+    * - 102
+      - STATICPRESS.OUT
+      - 105
+      - MAXQHYD.OUT
 
    * - 289
      - INFIL_DEPTH.OUT
@@ -148,9 +153,15 @@ A brief description of all the output files follows:
      - 124
      - MAXWSELEV.OUT
 
-   * - 67              |    INFILHY.OUT      |    Time            |
+   * - 67
+     - INFILHY.OUT
+     - Time
+     -
 
-   * - 104             |    SPECENERGY.OUT   |    21              |    TIMDEP.OUT
+   * - 104
+     - SPECENERGY.OUT
+     - 21
+     - TIMDEP.OUT
 
    * - 111             |    FPINFILTRATION.
        |    78              |    TIMDEP_NC4.OUT|    OUT              |                    |
