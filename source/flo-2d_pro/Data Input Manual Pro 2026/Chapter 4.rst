@@ -8928,25 +8928,24 @@ TAILINGS DATA
 .. raw:: html
 
     <br><br>
-   TAILINGS_CV.DAT File Variables
+  .. raw:: html
 
-   7659 995 0.50 Line 1: **IDUM TAILINGSDEPTH(I) CVTFP(JTDUMMY)**
-
-   *I = grid element that has a tailings depth assigned.*
-
-Notes:
-
-   Line 1: Repeat this line for each grid element has a tailings depth assigned.
-
-   TAILINGS_CV.DAT File Example
-
-   7650 10 0.5
-
-   7651 10 0.5
-
-   7652 10 0.3
-
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               TAILINGS_CV.DAT File Example
+</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+]7650 10 0.5
+7651 10 0.5
+7652 10 0.3
    ...
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
+
 
 **Variable Descriptions for the TAILINGS_CV.DAT File**
 
