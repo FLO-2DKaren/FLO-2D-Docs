@@ -258,29 +258,33 @@ List of 1-D Channel Output
      - 1596
      - CHANNEL_CONVERGENCE.OUT
 
+*Table 5.3.
+List of Hydraulic Structures Output
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
 
-   * - **Table 5.4.
-       List of Hydraulic Structures Output**
+   * - 70
+     - HYDROSTRUCT.OUT
 
-   * - File No.
-       |    File Name
+   * - 669
+     - HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT
 
-   * - 70                               |    HYDROSTRUCT.OUT
+   * - 910
+     - BRIDGE_FLOW_GEOMETRY.OUT
 
-   * - 669                              |    HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT
+   * - 912
+     - BRIDGE_DISCHARGE.OUT
 
-   * - 910                              |    BRIDGE_FLOW_GEOMETRY.OUT
+   * - 914
+     - BRIDGE_COEFFICIENTS.OUT
 
-   * - 912                              |    BRIDGE_DISCHARGE.OUT
-
-   * - 914                              |    BRIDGE_COEFFICIENTS.OUT
-
-   * - 671                              |    HYDRAULIC STRUCTURE SUBFACTORS.OUT
+   * - 671
+     - HYDRAULIC STRUCTURE SUBFACTORS.OUT
 
 
 .. list-table::
