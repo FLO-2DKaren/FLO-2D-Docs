@@ -9050,17 +9050,6 @@ TAILINGS DEPTH DATA
     <br><br>
 
 
-   TAILINGS_STACK_DEPTH.DAT File Example
-
-Example MUD = 1
-
-   7650 10
-
-   7651 10
-
-   7652 10
-
-   ...
 
 **Variable Descriptions for the TAILINGS_STACK_DEPTH.DAT File**
 
@@ -9071,10 +9060,10 @@ Example MUD = 1
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IDUM
      - **i**
@@ -9137,26 +9126,45 @@ FILE: LID_VOLUME.DAT
 
 LOW IMPACT DEVELOPMENT DATA FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   LID_VOLUME.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       LID_VOLUME.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        7659 10 Line 1: <b>IDUM LIDVOLUMEMAX(J)</b>
 
-   7659 10 Line 1: **IDUM LIDVOLUMEMAX(J)**
+           <i>J = grid element that has a LID volume assigned.</i>
 
-   *J = grid element that has a LID volume assigned.*
+        Notes:
+           Line 1: Repeat this line for each grid element has an LID volume.
+        </pre>
+    </div>
 
-Notes:
+.. raw:: html
 
-   Line 1: Repeat this line for each grid element has an LID volume.
+    <br><br>
 
-   LID_VOLUME.DAT File Example
+.. raw:: html
 
-   7650 10
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>        LID_VOLUME.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        7650 10
+        7651 10
+        7652 10
+           ...
+        </pre>
+    </div>
 
-7651 10
+.. raw:: html
 
-7652 10
+    <br><br>
 
-   ...
+
+
+
 
 **Variable Descriptions for the LID_VOLUME.DAT File**
 
