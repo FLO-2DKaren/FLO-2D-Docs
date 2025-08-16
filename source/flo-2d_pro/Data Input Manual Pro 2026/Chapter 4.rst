@@ -8695,9 +8695,6 @@ ARRAY OF INTERIOR GRID ELEMENTS
         14079
         15977
         18061
-
-
-
         </pre>
     </div>
 
