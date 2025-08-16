@@ -8911,7 +8911,23 @@ FILE: TAILINGS_CV.DAT
 
 TAILINGS DATA
 ^^^^^^^^^^^^^
+.. raw:: html
 
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       TAILINGS_CV.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        7659 995 0.50           Line 1: <b>IDUM TAILINGSDEPTH(I) CVTFP(JTDUMMY)</b>
+                                <i>I = grid element that has a tailings depth assigned.</i>
+
+        Notes:
+            Line 1: Repeat this line for each grid element has a tailings depth assigned.
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
    TAILINGS_CV.DAT File Variables
 
    7659 995 0.50 Line 1: **IDUM TAILINGSDEPTH(I) CVTFP(JTDUMMY)**
