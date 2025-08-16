@@ -8935,10 +8935,10 @@ TAILINGS DATA
 </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-]7650 10 0.5
-7651 10 0.5
-7652 10 0.3
-   ...
+        7650 10 0.5
+        7651 10 0.5
+        7652 10 0.3
+           ...
         </pre>
     </div>
 
@@ -8956,10 +8956,10 @@ TAILINGS DATA
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - IDUM
      - **i**
