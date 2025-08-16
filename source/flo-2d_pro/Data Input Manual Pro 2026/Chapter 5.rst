@@ -258,7 +258,7 @@ List of 1-D Channel Output
      - 1596
      - CHANNEL_CONVERGENCE.OUT
 
-*Table 5.3.
+*Table 5.4.
 List of Hydraulic Structures Output
 
 .. list-table::
@@ -286,30 +286,42 @@ List of Hydraulic Structures Output
    * - 671
      - HYDRAULIC STRUCTURE SUBFACTORS.OUT
 
+*Table 5.5.
+List of Levee and Breach Output
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.5.
-       List of Levee and Breach Output**
+   * - 59
+     - LEVEE.OUT
+     - 1594
+     - LOW_LEVEE_CREST_ELEVATIONS.OUT
 
-   * - File No.
-       |    File Name             |    File No.
-       |    File Name
+   * - 160
+     - LEVOVERTOP.OUT
+     - 1601
+     - LEVOVERTOPMAX.OUT
 
-   * - 59              |    LEVEE.OUT             |    1594            |    LOW_LEVEE_CREST_EL-|                          |                    |
-       EVATIONS.OUT
+   * - 161
+     - LEVEEDEFIC.OUT
+     - 1779
+     - CVFPMAX.OUT
 
-   * - 160             |    LEVOVERTOP.OUT        |    1601            |    LEVOVERTOPMAX.OUT
+   * - 255
+     - BREACH.OUT
+     - GE#
+     - GE#_LEVFAIL.OUT
 
-   * - 161             |    LEVEEDEFIC.OUT        |    1779            |    CVFPMAX.OUT
-
-   * - 255             |    BREACH.OUT            |    GE#             |    GE#_LEVFAIL.OUT
-
-   * - 1132            |    DAMBREACH_VOLUME.
-       OUT |    699             |    PRESCRIBED_BREACH|                          |                    |    Q.OUT
+   * - 1132
+     - DAMBREACH_VOLUME.OUT
+     - 699
+     - PRESCRIBED_BREACHQ.OUT
 
 
 .. list-table::
