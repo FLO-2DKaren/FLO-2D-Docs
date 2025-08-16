@@ -9012,8 +9012,8 @@ TAILINGS DEPTH DATA
         <div><i><pre>               TAILINGS_STACK_DEPTH.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        7659 10 5 Line 1: **IDUM FPD(I) FPD_MUD(I)**
-        *I = grid element that has a tailings depth assigned.*
+        7659 10 5 Line 1: <b>IDUM FPD(I) FPD_MUD(I)</b>
+        <i>I = grid element that has a tailings depth assigned.<i/>
 
         Notes:
 
