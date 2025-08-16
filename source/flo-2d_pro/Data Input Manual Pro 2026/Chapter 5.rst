@@ -173,11 +173,20 @@ TIMDEP_NC4.OUT
 OUT
 -
 
-   * - Review          |                     |    181             |    WSTIME.OUT
+* - Review
+-
+-181
+WSTIME.OUT
 
-   * - 1131            |    EVACUATEDFP.OUT  |    190             |    TIMETWOFT.OUT
+* - 1131
+EVACUATEDFP.OUT
+190
+TIMETWOFT.OUT
 
-   * - 1597            |    FLOODPLAIN_CON-  |    191             |    TIMETOPEAK.OUT|    VERGENCE.OUT     |                    |
+   * - 1597
+FLOODPLAIN_CON-
+191
+TIMETOPEAK.OUT|    VERGENCE.OUT                       |
 
    * - 1598            |    DEPRESSED_ELE-   |    192             |    TIMEONEFT.OUT|    MENTS.OUT        |                    |
 
