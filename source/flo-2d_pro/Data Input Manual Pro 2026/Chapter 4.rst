@@ -9264,10 +9264,10 @@ MULTIPLE DOMAIN DATA FILE
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - **NOFDOWNSDO-MAIN**
      - **r**
@@ -9314,18 +9314,27 @@ FILE: STEEP_SLOPEN.DAT
 
 STEEP SLOPE N VALUE DATA FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   STEEP_SLOPEN.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>       STEEP_SLOPEN.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        0               Line 1: <b>ISTEEPN_GLOBAL</b>
+        263             Line 2: <b>IDUM</b>
+                        J = grid element that has a
 
-   0 Line 1: **ISTEEPN_GLOBAL**
+        Notes:
+           Line 2: Repeat this line for each grid element has an steep slope.
+        </pre>
+    </div>
 
-   263 Line 2: **IDUM**
+.. raw:: html
 
-   J = grid element that has a
+    <br><br>
 
-Notes:
 
-   Line 2: Repeat this line for each grid element has an steep slope.
+
 
    STEEP_SLOPEN.DAT File Example
 
