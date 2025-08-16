@@ -402,41 +402,72 @@ List of Levee and Breach Output
      -
      -
 
+*Table 5.9.
+ List of Two Phase Flow Output
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.9.
-       List of Two Phase Flow Output**
+   * - 241
+     - VELOC_MUD.OUT
+     - 831
+     - FINALDIR_MUD.OUT
 
-   * - File            |    File Name             |    File No.
-       |    File Name|                          |                    |No.
-       |                          |                    |
+   * - 242
+     - CVTMAX.OUT
+     - 811
+     - FINALVEL_MUD.OUT
 
-   * - 241             |    VELOC_MUD.OUT         |    831             |    FINALDIR_MUD.OUT
+   * - 243
+     - CVTMAX_MUD.OUT
+     - 1771
+     - FP_BED_CHANGE_MUD.OUT
 
-   * - 242             |    CVTMAX.OUT            |    811             |    FINALVEL_MUD.OUT
+   * - 245
+     - CVTFINAL_MUD.OUT
+     - 1773
+     - CVFPMAX.OUT
 
-   * - 243             |    CVTMAX_MUD.OUT        |    1771            |    FP_BED_CHANGE_MUD.OUT
+   * - 361
+     - DEPCHFINAL_MUD.OUT
+     - 1775
+     - FINALCVFP_MUD.OUT
 
-   * - 245             |    CVTFINAL_MUD.OUT      |    1773            |    CVFPMAX.OUT
+   * - 602
+     - DEPFPMAX_MUD.OUT
+     - 1779
+     - CVFPMAX_MUD.OUT
 
-   * - 361             |    DEPCHFINAL_MUD.OUT    |    1775            |    FINALCVFP_MUD.OUT
+   * - 603
+     - DEPTHMAX_2PHASE_COMBINED.OUT
+     - 2070
+     - 2 PHASE SEDIMENT VOLUME CONSERVATION.OUT
 
-   * - 602             |    DEPFPMAX_MUD.OUT      |    1779            |    CVFPMAX_MUD.OUT
+   * - 611
+     - DEPCH_MUD.OUT
+     - 2080
+     - FPWSEL_MUD.OUT
 
-   * - 603             |    DEPTHMAX_2PHASE\_     |    2070            |    2 PHASE SEDIMENT VOLUME|    COMBINED.OUT          |                    |
-       CONSERVATION.OUT
+   * - 622
+     - FINALDEP_COMBO.OUT
+     - 6411
+     - VELFP_MUD.OUT
 
-   * - 611             |    DEPCH_MUD.OUT         |    2080            |    FPWSEL_MUD.OUT
+   * - 621
+     - FINALDEP_MUD.OUT
+     - 6412
+     - VELRESMAX_MUD.OUT
 
-   * - 622             |    FINALDEP_COMBO.OUT    |    6411            |    VELFP_MUD.OUT
-
-   * - 621             |    FINALDEP_MUD.OUT      |    6412            |    VELRESMAX_MUD.OUT
-
-   * - 631             |    VELDIREC_MUD.OUT      |                    |
+   * - 631
+     - VELDIREC_MUD.OUT
+     -
+     -
 
 
 .. list-table::
