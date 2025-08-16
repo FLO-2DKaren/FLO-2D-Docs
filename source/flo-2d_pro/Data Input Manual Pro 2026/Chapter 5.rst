@@ -65,7 +65,7 @@ List of General \*.OUT Files and Unit Numbers*
      - SURFAREA.OUT
 
 *Table 5.2.
-        List of 2-D Overland Output
+List of 2-D Overland Output
 
 .. list-table::
    :widths: 25 25 25 25
@@ -100,18 +100,6 @@ List of General \*.OUT Files and Unit Numbers*
      - FINALDEP.OUT
      - 83
      - FINALDIR.OUT
-
-*Table 5.2.
-        List of 2-D Overland Output
-
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
-
-   * - **File No.**
-     - **File Name**
-     - **File No.**
-     - **File Name**
 
    * - 60
      - DEPFP.OUT
@@ -167,7 +155,6 @@ List of General \*.OUT Files and Unit Numbers*
      - FPINFILTRATION.
      - 78
      - TIMDEP_NC4.OUT
--
 
    * - Review
      -
@@ -210,7 +197,7 @@ List of General \*.OUT Files and Unit Numbers*
      - BASEFLOWFP_TIME.OUT
 
 *Table 5.3.
-        List of 1-D Channel Output
+List of 1-D Channel Output
 
 .. list-table::
    :widths: 25 25 25 25
