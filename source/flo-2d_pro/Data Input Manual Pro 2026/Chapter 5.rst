@@ -469,35 +469,42 @@ List of Levee and Breach Output
      -
      -
 
+*Table 5.10.
+ List of MODFLOW Output
 
 .. list-table::
-   :widths: 100
+   :widths: 50 50
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
 
-   * - **Table 5.10.
-       List of MODFLOW Output**
+   * - 1238
+     - MODFLOW FP INFILTRATION VOLUMES.OUT
 
-   * - File No.
-       |    File Name
+   * - 1239
+     - MODFLOW FP INFILTRATION TOTALS.OUT
 
-   * - 1238                             |    MODFLOW FP INFILTRATION VOLUMES.OUT
+   * - 1241
+     - MODFLOW CHANNEL INFILTRATION TOTALS.OUT
 
-   * - 1239                             |    MODFLOW FP INFILTRATION TOTALS.OUT
+   * - 1242
+     -FLO-2D MODFLOW FP RETURN EXCHANGE.OUT
 
-   * - 1241                             |    MODFLOW CHANNEL INFILTRATION TOTALS.OUT
+   * - 1243
+     - FLO-2D MODFLOW CH RETURN EXCHANGE.OUT
 
-   * - 1242                             |    FLO-2D MODFLOW FP RETURN EXCHANGE.OUT
+   * - 1244
+     - FPMODFLOWELEV.OUT
 
-   * - 1243                             |    FLO-2D MODFLOW CH RETURN EXCHANGE.OUT
+   * - 1245
+     - CHMODFLOWELEV.OUT
 
-   * - 1244                             |    FPMODFLOWELEV.OUT
+   * - 12466
+     - FLO-2D MODFLOW INFILTRATION.OUT
 
-   * - 1245                             |    CHMODFLOWELEV.OUT
-
-   * - 12466                            |    FLO-2D MODFLOW INFILTRATION.OUT
-
-   * - 12477                            |    MODFLOW FLO-2D RECHARGE.OUT
+   * - 12477
+     - MODFLOW FLO-2D RECHARGE.OUT
 
 
 .. list-table::
