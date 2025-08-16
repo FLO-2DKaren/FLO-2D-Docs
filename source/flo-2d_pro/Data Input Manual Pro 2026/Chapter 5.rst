@@ -101,55 +101,52 @@ A brief description of all the output files follows:
      - 83
      - FINALDIR.OUT
 
-
-
-
-.. list-table::
-   :widths: 100
-   :header-rows: 0
-
-
-   * - **Table 5.2.
-       List of 2-D Overland Output**
-
-   * - File No.
-       |    File Name        |    File No.
-       |    File Name
-
-   * - Depth           |                     |    Velocity        |
-
-   * - 20              |    DEPTH.OUT        |    118             |    VELTIMEFP.OUT
-
-   * - 27              |    DEPTHTOL.OUT     |    641             |    VELRESMAX.OUT
-
-   * - 28              |    DEPTHDUR.OUT     |    81              |    FINALVEL.OUT
-
-   * - 62              |    FINALDEP.OUT     |    83              |    FINALDIR.OUT
-
+*Table 5.2.
+        List of 2-D Overland Output
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - 60
+     - DEPFP.OUT
+     - 63
+     - VELDIREC.OUT
 
-   * - **Table 5.2.
-       List of 2-D Overland Output**
+   * - General
+     -
+     - 64
+     - VELFP.OUT
 
-   * - 60              |    DEPFP.OUT        |    63              |    VELDIREC.OUT
+   * - 45
+     - FLOODWAY.OUT
+     - 1401
+     - VEL_X_DEPTH.OUT
 
-   * - General         |                     |    64              |    VELFP.OUT
+   * - 101
+     - IMPACT.OUT
+     - Discharge
+     -
 
-   * - 45              |    FLOODWAY.OUT     |    1401            |    VEL_X_DEPTH.OUT
+   * - 102
+     - STATICPRESS.OUT
+     - 105
+     - MAXQHYD.OUT
 
-   * - 101             |    IMPACT.OUT       |    Discharge       |
+   * - 289
+     - INFIL_DEPTH.OUT
+     - 106
+     - MAXQBYDIR.OUT
 
-   * - 102             |    STATICPRESS.OUT  |    105             |    MAXQHYD.OUT
+   * - 82
+     - OUTNQ.OUT
+     - 107
+     - MAXQRESOLVED.OUT
 
-   * - 289             |    INFIL_DEPTH.OUT  |    106             |    MAXQBYDIR.OUT
-
-   * - 82              |    OUTNQ.OUT        |    107             |    MAXQRESOLVED.OUT
-
-   * - 92              |    INTERGWS.OUT     |    124             |    MAXWSELEV.OUT
+   * - 92
+     - INTERGWS.OUT
+     - 124
+     - MAXWSELEV.OUT
 
    * - 67              |    INFILHY.OUT      |    Time            |
 
