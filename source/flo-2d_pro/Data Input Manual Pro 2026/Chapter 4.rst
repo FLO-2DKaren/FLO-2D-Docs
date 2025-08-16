@@ -9018,7 +9018,6 @@ TAILINGS DEPTH DATA
         Notes:
 
            In CONT.DAT, If MUD = 1 FPD is water or tailings depth.
-
            In CONT.DAT, If MUD = 2 FPD is water depth and FPD_MUD is the tailings depth
         </pre>
     </div>
