@@ -8740,11 +8740,21 @@ ARRAY OF INTERIOR GRID ELEMENTS
 
 BRIDGE CROSS SECTIONS
 ^^^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-                        BRIDGE_XSEC.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>BRIDGE_XSEC.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+X 6657                      Line 1: <b>XSECCHAR = 'X' IBRIDGE(I)</b>
+0.00 957.08 954.11          Line 2: <b>XUP(I,J) YUP(I,J) YB(I,J)</b>
+        </pre>
+    </div>
 
-X 6657                      Line 1: **XSECCHAR = 'X' IBRIDGE(I)**
-0.00 957.08 954.11          Line 2: **XUP(I,J) YUP(I,J) YB(I,J)**
+.. raw:: html
+
+    <br><br>
+
 
    BRIDGE_XSEC.DAT File Example
 
