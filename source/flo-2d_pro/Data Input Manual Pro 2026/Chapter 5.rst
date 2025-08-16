@@ -236,38 +236,40 @@ A brief description of all the output files follows:
      - 140
      - CHANSEDSIZE.OUT
 
+   * - 66
+     - CHVOLUME.OUT
+     - 113
+     - EVACUATEDCHAN.OUT
 
-.. list-table::
-   :widths: 25 25 25 25
-   :header-rows: 0
+   * - 74
+     - CHNBEDEL.OUT
+     - 117
+     - VELTIMEC.OUT
 
+   * - 80
+     - HYCHAN.OUT
+     - 261
+     - DEPCHFINAL.OUT
 
-   * - **Table 5.3.
-       List of 1-D Channel Output**
+   * - 87
+     - OVERBANK.OUT
+     - 262
+     - VELCHFINAL.OUT
 
-   * - File No.
-       |    File Name             |    File No.
-       |    File Name
+   * - 90
+     - CHANSTABILITY.OUT
+     - 263
+     - CHAN_INTERIOR\_NODES.OUT
 
-   * - 14              |    CHANMAX.OUT           |    94              |    XSEC.OUT
+   * - 91
+     - XSECAREA.OUT
+     - 345
+     - CHANLOSSES.OUT
 
-   * - 24              |    VELOC.OUT             |    103             |    CONFLUENCE.OUT
-
-   * - 61              |    DEPCH.OUT             |    140             |    CHANSEDSIZE.OUT
-
-   * - 66              |    CHVOLUME.OUT          |    113             |    EVACUATEDCHAN.OUT
-
-   * - 74              |    CHNBEDEL.OUT          |    117             |    VELTIMEC.OUT
-
-   * - 80              |    HYCHAN.OUT            |    261             |    DEPCHFINAL.OUT
-
-   * - 87              |    OVERBANK.OUT          |    262             |    VELCHFINAL.OUT
-
-   * - 90              |    CHANSTABILITY.OUT     |    263             |    CHAN_INTERIOR\_|                          |                    |    NODES.OUT
-
-   * - 91              |    XSECAREA.OUT          |    345             |    CHANLOSSES.OUT
-
-   * - 93              |    CHANWS.OUT            |    1596            |    CHANNEL_CONVER-|                          |                    |    GENCE.OUT
+   * - 93
+     - CHANWS.OUT
+     - 1596
+     - CHANNEL_CONVERGENCE.OUT
 
 
 .. list-table::
