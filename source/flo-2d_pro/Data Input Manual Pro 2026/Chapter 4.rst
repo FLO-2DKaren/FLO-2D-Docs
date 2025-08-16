@@ -9006,18 +9006,29 @@ FILE: TAILINGS_STACK_DEPTH.DAT
 
 TAILINGS DEPTH DATA
 ^^^^^^^^^^^^^^^^^^^
+.. raw:: html
 
-   TAILINGS_STACK_DEPTH.DAT File Variables
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               TAILINGS_STACK_DEPTH.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        7659 10 5 Line 1: **IDUM FPD(I) FPD_MUD(I)**
+        *I = grid element that has a tailings depth assigned.*
 
-   7659 10 5 Line 1: **IDUM FPD(I) FPD_MUD(I)**
+        Notes:
 
-   *I = grid element that has a tailings depth assigned.*
+           In CONT.DAT, If MUD = 1 FPD is water or tailings depth.
 
-Notes:
+           In CONT.DAT, If MUD = 2 FPD is water depth and FPD_MUD is the tailings depth
+        </pre>
+    </div>
 
-   In CONT.DAT, If MUD = 1 FPD is water or tailings depth.
+.. raw:: html
 
-   In CONT.DAT, If MUD = 2 FPD is water depth and FPD_MUD is the tailings depth
+    <br><br>
+
+
+
 
    TAILINGS_STACK_DEPTH.DAT File Example
 
