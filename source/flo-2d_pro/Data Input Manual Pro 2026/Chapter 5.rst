@@ -1492,7 +1492,7 @@ Five levels of freeboard defi- cit are reported:
 · Levee deficit
 
 GE_LEVFAIL.OUT
-==============
+----------------
 
 This file reports the levee failure expansion for a single grid element where the breach starts.
 Do not use this file to try and understand the total failure because it is confined to a single grid element.
@@ -1520,7 +1520,7 @@ This file reports:
 · Time (hrs)
 
 GE_PRESCRIBED_BREACH Q.OUT
-==========================
+---------------------------
 
 This file reports the breach discharge hydrograph in cubic feet per second or cubic meters per second through a dam or levee that was assigned
 prescribed breach.
