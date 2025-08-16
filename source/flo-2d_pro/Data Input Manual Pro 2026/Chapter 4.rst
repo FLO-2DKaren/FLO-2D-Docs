@@ -9026,7 +9026,28 @@ TAILINGS DEPTH DATA
 
     <br><br>
 
+.. raw:: html
 
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               TAILINGS_STACK_DEPTH.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        Example MUD = 1
+           7650 10
+           7651 10
+           7652 10
+           ...
+         Example  MUD = 2
+          7650  10     5
+          7651   10    5
+          7652   10    5
+          ...
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
 
 
    TAILINGS_STACK_DEPTH.DAT File Example
