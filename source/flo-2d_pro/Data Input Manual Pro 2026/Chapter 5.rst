@@ -238,7 +238,7 @@ A brief description of all the output files follows:
 
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
 
