@@ -8797,7 +8797,7 @@ BRIDGE CROSS SECTIONS
    * - **VARIABLE**
      - **FMT**
      - **RANGE**
-     - **DESCRIPTION*
+     - **DESCRIPTION**
 
    * - IBRIDGE(i)
      - **I**
