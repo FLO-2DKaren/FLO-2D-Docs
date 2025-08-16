@@ -8856,6 +8856,11 @@ TAILINGS DEPTH DATA
 Notes:
 
    Line 1: Repeat this line for each grid element has a tailings depth assigned.
+
+.. raw:: html
+
+    <br><br>
+
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
@@ -8928,11 +8933,11 @@ TAILINGS DATA
 .. raw:: html
 
     <br><br>
+
   .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>               TAILINGS_CV.DAT File Example
-</pre></i></div>
+        <div><i><pre>               TAILINGS_CV.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         7650 10 0.5
