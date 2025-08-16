@@ -506,26 +506,38 @@ List of Levee and Breach Output
    * - 12477
      - MODFLOW FLO-2D RECHARGE.OUT
 
+*Table 5.11.
+ List of \*.RHG Files and Unit Numbers
 
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.11.
-       List of \*.RHG Files and Unit Numbers**
 
-   * - File            |    File Name             |    File No.
-       |    File Name|                          |                    |No.
-       |                          |                    |
+   * - 108
+     - FPLAIN.RGH
+     - 109
+     - CHAN.RGH
 
-   * - 108             |    FPLAIN.RGH            |    109             |    CHAN.RGH
+   * - 110
+     - STREET.RGH
+     - 208
+     - MULT.RGH
 
-   * - 110             |    STREET.RGH            |    208             |    MULT.RGH
+   * - 309
+     - MANNINGS_N.RGH
+     - 1572
+     - FPLAIN_SDELEV.RGH
 
-   * - 309             |    MANNINGS_N.RGH        |    1572            |    FPLAIN_SDELEV.RGH
-
-   * - 1573            |    TOPO_SDELEV.RGH       |    2229            |    STEEPROUGH.RGH
+   * - 1573
+     - TOPO_SDELEV.RGH
+     - 2229
+     - STEEPROUGH.RGH
 
 
 .. list-table::
