@@ -8,9 +8,8 @@ Basic guidelines for using output files.
 
 During the flood simulation, the user has two choices for viewing the model flood progression:
 
-1. An output text screen
-
-2. A graphical representation of the flood simulation.
+    1. An output text screen
+    2. A graphical representation of the flood simulation.
 
 The screen option is selected with the LGPLOT variable in the CONT.DAT file.
 The text screen scrolls a list of the simulation time, minimum timestep and the volume conservation data.
@@ -43,15 +42,21 @@ To save any output files in anticipation of subsequent simulation, the user shou
 Use NotePad© , NotePad++© or any other ASCII editor to view the output files.
 A brief description of all the output files follows:
 
+*Table 5.1.
+       List of General \*.OUT Files and Unit Numbers*
+
 .. list-table::
-   :widths: 100
+   :widths: 25 25 25 25
    :header-rows: 0
 
+   * - **File No.**
+     - **File Name**
+     - **File No.**
+     - **File Name**
 
-   * - **Table 5.1.
-       List of General \*.OUT Files and Unit Numbers**
 
-   * - File No.
+
+* - File No.
        |    File Name             |    File No.
        |    File Name
 
