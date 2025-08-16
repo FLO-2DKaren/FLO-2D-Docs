@@ -9372,18 +9372,19 @@ STEEP SLOPE N VALUE DATA FILE
      - ISTEEPN_GLOBAL = 0
 
        No steep slope n-value analysis.
-       It is as if the steep slope meth- ods do not exist.
+       It is as if the steep slope methods do not exist.
 
        ISTEEPN_GLOBAL = 1
 
-       Global assignment to perform the steep slope n-value calcu- lation for all grid elements capable of sharing discharge in at least one of eight flow
-       directions.
+       Global assignment to perform the steep slope n-value calculation for all grid elements capable of sharing
+
+       discharge in at least one of eight flow directions.
 
        ISTEEPN_GLOBAL = 2
 
-       The spatially variable steep slope n-value analysis is applied to the following list of grid elements beginning with line 2
+       The spatially variable steep slope n-value analysis is applied to the following list of grid elements
 
-       of the data file.
+       beginning with line 2 of the data file.
 
    * - IDUM
      - **i**
