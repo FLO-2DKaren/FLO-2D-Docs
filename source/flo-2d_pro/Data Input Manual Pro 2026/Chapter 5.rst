@@ -138,33 +138,40 @@ A brief description of all the output files follows:
       - 105
       - MAXQHYD.OUT
 
-   * - 289
-     - INFIL_DEPTH.OUT
-     - 106
-     - MAXQBYDIR.OUT
+    * - 289
+      - INFIL_DEPTH.OUT
+      - 106
+      - MAXQBYDIR.OUT
 
-   * - 82
-     - OUTNQ.OUT
-     - 107
-     - MAXQRESOLVED.OUT
+    * - 82
+      - OUTNQ.OUT
+      - 107
+      - MAXQRESOLVED.OUT
 
-   * - 92
-     - INTERGWS.OUT
-     - 124
-     - MAXWSELEV.OUT
+    * - 92
+      - INTERGWS.OUT
+      - 124
+      - MAXWSELEV.OUT
 
-   * - 67
-     - INFILHY.OUT
-     - Time
-     -
+    * - 67
+      - INFILHY.OUT
+      - Time
+      -
 
-   * - 104
-     - SPECENERGY.OUT
-     - 21
-     - TIMDEP.OUT
+    * - 104
+      - SPECENERGY.OUT
+      - 21
+      - TIMDEP.OUT
 
-   * - 111             |    FPINFILTRATION.
-       |    78              |    TIMDEP_NC4.OUT|    OUT              |                    |
+     * - 111
+FPINFILTRATION.
+-
+-
+
+       78
+TIMDEP_NC4.OUT
+OUT
+-
 
    * - Review          |                     |    181             |    WSTIME.OUT
 
