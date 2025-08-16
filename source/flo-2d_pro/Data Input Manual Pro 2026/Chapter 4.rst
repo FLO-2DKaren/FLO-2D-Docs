@@ -8794,10 +8794,10 @@ BRIDGE CROSS SECTIONS
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION*
 
    * - IBRIDGE(i)
      - **I**
