@@ -43,7 +43,7 @@ Use NotePad© , NotePad++© or any other ASCII editor to view the output files.
 A brief description of all the output files follows:
 
 *Table 5.1.
-        List of General \*.OUT Files and Unit Numbers*
+List of General \*.OUT Files and Unit Numbers*
 
 .. list-table::
    :widths: 25 25 25 25
