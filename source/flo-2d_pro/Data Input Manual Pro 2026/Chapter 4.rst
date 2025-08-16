@@ -9091,33 +9091,16 @@ TAILINGS DEPTH DATA
 
 2. The TAILINGS_STACK_DEPTH.DAT file can be created using a preparation FLO-2D model simulation in the following sequence:
 
-i.    Create the tailings dam using the LEVEE.DAT to encompass the tailings reservoir area.
-   The grid elevation is pre-dam construction.
-
-ii.
-ii.
-Assign the tailings stack depth using the R-line of INFLOW.DAT file to assign the tailings elevation.
-
-iii.
-iii.
-Set the simulation time SIMUL = 0.001 hr.
-and the output interval TOUT = 0.001 hr in CONT.DAT.
-
-iv.
-iv.
-Run the FLO-2D model to generate the TAILINGS_STACK_DEPTH.
-DAT file.
-
-v.    Rename the INFLOW.DAT to INFLOW1.DAT or some other name.
-
-vi.
-Either turn the LEVEE switch off in CONT.DAT or select those levee crest elements for removal using QGIS.
-
-vii.
-Assign SIMUL = simulation model time with a representative TOUT = 0.1 or some other value.
-
-viii.
-Run the FLO-2D model again and the assigned stack depths will begin to move at the initiation of the model.
+        i. Create the tailings dam using the LEVEE.DAT to encompass the tailings reservoir area.
+           The grid elevation is pre-dam construction.
+        ii. Assign the tailings stack depth using the R-line of INFLOW.DAT file to assign the tailings elevation.
+        iii. Set the simulation time SIMUL = 0.001 hr.
+             and the output interval TOUT = 0.001 hr in CONT.DAT.
+        iv. Run the FLO-2D model to generate the TAILINGS_STACK_DEPTH.DAT file.
+        v. Rename the INFLOW.DAT to INFLOW1.DAT or some other name.
+        vi. Either turn the LEVEE switch off in CONT.DAT or select those levee crest elements for removal using QGIS.
+        vii. Assign SIMUL = simulation model time with a representative TOUT = 0.1 or some other value.
+        viii. Run the FLO-2D model again and the assigned stack depths will begin to move at the initiation of the model.
 
 3. A second option is to assign the TAILINGS_STACK_DEPTH.DAT in QGIS and then follow steps vi thru viii above to initiate the stack failure.
 
