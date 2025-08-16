@@ -8664,22 +8664,49 @@ FILE: CHAN_INTERIOR_NODES.DAT
 ARRAY OF INTERIOR GRID ELEMENTS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-   CHAN_INTERIOR_NODES.DAT File Variables
 
-1521 Line 1: **IGRID(I)**
+.. raw:: html
 
-   CHAN_INTERIOR_NODES.DAT File Example
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>CHAN_INTERIOR_NODES.DAT File Variables</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1521 Line 1: <b>IGRID(I)</b>
+        </pre>
+    </div>
 
-   1521
-   4099
-   5713
-   7611
-   9183
-   10751
-   12442
-   14079
-   15977
-   18061
+.. raw:: html
+
+    <br><br>
+
+.. raw:: html
+
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre> CHAN_INTERIOR_NODES.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        1521
+        4099
+        5713
+        7611
+        9183
+        10751
+        12442
+        14079
+        15977
+        18061
+
+
+
+        </pre>
+    </div>
+
+.. raw:: html
+
+    <br><br>
+
+
+
 
 **Variable Descriptions for the CHAN_INTERIOR_NODES.DAT File**
 
