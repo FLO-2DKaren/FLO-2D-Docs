@@ -677,22 +677,22 @@ All of the text output in this file is provided in individual ASCII xyz output f
 interest in the BASE.OUT format of the floodplain hydraulics for the individual grid elements.
 
 This output file can become large and it takes too long to write to it for models with 500,000 grid elements or more.
-Set NOPRTFP = 2 and it will not be created.
+Set NOPRTFP = 2 and it will not be created:
 
-    · If NOPRTFP = 0, all the BASE.OUT floodplain flow data is reported.
-    · If NOPRTFP = 1, the BASE.OUT floodplain outflow data is not reported.
-    · If NOPRTFP = 2, the entire file is not created.
-    · If NOPRTFP = 3, only floodplain outflow data is repIf NOPRTFP = 3, only floodplain outflow data is reported to the BASE.OUT file.
+    - If NOPRTFP = 0, all the BASE.OUT floodplain flow data is reported.
+    - If NOPRTFP = 1, the BASE.OUT floodplain outflow data is not reported.
+    - If NOPRTFP = 2, the entire file is not created.
+    - If NOPRTFP = 3, only floodplain outflow data is repIf NOPRTFP = 3, only floodplain outflow data is reported to the BASE.OUT file.
 
 **BASEFLOWFP_TIME.OUT**
 
 This file provides an option to report the time when the discharge exceeds the floodplain base flow has been implemented.
 The BASEFLOWFP\_ TIME.OUT file reports the following data.
 
-    · Grid
-    · Xcoord
-    · Ycoord
-    · Time to above baseflow (hrs)
+    - Grid
+    - Xcoord
+    - Ycoord
+    - Time to above baseflow (hrs)
 
 With this output file from a second simulation, the arrival time of an over- land floodwave overtaking a base flow is reported.
 A similar option was coded for channel base flow (uses a B-line with the baseflow in CHAN.
@@ -711,42 +711,42 @@ BATCH COMPARISON FILES
 Running the batch processor will execute many projects in series and perform automatic comparisons of the output data from previous runs.
 The following files represent the comparison dataset:
 
-    · DEPFP_ANTERIOR.OUT
-    · DIFF_DEPFP.OUT
-    · FINALDEP_ANTERIOR.OUT
-    · DIFF_FINALDEP.OUT
-    · ENDRUNBATCHTEST.OUT
-    · VELFP_ANTERIOR.OUT
-    · DIFF_VELFP.OUT
-    · DEPTH_ANTERIOR.OUT
-    · DIFF_DEPTH.OUT
-    · VELOC_ANTERIOR.OUT
-    · DIFF_VELOC.O
-    · DIFF_DEPTH.OUT
-    · VELOC_ANTERIOR.OUT
-    · DIFF_VELOC.OUT
-    · VELTIMEFP_ANTERIOR.OUT
-    · DIFF_VELTIMEFP.OUT
-    · VELTIMEC_ANTERIOR.OUT
-    · DIFF_VELTIMEC.OUT
-    · DEPCH_ANTERIOR.OUT
-    · DIFF_DEPCH.OUT
-    · DEPCHFINAL_ANTERIOR.OUT
-    · DIFF_DEPCHFINAL.OUT
+    - DEPFP_ANTERIOR.OUT
+    - DIFF_DEPFP.OUT
+    - FINALDEP_ANTERIOR.OUT
+    - DIFF_FINALDEP.OUT
+    - ENDRUNBATCHTEST.OUT
+    - VELFP_ANTERIOR.OUT
+    - DIFF_VELFP.OUT
+    - DEPTH_ANTERIOR.OUT
+    - DIFF_DEPTH.OUT
+    - VELOC_ANTERIOR.OUT
+    - DIFF_VELOC.O
+    - DIFF_DEPTH.OUT
+    - VELOC_ANTERIOR.OUT
+    - DIFF_VELOC.OUT
+    - VELTIMEFP_ANTERIOR.OUT
+    - DIFF_VELTIMEFP.OUT
+    - VELTIMEC_ANTERIOR.OUT
+    - DIFF_VELTIMEC.OUT
+    - DEPCH_ANTERIOR.OUT
+    - DIFF_DEPCH.OUT
+    - DEPCHFINAL_ANTERIOR.OUT
+    - DIFF_DEPCHFINAL.OUT
 
 BINARY FILES
 --------------
 The following binary backup files are generated when IBACKUP = 1.
 These files can be used to restart model after termination (either interrupted simulation or end of the simulation).
 
-    · CHANBINARY.OUT
-    · CROSSBINARY.OUT
-    · FPLAINBINARY.OUT
-    · HYSTRUCBINARY.OUT
-    · SEDBINARY.OUT
-    · STREETBINARY.OUT
-    · VOLUMEBINARY.OUT
-    · XSECSEDBINARY.OUT
+    - CHANBINARY.OUT
+    - CROSSBINARY.OUT
+    - FPLAINBINARY.OUT
+    - HYSTRUCBINARY.OUT
+    - SEDBINARY.OUT
+    - STREETBINARY.OUT
+    - VOLUMEBINARY.OUT
+    - XSECSEDBINARY.OUT
 
 **BREACH.OUT**
 
@@ -758,54 +758,54 @@ This is followed by the tabular data.
 
 The tabular data is reported for the breach discharge as follows:
 
-    · Time (hrs) - simulation time output
-    · Direction - breach direction 1-8 grid element directions
-    · Breach Q - total discharge through the breach and the end of the interval (cfs or cms)
-    · Sediment discharge - total sediment through the breach at the end of the interval (cfs or cms)
-    · Sediment concentration - concentration of sediment in the breach
-    · Bottom width - breach width at the bottom of the dam or levee at the output interval (ft or m)
-    · Top width - breach width at the top of the dam or levee at the output interval (ft or m)
-    · Breach elevalevee at the output interval (ft or m)
-    · Breach elevation - elevation of the bottom of the breach at the output interval (ft or m)
+    - Time (hrs) - simulation time output
+    - Direction - breach direction 1-8 grid element directions
+    - Breach Q - total discharge through the breach and the end of the interval (cfs or cms)
+    - Sediment discharge - total sediment through the breach at the end of the interval (cfs or cms)
+    - Sediment concentration - concentration of sediment in the breach
+    - Bottom width - breach width at the bottom of the dam or levee at the output interval (ft or m)
+    - Top width - breach width at the top of the dam or levee at the output interval (ft or m)
+    - Breach elevalevee at the output interval (ft or m)
+    - Breach elevation - elevation of the bottom of the breach at the output interval (ft or m)
 
 **BRIDGE_COEFFICIENTS.OUT**
 
 This file has the various discharge coefficients that are selected or computed:
 
-    · Time
-    · Inflow node
-    · COEFFREEB(JB)
-    · COEFFPRIME(JB)
-    · KFB(JB)
-    · KWWB(JB)
-    · KPHIB(JB)
-    · KYB(JB)
-    · KXB(JB)
-    · KJB(JB)
+    - Time
+    - Inflow node
+    - COEFFREEB(JB)
+    - COEFFPRIME(JB)
+    - KFB(JB)
+    - KWWB(JB)
+    - KPHIB(JB)
+    - KYB(JB)
+    - KXB(JB)
+    - KJB(JB)
 
 **BRIDGE_DISCHARGE.OUT**
 
 Bridge component output file.
 
-    · Time
-    · Inflow node
-    · Free surface Q (cfs or cms)
-    · Orifice flow Q (cfs or cms)
-    · Orifice and deck weir flow Q (cfs or cms)
+    - Time
+    - Inflow node
+    - Free surface Q (cfs or cms)
+    - Orifice flow Q (cfs or cms)
+    - Orifice and deck weir flow Q (cfs or cms)
 
 **BRIDGE_FLOW_GEOMETRY.OUT**
 
 Bridge flow area, wetted perimeter, and top width of the bridge cross sections.
 
-    · US flow area (ft2 or m2)
-    · US wetted perimeter (ft or m)
-    · US topwidth (ft or m)
-    · BR flow area (ft2 or m2)
-    · BR wetted perimeter (ft or m)
-    · BR topwidth (ft or m)
-    · DS flow area (ft2 or m2)
-    · DS wetted perimeter (ft or m)
-    · DS topwidth (ft or m)
+    - US flow area (ft2 or m2)
+    - US wetted perimeter (ft or m)
+    - US topwidth (ft or m)
+    - BR flow area (ft2 or m2)
+    - BR wetted perimeter (ft or m)
+    - BR topwidth (ft or m)
+    - DS flow area (ft2 or m2)
+    - DS wetted perimeter (ft or m)
+    - DS topwidth (ft or m)
 
 **BUILDING_COLLAPSE.OUT**
 
@@ -814,11 +814,11 @@ of buildings.
 This occurs because the flood depth and velocity exceed the building collapse criteria.
 The following tabular data is printed:
 
-    · Grid element
-    · Time
-    · Velocity - velocity at the time of collapse (fps or mps)
-    · Depth - depth at the time of collapse (ft or m)
-    · Minimum collapse depth based on the velocity (ft or m)
+    - Grid element
+    - Time
+    - Velocity - velocity at the time of collapse (fps or mps)
+    - Depth - depth at the time of collapse (ft or m)
+    - Minimum collapse depth based on the velocity (ft or m)
 
 **CHAN_INTERIOR_NODES.OUT**
 
@@ -833,12 +833,12 @@ If the bank elevation difference exceeds the specified criteria, the floodplain 
 This assumes that the surveyed bank elevation is more accurate than the interpolated floodplain elevation.
 The bank elevation difference criteria is:
 
-    · Channel grid element
-    · Xcoord
-    · Ycoord
-    · Bank elevation (ft or m)
-    · Floodplain elevation (ft or m)
-    · Difference (ft or m)
+    - Channel grid element
+    - Xcoord
+    - Ycoord
+    - Bank elevation (ft or m)
+    - Floodplain elevation (ft or m)
+    - Difference (ft or m)
 
 Channel bank elevation is different from the floodplain elevation by 1 ft or more.
 
@@ -851,11 +851,11 @@ This file is useful for finding channel cross sections that might be surging.
 If the timing if the maximum values do not correspond with the peak discharge, the channel element may be surging.
 The following columns are written:
 
-    · Node
-    · Max Q - Maximum discharge for channel element (cfs or cms)
-    · Time - Time of Qmax
-    · Max Stage - Maximum stage for channel element (ft or m)
-    · Time - Time of max stage
+    - Node
+    - Max Q - Maximum discharge for channel element (cfs or cms)
+    - Time - Time of Qmax
+    - Max Stage - Maximum stage for channel element (ft or m)
+    - Time - Time of max stage
 
 **CHANNEL.CHK**
 
@@ -871,7 +871,7 @@ If the channel cross section is R, T or V (non-natural cross sections) and the c
 elevations are not assigned in CHAN.DAT.
 This file lists the difference between the right and left channel bank elevations based on the floodplain elevations in two different bank elements.
 
-CHAN.RGH
+**CHAN.RGH**
 
 CHAN.RGH is a duplicate file of the CHAN.DAT file with the updated Manning’s n-value changes that were reported in the ROUGH.OUT file.
 The maximum and final Manning’s n-value changes are listed in the ROUGH.OUT file.
@@ -879,21 +879,20 @@ To accept the changes to Manning’s n-values, CHAN.
 RGH can be renamed to replace CHAN.DAT for the next FLO-2D flood simulation.
 This automates the spatial adjustment of n-values for channel elements that exceed the limiting Froude number.
 
-CHANNEL_CONVERGENCE.OUT
+**CHANNEL_CONVERGENCE.OUT**
 
 This file lists the channel elements that failed to converge in three passes of the routing algorithm.
 The solution is then based on the diffusive wave for that element and timestep only.
 The output files reports:
 
-    · Time - time of failed convergence
-    · Grid element
-    · Depth - depth at time of failed convergence (ft or m)
-    · Velocity - various velocity terms in the solution algorithm (fps or mps)
+    - Time - time of failed convergence
+    - Grid element
+    - Depth - depth at time of failed convergence (ft or m)
+    - Velocity - various velocity terms in the solution algorithm (fps or mps)
 
 **CHANSEDSIZE.OUT**
 
 The initial and final sediment size distribution by channel element is written to this file.
-
 
 
 **CHANSTABILTY.OUT**
@@ -907,28 +906,28 @@ When the channel volume conservation for a simulation is not satisfactory, revie
 
 This output file lists channel grid element, x-coordinate, y-coordinate and maximum channel water surface elevation.
 
-    · Grid
-    · Xcoord
-    · Ycoord
-    · Water surface elevation (ft or m)
+    - Grid
+    - Xcoord
+    - Ycoord
+    - Water surface elevation (ft or m)
 
 *CHMODFLOWELEV.OUT**
 
 Comparison between channel cross section cell elevation and MODFLOW grid elevation.
 
-    · Grid element
-    · Channel bed elevation (ft or m)
-    · Modflow column
-    · Modflow row
-    · Modflow bed elevation (ft or m)
-    · Elevation difference (ft or m)
+    - Grid element
+    - Channel bed elevation (ft or m)
+    - Modflow column
+    - Modflow row
+    - Modflow bed elevation (ft or m)
+    - Elevation difference (ft or m)
 
 **CHNBEDEL.OUT**
 
 The channel grid element number and the final channel bed elevation are presented in this file.
 
-    · Grid element
-    · Elevation - final bed elevation (ft or m)
+    - Grid element
+    - Elevation - final bed elevation (ft or m)
 
 **CHVOLUME.OUT**
 
@@ -936,19 +935,19 @@ The channel volume distribution is listed in this output file including channel 
 plain, infiltration, channel storage and storm drain return flow.
 Review this file along with the SUMMARY.OUT to determine if the channel flow volume is being conserved.
 
-    · Time
-    · Inflow and rain - (acre ft or cm)
-    · Channel storage -Time
-    · Inflow and rain - (acre ft or cm)
-    · Channel storage - (acre ft or cm)
-    · Channel outflow - (acre ft or cm)
-    · Overbank outflow - (acre ft or cm)
-    · Return inflow - (acre ft or cm)
-    · Infiltration - (acre ft or cm)
-    · Evaporation - (acre ft or cm)
-    · Outflow to storm drain - (acre ft or cm)
-    · Inflow from storm drain - (acre ft or cm)
-    · Volume conservation - (acre ft or cm)
+    - Time
+    - Inflow and rain - (acre ft or cm)
+    - Channel storage -Time
+    - Inflow and rain - (acre ft or cm)
+    - Channel storage - (acre ft or cm)
+    - Channel outflow - (acre ft or cm)
+    - Overbank outflow - (acre ft or cm)
+    - Return inflow - (acre ft or cm)
+    - Infiltration - (acre ft or cm)
+    - Evaporation - (acre ft or cm)
+    - Outflow to storm drain - (acre ft or cm)
+    - Inflow from storm drain - (acre ft or cm)
+    - Volume conservation - (acre ft or cm)
 
 **CONFLUENCE.OUT**
 
@@ -966,62 +965,62 @@ It also list the total volume in acre-ft for each cell.
 This file contains the grid element hydrographs for each of the floodplain elements in the cross section.
 The time and discharge are listed for each output interval.
 
-    · Time
-    · Discharge - hydrograph for grid element (cfs or cms)
+    - Time
+    - Discharge - hydrograph for grid element (cfs or cms)
 
 **CVFPMAX.OUT**
 
 This file contains the floodplain fluid maximum sediment concentration by volume.
 
-    · Grid element
-    · x-coord
-    · y-coord
-    · FP fluid max sediment concentration
-    · Time of FP fluid max concentration
+    - Grid element
+    - x-coord
+    - y-coord
+    - FP fluid max sediment concentration
+    - Time of FP fluid max concentration
 
 **CVFPMAX_MUD.OUT**
 
 This file contains the floodplain mudflow maximum sediment concentration by volume.
 
-    · Grid element
-    · x-coord
-    · y-coord
-    · FP mudflow max concentration
+    - Grid element
+    - x-coord
+    - y-coord
+    - FP mudflow max concentration
 
 **CVTFINAL_MUD.OUT**
 
 This file contains the floodplain final mudflow sediment concentration by volume.
 
-    · Grid element
-    · x-coord
-    · y-coord
-    · FP final mudflow concentration
+    - Grid element
+    - x-coord
+    - y-coord
+    - FP final mudflow concentration
 
 **CVTMAX.OUT**
 
 This file contains the channel fluid maximum sediment concentration by volume.
 
-    · Grid element
-    · x-coord
-    · y-coord
-    · Channel fluid max concentration
+    - Grid element
+    - x-coord
+    - y-coord
+    - Channel fluid max concentration
 
 **CVTMAX_MUD.OUT**
 
 This file contains the channel mudflow maximum sediment concentration by volume.
 
-    · Grid element
-    · x-coord
-    · y-coord
-    · channel mudflow max concentration
+    - Grid element
+    - x-coord
+    - y-coord
+    - channel mudflow max concentration
 
 **DAMBREACH_VOLUME.OUT**
 
 This file reports the cumulative dam breach volume in acre-ft or cubic meters by output interval.
 
-    · Time (hrs)
-    · Cumulative volume sediment (af or cm)
-    · Cumulative volume water (af or cm)
+    - Time (hrs)
+    - Cumulative volume sediment (af or cm)
+    - Cumulative volume water (af or cm)
 
 If MUD = 2 in CONT.DAT, these three lines are written at the end of the file.
 
@@ -1048,8 +1047,8 @@ variable in CONT.DAT and if so, it is listed in this file.
 A value of DEPRESS- DEPTH = 3.0 ft is suggested which will help identify artificial ponded flow conditions.
 This depth will ignore minor small depression elements which can fill and overview.
 
-    · Grid element
-    · Minimum elevation difference - lowest elevation difference between this element and its neighbors. (ft or m)
+    - Grid element
+    - Minimum elevation difference - lowest elevation difference between this element and its neighbors. (ft or m)
 
 Flow Depth Output Files
 --------------------------
@@ -1061,21 +1060,18 @@ The following output files are created:
 
     - CHNBEDEL.OUT - Channel bed elevations DEPCH.OUT - Maximum channel flow depths DEPCHFINAL.OUT - Final channel flow depths DEPFP.OUT - Maximum
       floodplain flow depths
-
     - DEPTH.OUT - Maximum combined channel/floodplain flow depths DEPTHMAX_2PHASE_COMBINED.OUT - Maximum flow depth of the combined two phase fluid and
       mudflows depth (added together).
-
     - DEPTHTOL.OUT - Maximum combined channel and floodplain flow depths greater than the TOL value.
       Values less than the TOL value are set to zero.
       This file has the following format: x- and y- coordinates, and maxi- mum flow depth.
       No grid element numbers are included.
+    - FINALDEP.OUT - Final floodplain flow depths:
 
-    - FINALDEP.OUT - Final floodplain flow depths.
-
-        · Grid or Channel Left Bank Element
-        · Xcoord
-        · Ycoord
-        · Variable
+        - Grid or Channel Left Bank Element
+        - Xcoord
+        - Ycoord
+        - Variable
 
 Flow Depth Output Files for TWO-PHASE modeling.
 -------------------------------------------------
@@ -1091,22 +1087,23 @@ Flow Depth Output Files for TWO-PHASE modeling.
 
 For each file, only the Grid element number, coordinates and variables are listed.
 
-    · Grid or Channel Left Bank Element
-    · Xcoord
-    · Ycoord
-    · Variable
+    - Grid or Channel Left Bank Element
+    - Xcoord
+    - Ycoord
+    - Variable
 
 - DEPTHDUR.OUT and DEPTHDUR2.OUT
 
 - DEPTHDUR.OUT contains the floodplain inundation duration data including the grid element number, grid element x- and y-coordinates and duration of
   inundation in hours.
+
 The selected depth of inundation for which the duration (hrs) is computed is listed at the top of the file.
 DEPTHDUR2.OUT is identical to DEPTHDUR.OUT except for a hardwired depth of 2 ft.
 
-    · Grid
-    · Xcoord
-    · Ycoord
-    · Time
+    - Grid
+    - Xcoord
+    - Ycoord
+    - Time
 
 - ERROR.CHK
 
@@ -1120,9 +1117,8 @@ This file is defined in more detail in the troubleshooting section chapter 7.
 The channel elements that experience a complete evacuation of the channel volume are listed in this output file.
 The channel elements in this file should be cross-correlated with those listed in TIME.OUT and VEL- TIMEC.OUT files.
 
-· Element
-
-· Number of evacuations
+    - Element
+    - Number of evacuations
 
 - EVACUATEDFP.OUT
 
@@ -1130,50 +1126,49 @@ The floodplain elements that experience a complete evacuation of the flood- plai
 The floodplain elements in this file should be cross-correlated with those preeminently listed in TIME.
 OUT and VELTIMEFP.OUT files.
 
-· Element
-
-· Number of evacuations
+    - Element
+    - Number of evacuations
 
 - FINALCVFP_MUD.OUT
 
 This file contains the final floodplain mudflow sediment concentration by volume.
 
-    · Grid
-    · Xcoord
-    · Ycoord
-    · Floodplain final mudflow max concentration.
+    - Grid
+    - Xcoord
+    - Ycoord
+    - Floodplain final mudflow max concentration.
 
 - FLO-2D MODFLOW CH RETURN EXCHANGE.OUT
 
 Exchanged volume and corrected water surface elevation calculated based on the MODFLOW volume returning to surface for CH cells.
 
-    · Time
-    · Grid element
-    · CH grid element
-    · CH depth (ft or m)
-    · Water exchange · · · CH CH grid element
-    · CH depth (ft or m)
-    · Water exchange volume (ft3 or m3)
-    · Grid area (ft2 or m2)
-    · Groundwater volume to surface (ft3 or m3)
-    · Column
-    · Row
-    · Ground water depth (ft or m)
-    · Added depth to CH bed elevation (ft or m)
+    - Time
+    - Grid element
+    - CH grid element
+    - CH depth (ft or m)
+    - Water exchange · · · CH CH grid element
+    - CH depth (ft or m)
+    - Water exchange volume (ft3 or m3)
+    - Grid area (ft2 or m2)
+    - Groundwater volume to surface (ft3 or m3)
+    - Column
+    - Row
+    - Ground water depth (ft or m)
+    - Added depth to CH bed elevation (ft or m)
 
 FLO-2D MODFLOW FP RETURN EXCHANGE.OUT
 
 Exchanged volume and corrected water surface elevation calculated based on the MODFLOW volume returning to surface for FP cells.
 
-    · Time
-    · Grid element
-    · Surface depth (ft or m)
-    · Corrected surface depth (ft or m)
-    · Grid area (ft2 or m2)
-    · Groundwater volume to surface (ft3 or m3)
-    · Column
-    · Row
-    · Ground water depth above surface depth (ft or m)
+    - Time
+    - Grid element
+    - Surface depth (ft or m)
+    - Corrected surface depth (ft or m)
+    - Grid area (ft2 or m2)
+    - Groundwater volume to surface (ft3 or m3)
+    - Column
+    - Row
+    - Ground water depth above surface depth (ft or m)
 
 FLOODPLAIN_CONVERGENCE.OUT
 
@@ -1181,16 +1176,22 @@ This file lists the floodplain elements that failed to converge in three passes 
 The solution is then based on the diffusive wave for that element and timestep only.
 The output files reports:
 
-    · Time - time of failed convergence
-    · Grid element
-    · Depth - depth at time of failed convergence (ft or m)
-    · Velocity - various velocity terms in the solution algorithm (fps or mps)
+    - Time - time of failed convergence
+    - Grid element
+    - Depth - depth at time of failed convergence (ft or m)
+    - Velocity - various velocity terms in the solution algorithm (fps or mps)
 
 FLOODWAVETIME.OUT
 
 This file has contains the following output:
 
-Node X-coord Y-coord Floodwave Arrival Time Flood Time Peak Time Deflood Time Max WS
+.. raw:: html
+
+    <pre>
+    Node    X-coord    Y-coord    Floodwave Arrival Time    Flood Time    Peak
+    Time    Deflood Time    Max WS
+    </pre>
+
 
 Each grid element is assigned a specific value of the above parameters at the end of the simulation.
 The maximum values are tracked during the simulation on a computational timestep basis.
