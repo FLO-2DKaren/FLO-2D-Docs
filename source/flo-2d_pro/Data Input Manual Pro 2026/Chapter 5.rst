@@ -1886,59 +1886,33 @@ Mass balance information for the various flow components is reported.
 
 Storm drain exchange volume is reported
 
-· Storm drain inflow
-
-· Total inflow
-
-· Total outflow
-
-· Storm drain return flow
-
-· Storm drain mass balance Storm drain volume data from swmm.rpt
-
-· Wet weather inflow
-
-· External inflow
-
-· External outflow
-
-· Return flow to surface
-
-· Total storm drain storage
-
-· Continuity error Totals are reported
-
-· Total outflow
-
-· Total volume and storage
-
-· Area of inundation data
-
-· Wetted floodplain area
-
-· Wetted channel area Project Specific Data
-
-· Grid element size
-
-· Total number of grid elements
-
-· Grid System area (acres or m^2 and mi^2 or km^2) Average hydraulics
-
-· Discharge (cfs or cms)
-
-· Velocity (fps or cms)
-
-· Flow area (ft^2 or m^2)
-
-· Flow depth (ft or m)
-
-· Flow width (ft or m) Computation data
-
-· Total Computations
-
-· Computer run time (hrs)
-
-· Termination date and time
+    - Storm drain inflow
+    - Total inflow
+    - Total outflow
+    - Storm drain return flow
+    - Storm drain mass balance Storm drain volume data from swmm.rpt
+    - Wet weather inflow
+    - External inflow
+    - External outflow
+    - Return flow to surface
+    - Total storm drain storage
+    - Continuity error Totals are reported
+    - Total outflow
+    - Total volume and storage
+    - Area of inundation data
+    - Wetted floodplain area
+    - Wetted channel area Project Specific Data
+    - Grid element siz
+    - Total number of grid elements
+    - Grid System area (acres or m^2 and mi^2 or km^2) Average hydraulics
+    - Discharge (cfs or cms)
+    - Velocity (fps or cms)
+    - Flow area (ft^2 or m^2)
+    - Flow depth (ft or m)
+    - Flow width (ft or m) Computation data
+    - Total Computations
+    - Computer run time (hrs)
+    - Termination date and time
 
 SUPER.OUT
 
@@ -1950,15 +1924,11 @@ By correlating this file with
 
 TIME.OUT, ROUGH.OUT, VELTIMEFP.OUT, the user can address the problematic elements with greater insight.
 
-· Grid element
-
-· Max Froude number
-
-· Depth (ft or m)
-
-· Time
-
-· Number of supercritical timesteps
+    - Grid element
+    - Max Froude number
+    - Depth (ft or m)
+    - Time
+    - Number of supercritical timesteps
 
 SURFAREA.OUT
 
@@ -1972,19 +1942,13 @@ time interval.
 This can be an informative data file for the user.
 The SURFAREA.OUT file enables a review of the surface area distribution between the various components.
 
-· Grid element
-
-· Arf-reduced area - total area minus the building
-
-· Channel area - bank elements covered by part of the channel
-
-· Street area - area covered by street component
-
-· Mult channel area - area covered by mult channel
-
-· Overland area - remaining area not covered by a component
-
-· Mult channels - switch tells the user this element has a mult channel.
+    - Grid element
+    - Arf-reduced area - total area minus the building
+    - Channel area - bank elements covered by part of the channel
+    - Street area - area covered by street component
+    - Mult channel area - area covered by mult channel
+    - Overland area - remaining area not covered by a component
+    - Mult channels - switch tells the user this element has a mult channel.
 
 SWMM.OUT
 
@@ -2022,15 +1986,11 @@ This file reports the storm drain manhole nodes that have enough pressure head t
 The pop off pressure head is an instantaneous head that removes the manhole cover.
 This pressure head can be different to the reported pressure head in the SWMM.RPT file.
 
-· Manhole ID
-
-· Popped time
-
-· Pressure head pop off must be greater than the following:
-
-· Rim and surcharge head
-
-· FLO-2D water surface elevation
+    - Manhole ID
+    - Popped time
+    - Pressure head pop off must be greater than the following:
+    - Rim and surcharge head
+    - FLO-2D water surface elevation
 
 TIMDEP.OUT
 
@@ -2041,17 +2001,12 @@ This file is also required for a time-lapse simulation in the MAXPLOT and FLO-2D
 Time - output interval for time series.
 Single value at the top of the columns.
 
-· Grid element
-
-· Depth (ft or m)
-
-· Velocity (sqrt(x^2+y^2)) (fps or mps)
-
-· Velocity x - velocity vector x
-
-· Velocity y - velocity vector y
-
-· Water surface elevation (ft or m)
+    - Grid element
+    - Depth (ft or m)
+    - Velocity (sqrt(x^2+y^2)) (fps or mps)
+    - Velocity x - velocity vector x
+    - Velocity y - velocity vector y
+    - Water surface elevation (ft or m)
 
 TIMDEPCELL.OUT
 
@@ -2073,21 +2028,14 @@ This file contains specific details for every grid element at each time series o
 The user specifies output time intervals with TIMTEP in CONT.DAT.
 This is an ASCII file.
 
-· Grid element
-
-· Depth (ft or m)
-
-· Qmax (cfs or cms)
-
-· Qmax direction - grid element direction 1 - 8
-
-· Vmax (fps or mps)
-
-· Vmax direction - grid element direction 1 - 8
-
-· Qnet - all flow in minus all flow out (cfs or cms)
-
-· Surface Exchange - switch 0 or 1 identifies if cell had any flow for the time interval
+    - Grid element
+    - Depth (ft or m)
+    - Qmax (cfs or cms)
+    - Qmax direction - grid element direction 1 - 8
+    - Vmax (fps or mps)
+    - Vmax direction - grid element direction 1 - 8
+    - Qnet - all flow in minus all flow out (cfs or cms)
+    - Surface Exchange - switch 0 or 1 identifies if cell had any flow for the time interval
 
 TIME.OUT
 
