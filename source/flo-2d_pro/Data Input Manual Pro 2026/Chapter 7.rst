@@ -499,9 +499,8 @@ Discharge surging
    Any unreasonable maximum velocities identified should be addressed.
 
    Other files that may indicate numerical surging include CHANMAX.
-   OUT, HYCHAN.OUT, CHANSTABILITY.OUT, TIME.OUT, and
+   OUT, HYCHAN.OUT, CHANSTABILITY.OUT, TIME.OUT, and ROUGH.OUT.
 
-   ROUGH.OUT.
    Hydrograph plots generated in the HYDROG program may show spikes that suggest surging.
    It is important to note that surging can occur even when overall volume conservation remains acceptable.
 
@@ -673,64 +672,63 @@ These files are generated as part of the preliminary data checks.
 These error checks do not include any simulation results.
 Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
-.. table:: Table 7. 4 ERROR CODE CATEGORIES
+**Table 7. 4 ERROR CODE CATEGORIES**
 
-   ..
-   list-table::
-      :widths: 50 50
-      :header-rows: 0
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
 
-      * - Error Code
-        - Error Category
+   * - Error Code
+     - Error Category
 
-      * - 100
-        - Switches, Control Variables, Version
+   * - 100
+     - Switches, Control Variables, Version
 
-      * - 200
-        - Boundary, Coordinate, Floodplain, Elevation
+   * - 200
+     - Boundary, Coordinate, Floodplain, Elevation
 
-      * - 300
-        - Stability Criteria
+   * - 300
+     - Stability Criteria
 
-      * - 400
-        - TOL
+   * - 400
+     - TOL
 
-      * - 500
-        - Roughness
+   * - 500
+     - Roughness
 
-      * - 600
-        - Rainfall
+   * - 600
+     - Rainfall
 
-      * - 700
-        - Infiltration
+   * - 700
+     - Infiltration
 
-      * - 800
-        - Inflow, Outflow
+   * - 800
+     - Inflow, Outflow
 
-      * - 1000
-        - Channel
+   * - 1000
+     - Channel
 
-      * - 2000
-        - Hydraulic Structures
+   * - 2000
+     - Hydraulic Structures
 
-      * - 3000
-        - Streets, ARF/WRF
+   * - 3000
+     - Streets, ARF/WRF
 
-      * - 4000
-        - Storm Drain
+   * - 4000
+     - Storm Drain
 
-      * - 5000
-        - Cross Sections
+   * - 5000
+     - Cross Sections
 
-      * - 6000
-        - Sediment, Mud
+   * - 6000
+     - Sediment, Mud
 
-      * - 7000
-        - Levees
+   * - 7000
+     - Levees
 
-      * - 8000
-        - Multiple Channels
+   * - 8000
+     - Multiple Channels
 
 
 .. table:: Table 7. 5 BASIC ERROR CODES
