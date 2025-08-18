@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 6: Post-Processor Programs
+Chapter 6: Post-Processor Programs
 ==================================
 
 There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
@@ -10,7 +10,7 @@ A channel model is also required to view the channel water surface profiles in P
 These programs can be initiated by clicking on their names in the File pull down menu in the FLO-2D Plugin or by copying the executable (\*.EXE) file
 into the project subdirectory and double clicking on the program name in a file browser.
 
-6.1 Hydrog
+Hydrog
 ----------
 
 Channel output hydrographs, floodplain cross section hydrographs, and hydraulic structure hydrographs can be viewed with the HYDROG program.
@@ -95,7 +95,7 @@ In addition to mapping FLO-2D results, MapCrafter can also help users design map
 
 |CHAPTE009|
 
-6.3 Mapper Pro
+Mapper Pro
 --------------
 
 MAPPER Pro is a post-processor program that creates high resolution maps and plots of the FLO-2D model results including area of inundation, time
@@ -115,7 +115,7 @@ Three types of plots can be generated:
 
 The MAPPER Pro manual describes the commands and tools and provides instruction.
 
-6.4 MaxPlot
+MaxPlot
 -----------
 
 The MAXPLOT program is a basic graphical tool to display the grid element maxi- mum depths and velocities.
@@ -141,7 +141,7 @@ The following plot displays the combined channel and floodplain maximum flow dep
 
 |CHAPTE012|
 
-6.5 Profiles
+Profiles
 ------------
 
 The PROFILES program serves the dual purpose of being a pre- and post-processor program for 1D channels.
