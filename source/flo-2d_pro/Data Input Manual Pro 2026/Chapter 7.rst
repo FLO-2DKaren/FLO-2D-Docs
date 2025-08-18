@@ -780,10 +780,11 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Total Simulation Time of the Model Exceeds the Hydrograph Duration
 
    * - 100
-     - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,Then Lgplot must be 0 or 1
+     - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File, Then Lgplot must be 0 or 1
 
    * - 200
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
+       This may require Technical Support.
 
 
 ddddddddddddddddddddddddddddddddddddd
@@ -791,6 +792,7 @@ ddddddddddddddddddddddddddddddddddddd
      - Review engine file dates and flopro.exe and vc2005con.dll.
        Make sure the file dates correspond to builds that are the same.
        This may require Technical Support.
+
 
    * -
      - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
