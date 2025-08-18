@@ -841,7 +841,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 200
      - Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
-      Stage Was Reset to the Bed Elevation
+       Stage Was Reset to the Bed Elevation
 
    * - 200
      - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
@@ -849,7 +849,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 300
      - A Channel/Street Courant Number is Required in TOLER.DAT
 
-   * - 300:
+   * - 300
      - If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
 
    * - 400
@@ -921,7 +921,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Export MANINGS_N.DAT again.
 
    * - \
-    - Check the SPATIALSHALLOWN.DAT file.
+     - Check the SPATIALSHALLOWN.DAT file.
 
    * - \
      - Check the CONT.DAT file.
@@ -990,8 +990,8 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 800
      - This Grid Cell Has an Inflow on a Multiple Ch Element
 
-   * -800
-     -  There are Two Inflow Conditions Imposed at the Same Cell
+   * - 800
+     - There are Two Inflow Conditions Imposed at the Same Cell
 
    * - 800
      - The Following Cell Has an Inflow Ch on a Channel Right Bank Element
@@ -1195,7 +1195,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        must be Set to 1
 
 
-.. table:: Table 7. 6 ADVANCED ERROR CODES
+.. table:: Table 7.6 ADVANCED ERROR CODES
 
 .. _`1000`:
 
