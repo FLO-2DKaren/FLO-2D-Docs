@@ -1013,32 +1013,32 @@ Check the SPATIALSHALLOWN.DAT file.
      - There are Two Outflow Conditions Imposed at the Same Cell
 
    * - \
-Check INFIL.DAT.
+     - Check INFIL.DAT.
 
    * - \
-Check INFIL.DAT.
+     - Check INFIL.DAT.
 
    * - \
-Check spatial abstraction variable in INFIL.DAT.
+     - Check spatial abstraction variable in INFIL.DAT.
 
    * - \
-The TOL variable and IA variable can be summed to account for the initial abstraction.
+     - The TOL variable and IA variable can be summed to account for the initial abstraction.
 
    * - \
-A cell is listed twice in INFLOW.DAT.
-Check the file and remove one of the hydrographs.
+     - A cell is listed twice in INFLOW.DAT.
+       Check the file and remove one of the hydrographs.
 
    * - \
-Reposition the inflow node.
+     - Reposition the inflow node.
 
    * - \
-Consider repositioning the inflow node.
+     - Consider repositioning the inflow node.
 
    * - \
-Reposition the inflow node or the hydraulic structure inlet node.
+     - Reposition the inflow node or the hydraulic structure inlet node.
 
    * - \
-Consider changing the inflow to channel inflow.
+     - Consider changing the inflow to channel inflow.
 
    * - \
 Consider moving the inflow node to the left bank and changing it to a channel node.
@@ -1097,98 +1097,65 @@ There are a Stage Time Relationship Imposed on an Outflow Cell
 800
 There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell
 
-.. _`800`:
-
-800:
-
+800
 There are Two Outflow Conditions Imposed at the Same Cell
 
-.. _`800`:
-
-800:
-
+800
 This Grid Cell Has an Outflow and a Full ARF
 
-.. _`800`:
-
-800:
-
+800
 This Grid Cell Has an Outflow and a Partial ARF
 
-.. _`800`:
-
-800:
-
+800
 The Following Cell Has an Outflow and a WRF:
 
-.. _`800`:
-
-800:
-
+800
 This Grid Cell Has a Stage Time Relationship and a Full ARF
 
-.. _`800`:
-
-800:
-
+800
 This Grid Cell Has a Stage Time Relationship and a Partial ARF
 
-.. _`800`:
-
-800:
-
+800
 The Following Cell Has an Outflow and a WRF:
 
-.. _`800`:
-
-800:
-
+800
 This Grid Cell Has an Outflow and a Full ARF
 
-.. _`800`:
-
-800:
-
+800
 This Grid Cell Has an Outflow and a Partial ARF
 
-.. _`800`:
-
-800:
-
+800
 The Following Cell Has an Outflow and a WRF:
 
-.. _`800`:
-
-800:
-
+800
 An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)
 
-.. _`800`:
-
-800:
-
-First Pair of the Floodplain Hydrograph Should Be 0.
-0.
+800
+First Pair of the Floodplain Hydrograph Should Be 0.0.
 to Interpolate the First Timestep
 
-.. _`800`:
-
-800:
-
+800
 No Inflow Discharge Specified For the Inflow Element
 
-
+   * - \
 It's OK for n FP outflow node to be on a left bank but not a right bank.
 
+   * - \
 Make sure the outflow node is on the correct side of the levee.
 
+   * - \
 Remove one of the duplicate stage time conditions from OUTFLOW.DAT.
 
+   * - \
 Remove the outflow from the right bank.
 
+   * - \
 Make sure the outflow node is on the correct side of the levee.
 
+   * - \
+     - \
 
+   * - \
 Delete one of the outflow nodes in OUTFLOW.DAT.
 
 Delete the outflow node or the ARF.
