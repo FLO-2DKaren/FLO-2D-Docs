@@ -202,35 +202,46 @@ Please note that PROFILES also has options for editing the channel bed slope and
 geometry for the cross-section option.
 Refer the section on Pre-Processor Programs for a discussion on these features.
 
-   WSURF.DAT File Descriptors
+.. raw:: html
 
-   2045 Line 1: # of channel elements with a surveyed ws elev.
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                WSURF.DAT File Descriptors</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           2045             Line 1: # of channel elements with a surveyed ws elev.
+           4 4152.22        Line 2: Grid Element WS elevation
+           8 4151.84        Line 2: Grid Element WS elevation
+           ...
 
-   4 4152.22 Line 2: Grid Element WS elevation
+        Notes:
 
-   8 4151.84 Line 2: Grid Element WS elevation
+           Line 2: This line is repeated for each channel element with a surveyed ws elevation.
+        </pre>
+    </div>
 
-   ...
+.. raw:: html
 
-Notes:
+    <br><br>
 
-   Line 2: This line is repeated for each channel element with a surveyed ws elevation.
+.. raw:: html
 
-WSURF.DAT File Example
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               WSURF.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        2045
+           4 4152.22
+           8 4151.84
+           12 4151.69
+           15 4151.55
+           19 4151.41
+           ....
+        </pre>
+    </div>
 
-2045
+.. raw:: html
 
-   4 4152.22
-
-   8 4151.84
-
-   12 4151.69
-
-   15 4151.55
-
-   19 4151.41
-
-   ....
+    <br><br>
 
 The surveyed water surface can also be compared directly with the FLO-2D computed water surface in the WSTIME.OUT (see file description in the output
 file section) by creating a WSTIME.DAT file.
