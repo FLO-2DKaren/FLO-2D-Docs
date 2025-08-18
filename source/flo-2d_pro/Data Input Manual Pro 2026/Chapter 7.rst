@@ -791,51 +791,50 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        Make sure the file dates correspond to builds that are the same.
        This may require Technical Support.
 
-ddddddddddddddddddddddddddddddddddddd
-   * -
+   * - \
      - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
        The positions are 0, 1 or 2.
 
-   * -
+   * - \
      - The variable Graphtim is missing in CONT.DAT.
 
-   * -
+   * - \
      - The sediment concentration cannot be greater than 1.
 
-   * -
+   * - \
      - The Xarf variable must be a value between 0 and 1.
 
-   * -
+   * - \
      - The Froudl variable should not be greater than 1.
 
-   * -
+   * - \
      - NOPRTFP is a switch.
        The positions are 0, 1 or 2.
 
-   * -
+   * - \
      - Set either MUD or ISED to 0.
 
-   * -
+   * - \
      - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
        Check the location of the cell.
        Correct it by realigning the grid to the computational domain.
 
-   * -
+   * - \
      - Set ideplt to an inflow grid element number in inflow.dat.
 
-   * -
+   * - \
      - For text mode, set lgplot = 0 and ideplt = 0.
 
-   * -
+   * - \
      - Make sure Ideplt is a grid element listed in inflow.dat.
 
-   * -
+   * - \
      - If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
 
-   * -
+   * - \
      - Turn on the Lgplot and Graphtim to use Display Mode.
 
-   * -
+   * - \
      - Check the coordinates in topo.dat.
 
    * - 200
@@ -895,259 +894,207 @@ ddddddddddddddddddddddddddddddddddddd
    * - 700:
      - Variable Poros is Greater Than 1
 
-   * -
+   * - \
      - Reposition the structure node onto a left bank node.
 
-   * -
+   * - \
      - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
 
-   * -
+   * - \
      - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain =1 in CONT.DAT and Assign the RAIN.DAT File
 
-   * -
+   * - \
      - Set the correct Courant number.
 
-   * -
+   * - \
      - Check the STREET.DAT file.
 
-   * -
+   * - \
      - Check the TOL value. It must be in a correct range.
 
-   * -
+   * - \
      - Check the TOL variable and the Initial Abstraction variable. The initial abstraction may be too high. See INFIL.DAT.
 
-   * -
+   * - \
      - The MANNINGS_N.DAT file might not be complete.
 
-Export MANINGS_N.DAT again.
+   * - \
+     - Export MANINGS_N.DAT again.
 
+   * - \
 Check the SPATIALSHALLOWN.DAT file.
 
-Check the CONT.DAT file.
+   * - \
+     - Check the CONT.DAT file.
 
-Spatially variable data is missing.
-Check RAIN.DAT.
+   * - \
+     - Spatially variable data is missing.
+       Check RAIN.DAT.
 
-Check RAIN.DAT.
+   * - \
+     - Check RAIN.DAT.
 
-Correct the first data pair of the rainfall distribution curve.
-Set the first data pair to 0.0 0.0.
+   * - \
+     - Correct the first data pair of the rainfall distribution curve.
+       Set the first data pair to 0.0 0.0.
 
-Check RAINCELL.DAT.
+   * - \
+     - Check RAINCELL.DAT.
 
+   * - \
+     - Check INFIL.DAT.
+
+   * - \
+     - Check RAIN.DAT.
+
+   * - \
+     - Check INFIL.DAT.
+
+   * - 700
+     - Variable Sati or Satf is Greater Than 1
+
+   * - 700
+     - Variable Rtimpf Exceeds 1.0.
+       Do Not Enter As a Percent Use a Fraction
+
+   * - 700
+     - Abstraction Exceeds the Total Rainfall (Impossible) For at Least One Grid Element and May Result in Volume Conservation Error
+
+   * - 700
+     - Initial Abstraction > Tol (Depression Storage).
+       Consider (Not Required) Lowering the Tol Value or Adjusting the Ia Value
+
+   * - 800
+     - There are Two Inflow Conditions Imposed at the Same Cell
+
+   * - 800
+     - This Grid Cell Has an Inflow and a Full ARF
+
+   * - 800
+     - This Grid Cell Has an Inflow and a Partial ARF
+
+   * - 800
+     - The Following Cell Has an Inflow and a Hs
+
+   * - 800
+     - The Following Cell Has an Inflow Fp on a Channel Left Bank Element
+
+   * - 800
+     - The Following Cell Has an Inflow Fp on a Channel Right Bank Element
+
+   * - 800
+     - There are an Inflow Conditions Imposed on a Levee Element
+
+   * - 800
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
+
+   * - 800
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
+
+   * -800
+     -  There are Two Inflow Conditions Imposed at the Same Cell
+
+   * - 800
+     - The Following Cell Has an Inflow Ch on a Channel Right Bank Element
+
+   * - 800
+     - There are an Inflow Conditions Imposed on a Levee Element
+
+   * - 800
+     - There are Two Outflow Conditions Imposed at the Same Cell
+
+   * - 800
+     - The Following Cell Has a Channel Outflow on a Channel Right Bank Element
+
+   * - 800
+     - There are an Outflow Conditions Imposed on a Levee Element
+
+   * - 800
+     - There are Two Outflow Conditions Imposed at the Same Cell
+
+   * - \
 Check INFIL.DAT.
 
-Check RAIN.DAT.
-
+   * - \
 Check INFIL.DAT.
 
-.. _`700`:
-
-700:
-
-Variable Sati or Satf is Greater Than 1
-
-.. _`700`:
-
-700:
-
-Variable Rtimpf Exceeds 1.0.
-Do Not Enter As a Percent Use a Fraction
-
-.. _`700`:
-
-700:
-
-Abstraction Exceeds the Total Rainfall (Impossible) For at Least One Grid Element and May Result in Volume Conservation Error
-
-.. _`700`:
-
-700:
-
-Initial Abstraction > Tol (Depression Storage).
-Consider (Not Required) Lowering the Tol Value or Adjusting the Ia Value
-
-.. _`800`:
-
-800:
-
-There are Two Inflow Conditions Imposed at the Same Cell
-
-.. _`800`:
-
-800:
-
-This Grid Cell Has an Inflow and a Full ARF
-
-.. _`800`:
-
-800:
-
-This Grid Cell Has an Inflow and a Partial ARF
-
-.. _`800`:
-
-800:
-
-The Following Cell Has an Inflow and a Hs
-
-.. _`800`:
-
-800:
-
-The Following Cell Has an Inflow Fp on a Channel Left Bank Element
-
-.. _`800`:
-
-800:
-
-The Following Cell Has an Inflow Fp on a Channel Right Bank Element
-
-.. _`800`:
-
-800:
-
-There are an Inflow Conditions Imposed on a Levee Element
-
-.. _`800`:
-
-800:
-
-This Grid Cell Has an Inflow on a Multiple Ch Element
-
-.. _`800`:
-
-800:
-
-This Grid Cell Has an Inflow on a Multiple Ch Element
-
-.. _`800`:
-
-800:
-
-There are Two Inflow Conditions Imposed at the Same Cell
-
-.. _`800`:
-
-800:
-
-The Following Cell Has an Inflow Ch on a Channel Right Bank Element
-
-.. _`800`:
-
-800:
-
-There are an Inflow Conditions Imposed on a Levee Element
-
-.. _`800`:
-
-800:
-
-There are Two Outflow Conditions Imposed at the Same Cell
-
-.. _`800`:
-
-800:
-
-The Following Cell Has a Channel Outflow on a Channel Right Bank Element
-
-.. _`800`:
-
-800:
-
-There are an Outflow Conditions Imposed on a Levee Element
-
-.. _`800`:
-
-800:
-
-There are Two Outflow Conditions Imposed at the Same Cell
-
-
-Check INFIL.DAT.
-
-Check INFIL.DAT.
-
+   * - \
 Check spatial abstraction variable in INFIL.DAT.
 
+   * - \
 The TOL variable and IA variable can be summed to account for the initial abstraction.
 
+   * - \
 A cell is listed twice in INFLOW.DAT.
 Check the file and remove one of the hydrographs.
 
+   * - \
 Reposition the inflow node.
 
+   * - \
 Consider repositioning the inflow node.
 
+   * - \
 Reposition the inflow node or the hydraulic structure inlet node.
 
+   * - \
 Consider changing the inflow to channel inflow.
 
+   * - \
 Consider moving the inflow node to the left bank and changing it to a channel node.
 
+   * - \
 Check the levee Inflow condition.
 Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
 
+   * - \
 Reposition the inflow node.
 
+   * - \
 Reposition the inflow node.
 
+   * - \
 A cell is listed twice in INFLOW.DAT.
 Check the file and remove one of the hydrographs.
 
+   * - \
 Move the inflow node to the left bank.
 
+   * - \
 Check the levee Inflow condition.
 Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
 
+   * - \
 Remove the extra line in OUTFLOW.DAT.
 
+   * - \
 Move the outflow node left bank.
 
+   * - \
 Make sure the outflow node is on the correct side of the levee.
 
+   * - \
 Move the outflow node left bank.
 
-.. _`800`:
-
-800:
-
+800
 The Following Cell Has an Outflow (Fp) on a Channel Left Bank or Right Bank Element:
 
-.. _`800`:
-
-800:
-
+800
 There is an Outflow Conditions Imposed on a Levee Element
 
-.. _`800`:
-
-800:
-
+800
 There are Two Stage Time Relationships Imposed at the Same Cell
 
-.. _`800`:
-
-800:
-
+800
 The Following Cell Has Stage Time Relationship on a Channel Right Bank Element:
 
-.. _`800`:
-
-800:
-
+800
 There are a Stage Time Outflow Condition Imposed on a Levee Element
 
-.. _`800`:
-
-800:
-
+800
 There are a Stage Time Relationship Imposed on an Outflow Cell
 
-.. _`800`:
-
-800:
-
+800
 There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell
 
 .. _`800`:
