@@ -66,7 +66,8 @@ below:
 
 Click on ‘Plot Channel Hydrographs’ a dialog box appears to select either a channel segment or element:
 
-|CHAPTE002|
+
+.. image:: .. /img/Data_Input_Manual_PRO_2026/Chapter6/CHAPTE002.png
 
 After selecting the channel element and clicking ‘OK’, the hydrograph is plotted as shown in the following figure.
 Use the dialog box in the upper right portion of the screen to select another channel element or to return to the channel element list or main menu.
