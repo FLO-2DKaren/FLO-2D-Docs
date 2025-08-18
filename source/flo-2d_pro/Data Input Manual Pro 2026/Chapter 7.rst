@@ -1432,868 +1432,689 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Hydraulic Structure must have a Culvert Area Coefficient and Exponent For Routing in a Long Culvert.
 
    * - 2000
-Make Sure that the "Atable" Variable on Line 4 of the HYSTRUC.DAT File is Included
+     - Make Sure that the "Atable" Variable on Line 4 of the HYSTRUC.DAT File is Included
 
-2000
-First Data Pair of a Hydraulic Structure Rating Table Should Be 0.0.
-to Interpolate the Next Data Pair
+   * - 2000
+     - First Data Pair of a Hydraulic Structure Rating Table Should Be 0.0.
+       to Interpolate the Next Data Pair
 
-2000
-Hydraulic Structure Rating Curve Stage Must Increase With Increasing Discharge
+   * - 2000
+     - Hydraulic Structure Rating Curve Stage Must Increase With Increasing Discharge
 
-2000
-Rate of Change in the Following Hydraulic Structure Rating Tables May Be Unreasonable - Rate of Change = 10 Times Previous Stage
-Rate of Change
+   * - 2000
+     - Rate of Change in the Following Hydraulic Structure Rating Tables May Be Unreasonable - Rate of Change = 10 Times Previous Stage
+       Rate of Change
 
-2000
-If the Generalized Culvert Equations are Being Used.
-The Inoutcont Tailwater Control is Not Necessary.
-Set Inoutcont = 0
+   * - 2000
+     - If the Generalized Culvert Equations are Being Used.
+       The Inoutcont Tailwater Control is Not Necessary.
+       Set Inoutcont = 0
 
-2000
-Culvert Length Must Assign in the S-Line of the HYSTRUC.DAT If the Generalized Culvert Equations are Being Used
+   * - 2000
+     - Culvert Length Must Assign in the S-Line of the HYSTRUC.DAT If the Generalized Culvert Equations are Being Used
 
-2000
-Hydraulic Structure Inflow Node is Repeated More Than Once
+   * - 2000
+     - Hydraulic Structure Inflow Node is Repeated More Than Once
 
-Review invert elevations.
-Apply elevation corrections if necessary.
-Validate structure direction.
+   * - \
+     - Review invert elevations.
+       Apply elevation corrections if necessary.
+       Validate structure direction.
 
-Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
+   * - \
+     - Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
 
-Move inlet node to the channel bank or change it to a floodplain structure.
+   * - \
+     - Move inlet node to the channel bank or change it to a floodplain structure.
 
-Shorten the Name to Less Than 30 Characters
+   * - \
+     - Shorten the Name to Less Than 30 Characters
 
-(Ifporchan > 0 line S in HYSTRUC.DAT) and there is no channel component (Ichannel = 0 in CONT.DAT).
-Turn on channel switch.
+   * - \
+     - (Ifporchan > 0 line S in HYSTRUC.DAT) and there is no channel component (Ichannel = 0 in CONT.DAT).
+       Turn on channel switch.
 
-Review HYSTRUC.DAT and set the switch to the correct position to match the as- signed data.
+   * - \
+     - Review HYSTRUC.DAT and set the switch to the correct position to match the as- signed data.
 
-The clength and cdiameter was assigned, assign the culvert area coefficient and exponent so FLO-2D can simulate the culvert volume and travel time.
+   * - \
+     - The clength and cdiameter was assigned, assign the culvert area coefficient and exponent so FLO-2D can simulate the culvert volume and travel time.
 
-This table is required if clength and cdiameter are used in a Rating Table structure.
+   * - \
+     - This table is required if clength and cdiameter are used in a Rating Table structure.
 
-Reset first row of table data to 0.00 0.00.
+   * - \
+     - Reset first row of table data to 0.00 0.00.
 
-The rating curve data has an error.
-Check the data so the discharge increases with increasing stage.
+   * - \
+     - The rating curve data has an error.
+       Check the data so the discharge increases with increasing stage.
 
-Check the rating table.
-It may require more data pairs or it may be incorrect.
+   * - \
+     - Check the rating table.
+       It may require more data pairs or it may be incorrect.
 
-Set inoutcont to 0.
+   * - \
+     - Set inoutcont to 0.
 
-Assign culvert length and depth in the S line.
+   * - \
+     - Assign culvert length and depth in the S line.
 
-Review HYSTRUC.DAT.
-Make sure each inflow node is only listed once.
-If two nodes are near each other, separate them by a grid element.
+   * - \
+     - Review HYSTRUC.DAT.
+       Make sure each inflow node is only listed once.
+       If two nodes are near each other, separate them by a grid element.
 
-.. _`2000`:
+   * - 2000
+     - Hydraulic Structure Outflow Node is Repeated More Than Once Without Assigning a D-Line Conveyance Capacity Limitation.
 
-2000:
+   * - 2000
+     - Hydraulic Structure Has a Reference Elevation that is Lower Than the In- flow Node Bed Elevation
 
-Hydraulic Structure Outflow Node is Repeated More Than Once Without Assigning a D-Line Conveyance Capacity Limitation.
+   * - 2000
+     - Hydraulic Structure Channel Outflow must be a Channel Element
 
-.. _`2000`:
+   * - 2000
+     - Hydraulic Structure Has a Reference Elevation that is Lower Than the In- flow Node Bed Elevation
 
-2000:
+   * - 2000
+     - Hydraulic Structure Channel Inflow Element must be a Channel Element
 
-Hydraulic Structure Has a Reference Elevation that is Lower Than the In- flow Node Bed Elevation
+   * - 2000
+     - Hydraulic Structure Inflow Element Cannot Be a Grid System Outflow Element
 
-.. _`2000`:
+   * - 2000
+     - Hydraulic Structure Outflow Element Cannot Be a Grid System Outflow Element
 
-2000:
+   * - 3000
+     - The Following Cell Has a Full ARF on a Channel Left or Right Bank Element
 
-Hydraulic Structure Channel Outflow must be a Channel Element
+   * - 3000
+     - The Following Cell Has a Partial ARF on a Channel Left or Right Bank Element
 
-.. _`2000`:
+   * - 3000
+     - Street on an Outfall Element
 
-2000:
+   * - 3000
+     - Full ARF on a 1D Street
 
-Hydraulic Structure Has a Reference Elevation that is Lower Than the In- flow Node Bed Elevation
+   * - 3000
+     - Partial ARF on a 1D Street
 
-.. _`2000`:
+   * - 3000
+     - Hs Inlet on a 1D Street
 
-2000:
+   * - 3000
+     - Hs Outlet on a 1D Street
 
-Hydraulic Structure Channel Inflow Element must be a Channel Element
+   * - 3000
+     - Multiple Channel on a 1D Street
 
-.. _`2000`:
+   * - 3000
+     - Gutter on a 1D Street
 
-2000:
+   * - 3000
+     - Variable Strman is Less Than 0 or Greater Than 1
 
-Hydraulic Structure Inflow Element Cannot Be a Grid System Outflow Element
+   * - 3000
+     - Variable Istrflo is a Switch, Use Only 0 or 1
 
-.. _`2000`:
+   * - 3000
+     - Variable Depx must be Greater Than 0
 
-2000:
+   * - \
+     - Review HYSTRUC.DAT.
+       Make sure each outflow node is only listed once.
+       If two nodes are near each other, separate them by a grid element.
 
-Hydraulic Structure Outflow Element Cannot Be a Grid System Outflow Element
+   * - \
+     - Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
 
-.. _`3000`:
+   * - \
+     - Check the position of the outlet element or make sure the channel switch is on in CONT.DAT.
 
-3000:
+   * - \
+     - Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
 
-The Following Cell Has a Full ARF on a Channel Left or Right Bank Element
+   * - \
+     - Check the position of the outlet element or make sure the channel switch is on in CONT.DAT.
 
-.. _`3000`:
+   * - \
+     - Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
 
-3000:
+   * - \
+     - Move the outlet element to a node that is adjacent to the outflow node.
 
-The Following Cell Has a Partial ARF on a Channel Left or Right Bank Element
+   * - \
+     - Realign the channel or eliminate the ARF.
 
-.. _`3000`:
+   * - \
+     - Delete the ARF.
 
-3000:
+   * - \
+     - I don't know how to fix this.
 
-Street on an Outfall Element
+   * - \
+     - Realign street or delete ARF.
 
-.. _`3000`:
+   * - \
+     - Delete ARF.
 
-3000:
+   * - \
+     - Move hydraulic structure or realign street.
 
-Full ARF on a 1D Street
+   * - \
+     - Move hydraulic structure or realign street.
 
-.. _`3000`:
+   * - \
+     - Reposition multiple channel nodes or realign street.
 
-3000:
+   * - \
+     - Delete gutter or delete street.
 
-Partial ARF on a 1D Street
+   * - \
+     - Assign street Manning’s N correctly.
 
-.. _`3000`:
+   * - \
+     - Apply variable correctly.
 
-3000:
+   * - \
+     - Assign street depth.
 
-Hs Inlet on a 1D Street
+   * - 3000
+     - Variable Widst must be Greater Than 0
 
-.. _`3000`:
+   * - 3000
+     - Variable Igridn must be Greater Than 0
 
-3000:
+   * - 3000
+     - Grid Elements are Defined More Than Once (Street.Dat) For a Street Inter- section Within a Grid Element
 
-Hs Outlet on a 1D Street
+   * - 3000
+     - Street Elements (Street.Dat) are Missing Line "W" in the Street.Dat File
 
-.. _`3000`:
+   * - 3000
+     - Variable Istdir must be Greater Than 0 and Less Than or Equal to 8
 
-3000:
+   * - 3000
+     - Variable Widr must be Greater Than 0
 
-Multiple Channel on a 1D Street
+   * - 3000
+     - Grid Element ARF Values Were Adjusted
 
-.. _`3000`:
+   * - 3000
+     - Impervious Area Represented By the Rtimp Percentage is Less Than the ARF Value For at Least One Grid Element
 
-3000:
+   * - 3000
+     - A Channel Element Has One or More Street Segments.
+       Remove the Street Segments from this Element
 
-Gutter on a 1D Street
+   * - 4000
+     - Inlet on a Full ARF Element
 
-.. _`3000`:
+   * - 4000
+     - Inlet on a Partial ARF Element
 
-3000:
+   * - 4000
+     - Outfall on a Full ARF Element
 
-Variable Strman is Less Than 0 or Greater Than 1
+   * - 4000
+     - Outfall on a Partial ARF Element
 
-.. _`3000`:
+   * - 4000
+     - Outfall on a Levee Element
 
-3000:
+   * - 4000
+     - Inlet on a Levee Element
 
-Variable Istrflo is a Switch, Use Only 0 or 1
+   * - 4000
+     - Duplicate Inlet on SWMMFLO.DAT
 
-.. _`3000`:
+   * - 4000
+     - Inlet on an Outfall
 
-3000:
+   * - 4000
+     - Outfall on an Outfall
 
-Variable Depx must be Greater Than 0
+   * - 4000
+     - Channel Rb on a Inlet Element
 
-Review HYSTRUC.DAT.
-Make sure each outflow node is only listed once.
-If two nodes are near each other, separate them by a grid element.
+   * - \
+     - Assign street width.
 
-Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
+   * - \
+     - Assign correct Manning’s n value.
 
-Check the position of the outlet element or make sure the channel switch is on in CONT.DAT.
+   * - \
+     - Delete one of the misassigned street elements.
 
-Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
+   * - \
+     - W lines are necessary to define the street direction in the cell.
+       Assign them as shown in Lesson 11.
 
-Check the position of the outlet element or make sure the channel switch is on in CONT.DAT.
+   * - \
+     - Add correct street direction.
 
-Correct invert elevation or correct head reference elevation or set head reference elevation to zero.
+   * - \
+     - Correct street width.
 
-Move the outlet element to a node that is adjacent to the outflow node.
+   * - \
+     - See ARF.DAT for automatic correction list.
+       ARFs were reassigned 1.0 to Eliminate the Potential For Instability Related to Small Surface Area.
+       These are Reported to the ARF_Adjustment.Chk File
 
-Realign the channel or eliminate the ARF.
+   * - \
+     - Impervious area should represent the building blockage and any other potential impervious area.
+       It should be at least the same as the ARF value.
 
-Delete the ARF.
+   * - \
+     - Realign the street or channel.
+       Review aerial images to assign channel or street alignment.
 
-I don't know how to fix this.
+   * - \
+     - Move Inlet.
 
-Realign street or delete ARF.
+   * - \
+     - Move Inlet.
 
-Delete ARF.
+   * - \
+     - Move Outfall or delete ARF.
 
-Move hydraulic structure or realign street.
+   * - \
+     - Move Outfall or delete ARF.
 
-Move hydraulic structure or realign street.
+   * - \
+     - Review outfall position.
+       Make sure it is on the correct side of the levee.
+       Review elevation.
 
-Reposition multiple channel nodes or realign street.
+   * - \
+     - Make sure the inlet is on the correct side of the levee.
+       Check the elevation of the cell so that it matches he rim elevation of the inlet or the invert elevation of the type 4.
 
-Delete gutter or delete street.
+   * - \
+     - Delete the repeated inlet.
 
-Assign street Manning’s N correctly.
+   * - \
+     - Reposition the inlet or the outfall.
 
-Apply variable correctly.
+   * - \
+     - Reposition one of the outfall nodes.
 
-Assign street depth.
+   * - \
+     - Move the inlet to the left bank.
 
-.. _`3000`:
+   * - 4000
+     - Channel Rb on an Outfall Element
 
-3000:
+   * - 4000
+     - Multiple Channel on a Inlet Element
 
-Variable Widst must be Greater Than 0
+   * - 4000
+     - Multiple Channel on an Outfall Element
 
-.. _`3000`:
+   * - 4000
+     - There is a Levee and a Storm Drain Inlet Assigned to Grid Cell
 
-3000:
+   * - 4000
+     - There is a Storm Drain Inlet Assigned to Completely Blocked Grid Cell
 
-Variable Igridn must be Greater Than 0
+   * - 4000
+     - There is a Storm Drain Outfall Assigned to Completely Blocked Grid Cell
 
-.. _`3000`:
+   * - 4000
+     - There is a Hydraulic Structure and a Storm Drain Inlet Assigned to Grid Cell
 
-3000:
+   * - 4000
+     - Storm Drain Inlet Has Invert Elevation Errors.
+       Please Check Invert Elevation and Rim Elevation For Node
 
-Grid Elements are Defined More Than Once (Street.Dat) For a Street Inter- section Within a Grid Element
+   * - 4000
+     - Curb Opening Height must be Greater Than Zero.
+       Please Revise SWMMF- LO.DAT File
 
-.. _`3000`:
+   * - 4000
+     - Length must be Greater Than Zero
 
-3000:
+   * - 4000
+     - Height must be Greater Than Zero
 
-Street Elements (Street.Dat) are Missing Line "W" in the Street.Dat File
+   * - 4000
+     - Typical Weir Drain Coefficient: Range 2.8 to 3.2
 
-.. _`3000`:
+   * - 4000
+     - Width or Height must be Greater Than Zero
 
-3000:
+   * - 4000
+     - Typical Weir Drain Coefficient: 2.3
 
-Variable Istdir must be Greater Than 0 and Less Than or Equal to 8
+   * - 4000
+     - Perimeter must be Greater Than Zero
 
-.. _`3000`:
+   * - 4000
+     - Area must be Greater Than Zero
 
-3000:
+   * - 4000
+     - Surcharge Depth must be Greater Than Zero
 
-Variable Widr must be Greater Than 0
+   * - 4000
+     - There is a Conflict Between Inlets in the SWMMFLO.DAT File and Sub- catchments in the SWMM.INP, Features in Both
+       Lists Need to Be in the Same Order
 
-.. _`3000`:
+   * - 4000
+     - Inlets in the SWMMFLO.DAT File must be Identical to the Listed Inlets Junction Table of SWMM.INP File
 
-3000:
+   * - 4000
+     - Multiple Inlets Assigned to One Grid Cell
 
-Grid Element ARF Values Were Adjusted
+   * - \
+     - Move the outfall to the left bank.
 
-.. _`3000`:
+   * - \
+     - Reposition the inlet or the multiple channel.
 
-3000:
+   * - \
+     - Reposition the outfall or the multiple channel.
 
-Impervious Area Represented By the Rtimp Percentage is Less Than the ARF Value For at Least One Grid Element
+   * - \
+     - Make sure the inlet is on the correct side of the levee.
+       Check the elevation of the cell so that it matches he rim elevation of the inlet or the invert elevation of the type 4.
 
-.. _`3000`:
+   * - \
+     - Move the inlet or delete the ARF.
 
-3000:
+   * - \
+     - Move the outfall or delete the ARF.
 
-A Channel Element Has One or More Street Segments.
-Remove the Street Segments from this Element
+   * - \
+     - Reposition the hydraulic structure or the inlet.
 
-.. _`4000`:
+   * - \
+     - Do you mean Max Depth?
 
-4000:
+    * - \
+     - Review SWMMFLOW.DAT.
 
-Inlet on a Full ARF Element
+   * - \
+     - Review SWMMFLOW.DAT.
 
-.. _`4000`:
+   * - \
+     - Review SWMMFLOW.DAT.
 
-4000:
+   * - \
+     - Review SWMMFLOW.DAT.
 
-Inlet on a Partial ARF Element
+   * - \
+     - Review SWMMFLOW.DAT.
 
-.. _`4000`:
+   * - \
+     - Review SWMMFLOW.DAT.
 
-4000:
+   * - \
+     - Review SWMMFLOW.DAT.
 
-Outfall on a Full ARF Element
+   * - \
+     - Review SWMMFLOW.DAT.
 
-.. _`4000`:
+   * - \
+     - Review SWMMFLOW.DAT.
 
-4000:
+   * - \
+     - Check the order of the inlets and the subcatchments.
 
-Outfall on a Partial ARF Element
+   * - \
+     - Check the order of the inlets in SWMMFLOW.DAT and SWMM.INP.
 
-.. _`4000`:
+   * - \
+     - Reposition the inlet or delete it if it is a repeated line.
 
-4000:
+   * - 4000
+     - There is a Type 4 Inlet (Review SWMMFLO.DAT File) that is Missing the Rating Table in the SWMMFLORT.DAT File
 
-Outfall on a Levee Element
+   * - 4000
+     - There is an Inflow Node and a Storm Drain Inlet Assigned to Grid Cell
 
-.. _`4000`:
+   * - 4000
+     - There is an Inflow Node and a Storm Drain Outfall Assigned to Grid Cell
 
-4000:
+   * - 4000
+     - There is an Outflow Node and a Storm Drain Inlet Assigned to Grid Cell
 
-Inlet on a Levee Element
+   * - 4000
+     - There is an Outflow Node and a Storm Drain Outfall Assigned to Grid Cell
 
-.. _`4000`:
+   * - 4000
+     - Storm Drain Outfall Nodes are in Channel Interior Elements, Re-Assign to the Channel Elements in CHAN.DAT
 
-4000:
+   * - 5000
+     - Cross Section Element Can Only Be Assigned Once in the FPXSEC.DAT File.
 
-Duplicate Inlet on SWMMFLO.DAT
+   * - 6000
+     - Variable Xconc Should Not Be Assigned If Mudflow With a Sediment Con- centration is Assigned to the Inflow Hydrograph
 
-.. _`4000`:
+   * - 6000
+     - No Sediment Data in the SED.DAT File
 
-4000:
+   * - 6000
+     - Error in Line 1 (M-Line) of the SED.DAT File
 
-Inlet on an Outfall
+   * - 6000
+     - Dry Weight of Sediment is Zero in the SED.DAT File and Thus the Porosity is Also Zero
 
-.. _`4000`:
+   * - 6000
+     - Sediment Size Exceeds the Recommended Value For the Application of the Yang Equation
 
-4000:
+   * - 6000
+     - Error in Line 2 (S-Line) of the SED.DAT File
 
-Outfall on an Outfall
+   * - 6000
+     - Error in Z-Line of the SED.DAT File
 
-.. _`4000`:
+   * - 6000
+     - Error in P-Line of the SED.DAT File
 
-4000:
+   * - 6000
+     - Error in D-Line of the SED.DAT File
 
-Channel Rb on a Inlet Element
+   * - 6000
+     - Scourdep Variable in SED.DAT Line E Should Be Positive (>0.)
 
-Assign street width.
+   * - 6000
+     - Error in E-Line of the SED.DAT File
 
-Assign correct Manning’s n value.
+   * - 6000
+     - Error in R-Line of the SED.DAT File
 
-Delete one of the misassigned street elements.
+   * - 6000
+     - Error in S-Line of the SED.DAT File
 
-W lines are necessary to define the street direction in the cell.
-Assign them as shown in Lesson 11.
+   * - 6000
+     - Error in N-Line of the SED.DAT File
 
-Add correct street direction.
+   * - \
+     - Add the table to SWMMFLOWRT.DAT.
 
-Correct street width.
+   * - \
+     - Reposition the inflow node or the inlet.
 
-See ARF.DAT for automatic correction list.
-ARFs were reassigned 1.0 to Eliminate the Potential For Instability Related to Small Surface Area.
-These are Reported to the ARF_Adjustment.Chk File
+   * - \
+     - Reposition the inflow node or the outfall.
 
-Impervious area should represent the building blockage and any other potential impervious area.
-It should be at least the same as the ARF value.
+   * - \
+     - Reposition the inlet.
 
-Realign the street or channel.
-Review aerial images to assign channel or street alignment.
+   * - \
+     - Reposition the outfall or delete the outlet.
 
-Move Inlet.
+   * - \
+     - Reposition the nodes to the left bank or reassign then grid element in SWMMFLO.DAT.
 
-Move Inlet.
+   * - \
+     - Remove repeated grid elements in FPXSEC.DAT.
+       If the Cross Section Includes the Channel Use Only the Left Bank Channel Element in CHAN.DAT
 
-Move Outfall or delete ARF.
+   * - \
+     - Do not assign Xconc in CONT.DAT.
 
-Move Outfall or delete ARF.
+   * - \
+     - Check the SED.DAT file.
 
-Review outfall position.
-Make sure it is on the correct side of the levee.
-Review elevation.
+   * - \
+     - Check the SED.DAT file for missing or incorrect mudflow data.
 
-Make sure the inlet is on the correct side of the levee.
-Check the elevation of the cell so that it matches he rim elevation of the inlet or the invert elevation of the type 4.
+   * - \
+     - Set the Dry Weight variable in SED.DAT.
 
-Delete the repeated inlet.
+   * - \
+     - Check the sediment size fractions in SED.DAT.
 
-Reposition the inlet or the outfall.
+   * - \
+     - Check the sediment transport data in SED.DAT.
 
-Reposition one of the outfall nodes.
+   * - \
+     - Check the sediment transport equation, bed thickness or volumetric concentration.
 
-Move the inlet to the left bank.
+   * - \
+     - Check the sediment diameter and percentage.
 
-.. _`4000`:
+   * - \
+     - Check the debris basin volume and the debris grid element number.
 
-4000:
+   * - \
+     - Check the scour depth.
 
-Channel Rb on an Outfall Element
+   * - \
+     - Check the scour depth.
 
-.. _`4000`:
+   * - \
+     - Check the grid element numbers or position in the rigid bed cells.
 
-4000:
+   * - \
+     - Check the sediment supply coefficient and exponent.
 
-Multiple Channel on a Inlet Element
+   * - \
+     - Check the size distribution for sediment supply.
 
-.. _`4000`:
+   * - 6000
+     - Isedn variable is incorrect.
 
-4000:
+   * - 7000
+     - There are a Levee Element on a Complete Blocked Element
 
-Multiple Channel on an Outfall Element
+   * - 7000
+     - There are a Levee Element on a Partial Blocked Element
 
-.. _`4000`:
+   * - 7000
+     - There are a Levee Element With a WRF
 
-4000:
+   * - 7000
+     - This Grid Cell Has a Hs Inlet on a Levee Element
 
-There is a Levee and a Storm Drain Inlet Assigned to Grid Cell
+   * - 7000
+     - This Grid Cell Has a Hs Outlet on a Levee Element
 
-.. _`4000`:
+   * - 7000
+     - This Grid Cell Has Two Levees
 
-4000:
+   * - 8000
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
 
-There is a Storm Drain Inlet Assigned to Completely Blocked Grid Cell
+   * - 8000
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
 
-.. _`4000`:
+   * - 8000
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
 
-4000:
+   * - 8000
+     - This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
 
-There is a Storm Drain Outfall Assigned to Completely Blocked Grid Cell
+   * - 8000
+     - This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
 
-.. _`4000`:
+   * - 8000
+     - This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
 
-4000:
+   * - 8000
+     - Channel Lb Rb on a Multiple Channel Element
 
-There is a Hydraulic Structure and a Storm Drain Inlet Assigned to Grid Cell
+   * - 8000
+     - Channel Lb Rb on a Multiple Channel Element
 
-.. _`4000`:
+   * - 8000
+     - Levee on a Multiple Channel Element
 
-4000:
+   * - 8000
+     - Multiple Channel Element on a Multiple Channel Element
 
-Storm Drain Inlet Has Invert Elevation Errors.
-Please Check Invert Elevation and Rim Elevation For Node
+   * - 8000
+     - Levee on a Multiple Channel Element
 
-.. _`4000`:
+   * - 8000
+     - Multiple Channel Element on a Multiple Channel Element
 
-4000:
+   * - \
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+       Do Not Assign Isedn to a Sediment Transport Equation Number
 
-Curb Opening Height must be Greater Than Zero.
-Please Revise SWMMF- LO.DAT File
+   * - \
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+       Consider repositioning or deleting the levee.
 
-.. _`4000`:
+   * - \
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+       Make sure the levee is on the correct side of the cell.
 
-4000:
+   * - \
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+       Make sure the levee and WRF relationship is correct.
 
-Length must be Greater Than Zero
+   * - \
+     - Make sure the hydraulic structure is on the correct side of the levee.
+       Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
 
-.. _`4000`:
+   * -
+     - Make sure the hydraulic structure is on the correct side of the levee.
+       Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
 
-4000:
+   * -
+     - Delete the repeated levee.
 
-Height must be Greater Than Zero
+   * -
+     - Move the inflow node.
 
-.. _`4000`:
+   * -
+     - Move the inflow node.
 
-4000:
+   * -
+     - Move the inflow node.
 
-Typical Weir Drain Coefficient: Range 2.8 to 3.2
+   * -
+     - Remove the ARF/WRF.
 
-.. _`4000`:
+   * -
+     - Remove the ARF/WRF.
 
-4000:
+   * -
+     - Remove the ARF/WRF.
 
-Width or Height must be Greater Than Zero
+   * -
+     - A multiple channel cannot be assigned to a bank element.
+       See reference manual.
 
-.. _`4000`:
+   * -
+     - A multiple channel cannot be assigned to a bank element.
+       See reference manual.
 
-4000:
+   * -
+     - Make sure the multiple channel is on the correct side of the levee.
 
-Typical Weir Drain Coefficient: 2.3
+   * -
+     - Delete one of the repeated lines in MULT.DAT.
 
-.. _`4000`:
+   * -
+     - Make sure the multiple channel is on the correct side of the levee.
 
-4000:
-
-Perimeter must be Greater Than Zero
-
-.. _`4000`:
-
-4000:
-
-Area must be Greater Than Zero
-
-.. _`4000`:
-
-4000:
-
-Surcharge Depth must be Greater Than Zero
-
-.. _`4000`:
-
-4000:
-
-There is a Conflict Between Inlets in the SWMMFLO.DAT File and Sub- catchments in the SWMM.INP, Features in Both Lists Need to Be in the Same Order
-
-.. _`4000`:
-
-4000:
-
-Inlets in the SWMMFLO.DAT File must be Identical to the Listed Inlets Junction Table of SWMM.INP File
-
-.. _`4000`:
-
-4000:
-
-Multiple Inlets Assigned to One Grid Cell
-
-Move the outfall to the left bank.
-
-Reposition the inlet or the multiple channel.
-
-Reposition the outfall or the multiple channel.
-
-Make sure the inlet is on the correct side of the levee.
-Check the elevation of the cell so that it matches he rim elevation of the inlet or the invert elevation of the type 4.
-
-Move the inlet or delete the ARF.
-
-Move the outfall or delete the ARF.
-
-Reposition the hydraulic structure or the inlet.
-
-Do you mean Max Depth?
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Review SWMMFLOW.DAT.
-
-Check the order of the inlets and the subcatchments.
-
-Check the order of the inlets in SWMMFLOW.DAT and SWMM.INP.
-
-Reposition the inlet or delete it if it is a repeated line.
-
-.. _`4000`:
-
-4000:
-
-There is a Type 4 Inlet (Review SWMMFLO.DAT File) that is Missing the Rating Table in the SWMMFLORT.DAT File
-
-.. _`4000`:
-
-4000:
-
-There is an Inflow Node and a Storm Drain Inlet Assigned to Grid Cell
-
-.. _`4000`:
-
-4000:
-
-There is an Inflow Node and a Storm Drain Outfall Assigned to Grid Cell
-
-.. _`4000`:
-
-4000:
-
-There is an Outflow Node and a Storm Drain Inlet Assigned to Grid Cell
-
-.. _`4000`:
-
-4000:
-
-There is an Outflow Node and a Storm Drain Outfall Assigned to Grid Cell
-
-.. _`4000`:
-
-4000:
-
-Storm Drain Outfall Nodes are in Channel Interior Elements, Re-Assign to the Channel Elements in CHAN.DAT
-
-.. _`5000`:
-
-5000:
-
-Cross Section Element Can Only Be Assigned Once in the FPXSEC.DAT File.
-
-.. _`6000`:
-
-6000:
-
-Variable Xconc Should Not Be Assigned If Mudflow With a Sediment Con- centration is Assigned to the Inflow Hydrograph
-
-.. _`6000`:
-
-6000:
-
-No Sediment Data in the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in Line 1 (M-Line) of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Dry Weight of Sediment is Zero in the SED.DAT File and Thus the Porosity is Also Zero
-
-.. _`6000`:
-
-6000:
-
-Sediment Size Exceeds the Recommended Value For the Application of the Yang Equation
-
-.. _`6000`:
-
-6000:
-
-Error in Line 2 (S-Line) of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in Z-Line of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in P-Line of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in D-Line of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Scourdep Variable in SED.DAT Line E Should Be Positive (>0.)
-
-.. _`6000`:
-
-6000:
-
-Error in E-Line of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in R-Line of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in S-Line of the SED.DAT File
-
-.. _`6000`:
-
-6000:
-
-Error in N-Line of the SED.DAT File
-
-Add the table to SWMMFLOWRT.DAT.
-
-Reposition the inflow node or the inlet.
-
-Reposition the inflow node or the outfall.
-
-Reposition the inlet.
-
-Reposition the outfall or delete the outlet.
-
-Reposition the nodes to the left bank or reassign then grid element in SWMMFLO.
-DAT.
-
-Remove repeated grid elements in FPXSEC.DAT.
-If the Cross Section Includes the Channel Use Only the Left Bank Channel Element in CHAN.DAT
-
-Do not assign Xconc in CONT.DAT.
-
-Check the SED.DAT file.
-
-Check the SED.DAT file for missing or incorrect mudflow data.
-
-Set the Dry Weight variable in SED.DAT.
-
-Check the sediment size fractions in SED.DAT.
-
-Check the sediment transport data in SED.DAT.
-
-Check the sediment transport equation, bed thickness or volumetric concentration.
-
-Check the sediment diameter and percentage.
-
-Check the debris basin volume and the debris grid element number.
-
-Check the scour depth.
-
-Check the scour depth.
-
-Check the grid element numbers or position in the rigid bed cells.
-
-Check the sediment supply coefficient and exponent.
-
-Check the size distribution for sediment supply.
-
-.. _`6000`:
-
-6000:
-
-Isedn variable is incorrect.
-
-.. _`7000`:
-
-7000:
-
-There are a Levee Element on a Complete Blocked Element
-
-.. _`7000`:
-
-7000:
-
-There are a Levee Element on a Partial Blocked Element
-
-.. _`7000`:
-
-7000:
-
-There are a Levee Element With a WRF
-
-.. _`7000`:
-
-7000:
-
-This Grid Cell Has a Hs Inlet on a Levee Element
-
-.. _`7000`:
-
-7000:
-
-This Grid Cell Has a Hs Outlet on a Levee Element
-
-.. _`7000`:
-
-7000:
-
-This Grid Cell Has Two Levees
-
-.. _`8000`:
-
-8000:
-
-This Grid Cell Has an Inflow on a Multiple Ch Element
-
-.. _`8000`:
-
-8000:
-
-This Grid Cell Has an Inflow on a Multiple Ch Element
-
-.. _`8000`:
-
-8000:
-
-This Grid Cell Has an Inflow on a Multiple Ch Element
-
-.. _`8000`:
-
-8000:
-
-This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
-
-.. _`8000`:
-
-8000:
-
-This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
-
-.. _`8000`:
-
-8000:
-
-This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
-
-.. _`8000`:
-
-8000:
-
-Channel Lb Rb on a Multiple Channel Element
-
-.. _`8000`:
-
-8000:
-
-Channel Lb Rb on a Multiple Channel Element
-
-.. _`8000`:
-
-8000:
-
-Levee on a Multiple Channel Element
-
-.. _`8000`:
-
-8000:
-
-Multiple Channel Element on a Multiple Channel Element
-
-.. _`8000`:
-
-8000:
-
-Levee on a Multiple Channel Element
-
-.. _`8000`:
-
-8000:
-
-Multiple Channel Element on a Multiple Channel Element
-
-Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
-Do Not Assign Isedn to a Sediment Transport Equation Number
-
-Consider repositioning or deleting the levee.
-
-Make sure the levee is on the correct side of the cell.
-
-Make sure the levee and WRF relationship is correct.
-
-Make sure the hydraulic structure is on the correct side of the levee.
-Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
-
-Make sure the hydraulic structure is on the correct side of the levee.
-Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
-
-Delete the repeated levee.
-
-Move the inflow node.
-
-Move the inflow node.
-
-Move the inflow node.
-
-Remove the ARF/WRF.
-
-Remove the ARF/WRF.
-
-Remove the ARF/WRF.
-
-A multiple channel cannot be assigned to a bank element.
-See reference manual.
-
-A multiple channel cannot be assigned to a bank element.
-See reference manual.
-
-Make sure the multiple channel is on the correct side of the levee.
-
-Delete one of the repeated lines in MULT.DAT.
-
-Make sure the multiple channel is on the correct side of the levee.
-
-A multiple channel cannot be assigned to a bank element.
-See reference manual.
+   * -
+     - A multiple channel cannot be assigned to a bank element.
+       See reference manual.
 
