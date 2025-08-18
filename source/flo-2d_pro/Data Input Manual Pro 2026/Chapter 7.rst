@@ -1303,206 +1303,157 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - \
      - Realign right bank.
 
-   * - \1000
+   * - 1000
      - Channel Element is Repeated in the CHAN.DAT File.
        Each Channel Element Should Only Be Listed Once
 
+   * - 1000
+     - Channel Right Bank Elements Need Some Adjustment Due to the Channel Width.
+       Set Right Bank Either Closer or Farther Away from the Left Bank Element
 
+   * - 1000
+     - Remaining Floodplain Surface Area on the Channel Bank Elements Needs to Be Larger For Left Bank Element
 
-bbbbbbbbbbbbbbbbbbbbb
-1000
-Channel Right Bank Elements Need Some Adjustment Due to the Channel Width.
-Set Right Bank Either Closer or Farther Away from the Left Bank Element
+   * - 1000
+     - Data Error...Check the Channel Elements in the CHAN.DAT Files
 
-1000
-Remaining Floodplain Surface Area on the Channel Bank Elements Needs to Be Larger For Left Bank Element
+   * - 1000
+     - Channel Extension For Grid Element Extends Into Another Channel Element
 
-1000
-Data Error...Check the Channel Elements in the CHAN.DAT Files
+   * - 1000
+     - Channel Confluence Element Does Not Have Enough Connections, or a Channel Segment is Beginning or Ending at a Main Channel Confluence Element
 
-1000
-Channel Extension For Grid Element Extends Into Another Channel Element
+   * - 1000
+     - Channel Extends Past the Levee System, Please Review the CHANNEL.
+       CHK File and Make the Necessary Corrections
 
-1000
-Channel Confluence Element Does Not Have Enough Connections, or a Channel Segment is Beginning or Ending at a Main Channel Confluence Element
+   * - 1000
+     - Inflow Channel Element is not a Channel Element in CHAN.DAT
 
-1000
-Channel Extends Past the Levee System, Please Review the CHANNEL.
-CHK File and Make the Necessary Corrections
+   * - 1000
+     - Channel Outflow Node Must Have a Lower Bed Elevation Than the Contiguous Upstream Channel Element to Compute a Normal Depth Outflow Condition
 
-1000
-Inflow Channel Element is not a Channel Element in CHAN.DAT
+   * - 1000
+     - Channel Outflow Variable - Kout - in the OUTFLOW.DAT File must be a Channel Element in the CHAN.DAT File
 
-1000
-Channel Outflow Node Must Have a Lower Bed Elevation Than the Contiguous Upstream Channel Element to Compute a Normal Depth Outflow Condition
+   * - 2000
+     - This Grid Cell Has a Hs Inlet and a Full ARF
 
-.. _`1000`:
+   * - 2000
+     - This Grid Cell Has a Hs Outlet and a Full ARF
 
-1000:
+   * - 2000
+     - This Grid Cell Has a Hs Inlet and a Partial ARF
 
-Channel Outflow Variable - Kout - in the OUTFLOW.DAT File must be a Channel Element in the CHAN.DAT File
+   * - 2000
+     - This Grid Cell Has a Hs Outlet and a Partial ARF
 
-.. _`2000`:
+   * - 2000
+     - This Grid Cell Has a Hs on a Channel Rb Element
 
-2000:
+   * - 2000
+     - Inlet on a Full ARF Element
 
-This Grid Cell Has a Hs Inlet and a Full ARF
+   * - \
+     - Eliminate one of the repeated channel elements.
+       Tributary and Split flows should connect along adjacent banks.
 
-.. _`2000`:
+   * - \
+     - Realign right bank.
 
-2000:
+   * - \
+     - Extend right bank away from left bank.
 
-This Grid Cell Has a Hs Outlet and a Full ARF
+   * - \
+     - Review CHAN.DAT.
+       Load project in PROFILES.EXE to troubleshoot.
 
-.. _`2000`:
+   * - \
+     - Realign right bank.
 
-2000:
+   * - \
+     - Review confluence elements.
+       The tributary or split channel may not be close enough to the main channel banks.
 
-This Grid Cell Has a Hs Inlet and a Partial ARF
+   * - \
+     - Realign the channel or the levee.
 
-.. _`2000`:
+   * - \
+     - Move inflow node to a left bank or reset the node to floodplain or turn the channel switch on.
 
-2000:
+   * - \
+     - Review the channel invert elevation and make the necessary correction so that the outflow node can calculate normal depth.
+       The outflow invert elevation must be lower than that of the upstream node.
 
-This Grid Cell Has a Hs Outlet and a Partial ARF
+   * - \
+     - Move the outflow node to a left bank, reset the node to floodplain or turn the channel switch on.
 
-.. _`2000`:
+   * - \
+     - Move the hydraulic structure node.
 
-2000:
+   * - \
+     - Move the hydraulic structure node.
 
-This Grid Cell Has a Hs on a Channel Rb Element
+   * - \
+     - Move the hydraulic structure node or reset the ARF to zero.
 
-.. _`2000`:
+   * - \
+     - Move the hydraulic structure node or reset the ARF to zero.
 
-2000:
+   * - \
+     - Move the hydraulic structure to the left bank or change it to a floodplain structure.
 
-Inlet on a Full ARF Element
+   * - \
+     - Move Inlet
 
-Eliminate one of the repeated channel elements.
-Tributary and Split flows should connect along adjacent banks.
+   * - 2000
+     - Hydraulic Structure Has an Adverse Bed Slope.
+       Outlet Invert is Higher Than the Inlet Invert.
+       Please Check to Ensure this is Correct
 
-Realign right bank.
+   * - 2000
+     - Hydraulic Structure Has a Reference Elevation that is Lower Than the Inlet Node Bed Elevation
 
-Extend right bank away from left bank.
+   * - 2000
+     - Hydraulic Structure Has an Inflow or Outflow Element that is Not a Channel
 
-Review CHAN.DAT.
-Load project in PROFILES.EXE to troubleshoot.
+   * - 2000
+     - Hydraulic Structure Has a Name Length Longer Than 30 Characters.
 
-Realign right bank.
+   * - 2000
+     - A Hydraulic Structure Has Been Assigned to a Channel Element.
+       Channel is turned off.
 
-Review confluence elements.
-The tributary or split channel may not be close enough to the main channel banks.
+   * - 2000
+     - Hydraulic Structure Rating Curve, Rating Table, Or Generalized Culvert Switch (Icurvtable) Does Not Match the
+       Assigned Data
 
-Realign the channel or the levee.
+   * - 2000
+     - Hydraulic Structure must have a Culvert Area Coefficient and Exponent For Routing in a Long Culvert.
 
-Move inflow node to a left bank or reset the node to floodplain or turn the channel switch on.
-
-Review the channel invert elevation and make the necessary correction so that the outflow node can calculate normal depth.
-The outflow invert elevation must be lower than that of the upstream node.
-
-Move the outflow node to a left bank, reset the node to floodplain or turn the channel switch on.
-
-Move the hydraulic structure node.
-
-Move the hydraulic structure node.
-
-Move the hydraulic structure node or reset the ARF to zero.
-
-Move the hydraulic structure node or reset the ARF to zero.
-
-Move the hydraulic structure to the left bank or change it to a floodplain structure.
-
-Move Inlet
-
-.. _`2000`:
-
-2000:
-
-Hydraulic Structure Has an Adverse Bed Slope.
-Outlet Invert is Higher Than the Inlet Invert.
-Please Check to Ensure this is Correct
-
-.. _`2000`:
-
-2000:
-
-Hydraulic Structure Has a Reference Elevation that is Lower Than the Inlet Node Bed Elevation
-
-.. _`2000`:
-
-2000:
-
-Hydraulic Structure Has an Inflow or Outflow Element that is Not a Channel
-
-.. _`2000`:
-
-2000:
-
-Hydraulic Structure Has a Name Length Longer Than 30 Characters.
-
-.. _`2000`:
-
-2000:
-
-A Hydraulic Structure Has Been Assigned to a Channel Element.
-Channel is turned off.
-
-.. _`2000`:
-
-2000:
-
-Hydraulic Structure Rating Curve, Rating Table, Or Generalized Culvert Switch (Icurvtable) Does Not Match the Assigned Data
-
-.. _`2000`:
-
-2000:
-
-Hydraulic Structure must have a Culvert Area Coefficient and Exponent For Routing in a Long Culvert.
-
-.. _`2000`:
-
-2000:
-
+   * - 2000
 Make Sure that the "Atable" Variable on Line 4 of the HYSTRUC.DAT File is Included
 
-.. _`2000`:
-
-2000:
-
-First Data Pair of a Hydraulic Structure Rating Table Should Be 0.
-0.
+2000
+First Data Pair of a Hydraulic Structure Rating Table Should Be 0.0.
 to Interpolate the Next Data Pair
 
-.. _`2000`:
-
-2000:
-
+2000
 Hydraulic Structure Rating Curve Stage Must Increase With Increasing Discharge
 
-.. _`2000`:
+2000
+Rate of Change in the Following Hydraulic Structure Rating Tables May Be Unreasonable - Rate of Change = 10 Times Previous Stage
+Rate of Change
 
-2000:
-
-Rate of Change in the Following Hydraulic Structure Rating Tables May Be Unreasonable - Rate of Change = 10 Times Previous Stage Rate of Change
-
-.. _`2000`:
-
-2000:
-
+2000
 If the Generalized Culvert Equations are Being Used.
 The Inoutcont Tailwater Control is Not Necessary.
 Set Inoutcont = 0
 
-.. _`2000`:
-
-2000:
-
+2000
 Culvert Length Must Assign in the S-Line of the HYSTRUC.DAT If the Generalized Culvert Equations are Being Used
 
-.. _`2000`:
-
-2000:
-
+2000
 Hydraulic Structure Inflow Node is Repeated More Than Once
 
 Review invert elevations.
