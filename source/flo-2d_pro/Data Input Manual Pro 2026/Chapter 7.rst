@@ -786,14 +786,12 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
        This may require Technical Support.
 
-
-ddddddddddddddddddddddddddddddddddddd
-   * -
+   * - \,
      - Review engine file dates and flopro.exe and vc2005con.dll.
        Make sure the file dates correspond to builds that are the same.
        This may require Technical Support.
 
-
+ddddddddddddddddddddddddddddddddddddd
    * -
      - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
        The positions are 0, 1 or 2.
