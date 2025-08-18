@@ -283,22 +283,33 @@ The file descriptions can be referenced in Chapter 5.
 Table 7. 2 List of Common Data Errors
 
 .. list-table::
-   :widths: 25 25 25 25
+   :widths: 100
    :header-rows: 0
 
    * - **Table 7. 2 List of Common Data Errors**
 
-   * - 1. Missing data entries. Insufficient data was provided to themodel.
-   * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
-   * - 3. There was missing or additional lines in a data file whenswitch is activated. Observe the \**\* Notes: \**\* in the filedescriptions.
-   * - 4. Percentages were expressed as a number instead of a decimal.See the description of XCONC in CONT.DAT or the HP(I,J,3) variablein IN- FLOW.DAT.
-   * - 5. The IDEPLT grid element was improperly assigned in INFLOW.DATfor the graphics mode.
+   * - 1. Missing data entries. Insufficient data was provided to the model.
+
+g   * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
+
+   * - 3. There was missing or additional lines in a data file when switch is activated. Observe the \**\* Notes: \**\* in the file descriptions.
+
+   * - 4. Percentages were expressed as a number instead of a decimal.See the description of XCONC in CONT.DAT or the HP(I,J,3) variable in IN- FLOW.DAT.
+
+   * - 5. The IDEPLT grid element was improperly assigned in INFLOW.DAT for the graphics mode.
+
    * - 6. Channel infiltration switch INFCHAN was not ‘turned on’ in theIN- FIL.DAT file.
-   * - 7. Either one or both of channel and floodplain outflow elementswere not assigned for a given grid element.
+
+   * - 7. Either one or both of channel and floodplain outflow elements were not assigned for a given grid element.
+
    * - 8. The street width exceeded the grid element width.
+
    * - 9. The array size limitation for a variable was exceeded.
-   * - 10. The available floodplain surface area was exceeded byassigning channels, streets, ARF’s and/or multiple channels withtoo much surface area. Re- view the SURFAREA.OUT.
-   * - 11. The rainfall variable R_DISTRIB data was entered as totalcumulativerainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
+
+   * - 10. The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple channels with too much surface area. Review the SURFAREA.OUT.
+
+   * - 11. The rainfall variable R_DISTRIB data was entered as total cumulative rainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
+
    * - 12. The ISEDN switch for channel sediment transport was not‘turned on’ in the CHAN.DAT file for the channel segment.
 
 
