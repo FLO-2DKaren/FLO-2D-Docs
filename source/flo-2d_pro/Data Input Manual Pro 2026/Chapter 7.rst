@@ -156,7 +156,7 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
    There is a unique relationship between floodwave celerity and average flow velocity described by the Froude number that should not be violated during
    numerical flood routing.
    This is a physical relationship between the kinematic and gravitation forces.
-   To use the limiting Froude number, estimate a reasonable maximum Froude number for your flood simulation and assign the value to either FROUDL
+   To use the limiting Froude number, estimate a reasonaclsble maximum Froude number for your flood simulation and assign the value to either FROUDL
    (floodplain), FROUDC (channels) or STRF- NO (streets) variables.
    When the computed Froude number exceeds the limiting Froude number, the n-value is increased by a small value (~ 0.001) for the next timestep.
    This change in grid element n-value helps to create a better match between the slope, flow area and n-value during the simulation.
@@ -280,38 +280,26 @@ A list of the most common errors associated with running FLO-2D is presented bel
 Whenever an error is encountered, refer to the ERROR.CHK file first.
 All of the \*.CHK files are listed in Table 7.3.
 The file descriptions can be referenced in Chapter 5.
+Table 7. 2 List of Common Data Errors
 
-.. table:: Table 7. 2 List of Common Data Errors
+.. list-table::
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-   ..
-   list-table::
-      :widths: 100
-      :header-rows: 0
+   * - **Table 7. 2 List of Common Data Errors**
 
-
-      * - 1. Missing data entries. Insufficient data was provided to themodel.
-
-      * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
-
-      * - 3. There was missing or additional lines in a data file whenswitch is activated. Observe the \**\* Notes: \**\* in the filedescriptions.
-
-      * - 4. Percentages were expressed as a number instead of a decimal.See the description of XCONC in CONT.DAT or the HP(I,J,3) variablein IN- FLOW.DAT.
-
-      * - 5. The IDEPLT grid element was improperly assigned in INFLOW.DATfor the graphics mode.
-
-      * - 6. Channel infiltration switch INFCHAN was not ‘turned on’ in theIN- FIL.DAT file.
-
-      * - 7. Either one or both of channel and floodplain outflow elementswere not assigned for a given grid element.
-
-      * - 8. The street width exceeded the grid element width.
-
-      * - 9. The array size limitation for a variable was exceeded.
-
-      * - 10. The available floodplain surface area was exceeded byassigning channels, streets, ARF’s and/or multiple channels withtoo much surface area. Re- view the SURFAREA.OUT.
-
-      * - 11. The rainfall variable R_DISTRIB data was entered as totalcumulativerainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
-
-      * - 12. The ISEDN switch for channel sediment transport was not‘turned on’ in the CHAN.DAT file for the channel segment.
+   * - 1. Missing data entries. Insufficient data was provided to themodel.
+   * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
+   * - 3. There was missing or additional lines in a data file whenswitch is activated. Observe the \**\* Notes: \**\* in the filedescriptions.
+   * - 4. Percentages were expressed as a number instead of a decimal.See the description of XCONC in CONT.DAT or the HP(I,J,3) variablein IN- FLOW.DAT.
+   * - 5. The IDEPLT grid element was improperly assigned in INFLOW.DATfor the graphics mode.
+   * - 6. Channel infiltration switch INFCHAN was not ‘turned on’ in theIN- FIL.DAT file.
+   * - 7. Either one or both of channel and floodplain outflow elementswere not assigned for a given grid element.
+   * - 8. The street width exceeded the grid element width.
+   * - 9. The array size limitation for a variable was exceeded.
+   * - 10. The available floodplain surface area was exceeded byassigning channels, streets, ARF’s and/or multiple channels withtoo much surface area. Re- view the SURFAREA.OUT.
+   * - 11. The rainfall variable R_DISTRIB data was entered as totalcumulativerainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
+   * - 12. The ISEDN switch for channel sediment transport was not‘turned on’ in the CHAN.DAT file for the channel segment.
 
 
 **Runtime Errors**
