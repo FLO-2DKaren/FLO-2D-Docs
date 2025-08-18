@@ -1,10 +1,9 @@
 .. vim: syntax=rst
 
-CHAPTER 7: DEBUGGING AND TROUBLE SHOOTING THE DATA FILES
+CHAPTER 7: Debugging and Trouble Shooting the Data Files
 ========================================================
 
-7.1 Troubleshooting Guidelines
-------------------------------
+**Troubleshooting Guidelines**
 
 **Data Errors**
 
@@ -236,8 +235,7 @@ To match measured flood stages, high water marks or channel discharges, first de
 the model details such as n-values, ARF’s and street flow.
 Flood volume is more important to flood routing than the peak discharge.
 
-7.2 Trouble Shooting Technique
-------------------------------
+**Trouble Shooting Technique**
 
 When undertaking a new FLO-2D flood simulation, start simple and progressively build in model component detail.
 After the required data files have been prepared, run a basic overland flood simulation.
@@ -280,8 +278,7 @@ Guide’ for further troubleshooting tips involving volume conservation, sticky 
 The instructional comments at the end of each data file description in this manual contains a number of guidelines to assist the user in creating or
 checking the data files.
 
-7.3 List of Common Data Errors
-------------------------------
+**List of Common Data Errors**
 
 A list of the most common errors associated with running FLO-2D is presented below and a table for troubleshooting runtime errors follows the list.
 Whenever an error is encountered, refer to the ERROR.CHK file first.
@@ -321,8 +318,7 @@ The file descriptions can be referenced in Chapter 5.
       * - 12. The ISEDN switch for channel sediment transport was not‘turned on’ in the CHAN.DAT file for the channel segment.
 
 
-7.4 Runtime Errors
-------------------
+**Runtime Errors**
 
 If the simulation stops before reaching the prescribed simulation time, review the output files for diagnostic information:
 
@@ -461,8 +457,7 @@ It should be noted that for FLO-2D no server system can outperform a high perfor
         -
 
 
-7.5 Debugging Errors
---------------------
+**Debugging Errors**
 
 In addition to the following troubleshooting guide, refer to the ‘Getting Started Guidelines’ at the begin of this manual and the Pocket Guide to
 assist in debugging runtime errors.
@@ -679,8 +674,7 @@ CADPTS.DAT error
    If errors are reported in this file, delete CADPTS.DAT, FPLAIN.DAT, and NEIGHBORS.DAT run the model again.
    The FLOPRO.EXE will rewrite this file.
 
-7.6 Debug Output Tables
------------------------
+**Debug Output Tables**
 
 The DEBUG.OUT file is created when the user runs the model in Debug model via the QGIS Plugin.
 The error codes in Tables 7.4, 7.5, and 7.6 are the codes used in the Debug system.
