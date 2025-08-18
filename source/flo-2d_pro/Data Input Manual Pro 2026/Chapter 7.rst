@@ -819,30 +819,36 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        Check the location of the cell.
        Correct it by realigning the grid to the computational domain.
 
-       Set ideplt to an inflow grid element number in inflow.dat.
+   * -
+     - Set ideplt to an inflow grid element number in inflow.dat.
 
-       For text mode, set lgplot = 0 and ideplt = 0.
+   * -
+     - For text mode, set lgplot = 0 and ideplt = 0.
 
-       Make sure Ideplt is a grid element listed in inflow.dat.
+   * -
+     - Make sure Ideplt is a grid element listed in inflow.dat.
 
-       If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
+   * -
+     - If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
 
-       Turn on the Lgplot and Graphtim to use Display Mode.
+   * -
+     - Turn on the Lgplot and Graphtim to use Display Mode.
 
-       Check the coordinates in topo.dat.
+   * -
+     - Check the coordinates in topo.dat.
 
-  * - 200
-    - Hydraulic Structure Channel Inflow must be a Channel Element
+   * - 200
+     - Hydraulic Structure Channel Inflow must be a Channel Element
 
-  * - 200
-    - Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
+   * - 200
+     - Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
       Stage Was Reset to the Bed Elevation
 
-  * - 200
-    - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
+   * - 200
+     - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
 
-  * - 300
-    - A Channel/Street Courant Number is Required in TOLER.DAT
+   * - 300
+     - A Channel/Street Courant Number is Required in TOLER.DAT
 
    * - 300:
      - If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
@@ -850,34 +856,34 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 400
      - Variable Tol Has an Inappropriate Value
 
-400
-Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction
+   * - 400
+     - Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction
 
-500
-MANNINGS_N.DAT File Has a Mismatched Grid Element Number...
-Check the End of this File
+   * - 500
+     - MANNINGS_N.DAT File Has a Mismatched Grid Element Number...
+       Check the End of this File
 
-500
-MANNINGS_N.DAT Files Does Not Exist.
-Create the File Before Proceeding
+   * - 500
+     - MANNINGS_N.DAT Files Does Not Exist.
+       Create the File Before Proceeding
 
-500
-The Spatially Variable Shallown Value is Outside the Range 0.010 to 0.99
+   * - 500
+     - The Spatially Variable Shallown Value is Outside the Range 0.010 to 0.99
 
-500
-N-Value is Less Than 0 or Greater Than 1
+   * - 500
+     - N-Value is Less Than 0 or Greater Than 1
 
-600
-Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable Real Rainfall Adjustments (Irainarf=1) With Rainarf Values
+   * - 600
+     - Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable Real Rainfall Adjustments (Irainarf=1) With Rainarf Values
 
-600
-Rtt must be Greater Than 0
+   * - 600
+     - Rtt must be Greater Than 0
 
-600
-First Pair of the Rainfall Distribution Should Be 0.0.
+   * - 600
+     - First Pair of the Rainfall Distribution Should Be 0.0.
 
-600
-Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
+   * - 600
+     - Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
 
 700
 Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
