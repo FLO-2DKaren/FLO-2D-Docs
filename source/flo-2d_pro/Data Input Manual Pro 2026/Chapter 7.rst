@@ -389,66 +389,61 @@ A program like Docker can be used to build, deploy, and optimize server configur
 Get help from an IT professional and FLO-2D staff to explore this option.
 It should be noted that for FLO-2D no server system can outperform a high performance desktop computer running AMD high performance processors.
 
-.. table:: Table 7. 3 List of \*.CHK Files and Unit Numbers
+**Table 7. 3 List of \*.CHK Files and Unit Numbers**
 
 .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 0
+   :widths: 25 25 25 25
+   :header-rows: 0
 
+   * - **Unit No.**
+     - **File Name**
+     - **Unit No.**
+     - **File Name**
 
-      * - **Unit No.**
-        - **File Name**
-        - **Unit No.**
-        - **File Name**
+   * - 7
+     - ERROR.CHK
+     - 1234
+     - MODFLOW_ERROR.CHK
 
-      * - 7
-        - ERROR.CHK
-        - 1234
-        - MODFLOW_ERROR.CHK
+   * - 56
+     - CHANNEL.CHK
+     - 1577
+     - UNDERGROUNDOUTFALLS.CHK
 
-      * - 56
-        - CHANNEL.CHK
-        - 1577
-        - UNDERGROUNDOUTFALLS.CHK
+   * - 86
+     - CHANBANKEL.CHK
+     - 1578
+     - RainCell.CHK
 
-      * - 86
-        - CHANBANKEL.CHK
-        - 1578
-        - RainCell.CHK
+   * - 194
+     - BATCH.CHK
+     - 1580
+     - HDF5_Error.CHK
 
-      * - 194
-        - BATCH.CHK
-        - 1580
-        - HDF5_Error.CHK
+   * - 333
+     - NOSHOW.CHK
+     - 1590
+     - RainOneCell.CHK
 
-      * - 333
-        - NOSHOW.CHK
-        - 1590
-        - RainOneCell.CHK
+   * - 1571
+     - STORMDRAIN_ERROR.CHK
+     - 8871
+     - ARF_ADJUSTMENT.CHK
 
-      * - 1571
-        - STORMDRAIN_ERROR.CHK
-        - 8871
-        - ARF_ADJUSTMENT.CHK
+   * - 991
+     - DEBUG.CHK
+     - 6669
+     - HYDRAULIC STRUCTURE_SHALLOW FLOW WARNING.CHK
 
-      * - 991
-        - DEBUG.CHK
-        - 6669
-        - HYDRAULIC
-          STRUCTURE_SHALLOW FLOW
-          WARNING.CHK
+   * - 6670
+     - 6670 HYDRAULIC STRUCTURE_TAILWATER WARNING.CHK
+     - 6671
+     - HYDRAULIC STRUCTURE_HEADWATER WARNING.CHK
 
-      * - 6670
-        - 6670 HYDRAULIC STRUCTURE_TAILWATER WARNING.CHK
-        - 6671
-        - HYDRAULIC
-          STRUCTURE_HEADWATER
-          WARNING.CHK
-
-      * - 6673
-        - HYDRAULIC STRUCTURE\_ HEADWATER WARNING.CHK
-        -
-        -
+   * - 6673
+     - HYDRAULIC STRUCTURE\_ HEADWATER WARNING.CHK
+     -
+     -
 
 
 **Debugging Errors**
