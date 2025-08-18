@@ -23,7 +23,7 @@ format:
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           HYDRO.DAT File Descriptors</pre></i></div>
+        <div><i><pre>              HYDRO.DAT File Descriptors</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
          3                  Line 1: Number of gaging station with hydrograph data
@@ -41,18 +41,25 @@ format:
 
     <br><br>
 
+.. raw:: html
 
-   HYDRO.DAT File Example
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>    HYDRO.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        Haynor
+        13160  251
+        0.00  1287.85
+        1.00  1285.47
+        2.00  1295.01
+        3.05  1302.20
+        ...
+        </pre>
+    </div>
 
-Haynor 13160 251
+.. raw:: html
 
-0.00 1287.85
-
-1.00 1285.47
-
-2.00 1295.01
-
-3.05 1302.20
+    <br><br>
 
 After opening HYDROG, click on either ‘Plot Channel Hydrographs’, ‘Plot Cross Section Hydrographs,’ or ‘Compute Hydraulics’ in the Main Menu shown
 below:
