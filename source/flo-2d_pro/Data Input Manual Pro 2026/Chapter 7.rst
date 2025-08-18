@@ -785,8 +785,6 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 200
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
 
-ccccccccccccccccccccccccccccccccccccccccccccccc
-
    * - \
      - Review engine file dates and flopro.exe and vc2005con.dll.
        Make sure the file dates correspond to builds that are the same.
@@ -1122,73 +1120,79 @@ ccccccccccccccccccccccccccccccccccccccccccccccc
    * - 800
      - This Grid Cell Has an Outflow and a Full ARF
 
-800
-This Grid Cell Has an Outflow and a Partial ARF
+   * - \800
+     - This Grid Cell Has an Outflow and a Partial ARF
 
-800
-The Following Cell Has an Outflow and a WRF:
+   * - \800
+     - The Following Cell Has an Outflow and a WRF:
 
-800
-An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)
+   * - \800
+     - An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)
 
-800
-First Pair of the Floodplain Hydrograph Should Be 0.0.
-to Interpolate the First Timestep
+   * - \800
+     - First Pair of the Floodplain Hydrograph Should Be 0.0.
+       to Interpolate the First Timestep
 
-800
-No Inflow Discharge Specified For the Inflow Element
-
-   * - \
-It's OK for n FP outflow node to be on a left bank but not a right bank.
+   * - \800
+     - No Inflow Discharge Specified For the Inflow Element
 
    * - \
-Make sure the outflow node is on the correct side of the levee.
+     - It's OK for n FP outflow node to be on a left bank but not a right bank.
 
    * - \
-Remove one of the duplicate stage time conditions from OUTFLOW.DAT.
+     - Make sure the outflow node is on the correct side of the levee.
 
    * - \
-Remove the outflow from the right bank.
+     - Remove one of the duplicate stage time conditions from OUTFLOW.DAT.
 
    * - \
-Make sure the outflow node is on the correct side of the levee.
+     - Remove the outflow from the right bank.
 
    * - \
-     - \
+     - Make sure the outflow node is on the correct side of the levee.
 
    * - \
-Delete one of the outflow nodes in OUTFLOW.DAT.
+     - Delete one of the outflow nodes in OUTFLOW.DAT.
 
-Delete the outflow node or the ARF.
+   * - \
+     - Delete the outflow node or the ARF.
 
-Delete the ARF.
+   * - \
+     - Delete the ARF.
 
-Delete the WRF.
+   * - \
+     - Delete the WRF.
 
-Delete the outflow node or the ARF.
+   * - \
+     - Delete the outflow node or the ARF.
 
-Delete the ARF.
+   * - \
+     - Delete the ARF.
 
-Delete the WRF.
+   * - \
+     - Delete the WRF.
 
-Delete the outflow node or the ARF.
+   * - \
+     - Delete the outflow node or the ARF.
 
-Delete the ARF.
+   * - \
+     - Delete the ARF.
 
-Delete the WRF.
+   * - \
+     - Delete the WRF.
 
-Turn the channel switch on or reset the inflow node to floodplain.
+   * - \
+     - Turn the channel switch on or reset the inflow node to floodplain.
 
-Set the first data pair to 0.0 0.0 in the INFLOW.DAT.
+   * - \
+     - Set the first data pair to 0.0 0.0 in the INFLOW.DAT.
 
-Check INFLOW.DAT.
+   * - \
+     - Check INFLOW.DAT.
 
-.. _`800`:
-
-800:
-
-INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be Specified, CONT.DAT Variable  Inplot
-must be Set to 1
+   * - 800
+     - INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be Specified, CONT.DAT Variable  Inplot
+       must be Set to 1
 
 
 .. table:: Table 7. 6 ADVANCED ERROR CODES
