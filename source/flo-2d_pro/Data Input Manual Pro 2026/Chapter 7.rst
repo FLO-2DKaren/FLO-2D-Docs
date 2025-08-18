@@ -287,7 +287,9 @@ Table 7. 2 List of Common Data Errors
    :header-rows: 0
 
    * - **Table 7. 2 List of Common Data Errors**
+
    * - 1. Missing data entries. Insufficient data was provided to the model.
+
    * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
 
    * - 3. There was missing or additional lines in a data file when switch is activated. Observe the \**\* Notes: \**\* in the file descriptions.
@@ -304,8 +306,8 @@ Table 7. 2 List of Common Data Errors
 
    * - 9. The array size limitation for a variable was exceeded.
 
-   * - 10. The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple channels with too much surface area.
-           Review the SURFAREA.OUT.
+   * - 10. The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple
+           channels with too much surface area. Review the SURFAREA.OUT.
 
    * - 11. The rainfall variable R_DISTRIB data was entered as total cumulative rainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
 
@@ -323,7 +325,7 @@ If the simulation stops before reaching the prescribed simulation time, review t
 
 - Review the channel check files for potential errors.
 
-7.4.1 Volume Conservation Errors
+Volume Conservation Errors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most volume conservation and numerical stability problems are associated with channel flow.
@@ -349,7 +351,7 @@ To address channel problems, consider the following measures:
 
 - Select a longer channel length within the channel grid element.
 
-7.4.2 One Drive Sync
+One Drive Sync
 ~~~~~~~~~~~~~~~~~~~~
 
 Running simulations on projects that are stored on a directory that is synced to One Drive may result in a simulation crash.
@@ -359,14 +361,14 @@ Not only does this practice risk a simulation crash, it also results in overall 
 Forcing a memory analysis and sync places a unnecessary burden on computer processors.
 If simulations take more than 12 hours, consider moving projects to a directory that is not syncing to One Drive.
 
-7.4.3 Anti-Virus Software
+Anti-Virus Software
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This program are important but allowing them to continually scan for viruses or malware will add a processing burden to the computer.
 If a simulation takes more than 12 hours, consider running it on a computer that is dedicated to modeling that can be isolated with a firewall that
 limits web traffic so that anti-virus software scans can be limited or turned off while the simulation is running.
 
-7.4.4 External Drives
+External Drives
 ~~~~~~~~~~~~~~~~~~~~~
 
 Running simulations on external drives may result in a crash due to drive connectivity errors.
@@ -374,7 +376,7 @@ It will also slow simulations since the data transfer at runtime is happening ov
 External drives may also have protections so that executables cannot write data to the drive.
 It is better to run simulations on the local computer.
 
-7.4.5 Servers and Virtual Computers
+Servers and Virtual Computers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Running simulations on servers or virtual computers is relatively straight for- ward and easy.
@@ -389,16 +391,14 @@ It should be noted that for FLO-2D no server system can outperform a high perfor
 
 .. table:: Table 7. 3 List of \*.CHK Files and Unit Numbers
 
-   ..
-   list-table::
+.. list-table::
       :widths: 25 25 25 25
       :header-rows: 0
 
 
       * - **Unit No.**
         - **File Name**
-        - **Unit
-          No.**
+        - **Unit No.**
         - **File Name**
 
       * - 7
