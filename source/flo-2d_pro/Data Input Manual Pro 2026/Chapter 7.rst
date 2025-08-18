@@ -731,104 +731,60 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Multiple Channels
 
 
-.. table:: Table 7. 5 BASIC ERROR CODES
+**Table 7. 5 BASIC ERROR CODES**
 
-.. _`100`:
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
-100:
+   * - 100
+     - Versions of the FLO-2D Pro and Storm Drain are Different.
+       Please Check FLO-2D Build and Update Vc2005-Con.Dll
 
-Versions of the FLO-2D Pro and Storm Drain are Different.
-Please Check FLO-2D Build and Update Vc2005-Con.Dll
+   * - 100
+     - Floodway Switch = 1,Set Encroach in CONT.DAT
 
-.. _`100`:
+   * - 100
+     - Set NOPRTC to Only 0, 1, or 2 in CONT.DAT
 
-100:
-
-Floodway Switch = 1,Set Encroach in CONT.DAT
-
-.. _`100`:
-
-100:
-
-Set NOPRTC to Only 0, 1, or 2 in CONT.DAT
-
-.. _`100`:
-
-100:
-
+100
 For Graphical Display (Lgplot=2),Graptim must be Greater Than 0
 
-.. _`100`:
-
-100:
-
+100
 Variable Xconc Exceeds 1
 
-.. _`100`:
-
-100:
-
+100
 Variable Xarf is Less Than 0 or Greater Than 1
 
-.. _`100`:
-
-100:
-
+100
 Variable Froudl Greater Than 9
 
-.. _`100`:
-
-100:
-
+100
 Variable Noprtfp is a Switch,Use Only 0,1,2 or 3
 
-.. _`100`:
-
-100:
-
+100
 Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation.
 Review CONT.DAT File
 
-.. _`100`:
-
-100:
-
+100
 Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File
 
-.. _`100`:
-
-100:
-
+100
 If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT
 
-.. _`100`:
-
-100:
-
+100
 If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
 
-.. _`100`:
-
-100:
-
+100
 Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Vari-able Lgplot must be Set to 1
 
-.. _`100`:
-
-100:
-
+100
 Total Simulation Time of the Model Exceeds the Hydrograph Duration
 
-.. _`100`:
-
-100:
-
+100
 If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,Then Lgplot must be 0 or 1
 
-.. _`200`:
-
-200:
-
+200
 Grid Element Coordinates Exceed 1000000000.
 Reduce the Coordinate Values Before Proceeding
 
@@ -836,9 +792,7 @@ Review engine file dates and flopro.exe and vc2005con.dll.
 Make sure the file dates correspond to builds that are the same.
 This may require Technical Support.
 
-To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT.
-
-NOPRTC is a switch.
+To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
 The positions are 0, 1 or 2.
 
 The variable Graphtim is missing in CONT.DAT.
