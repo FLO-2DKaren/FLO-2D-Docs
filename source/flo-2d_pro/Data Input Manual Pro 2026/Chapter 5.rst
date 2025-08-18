@@ -1117,7 +1117,7 @@ This file contains the channel fluid maximum sediment concentration by volume.
 
     The channel elements that experience a complete evacuation of the channel volume are listed in this output file.
     The channel elements in this file should be cross-correlated with those listed in TIME.OUT and VELTIMEC.OUT files.
-    ]
+
         - Element
         - Number of evacuations
 
@@ -1360,7 +1360,7 @@ It is used internally and not by the end user.
         - Upstream depth
         - Downstream depth
         - Discharge
-    - Subfactor
+        - Subfactor
 
 - HYDROSTRUCT.OUT
 
