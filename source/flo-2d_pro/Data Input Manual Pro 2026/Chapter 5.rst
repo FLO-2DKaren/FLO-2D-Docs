@@ -1442,7 +1442,7 @@ Column 4 through Column 7 is Northeast, Southeast, Southwest, Northwest.
     - Discharge through the cutoff direction (cfs or cms)
     - Failure width of the cutoff direction (ft or m)
 
-.. image:: ../img/Data_Input_Manual_PRO_2026/Chapter5/DIM_Pro_2025_Chapter3_001.png
+    .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter5/DIM_Pro_2025_Chapter3_001.png
 
     - Grid element listed for the failure direction(ft or m)
     - Total Q sum of all Q for 10 timesteps(cfs or cms)
