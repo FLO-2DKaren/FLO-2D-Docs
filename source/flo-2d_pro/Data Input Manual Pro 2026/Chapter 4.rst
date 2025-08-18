@@ -8735,8 +8735,8 @@ ARRAY OF INTERIOR GRID ELEMENTS
    can be added.
    Use NotePad, NotePad++, or UltraEdit to make adjustments.
 
- FILE: BRIDGE_XSEC.DAT
- ~~~~~~~~~~~~~~~~~~~~~
+FILE: BRIDGE_XSEC.DAT
+~~~~~~~~~~~~~~~~~~~~~
 
 BRIDGE CROSS SECTIONS
 ^^^^^^^^^^^^^^^^^^^^^
