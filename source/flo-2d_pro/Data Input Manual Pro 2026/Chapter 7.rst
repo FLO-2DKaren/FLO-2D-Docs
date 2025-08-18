@@ -13,8 +13,7 @@ The files are listed in Table 4.1, Table 7.1, and Table 7.2.
 
 .. table:: Table 7. 1 List of Misc Files and Unit Numbers
 
-   ..
-   list-table::
+.. list-table::
       :widths: 25 25 25 25
       :header-rows: 0
 
