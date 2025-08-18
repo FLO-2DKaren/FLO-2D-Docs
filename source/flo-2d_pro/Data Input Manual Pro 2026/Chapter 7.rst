@@ -784,7 +784,6 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 200
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
-       This may require Technical Support.
 
 ccccccccccccccccccccccccccccccccccccccccccccccc
 
