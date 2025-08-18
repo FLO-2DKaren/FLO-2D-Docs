@@ -287,9 +287,7 @@ Table 7. 2 List of Common Data Errors
    :header-rows: 0
 
    * - **Table 7. 2 List of Common Data Errors**
-
    * - 1. Missing data entries. Insufficient data was provided to the model.
-
    * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
 
    * - 3. There was missing or additional lines in a data file when switch is activated. Observe the \**\* Notes: \**\* in the file descriptions.
@@ -306,7 +304,8 @@ Table 7. 2 List of Common Data Errors
 
    * - 9. The array size limitation for a variable was exceeded.
 
-   * - 10. The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple channels with too much surface area. Review the SURFAREA.OUT.
+   * - 10. The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple channels with too much surface area.
+           Review the SURFAREA.OUT.
 
    * - 11. The rainfall variable R_DISTRIB data was entered as total cumulative rainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
 
