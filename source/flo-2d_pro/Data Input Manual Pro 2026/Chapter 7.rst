@@ -307,6 +307,7 @@ Table 7. 2 List of Common Data Errors
    * - 9. The array size limitation for a variable was exceeded.
 
    * - 10. The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple
+
            channels with too much surface area. Review the SURFAREA.OUT.
 
    * - 11. The rainfall variable R_DISTRIB data was entered as total cumulative rainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
