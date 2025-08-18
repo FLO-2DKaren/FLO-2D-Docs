@@ -652,37 +652,37 @@ List of \*.TMP Files and Unit Numbers*
 
 **2 PHASE SEDIMENT VOLUME CONSERVATION.OUT**
 
-Summary of the final disposition of the sediment volume.
+    Summary of the final disposition of the sediment volume.
 
 **BASE.OUT**
 
-BASE.OUT is an all-inclusive output file.
-At the beginning of the file, the inflow hydrographs are printed, then the time dependent output data follows.
+    BASE.OUT is an all-inclusive output file.
+    At the beginning of the file, the inflow hydrographs are printed, then the time dependent output data follows.
 
-For each specified time output interval, the flow depth, velocity, water sur- face elevation and discharge for either the channel or the floodplain
-grid elements can be written.
+    For each specified time output interval, the flow depth, velocity, water sur- face elevation and discharge for either the channel or the floodplain
+    grid elements can be written.
 
-The outflow from the boundary grid elements is listed at the end of the time interval.
+    The outflow from the boundary grid elements is listed at the end of the time interval.
 
-After the final time output interval, a summary of all the grid elements maximum depths, water surface elevations, velocities and the time of
-occurrence of the maximum values is printed.
+    After the final time output interval, a summary of all the grid elements maximum depths, water surface elevations, velocities and the time of
+    occurrence of the maximum values is printed.
 
-Finally, a summary table of the inflow, outflow and storage volumes at the end of the file allows the user to review the conservation of mass and the
-ultimate disposition of all the water and sediment.
+    Finally, a summary table of the inflow, outflow and storage volumes at the end of the file allows the user to review the conservation of mass and the
+    ultimate disposition of all the water and sediment.
 
-For convenience, this conservation table is also written to a separate output file named SUMMARY.OUT that is more complete.
+    For convenience, this conservation table is also written to a separate output file named SUMMARY.OUT that is more complete.
 
-There is so much output data in the BASE.OUT file that the user is encouraged to avoid generating this file.
-All of the text output in this file is provided in individual ASCII xyz output files for plotting purposes and the user will probably have little
-interest in the BASE.OUT format of the floodplain hydraulics for the individual grid elements.
+    There is so much output data in the BASE.OUT file that the user is encouraged to avoid generating this file.
+    All of the text output in this file is provided in individual ASCII xyz output files for plotting purposes and the user will probably have little
+    interest in the BASE.OUT format of the floodplain hydraulics for the individual grid elements.
 
-This output file can become large and it takes too long to write to it for models with 500,000 grid elements or more.
-Set NOPRTFP = 2 and it will not be created:
+    This output file can become large and it takes too long to write to it for models with 500,000 grid elements or more.
+    Set NOPRTFP = 2 and it will not be created:
 
-    - If NOPRTFP = 0, all the BASE.OUT floodplain flow data is reported.
-    - If NOPRTFP = 1, the BASE.OUT floodplain outflow data is not reported.
-    - If NOPRTFP = 2, the entire file is not created.
-    - If NOPRTFP = 3, only floodplain outflow data is repIf NOPRTFP = 3, only floodplain outflow data is reported to the BASE.OUT file.
+        - If NOPRTFP = 0, all the BASE.OUT floodplain flow data is reported.
+        - If NOPRTFP = 1, the BASE.OUT floodplain outflow data is not reported.
+        - If NOPRTFP = 2, the entire file is not created.
+        - If NOPRTFP = 3, only floodplain outflow data is repIf NOPRTFP = 3, only floodplain outflow data is reported to the BASE.OUT file.
 
 **BASEFLOWFP_TIME.OUT**
 
