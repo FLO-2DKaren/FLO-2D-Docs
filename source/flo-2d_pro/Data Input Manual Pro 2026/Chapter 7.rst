@@ -784,63 +784,71 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,Then Lgplot must be 0 or 1
 
    * - 200
-     - Grid Element Coordinates Exceed 1000000000.
-       Reduce the Coordinate Values Before Proceeding
+     - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
 
-       Review engine file dates and flopro.exe and vc2005con.dll.
+   * -
+     - Review engine file dates and flopro.exe and vc2005con.dll.
        Make sure the file dates correspond to builds that are the same.
        This may require Technical Support.
 
-       To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
+   * -
+     - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
        The positions are 0, 1 or 2.
 
-       The variable Graphtim is missing in CONT.DAT.
+   * -
+     - The variable Graphtim is missing in CONT.DAT.
 
-       The sediment concentration cannot be greater than 1.
+   * -
+     - The sediment concentration cannot be greater than 1.
 
-       The Xarf variable must be a value between 0 and 1.
+   * -
+     - The Xarf variable must be a value between 0 and 1.
 
-       The Froudl variable should not be greater than 1.
+   * -
+     - The Froudl variable should not be greater than 1.
 
-       NOPRTFP is a switch.
+   * -
+     - NOPRTFP is a switch.
        The positions are 0, 1 or 2.
 
-       Set either MUD or ISED to 0.
+   * -
+     - Set either MUD or ISED to 0.
 
-If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
-Check the location of the cell.
-Correct it by realigning the grid to the computational domain.
+   * -
+     - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
+       Check the location of the cell.
+       Correct it by realigning the grid to the computational domain.
 
-Set ideplt to an inflow grid element number in inflow.dat.
+       Set ideplt to an inflow grid element number in inflow.dat.
 
-For text mode, set lgplot = 0 and ideplt = 0.
+       For text mode, set lgplot = 0 and ideplt = 0.
 
-Make sure Ideplt is a grid element listed in inflow.dat.
+       Make sure Ideplt is a grid element listed in inflow.dat.
 
-If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
+       If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
 
-Turn on the Lgplot and Graphtim to use Display Mode.
+       Turn on the Lgplot and Graphtim to use Display Mode.
 
-Check the coordinates in topo.dat.
+       Check the coordinates in topo.dat.
 
-200
-Hydraulic Structure Channel Inflow must be a Channel Element
+  * - 200
+    - Hydraulic Structure Channel Inflow must be a Channel Element
 
-200
-Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
-Stage Was Reset to the Bed Elevation
+  * - 200
+    - Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
+      Stage Was Reset to the Bed Elevation
 
-200
-If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
+  * - 200
+    - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
 
-300
-A Channel/Street Courant Number is Required in TOLER.DAT
+  * - 300
+    - A Channel/Street Courant Number is Required in TOLER.DAT
 
-* 300:
-If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
+   * - 300:
+     - If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
 
-400
-Variable Tol Has an Inappropriate Value
+   * - 400
+     - Variable Tol Has an Inappropriate Value
 
 400
 Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction
