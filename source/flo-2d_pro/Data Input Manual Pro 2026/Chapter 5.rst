@@ -2042,21 +2042,15 @@ TIME.OUT
 The timestep is controlled by the numerical stability criteria.
 When the stability criteria are exceeded for a particular grid element, the timestep is decreased.
 The grid elements with the highest number of timestep decreases are written to the TIME.OUT file.
-This file can be reviewed to determine if a specific floodplain, channel or street node is consistently causing the
-
-timestep decrease and what stability criteria is frequently being exceeded.
+This file can be reviewed to determine if a specific floodplain, channel or street node is consistently causing the timestep decrease and what stability criteria is frequently being exceeded.
 If one grid element has caused significantly more timestep decreases than the other grid elements, then its attributes and the attributes of the
 contiguous grid elements should be carefully reviewed.
 
-· Grid element - floodplain, channel, or street
-
-· Number of timestep decrements
-
-· Percent change in depth
-
-· CFL Stability criteria
-
-· Dynamic wave stability criteria
+    - Grid element - floodplain, channel, or street
+    - Number of timestep decrements
+    - Percent change in depth
+    - CFL Stability criteria
+    - Dynamic wave stability criteria
 
 The file lists the last one hundred time step decreases and the node type.
 
@@ -2065,13 +2059,10 @@ TIME_TO_ABOVE_BASEFLOW.OUT
 An option to report the time to discharge above channel base flow has been implemented.
 The new file is generated with the following data columns.
 
-· Grid
-
-· Xcoord
-
-· Ycoord
-
-· Time to above baseflow (hrs)
+    - Grid
+    - Xcoord
+    - Ycoord
+    - Time to above baseflow (hrs)
 
 This is a similar option as was coded for channel base flow.
 This file required that the baseflow variable IBASEFLOW is assigned with the base discharge value.
@@ -2083,29 +2074,21 @@ This file reports the grid element number, the x- and y-coordinates and the init
 The time to one foot of depth can be plot- ted in FLO-2D MapCrafter.
 This file is typically used for dam and levee breach analysis.
 
-· Grid element
-
-· Xcoord
-
-· Ycoord
-
-· Time to one ft depth
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Time to one ft depth
 
 TIMETOPEAK.OUT
 
 This file reports the grid element number, the x- and y-coordinates and the time of occurrence of the maximum depth.
-This time to maximum depth
-
-can be plotted in FLO-2D MapCrafter.
+This time to maximum depth can be plotted in FLO-2D MapCrafter.
 While this file is typically used for dam and levee breach analysis, it valid for general flood studies.
 
-· Grid element
-
-· Xcoord
-
-· Ycoord
-
-· Time to one ft max depth
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Time to one ft max depth
 
 TIMETWOFT.OUT
 
@@ -2113,99 +2096,92 @@ This file reports the grid element number, the x- and y-coordinates and the init
 The time to two feet of depth can be plot- ted in FLO-2D MapCrafter.
 This file is typically used for dam and levee breach analysis.
 
-· Grid element
-
-· Xcoord
-
-· Ycoord
-
-· Time to two ft depth
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Time to two ft depth
 
 TOPO_SDELEV.RGH
 
 This file contains the elevation adjustments that were automatically corrected when the FLO-2D engine compared the floodplain grid elements to the
 storm drain inlet rim and type 4 invert elevations.
 To fully accept the changes reported to fprimelev.new, replace TOPO.DAT with this file.
-It is also necessary to replace the FPLAIN.DAT with FPLSIN_SDELEV.
-RGH.
+It is also necessary to replace the FPLAIN.DAT with FPLSIN_SDELEV.RGH.
 
 UPS-DOWS-CONNECTIVITY.OUT
 
 This file reports the connectivity between the upstream domain grid elements and the downstream domain grid elements.
 
-· Upstream grid element
-
-· Downstream grid elements
+    - Upstream grid element
+    - Downstream grid elements
 
 Velocity Output Files
+--------------------------
 
 These files are similar to the DEPTH.OUT file.
 These files contain the x- and y-coordinates and maximum velocities and can be viewed with the MAXPLOT or FLO-2D MapCrafter program.
 
-· Grid element
-
-· Xcoord
-
-· Ycoord
-
-· Velocity in the channel element (fps or mps)
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Velocity in the channel element (fps or mps)
 
 The velocity output files include:
 
-STVEL.OUT - Maximum street flow velocity;
+    STVEL.OUT - Maximum street flow velocity;
 
-STVELDIR.OUT - Flow direction of the maximum street flow velocity; VELFP.OUT - Maximum floodplain flow velocity;
+    STVELDIR.OUT - Flow direction of the maximum street flow velocity;
 
-VELOC.OUT - Maximum channel flow velocity; VELCHFINAL.OUT - Final channel flow velocities.;
+    VELFP.OUT - Maximum floodplain flow velocity;
 
-VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity.
+    VELOC.OUT - Maximum channel flow velocity;
 
-FINALVEL.OUT -Flow velocity at the end of the simulation.
-FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation.
+    VELCHFINAL.OUT - Final channel flow velocities.;
 
-VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable.
-This is not max velocity x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
+    VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity.
 
-VEL_SQUARED_X_DEPTH.OUT - The velocity squared x depth parameter is evaluated as a single variable.
-This is not max velocity squared x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
+    FINALVEL.OUT -Flow velocity at the end of the simulation.
+
+    FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation.
+
+    VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable.
+    This is not max velocity x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
+
+    VEL_SQUARED_X_DEPTH.OUT - The velocity squared x depth parameter is evaluated as a single variable.
+    This is not max velocity squared x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
 
 The velocity output files related to two-PHASE flow include:
 
-FINALDIR_MUD.OUT - Floodplain final mudflow velocity direction.
-FINALVEL_MUD.OUT - Floodplain final mudflow velocity in the reported outflow direction.
+    FINALDIR_MUD.OUT - Floodplain final mudflow velocity direction.
 
-VELDIREC_MUD.OUT - Floodplain maximum mudflow velocity direction.
+    FINALVEL_MUD.OUT - Floodplain final mudflow velocity in the reported outflow direction.
 
-VELFP_MUD.OUT - Floodplain maximum mudflow velocity in the reported outflow direction.
+    VELDIREC_MUD.OUT - Floodplain maximum mudflow velocity direction.
 
-VELOC_MUD.OUT - Channel maximum mudflow velocity.
-VELRESMAX_MUD.OUT - Floodplain maximum resolved mudflow velocity in the computed outflow direction.
+    VELFP_MUD.OUT - Floodplain maximum mudflow velocity in the reported outflow direction.
 
-VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable (not maximum velocity times maximum depth).
-For two phase, the velocity x depth variable is the maximum value for the grid element for either fluid or mudflow whichever is greater.
+    VELOC_MUD.OUT - Channel maximum mudflow velocity.
 
-FPWSEL_MUD.OUT - Floodplain maximum mudflow water surface elevation.
+    VELRESMAX_MUD.OUT - Floodplain maximum resolved mudflow velocity in the computed outflow direction.
 
-· Grid or Channel Left Bank Element
+    VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable (not maximum velocity times maximum depth).
+    For two phase, the velocity x depth variable is the maximum value for the grid element for either fluid or mudflow whichever is greater.
 
-· Xcoord
+    FPWSEL_MUD.OUT - Floodplain maximum mudflow water surface elevation.
 
-· Ycoord
-
-· Variable
+        - Grid or Channel Left Bank Element
+        - Xcoord
+        - Ycoord
+        - Variable
 
 VELTIMEC.OUT
 
 This file lists the grid element number, maximum channel velocity and the time of occurrence.
-It is sorted from highest to lowest velocity so that an
+It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any unreasonably high maximum channel velocities.
 
-examination of the first several lines of output data will determine if there are any unreasonably high maximum channel velocities.
-
-· Grid element
-
-· Vmax in the channel element (fps or mps)
-
-· Time of occurrence
+    - Grid element
+    - Vmax in the channel element (fps or mps)
+    - Time of occurrence
 
 VELTIMEFP.OUT
 
@@ -2213,30 +2189,22 @@ This file lists the first 100 floodplain elements: number, maximum flood- plain 
 It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
 unreasonably high maximum floodplain velocities.
 
-· Grid element
-
-· Vmax floodplain element (fps or mps)
-
-· Depth floodplain element (ft or m)
-
-· Time of occurrence
+    - Grid element
+    - Vmax floodplain element (fps or mps)
+    - Depth floodplain element (ft or m)
+    - Time of occurrence
 
 VELRESMAX.OUT
 
 This file lists the maximum resolved velocities as a vector field.
 It is not based on the 8-flow directions.
 
-· Grid element
-
-· Xcoord
-
-· Ycoord
-
-· Velresmax (fps or mps)
-
-· Velxmax
-
-· Velymax
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Velresmax (fps or mps)
+    - Velxmax
+    - Velymax
 
 Flow velocities are computed in 8-directions for each grid element.
 In the figure below, the red arrows indicate inflow to the grid element (2-directions) and the blue arrows represent outflow from the grid element
@@ -2253,11 +2221,9 @@ This file lists the street element number, maximum street velocity and the time 
 It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
 unreasonably high maximum street velocities.
 
-· Grid element
-
-· Vmax street element (fps or mps)
-
-· Time of occurrence
+    - Grid element
+    - Vmax street element (fps or mps)
+    - Time of occurrence
 
 WSTIME.OUT
 
@@ -2270,13 +2236,10 @@ XSECAREA.OUT
 When the channel cross section option is invoked for channel routing, the channel geometry data is written to this file.
 It includes: grid element, flow area, top width and wetted perimeter for the lowest top of bank (bankfull flow).
 
-· Grid element
-
-· Flow area of the cross section (sqft or sqm)
-
-· Top width of the cross section (ft or m)
-
-· Wetted Perimeter of the cross section (ft or m)
+    - Grid element
+    - Flow area of the cross section (sqft or sqm)
+    - Top width of the cross section (ft or m)
+    - Wetted Perimeter of the cross section (ft or m)
 
 XSEC.OUT
 
