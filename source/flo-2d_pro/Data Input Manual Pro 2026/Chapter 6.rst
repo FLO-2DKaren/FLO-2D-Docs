@@ -247,36 +247,44 @@ The surveyed water surface can also be compared directly with the FLO-2D compute
 file section) by creating a WSTIME.DAT file.
 The WSTIME.DAT file format is as follows:
 
-   WSTIME.DAT File Descriptors
+.. raw:: html
 
-   49 Line 1: # of channel elements with a surveyed ws elev.
-   117632 4658.95 240 Line 2: Grid Element WS elevation Time
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>               WSTIME.DAT File Descriptors</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+        49                           Line 1: # of channel elements with a surveyed ws elev.
+        117632 4658.95 240           Line 2: Grid Element WS elevation Time
+        117928 4655.80 240           Line 2: Grid Element WS elevation
+        ...
+        Notes:
+           Line 2: This line is repeated for each data set.
+        </pre>
+    </div>
+.. raw:: html
 
-   117928 4655.80 240 Line 2: Grid Element WS elevation
-
-   ...
-
-Notes:
-
-   Line 2: This line is repeated for each data set.
+    <br><br>
 
 The WSTIME.OUT file will contain:
 
 Channel element number., time of survey (hrs), surveyed water surface elevation, computed water surface elevation, difference between the surveyed and
 computed water surface and cumulative difference between the surveyed and computed water surface elevations.
 
-   WSTIME.DAT File Example
+.. raw:: html
 
-   49
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>                   WSTIME.DAT File Example</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+           49
+           117632 4658.95 240
+           117928 4655.80 240
+           119882 4652.28 240
+           120580 4650.36 240
+           120915 4648.52 240
+           ....
+        </pre>
+    </div>
+.. raw:: html
 
-   117632 4658.95 240
-
-   117928 4655.80 240
-
-   119882 4652.28 240
-
-   120580 4650.36 240
-
-   120915 4648.52 240
-
-   ....
+    <br><br>
