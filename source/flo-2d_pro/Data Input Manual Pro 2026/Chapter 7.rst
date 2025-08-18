@@ -1283,7 +1283,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - \
      - Move hydraulic structure of realigning channel.
 
-   * -
+   * - \
      - Realign levee or realign channel.
 
    * - \
@@ -1832,7 +1832,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - \
      - Do you mean Max Depth?
 
-    * - \
+   * - \
      - Review SWMMFLOW.DAT.
 
    * - \
@@ -2072,49 +2072,49 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Make sure the hydraulic structure is on the correct side of the levee.
        Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
 
-   * -
+   * - \
      - Make sure the hydraulic structure is on the correct side of the levee.
        Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
 
-   * -
+   * - \
      - Delete the repeated levee.
 
-   * -
+   * - \
      - Move the inflow node.
 
-   * -
+   * - \
      - Move the inflow node.
 
-   * -
+   * - \
      - Move the inflow node.
 
-   * -
+   * - \
      - Remove the ARF/WRF.
 
-   * -
+   * - \
      - Remove the ARF/WRF.
 
-   * -
+   * - \
      - Remove the ARF/WRF.
 
-   * -
+   * - \
      - A multiple channel cannot be assigned to a bank element.
        See reference manual.
 
-   * -
+   * - \
      - A multiple channel cannot be assigned to a bank element.
        See reference manual.
 
-   * -
+   * - \
      - Make sure the multiple channel is on the correct side of the levee.
 
-   * -
+   * - \
      - Delete one of the repeated lines in MULT.DAT.
 
-   * -
+   * - \
      - Make sure the multiple channel is on the correct side of the levee.
 
-   * -
+   * - \
      - A multiple channel cannot be assigned to a bank element.
        See reference manual.
 
