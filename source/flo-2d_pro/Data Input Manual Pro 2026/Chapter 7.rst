@@ -1191,200 +1191,149 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Check INFLOW.DAT.
 
    * - 800
-     - INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be Specified, CONT.DAT Variable  Inplot
-       must be Set to 1
+     - INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be
+       Specified, CONT.DAT Variable  Inplot must be Set to 1
 
 
-.. table:: Table 7.6 ADVANCED ERROR CODES
+**Table 7.6 ADVANCED ERROR CODES**
 
-.. _`1000`:
+.. list-table::
+   :widths: 50 50
+   :header-rows: 0
 
-1000:
+   * - 1000
+     - Inflow Fp on a Ch Interior Element
 
-Inflow Fp on a Ch Interior Element
+   * - 1000
+     - Inflow Ch on a Ch Interior Element
 
-.. _`1000`:
+   * - 1000
+     - Outflow Ch on a Ch Interior Element
 
-1000:
+   * - 1000
+     - Outflow Fp on a Ch Interior Element
 
-Inflow Ch on a Ch Interior Element
+   * - 1000
+     - Stage Time Relationship on a Ch Interior Element
 
-.. _`1000`:
+   * - 1000
+     - Full ARF on a Ch Interior Element
 
-1000:
+   * - 1000
+     - Partial ARF on a Ch Interior Element
 
-Outflow Ch on a Ch Interior Element
+   * - 1000
+     - WRF on a Ch Interior Element
 
-.. _`1000`:
+   * - 1000
+     - Hs inlet on a Ch Interior Element
 
-1000:
+   * - 1000
+     - Hs outlet on a Ch Interior Element
 
-Outflow Fp on a Ch Interior Element
+   * - 1000
+     - Levee on a Ch Interior Element
 
-.. _`1000`:
+   * - 1000
+     - Multiple Channel on a Channel Interior Element
 
-1000:
+   * - 1000
+     - Channel Width is Greater Than the Element Width.
+       Channel Left and Right Bank Elements Should Be Separated
 
-Stage Time Relationship on a Ch Interior Element
+   * - 1000
+     - Channel Grid Element Will Require Separate Left and Right Bank Elements
 
-.. _`1000`:
+   * - 1000
+     - Channel Extension Exceeds the Grid System Boundary
 
-1000:
+   * - 1000
+     - Channel Element Extends Into Interior of the Channel Element Instead Extend the Channel Into Another Bank Element
 
-Full ARF on a Ch Interior Element
+   * - \
+     - To run in display mode, set the graphics mode in CONT.DAT and the plotting hydro- graph in INFLOW.DAT.
 
-.. _`1000`:
+   * - \
+     - Move inflow node or realign channel.
 
-1000:
+   * - \
+     - Move inflow node or realign channel.
 
-Partial ARF on a Ch Interior Element
+   * - \
+     - Move outflow node or realign channel.
 
-.. _`1000`:
+   * - \
+     - Move outflow node or realign channel.
 
-1000:
+   * - \
+     - Move outflow node or realign channel.
 
-WRF on a Ch Interior Element
+   * - \
+     - Delete ARF or realign channel.
 
-.. _`1000`:
+   * - \
+     - Delete ARF or realign channel.
 
-1000:
+   * - \
+     - Delete WRF or realign channel.
 
-Hs inlet on a Ch Interior Element
+   * - \
+     - Move hydraulic structure or realign channel.
 
-.. _`1000`:
+   * - \
+     - Move hydraulic structure of realigning channel.
 
-1000:
+   * -
+     - Realign levee or realign channel.
 
-Hs outlet on a Ch Interior Element
+   * - \
+     - Realign multiple channel.
+       See reference manual.
 
-.. _`1000`:
+   * - \
+     - Realign right bank.
+       Extend right bank way from left bank.
 
-1000:
+   * - \
+     - Realign right bank.
 
-Levee on a Ch Interior Element
+   * - \
+     - Realign right bank.
 
-.. _`1000`:
+   * - \
+     - Realign right bank.
 
-1000:
+   * - \1000
+     - Channel Element is Repeated in the CHAN.DAT File.
+       Each Channel Element Should Only Be Listed Once
 
-Multiple Channel on a Channel Interior Element
 
-.. _`1000`:
 
-1000:
-
-Channel Width is Greater Than the Element Width.
-Channel Left and Right Bank Elements Should Be Separated
-
-.. _`1000`:
-
-1000:
-
-Channel Grid Element Will Require Separate Left and Right Bank Elements
-
-.. _`1000`:
-
-1000:
-
-Channel Extension Exceeds the Grid System Boundary
-
-.. _`1000`:
-
-1000:
-
-Channel Element Extends Into Interior of the Channel Element Instead Extend the Channel Into Another Bank Element
-
-To run in display mode, set the graphics mode in CONT.DAT and the plotting hydro- graph in INFLOW.DAT.
-
-Move inflow node or realign channel.
-
-Move inflow node or realign channel.
-
-Move outflow node or realign channel.
-
-Move outflow node or realign channel.
-
-Move outflow node or realign channel.
-
-Delete ARF or realign channel.
-
-Delete ARF or realign channel.
-
-Delete WRF or realign channel.
-
-Move hydraulic structure or realign channel.
-
-Move hydraulic structure of realigning channel.
-
-Realign levee or realign channel.
-
-Realign multiple channel.
-See reference manual.
-
-Realign right bank.
-Extend right bank way from left bank.
-
-Realign right bank.
-
-Realign right bank.
-
-Realign right bank.
-
-.. _`1000`:
-
-1000:
-
-Channel Element is Repeated in the CHAN.DAT File.
-Each Channel Element Should Only Be Listed Once
-
-.. _`1000`:
-
-1000:
-
+bbbbbbbbbbbbbbbbbbbbb
+1000
 Channel Right Bank Elements Need Some Adjustment Due to the Channel Width.
 Set Right Bank Either Closer or Farther Away from the Left Bank Element
 
-.. _`1000`:
-
-1000:
-
+1000
 Remaining Floodplain Surface Area on the Channel Bank Elements Needs to Be Larger For Left Bank Element
 
-.. _`1000`:
-
-1000:
-
+1000
 Data Error...Check the Channel Elements in the CHAN.DAT Files
 
-.. _`1000`:
-
-1000:
-
+1000
 Channel Extension For Grid Element Extends Into Another Channel Element
 
-.. _`1000`:
-
-1000:
-
+1000
 Channel Confluence Element Does Not Have Enough Connections, or a Channel Segment is Beginning or Ending at a Main Channel Confluence Element
 
-.. _`1000`:
-
-1000:
-
+1000
 Channel Extends Past the Levee System, Please Review the CHANNEL.
 CHK File and Make the Necessary Corrections
 
-.. _`1000`:
-
-1000:
-
+1000
 Inflow Channel Element is not a Channel Element in CHAN.DAT
 
-.. _`1000`:
-
-1000:
-
+1000
 Channel Outflow Node Must Have a Lower Bed Elevation Than the Contiguous Upstream Channel Element to Compute a Normal Depth Outflow Condition
 
 .. _`1000`:
