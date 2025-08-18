@@ -11,82 +11,81 @@ Data input errors may result in the automatic termination of a simulation run al
 The error message will report a ‘Unit’ number that is associated with the FLO-2D file that contains the error.
 The files are listed in Table 4.1, Table 7.1, and Table 7.2.
 
-.. table:: Table 7. 1 List of Misc Files and Unit Numbers
+**Table 7. 1 List of Misc Files and Unit Numbers**
 
 .. list-table::
-      :widths: 25 25 25 25
-      :header-rows: 0
+   :widths: 25 25 25 25
+   :header-rows: 0
 
-      * - **Unit No.**
-        - **File Name**
-        - **Unit No.**
-        - **File Name**
+   * - **Unit No.**
+     - **File Name**
+     - **Unit No.**
+     - **File Name**
 
-      * - 47
-        - ARF.BAC
-        - 398
-        - MANNINGS_N.BAC
+   * - 47
+     - ARF.BAC
+     - 398
+     - MANNINGS_N.BAC
 
-      * - 260
-        - BREACH.BAC
-        - 2902
-        - MANNINGS_N_RES.BAC
+   * - 260
+     - BREACH.BAC
+     - 2902
+     - MANNINGS_N_RES.BAC
 
-      * - 387
-        - BUILDING_COLLAPSE.BAC
-        - 48
-        - MULT.BAC
+   * - 387
+     - BUILDING_COLLAPSE.BAC
+     - 48
+     - MULT.BAC
 
-      * - 46
-        - CHAN.BAC
-        - 51
-        - OUTFLOW.BAC
+   * - 46
+     - CHAN.BAC
+     - 51
+     - OUTFLOW.BAC
 
-      * - 40
-        - CONT.BAC
-        - 42
-        - RAIN.BAC
+   * - 40
+     - CONT.BAC
+     - 42
+     - RAIN.BAC
 
-      * - 35
-        - EVAPOR.BAC
-        - 1569
-        - SDCLOGGING.BAC
+   * - 35
+     - EVAPOR.BAC
+     - 1569
+     - SDCLOGGING.BAC
 
-      * - 41
-        - FPLAIN.BAC
-        - 49
-        - SED.BAC
+   * - 41
+     - FPLAIN.BAC
+     - 49
+     - SED.BAC
 
-      * - 121
-        - FPXSEC.BAC
-        - 53
-        - STREET.BAC
+   * - 121
+     - FPXSEC.BAC
+     - 53
+     - STREET.BAC
 
-      * - 1610
-        - GUTTER.BAC
-        - 1567
-        - SWMMFLO.BAC
+   * - 1610
+     - GUTTER.BAC
+     - 1567
+     - SWMMFLO.BAC
 
-      * - 69
-        - HYSTRUC.BAC
-        - 1564
-        - SWMMOUTF.BAC
+   * - 69
+     - HYSTRUC.BAC
+     - 1564
+     - SWMMOUTF.BAC
 
-      * - 43
-        - INFIL.BAC
-        - 29
-        - TOLER.BAC
+   * - 43
+     - INFIL.BAC
+     - 29
+     - TOLER.BAC
 
-      * - 44
-        - INFLOW.BAC
-        - 397
-        - TOPO.BAC
+   * - 44
+     - INFLOW.BAC
+     - 397
+     - TOPO.BAC
 
-      * - 58
-        - LEVEE.BAC
-        - 2901
-        - TOPO_RES.BAC
-
+   * - 58
+     - LEVEE.BAC
+     - 2901
+     - TOPO_RES.BAC
 
 **Troubleshooting: Is the flood simulation running OK?**
 
