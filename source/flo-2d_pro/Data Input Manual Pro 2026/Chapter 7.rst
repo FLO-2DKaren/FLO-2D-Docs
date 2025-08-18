@@ -786,6 +786,8 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
        This may require Technical Support.
 
+ccccccccccccccccccccccccccccccccccccccccccccccc
+
    * - \
      - Review engine file dates and flopro.exe and vc2005con.dll.
        Make sure the file dates correspond to builds that are the same.
@@ -922,7 +924,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Export MANINGS_N.DAT again.
 
    * - \
-Check the SPATIALSHALLOWN.DAT file.
+    - Check the SPATIALSHALLOWN.DAT file.
 
    * - \
      - Check the CONT.DAT file.
@@ -1041,85 +1043,85 @@ Check the SPATIALSHALLOWN.DAT file.
      - Consider changing the inflow to channel inflow.
 
    * - \
-Consider moving the inflow node to the left bank and changing it to a channel node.
+     - Consider moving the inflow node to the left bank and changing it to a channel node.
 
    * - \
-Check the levee Inflow condition.
-Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
+     - Check the levee Inflow condition.
+       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
 
    * - \
-Reposition the inflow node.
+     - Reposition the inflow node.
 
    * - \
-Reposition the inflow node.
+     - Reposition the inflow node.
 
    * - \
-A cell is listed twice in INFLOW.DAT.
-Check the file and remove one of the hydrographs.
+     - A cell is listed twice in INFLOW.DAT.
+       Check the file and remove one of the hydrographs.
 
    * - \
-Move the inflow node to the left bank.
+     - Move the inflow node to the left bank.
 
    * - \
-Check the levee Inflow condition.
-Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
+     - Check the levee Inflow condition.
+       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
 
    * - \
-Remove the extra line in OUTFLOW.DAT.
+     - Remove the extra line in OUTFLOW.DAT.
 
    * - \
-Move the outflow node left bank.
+     - Move the outflow node left bank.
 
    * - \
-Make sure the outflow node is on the correct side of the levee.
+     - Make sure the outflow node is on the correct side of the levee.
 
    * - \
-Move the outflow node left bank.
+     - Move the outflow node left bank.
 
-800
-The Following Cell Has an Outflow (Fp) on a Channel Left Bank or Right Bank Element:
+   * - 800
+     - The Following Cell Has an Outflow (Fp) on a Channel Left Bank or Right Bank Element:
 
-800
-There is an Outflow Conditions Imposed on a Levee Element
+   * - 800
+     - There is an Outflow Conditions Imposed on a Levee Element
 
-800
-There are Two Stage Time Relationships Imposed at the Same Cell
+   * - 800
+     - There are Two Stage Time Relationships Imposed at the Same Cell
 
-800
-The Following Cell Has Stage Time Relationship on a Channel Right Bank Element:
+   * - 800
+     - The Following Cell Has Stage Time Relationship on a Channel Right Bank Element:
 
-800
-There are a Stage Time Outflow Condition Imposed on a Levee Element
+   * - 800
+     - There are a Stage Time Outflow Condition Imposed on a Levee Element
 
-800
-There are a Stage Time Relationship Imposed on an Outflow Cell
+   * - 800
+     - There are a Stage Time Relationship Imposed on an Outflow Cell
 
-800
-There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell
+   * - 800
+     - There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell
 
-800
-There are Two Outflow Conditions Imposed at the Same Cell
+   * - 800
+     - There are Two Outflow Conditions Imposed at the Same Cell
 
-800
-This Grid Cell Has an Outflow and a Full ARF
+   * - 800
+     - This Grid Cell Has an Outflow and a Full ARF
 
-800
-This Grid Cell Has an Outflow and a Partial ARF
+   * - 800
+     - This Grid Cell Has an Outflow and a Partial ARF
 
-800
-The Following Cell Has an Outflow and a WRF:
+   * - 800
+     - The Following Cell Has an Outflow and a WRF:
 
-800
-This Grid Cell Has a Stage Time Relationship and a Full ARF
+   * - 800
+     - This Grid Cell Has a Stage Time Relationship and a Full ARF
 
-800
-This Grid Cell Has a Stage Time Relationship and a Partial ARF
+   * - 800
+     - This Grid Cell Has a Stage Time Relationship and a Partial ARF
 
-800
-The Following Cell Has an Outflow and a WRF:
+   * - 800
+     - The Following Cell Has an Outflow and a WRF:
 
-800
-This Grid Cell Has an Outflow and a Full ARF
+   * - 800
+     - This Grid Cell Has an Outflow and a Full ARF
 
 800
 This Grid Cell Has an Outflow and a Partial ARF
