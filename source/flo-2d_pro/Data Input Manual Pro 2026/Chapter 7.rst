@@ -740,12 +740,6 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 100
      - Versions of the FLO-2D Pro and Storm Drain are Different. Please Check FLO-2D Build and Update Vc2005-Con.Dll
 
-
-
-
-
-
-yyyyyyyyyyyyyyyyyyyyyyyyy
    * - 100
      - Floodway Switch = 1,Set Encroach in CONT.DAT
 
@@ -791,14 +785,13 @@ yyyyyyyyyyyyyyyyyyyyyyyyy
    * - 200
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
 
+
+ddddddddddddddddddddddddddddddddddddd
    * -
      - Review engine file dates and flopro.exe and vc2005con.dll.
        Make sure the file dates correspond to builds that are the same.
        This may require Technical Support.
 
-
-
-uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
    * -
      - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
        The positions are 0, 1 or 2.
