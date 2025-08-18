@@ -737,9 +737,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    :widths: 50 50
    :header-rows: 0
 
+
    * - 100
-     - Versions of the FLO-2D Pro and Storm Drain are Different.
-       Please Check FLO-2D Build and Update Vc2005-Con.Dll
+     - Versions of the FLO-2D Pro and Storm Drain are Different. Please Check FLO-2D Build and Update Vc2005-Con.Dll
 
    * - 100
      - Floodway Switch = 1,Set Encroach in CONT.DAT
@@ -885,40 +885,38 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 600
      - Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
 
-700
-Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
+   * - 700
+     - Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
 
-.. _`700`:
+   * - 700
+     - To Use the SCS Curve Number Method For Infiltration You Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File
 
-700:
+   * - 700:
+     - Variable Poros is Greater Than 1
 
-To Use the SCS Curve Number Method For Infiltration You Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File
+   * -
+     - Reposition the structure node onto a left bank node.
 
-.. _`700`:
+   * -
+     - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
 
-700:
+   * -
+     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain =1 in CONT.DAT and Assign the RAIN.DAT File
 
-Variable Poros is Greater Than 1
+   * -
+     - Set the correct Courant number.
 
+   * -
+     - Check the STREET.DAT file.
 
-Reposition the structure node onto a left bank node.
+   * -
+     - Check the TOL value. It must be in a correct range.
 
-Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
+   * -
+     - Check the TOL variable and the Initial Abstraction variable. The initial abstraction may be too high. See INFIL.DAT.
 
-Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain =1 in CONT.DAT and Assign the RAIN.DAT File
-
-Set the correct Courant number.
-
-Check the STREET.DAT file.
-
-Check the TOL value.
-It must be in a correct range.
-
-Check the TOL variable and the Initial Abstraction variable.
-The initial abstraction may be too high.
-See INFIL.DAT.
-
-The MANNINGS_N.DAT file might not be complete.
+   * -
+     - The MANNINGS_N.DAT file might not be complete.
 
 Export MANINGS_N.DAT again.
 
