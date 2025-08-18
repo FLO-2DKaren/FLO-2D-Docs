@@ -19,19 +19,28 @@ It will also list the average channel hydraulic data for various reaches of rive
 Gaging station hydrograph data can be plotted along with the FLO-2D predicted hydrograph by creating the optional HYDRO.DAT file in the following
 format:
 
-HYDRO.DAT File Descriptors
 
-   Line 1: Number of gaging station with hydrograph data
+.. raw:: html
 
-   Line 2: Name of gaging station (10 letters)
+    <div style="border:2px solid black;padding:5px;display:inline-block;">
+        <div><i><pre>           HYDRO.DAT File Descriptors</pre></i></div>
+        <hr style="margin:4px 0;border:2px solid black;">
+        <pre>
+         3                  Line 1: Number of gaging station with hydrograph data
+         Haynor             Line 2: Name of gaging station (10 letters)
+         13160    251       Line 3: Channel grid element and # of hydrograph pairs
+         0.00   1287.85     Line 4: Hydrograph pairs time(hours) discharge (cfs)
+         1.00   1285.47     Line 4: Hydrograph pairs time(hours) discharge (cfs)
 
-   Line 3: Channel grid element and # of hydrograph pairs
+        Notes:
+         Line 2 - 4:  These lines are repeated for each gaging station.
+        </pre>
+    </div>
 
-   Line 4: Hydrograph pairs time(hours) discharge (cfs)
+.. raw:: html
 
-Notes:
+    <br><br>
 
-Line 2 - 4: These lines are repeated for each gaging station.
 
    HYDRO.DAT File Example
 
