@@ -273,7 +273,7 @@ computed water surface and cumulative difference between the surveyed and comput
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>                   WSTIME.DAT File Example</pre></i></div>
+        <div><i><pre>          WSTIME.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
            49
