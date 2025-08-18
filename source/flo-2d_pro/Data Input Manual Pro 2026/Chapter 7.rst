@@ -290,7 +290,7 @@ Table 7. 2 List of Common Data Errors
 
    * - 1. Missing data entries. Insufficient data was provided to the model.
 
-g   * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
+   * - 2. Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).
 
    * - 3. There was missing or additional lines in a data file when switch is activated. Observe the \**\* Notes: \**\* in the file descriptions.
 
