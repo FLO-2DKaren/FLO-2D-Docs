@@ -747,66 +747,65 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 100
      - Set NOPRTC to Only 0, 1, or 2 in CONT.DAT
 
-100
-For Graphical Display (Lgplot=2),Graptim must be Greater Than 0
+   * - 100
+     - For Graphical Display (Lgplot=2),Graptim must be Greater Than 0
 
-100
-Variable Xconc Exceeds 1
+   * - 100
+     - Variable Xconc Exceeds 1
 
-100
-Variable Xarf is Less Than 0 or Greater Than 1
+   * - 100
+     - Variable Xarf is Less Than 0 or Greater Than 1
 
-100
-Variable Froudl Greater Than 9
+   * - 100
+     - Variable Froudl Greater Than 9
 
-100
-Variable Noprtfp is a Switch,Use Only 0,1,2 or 3
+   * - 100
+     - Variable Noprtfp is a Switch,Use Only 0,1,2 or 3
 
-100
-Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation.
-Review CONT.DAT File
+   * - 100
+     - Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation. Review CONT.DAT File
 
-100
-Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File
+   * - 100
+     - Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File
 
-100
-If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT
+   * - 100
+     - If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT
 
-100
-If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
+   * - 100
+     - If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
 
-100
-Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Vari-able Lgplot must be Set to 1
+   * - 100
+     - Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Vari-able Lgplot must be Set to 1
 
-100
-Total Simulation Time of the Model Exceeds the Hydrograph Duration
+   * - 100
+     - Total Simulation Time of the Model Exceeds the Hydrograph Duration
 
-100
-If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,Then Lgplot must be 0 or 1
+   * - 100
+     - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,Then Lgplot must be 0 or 1
 
-200
-Grid Element Coordinates Exceed 1000000000.
-Reduce the Coordinate Values Before Proceeding
+   * - 200
+     - Grid Element Coordinates Exceed 1000000000.
+       Reduce the Coordinate Values Before Proceeding
 
-Review engine file dates and flopro.exe and vc2005con.dll.
-Make sure the file dates correspond to builds that are the same.
-This may require Technical Support.
+       Review engine file dates and flopro.exe and vc2005con.dll.
+       Make sure the file dates correspond to builds that are the same.
+       This may require Technical Support.
 
-To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
-The positions are 0, 1 or 2.
+       To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
+       The positions are 0, 1 or 2.
 
-The variable Graphtim is missing in CONT.DAT.
+       The variable Graphtim is missing in CONT.DAT.
 
-The sediment concentration cannot be greater than 1.
+       The sediment concentration cannot be greater than 1.
 
-The Xarf variable must be a value between 0 and 1.
+       The Xarf variable must be a value between 0 and 1.
 
-The Froudl variable should not be greater than 1.
+       The Froudl variable should not be greater than 1.
 
-NOPRTFP is a switch.
-The positions are 0, 1 or 2.
+       NOPRTFP is a switch.
+       The positions are 0, 1 or 2.
 
-Set either MUD or ISED to 0.
+       Set either MUD or ISED to 0.
 
 If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
 Check the location of the cell.
@@ -824,104 +823,55 @@ Turn on the Lgplot and Graphtim to use Display Mode.
 
 Check the coordinates in topo.dat.
 
-.. _`200`:
-
-200:
-
+200
 Hydraulic Structure Channel Inflow must be a Channel Element
 
-.. _`200`:
-
-200:
-
+200
 Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
 Stage Was Reset to the Bed Elevation
 
-.. _`200`:
-
-200:
-
+200
 If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
 
-.. _`300`:
-
-300:
-
+300
 A Channel/Street Courant Number is Required in TOLER.DAT
 
-.. _`300`:
-
-300:
-
+* 300:
 If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
 
-.. _`400`:
-
-400:
-
+400
 Variable Tol Has an Inappropriate Value
 
-.. _`400`:
-
-400:
-
+400
 Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction
 
-.. _`500`:
-
-500:
-
+500
 MANNINGS_N.DAT File Has a Mismatched Grid Element Number...
 Check the End of this File
 
-.. _`500`:
-
-500:
-
+500
 MANNINGS_N.DAT Files Does Not Exist.
 Create the File Before Proceeding
 
-.. _`500`:
-
-500:
-
+500
 The Spatially Variable Shallown Value is Outside the Range 0.010 to 0.99
 
-.. _`500`:
-
-500:
-
+500
 N-Value is Less Than 0 or Greater Than 1
 
-.. _`600`:
-
-600:
-
+600
 Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable Real Rainfall Adjustments (Irainarf=1) With Rainarf Values
 
-.. _`600`:
-
-600:
-
+600
 Rtt must be Greater Than 0
 
-.. _`600`:
+600
+First Pair of the Rainfall Distribution Should Be 0.0.
 
-600:
-
-First Pair of the Rainfall Distribution Should Be 0.
-0.
-
-.. _`600`:
-
-600:
-
+600
 Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
 
-.. _`700`:
-
-700:
-
+700
 Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
 
 .. _`700`:
