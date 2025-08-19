@@ -960,7 +960,7 @@ CONFLUENCE.OUT
     This file lists the channel elements that constitute a confluence as defined by having three or more channel elements
     contiguous to a given channel element.
 
-**CROSSMAX.OUT**
+CROSSMAX.OUT
 
     When the floodplain cross-section analysis is requested by creating the FPXSEC.DAT file, the CROSSMAX.OUT is created.
     This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified
@@ -1368,7 +1368,7 @@ HYDRAULIC STRUCTURE SUBFACTORS.OUT
 
 HYDROSTRUCT.OUT
 
-The discharge hydrographs of all the hydraulic structures is presented in this output file.
+    The discharge hydrographs of all the hydraulic structures is presented in this output file.
     This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
     If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
     If the discharge varies wildly, there could be surging.
@@ -1400,7 +1400,7 @@ IMPACT.OUT
         - Ycoord
         - Impact - lbf/ft or N/m
 
-- INFILHY.OUT
+INFILHY.OUT
 
     The hydraulic conductivities are listed in this file to review their spatial variation.
     This file contains grid element number, x- and y-coordinates and floodplain hydraulic conductivity.
@@ -1489,10 +1489,10 @@ LEVEEDEFIC.OUT
 
         4 = levee is overtopped by flow.
 
-        - Grid element
-        - Xcoord
-        - Ycoord
-        - Levee deficit
+            - Grid element
+            - Xcoord
+            - Ycoord
+            - Levee deficit
 
 GE_LEVFAIL.OUT
 
@@ -1519,8 +1519,8 @@ GE_PRESCRIBED_BREACH Q.OUT
     The grid element number indications the location where the breach initiated.
     The discharge is total flow through all expansion elements.
 
-    - Time (hrs)
-    - Discharge (cfs or cms)
+        - Time (hrs)
+        - Discharge (cfs or cms)
 
 LEVOVERTOP.OUT
 
@@ -1530,10 +1530,10 @@ LEVOVERTOP.OUT
     The rows of data are grouped by Grid element.
     There is a row break when the Peak Q and Time are reported.
 
-    - Discharge total
-    - Time - time of overtopping,
-    - Discharge direction columns N, E, S, W, NE, SE,SW, NW.
-      Negative value means flow is moving from the opposite grid to the grid with the levee assigned.
+        - Discharge total
+        - Time - time of overtopping,
+        - Discharge direction columns N, E, S, W, NE, SE,SW, NW.
+          Negative value means flow is moving from the opposite grid to the grid with the levee assigned.
 
 LEVOVERTOPMAX.OUT
 
@@ -1567,7 +1567,7 @@ MANNINGS_N.RGH
 
 MAXQBYDIR.OUT
 
-    This output file lists the maximum floodplain grid element discharge ac- cording to the eight flow directions and the time of occurrence.
+    This output file lists the maximum floodplain grid element discharge according to the eight flow directions and the time of occurrence.
 
     - Grid element
     - North - Qmax (cfs or cms) Time
@@ -1874,13 +1874,16 @@ SUMMARY.OUT
     Mass balance information for the various flow components is reported.
 
         - Inflows
+
             - Inflow hydrograph volume
             - Rainfall volume
         - Storage
         - Floodplain storage
+
             - Channel storage
             - TOL storage (see TOLER.DAT)
         - Outflow
+
             - Infiltration and interception
             - Floodplain outflow
             - Channel infiltration
@@ -1993,7 +1996,7 @@ TIMDEP.OUT
 
     This file contains grid element, flow depth, velocity and velocity direction x and y and water surface elevation for each floodplain grid element at
     the user specified time intervals (TIMTEP in CONT.DAT).
-    This file is also required for a time-lapse simulation in the MAXPLOT and FLO-2D Map- Crafter post-processor programs.
+    This file is also required for a time-lapse simulation in the MAXPLOT and FLO-2D MapCrafter post-processor programs.
 
     Time - output interval for time series.
     Single value at the top of the columns.
@@ -2014,8 +2017,7 @@ TIMDEPCELL.OUT
 TIMDEP.HDF5
 
     This binary output file contains grid element, flow depth, velocity and velocity direction x and y and water surface elevation for each floodplain
-    grid element at the user specified output time intervals (TIMTEP in CONT.
-    DAT).
+    grid element at the user specified output time intervals (TIMTEP in CONT.DAT).
     This file is written in binary format (HDF5) and it has the same results than the TIMDEP.OUT file.
 
 TIMDEP_NC4.OUT
