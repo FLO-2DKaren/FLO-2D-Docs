@@ -1,0 +1,2711 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Chapter 5: Output Files and Options &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="6. Chapter 6: Post-Processor Programs" href="Chapter%206.html" />
+    <link rel="prev" title="4. Chapter 4: Input Data File Description" href="Chapter%204.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Input Manual Pro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Preface.html">Preface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1: FLO-2D Installation and Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2: Help and Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">3. Chapter 3: Pre-Processor Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">4. Chapter 4: Input Data File Description</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5. Chapter 5: Output Files and Options</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-guidelines-for-using-output-files">5.1. Basic guidelines for using output files.</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">6. Chapter 6: Post-Processor Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">7. Chapter 7: Debugging and Trouble Shooting the Data Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">FLO-2D Pro Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Data Input Manual Pro</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Chapter 5: Output Files and Options</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Data Input Manual Pro 2025/Chapter 5.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-5-output-files-and-options">
+<h1><span class="section-number">5. </span>Chapter 5: Output Files and Options<a class="headerlink" href="#chapter-5-output-files-and-options" title="Link to this heading"></a></h1>
+<section id="basic-guidelines-for-using-output-files">
+<h2><span class="section-number">5.1. </span>Basic guidelines for using output files.<a class="headerlink" href="#basic-guidelines-for-using-output-files" title="Link to this heading"></a></h2>
+<p>During the flood simulation, the user has two choices for viewing the model flood progression:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>An output text screen</p></li>
+<li><p>A graphical representation of the flood simulation.</p></li>
+</ol>
+</div></blockquote>
+<p>The screen option is selected with the LGPLOT variable in the CONT.DAT file.
+The text screen scrolls a list of the simulation time, minimum timestep and the volume conservation data.
+This screen enables the user to view the simulation runtime speed and the volume conservation.
+The second screen option is a color graphics display of the grid element flow depth (area of inundation) along with the
+inflow hydrograph.
+After the flood simulation is complete, the hydraulic results are presented in output files that contain hydrographs,
+maximum flow depths and velocities.</p>
+<p>The conservation of flood volume (inflow equals outflow plus storage) should be reviewed for each simulation.
+A summary of the inflow volume, final volumes left on the floodplain (storage) and outflow from the grid system is
+presented in the SUMMARY.OUT file.</p>
+<p>Output files are created with both spatial and temporal formats.
+Output files that are listed in the order of the output intervals are temporal output and output files listed in the order of the grid elements is
+spatial output.
+Output data include water surface elevation, flow depth, velocity, discharge, impact pressure, specific energy,
+sediment concentration and other variables.
+Overland flow hydraulics may be viewed as individual grid elements or the grid elements can be grouped together to produce floodplain cross sections.
+Summary tables listing maximum velocity and flow depths and their times of occurrence appear at the end of the BASE.OUT file.
+Review the CONT.DAT file description in Chapter 4 for more information about specifying output file formats.</p>
+<p>The user is cautioned about specifying the output in too much detail which can result in extremely large output files.
+The output time interval TOUT and NOPRTFP options in the CONT.DAT file can be assigned to limit the size of the output files.
+When NOPRTFP is set to 0, all the floodplain output data is written to the BASE.OUT file for each output interval.
+Setting NOPRTFP = 2 will turn off all of the temporal floodplain hydraulic output data.</p>
+<p>The user does not have to specify any output file names.
+It is important to note that each time the model is run, it will write over the existing output files and the previous
+output file data will be lost.
+To save any output files in anticipation of subsequent simulation, the user should create another subdirectory.</p>
+<p>Use NotePad© , NotePad++© or any other ASCII editor to view the output files.
+A brief description of all the output files follows:</p>
+<p><em>Table 5.1.
+List of General *.OUT Files and Unit Numbers</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>BASE.OUT</p></td>
+<td><p>19</p></td>
+<td><p>TIME.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>SUMMARY.OUT</p></td>
+<td><p>55</p></td>
+<td><p>SURFAREA.OUT</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.2.
+List of 2-D Overland Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Depth</p></td>
+<td></td>
+<td><p>Velocity</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>DEPTH.OUT</p></td>
+<td><p>118</p></td>
+<td><p>VELTIMEFP.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p>DEPTHTOL.OUT</p></td>
+<td><p>641</p></td>
+<td><p>VELRESMAX.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>DEPTHDUR.OUT</p></td>
+<td><p>81</p></td>
+<td><p>FINALVEL.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>62</p></td>
+<td><p>FINALDEP.OUT</p></td>
+<td><p>83</p></td>
+<td><p>FINALDIR.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>60</p></td>
+<td><p>DEPFP.OUT</p></td>
+<td><p>63</p></td>
+<td><p>VELDIREC.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>General</p></td>
+<td></td>
+<td><p>64</p></td>
+<td><p>VELFP.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>45</p></td>
+<td><p>FLOODWAY.OUT</p></td>
+<td><p>1401</p></td>
+<td><p>VEL_X_DEPTH.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>101</p></td>
+<td><p>IMPACT.OUT</p></td>
+<td><p>Discharge</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>102</p></td>
+<td><p>STATICPRESS.OUT</p></td>
+<td><p>105</p></td>
+<td><p>MAXQHYD.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>289</p></td>
+<td><p>INFIL_DEPTH.OUT</p></td>
+<td><p>106</p></td>
+<td><p>MAXQBYDIR.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>82</p></td>
+<td><p>OUTNQ.OUT</p></td>
+<td><p>107</p></td>
+<td><p>MAXQRESOLVED.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>92</p></td>
+<td><p>INTERGWS.OUT</p></td>
+<td><p>124</p></td>
+<td><p>MAXWSELEV.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>67</p></td>
+<td><p>INFILHY.OUT</p></td>
+<td><p>Time</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>104</p></td>
+<td><p>SPECENERGY.OUT</p></td>
+<td><p>21</p></td>
+<td><p>TIMDEP.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>111</p></td>
+<td><p>FPINFILTRATION.</p></td>
+<td><p>78</p></td>
+<td><p>TIMDEP_NC4.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>Review</p></td>
+<td></td>
+<td><p>181</p></td>
+<td><p>WSTIME.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1131</p></td>
+<td><p>EVACUATEDFP.OUT</p></td>
+<td><p>190</p></td>
+<td><p>TIMETWOFT.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>1597</p></td>
+<td><p>FLOODPLAIN_CONVERGENCE.OUT</p></td>
+<td><p>191</p></td>
+<td><p>TIMETOPEAK.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1598</p></td>
+<td><p>DEPRESSED_ELEMENTS.OUT</p></td>
+<td><p>192</p></td>
+<td><p>TIMEONEFT.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>ROUGH.OUT</p></td>
+<td><p>193</p></td>
+<td><p>FLOODWAVETIME.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>65</p></td>
+<td><p>SUPER.OUT</p></td>
+<td><p>528</p></td>
+<td><p>DEPTHDUR2.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>288</p></td>
+<td><p>BUILDING_COLLAPSE.OUT</p></td>
+<td><p>1921</p></td>
+<td><p>TIME_TO_ABOVE_BASE-FLOW.OUT</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>201</p></td>
+<td><p>BASEFLOWFP_TIME.OUT</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.3.
+List of 1-D Channel Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>CHANMAX.OUT</p></td>
+<td><p>94</p></td>
+<td><p>XSEC.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>VELOC.OUT</p></td>
+<td><p>103</p></td>
+<td><p>CONFLUENCE.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>61</p></td>
+<td><p>DEPCH.OUT</p></td>
+<td><p>140</p></td>
+<td><p>CHANSEDSIZE.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>66</p></td>
+<td><p>CHVOLUME.OUT</p></td>
+<td><p>113</p></td>
+<td><p>EVACUATEDCHAN.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>74</p></td>
+<td><p>CHNBEDEL.OUT</p></td>
+<td><p>117</p></td>
+<td><p>VELTIMEC.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>80</p></td>
+<td><p>HYCHAN.OUT</p></td>
+<td><p>261</p></td>
+<td><p>DEPCHFINAL.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>87</p></td>
+<td><p>OVERBANK.OUT</p></td>
+<td><p>262</p></td>
+<td><p>VELCHFINAL.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>90</p></td>
+<td><p>CHANSTABILITY.OUT</p></td>
+<td><p>263</p></td>
+<td><p>CHAN_INTERIOR_NODES.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>91</p></td>
+<td><p>XSECAREA.OUT</p></td>
+<td><p>345</p></td>
+<td><p>CHANLOSSES.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>93</p></td>
+<td><p>CHANWS.OUT</p></td>
+<td><p>1596</p></td>
+<td><p>CHANNEL_CONVERGENCE.OUT</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.4.
+List of Hydraulic Structures Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>70</p></td>
+<td><p>HYDROSTRUCT.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>669</p></td>
+<td><p>HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>910</p></td>
+<td><p>BRIDGE_FLOW_GEOMETRY.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>912</p></td>
+<td><p>BRIDGE_DISCHARGE.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>914</p></td>
+<td><p>BRIDGE_COEFFICIENTS.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>671</p></td>
+<td><p>HYDRAULIC STRUCTURE SUBFACTORS.OUT</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.5.
+List of Levee and Breach Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>59</p></td>
+<td><p>LEVEE.OUT</p></td>
+<td><p>1594</p></td>
+<td><p>LOW_LEVEE_CREST_ELEVATIONS.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>160</p></td>
+<td><p>LEVOVERTOP.OUT</p></td>
+<td><p>1601</p></td>
+<td><p>LEVOVERTOPMAX.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>161</p></td>
+<td><p>LEVEEDEFIC.OUT</p></td>
+<td><p>1779</p></td>
+<td><p>CVFPMAX.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>255</p></td>
+<td><p>BREACH.OUT</p></td>
+<td><p>GE#</p></td>
+<td><p>GE#_LEVFAIL.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>1132</p></td>
+<td><p>DAMBREACH_VOLUME.OUT</p></td>
+<td><p>699</p></td>
+<td><p>PRESCRIBED_BREACHQ.OUT</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.6.
+List of Storm Drain Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>1560</p></td>
+<td><p>SWMMQIN.OUT</p></td>
+<td><p>1574</p></td>
+<td><p>MANHOLEPOP.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1565</p></td>
+<td><p>SWMMOUTFIN.OUT</p></td>
+<td></td>
+<td><p>SWMM.RPT</p></td>
+</tr>
+<tr class="row-even"><td><p>1563</p></td>
+<td><p>FPRIMELEV.OUT</p></td>
+<td></td>
+<td><p>SWMM.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1570</p></td>
+<td><p>SD MANHOLEPOPUP.OUT</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.7.
+List of Multiple Channel Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>MULTCHN.OUT</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>205</p></td>
+<td><p>MULTSTEEP.OUT</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.8.
+List of Sediment Transport and Mudflow Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>SEDFP.OUT</p></td>
+<td><p>88</p></td>
+<td><p>SEDTRAN.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>SEDCHAN.OUT</p></td>
+<td><p>139</p></td>
+<td><p>FPSEDSIZE.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>77</p></td>
+<td><p>SEDCONSERV.OUT</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.9.
+List of Two Phase Flow Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>241</p></td>
+<td><p>VELOC_MUD.OUT</p></td>
+<td><p>831</p></td>
+<td><p>FINALDIR_MUD.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>242</p></td>
+<td><p>CVTMAX.OUT</p></td>
+<td><p>811</p></td>
+<td><p>FINALVEL_MUD.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>243</p></td>
+<td><p>CVTMAX_MUD.OUT</p></td>
+<td><p>1771</p></td>
+<td><p>FP_BED_CHANGE_MUD.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>245</p></td>
+<td><p>CVTFINAL_MUD.OUT</p></td>
+<td><p>1773</p></td>
+<td><p>CVFPMAX.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>361</p></td>
+<td><p>DEPCHFINAL_MUD.OUT</p></td>
+<td><p>1775</p></td>
+<td><p>FINALCVFP_MUD.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>602</p></td>
+<td><p>DEPFPMAX_MUD.OUT</p></td>
+<td><p>1779</p></td>
+<td><p>CVFPMAX_MUD.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>603</p></td>
+<td><p>DEPTHMAX_2PHASE_COMBINED.OUT</p></td>
+<td><p>2070</p></td>
+<td><p>2 PHASE SEDIMENT VOLUME CONSERVATION.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>611</p></td>
+<td><p>DEPCH_MUD.OUT</p></td>
+<td><p>2080</p></td>
+<td><p>FPWSEL_MUD.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>622</p></td>
+<td><p>FINALDEP_COMBO.OUT</p></td>
+<td><p>6411</p></td>
+<td><p>VELFP_MUD.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>621</p></td>
+<td><p>FINALDEP_MUD.OUT</p></td>
+<td><p>6412</p></td>
+<td><p>VELRESMAX_MUD.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>631</p></td>
+<td><p>VELDIREC_MUD.OUT</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.10.
+List of MODFLOW Output</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>1238</p></td>
+<td><p>MODFLOW FP INFILTRATION VOLUMES.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1239</p></td>
+<td><p>MODFLOW FP INFILTRATION TOTALS.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>1241</p></td>
+<td><p>MODFLOW CHANNEL INFILTRATION TOTALS.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1242</p></td>
+<td><p>FLO-2D MODFLOW FP RETURN EXCHANGE.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>1243</p></td>
+<td><p>FLO-2D MODFLOW CH RETURN EXCHANGE.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>1244</p></td>
+<td><p>FPMODFLOWELEV.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>1245</p></td>
+<td><p>CHMODFLOWELEV.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>12466</p></td>
+<td><p>FLO-2D MODFLOW INFILTRATION.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>12477</p></td>
+<td><p>MODFLOW FLO-2D RECHARGE.OUT</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.11.
+List of *.RHG Files and Unit Numbers</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>108</p></td>
+<td><p>FPLAIN.RGH</p></td>
+<td><p>109</p></td>
+<td><p>CHAN.RGH</p></td>
+</tr>
+<tr class="row-odd"><td><p>110</p></td>
+<td><p>STREET.RGH</p></td>
+<td><p>208</p></td>
+<td><p>MULT.RGH</p></td>
+</tr>
+<tr class="row-even"><td><p>309</p></td>
+<td><p>MANNINGS_N.RGH</p></td>
+<td><p>1572</p></td>
+<td><p>FPLAIN_SDELEV.RGH</p></td>
+</tr>
+<tr class="row-odd"><td><p>1573</p></td>
+<td><p>TOPO_SDELEV.RGH</p></td>
+<td><p>2229</p></td>
+<td><p>STEEPROUGH.RGH</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.12.
+List of Batch Files and Unit Numbers</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>195</p></td>
+<td><p>DEPFP_ANTERIOR.OUT</p></td>
+<td><p>213</p></td>
+<td><p>DIFF_VELOC.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>196</p></td>
+<td><p>DIFF_DEPFP.OUT</p></td>
+<td><p>214                 </p></td>
+<td><p>VELTIMEFP_ANTERIOR.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>197</p></td>
+<td><p>FINALDEP_ANTERIOR.OUT</p></td>
+<td><p>215</p></td>
+<td><p>DIFF_VELTIMEFP.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>198</p></td>
+<td><p>DIFF_FINALDEP.OUT</p></td>
+<td><p>216</p></td>
+<td><p>VELTIMEC_ANTERIOR.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>199</p></td>
+<td><p>ENDRUNBATCHTEST.OUT</p></td>
+<td><p>217</p></td>
+<td><p>DIFF_VELTIMEC.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>206</p></td>
+<td><p>VELFP_ANTERIOR.OUT</p></td>
+<td><p>218</p></td>
+<td><p>DEPCH_ANTERIOR.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>207</p></td>
+<td><p>DIFF_VELFP.OUT</p></td>
+<td><p>219</p></td>
+<td><p>DIFF_DEPCH.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>209</p></td>
+<td><p>DEPTH_ANTERIOR.OUT</p></td>
+<td><p>220</p></td>
+<td><p>DEPCHFINAL_ANTERIOR.OUT</p></td>
+</tr>
+<tr class="row-even"><td><p>210</p></td>
+<td><p>DIFF_DEPTH.OUT</p></td>
+<td><p>221</p></td>
+<td><p>DIFF_DEPCHFINAL.OUT</p></td>
+</tr>
+<tr class="row-odd"><td><p>212</p></td>
+<td><p>VELOC_ANTERIOR.OUT</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 5.13.
+List of *.TMP Files and Unit Numbers</em></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>File No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>CHMAX2.TMP</p></td>
+<td><p>112</p></td>
+<td><p>OUTNQMAX.TMP</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>OUTNQ.TMP</p></td>
+<td><p>122</p></td>
+<td><p>HYSTREET.TMP</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>HYCHAN.TMP</p></td>
+<td><p>159</p></td>
+<td><p>LEVOVERTOP.TMP</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>HYCROSS.TMP</p></td>
+<td><p>254</p></td>
+<td><p>BREACH.TMP</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>CROSSQ.TMP</p></td>
+<td><p>1561</p></td>
+<td><p>SWMMQIN.TMP</p></td>
+</tr>
+<tr class="row-odd"><td><p>71</p></td>
+<td><p>HYDROSTRUCT.TMP</p></td>
+<td><p>1566</p></td>
+<td><p>SWMMOUTFIN.TMP</p></td>
+</tr>
+<tr class="row-even"><td><p>76</p></td>
+<td><p>OUTNQ2.TMP</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>2 PHASE SEDIMENT VOLUME CONSERVATION.OUT</p>
+<blockquote>
+<div><p>Summary of the final disposition of the sediment volume.</p>
+</div></blockquote>
+<p>BASE.OUT</p>
+<blockquote>
+<div><p>BASE.OUT is an all-inclusive output file.
+At the beginning of the file, the inflow hydrographs are printed, then the time dependent output data follows.</p>
+<p>For each specified time output interval, the flow depth, velocity, water surface elevation and discharge for either
+the channel or the floodplain grid elements can be written.</p>
+<p>The outflow from the boundary grid elements is listed at the end of the time interval.</p>
+<p>After the final time output interval, a summary of all the grid elements maximum depths, water surface elevations,
+velocities and the time of occurrence of the maximum values is printed.</p>
+<p>Finally, a summary table of the inflow, outflow and storage volumes at the end of the file allows the user to review
+the conservation of mass and the ultimate disposition of all the water and sediment.</p>
+<p>For convenience, this conservation table is also written to a separate output file named SUMMARY.OUT that is more complete.</p>
+<p>There is so much output data in the BASE.OUT file that the user is encouraged to avoid generating this file.
+All of the text output in this file is provided in individual ASCII xyz output files for plotting purposes and the user will probably have little
+interest in the BASE.OUT format of the floodplain hydraulics for the individual grid elements.</p>
+<p>This output file can become large and it takes too long to write to it for models with 500,000 grid elements or more.
+Set NOPRTFP = 2 and it will not be created:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If NOPRTFP = 0, all the BASE.OUT floodplain flow data is reported.</p></li>
+<li><p>If NOPRTFP = 1, the BASE.OUT floodplain outflow data is not reported.</p></li>
+<li><p>If NOPRTFP = 2, the entire file is not created.</p></li>
+<li><p>If NOPRTFP = 3, only floodplain outflow data is repIf NOPRTFP = 3, only floodplain outflow data is reported to the BASE.OUT file.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BASEFLOWFP_TIME.OUT</p>
+<blockquote>
+<div><p>This file provides an option to report the time when the discharge exceeds the floodplain base flow has been implemented.
+The BASEFLOWFP_ TIME.OUT file reports the following data.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time to above baseflow (hrs)</p></li>
+</ul>
+</div></blockquote>
+<p>With this output file from a second simulation, the arrival time of an overland floodwave overtaking a base flow is reported.
+A similar option was coded for channel base flow (uses a B-line with the baseflow in CHAN.
+DAT on a channel segment basis).
+The IFLOODWAVE switch is not necessary for reporting the time when the discharge exceeds the channel baseflow.
+The reporting is activated by the CHAN.DAT B-line.</p>
+<p>The floodplain time above baseflow reporting option requires 2 two simulations: 1) Set IFLOODWAVE = 0 in CONT.DAT
+and prepare INFLOW.
+DAT with only the base flow hydrographs and run the model.
+2) Set IF- LOODWAVE = 2 and swap out the INFLOW.DAT file with the flood hydrograph (such as a dam breach hydrograph) and run the model a second time
+to generate the BASEFLOWFP_TIME.OUT file.</p>
+</div></blockquote>
+<p>BATCH COMPARISON FILES</p>
+<blockquote>
+<div><p>Running the batch processor will execute many projects in series and perform automatic comparisons of the output data from previous runs.
+The following files represent the comparison dataset:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>DEPFP_ANTERIOR.OUT</p></li>
+<li><p>DIFF_DEPFP.OUT</p></li>
+<li><p>FINALDEP_ANTERIOR.OUT</p></li>
+<li><p>DIFF_FINALDEP.OUT</p></li>
+<li><p>ENDRUNBATCHTEST.OUT</p></li>
+<li><p>VELFP_ANTERIOR.OUT</p></li>
+<li><p>DIFF_VELFP.OUT</p></li>
+<li><p>DEPTH_ANTERIOR.OUT</p></li>
+<li><p>DIFF_DEPTH.OUT</p></li>
+<li><p>VELOC_ANTERIOR.OUT</p></li>
+<li><p>DIFF_VELOC.O</p></li>
+<li><p>DIFF_DEPTH.OUT</p></li>
+<li><p>VELOC_ANTERIOR.OUT</p></li>
+<li><p>DIFF_VELOC.OUT</p></li>
+<li><p>VELTIMEFP_ANTERIOR.OUT</p></li>
+<li><p>DIFF_VELTIMEFP.OUT</p></li>
+<li><p>VELTIMEC_ANTERIOR.OUT</p></li>
+<li><p>DIFF_VELTIMEC.OUT</p></li>
+<li><p>DEPCH_ANTERIOR.OUT</p></li>
+<li><p>DIFF_DEPCH.OUT</p></li>
+<li><p>DEPCHFINAL_ANTERIOR.OUT</p></li>
+<li><p>DIFF_DEPCHFINAL.OUT</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BINARY FILES</p>
+<blockquote>
+<div><p>The following binary backup files are generated when IBACKUP = 1.
+These files can be used to restart model after termination (either interrupted simulation or end of the simulation).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>CHANBINARY.OUT</p></li>
+<li><p>CROSSBINARY.OUT</p></li>
+<li><p>FPLAINBINARY.OUT</p></li>
+<li><p>HYSTRUCBINARY.OUT</p></li>
+<li><p>SEDBINARY.OUT</p></li>
+<li><p>STREETBINARY.OUT</p></li>
+<li><p>VOLUMEBINARY.OUT</p></li>
+<li><p>XSECSEDBINARY.OUT</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BREACH.OUT</p>
+<blockquote>
+<div><p>This file is generated when the erosion breach routine is activated for dams or levees.
+The output is listed by grid element number with singular and tabular results.
+The initial and peak discharge is reported for each grid element and the time each occurred.
+The failure node, direction, start time, start discharge, peak discharge, and peak time are reported on lines 2 and 3.
+This is followed by the tabular data.</p>
+<p>The tabular data is reported for the breach discharge as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time (hrs) - simulation time output</p></li>
+<li><p>Direction - breach direction 1-8 grid element directions</p></li>
+<li><p>Breach Q - total discharge through the breach and the end of the interval (cfs or cms)</p></li>
+<li><p>Sediment discharge - total sediment through the breach at the end of the interval (cfs or cms)</p></li>
+<li><p>Sediment concentration - concentration of sediment in the breach</p></li>
+<li><p>Bottom width - breach width at the bottom of the dam or levee at the output interval (ft or m)</p></li>
+<li><p>Top width - breach width at the top of the dam or levee at the output interval (ft or m)</p></li>
+<li><p>Breach elevalevee at the output interval (ft or m)</p></li>
+<li><p>Breach elevation - elevation of the bottom of the breach at the output interval (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BRIDGE_COEFFICIENTS.OUT</p>
+<blockquote>
+<div><p>This file has the various discharge coefficients that are selected or computed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Inflow node</p></li>
+<li><p>COEFFREEB(JB)</p></li>
+<li><p>COEFFPRIME(JB)</p></li>
+<li><p>KFB(JB)</p></li>
+<li><p>KWWB(JB)</p></li>
+<li><p>KPHIB(JB)</p></li>
+<li><p>KYB(JB)</p></li>
+<li><p>KXB(JB)</p></li>
+<li><p>KJB(JB)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BRIDGE_DISCHARGE.OUT</p>
+<blockquote>
+<div><p>Bridge component output file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Inflow node</p></li>
+<li><p>Free surface Q (cfs or cms)</p></li>
+<li><p>Orifice flow Q (cfs or cms)</p></li>
+<li><p>Orifice and deck weir flow Q (cfs or cms)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BRIDGE_FLOW_GEOMETRY.OUT</p>
+<blockquote>
+<div><p>Bridge flow area, wetted perimeter, and top width of the bridge cross-sections.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>US flow area (ft<sup>2</sup> or m2)</p></li>
+<li><p>US wetted perimeter (ft or m)</p></li>
+<li><p>US topwidth (ft or m)</p></li>
+<li><p>BR flow area (ft<sup>2</sup> or m<sup>2</sup>)</p></li>
+<li><p>BR wetted perimeter (ft or m)</p></li>
+<li><p>BR topwidth (ft or m)</p></li>
+<li><p>DS flow area (ft<sup>2</sup> or m<sup>2</sup>)</p></li>
+<li><p>DS wetted perimeter (ft or m)</p></li>
+<li><p>DS topwidth (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>BUILDING_COLLAPSE.OUT</p>
+<blockquote>
+<div><p>This file lists the grid elements with full or partial ARF values that will be reset to 0.0 during the model run to
+simulate the collapse and removal of buildings.
+This occurs because the flood depth and velocity exceed the building collapse criteria.
+The following tabular data is printed:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Time</p></li>
+<li><p>Velocity - velocity at the time of collapse (fps or mps)</p></li>
+<li><p>Depth - depth at the time of collapse (ft or m)</p></li>
+<li><p>Minimum collapse depth based on the velocity (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CHAN_INTERIOR_NODES.OUT</p>
+<blockquote>
+<div><p>A list of all the grid elements between the channel bank elements representing the interior of the 1-D channel are
+listed in this file.
+These elements should reflecting the channel maximum depth when plotting maximum channel depths in FLO-2D MapCrafter.
+The channel bank elements are not included in this file.</p>
+</div></blockquote>
+<p>CHANBANKEL.CHK</p>
+<blockquote>
+<div><p>This file reports the difference between the channel bank elevation and the grid element elevation for each assigned bank elements.
+If the bank elevation difference exceeds the specified criteria, the floodplain elevation will be reset to channel bank elevation at runtime.
+This assumes that the surveyed bank elevation is more accurate than the interpolated floodplain elevation.
+The bank elevation difference criteria is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Channel grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Bank elevation (ft or m)</p></li>
+<li><p>Floodplain elevation (ft or m)</p></li>
+<li><p>Difference (ft or m)</p></li>
+</ul>
+</div></blockquote>
+<p>Channel bank elevation is different from the floodplain elevation by 1 ft or more.</p>
+<p>If the slope associated with the bank elevation difference based on the grid element side width is greater than 0.01 (1%)</p>
+</div></blockquote>
+<p>CHANMAX.OUT</p>
+<blockquote>
+<div><p>The maximum discharge and stage for each channel element and the corresponding time of occurrence is written to this file.
+This file is useful for finding channel cross-sections that might be surging.
+If the timing if the maximum values do not correspond with the peak discharge, the channel element may be surging.
+The following columns are written:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Node</p></li>
+<li><p>Max Q - Maximum discharge for channel element (cfs or cms)</p></li>
+<li><p>Time - Time of Qmax</p></li>
+<li><p>Max Stage - Maximum stage for channel element (ft or m)</p></li>
+<li><p>Time - Time of max stage</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CHANNEL.CHK</p>
+<blockquote>
+<div><p>When the channel cross section width exceeds the grid element width, the cross section needs to extend into 1 or more neighboring elements.
+When the channel surface area is 0.95 times the floodplain surface area the channel needs to extend into 1 or more neighboring elements.
+This file lists the necessary extensions.</p>
+<p>If a channel right bank is placed on an interior channel element, this file lists the bank that needs to be repositioned.</p>
+<p>The file lists any channel / levee conflicts that may need to be fixed.</p>
+<p>If the channel cross-section is R, T or V (non-natural cross-sections) and the channel is extended to more than one grid element and the bank
+elevations are not assigned in CHAN.DAT.
+This file lists the difference between the right and left channel bank elevations based on the floodplain elevations in two different bank elements.</p>
+</div></blockquote>
+<p>CHAN.RGH</p>
+<blockquote>
+<div><p>CHAN.RGH is a duplicate file of the CHAN.DAT file with the updated Manning’s n-value changes that were reported in the ROUGH.OUT file.
+The maximum and final Manning’s n-value changes are listed in the ROUGH.OUT file.
+To accept the changes to Manning’s n-values, CHAN.
+RGH can be renamed to replace CHAN.DAT for the next FLO-2D flood simulation.
+This automates the spatial adjustment of n-values for channel elements that exceed the limiting Froude number.</p>
+</div></blockquote>
+<p>CHANNEL_CONVERGENCE.OUT</p>
+<blockquote>
+<div><p>This file lists the channel elements that failed to converge in three passes of the routing algorithm.
+The solution is then based on the diffusive wave for that element and timestep only.
+The output files reports:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time - time of failed convergence</p></li>
+<li><p>Grid element</p></li>
+<li><p>Depth - depth at time of failed convergence (ft or m)</p></li>
+<li><p>Velocity - various velocity terms in the solution algorithm (fps or mps)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CHANSEDSIZE.OUT</p>
+<blockquote>
+<div><p>The initial and final sediment size distribution by channel element is written to this file.</p>
+</div></blockquote>
+<p>CHANSTABILTY.OUT</p>
+<blockquote>
+<div><p>This output file lists the channel grid elements that experienced significant gains or losses of flow volume
+(0.1 af or 100 m<sup>3</sup>).
+These channel grid elements may have volume conservation stability problems that could be related to surging,
+poorly matched roughness, slope and cross-section geometry or abrupt changes in cross-section geometry.
+When the channel volume conservation for a simulation is not satisfactory, review this output file.</p>
+</div></blockquote>
+<p>CHANWS.OUT</p>
+<blockquote>
+<div><p>This output file lists channel grid element, x-coordinate, y-coordinate and maximum channel water surface elevation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Water surface elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CHMODFLOWELEV.OUT</p>
+<blockquote>
+<div><p>Comparison between channel cross-section cell elevation and MODFLOW grid elevation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Channel bed elevation (ft or m)</p></li>
+<li><p>Modflow column</p></li>
+<li><p>Modflow row</p></li>
+<li><p>Modflow bed elevation (ft or m)</p></li>
+<li><p>Elevation difference (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CHNBEDEL.OUT</p>
+<blockquote>
+<div><p>The channel grid element number and the final channel bed elevation are presented in this file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Elevation - final bed elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CHVOLUME.OUT</p>
+<blockquote>
+<div><p>The channel volume distribution is listed in this output file including channel inflow, channel outflow, overbank flow,
+return flow from the floodplain, infiltration, channel storage and storm drain return flow.
+Review this file along with the SUMMARY.OUT to determine if the channel flow volume is being conserved.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Inflow and rain - (acre ft or cm)</p></li>
+<li><p>Channel storage -Time</p></li>
+<li><p>Inflow and rain - (acre ft or cm)</p></li>
+<li><p>Channel storage - (acre ft or cm)</p></li>
+<li><p>Channel outflow - (acre ft or cm)</p></li>
+<li><p>Overbank outflow - (acre ft or cm)</p></li>
+<li><p>Return inflow - (acre ft or cm)</p></li>
+<li><p>Infiltration - (acre ft or cm)</p></li>
+<li><p>Evaporation - (acre ft or cm)</p></li>
+<li><p>Outflow to storm drain - (acre ft or cm)</p></li>
+<li><p>Inflow from storm drain - (acre ft or cm)</p></li>
+<li><p>Volume conservation - (acre ft or cm)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CONFLUENCE.OUT</p>
+<blockquote>
+<div><p>This file lists the channel elements that constitute a confluence as defined by having three or more channel elements
+contiguous to a given channel element.</p>
+</div></blockquote>
+<p>CROSSMAX.OUT</p>
+<blockquote>
+<div><p>When the floodplain cross-section analysis is requested by creating the FPXSEC.DAT file, the CROSSMAX.OUT is created.
+This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified
+in the cross section analysis.
+It also list the total volume in acre-ft for each cell.</p>
+</div></blockquote>
+<p>CROSSQ.OUT</p>
+<blockquote>
+<div><p>This file contains the grid element hydrographs for each of the floodplain elements in the cross-section.
+The time and discharge are listed for each output interval.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Discharge - hydrograph for grid element (cfs or cms)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CVFPMAX.OUT</p>
+<blockquote>
+<div><p>This file contains the floodplain fluid maximum sediment concentration by volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>x-coord</p></li>
+<li><p>y-coord</p></li>
+<li><p>FP fluid max sediment concentration</p></li>
+<li><p>Time of FP fluid max concentration</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CVFPMAX_MUD.OUT</p>
+<blockquote>
+<div><p>This file contains the floodplain mudflow maximum sediment concentration by volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>x-coord</p></li>
+<li><p>y-coord</p></li>
+<li><p>FP mudflow max concentration</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CVTFINAL_MUD.OUT</p>
+<blockquote>
+<div><p>This file contains the floodplain final mudflow sediment concentration by volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>x-coord</p></li>
+<li><p>y-coord</p></li>
+<li><p>FP final mudflow concentration</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CVTMAX.OUT</p>
+<p>This file contains the channel fluid maximum sediment concentration by volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>x-coord</p></li>
+<li><p>y-coord</p></li>
+<li><p>Channel fluid max concentration</p></li>
+</ul>
+</div></blockquote>
+<p>CVTMAX_MUD.OUT</p>
+<blockquote>
+<div><p>This file contains the channel mudflow maximum sediment concentration by volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>x-coord</p></li>
+<li><p>y-coord</p></li>
+<li><p>channel mudflow max concentration</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>DAMBREACH_VOLUME.OUT</p>
+<blockquote>
+<div><p>This file reports the cumulative dam breach volume in acre-ft or cubic meters by output interval.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time (hrs)</p></li>
+<li><p>Cumulative volume sediment (af or cm)</p></li>
+<li><p>Cumulative volume water (af or cm)</p></li>
+</ul>
+</div></blockquote>
+<p>If MUD = 2 in CONT.DAT, these three lines are written at the end of the file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Total sediment volume through the breach (af or cm)</p></li>
+<li><p>Sediment volume left in reservoir (af or cm)</p></li>
+<li><p>Total sediment volume (af or cm)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>DEBUG.CHK</p>
+<blockquote>
+<div><p>An internal file for programmer debugging.
+If this file is present, the user has access to the flopro.exe in debug mode.
+Do not use this engine without instructions from developers.</p>
+</div></blockquote>
+<p>DEBUGXX.OUT</p>
+<blockquote>
+<div><p>This file reports all data related bugs and conflicts with an error code, grid element and a description of the error, warning or conflict.
+It is imported by QGIS FLO-2D Plugin so users can visualize data error locations.</p>
+</div></blockquote>
+<p>DEPRESSED_ELEMENTS.OUT</p>
+<blockquote>
+<div><p>This file is generated at the end of the data input at runtime.
+Every grid element elevation is checked with its neighbors’ elevations to see if it is depressed below the minimum difference of the DEPRESSDEPTH
+variable in CONT.DAT and if so, it is listed in this file.
+A value of DEPRESS- DEPTH = 3.0 ft is suggested which will help identify artificial ponded flow conditions.
+This depth will ignore minor small depression elements which can fill and overview.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Minimum elevation difference - lowest elevation difference between this element and its neighbors. (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Flow Depth Output Files</strong></p>
+<blockquote>
+<div><p>A series of files are created by FLO-2D in the format: grid element number, x- and y-coordinates, and the maximum flow depth.
+These files can be viewed with FLO-2D MapCrafter, MAXPLOT or programs or they can be imported to a CADD or GIS program to create maximum flood depth
+contours.
+The following output files are created:</p>
+<blockquote>
+<div><ul>
+<li><p>CHNBEDEL.OUT - Channel bed elevations DEPCH.OUT - Maximum channel flow depths DEPCHFINAL.OUT - Final channel flow depths DEPFP.OUT - Maximum
+floodplain flow depths</p></li>
+<li><p>DEPTH.OUT - Maximum combined channel/floodplain flow depths DEPTHMAX_2PHASE_COMBINED.OUT - Maximum flow depth of the combined two phase fluid and
+mudflows depth (added together).</p></li>
+<li><p>DEPTHTOL.OUT - Maximum combined channel and floodplain flow depths greater than the TOL value.
+Values less than the TOL value are set to zero.
+This file has the following format: x- and y- coordinates, and maximum flow depth.
+No grid element numbers are included.</p></li>
+<li><p>FINALDEP.OUT - Final floodplain flow depths:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid or Channel Left Bank Element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Variable</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Flow Depth Output Files for TWO-PHASE modeling.</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>DEPCH_COMBO.OUT - Combined channel fluid and mudflow maxi- mum flow depths.
+Channel fluid or mudflow max depth (whichever is greater).</p></li>
+<li><p>DEPCH_MUD.OUT - Channel maximum mudflow depth.</p></li>
+<li><p>DEPCHFINAL_MUD.OUT - Channel final mudflow depth.</p></li>
+<li><p>DEPFPMAX_MUD.OUT - Floodplain maximum mudflow depth.</p></li>
+<li><p>FINALDEP_COMBO.OUT - Combined floodplain fluid and mudflow maximum flow depths.
+Floodplain fluid or mudflow max depth (whichever is greater).</p></li>
+<li><p>FINDALDEP_MUD.OUT - Floodplain final mudflow depth.</p></li>
+</ul>
+<p>For each file, only the Grid element number, coordinates and variables are listed.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid or Channel Left Bank Element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Variable</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>DEPTHDUR.OUT and DEPTHDUR2.OUT</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>DEPTHDUR.OUT contains the floodplain inundation duration data including the grid element number, grid element x- and y-coordinates and duration of
+inundation in hours.</p></li>
+</ul>
+<p>The selected depth of inundation for which the duration (hrs) is computed is listed at the top of the file.
+DEPTHDUR2.OUT is identical to DEPTHDUR.OUT except for a hardwired depth of 2 ft.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>ERROR.CHK</p>
+<blockquote>
+<div><p>The ERROR.CHK file contains data input error and warning messages and some runtime error messages.
+The backup data files (*.BAC) can be reviewed with this file to determine if the input data is being read properly at runtime.
+When a simulation terminates immediately after being started, check this file first for data input errors.
+This file is defined in more detail in the troubleshooting section chapter 7.</p>
+</div></blockquote>
+<p>EVACUATEDCHAN.OUT</p>
+<blockquote>
+<div><p>The channel elements that experience a complete evacuation of the channel volume are listed in this output file.
+The channel elements in this file should be cross-correlated with those listed in TIME.OUT and VELTIMEC.OUT files.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Element</p></li>
+<li><p>Number of evacuations</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>EVACUATEDFP.OUT</p>
+<blockquote>
+<div><p>The floodplain elements that experience a complete evacuation of the floodplain volume are listed in this output file.
+The floodplain elements in this file should be cross-correlated with those preeminently listed in TIME.
+OUT and VELTIMEFP.OUT files.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Element</p></li>
+<li><p>Number of evacuations</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FINALCVFP_MUD.OUT</p>
+<blockquote>
+<div><p>This file contains the final floodplain mudflow sediment concentration by volume.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Floodplain final mudflow max concentration.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FLO-2D MODFLOW CH RETURN EXCHANGE.OUT</p>
+<blockquote>
+<div><p>Exchanged volume and corrected water surface elevation calculated based on the MODFLOW volume returning to surface for CH cells.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Grid element</p></li>
+<li><p>CH grid element</p></li>
+<li><p>CH depth (ft or m)</p></li>
+<li><p>Water exchange · · · CH CH grid element</p></li>
+<li><p>CH depth (ft or m)</p></li>
+<li><p>Water exchange volume (ft3 or m<sup>3</sup>)</p></li>
+<li><p>Grid area (ft<sup>2</sup> or m<sup>2</sup>)</p></li>
+<li><p>Groundwater volume to surface (ft3 or m<sup>3</sup>)</p></li>
+<li><p>Column</p></li>
+<li><p>Row</p></li>
+<li><p>Ground water depth (ft or m)</p></li>
+<li><p>Added depth to CH bed elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FLO-2D MODFLOW FP RETURN EXCHANGE.OUT</p>
+<blockquote>
+<div><p>Exchanged volume and corrected water surface elevation calculated based on the MODFLOW volume returning to surface for FP cells.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Grid element</p></li>
+<li><p>Surface depth (ft or m)</p></li>
+<li><p>Corrected surface depth (ft or m)</p></li>
+<li><p>Grid area (ft<sup>2</sup> or m<sup>2</sup>)</p></li>
+<li><p>Groundwater volume to surface (ft<sup>3</sup> or m<sup>3</sup>)</p></li>
+<li><p>Column</p></li>
+<li><p>Row</p></li>
+<li><p>Ground water depth above surface depth (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FLOODPLAIN_CONVERGENCE.OUT</p>
+<blockquote>
+<div><p>This file lists the floodplain elements that failed to converge in three passes of the routing algorithm.
+The solution is then based on the diffusive wave for that element and timestep only.
+The output files reports:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time - time of failed convergence</p></li>
+<li><p>Grid element</p></li>
+<li><p>Depth - depth at time of failed convergence (ft or m)</p></li>
+<li><p>Velocity - various velocity terms in the solution algorithm (fps or mps)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FLOODWAVETIME.OUT</p>
+<blockquote>
+<div><p>This file contains the following output:</p>
+<pre>
+Node    X-coord    Y-coord    Floodwave Arrival Time    Flood Time    Peak
+Time    Deflood Time    Max WS
+</pre><p>Each grid element is assigned a specific value of the above parameters at the end of the simulation.
+The maximum values are tracked during the simulation on a computational timestep basis.
+The following parameter definitions are used:</p>
+<ul class="simple">
+<li><p>Floodwave Arrival Time: Time in hours from when the breach discharge exceeds 0.01 cfs or cms to when the floodplain grid element flow depth exceeds
+1 ft or 0.3 m.
+If the grid element has a channel assignment, the time when the channel flow depth becomes one foot higher than the base
+flow (when breach discharge &gt; 0.01 cfs or cms) is reported.</p></li>
+<li><p>Flood Time: Time (hours) from when the breach discharge exceeds 0.01 (cfs or cms) to when a given grid element flow depth exceeds 2.0 ft or 0.67 m
+on the floodplain.
+If the grid element has a channel assignment, the time to when the flow exceeds the lowest top of bank is reported.</p></li>
+<li><p>Peak Time: Time (hours) from when the breach discharge exceeds 0.01 (cfs or cms) to when a given grid element flow depth reaches a maximum depth.
+If the grid element has a channel assignment, the time to when the channel flow reaches a maximum depth is reported.</p></li>
+<li><p>Deflood Time: The time elapsed from the initial failure of the dam until the grid element returns to its pre-flood water elevation (0.1ft) prior to
+failure.
+The dam breach initialization is based on the first incremental change in flow depth greater than the tolerance value (TOL).</p></li>
+<li><p>Max WS: The maximum water surface elevation for a given floodplain grid element is reported.
+If a channel is assigned to the grid element, the maximum water surface elevation for either the channel or the floodplain is reported.</p></li>
+</ul>
+</div></blockquote>
+<p>FLOODWAY.OUT</p>
+<blockquote>
+<div><p>FLOODWAY.OUT is written when IFLOODWAY = 0.
+This file lists the grid element and the maximum floodplain water surface elevation.
+Following the base flood simulation in which FLOODWAY.OUT is written, the then user sets IFLOODWAY = 1 and assigns a value for ENCROACH in CONT.DAT.
+For a floodway simulation, the model reads FLOODWAY.
+OUT and does not share discharge between floodplain elements until the computed water surface in FLOODWAY.OUT plus the ENCROACH value is exceeded for
+a given grid element.
+See the FLO-2D Reference Manual for a discussion on the floodway routine.</p>
+</div></blockquote>
+<p>FPINFILTRATION.OUT</p>
+<blockquote>
+<div><p>The total infiltration (ft or m) at the end of the simulation for each flood- plain element is written to this file with grid element x- and
+y-coordinates.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Total infiltration (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FPMODFLOWELEV.OUT</p>
+<blockquote>
+<div><p>Comparison between FP grid cells elevation and Modflow grid elevations.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Elevation</p></li>
+<li><p>Modflow column</p></li>
+<li><p>Modflow row</p></li>
+<li><p>Modflow elevation</p></li>
+<li><p>Elevation difference</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FPREV.NEW</p>
+<blockquote>
+<div><p>This output file reports the differences in elevation between the rim elevation in the SWMM.inp file and the FLO-2D grid element elevation.
+This file should be reviewed to evaluate the elevations representing the inlet reference elevation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>New grid element elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FPRIMELEV.OUT</p>
+<blockquote>
+<div><p>This output file reports the differences in elevation between the rim elevation in the SWMM.inp file and the FLO-2D grid element elevation.
+This file should be reviewed to evaluate the elevations representing the inlet reference elevation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Floodplain elevation - grid element elevation (ft or m)</p></li>
+<li><p>Rim elevation - rim elevation of storm drain inlet or manhole (ft or m)</p></li>
+<li><p>Difference (ft or m)</p></li>
+<li><p>New floodplain elevation - elevation the model uses (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>FPLAIN.RGH</p>
+<blockquote>
+<div><p>This file contains the final Manning’s n-value changes for the floodplain grid elements.
+The maximum and final Manning’s n-values are reported in the ROUGH.OUT.
+If the changes are acceptable, FPLAIN.RGH can be renamed to FPLAIN.DAT for the next FLO-2D flood simulation.
+This automates the spatial adjustment of n-values for floodplain elements that exceed the limiting Froude number.</p>
+</div></blockquote>
+<p>FPLAIN_SDELEV.RGH</p>
+<blockquote>
+<div><p>This file contains the elevation adjustments that were automatically corrected when the FLO-2D engine compared the floodplain grid elements to the
+storm drain rim and type 4 invert elevations.
+To fully accept the changes reported to fprimelev.new, replace FPLAIN.DAT with this file.
+It is also necessary to replace the TOPO.DAT with TOPO_SDELEV.RGH.</p>
+</div></blockquote>
+<p>FPSEDSIZE.OUT</p>
+<blockquote>
+<div><p>The initial and final sediment size distribution for the floodplain grid element is written to this file.</p>
+<p>The file is arranged in tables by grid element.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Sediment diameter.(mm)</p></li>
+<li><p>Percent finer initial</p></li>
+<li><p>Percent finer final</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>HDF5_ERROR.CHK</p>
+<blockquote>
+<div><p>The HDF5_ERROR.CHK file contains error comments for the HDF5 input data and output results.
+HDF5 input file and output file are created when IBACKUP equal to 3 in the CON.DAT file.
+All data and output errors for HDF5 structure that are encountered before or at execution time are listed in this file.
+When a simulation terminates immediately after being started, check all CHK files for errors.</p>
+</div></blockquote>
+<p>HYCHAN.OUT</p>
+<blockquote>
+<div><p>This channel hydraulics output file contains a hydrograph for each channel element and includes the time, elevation, depth, velocity, discharge and
+sediment concentration.
+The maximum discharge and stage are also listed with their times of occurrence.
+The following columns are printed for each channel element.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time - output interval</p></li>
+<li><p>Elevation – water surface elevation starting at bed elevation.</p></li>
+<li><p>Thalweg depth - average depth above the lowest point in the channel for the duration of the output interval.
+(ft or m)</p></li>
+<li><p>Velocity - depth average velocity for cross section for the duration of the output interval (fps or mps)</p></li>
+<li><p>Discharge - average discharge for the output interval (cfs or cms)</p></li>
+<li><p>Froude number - based on the average depth and velocity.</p></li>
+<li><p>Flow area - average flow area given by the average discharge divided by the average velocity (sqft or sqm)</p></li>
+<li><p>Wetted Perimeter - average wetted perimeter for the cross section for the duration of the output interval (ft or m)</p></li>
+<li><p>Hydraulic radius average flow area divided the average wetted perimeter (ft or m)</p></li>
+<li><p>Top width - average top width for the duration of the output interval (ft or m)</p></li>
+<li><p>Width to depth ratio - average width divided by the average depth</p></li>
+<li><p>Energy slope - average water surface head plus the average velocity head divided by the length of the channel between grid
+element centers</p></li>
+<li><p>Bed shear stress - average energy slope times the average hydraulic radius times gamma (specific weight of water)</p></li>
+<li><p>Surface area - average surface area of the channel (top width times channel length) for the duration of the output interval (sqft or sqm)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>HYCROSS.OUT</p>
+<blockquote>
+<div><p>The output interval time, top width, depth, velocity and discharge are listed for each cross section.
+The discharge passing the cross section of grid elements is compiled as a hydrograph.
+The cross section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file..</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Flow width - distance between the first and last node (ft or m)</p></li>
+<li><p>Depth - average depth across the complete cross section (ft or m)</p></li>
+<li><p>Watersurface elevation (ft or m)</p></li>
+<li><p>Velocity - average velocity for the complete cross section (fps or mps)</p></li>
+<li><p>Discharge - resolved and compiled discharge for the complete cross section.
+This is the most important value (cfs or cms).
+If mudflow is used, this is the total water discharge including mud- flow concentration.</p></li>
+<li><p>Concentration by volume - mudflow concentration is written as output when mudflow or two phase mudflow is used.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>HYDROALL.OUT</p>
+<blockquote>
+<div><p>This file is generated by the HYDROG.EXE.
+It is used internally and not by the end user.</p>
+</div></blockquote>
+<p>HYDRAULIC STRUCTURE SUBFACTORS.OUT</p>
+<blockquote>
+<div><p>The discharge hydrographs of all the hydraulic structures is presented in this output file.
+This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
+If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
+If the discharge varies wildly, there could be surging.
+The rating table or curve might not match the cross sectional areas adjacent to the structures.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>GE</p></li>
+<li><p>Name</p></li>
+<li><p>Time</p></li>
+<li><p>Upstream watersurface elevation</p></li>
+<li><p>Downstream watersurface elevation</p></li>
+<li><p>Upstream depth</p></li>
+<li><p>Downstream depth</p></li>
+<li><p>Discharge</p></li>
+<li><p>Subfactor</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>HYDROSTRUCT.OUT</p>
+<blockquote>
+<div><p>The discharge hydrographs of all the hydraulic structures is presented in this output file.
+This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
+If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
+If the discharge varies wildly, there could be surging.
+The rating table or curve might not match the cross sectional areas adjacent to the structures.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Discharge inlet</p></li>
+<li><p>Discharge outlet</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>HYSTREET.OUT</p>
+<blockquote>
+<div><p>The street flow hydrograph for the grid element that is coincidental to the street and the cross section is recorded
+in this file.</p>
+</div></blockquote>
+<p>IMPACT.OUT</p>
+<blockquote>
+<div><p>The units are pounds force per foot (newton per linear meter).
+This is the impact force on a wall or feature of a unit length.
+Multiple by the length of the cell or the length of the dump to get the total maximum impact force on the feature.
+Please note that this would be an impact force if the maximum velocity were instantaneous on the wall or feature as
+in a frontal wave.
+If the flow gradually increases on the wall and the maximum velocity occurs with the flow going over the wall or feature then the impact force will be
+mitigated.
+The conservative approach to the impact force would consider that the maximum velocity occurs in a frontal wave that would instantaneously stop.
+As the impact force is a one-time instantaneous maximum value based on flow cessation is not temporally reported by output interval.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Impact - lbf/ft or N/m</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>INFILHY.OUT</p>
+<blockquote>
+<div><p>The hydraulic conductivities are listed in this file to review their spatial variation.
+This file contains grid element number, x- and y-coordinates and floodplain hydraulic conductivity.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Hydraulic conductivity</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>INFIL_DEPTH.OUT</p>
+<blockquote>
+<div><p>This file will only write data if the limiting depth is used in the Green-Ampt infiltration calculator.
+If the global soil depth is not set, the spatial data won’t be used and this file will be empty.
+The file reports the soil depth in ft and infiltration depth in ft.
+Once the infiltration reaches the limiting soil depth, the stop switch is activated and the infiltration is turned off for the specified grid element.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Soil depth - assigned limiting infiltration soil depth (ft or m)</p></li>
+<li><p>Infiltration depth - total infiltration depth (ft or m)</p></li>
+<li><p>Stop - 0 or 1, where 1 = available infiltration depth was filled and infiltration stopped</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>INTERGWS.OUT</p>
+<blockquote>
+<div><p>INTERGWS.OUT lists the maximum floodplain water surface elevations.
+Values less than TOL are set to zero.
+Only grid elements and maximum water surface elevations are listed; no coordinates are included.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Water surface elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>LEVEE.HDF5</p>
+<blockquote>
+<div><p>The LEVEE.HDF5 file contains tables of breach data that are sorted by grid element number and output interval.
+This file can be used to review the breach characteristics and flow through any direction of any grid element.
+The data is reported at the output interval and per grid element.
+Each row of data is joined by the Grid Element table.
+This table lists the grid element number and fail direction.
+Column 0 through Column 3 is North, East, South, West.
+Column 4 through Column 7 is Northeast, Southeast, Southwest, Northwest.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Breach elevation of the cutoff direction (ft or m)</p></li>
+<li><p>Discharge through the cutoff direction (cfs or cms)</p></li>
+<li><p>Failure width of the cutoff direction (ft or m)</p></li>
+</ul>
+<img alt="../../_images/DIM_Pro_2025_Chapter3_001.png" src="../../_images/DIM_Pro_2025_Chapter3_001.png" />
+<ul class="simple">
+<li><p>Grid element listed for the failure direction(ft or m)</p></li>
+<li><p>Total Q sum of all Q for 10 timesteps(cfs or cms)</p></li>
+<li><p>Water surface Elevation at the failure direction(ft or m)</p></li>
+</ul>
+</div></blockquote>
+<p>To use the data in this file, join the data tables by grid number and direction and then by time because multiple grid elements and directions are
+reported for each output interval.</p>
+</div></blockquote>
+<p>LEVEE.OUT</p>
+<blockquote>
+<div><p>The LEVEE.OUT file contains a list of the grid elements with a levee that failed.
+Failure width, failure elevation, discharge from the levee breach and the time of failure occurrence are listed.
+The file shows failure expansion into multiple directions and adjacent levee elements.
+The total breach is written to ge#_PRESCRIBED_BREACH.OUT.
+This file also reports the time at which the breach reaches the bottom of the grid elevation and the flow for that direction changes from weir flow to
+overland flow.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Direction - fail direction 1-8</p></li>
+<li><p>Water surface elevation (ft or m)</p></li>
+<li><p>Breach elevation (ft or m)</p></li>
+<li><p>Failure width (ft or m)</p></li>
+<li><p>Discharge for cutoff direction (cfs or cms)</p></li>
+<li><p>Avg Q for 10 timesteps (cfs or cms)</p></li>
+<li><p>Time (hrs)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>LEVEEDEFIC.OUT</p>
+<blockquote>
+<div><p>The levee freeboard deficit is listed in this file.
+Five levels of freeboard deficit are reported:</p>
+<blockquote>
+<div><p>0 = freeboard &gt; 3 ft (0.9 m)</p>
+<p>1 = 2 ft (0.6 m) &lt; freeboard &lt; 3 ft (0.9 m)</p>
+<p>2 = 1 ft (0.3 m) &lt; freeboard &lt; 2 ft (0.6 m)</p>
+<p>3 = freeboard &lt; 1 ft (0.3 m)</p>
+<p>4 = levee is overtopped by flow.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Levee deficit</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>GE_LEVFAIL.OUT</p>
+<blockquote>
+<div><p>This file reports the levee failure expansion for a single grid element where the breach starts.
+Do not use this file to try and understand the total failure because it is confined to a single grid element.
+Use LEVEE.OUT to review prescribed breach expansion.
+LEVEE.HDF5 also reports levee expansion for prescribed breach.</p>
+<p>This file reports:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Direction - fail direction 1-8</p></li>
+<li><p>Water surface elevation (ft or m)</p></li>
+<li><p>Breach elevation (ft or m)</p></li>
+<li><p>Failure width (ft or m) limited to one grid element</p></li>
+<li><p>Discharge for cutoff direction (cfs or cms)</p></li>
+<li><p>Avg Q for 10 timesteps (cfs or cms)</p></li>
+<li><p>Time (hrs)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>GE_PRESCRIBED_BREACH Q.OUT</p>
+<blockquote>
+<div><p>This file reports the breach discharge hydrograph in cubic feet per second or cubic meters per second through a dam or levee that was assigned
+prescribed breach.
+The grid element number indications the location where the breach initiated.
+The discharge is total flow through all expansion elements.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time (hrs)</p></li>
+<li><p>Discharge (cfs or cms)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>LEVOVERTOP.OUT</p>
+<blockquote>
+<div><p>The discharge hydrograph overtopping the levee within the grid element is reported in this file.
+Only those levee grid elements with a negative levee element number in LEVEE.DAT will be reported when overtopped.
+The discharge is combined for all the potential levee overtopping directions for the grid element.
+The rows of data are grouped by Grid element.
+There is a row break when the Peak Q and Time are reported.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Discharge total</p></li>
+<li><p>Time - time of overtopping,</p></li>
+<li><p>Discharge direction columns N, E, S, W, NE, SE,SW, NW.
+Negative value means flow is moving from the opposite grid to the grid with the levee assigned.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>LEVOVERTOPMAX.OUT</p>
+<blockquote>
+<div><p>The max discharge of the water overtopping the levee within the grid element is reported in this file.
+Only those levee grid elements with a negative levee element number in LEVEE.DAT will be reported when overtopped.
+The discharge is combined for all the potential levee overtopping directions for the grid element.</p>
+<ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Discharge max (cfs or cms)</p></li>
+<li><p>Time of overtop minus overtop time (hrs)</p></li>
+</ul>
+</div></blockquote>
+<p>LOW_LEVEE_CREST_ELEVATIONS.OUT</p>
+<blockquote>
+<div><p>Levee crest elevations that are less than a minimum difference above the ground are list in this file.
+The minimum elevation difference is the DEPRESSDEPTH parameter in the CONT.DAT file.
+This variable is used to evaluate the minimum difference in the levee crest elevations compared to the ground elevation on both sides of the levee.
+If used with DEPRESSED_ELEMENTS.OUT, the DEPRESSDEPTH variable either has to be the same value or two separate independent simulations are required
+for different values (use SIMUL = 0.1 or 0.01 hrs for each).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element - element with the levee assigned</p></li>
+<li><p>Neighbor grid element - element across from the levee cutoff direction</p></li>
+<li><p>Direction - levee cutoff direction 1-8</p></li>
+<li><p>Levee crest elevation (ft or m)</p></li>
+<li><p>Ground elevation (ft or m)</p></li>
+<li><p>Elevation difference (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MANNINGS_N.RGH</p>
+<blockquote>
+<div><p>MANNINGS_N.RGH is a duplicate file of the MANNINGS_N.DAT file with the updated Manning’s n-value changes that were reported in the ROUGH.OUT file.
+The maximum and final Manning’s n-value changes are listed in the ROUGH.OUT.</p>
+</div></blockquote>
+<p>MAXQBYDIR.OUT</p>
+<blockquote>
+<div><p>This output file lists the maximum floodplain grid element discharge according to the eight flow directions and the time of occurrence.</p>
+<ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>North - Qmax (cfs or cms) Time</p></li>
+<li><p>NE - Qmax (cfs or cms) Time</p></li>
+<li><p>East - Qmax (cfs or cms) Time</p></li>
+<li><p>SE - Qmax (cfs or cms) Time</p></li>
+<li><p>South - Qmax (cfs or cms) Time</p></li>
+<li><p>SW - Qmax (cfs or cms) Time</p></li>
+<li><p>West - Qmax (cfs or cms) Time</p></li>
+<li><p>NW - Qmax (cfs or cms) Time</p></li>
+</ul>
+</div></blockquote>
+<p>MAXQHYD.OUT</p>
+<blockquote>
+<div><p>This output file lists the maximum floodplain grid element discharge and the associated hydraulics including:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Time</p></li>
+<li><p>Maximum discharge (cfs or cms)</p></li>
+<li><p>Direction - direction max discharge was recorded 1-8</p></li>
+<li><p>Water surface</p></li>
+<li><p>Depth (ft or m)</p></li>
+<li><p>Velocity (fps or mps)</p></li>
+<li><p>Combined Qmax (cfs or cms)</p></li>
+<li><p>Direction - direction max velocity 1-8</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MAXQRESOLVED.OUT</p>
+<blockquote>
+<div><p>The maximum discharge resolved by flow direction listed for all eight flow directions regardless of the time of occurrence are reported to this file.
+The resolved flow direction maximum discharge includes the sum of the primary flow direction and the two diagonal flow directions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>North - Qmax (cfs or cms)</p></li>
+<li><p>Northeast - Qmax (cfs or cms)</p></li>
+<li><p>East - Qmax (cfs or cms)</p></li>
+<li><p>Southeast - Qmax (cfs or cms)</p></li>
+<li><p>South - Qmax (cfs or cms)</p></li>
+<li><p>Southwest - Qmax (cfs or cms)</p></li>
+<li><p>West - Qmax (cfs or cms)</p></li>
+<li><p>Northwest - Qmax (cfs or cms)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MAXWSELEV.OUT</p>
+<blockquote>
+<div><p>Similar to DEPTH.OUT, this file contains grid element number, x-coordinate, y-coordinate, and the maximum water surface elevation of either the
+floodplain or channel.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Water surface elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MODFLOW CHANNEL INFILTRATION TOTALS.OUT</p>
+<blockquote>
+<div><p>Total aaccumulated volume of water that infiltrates from the CH to MOD- FLOW at each MODFLOW timestep.</p>
+<blockquote>
+<div><p>-Time
+- Accumulated infiltration volume CH (ft<sup>3</sup> or m<sup>3</sup>)</p>
+</div></blockquote>
+</div></blockquote>
+<p>MODFLOW CHANNEL INFILTRATION VOLUMES.OUT</p>
+<blockquote>
+<div><p>Accumulated volume of water that infiltrates from CH to MODFLOW at each Modflow timestep and for each cell.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Grid element</p></li>
+<li><p>Accumulated infiltration volume CH (ft<sup>3</sup> or m<sup>3</sup>)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MODFLOW FP INFILTRATION TOTALS.OUT</p>
+<blockquote>
+<div><p>Total accumulated volume of water that infiltrates from the FP to MODFLOW at each MODFLOW timestep.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Accumulated infiltration volume FP (ft<sup>3</sup> or m<sup>3</sup>)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MODFLOW FP INFILTRATION VOLUMES.OUT</p>
+<blockquote>
+<div><p>Accumulated volume of water that infiltrates from FP to MODFLOW at each Modflow timestep and for each cell.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Grid element</p></li>
+<li><p>Accumulated infiltration volume FP (ft<sup>3</sup> or m<sup>3</sup>)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>MULTCHN.OUT</p>
+<blockquote>
+<div><p>The multiple channel routine routes the overland flow between grid elements as concentrated channel flow (i.e. rill and gully flow).
+For grid elements specified for multiple channel flow, overland flow only occurs within the grid element and the flow between the elements is conveyed
+as gully flow.
+Once the flow enters the multiple channels, the channel will enlarge to contain the flow.
+This occurs when the flow depth exceeds the specified channel depth.
+The channel increases by a specified incremental width.
+After the peak discharge has passed and the flow depth is less than one foot, the channel width will decrease until it reaches the original width.
+MULTCHN.OUT identifies multiple channel revisions including the maximum width, final width and the original width for each grid element.
+The file has the following format:</p>
+<ul>
+<li><p>Grid element</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Max width (ft or m)</p></li>
+<li><p>Depth (ft or m)</p></li>
+<li><p>Qmax (cfs or cms)</p></li>
+<li><p>WSEL= Water Surface Elevation for each cell.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>MULTSTEEP.OUT</p>
+<blockquote>
+<div><p>This file lists the number of steep multiple channels found within the assigned minimum and maximum slopes.</p>
+</div></blockquote>
+<p>MULT.RGH</p>
+<blockquote>
+<div><p>MULT.RGH is a duplicate file of the MULT.DAT file with the updated Manning’s n-value changes that were reported in the ROUGH.OUT file.
+The maximum and final Manning’s n-value changes are listed in the ROUGH.OUT.</p>
+</div></blockquote>
+<p>OUTNQ.OUT</p>
+<blockquote>
+<div><p>The OUTNQ.OUT file is separated into two data areas.
+The first section contains a summary of the maximum discharge, time of peak and the discharge hydrograph for each floodplain outflow element.
+The second section is column data that includes the following for each outflow node:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Time (hrs)</p></li>
+<li><p>Discharge (cfs or cms)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>OVERBANK.OUT</p>
+<blockquote>
+<div><p>When the flow exceeds bankfull discharge and begins to inundate the floodplain, the channel grid element and time of overbank flood occurrence are
+written to this file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time</p></li>
+<li><p>Water surface elevation - elevation at time water goes overbank (ft or m)</p></li>
+<li><p>Thalweg depth - depth at time water goes overbank (ft or m)</p></li>
+<li><p>Velocity - average velocity at time water goes overbank (fps or mps)</p></li>
+<li><p>Discharge - q at time water goes overbank (cfs or cms)</p></li>
+<li><p>Overbank volume</p></li>
+<li><p>Available floodplain area</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>RAINCELL.CHK</p>
+<blockquote>
+<div><p>This file was created for the user to be able check the magnitude of the average total rainfall for all grids and the total rainfall for each grid
+during the simulation, the file contains the following:</p>
+<blockquote>
+<div><p>Line 1 Average grid element rainfall for the entire storm=, RGRIDTOTALAVE</p>
+<p>Line 2 1 to NNOD TOTAL RAINFALL</p>
+</div></blockquote>
+</div></blockquote>
+<p>RAINONECELL.CHK</p>
+<blockquote>
+<div><p>This is an internal file that I use for troubleshooting.
+We need to make sure the unit is marked as used in the unit file list.
+We eventually might want to let the user have access to this file.</p>
+</div></blockquote>
+<p>REVISED_RATING_TABLE.OUT</p>
+<blockquote>
+<div><p>This file reports suggested revisions to hydraulic structure rating tables based on the inflow discharge to the hydraulic structure inlet floodplain
+or channel element.
+These revisions are usually the result of the rating table being created with low n-values or because the rating table has insufficient low depth
+stage-discharge pairs or the cross section do not match the rating table data.</p>
+</div></blockquote>
+<p>ROUGH.OUT</p>
+<blockquote>
+<div><p>The ROUGH.OUT file reports the automated Manning’s n-value adjustment during model simulation including n-value change for exceeding the Courant
+number and exceeding the limiting Froude.
+The user specifies a maximum Froude number for overland, channel and street ?ow.
+When the computed Froude number exceeds the defined maximum value for a given grid element, the n-value for that grid element is increased by a value
+based on the percent change in the n-value.
+During the falling limb of the hydrograph when the Froude number is no longer exceeded, the n-value is decreased by 0.0005 until the original n-value
+is reached.
+When the Courant number timestep is exceeded consecutive times by the same grid element, then n-value is also increased.
+With increasing consecutive timestep decrements, the increase in n-value decreases.
+The maximum n-value, time of occurrence, and original n-values for floodplain, channel and street are listed in ROUGH.OUT by grid element.</p>
+</div></blockquote>
+<p>SD MANHOLEPOPUP.OUT</p>
+<blockquote>
+<div><p>SDManholePopUp.OUT is created when at least one manhole pops in the storm drain system.
+This file contains the following information:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Grid element</p></li>
+<li><p>Manhole ID</p></li>
+<li><p>Time</p></li>
+<li><p>Pressure Head</p></li>
+<li><p>Rim elevation + Surcharge Elevation</p></li>
+<li><p>FLO-2D WSE.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SEDCHAN.OUT</p>
+<blockquote>
+<div><p>The sediment transport routine will compute scour and deposition in the channel.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Maximum deposition (ft or m)</p></li>
+<li><p>Maximum scour (ft or m)</p></li>
+<li><p>Final bed elevation difference (ft or m)</p></li>
+<li><p>Maximum water surface elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SEDCONSERV.OUT</p>
+<blockquote>
+<div><p>The sediment transport conservation summary is listed by output interval.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Time</p></li>
+<li><p>Inflow (cuft or cum)</p></li>
+<li><p>Floodplain storage (cuft or cum)</p></li>
+<li><p>Channel storage (cuft or cum)</p></li>
+<li><p>Street storage (cuft or cum)</p></li>
+<li><p>Outflow (cuft or cum)</p></li>
+<li><p>Conservation total (cuft or cum)</p></li>
+<li><p>Conservation percent (cuft or cum)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SEDFP.OUT</p>
+<blockquote>
+<div><p>Similar to the SEDCHAN.OUT file, the floodplain scour and deposition are reported in the SEDFP.OUT file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Maximum deposition (ft or m)</p></li>
+<li><p>Maximum scour (ft or m)</p></li>
+<li><p>Final bed elevation difference (ft or m)</p></li>
+<li><p>Maximum water surface elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SEDTRAN.OUT</p>
+<blockquote>
+<div><p>The sediment transport capacity (cfs or cms) computations for each of the eleven sediment transport equations are listed by output interval in this
+file for a single specified grid element.
+Set the variable to print the file in the SED.DAT file or with the FLO-2D Plugin.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Zeller/Fullerton</p></li>
+<li><p>Yang</p></li>
+<li><p>Englund/Hansen</p></li>
+<li><p>Ackers/White</p></li>
+<li><p>Laursen</p></li>
+<li><p>Toffaleti</p></li>
+<li><p>MPM-Woo</p></li>
+<li><p>MPM-Smart</p></li>
+<li><p>Karim/Kennedy</p></li>
+<li><p>Parker/Klingemen/McClean</p></li>
+<li><p>Van Rijn</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SPECENERGY.OUT</p>
+<blockquote>
+<div><p>The specific energy is the sum of the depth plus the velocity head.
+This file lists the maximum specific energy (ft or m) for a floodplain grid element and includes grid element number, grid element x- and
+y-coordinates and maximum specific energy.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Specific energy (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>STATICPRESS.OUT</p>
+<blockquote>
+<div><p>The spatially variable static force per linear foot for each floodplain element is presented is this file by grid element number, x- and y-coordinates
+and force per linear foot or meter.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Static pressure (lb/ft or N/m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>STEEPROUGH.OUT</p>
+<blockquote>
+<div><p>This file lists the final changes to Manning’s n-values for the grid elements with steep slopes.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Receiving grid element</p></li>
+<li><p>Original n-value</p></li>
+<li><p>Max n-value</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>STORMDRAIN_ERROR.CHK</p>
+<blockquote>
+<div><p>Storm drain error and warning messages are written to this file.
+The error/warnings related to conflicts between storm drain features and surface components as well as the elevations checks are listed.
+The Storm Drain Guidelines manual has a troubleshooting section that will help determine how the errors and conflicts can be corrected.</p>
+</div></blockquote>
+<p>STREET.RGH</p>
+<blockquote>
+<div><p>This file lists the final changes to Manning’s n-values for the street grid elements.
+The maximum and final Manning’s n-values are reported in the ROUGH.OUT file.
+If the n-value changes are acceptable, STREET.RGH can be renamed to STREET.DAT for the next FLO-2D flood simulation.
+This automates the spatial adjustment of n-values for street elements that exceeded the limiting Froude number.</p>
+</div></blockquote>
+<p>STREET.OUT</p>
+<blockquote>
+<div><p>Similar to DEPTH.OUT, this file contains the street element x- and y- coordinates and the maximum street flow depth.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Maximum street depth (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>STRELEV.OUT</p>
+<blockquote>
+<div><p>Final street elevations used in the model simulation are listed in this file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Final street elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SUMMARY.OUT</p>
+<blockquote>
+<div><p>This file lists the volume conservation summary table including the simulation output time interval, the minimum timestep and flood volume
+conservation.
+It also reports the inflow hydrograph, rainfall, infiltration loss, and outflow and storage volumes.
+Review the volume conservation accuracy and the final distribution of volume in this file.</p>
+<p>Mass balance information for the various flow components is reported.</p>
+<blockquote>
+<div><ul>
+<li><p>Inflows</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Inflow hydrograph volume</p></li>
+<li><p>Rainfall volume</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Storage</p></li>
+<li><p>Floodplain storage</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Channel storage</p></li>
+<li><p>TOL storage (see TOLER.DAT)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Outflow</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Infiltration and interception</p></li>
+<li><p>Floodplain outflow</p></li>
+<li><p>Channel infiltration</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Storm drain exchange volume is reported</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Storm drain inflow</p></li>
+<li><p>Total inflow</p></li>
+<li><p>Total outflow</p></li>
+<li><p>Storm drain return flow</p></li>
+<li><p>Storm drain mass balance Storm drain volume data from swmm.rpt</p></li>
+<li><p>Wet weather inflow</p></li>
+<li><p>External inflow</p></li>
+<li><p>External outflow</p></li>
+<li><p>Return flow to surface</p></li>
+<li><p>Total storm drain storage</p></li>
+<li><p>Continuity error Totals are reported</p></li>
+<li><p>Total outflow</p></li>
+<li><p>Total volume and storage</p></li>
+<li><p>Area of inundation data</p></li>
+<li><p>Wetted floodplain area</p></li>
+<li><p>Wetted channel area Project Specific Data</p></li>
+<li><p>Grid element siz</p></li>
+<li><p>Total number of grid elements</p></li>
+<li><p>Grid System area (acres or m<sup>2</sup> and mi<sup>2</sup> or km<sup>2</sup>) Average hydraulics</p></li>
+<li><p>Discharge (cfs or cms)</p></li>
+<li><p>Velocity (fps or cms)</p></li>
+<li><p>Flow area (ft^2 or m^2)</p></li>
+<li><p>Flow depth (ft or m)</p></li>
+<li><p>Flow width (ft or m) Computation data</p></li>
+<li><p>Total Computations</p></li>
+<li><p>Computer run time (hrs)</p></li>
+<li><p>Termination date and time</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p>SUPER.OUT</p>
+<blockquote>
+<div><p>Instead of writing the supercritical flow messages at runtime (and limiting them to the first 100 or so instances), the maximum supercritical Froude
+number (associated depth and time and number of occurrences) are tracked and sorted by Froude number in descending order at model termination for both
+floodplain and channel (at the bottom of the file).
+It also indicates if the grid elements are hydraulic structures.
+By correlating this file with TIME.OUT, ROUGH.OUT, VELTIMEFP.OUT, the user can address the problematic elements with greater insight.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Max Froude number</p></li>
+<li><p>Depth (ft or m)</p></li>
+<li><p>Time</p></li>
+<li><p>Number of supercritical timesteps</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SURFAREA.OUT</p>
+<blockquote>
+<div><p>The SURFAREA.OUT lists the available flow surface area in each grid element.
+The area reduction factors (ARF) remove a portion of the surface area of a grid element to account for buildings or other features that occupy the
+flow surface area.
+Channels, streets and multiple channels also require a portion of the floodplain surface.
+The remaining floodplain surface area is reported.
+At the end of the file, the maximum area of floodplain inundation (including the channel surface area) for the entire grid system is listed by output
+time interval.
+This can be an informative data file for the user.
+The SURFAREA.OUT file enables a review of the surface area distribution between the various components.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Arf-reduced area - total area minus the building</p></li>
+<li><p>Channel area - bank elements covered by part of the channel</p></li>
+<li><p>Street area - area covered by street component</p></li>
+<li><p>Mult channel area - area covered by mult channel</p></li>
+<li><p>Overland area - remaining area not covered by a component</p></li>
+<li><p>Mult channels - switch tells the user this element has a mult channel.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>SWMM.OUT</p>
+<blockquote>
+<div><p>This is the binary file that contains the numerical results from a storm drain simulation.
+View it with the storm drain interface (GUI) to create the time series plots and tables, profile plots, and statistical analyses.
+For more information, look at: C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\FLO-2D Storm Drain Manual.pdf.</p>
+</div></blockquote>
+<p>SWMM.RPT</p>
+<blockquote>
+<div><p>This file contains the report information and the results of the storm drain flood routing in ASCII Format.
+The storm drain model engine generates this file.
+It is extensive and contains discharge hydrographs for every drain inlet, outlet and conduit.
+The Storm Drain Guidelines manual is the best resource for developing, troubleshooting and reviewing anything storm drain related.
+For more information look at: C:\Users\Public\Documents\ FLO-2D PRO Documentation\flo_help\Manuals\FLO-2D Storm Drain Manual.pdf.</p>
+</div></blockquote>
+<p>SWMMOUTFIN.OUT</p>
+<blockquote>
+<div><p>This file reports the storm drain outfall hydrographs for return flow to the surface water system.
+This file lists the grid element (or channel element if applicable) followed by the time and discharge pairs.
+The Storm Drain Guidelines manual is the best resource for developing, troubleshooting and reviewing anything storm drain related.
+For more information look at: C:\ Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\FLO-2D Storm Drain Manual.pdf.</p>
+</div></blockquote>
+<p>SWMMQIN.OUT</p>
+<blockquote>
+<div><p>The discharge hydrograph and return flow (time, discharge and return flow) into each storm drain inlet of the pipe network is reported in this file.
+Each inlet has a discharge hydrograph and return flow reported each output interval TOUT timestep.
+The Storm Drain Guidelines manual is the best resource for developing, troubleshooting and reviewing anything storm drain related.
+For more information look at: C:\Users\Public\Documents\ FLO-2D PRO Documentation\flo_help\Manuals\FLO-2D Storm Drain Manual.pdf</p>
+</div></blockquote>
+<p>SD ManholePopUp.OUT</p>
+<blockquote>
+<div><p>This file reports the storm drain manhole nodes that have enough pressure head to pop off the manhole cover.
+The pop off pressure head is an instantaneous head that removes the manhole cover.
+This pressure head can be different to the reported pressure head in the SWMM.RPT file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Manhole ID</p></li>
+<li><p>Popped time</p></li>
+<li><p>Pressure head pop off must be greater than the following:</p></li>
+<li><p>Rim and surcharge head</p></li>
+<li><p>FLO-2D water surface elevation</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>TIMDEP.OUT</p>
+<blockquote>
+<div><p>This file contains grid element, flow depth, velocity and velocity direction x and y and water surface elevation for each floodplain grid element at
+the user specified time intervals (TIMTEP in CONT.DAT).
+This file is also required for a time-lapse simulation in the MAXPLOT and FLO-2D MapCrafter post-processor programs.</p>
+<p>Time - output interval for time series.
+Single value at the top of the columns.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Depth (ft or m)</p></li>
+<li><p>Velocity (sqrt(x^2+y^2)) (fps or mps)</p></li>
+<li><p>Velocity x - velocity vector x</p></li>
+<li><p>Velocity y - velocity vector y</p></li>
+<li><p>Water surface elevation (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>TIMDEPCELL.OUT</p>
+<blockquote>
+<div><p>This file contains flow depth, velocity, and velocity direction x and y, and water surface elevation for a set of grid elements defined by the
+TIMEDEP- CELL.DAT file.
+The user specifies time intervals with TIMTEP in CONT.DAT.</p>
+</div></blockquote>
+<p>TIMDEP.HDF5</p>
+<blockquote>
+<div><p>This binary output file contains grid element, flow depth, velocity and velocity direction x and y and water surface elevation for each floodplain
+grid element at the user specified output time intervals (TIMTEP in CONT.DAT).
+This file is written in binary format (HDF5) and it has the same results than the TIMDEP.OUT file.</p>
+</div></blockquote>
+<p>TIMDEP_NC4.OUT</p>
+<blockquote>
+<div><p>This file contains specific details for every grid element at each time series output interval.
+The user specifies output time intervals with TIMTEP in CONT.DAT.
+This is an ASCII file.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Depth (ft or m)</p></li>
+<li><p>Qmax (cfs or cms)</p></li>
+<li><p>Qmax direction - grid element direction 1 - 8</p></li>
+<li><p>Vmax (fps or mps)</p></li>
+<li><p>Vmax direction - grid element direction 1 - 8</p></li>
+<li><p>Qnet - all flow in minus all flow out (cfs or cms)</p></li>
+<li><p>Surface Exchange - switch 0 or 1 identifies if cell had any flow for the time interval</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>TIME.OUT</p>
+<blockquote>
+<div><p>The timestep is controlled by the numerical stability criteria.
+When the stability criteria are exceeded for a particular grid element, the timestep is decreased.
+The grid elements with the highest number of timestep decreases are written to the TIME.OUT file.
+This file can be reviewed to determine if a specific floodplain, channel or street node is consistently causing the timestep decrease and what stability criteria is frequently being exceeded.
+If one grid element has caused significantly more timestep decreases than the other grid elements, then its attributes and the attributes of the
+contiguous grid elements should be carefully reviewed.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element - floodplain, channel, or street</p></li>
+<li><p>Number of timestep decrements</p></li>
+<li><p>Percent change in depth</p></li>
+<li><p>CFL Stability criteria</p></li>
+<li><p>Dynamic wave stability criteria</p></li>
+</ul>
+</div></blockquote>
+<p>The file lists the last one hundred time step decreases and the node type.</p>
+</div></blockquote>
+<p>TIME_TO_ABOVE_BASEFLOW.OUT</p>
+<blockquote>
+<div><p>An option to report the time to discharge above channel base flow has been implemented.
+The new file is generated with the following data columns.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time to above baseflow (hrs)</p></li>
+</ul>
+</div></blockquote>
+<p>This is a similar option as was coded for channel base flow.
+This file required that the baseflow variable IBASEFLOW is assigned with the base discharge value.
+This value represents the baseflow condition in a channel and the arrival time of any flow above that value is printed to this file.</p>
+</div></blockquote>
+<p>TIMEONEFT.OUT</p>
+<blockquote>
+<div><p>This file reports the grid element number, the x- and y-coordinates and the initial time to one foot of depth.
+The time to one foot of depth can be plot- ted in FLO-2D MapCrafter.
+This file is typically used for dam and levee breach analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time to one ft depth</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>TIMETOPEAK.OUT</p>
+<blockquote>
+<div><p>This file reports the grid element number, the x- and y-coordinates and the time of occurrence of the maximum depth.
+This time to maximum depth can be plotted in FLO-2D MapCrafter.
+While this file is typically used for dam and levee breach analysis, it valid for general flood studies.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time to one ft max depth</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>TIMETWOFT.OUT</p>
+<blockquote>
+<div><p>This file reports the grid element number, the x- and y-coordinates and the initial time to two feet of depth.
+The time to two feet of depth can be plot- ted in FLO-2D MapCrafter.
+This file is typically used for dam and levee breach analysis.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Time to two ft depth</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>TOPO_SDELEV.RGH</p>
+<blockquote>
+<div><p>This file contains the elevation adjustments that were automatically corrected when the FLO-2D engine compared the floodplain grid elements to the
+storm drain inlet rim and type 4 invert elevations.
+To fully accept the changes reported to fprimelev.new, replace TOPO.DAT with this file.
+It is also necessary to replace the FPLAIN.DAT with FPLSIN_SDELEV.RGH.</p>
+<p>UPS-DOWS-CONNECTIVITY.OUT</p>
+<p>This file reports the connectivity between the upstream domain grid elements and the downstream domain grid elements.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Upstream grid element</p></li>
+<li><p>Downstream grid elements</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Velocity Output Files</strong></p>
+<p>These files are similar to the DEPTH.OUT file.
+These files contain the x- and y-coordinates and maximum velocities and can be viewed with the MAXPLOT or FLO-2D MapCrafter program.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Velocity in the channel element (fps or mps)</p></li>
+</ul>
+</div></blockquote>
+<p>The velocity output files include:</p>
+<blockquote>
+<div><p>STVEL.OUT - Maximum street flow velocity;</p>
+<p>STVELDIR.OUT - Flow direction of the maximum street flow velocity;</p>
+<p>VELFP.OUT - Maximum floodplain flow velocity;</p>
+<p>VELOC.OUT - Maximum channel flow velocity;</p>
+<p>VELCHFINAL.OUT - Final channel flow velocities.;</p>
+<p>VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity.</p>
+<p>FINALVEL.OUT -Flow velocity at the end of the simulation.</p>
+<p>FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation.</p>
+<p>VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable.
+This is not max velocity x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.</p>
+<p>VEL_SQUARED_X_DEPTH.OUT - The velocity squared x depth parameter is evaluated as a single variable.
+This is not max velocity squared x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.</p>
+</div></blockquote>
+<p>The velocity output files related to two-PHASE flow include:</p>
+<blockquote>
+<div><p>FINALDIR_MUD.OUT - Floodplain final mudflow velocity direction.</p>
+<p>FINALVEL_MUD.OUT - Floodplain final mudflow velocity in the reported outflow direction.</p>
+<p>VELDIREC_MUD.OUT - Floodplain maximum mudflow velocity direction.</p>
+<p>VELFP_MUD.OUT - Floodplain maximum mudflow velocity in the reported outflow direction.</p>
+<p>VELOC_MUD.OUT - Channel maximum mudflow velocity.</p>
+<p>VELRESMAX_MUD.OUT - Floodplain maximum resolved mudflow velocity in the computed outflow direction.</p>
+<p>VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable (not maximum velocity times maximum depth).
+For two phase, the velocity x depth variable is the maximum value for the grid element for either fluid or mudflow whichever is greater.</p>
+<p>FPWSEL_MUD.OUT - Floodplain maximum mudflow water surface elevation.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid or Channel Left Bank Element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Variable</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>VELTIMEC.OUT</p>
+<blockquote>
+<div><p>This file lists the grid element number, maximum channel velocity and the time of occurrence.
+It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any unreasonably high maximum channel velocities.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Vmax in the channel element (fps or mps)</p></li>
+<li><p>Time of occurrence</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>VELTIMEFP.OUT</p>
+<blockquote>
+<div><p>This file lists the first 100 floodplain elements: number, maximum flood- plain velocity and the time of occurrence.
+It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
+unreasonably high maximum floodplain velocities.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Vmax floodplain element (fps or mps)</p></li>
+<li><p>Depth floodplain element (ft or m)</p></li>
+<li><p>Time of occurrence</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>VELRESMAX.OUT</p>
+<blockquote>
+<div><p>This file lists the maximum resolved velocities as a vector field.
+It is not based on the 8-flow directions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Xcoord</p></li>
+<li><p>Ycoord</p></li>
+<li><p>Velresmax (fps or mps)</p></li>
+<li><p>Velxmax</p></li>
+<li><p>Velymax</p></li>
+</ul>
+</div></blockquote>
+<p>Flow velocities are computed in 8-directions for each grid element.
+In the figure below, the red arrows indicate inflow to the grid element (2-directions) and the blue arrows represent outflow from the grid element
+(3-directions).
+The remaining flow directions have zero discharge and velocities.
+The arrow length indicates relative magnitude.
+If the outflow velocities from the grid element are resolved into x- and y- coordinate directions, the components would be depicted by the blue arrows
+in the figure below.
+The resultant velocity vector for the outflow from the grid element would then be represented by the green arrow.</p>
+</div></blockquote>
+<p>VELTIMEST.OUT</p>
+<blockquote>
+<div><p>This file lists the street element number, maximum street velocity and the time of occurrence.
+It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
+unreasonably high maximum street velocities.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Vmax street element (fps or mps)</p></li>
+<li><p>Time of occurrence</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>WSTIME.OUT</p>
+<blockquote>
+<div><p>If the WSTIME.DAT file is created, the WSTIME.OUT file will be generated listing the channel element number, time of the measured water sur- face
+elevation, measured water surface elevation at stated time, predicted water surface elevation at stated time, difference between the water surface
+elevations and the cumulative difference between the measured and predicted water surfaces.</p>
+</div></blockquote>
+<p>XSECAREA.OUT</p>
+<blockquote>
+<div><p>When the channel cross section option is invoked for channel routing, the channel geometry data is written to this file.
+It includes: grid element, flow area, top width and wetted perimeter for the lowest top of bank (bankfull flow).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Grid element</p></li>
+<li><p>Flow area of the cross section (sqft or sqm)</p></li>
+<li><p>Top width of the cross section (ft or m)</p></li>
+<li><p>Wetted Perimeter of the cross section (ft or m)</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>XSEC.OUT</p>
+<blockquote>
+<div><p>This file is created by the channel sediment transport option (ISED = 1 in CONT.
+DAT and ISEDN = 1 for a channel segment in CHAN.DAT) for natural cross section geometry data.
+It contains the final cross section bed elevations after scour and deposition have been computed.
+The file looks the same as XSEC.DAT with updated elevation data.</p>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%204.html" class="btn btn-neutral float-left" title="4. Chapter 4: Input Data File Description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%206.html" class="btn btn-neutral float-right" title="6. Chapter 6: Post-Processor Programs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Chapter 5.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

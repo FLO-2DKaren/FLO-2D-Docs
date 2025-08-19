@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Chapter 3: Pre-Processor Programs &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Chapter 4: Input Data File Description" href="Chapter%204.html" />
+    <link rel="prev" title="2. Chapter 2: Help and Resources" href="Chapter%202.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Input Manual Pro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Preface.html">Preface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1: FLO-2D Installation and Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2: Help and Resources</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">3. Chapter 3: Pre-Processor Programs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">3.1. Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#qgis-flo-2d-plugin">3.2. QGIS FLO-2D Plugin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gds">3.3. GDs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#profiles">3.4. Profiles</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">4. Chapter 4: Input Data File Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">5. Chapter 5: Output Files and Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">6. Chapter 6: Post-Processor Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">7. Chapter 7: Debugging and Trouble Shooting the Data Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">FLO-2D Pro Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Data Input Manual Pro</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Chapter 3: Pre-Processor Programs</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Data Input Manual Pro 2025/Chapter 3.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-3-pre-processor-programs">
+<h1><span class="section-number">3. </span>Chapter 3: Pre-Processor Programs<a class="headerlink" href="#chapter-3-pre-processor-programs" title="Link to this heading"></a></h1>
+<section id="introduction">
+<h2><span class="section-number">3.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
+<p>There are two pre-processor programs to help to create or edit the FLO-2D data files: QGIS Plugin, and PROFILES.
+Tutorials and workshop lessons for some of the programs’ functions are available in the FLO-2D/flo_help subdirectory.
+A discussion of the commands in the PROFILES program is included in this manual.</p>
+</section>
+<section id="qgis-flo-2d-plugin">
+<h2><span class="section-number">3.2. </span>QGIS FLO-2D Plugin<a class="headerlink" href="#qgis-flo-2d-plugin" title="Link to this heading"></a></h2>
+<p>The FLO-2D Plugin for Quantum Geographical Interface System (QGIS) is a program developed to generate FLO-2D data files using QGIS.
+This program has separate documentation available in the FLO-2D Documentation subdirectory.
+Tutorials and sample projects are available at <a class="reference external" href="https://documentation.flo-2d.com">https://documentation.flo-2d.com</a>.</p>
+</section>
+<section id="gds">
+<h2><span class="section-number">3.3. </span>GDs<a class="headerlink" href="#gds" title="Link to this heading"></a></h2>
+<p>The grid developer system (GDS) is a GIS program used to create and edit the FLO-2D grid system and its attributes.
+As of October 2023, the GDS and Map- per are now distributed separately from FLO-2D.
+These legacy tools are aging and their Visual Basic code has an unknown life limit for Microsoft operating systems.
+If a user requires these tools, they can be downloaded via the FLO-2D Sharefile account.
+The GDS has a separate reference manual.
+In addition, there are a number of GDS tutorials and workshop lessons that are available to install if desired.
+The tutorial and GDS/Mapper installer are in the Sharefile FLO-2D Pro Update folder.
+A Sharefile account is given to all end users and IT Admin.</p>
+</section>
+<section id="profiles">
+<h2><span class="section-number">3.4. </span>Profiles<a class="headerlink" href="#profiles" title="Link to this heading"></a></h2>
+<p>The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel
+bed elevation, channel depth, channel n-values and channel geometry.
+It will display the channel cross section geometry and interpolate the slope and cross-section geometry
+between surveyed cross-sections.
+PRO- FILES can also be used to view output water surface profiles (see the Post-Processor Programs Section).
+Run Profiles from the FLO-2D Plugin.</p>
+<p>Before using the PROFILES program, the basic FLO-2D files plus the CHAN.
+DAT file have to be created.
+The XSEC.DAT will also have to be created if surveyed cross-section data will be used.
+The general procedure for using the PROFILES program is as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Create the six basic FLO-2D data files.</p></li>
+<li><p>Develop the XSEC.DAT file for surveyed cross section data if necessary.</p></li>
+<li><p>Complete the channel data file (CHAN.DAT) based on rectangular, trapezoidal or surveyed (natural)
+cross-sections.</p></li>
+<li><p>For surveyed cross-sections, identify the channel element cross section number XSECNUM in the
+CHAN.DAT file to represent the cross-section.
+All other XSECNUM’s will be assigned a zero ‘0’ value.</p></li>
+<li><p>Run the PROFILES program from the FLO-2D Plugin or Explorer.</p></li>
+<li><p>The model bed slope can be compared with surveyed bed elevations by developing the WSURF.DAT file.</p></li>
+<li><p>Save data in PROFILES using the Save menu.
+This option is activated after an edit has been made.
+The save option allows for two datasets.
+The data can be overwritten or saved as new.
+The data is not written to file until PROFILES is closed.</p></li>
+</ol>
+</div></blockquote>
+<p>Initially the PROFILES program will display a blank screen with a Main Menu showing options to ‘View Segment
+Bed Slope’ or ‘Interpolate Segment Slope/Shape’.</p>
+<p>Interpolating a New Channel with Surveyed Cross-Sections</p>
+<p>To interpolate the cross-sections and slope and assign a cross-section to every channel element in PROFILES,
+use the ‘Interpolate Segment Slope/Shape’ menu option as follows:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Select a channel segment from the list provided in the dialog box shown in the sidebar.
+If there is only one channel segment, the interpolation will be completed directly.
+Note that before interpolation, the channel slope profile may look like a stair case because only the
+surveyed cross-sections define the channel
+profile at this point.
+Following interpolation, the slope profile will be more representative of the actual river profile.</p>
+<blockquote>
+<div><img alt="../../_images/DIM_Pro_2025_Chapter3_002.png" src="../../_images/DIM_Pro_2025_Chapter3_002.png" />
+</div></blockquote>
+</li>
+<li><p>PROFILES will automatically locate the surveyed cross-section data and interpolate the cross-section
+geometry and elevation (thalweg slope) for all
+those channel elements between the surveyed cross-sections within the segment.
+The following dialog box will appear indicating that the original cross-sections have been renamed with
+a prefix ‘X-’ before each cross-section name.</p></li>
+<li><p>Click ‘OK’ in the dialog box to view the interpolated bedslope.</p>
+<img alt="../../_images/DIM_Pro_2025_Chapter3_003.png" src="../../_images/DIM_Pro_2025_Chapter3_003.png" />
+</li>
+<li><p>Click on the ‘View Local Reach’ button on the menu bar.
+Click anywhere along the bedslope profile to zoom in on a local reach of 10 channel elements.</p>
+<img alt="../../_images/DIM_Pro_2025_Chapter3_004.png" src="../../_images/DIM_Pro_2025_Chapter3_004.png" />
+</li>
+<li><p>Click on ‘View/Edit Cross-Section Data’ to view the following dialog box displaying the channel element
+characteristics:</p>
+<img alt="../../_images/DIM_Pro_2025_Chapter3_005.png" src="../../_images/DIM_Pro_2025_Chapter3_005.png" />
+</li>
+<li><p>Click on the ‘Xsec’ button in the dialog box to view the cross-section data and image.</p>
+<img alt="../../_images/DIM_Pro_2025_Chapter3_006.png" src="../../_images/DIM_Pro_2025_Chapter3_006.png" />
+</li>
+<li><p>View additional cross-sections by clicking on the “Up” and “Down” but- tons in the dialog box.
+The computed cross section geometry and all the cross-section station and elevation data can be
+reviewed and edited.
+Edit the channel and cross-section data by adding or deleting stations and elevations, revising the
+Manning’s n-value, or raising or lowering the entire cross-section.</p></li>
+<li><p>Interpolate bedslope and or channel geometry.
+Identify the Upstream and Downstream channel elements in the group boxes labeled ‘Slope and Xsection
+Interpolation’.
+Use ‘Up’ and ‘Down’ buttons to locate one of the surveyed cross-sections and then type in the other either
+upstream or downstream channel elements.
+There may be several channel elements between two cross-sections selected for interpolation.
+Click on either the ‘Slope Only’ or ‘Shape/Slope’ buttons to interpolate either the channel bed slope or
+slope and the cross-section shape.
+The cross-section geometry is linearly interpolated according to top width and distance and is adjusted
+for the weighted flow area.
+One cross-section is overlaid on the other cross-section, stretched or contracted and the elevations
+averaged.</p>
+<img alt="../../_images/DIM_Pro_2025_Chapter3_007.png" src="../../_images/DIM_Pro_2025_Chapter3_007.png" />
+</li>
+<li><p>Save the results frequently by clicking on ‘Save’ on the menu bar.
+The saved data will not be written to file until the program is closed.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Perform the initial channel interpolation of the cross-sections automatically with the FLO-2D plugin.</p>
+</div>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%202.html" class="btn btn-neutral float-left" title="2. Chapter 2: Help and Resources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%204.html" class="btn btn-neutral float-right" title="4. Chapter 4: Input Data File Description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Chapter 3.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

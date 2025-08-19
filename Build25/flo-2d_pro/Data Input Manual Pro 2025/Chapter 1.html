@@ -1,0 +1,468 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Chapter 1: FLO-2D Installation and Getting Started &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. Chapter 2: Help and Resources" href="Chapter%202.html" />
+    <link rel="prev" title="Preface" href="Preface.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Input Manual Pro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Preface.html">Preface</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">1. Chapter 1: FLO-2D Installation and Getting Started</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#general">1.1. General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flo-2d-installation">1.2. FLO-2D Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#un-installing-the-flo-2d-software">1.3. Un-installing the FLO-2D Software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started">1.4. Getting Started</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#model-component-considerations">1.5. Model Component considerations</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2: Help and Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">3. Chapter 3: Pre-Processor Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">4. Chapter 4: Input Data File Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">5. Chapter 5: Output Files and Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">6. Chapter 6: Post-Processor Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%207.html">7. Chapter 7: Debugging and Trouble Shooting the Data Files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">FLO-2D Pro Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Data Input Manual Pro</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Chapter 1: FLO-2D Installation and Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Data Input Manual Pro 2025/Chapter 1.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-1-flo-2d-installation-and-getting-started">
+<h1><span class="section-number">1. </span>Chapter 1: FLO-2D Installation and Getting Started<a class="headerlink" href="#chapter-1-flo-2d-installation-and-getting-started" title="Link to this heading"></a></h1>
+<section id="general">
+<h2><span class="section-number">1.1. </span>General<a class="headerlink" href="#general" title="Link to this heading"></a></h2>
+<p>Use this document to help create the FLO-2D input data and review the output data.
+It has chapters on getting started, resources, preprocessor programs, data files, output files, post-processor programs and troubleshooting.
+Chapter 4 is useful when learning to build data files.
+It breaks down each data file into a set of variables and gives a definition and instructional comments for the data files.</p>
+<p>FLO-2D is recommended for use with Windows 10 or higher with 64-Bit operating systems, multiple processors and steady state hard drives.
+To generate and edit the data files, the QGIS/FLO-2D Plugin is used.
+QGIS facilitates assigning spatially variable data that can be interpolated from shape files, points and rasters.
+PROFILES is used to edit channel geometry data.
+Data files can also be edited using an ASCII text editor such as UltraEdit© or NotePad++©.</p>
+</section>
+<section id="flo-2d-installation">
+<h2><span class="section-number">1.2. </span>FLO-2D Installation<a class="headerlink" href="#flo-2d-installation" title="Link to this heading"></a></h2>
+<p>The FLO-2D Pro model has been compiled for 64-bit multi-core processor computers.
+It cannot be run on a 32-bit computer.
+Recommended minimum computer requirements are at least 4 GB RAM.
+To install the FLO-2D on the computer hard drive, unzip the installation file and double click the file FLO-2D- PRO-Setup.exe file.
+Follow the installation instructions as they appear in the dialog boxes on the screen.
+The default directory is C:\PROGRAM FILES(x86)\FLO-2D PRO.
+The FLO-2D model, and the processor programs are loaded into the FLO-2D Pro folder.
+The FLO-2D resource files are saved to the FLO-2D Documentation folder under C:\Users\Public\Public Documents\FLO-2D PRO Documentation.
+These files include helpful resources such as user manuals, example projects, lessons and PowerPoint presentations and instructional handouts.</p>
+</section>
+<section id="un-installing-the-flo-2d-software">
+<h2><span class="section-number">1.3. </span>Un-installing the FLO-2D Software<a class="headerlink" href="#un-installing-the-flo-2d-software" title="Link to this heading"></a></h2>
+<p>Remove the FLO-2D program and all of its attendant software from the computer with the Windows system Add Remove Programs tool.
+When removing the model, if the option appears to keep shared DLL/OCX files, do not remove them from the computer.
+To completely remove the FLO-2D files, delete the FLO-2D Pro Folder from the Program Files (x86).</p>
+</section>
+<section id="getting-started">
+<h2><span class="section-number">1.4. </span>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading"></a></h2>
+<section id="updates">
+<h3><span class="section-number">1.4.1. </span>Updates<a class="headerlink" href="#updates" title="Link to this heading"></a></h3>
+<p>When starting a new FLO-2D project, first visit the Sharefile FTP and download any executable updates.
+New features are frequently added to the model.
+Do not hesitate to notify FLO-2D Staff of any apparent programming bugs or problems that are encountered.
+These will be addressed as soon as possible.
+Program revisions are listed in the FLO-2D Pro Model Revisions document.
+C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Handouts.</p>
+</section>
+<section id="tutorials-and-lessons">
+<h3><span class="section-number">1.4.2. </span>Tutorials and Lessons<a class="headerlink" href="#tutorials-and-lessons" title="Link to this heading"></a></h3>
+<p>Tutorials and training videos are available for the FLO-2D Plugin.
+The Plugin is the recommended data editor.</p>
+<p>C:\users\public\public documents\flo-2d pro documentation <a class="reference external" href="https://documentation.flo-2d.com">https://documentation.flo-2d.com</a></p>
+</section>
+<section id="seeking-assistance-technical-support">
+<h3><span class="section-number">1.4.3. </span>Seeking Assistance – Technical Support<a class="headerlink" href="#seeking-assistance-technical-support" title="Link to this heading"></a></h3>
+<p>Send technical support questions by e-mail to <a class="reference external" href="mailto:contact&#37;&#52;&#48;flo-2d&#46;com">contact<span>&#64;</span>flo-2d<span>&#46;</span>com</a>.
+If there is a specific problem that needs to be resolved, zip the data files (only the *.DAT files, no output files *.OUT) and attach them to the
+e-mail along with a brief description of the problem and the project.
+Before sending the files, try to reduce the problem to its simplest form by turning off all components that are not contributing to the problem.
+For example, if the problem involves channel volume conservation, turn off the streets, buildings and levees and run the simulation again to determine
+if the problem still persists.
+Try to identify when the problem is first observed during the simulation (review SUMMARY.OUT) so that it is not necessary to run the entire
+simulation.</p>
+<p>Questions regarding a project application are considered to be technical consulting and outside the scope of data input technical support.
+If assistance is needed on a project, reasonable consulting fees can be discussed to provide guidance and oversight.</p>
+</section>
+<section id="hydrology-base-mapping-and-dtm-points">
+<h3><span class="section-number">1.4.4. </span>Hydrology, Base Mapping and DTM Points<a class="headerlink" href="#hydrology-base-mapping-and-dtm-points" title="Link to this heading"></a></h3>
+<p><strong>DTM data</strong></p>
+<p>To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model
+(DTM) data which might consist of LiDAR data, point shape files, rasters, contour maps or digital elevation model
+DEM data.
+The imagery and DTM points must have the same coordinate system.
+The most common formats for digital imagery are; *.tif, *.sid and *.jpg files</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Images must have corresponding world files (e.g. *.tfw, *.sdw and *.jgw).</p>
+<p>If photogrametric or LiDAR data are not available, DEM data can be used.</p>
+<p>Elevation data formats that are accepted by the QGIS/FLO-2D Plugin are ASCII Grid, ASCII xyz data sets and
+ArcGIS elevation shapefiles and Elevation Raster GeoTiff files.</p>
+</div>
+<p><strong>Hydrologic data</strong></p>
+<p>Hydrologic data for a flood simulation can include both rainfall and discharge hydrographs.
+The rainfall runoff from a watershed model can be the desired product or the watershed model can be used to
+generate inflow flood hydrographs for downstream flood routing.
+In either case the hydrologic data should be carefully reviewed because the area of inundation is determined by
+the flood and rainfall volume.</p>
+<p><strong>Floodplain and channel detail</strong></p>
+<p>If river channels, bridges, culverts, buildings and streets are to be simulated, the user must be able to locate
+these features with respect to individual grid elements. Aerial imagery and shapefiles are used for this purpose.
+Additional data may be required for these components including bridge and culvert rating curves or tables, streets
+width and curb height, and river cross-section surveys.</p>
+</section>
+<section id="estimate-the-project-area">
+<h3><span class="section-number">1.4.5. </span>Estimate the project area<a class="headerlink" href="#estimate-the-project-area" title="Link to this heading"></a></h3>
+<p>To create a computationally efficient model, it is best to minimize the grid system around the project area.
+The project computational domain (or grid system) can be outlined using the aerial photography.
+The grid system boundary should be located so that the project area it is not affected by either inflow or outflow
+conditions.
+The inflow and outflow nodes should be considered as non-essential nodes (sources and sinks) and these should be
+located away from the project area.</p>
+<p>If the project area is relatively small compared to the entire hydrologic basin that may need to be modeled, more
+than one FLO-2D simulation could be considered.
+A coarse grid system can be established for watershed or river system and a more detailed grid system created for
+the local project area where flood detail may be important.
+The outflow from the course grid system will constitute the inflow to the detailed grid system.</p>
+</section>
+<section id="selecting-the-grid-element-size">
+<h3><span class="section-number">1.4.6. </span>Selecting the grid element size<a class="headerlink" href="#selecting-the-grid-element-size" title="Link to this heading"></a></h3>
+<p>See the FLO-2D Reference Manual for more instructions.
+Once the overall project area has been identified, estimate the grid system size (as a rough rectangle) and determine
+the approximate number of grid elements that would be required for different size square grid elements such as 50 ft,
+100 ft, 200 ft, etc.
+The grid element size will control how fast the FLO-2D flood simulation will run.</p>
+<p>To help with the grid element size selection, the following criteria are suggested based on a rough estimate of peak discharge.
+The peak discharge Q<sub>peak</sub> divided by the surface area of the grid element A<sub>surf</sub> should be in the range:</p>
+<p>Q<sub>peak</sub>/A<sub>surf</sub> &lt; 10.0 cfs/ft<sup>2</sup> or in metric:</p>
+<p>Q<sub>peak</sub>/A<sub>surf</sub> &lt; 0.3 cms/m<sup>2</sup></p>
+<p>The closer Q<sub>peak</sub>/A<sub>surf</sub> is to 3.0 cfs/ft<sup>2</sup> (0.1 cms/m<sup>2</sup>), the faster the model will run.
+If the Q<sub>peak</sub>/A<sub>surf</sub> is much greater than 10.0 cfs/ft<sup>2</sup> or 0.3 cms/m<sup>2</sup>, the model will run more slowly (See table 1.1).
+After the grid element size has been selected, proceed with establishing the grid system using the QGIS/FLO-2D Plugin.
+There are QGIS workshop lessons to assist in getting started on a new project.</p>
+<p><em>Table 1.1.
+Grid System Size.</em></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of Grid Elements</p></th>
+<th class="head"><p>Model Simulation Speed</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt; 50,000</p></td>
+<td><p>Fast (minutes)</p></td>
+</tr>
+<tr class="row-odd"><td><p>50,000 – 250,000</p></td>
+<td><p>Moderate (&lt;12 hours)</p></td>
+</tr>
+<tr class="row-even"><td><p>250,000 – 1,000,000</p></td>
+<td><p>Slow (&gt; 12 hours)</p></td>
+</tr>
+<tr class="row-odd"><td><p>1,000,000</p></td>
+<td><p>Very Slow (&gt; 1 day)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="start-simple-then-add-detail">
+<h3><span class="section-number">1.4.7. </span>Start simple, then add detail<a class="headerlink" href="#start-simple-then-add-detail" title="Link to this heading"></a></h3>
+<p>The first flood simulation for any project will be a simple overland flow model upon which a more detailed flood simulation will be built.</p>
+<p>A suggested order of component construction is as follows:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Rainfall/Infiltration</p></li>
+<li><p>Channels</p></li>
+<li><p>Levees</p></li>
+<li><p>Streets</p></li>
+<li><p>Buildings</p></li>
+<li><p>Hydraulic Structures (culverts, weirs and bridges)</p></li>
+<li><p>Storm Drains</p></li>
+<li><p>Multiple Channel (rills and gullies)</p></li>
+<li><p>Mud and debris flows/sediment transport</p></li>
+</ul>
+</div></blockquote>
+<p>As new components are added to a model and tested, other components switches can be turned off in the CONT.DAT file.</p>
+<p>FLO-2D routes flows in eight directions as shown in figure 1.1 below.</p>
+<blockquote>
+<div><img alt="../../_images/DIM_Pro_2025_Chapter1_001.png" src="../../_images/DIM_Pro_2025_Chapter1_001.png" />
+<p><em>Figure 1.1.
+Flow directions.</em></p>
+</div></blockquote>
+<p>The four compass directions are numbered 1 to 4 and the four diagonal directions are numbered 5 to 8.
+Some components such as levees are placed on boundaries of the grid element.
+The grid element boundaries constitute an octagon for components associated with the boundary.</p>
+</section>
+<section id="saving-data">
+<h3><span class="section-number">1.4.8. </span>Saving data<a class="headerlink" href="#saving-data" title="Link to this heading"></a></h3>
+<p>When creating or editing the data files, it is suggested that the data files saved frequently and that one folder for testing a project and another
+one for editing a project.
+It is suggested that the data files be saved after finishing each component.</p>
+</section>
+<section id="develop-the-project-files">
+<h3><span class="section-number">1.4.9. </span>Develop the Project Files<a class="headerlink" href="#develop-the-project-files" title="Link to this heading"></a></h3>
+<p><em>Create a Project Folder</em></p>
+<blockquote>
+<div><p>Start by creating a subdirectory for the project data files and import the DTM data base files, map images and
+aerial photos.</p>
+</div></blockquote>
+<p><em>Build the Project Files</em></p>
+<blockquote>
+<div><p>Use the QGIS/FLO-2D Plugin to graphically create and edit the grid system Follow the QGIS Lesson 1
+“Getting Started” lesson.</p>
+</div></blockquote>
+<p><em>Run the FLO-2D model</em></p>
+<blockquote>
+<div><p>The required data files for a basic overland flood model are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>FPLAIN.DAT</p></li>
+<li><p>CADPTS.DAT</p></li>
+<li><p>CONT.DAT</p></li>
+<li><p>TOLER.DAT</p></li>
+<li><p>INFLOW.DAT</p></li>
+<li><p>OUTFLOW.DAT</p></li>
+<li><p>TOPO.DAT</p></li>
+<li><p>MANNINGS_N.DAT</p></li>
+</ul>
+</div></blockquote>
+<p>The INFLOW.DAT and OUTFLOW.DAT files are optional but are typically necessary for most applications.</p>
+<p>Run a FLO-2D simulation by:</p>
+<blockquote>
+<div><ol class="lowerroman simple">
+<li><p>QGIS - click on ‘<em>Run FLO-2D’</em> command in the File menu.</p></li>
+<li><p>Copy the ‘<em>FLOPRO.EXE’</em> file in the project folder and double click it.</p></li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+</section>
+<section id="some-general-guidelines">
+<h3><span class="section-number">1.4.10. </span>Some General Guidelines<a class="headerlink" href="#some-general-guidelines" title="Link to this heading"></a></h3>
+<p><em>Data Input</em></p>
+<blockquote>
+<div><p>When the data format appears confusing, review the data files provided in the Example Projects subdirectory of
+the FLO-2D folder using an ASCII editor such as NotePad++©.</p>
+</div></blockquote>
+<p><em>File Management</em></p>
+<blockquote>
+<div><p>The output files are always generated with the same name and will be over- written in subsequent model runs.
+To save any output files that could be overwritten, rename the file or create a new project folder, copy all the
+*.DAT files into it and then run the new flood simulation in that folder.</p>
+</div></blockquote>
+<p><em>Graphics Mode</em></p>
+<blockquote>
+<div><p>To view the floodwave progression during the simulation, run the simulation in graphics mode.
+This switch is set in the QGIS/FLO-2D Plugin by clicking the Control Variables button.
+Then check the Graphics Display mode and the Run button.</p>
+</div></blockquote>
+<p><strong>Things to check when creating the data files:</strong></p>
+<blockquote>
+<div><p><em>Grid System</em></p>
+<blockquote>
+<div><p>The grid system should begin with grid element #1 and have no missing grid element numbers.
+There should be no dangling grid elements connected only by a diagonal.</p>
+</div></blockquote>
+<p><em>Inflow/Outflow Nodes</em></p>
+<blockquote>
+<div><p>Inflow and outflow nodes should not have other components assigned to them such as hydraulic structures, streets, ARF’s, etc.
+Outflow nodes should not be doubled up.
+Use a single line of outflow nodes.</p>
+</div></blockquote>
+</div></blockquote>
+</section>
+</section>
+<section id="model-component-considerations">
+<h2><span class="section-number">1.5. </span>Model Component considerations<a class="headerlink" href="#model-component-considerations" title="Link to this heading"></a></h2>
+<section id="channel-modeling">
+<h3><span class="section-number">1.5.1. </span>Channel Modeling<a class="headerlink" href="#channel-modeling" title="Link to this heading"></a></h3>
+<p>The 1-D channel component can simulate flow in channels defined by various geometries.
+The flow shares between the channel banks and the floodplain.
+Channels are defined in FLO-2D whenever 1-D flow is more accurate than overland flow.
+They can reduce flooding and help the water move downstream quicker than flow on the floodplain.
+An extensive Channel Guidelines document is available in the Manuals Folder.
+C:\users\Public\Public Documents\FLO-2D Pro Documenta- tion\flo_help\Manuals.</p>
+</section>
+<section id="street-flow">
+<h3><span class="section-number">1.5.2. </span>Street Flow<a class="headerlink" href="#street-flow" title="Link to this heading"></a></h3>
+<p>Streets may convey or store only a small portion of the total flood volume, but may be important for distributing
+the flow to remote areas of the grid system.
+Street flow is simulated as a shallow rectangular channel with curbs.
+Street width and n-values are spatially variable.
+Streets are important to flood distribution in urban areas.</p>
+</section>
+<section id="levees-dams-and-breach">
+<h3><span class="section-number">1.5.3. </span>Levees, Dams and Breach<a class="headerlink" href="#levees-dams-and-breach" title="Link to this heading"></a></h3>
+<p>Levees and levee failure can be an important detail for floodplain projects.
+Levees are assigned to grid element boundaries with a crest elevations.
+Levee failure can include piping, overtopping and collapse.
+There is a levee and dam erosion component in FLO-2D.
+An extensive Levee, Dam, and Wall Breach document is available in the Manuals folder.
+C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\Levee Dam and Wall Breach Guidelines.pdf</p>
+</section>
+<section id="rainfall-and-infiltration-on-alluvial-fans">
+<h3><span class="section-number">1.5.4. </span>Rainfall and Infiltration on Alluvial Fans<a class="headerlink" href="#rainfall-and-infiltration-on-alluvial-fans" title="Link to this heading"></a></h3>
+<p>Alluvial fan surfaces can be as large as the upstream watershed.
+Fan rainfall can contribute a volume of water on the same order of magnitude as the inflow flood hydrograph at the fan apex.
+Infiltration losses can also significantly effect flood- wave attenuation.
+Infiltration losses can be calibrated by adjusting the hydraulic conductivity.
+Spatial variable hydraulic conductivity can be assigned in the QGIS/ FLO-2D Plugin.</p>
+</section>
+<section id="sediment-bulking-of-flood-hydrographs">
+<h3><span class="section-number">1.5.5. </span>Sediment Bulking of Flood Hydrographs<a class="headerlink" href="#sediment-bulking-of-flood-hydrographs" title="Link to this heading"></a></h3>
+<p>An alluvial fan will have geomorphic features that identify the watershed potential for generating mudflows.
+For mudflow simulation, sediment concentration can be assigned in the INFLOW.DAT file.
+For desert alluvial fans with a sand bed, sediment concentrations in flood events can reach 15% by volume.
+For concentrations less than 20% by volume, the flow will behave like a water flood.
+The primary effect of increasing the sediment concentration, in this case, is to bulk the flow volume.
+Simulating Mudflow Guidelines is available in the Handouts folder.</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Handouts\ Simulating Mudflow Guidelines.pdf.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Preface.html" class="btn btn-neutral float-left" title="Preface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Chapter%202.html" class="btn btn-neutral float-right" title="2. Chapter 2: Help and Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Chapter 1.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

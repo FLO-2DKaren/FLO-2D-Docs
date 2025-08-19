@@ -1,0 +1,2314 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7. Chapter 7: Debugging and Trouble Shooting the Data Files &mdash; FLO-2D Pro Documentation  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=5a0feee8" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script>let toggleHintShow = 'Click to show';</script>
+      <script>let toggleHintHide = 'Click to hide';</script>
+      <script>let toggleOpenOnPrint = 'true';</script>
+      <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+      <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+      <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="FLO-2D Pro Reference Manual" href="../Reference%20Manual/index.html" />
+    <link rel="prev" title="6. Chapter 6: Post-Processor Programs" href="Chapter%206.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            FLO-2D Pro Documentation
+              <img src="../../_static/FLO-2D Transparent.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../setup/index.html">FLO-2D Installation and Setup</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">FLO-2D Pro Resource Center</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Data Input Manual Pro</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Preface.html">Preface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%201.html">1. Chapter 1: FLO-2D Installation and Getting Started</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%202.html">2. Chapter 2: Help and Resources</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%203.html">3. Chapter 3: Pre-Processor Programs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%204.html">4. Chapter 4: Input Data File Description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%205.html">5. Chapter 5: Output Files and Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Chapter%206.html">6. Chapter 6: Post-Processor Programs</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">7. Chapter 7: Debugging and Trouble Shooting the Data Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#volume-conservation-errors">7.1. Volume Conservation Errors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#one-drive-sync">7.2. One Drive Sync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anti-virus-software">7.3. Anti-Virus Software</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#external-drives">7.4. External Drives</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#servers-and-virtual-computers">7.5. Servers and Virtual Computers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Reference%20Manual/index.html">FLO-2D Pro Reference Manual</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Channel%20Modeling%20Guidelines/index.html">Channel Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Hydraulic%20Structures%20Guidelines/index.html">Hydraulic Structures Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Levee%20Dam%20and%20Wall%20Breach%20Guidelines/index.html">Levee Dam and Wall Breach Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Storm%20Drain%20Modeling%20Guidelines/index.html">Storm Drain Modeling Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Simulating%20Mudflow%20Guidelines/index.html">Simulating Mudflow Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Two%20Phase%20Flood%20Routing%20Guidelines/index.html">Two Phase Flood Routing Guidelines</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flo-2d_plugin/index.html">FLO-2D Gila for QGIS: Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">FLO-2D Gila Tutorials</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">FLO-2D Pro Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">FLO-2D Pro Resource Center</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Data Input Manual Pro</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>Chapter 7: Debugging and Trouble Shooting the Data Files</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/flo-2d_pro/Data Input Manual Pro 2025/Chapter 7.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="chapter-7-debugging-and-trouble-shooting-the-data-files">
+<h1><span class="section-number">7. </span>Chapter 7: Debugging and Trouble Shooting the Data Files<a class="headerlink" href="#chapter-7-debugging-and-trouble-shooting-the-data-files" title="Link to this heading"></a></h1>
+<p><strong>Troubleshooting Guidelines</strong></p>
+<p><strong>Data Errors</strong></p>
+<p>Data input errors may result in the automatic termination of a simulation run along with a Fortran error message.
+The error message will report a ‘Unit’ number that is associated with the FLO-2D file that contains the error.
+The files are listed in Table 4.1, Table 7.1, and Table 7.2.</p>
+<p><strong>Table 7.1 List of Misc Files and Unit Numbers</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Unit No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>Unit No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>47</p></td>
+<td><p>ARF.BAC</p></td>
+<td><p>398</p></td>
+<td><p>MANNINGS_N.BAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>260</p></td>
+<td><p>BREACH.BAC</p></td>
+<td><p>2902</p></td>
+<td><p>MANNINGS_N_RES.BAC</p></td>
+</tr>
+<tr class="row-even"><td><p>387</p></td>
+<td><p>BUILDING_COLLAPSE.BAC</p></td>
+<td><p>48</p></td>
+<td><p>MULT.BAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>46</p></td>
+<td><p>CHAN.BAC</p></td>
+<td><p>51</p></td>
+<td><p>OUTFLOW.BAC</p></td>
+</tr>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>CONT.BAC</p></td>
+<td><p>42</p></td>
+<td><p>RAIN.BAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>35</p></td>
+<td><p>EVAPOR.BAC</p></td>
+<td><p>1569</p></td>
+<td><p>SDCLOGGING.BAC</p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p>FPLAIN.BAC</p></td>
+<td><p>49</p></td>
+<td><p>SED.BAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>121</p></td>
+<td><p>FPXSEC.BAC</p></td>
+<td><p>53</p></td>
+<td><p>STREET.BAC</p></td>
+</tr>
+<tr class="row-even"><td><p>1610</p></td>
+<td><p>GUTTER.BAC</p></td>
+<td><p>1567</p></td>
+<td><p>SWMMFLO.BAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>69</p></td>
+<td><p>HYSTRUC.BAC</p></td>
+<td><p>1564</p></td>
+<td><p>SWMMOUTF.BAC</p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>INFIL.BAC</p></td>
+<td><p>29</p></td>
+<td><p>TOLER.BAC</p></td>
+</tr>
+<tr class="row-odd"><td><p>44</p></td>
+<td><p>INFLOW.BAC</p></td>
+<td><p>397</p></td>
+<td><p>TOPO.BAC</p></td>
+</tr>
+<tr class="row-even"><td><p>58</p></td>
+<td><p>LEVEE.BAC</p></td>
+<td><p>2901</p></td>
+<td><p>TOPO_RES.BAC</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Troubleshooting: Is the flood simulation running OK?</strong></p>
+<p>There are several indicators to help you identify modeling problems.
+The most important one is volume conservation.
+The FLO-2D results should be reviewed for volume conservation, surging, timestep decrements, and roughness adjustments with limiting Froude numbers.</p>
+<p><em>Volume Conservation</em></p>
+<blockquote>
+<div><p>Any hydraulics model that does not report on volume conservation should be suspected of generating or losing volume.
+A review of the SUMMARY.
+OUT file will identify any volume conservation problems.
+This file will dis- play the time when the volume conservation error began to appear during the simulation.
+Typically a volume conservation error greater 0.001 percent is an indication that the model could be improved.
+The file CHVOLUME.
+OUT will indicate if the volume conservation error occurred in the channel routing instead of the overland flow component.
+Components should be switched ‘off’ one at a time and the model simulation run again until the volume conservation problem disappears.
+This will identify which com- ponent is causing the difficulty.
+Some volume conservation problems may be eliminated by slowing the model down (decreasing the timesteps) using the numerical stability criteria.
+Most volume conservation problems are an indication of data errors.</p>
+</div></blockquote>
+<p><em>Surging</em></p>
+<blockquote>
+<div><p>It is possible for volume to be conserved during a flood simulation and still have numerical surging.
+Numerical surging is the result of a mismatch be- tween flow area, slope and roughness.
+It can cause an over-steepening of the floodwave identified by spikes in the output hydrographs.
+Channel surging can be identified by discharge spikes in the CHANMAX.OUT file or in the HYDROG program plotted hydrographs.
+Predicted high maximum velocities indicate surging.
+To identify floodplain surging, review the maximum velocities in the MAXPLOT or Mapper post-processor program.
+You can also review the VELTIMEC.OUT (channel) or VELTIMEFP.OUT (flood- plain) files for unreasonable maximum velocities.
+Surging can be reduced or eliminated by adjusting (lowering) the stability criteria (COURANT or DEPTOLFP in TOLER.DAT) thus decreasing the timesteps.
+If decreasing the timesteps fails to eliminate the surging, then individual grid element topography, slope or roughness should be adjusted.
+This can be accomplished in the FLO-2D Plugin for floodplain flow.
+For channel flow, the PROFILES program can be used to make adjustments.
+Increasing the flow roughness will generally reduce or eliminate flow surging.
+For channel surging, abrupt transitions in flow areas between contiguous channel elements should be avoided.
+Setting a lower limiting Froude number for a channel reach may also help to identify the problem.</p>
+</div></blockquote>
+<p><em>Sticky Grid Elements</em></p>
+<blockquote>
+<div><p>When the flood simulation is running slowly, the TIME.OUT file can be reviewed to determine which grid elements are causing the most timestep
+decreases (‘sticky elements’).
+TIME.OUT lists the top twenty floodplain, channel or street elements that caused the model to slow down.
+The file also lists whether the timestep decreases occur with the percent change in depth, Courant criteria or dynamic wave stability criteria.
+Adjustments can be made in the stability criteria to more equably distribute the timestep decreases.
+The model is designed to advance and decrement timesteps, so there have to be grid elements listed in the TIME.OUT file.
+If one or two grid elements have significantly more timestep decreases than the other elements listed in the file, the attributes of the ‘sticky’ grid
+elements such as topography, slope or roughness should be adjusted.
+The goal is to make the model run as fast as possible while avoiding numerical surging.</p>
+<p>If a floodplain element is causing most of the timestep decreases, check the SURFAREA.OUT file to determine how much surface area is left in the
+floodplain element for flood storage.
+If the floodplain element contains a channel bank, there may be very little surface area left for flood storage.
+This will cause the model run slowly with exchanges the flow between the channel and floodplain.
+To fix this problem:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Remove other components from the channel bank element including streets or ARF values.</p></li>
+<li><p>Shorten the channel length (XLEN in CHAN.DAT).
+This will in- crease the surface area in the channel bank floodplain elements.</p></li>
+<li><p>Decrease the channel cross section width in the PROFILES program.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p><em>Limiting Froude Numbers</em></p>
+<blockquote>
+<div><p>There is a unique relationship between floodwave celerity and average flow velocity described by the Froude number that should not be violated during
+numerical flood routing.
+This is a physical relationship between the kinematic and gravitation forces.
+To use the limiting Froude number, estimate a reasonaclsble maximum Froude number for your flood simulation and assign the value to either FROUDL
+(floodplain), FROUDC (channels) or STRF- NO (streets) variables.
+When the computed Froude number exceeds the limiting Froude number, the n-value is increased by a small value (~ 0.001) for the next timestep.
+This change in grid element n-value helps to create a better match between the slope, flow area and n-value during the simulation.
+When the limiting Froude number is no longer exceeded, the n-value is gradually decreased to the original value.
+The changes in the n-values during the simulation are reported in the ROUGH.OUT file.
+For the next FLO-2D simulation, grid element n-value adjustments can be made using the n-values reported in ROUGH.OUT.
+The maximum n-values are also reported in MANNINGS_M.RGH, CHAN.RGH and STREET.RGH files that are created at the end of a simulation.
+These (*.RGH) files can then be renamed to data input files (*.DAT) for the next flood simulation (e.g. MANNINGS_N.RGH = MANNINGS_N.DAT).</p>
+</div></blockquote>
+<p><em>Reviewing the results</em></p>
+<blockquote>
+<div><p>FLO-2D results include the maximum area of inundation as displayed by the maximum flow depth, temporal and spatial hydraulic results, channel or
+floodplain cross section hydrographs and peak discharges.
+The Mapper++ program can used to review maximum flow depths, water surface elevations or velocities.
+The results can be plotted as either line contours or shaded contours in Mapper++.
+Look for any maximum velocities or flow depths that are unreasonable.
+This may be an indication of numerical surging.</p>
+<p>The FLO-2D flood simulation can be terminated at any time during the run by clicking Exit on the toolbar.
+The simulation will terminate after the current output interval is completed and the output files are generated and saved.
+This enables the user to check if the flood simulation is running poorly (e.g. too slow or not conserving volume) and the simulation can be stopped
+without losing the opportunity to review the output data.</p>
+</div></blockquote>
+<p><strong>Make some adjustments</strong></p>
+<blockquote>
+<div><p>The following data file adjustments may improve the simulation and speed up the model:</p>
+<p><em>Spatial Variation of n-values</em></p>
+<blockquote>
+<div><p>The most common cause of numerical surging is underestimated n-values.
+Typical n-values represent steady, uniform flow.
+Spatial variation of n-values will affect the floodwave progression (travel time) and reduce surging, but may not significantly impact the area of
+inundation (especially for longer flood durations).
+Focus on the critical part of the project area when adjusting n-values and review TIME.OUT and ROUGH.OUT to complete the n-value revisions.</p>
+</div></blockquote>
+<p><em>Edit Topography</em></p>
+<blockquote>
+<div><p>The interpolation of DTM points to assign elevations to grid elements is not perfect even when the FLO-2D Plugin filters are applied.
+It may be necessary to adjust some floodplain grid element elevations when you review the results.
+MAXPLOT and Mapper++ can be used to locate grid elements with unreasonable flow depths that may constitute inappropriate depressions.
+Floodplain depressions can sometimes occur along a river channel if too many floodplain DTM points located within the channel.</p>
+</div></blockquote>
+<p><em>Floodplain Surface Area Reduction</em></p>
+<blockquote>
+<div><p>The distribution of flood storage on the grid system can be influenced by as- signing area reduction factors (ARF’s) to represent loss of storage (i.e.
+buildings).
+For large flood events, the assignment of individual grid element ARF values will usually have minor impact on the area of inundation.
+For local flooding detail, individual grid element ARF assignments may be justified.</p>
+</div></blockquote>
+<p><em>Channel Cross Section Adjustments</em></p>
+<blockquote>
+<div><p>Typically a surveyed cross section will represent five to ten channel elements.
+Selecting a cross section to represent transitions between wide and narrow cross sections requires engineering judgment.
+Use the PROFILES program to interpolate the transition between surveyed cross sections.</p>
+</div></blockquote>
+<p><em>Channel Slope Adjustments</em></p>
+<blockquote>
+<div><p>Adverse channel slopes can be simulated by FLO-2D.
+Smoothing out an irregular slope condition over several channel elements to represent reach average slope conditions may speed up the simulation.
+Cross sections with scour holes can result in local adverse slopes that misrepresent the average reach conditions.
+Review the channel slope in PROFILES.</p>
+</div></blockquote>
+<p><em>Street Flow</em></p>
+<blockquote>
+<div><p>High street velocities may cause numerical surging and slow the simulation down.
+Assign reasonable limiting street Froude numbers to adjust the street n-values.</p>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Model Calibration and Replication of Flood Events</strong></p>
+<p>Estimating flood hydrology (both rainfall and flood hydrographs) can be difficult when replicating historical floods.
+To match measured flood stages, high water marks or channel discharges, first determine a reasonable estimate of the flood volume, then concentrate on
+the model details such as n-values, ARF’s and street flow.
+Flood volume is more important to flood routing than the peak discharge.</p>
+<p><strong>Trouble Shooting Technique</strong></p>
+<p>When undertaking a new FLO-2D flood simulation, start simple and progressively build in model component detail.
+After the required data files have been prepared, run a basic overland flood simulation.
+Review the results.
+If any issues arise consult the troubleshooting tips found in this chapter.
+Table 7.2 lists some common data errors.</p>
+<p>To debug the data files after a FLO-2D simulation, begin by reviewing the ERROR.CHK file.
+All the data errors recognized by the model are reported in this file.
+FLO-2D has an extensive data error and warning message system and the messages are reported in ERROR.CHK as data inconsistencies are encountered.
+One of the most common errors is missing data that will invoke an end-of-file error statement to the screen.
+This error occurs when the model is searching for more data than is in the data file.
+Another common error is to activate a component or process switch without preparing the required data file.
+For example, an error will occur if the component switch ICHANNEL = 1 in the CONT.DAT file, but the data file CHAN.DAT is not available.</p>
+<p>One data error that is difficult to locate is the array allocation violation where the array index number becomes zero or larger than the assigned
+value.
+For example, there may be missing sediment concentrations in INFLOW.DAT for a mudflow simulation.
+This made a code error where a variable is not initialized to zero.
+When this type of error is encountered, the FLO-2D model is terminated with a FOR- TRAN error message without indicating the file location or line
+entry of the error.
+To locate the data error, simplify the simulation and turn off all of the components and turn them back on one at time until the error occurs again.
+Reset simulation time to the model time just after the error occurred to reduce time to debug the model.
+If attempts to debug an error are ineffective, send a zipped copy of the data files to FLO-2D (<a class="reference external" href="mailto:contact&#37;&#52;&#48;flo-2d&#46;com">contact<span>&#64;</span>flo-2d<span>&#46;</span>com</a>) along with brief description of the
+problem.</p>
+<p>The user can create a set of backup data files to debug the model.
+Set IBACKUP = 1 in the CONT.DAT file.
+These backup files replicate the data files and will indicate if the computer is reading the data files correctly.
+The backup file should be identical to the original data file except for spacing.
+If the program terminates before reaching the first output interval timestep, there is probably an error in the data files.
+Start by checking the *.BAC files one by one.
+If one of the files is not complete, this may be the location of the data error.</p>
+<p>Review the following files to analyze volume conservation problems: SUMMARY.
+OUT, CHVOLUME.OUT, CHANMAX.OUT, TIME.OUT, BASE.OUT, ROUGH.OUT, CHANNEL.CHK, and SURFAREA.OUT.
+See the ‘Pocket</p>
+<p>Guide’ for further troubleshooting tips involving volume conservation, sticky grid elements listed in the TIME.OUT file, and numerical surging.
+The instructional comments at the end of each data file description in this manual contains a number of guidelines to assist the user in creating or
+checking the data files.</p>
+<p><strong>List of Common Data Errors</strong></p>
+<p>A list of the most common errors associated with running FLO-2D is presented below and a table for troubleshooting runtime errors follows the list.
+Whenever an error is encountered, refer to the ERROR.CHK file first.
+All of the *.CHK files are listed in Table 7.3.
+The file descriptions can be referenced in Chapter 5.</p>
+<p><strong>Table 7.2 List of Common Data Errors</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 100.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Table 7. 2 List of Common Data Errors</strong></p></td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple">
+<li><p>Missing data entries. Insufficient data was provided to the model.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="2">
+<li><p>Switches were activated without the corresponding data or files(for ex- ample, see MUD, ISED, etc., in the CONT.DAT file).</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="3">
+<li><p>There was missing or additional lines in a data file when switch is activated. Observe the *** Notes: *** in the file descriptions.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="4">
+<li><p>Percentages were expressed as a number instead of a decimal.See the description of XCONC in CONT.DAT or the HP(I,J,3) variable in IN- FLOW.DAT.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="5">
+<li><p>The IDEPLT grid element was improperly assigned in INFLOW.DAT for the graphics mode.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="6">
+<li><p>Channel infiltration switch INFCHAN was not ‘turned on’ in theIN- FIL.DAT file.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="7">
+<li><p>Either one or both of channel and floodplain outflow elements were not assigned for a given grid element.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="8">
+<li><p>The street width exceeded the grid element width.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="9">
+<li><p>The array size limitation for a variable was exceeded.</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic" start="10">
+<li><p>The available floodplain surface area was exceeded by assigning channels, streets, ARF’s and/or multiple channels with too much surface area.</p>
+<p>Review the SURFAREA.OUT.</p>
+</li>
+</ol>
+</td>
+</tr>
+<tr class="row-even"><td><ol class="arabic simple" start="11">
+<li><p>The rainfall variable R_DISTRIB data was entered as total cumulative rainfall instead of the percentage of the total rainfall (range0.0 to 1.0).</p></li>
+</ol>
+</td>
+</tr>
+<tr class="row-odd"><td><ol class="arabic simple" start="12">
+<li><p>The ISEDN switch for channel sediment transport was not‘turned on’ in the CHAN.DAT file for the channel segment.</p></li>
+</ol>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Runtime Errors</strong></p>
+<p>If the simulation stops before reaching the prescribed simulation time, review the output files for diagnostic information:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If the program ends with a Fortran Error, screenshot the error message.
+It may reveal the file location where the error occurred.</p></li>
+<li><p>Review the *.CHK files for potential data errors.</p></li>
+<li><p>Review the channel check files for potential errors.</p></li>
+</ul>
+</div></blockquote>
+<section id="volume-conservation-errors">
+<h2><span class="section-number">7.1. </span>Volume Conservation Errors<a class="headerlink" href="#volume-conservation-errors" title="Link to this heading"></a></h2>
+<p>Most volume conservation and numerical stability problems are associated with channel flow.
+When constructing a channel system, it is often necessary to fabricate cross section geometry, estimate roughness or adjust channel bed slopes.
+Mismatched channel morphology parameters with an appropriate roughness are the primary source of numerical stability problems.
+To compute smoother hydraulics between two channel grid elements, adjust the bed slope, cross section flow area or roughness values.
+Try to avoid abrupt changes in cross sections geometry from one channel element to another.
+The channel flow area for a natural channel (not a concrete rectangular or trapezoidal channel geometry) should make a gradual transition from a wide,
+shallow cross section to a narrow deep cross section.
+An actual cross section transition may occur over several channel grid elements.
+Adjust the channel geometry so that the maximum change in flow area between channel elements is less than 25%.
+To address channel problems, consider the following measures:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Increase the roughness in wide, shallow cross sections and decrease the roughness in narrow deep channel grid elements.</p></li>
+<li><p>Reduce the difference between the cross-section areas.
+Avoid abrupt cross section transitions between channel elements.
+Adjust the channel cross section geometry in the PROFILES.
+Use PROFILES to re-interpolate between surveyed cross sections.</p></li>
+<li><p>Review and adjust the bed slope with the PROFILES program.
+Adverse bed slopes are OK but adverse spikes and dips are not.</p></li>
+<li><p>Select a longer channel length within the channel grid element.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="one-drive-sync">
+<h2><span class="section-number">7.2. </span>One Drive Sync<a class="headerlink" href="#one-drive-sync" title="Link to this heading"></a></h2>
+<p>Running simulations on projects that are stored on a directory that is synced to One Drive may result in a simulation crash.
+Small projects that run quickly and do not have long intervals between data output might be OK but it is a poor modeling practice to run projects on
+paths like the Desktop or Documents folder that will always sync to Microsoft One Drive.
+Not only does this practice risk a simulation crash, it also results in overall sluggish computational behavior.
+Forcing a memory analysis and sync places a unnecessary burden on computer processors.
+If simulations take more than 12 hours, consider moving projects to a directory that is not syncing to One Drive.</p>
+</section>
+<section id="anti-virus-software">
+<h2><span class="section-number">7.3. </span>Anti-Virus Software<a class="headerlink" href="#anti-virus-software" title="Link to this heading"></a></h2>
+<p>This program are important but allowing them to continually scan for viruses or malware will add a processing burden to the computer.
+If a simulation takes more than 12 hours, consider running it on a computer that is dedicated to modeling that can be isolated with a firewall that
+limits web traffic so that anti-virus software scans can be limited or turned off while the simulation is running.</p>
+</section>
+<section id="external-drives">
+<h2><span class="section-number">7.4. </span>External Drives<a class="headerlink" href="#external-drives" title="Link to this heading"></a></h2>
+<p>Running simulations on external drives may result in a crash due to drive connectivity errors.
+It will also slow simulations since the data transfer at runtime is happening over the network path that connects the computer to the drive.
+External drives may also have protections so that executables cannot write data to the drive.
+It is better to run simulations on the local computer.</p>
+</section>
+<section id="servers-and-virtual-computers">
+<h2><span class="section-number">7.5. </span>Servers and Virtual Computers<a class="headerlink" href="#servers-and-virtual-computers" title="Link to this heading"></a></h2>
+<p>Running simulations on servers or virtual computers is relatively straight for- ward and easy.
+For a Virtual Computer, simply set up the computer the same way a normal installation is performed.
+FLO-2D and QGIS can be installed on a Virtual Computer.
+Use it just like a regular computer.</p>
+<p>Servers can be set up for running FLO-2D models but it is not necessary to install FLO-2D in order to run simulations.
+A program like Docker can be used to build, deploy, and optimize server configurations.
+Get help from an IT professional and FLO-2D staff to explore this option.
+It should be noted that for FLO-2D no server system can outperform a high performance desktop computer running AMD high performance processors.</p>
+<p><strong>Table 7.3 List of *.CHK Files and Unit Numbers</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+<col style="width: 25.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Unit No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+<td><p><strong>Unit No.</strong></p></td>
+<td><p><strong>File Name</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>ERROR.CHK</p></td>
+<td><p>1234</p></td>
+<td><p>MODFLOW_ERROR.CHK</p></td>
+</tr>
+<tr class="row-odd"><td><p>56</p></td>
+<td><p>CHANNEL.CHK</p></td>
+<td><p>1577</p></td>
+<td><p>UNDERGROUNDOUTFALLS.CHK</p></td>
+</tr>
+<tr class="row-even"><td><p>86</p></td>
+<td><p>CHANBANKEL.CHK</p></td>
+<td><p>1578</p></td>
+<td><p>RainCell.CHK</p></td>
+</tr>
+<tr class="row-odd"><td><p>194</p></td>
+<td><p>BATCH.CHK</p></td>
+<td><p>1580</p></td>
+<td><p>HDF5_Error.CHK</p></td>
+</tr>
+<tr class="row-even"><td><p>333</p></td>
+<td><p>NOSHOW.CHK</p></td>
+<td><p>1590</p></td>
+<td><p>RainOneCell.CHK</p></td>
+</tr>
+<tr class="row-odd"><td><p>1571</p></td>
+<td><p>STORMDRAIN_ERROR.CHK</p></td>
+<td><p>8871</p></td>
+<td><p>ARF_ADJUSTMENT.CHK</p></td>
+</tr>
+<tr class="row-even"><td><p>991</p></td>
+<td><p>DEBUG.CHK</p></td>
+<td><p>6669</p></td>
+<td><p>HYDRAULIC STRUCTURE_SHALLOW FLOW WARNING.CHK</p></td>
+</tr>
+<tr class="row-odd"><td><p>6670</p></td>
+<td><p>6670 HYDRAULIC STRUCTURE_TAILWATER WARNING.CHK</p></td>
+<td><p>6671</p></td>
+<td><p>HYDRAULIC STRUCTURE_HEADWATER WARNING.CHK</p></td>
+</tr>
+<tr class="row-even"><td><p>6673</p></td>
+<td><p>HYDRAULIC STRUCTURE_ HEADWATER WARNING.CHK</p></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Debugging Errors</strong></p>
+<p>In addition to the following troubleshooting guide, refer to the ‘Getting Started Guidelines’ at the begin of this manual and the Pocket Guide to
+assist in debugging runtime errors.</p>
+<p>Program will not run:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Data errors.
+Turn off the component switches until the model runs.</p></li>
+<li><p>The executable program was damaged.
+Reload the program or contact technical support.</p></li>
+<li><p>The model is not properly licensed.
+Contact technical support.</p></li>
+</ul>
+</div></blockquote>
+<p>Program stops</p>
+<blockquote>
+<div><p>The model run is terminated before the first timestep or after a few timesteps with data file error indicated on the screen or in ERROR.CHK:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Review the ERROR.CHK file or the data file identified by the program error message.</p></li>
+<li><p>Review the backup file (*.BAC).</p></li>
+<li><p>Review the List of Common Data Errors.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Program stops</p>
+<blockquote>
+<div><p>The model run is terminated after several timesteps indicating a numerical stability error.
+The grid element causing the stability error is listed on the screen instability dialog box or at the end of the BASE.OUT file.</p>
+</div></blockquote>
+<p>Stability criteria were not met.</p>
+<blockquote>
+<div><p>Review and revise the elevation and roughness data for the indicated grid element.
+The ROUGH.OUT and TIME.OUT files will help to locate the problem grid element.
+Check the contiguous grid elements to the problem element in the 8 directions as the problem may be with the neighbor element.</p>
+</div></blockquote>
+<p>Volume conservation</p>
+<blockquote>
+<div><p>The volume conservation may indicate either a loss or gain of volume.
+A review of the SUMMARY.OUT and CHVOLUME.OUT will reveal if the volume conservation error is in the channel or on the floodplain.
+Volume conservation problems are indication of data error.</p>
+</div></blockquote>
+<p>Discharge surging</p>
+<blockquote>
+<div><p>Numerical surging, which involves alternating low and high discharges, is typically associated with channel flow.
+Floodplain surging can also occur but is less common.
+Maximum floodplain velocities should be reviewed in the MAXPLOT, VELTIMEC.OUT, and VELTIMEFP.OUT files.
+Any unreasonable maximum velocities identified should be addressed.</p>
+<p>Other files that may indicate numerical surging include CHANMAX.
+OUT, HYCHAN.OUT, CHANSTABILITY.OUT, TIME.OUT, and ROUGH.OUT.</p>
+<p>Hydrograph plots generated in the HYDROG program may show spikes that suggest surging.
+It is important to note that surging can occur even when overall volume conservation remains acceptable.</p>
+</div></blockquote>
+<p>Supercritical flow</p>
+<blockquote>
+<div><p>Supercritical flow is not necessary a problem, but its occurrence should be limited to conditions where it is expected such as in streets, concrete
+channels or steep bedrock watersheds.
+Supercritical flow on alluvial surfaces should be avoided.</p>
+</div></blockquote>
+<p>Numerical Instability:</p>
+<blockquote>
+<div><p>The channel surging may be related to numerical instability, abrupt changes in channel geometry, inappropriate slopes, supercritical flow or variable
+mudflow sediment concentrations.
+Mismatched slope, flow area and n-values are the most common causes of channel instability.
+A combination of revisions may improve numerical instability.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Abrupt changes in slope or severe adverse slope may cause in- stability.
+Use the PROFILES program to fix irregular bed slope conditions.</p></li>
+<li><p>Review the cross-section flow areas over several channel elements in PROFILES.
+Eliminate any abrupt changes in cross section areas between channel elements.
+If the surging occurs at low flows, review only the bottom portion of the cross section not the bankfull conditions.</p></li>
+<li><p>Decrease the channel Courant number in the TOLER.DAT file.
+Decrease the Courant number in 0.1 increments until a reason- able lower limit of 0.2 is reached.</p></li>
+<li><p>Insufficient floodplain area.
+Small floodplain surface areas can exacerbate unsteady flow.
+Review SURFAREA.OUT and in- crease the available grid element surface area for flood storage.</p></li>
+<li><p>Increase the n-values for the grid elements in the vicinity of the surging flow.</p></li>
+<li><p>Adjust the floodplain grid element elevations around the problem element.</p></li>
+<li><p>Increase the channel length within the grid element.</p></li>
+<li><p>The hydraulic structure discharge rating curve or table may be poorly matched with the upstream or downstream channel hydraulics.
+Review the hydraulic structure rating curve or table and compare the discharge values to those found in the HYCHAN.OUT file for that particular
+channel element or the next one upstream.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Unexpected supercritical flow on alluvial surfaces:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adjust the limiting Froude number using the FROUDL variable in the CONT.DAT file or the FROUDC variable in the CHAN.DAT.</p></li>
+<li><p>Increase the floodplain or channel roughness values.</p></li>
+<li><p>Modify the slope.
+The grid elevations assigned by the FLO-2D Plugin may not be representative of the field condition.
+Change the grid element elevations to make the channel or floodplain slope more uniform.</p></li>
+</ul>
+</div></blockquote>
+<p>Variable mudflow sediment concentration:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Review the sediment concentration in the inflow hydrographs in the INFLOW.DAT file.</p></li>
+<li><p>The relationships for viscosity and yield stress should fall with the research data presented in the reference manual.</p></li>
+</ul>
+</div></blockquote>
+<p>FLO-2D simulation runs slow</p>
+<blockquote>
+<div><p>Review the TIME.OUT file to identify the elements that have caused most of the timestep reductions.
+Small timesteps are the result of the model continually exceeding the numerical stability criteria for a small group of grid elements.
+The change in flow depth for a timestep may be too large.
+One of primary reasons for a slow flood simulation is that the relationship between the discharge flux and grid element surface area is poor.
+The rate of change in the discharge may be too high for the selected grid element size.
+Increasing the grid element size is the best way to fix a very slow model.</p>
+<p>Other solutions may include:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Adjust the channel geometry in transition reaches.</p></li>
+<li><p>Create a more uniform channel or floodplain slope.</p></li>
+<li><p>Revise the roughness values or limit the supercritical flow.</p></li>
+<li><p>Reduce the channel width, street width, ARF values or other parameters to increase the floodplain surface area.
+Review the SURFAREA.OUT file.</p></li>
+<li><p>Check for updates.
+FLOPRO.EXE updates.</p></li>
+<li><p>Increase the grid element size (a last resort).</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>The inflow hydrograph does not plot in the graphics display</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>No hydrograph is associated with the IDEPLT variable.</p></li>
+<li><p>The hydrograph duration is too long.
+Reduce the hydrograph length.</p></li>
+<li><p>The rainfall duration is too long.
+Reduce the rainfall time.</p></li>
+<li><p>Inappropriate peak discharge or total rainfall values distort the scale for hydrograph plot.</p></li>
+</ul>
+</div></blockquote>
+<p>Program stops.
+Excessive flow depths</p>
+<p>If flow depths are excessive, then ponding or surging may be occurring.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Identify the problem element in MAXPLOT or in the end of the BASE.OUT file.</p></li>
+<li><p>Check TIME.OUT to determine if the problem element is also causing the model to run slowly.</p></li>
+<li><p>Check the elevation of the problem grid element in the TOPO.
+DAT or in the FLO-2D Plugin.</p></li>
+<li><p>If the depressed element is a gravel pit or some other feature, increase the n-value to decrease the velocity (vertical overfall velocity) into the
+pit.</p></li>
+</ul>
+</div></blockquote>
+<p>Erratic discharge in the channel elements.</p>
+<blockquote>
+<div><p>A review of plotted hydrographs in HYDROG or an examination of the CHANMAX.OUT or HYCHAN.OUT files will reveal if the flow discharge between
+contiguous channel elements is surging with spikes when a consistent rise or fall of the downstream discharge is expected.</p>
+<p>Channel surging can be natural phenomena.
+Rivers can rise and fall over a few tenths of a foot in matter of seconds in reaches that are expanding and contracting causing rapidly variable
+storage.
+During high flow in a large river, the variation in discharge associated with stage change on the order of ~ 0.2 ft can be 1,000 cfs or more.
+Review the numerical surging troubleshooting.
+If the channel surging is severe, the two conditions to review are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Review the channel confluence and make the confluence pairs are properly assigned.
+See the CONFLUENCE.OUT file.</p></li>
+<li><p>The channel grid elements in the CHAN.DAT file may be mis- identified.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>Erratic flow in the floodplain grid elements.</p>
+<blockquote>
+<div><p>Erratic flow in the floodplain grid elements is usually the result of errors in the TOPO.DAT file.
+This type of error generally occurs when the user edits the TOPO.DAT file manually and adds, subtracts or moves grid elements around.
+Virtually all erratic flow conditions on the floodplain can be corrected by revisions either to n-values or elevations in the FLO-2D Plugin.</p>
+</div></blockquote>
+<p>Channel extends through another channel element.</p>
+<blockquote>
+<div><p>The right channel bank assignments are automated in the FLO-2D Plugin.
+Multiple left bank elements can be assigned to the same right bank on a river bend.
+If a channel extends through a right bank element, the model will generate an error message reported in ERROR.CHK file.</p>
+<p>The channel bank elements can be viewed in the FLO-2D Plugin.
+If there is a problem with the channel bank alignment, simply revised the right bank element.
+The right bank element can be any grid element if it does not cross another connecting channel bank line.</p>
+</div></blockquote>
+<p>Program stops; identifying one or more grid elements with too little flood- plain surface.</p>
+<blockquote>
+<div><p>The model will generate a message in ERROR.CHK if the channel right bank has is too little surface storage area on the floodplain portion of the
+element.
+If this problem occurs and the floodplain surface is less than 5%, then there are several solutions:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Reduce the ARF value, multiple channel area or street area.</p></li>
+<li><p>The channel area can be reduced by decreasing the XLEN variable or top width, which is a function of the channel in the natural channels, the side
+slopes, or the bottom width in the trapezoidal cross section or the width in the rectangular cross section.</p></li>
+<li><p>As a last resort the grid element size can be increased, but this requires the re-generation of the grid system.</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<p>CADPTS.DAT error</p>
+<blockquote>
+<div><p>If errors are reported in this file, delete CADPTS.DAT, FPLAIN.DAT, and NEIGHBORS.DAT run the model again.
+The FLOPRO.EXE will rewrite this file.</p>
+</div></blockquote>
+<p><strong>Debug Output Tables</strong></p>
+<p>The DEBUG.OUT file is created when the user runs the model in Debug model via the QGIS Plugin.
+The error codes in Tables 7.4, 7.5, and 7.6 are the codes used in the Debug system.
+They help identify data errors and data conflicts.
+These files are generated as part of the preliminary data checks.
+These error checks do not include any simulation results.
+Table 7.5 and 7.6 offer basic corrective actions for the errors.</p>
+<p><strong>Table 7.4 ERROR CODE CATEGORIES</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Error Code</p></td>
+<td><p>Error Category</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Switches, Control Variables, Version</p></td>
+</tr>
+<tr class="row-odd"><td><p>200</p></td>
+<td><p>Boundary, Coordinate, Floodplain, Elevation</p></td>
+</tr>
+<tr class="row-even"><td><p>300</p></td>
+<td><p>Stability Criteria</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>TOL</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>Roughness</p></td>
+</tr>
+<tr class="row-odd"><td><p>600</p></td>
+<td><p>Rainfall</p></td>
+</tr>
+<tr class="row-even"><td><p>700</p></td>
+<td><p>Infiltration</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>Inflow, Outflow</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structures</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Streets, ARF/WRF</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Storm Drain</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>Cross Sections</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Sediment, Mud</p></td>
+</tr>
+<tr class="row-even"><td><p>7000</p></td>
+<td><p>Levees</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>Multiple Channels</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7.5 BASIC ERROR CODES</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Versions of the FLO-2D Pro and Storm Drain are Different. Please Check FLO-2D Build and Update Vc2005-Con.Dll</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Floodway Switch = 1,Set Encroach in CONT.DAT</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Set NOPRTC to Only 0, 1, or 2 in CONT.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>For Graphical Display (Lgplot=2),Graptim must be Greater Than 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Variable Xconc Exceeds 1</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Variable Xarf is Less Than 0 or Greater Than 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Variable Froudl Greater Than 9</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Variable Noprtfp is a Switch,Use Only 0,1,2 or 3</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation. Review CONT.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Vari-able Lgplot must be Set to 1</p></td>
+</tr>
+<tr class="row-even"><td><p>100</p></td>
+<td><p>Total Simulation Time of the Model Exceeds the Hydrograph Duration</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>If Ideplt is Listed As Inflow Node in the INFLOW.DAT File, Then Lgplot must be 0 or 1</p></td>
+</tr>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review engine file dates and flopro.exe and vc2005con.dll.
+Make sure the file dates correspond to builds that are the same.
+This may require Technical Support.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
+The positions are 0, 1 or 2.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>The variable Graphtim is missing in CONT.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>The sediment concentration cannot be greater than 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>The Xarf variable must be a value between 0 and 1.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>The Froudl variable should not be greater than 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>NOPRTFP is a switch.
+The positions are 0, 1 or 2.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Set either MUD or ISED to 0.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
+Check the location of the cell.</p>
+<p>Correct it by realigning the grid to the computational domain.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Set ideplt to an inflow grid element number in inflow.dat.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>For text mode, set lgplot = 0 and ideplt = 0.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Make sure Ideplt is a grid element listed in inflow.dat.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Turn on the Lgplot and Graphtim to use Display Mode.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the coordinates in topo.dat.</p></td>
+</tr>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>Hydraulic Structure Channel Inflow must be a Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>200</p></td>
+<td><p>Time-Stage Elements Have a Stage Assigned that Was Less Than the Floodplain or Channel Bed Elevation.
+Stage Was Reset to the Bed Elevation</p></td>
+</tr>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.</p></td>
+</tr>
+<tr class="row-odd"><td><p>300</p></td>
+<td><p>A Channel/Street Courant Number is Required in TOLER.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p>300</p></td>
+<td><p>If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Variable Tol Has an Inappropriate Value</p></td>
+</tr>
+<tr class="row-even"><td><p>400</p></td>
+<td><p>Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction</p></td>
+</tr>
+<tr class="row-odd"><td><p>500</p></td>
+<td><p>MANNINGS_N.DAT File Has a Mismatched Grid Element Number…
+Check the End of this File</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>MANNINGS_N.DAT Files Does Not Exist.
+Create the File Before Proceeding</p></td>
+</tr>
+<tr class="row-odd"><td><p>500</p></td>
+<td><p>The Spatially Variable Shallown Value is Outside the Range 0.010 to 0.99</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>N-Value is Less Than 0 or Greater Than 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>600</p></td>
+<td><p>Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable Real Rainfall Adjustments (Irainarf=1) With Rainarf Values</p></td>
+</tr>
+<tr class="row-even"><td><p>600</p></td>
+<td><p>Rtt must be Greater Than 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>600</p></td>
+<td><p>First Pair of the Rainfall Distribution Should Be 0.0.</p></td>
+</tr>
+<tr class="row-even"><td><p>600</p></td>
+<td><p>Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00</p></td>
+</tr>
+<tr class="row-odd"><td><p>700</p></td>
+<td><p>Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned</p></td>
+</tr>
+<tr class="row-even"><td><p>700</p></td>
+<td><p>To Use the SCS Curve Number Method For Infiltration You Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>700:</p></td>
+<td><p>Variable Poros is Greater Than 1</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the structure node onto a left bank node.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the invert elevation of the structure, the grid element elevation or the head reference elevation.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Set the correct Courant number.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the STREET.DAT file.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the TOL value. It must be in a correct range.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the TOL variable and the Initial Abstraction variable. The initial abstraction may be too high. See INFIL.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>The MANNINGS_N.DAT file might not be complete.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Export MANINGS_N.DAT again.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the SPATIALSHALLOWN.DAT file.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the CONT.DAT file.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Spatially variable data is missing.
+Check RAIN.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check RAIN.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Correct the first data pair of the rainfall distribution curve.
+Set the first data pair to 0.0 0.0.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check RAINCELL.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check INFIL.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check RAIN.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check INFIL.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p>700</p></td>
+<td><p>Variable Sati or Satf is Greater Than 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>700</p></td>
+<td><p>Variable Rtimpf Exceeds 1.0.
+Do Not Enter As a Percent Use a Fraction</p></td>
+</tr>
+<tr class="row-even"><td><p>700</p></td>
+<td><p>Abstraction Exceeds the Total Rainfall (Impossible) For at Least One Grid Element and May Result in Volume Conservation Error</p></td>
+</tr>
+<tr class="row-odd"><td><p>700</p></td>
+<td><p>Initial Abstraction &gt; Tol (Depression Storage).
+Consider (Not Required) Lowering the Tol Value or Adjusting the Ia Value</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are Two Inflow Conditions Imposed at the Same Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Inflow and a Full ARF</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Inflow and a Partial ARF</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>The Following Cell Has an Inflow and a Hs</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>The Following Cell Has an Inflow Fp on a Channel Left Bank Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>The Following Cell Has an Inflow Fp on a Channel Right Bank Element</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are an Inflow Conditions Imposed on a Levee Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Inflow on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Inflow on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>There are Two Inflow Conditions Imposed at the Same Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>The Following Cell Has an Inflow Ch on a Channel Right Bank Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>There are an Inflow Conditions Imposed on a Levee Element</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are Two Outflow Conditions Imposed at the Same Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>The Following Cell Has a Channel Outflow on a Channel Right Bank Element</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are an Outflow Conditions Imposed on a Levee Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>There are Two Outflow Conditions Imposed at the Same Cell</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check INFIL.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check INFIL.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check spatial abstraction variable in INFIL.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>The TOL variable and IA variable can be summed to account for the initial abstraction.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>A cell is listed twice in INFLOW.DAT.
+Check the file and remove one of the hydrographs.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inflow node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Consider repositioning the inflow node.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inflow node or the hydraulic structure inlet node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Consider changing the inflow to channel inflow.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Consider moving the inflow node to the left bank and changing it to a channel node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the levee Inflow condition.
+Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inflow node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the inflow node.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>A cell is listed twice in INFLOW.DAT.
+Check the file and remove one of the hydrographs.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the inflow node to the left bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the levee Inflow condition.
+Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Remove the extra line in OUTFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the outflow node left bank.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Make sure the outflow node is on the correct side of the levee.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the outflow node left bank.</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>The Following Cell Has an Outflow (Fp) on a Channel Left Bank or Right Bank Element:</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>There is an Outflow Conditions Imposed on a Levee Element</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are Two Stage Time Relationships Imposed at the Same Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>The Following Cell Has Stage Time Relationship on a Channel Right Bank Element:</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are a Stage Time Outflow Condition Imposed on a Levee Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>There are a Stage Time Relationship Imposed on an Outflow Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>There are Two Outflow Conditions Imposed at the Same Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Outflow and a Full ARF</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Outflow and a Partial ARF</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>The Following Cell Has an Outflow and a WRF</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>This Grid Cell Has a Stage Time Relationship and a Full ARF</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>This Grid Cell Has a Stage Time Relationship and a Partial ARF</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>The Following Cell Has an Outflow and a WRF:</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Outflow and a Full ARF</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>This Grid Cell Has an Outflow and a Partial ARF</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>The Following Cell Has an Outflow and a WRF</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>First Pair of the Floodplain Hydrograph Should Be 0.0.
+to Interpolate the First Timestep</p></td>
+</tr>
+<tr class="row-odd"><td><p>800</p></td>
+<td><p>No Inflow Discharge Specified For the Inflow Element</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>It’s OK for n FP outflow node to be on a left bank but not a right bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Make sure the outflow node is on the correct side of the levee.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Remove one of the duplicate stage time conditions from OUTFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Remove the outflow from the right bank.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Make sure the outflow node is on the correct side of the levee.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete one of the outflow nodes in OUTFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete the outflow node or the ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete the ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete the WRF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete the outflow node or the ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete the ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete the WRF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete the outflow node or the ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete the ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete the WRF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Turn the channel switch on or reset the inflow node to floodplain.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Set the first data pair to 0.0 0.0 in the INFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check INFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p>800</p></td>
+<td><p>INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be</p>
+<p>specified, CONT.DAT Variable  Inplot must be Set to 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 7.6 ADVANCED ERROR CODES</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50.0%" />
+<col style="width: 50.0%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Inflow Fp on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Inflow Ch on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Outflow Ch on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Outflow Fp on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Stage Time Relationship on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Full ARF on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Partial ARF on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>WRF on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Hs inlet on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Hs outlet on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Levee on a Ch Interior Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Multiple Channel on a Channel Interior Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Channel Width is Greater Than the Element Width.
+Channel Left and Right Bank Elements Should Be Separated</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel Grid Element Will Require Separate Left and Right Bank Elements</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Channel Extension Exceeds the Grid System Boundary</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel Element Extends Into Interior of the Channel Element Instead Extend the Channel Into Another Bank Element</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>To run in display mode, set the graphics mode in CONT.DAT and the plotting hydrograph in INFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move inflow node or realign channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move inflow node or realign channel.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move outflow node or realign channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move outflow node or realign channel.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move outflow node or realign channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete ARF or realign channel.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete ARF or realign channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete WRF or realign channel.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move hydraulic structure or realign channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move hydraulic structure of realigning channel.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Realign levee or realign channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Realign multiple channel.
+See reference manual.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Realign right bank.
+Extend right bank way from left bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Realign right bank.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Realign right bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Realign right bank.</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel Element is Repeated in the CHAN.DAT File.
+Each Channel Element Should Only Be Listed Once</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Channel Right Bank Elements Need Some Adjustment Due to the Channel Width.
+Set Right Bank Either Closer or Farther Away from the Left Bank Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Remaining Floodplain Surface Area on the Channel Bank Elements Needs to Be Larger For Left Bank Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Data Error…Check the Channel Elements in the CHAN.DAT Files</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel Extension For Grid Element Extends Into Another Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Channel Confluence Element Does Not Have Enough Connections, or a Channel Segment is Beginning or Ending at a Main Channel Confluence Element</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel Extends Past the Levee System, Please Review the CHANNEL.
+CHK File and Make the Necessary Corrections</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Inflow Channel Element is not a Channel Element in CHAN.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p>1000</p></td>
+<td><p>Channel Outflow Node Must Have a Lower Bed Elevation Than the Contiguous Upstream Channel Element to Compute a Normal Depth Outflow Condition</p></td>
+</tr>
+<tr class="row-odd"><td><p>1000</p></td>
+<td><p>Channel Outflow Variable - Kout - in the OUTFLOW.DAT File must be a Channel Element in the CHAN.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>This Grid Cell Has a Hs Inlet and a Full ARF</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>This Grid Cell Has a Hs Outlet and a Full ARF</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>This Grid Cell Has a Hs Inlet and a Partial ARF</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>This Grid Cell Has a Hs Outlet and a Partial ARF</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>This Grid Cell Has a Hs on a Channel Rb Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Inlet on a Full ARF Element</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Eliminate one of the repeated channel elements.
+Tributary and Split flows should connect along adjacent banks.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Realign right bank.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Extend right bank away from left bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review CHAN.DAT.
+Load project in PROFILES.EXE to troubleshoot.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Realign right bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review confluence elements.
+The tributary or split channel may not be close enough to the main channel banks.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Realign the channel or the levee.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move inflow node to a left bank or reset the node to floodplain or turn the channel switch on.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review the channel invert elevation and make the necessary correction so that the outflow node can calculate normal depth.</p>
+<p>The outflow invert elevation must be lower than that of the upstream node.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the outflow node to a left bank, reset the node to floodplain or turn the channel switch on.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the hydraulic structure node.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the hydraulic structure node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the hydraulic structure node or reset the ARF to zero.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the hydraulic structure node or reset the ARF to zero.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the hydraulic structure to the left bank or change it to a floodplain structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move Inlet</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Has an Adverse Bed Slope.
+Outlet Invert is Higher Than the Inlet Invert.
+Please Check to Ensure this is Correct</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Has a Reference Elevation that is Lower Than the Inlet Node Bed Elevation</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Has an Inflow or Outflow Element that is Not a Channel</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Has a Name Length Longer Than 30 Characters.</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>A Hydraulic Structure Has Been Assigned to a Channel Element.
+Channel is turned off.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Rating Curve, Rating Table, Or Generalized Culvert Switch (Icurvtable) Does Not Match the
+Assigned Data</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure must have a Culvert Area Coefficient and Exponent For Routing in a Long Culvert.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Make Sure that the “Atable” Variable on Line 4 of the HYSTRUC.DAT File is Included</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>First Data Pair of a Hydraulic Structure Rating Table Should Be 0.0.
+to Interpolate the Next Data Pair</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Rating Curve Stage Must Increase With Increasing Discharge</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Rate of Change in the Following Hydraulic Structure Rating Tables May Be Unreasonable - Rate of Change = 10 Times Previous Stage
+Rate of Change</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>If the Generalized Culvert Equations are Being Used.
+The Inoutcont Tailwater Control is Not Necessary.
+Set Inoutcont = 0</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Culvert Length Must Assign in the S-Line of the HYSTRUC.DAT If the Generalized Culvert Equations are Being Used</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Inflow Node is Repeated More Than Once</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review invert elevations.
+Apply elevation corrections if necessary.
+Validate structure direction.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Correct invert elevation or correct head reference elevation or set head reference elevation to zero.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move inlet node to the channel bank or change it to a floodplain structure.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Shorten the Name to Less Than 30 Characters</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>(Ifporchan &gt; 0 line S in HYSTRUC.DAT) and there is no channel component (Ichannel = 0 in CONT.DAT).
+Turn on channel switch.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review HYSTRUC.DAT and set the switch to the correct position to match the as- signed data.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>The clength and cdiameter was assigned, assign the culvert area coefficient and exponent so FLO-2D can simulate the culvert volume and travel time.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>This table is required if clength and cdiameter are used in a Rating Table structure.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reset first row of table data to 0.00 0.00.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>The rating curve data has an error.
+Check the data so the discharge increases with increasing stage.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the rating table.
+It may require more data pairs or it may be incorrect.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Set inoutcont to 0.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Assign culvert length and depth in the S line.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review HYSTRUC.DAT.
+Make sure each inflow node is only listed once.
+If two nodes are near each other, separate them by a grid element.</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Outflow Node is Repeated More Than Once Without Assigning a D-Line Conveyance Capacity Limitation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Has a Reference Elevation that is Lower Than the Inflow Node Bed Elevation</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Channel Outflow must be a Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Has a Reference Elevation that is Lower Than the Inflow Node Bed Elevation</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Channel Inflow Element must be a Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Inflow Element Cannot Be a Grid System Outflow Element</p></td>
+</tr>
+<tr class="row-even"><td><p>2000</p></td>
+<td><p>Hydraulic Structure Outflow Element Cannot Be a Grid System Outflow Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>The Following Cell Has a Full ARF on a Channel Left or Right Bank Element</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>The Following Cell Has a Partial ARF on a Channel Left or Right Bank Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Street on an Outfall Element</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Full ARF on a 1D Street</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Partial ARF on a 1D Street</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Hs Inlet on a 1D Street</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Hs Outlet on a 1D Street</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Multiple Channel on a 1D Street</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Gutter on a 1D Street</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Variable Strman is Less Than 0 or Greater Than 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Variable Istrflo is a Switch, Use Only 0 or 1</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Variable Depx must be Greater Than 0</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review HYSTRUC.DAT.
+Make sure each outflow node is only listed once.
+If two nodes are near each other, separate them by a grid element.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Correct invert elevation or correct head reference elevation or set head reference elevation to zero.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the position of the outlet element or make sure the channel switch is on in CONT.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Correct invert elevation or correct head reference elevation or set head reference elevation to zero.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the position of the outlet element or make sure the channel switch is on in CONT.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Correct invert elevation or correct head reference elevation or set head reference elevation to zero.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the outlet element to a node that is adjacent to the outflow node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Realign the channel or eliminate the ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete the ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>I don’t know how to fix this.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Realign street or delete ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move hydraulic structure or realign street.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move hydraulic structure or realign street.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition multiple channel nodes or realign street.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete gutter or delete street.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Assign street Manning’s N correctly.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Apply variable correctly.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Assign street depth.</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Variable Widst must be Greater Than 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Variable Igridn must be Greater Than 0</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Grid Elements are Defined More Than Once (Street.Dat) For a Street Intersection Within a Grid Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Street Elements (Street.Dat) are Missing Line “W” in the Street.Dat File</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Variable Istdir must be Greater Than 0 and Less Than or Equal to 8</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Variable Widr must be Greater Than 0</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>Grid Element ARF Values Were Adjusted</p></td>
+</tr>
+<tr class="row-odd"><td><p>3000</p></td>
+<td><p>Impervious Area Represented By the Rtimp Percentage is Less Than the ARF Value For at Least One Grid Element</p></td>
+</tr>
+<tr class="row-even"><td><p>3000</p></td>
+<td><p>A Channel Element Has One or More Street Segments.
+Remove the Street Segments from this Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Inlet on a Full ARF Element</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Inlet on a Partial ARF Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Outfall on a Full ARF Element</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Outfall on a Partial ARF Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Outfall on a Levee Element</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Inlet on a Levee Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Duplicate Inlet on SWMMFLO.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Inlet on an Outfall</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Outfall on an Outfall</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Channel Rb on a Inlet Element</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Assign street width.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Assign correct Manning’s n value.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete one of the misassigned street elements.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>W lines are necessary to define the street direction in the cell.
+Assign them as shown in Lesson 11.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Add correct street direction.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Correct street width.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>See ARF.DAT for automatic correction list.
+ARFs were reassigned 1.0 to Eliminate the Potential For Instability Related to Small Surface Area.</p>
+<p>These are Reported to the ARF_Adjustment.Chk File</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Impervious area should represent the building blockage and any other potential impervious area.
+It should be at least the same as the ARF value.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Realign the street or channel.
+Review aerial images to assign channel or street alignment.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move Inlet.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move Inlet.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move Outfall or delete ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move Outfall or delete ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review outfall position.
+Make sure it is on the correct side of the levee.
+Review elevation.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Make sure the inlet is on the correct side of the levee.
+Check the elevation of the cell so that it matches the rim elevation of the inlet or</p>
+<p>the invert elevation of the type 4.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Delete the repeated inlet.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inlet or the outfall.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition one of the outfall nodes.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the inlet to the left bank.</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Channel Rb on an Outfall Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Multiple Channel on a Inlet Element</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Multiple Channel on an Outfall Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>There is a Levee and a Storm Drain Inlet Assigned to Grid Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>There is a Storm Drain Inlet Assigned to Completely Blocked Grid Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>There is a Storm Drain Outfall Assigned to Completely Blocked Grid Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>There is a Hydraulic Structure and a Storm Drain Inlet Assigned to Grid Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Storm Drain Inlet Has Invert Elevation Errors.
+Please Check Invert Elevation and Rim Elevation For Node</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Curb Opening Height must be Greater Than Zero.
+Please Revise SWMMFLO.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Length must be Greater Than Zero</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Height must be Greater Than Zero</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Typical Weir Drain Coefficient: Range 2.8 to 3.2</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Width or Height must be Greater Than Zero</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Typical Weir Drain Coefficient: 2.3</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Perimeter must be Greater Than Zero</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Area must be Greater Than Zero</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Surcharge Depth must be Greater Than Zero</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>There is a Conflict Between Inlets in the SWMMFLO.DAT File and Sub- catchments in the SWMM.INP, Features in Both
+Lists Need to Be in the Same Order</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>Inlets in the SWMMFLO.DAT File must be Identical to the Listed Inlets Junction Table of SWMM.INP File</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Multiple Inlets Assigned to One Grid Cell</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the outfall to the left bank.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inlet or the multiple channel.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the outfall or the multiple channel.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Make sure the inlet is on the correct side of the levee.
+Check the elevation of the cell so that it matches he rim elevation of the inlet or</p>
+<p>the invert elevation of the type 4.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the inlet or delete the ARF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the outfall or delete the ARF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the hydraulic structure or the inlet.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Do you mean Max Depth?</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Review SWMMFLOW.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the order of the inlets and the subcatchments.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the order of the inlets in SWMMFLOW.DAT and SWMM.INP.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inlet or delete it if it is a repeated line.</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>There is a Type 4 Inlet (Review SWMMFLO.DAT File) that is Missing the Rating Table in the SWMMFLORT.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>There is an Inflow Node and a Storm Drain Inlet Assigned to Grid Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>There is an Inflow Node and a Storm Drain Outfall Assigned to Grid Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>There is an Outflow Node and a Storm Drain Inlet Assigned to Grid Cell</p></td>
+</tr>
+<tr class="row-even"><td><p>4000</p></td>
+<td><p>There is an Outflow Node and a Storm Drain Outfall Assigned to Grid Cell</p></td>
+</tr>
+<tr class="row-odd"><td><p>4000</p></td>
+<td><p>Storm Drain Outfall Nodes are in Channel Interior Elements, Re-Assign to the Channel Elements in CHAN.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>Cross Section Element Can Only Be Assigned Once in the FPXSEC.DAT File.</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Variable Xconc Should Not Be Assigned If Mudflow With a Sediment Concentration is Assigned to the Inflow Hydrograph</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>No Sediment Data in the SED.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Error in Line 1 (M-Line) of the SED.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Dry Weight of Sediment is Zero in the SED.DAT File and Thus the Porosity is Also Zero</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Sediment Size Exceeds the Recommended Value For the Application of the Yang Equation</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Error in Line 2 (S-Line) of the SED.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Error in Z-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Error in P-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Error in D-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Scourdep Variable in SED.DAT Line E Should Be Positive (&gt;0.)</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Error in E-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Error in R-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p>6000</p></td>
+<td><p>Error in S-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Error in N-Line of the SED.DAT File</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Add the table to SWMMFLOWRT.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the inflow node or the inlet.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the inflow node or the outfall.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the inlet.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Reposition the outfall or delete the outlet.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Reposition the nodes to the left bank or reassign then grid element in SWMMFLO.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Remove repeated grid elements in FPXSEC.DAT.
+If the Cross Section Includes the Channel Use Only the Left Bank Channel Element in CHAN.DAT</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Do not assign Xconc in CONT.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the SED.DAT file.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the SED.DAT file for missing or incorrect mudflow data.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Set the Dry Weight variable in SED.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the sediment size fractions in SED.DAT.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the sediment transport data in SED.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the sediment transport equation, bed thickness or volumetric concentration.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the sediment diameter and percentage.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the debris basin volume and the debris grid element number.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the scour depth.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the scour depth.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the grid element numbers or position in the rigid bed cells.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Check the sediment supply coefficient and exponent.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Check the size distribution for sediment supply.</p></td>
+</tr>
+<tr class="row-even"><td><p>6000</p></td>
+<td><p>Isedn variable is incorrect.</p></td>
+</tr>
+<tr class="row-odd"><td><p>7000</p></td>
+<td><p>There are a Levee Element on a Complete Blocked Element</p></td>
+</tr>
+<tr class="row-even"><td><p>7000</p></td>
+<td><p>There are a Levee Element on a Partial Blocked Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>7000</p></td>
+<td><p>There are a Levee Element With a WRF</p></td>
+</tr>
+<tr class="row-even"><td><p>7000</p></td>
+<td><p>This Grid Cell Has a Hs Inlet on a Levee Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>7000</p></td>
+<td><p>This Grid Cell Has a Hs Outlet on a Levee Element</p></td>
+</tr>
+<tr class="row-even"><td><p>7000</p></td>
+<td><p>This Grid Cell Has Two Levees</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>This Grid Cell Has an Inflow on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>This Grid Cell Has an Inflow on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>This Grid Cell Has an Inflow on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>Channel Lb Rb on a Multiple Channel Element</p></td>
+</tr>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>Channel Lb Rb on a Multiple Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>Levee on a Multiple Channel Element</p></td>
+</tr>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>Multiple Channel Element on a Multiple Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p>8000</p></td>
+<td><p>Levee on a Multiple Channel Element</p></td>
+</tr>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>Multiple Channel Element on a Multiple Channel Element</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.</p>
+<p>Do Not Assign Isedn to a Sediment Transport Equation Number</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.</p>
+<p>Consider repositioning or deleting the levee.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.</p>
+<p>Make sure the levee is on the correct side of the cell.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.</p>
+<p>Make sure the levee and WRF relationship is correct.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Make sure the hydraulic structure is on the correct side of the levee.</p>
+<p>Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Make sure the hydraulic structure is on the correct side of the levee.</p>
+<p>Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete the repeated levee.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the inflow node.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Move the inflow node.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Move the inflow node.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Remove the ARF/WRF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Remove the ARF/WRF.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Remove the ARF/WRF.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>A multiple channel cannot be assigned to a bank element.
+See reference manual.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>A multiple channel cannot be assigned to a bank element.
+See reference manual.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Make sure the multiple channel is on the correct side of the levee.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>Delete one of the repeated lines in MULT.DAT.</p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p>Make sure the multiple channel is on the correct side of the levee.</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p>A multiple channel cannot be assigned to a bank element.
+See reference manual.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Chapter%206.html" class="btn btn-neutral float-left" title="6. Chapter 6: Post-Processor Programs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Reference%20Manual/index.html" class="btn btn-neutral float-right" title="FLO-2D Pro Reference Manual" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2004 - Present, FLO-2D Software, Inc..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        Version:
+        
+        Build25
+        
+        <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+        
+        <dl>
+            <dt>Versions</dt>
+            
+            <dd><a href="Chapter 7.html">
+                    
+                    Build25
+                    
+                </a></dd>
+            
+        </dl>
+        
+        <br>
+        </dl>
+    </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
