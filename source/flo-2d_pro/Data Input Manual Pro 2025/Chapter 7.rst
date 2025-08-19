@@ -142,12 +142,10 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
    This will cause the model run slowly with exchanges the flow between the channel and floodplain.
    To fix this problem:
 
-- Remove other components from the channel bank element including streets or ARF values.
-
-- Shorten the channel length (XLEN in CHAN.DAT).
-  This will in- crease the surface area in the channel bank floodplain elements.
-
-- Decrease the channel cross section width in the PROFILES program.
+    - Remove other components from the channel bank element including streets or ARF values.
+    - Shorten the channel length (XLEN in CHAN.DAT).
+      This will in- crease the surface area in the channel bank floodplain elements.
+    - Decrease the channel cross section width in the PROFILES program.
 
 
 *Limiting Froude Numbers*
