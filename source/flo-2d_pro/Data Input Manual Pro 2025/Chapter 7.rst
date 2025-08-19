@@ -317,12 +317,10 @@ The file descriptions can be referenced in Chapter 5.
 
 If the simulation stops before reaching the prescribed simulation time, review the output files for diagnostic information:
 
-- If the program ends with a Fortran Error, screenshot the error message.
-  It may reveal the file location where the error occurred.
-
-- Review the \*.CHK files for potential data errors.
-
-- Review the channel check files for potential errors.
+    - If the program ends with a Fortran Error, screenshot the error message.
+      It may reveal the file location where the error occurred.
+    - Review the \*.CHK files for potential data errors.
+    - Review the channel check files for potential errors.
 
 Volume Conservation Errors
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -338,17 +336,14 @@ An actual cross section transition may occur over several channel grid elements.
 Adjust the channel geometry so that the maximum change in flow area between channel elements is less than 25%.
 To address channel problems, consider the following measures:
 
-- Increase the roughness in wide, shallow cross sections and decrease the roughness in narrow deep channel grid elements.
-
-- Reduce the difference between the cross-section areas.
-  Avoid abrupt cross section transitions between channel elements.
-  Adjust the channel cross section geometry in the PROFILES.
-  Use PROFILES to re-interpolate between surveyed cross sections.
-
-- Review and adjust the bed slope with the PROFILES program.
-  Adverse bed slopes are OK but adverse spikes and dips are not.
-
-- Select a longer channel length within the channel grid element.
+    - Increase the roughness in wide, shallow cross sections and decrease the roughness in narrow deep channel grid elements.
+    - Reduce the difference between the cross-section areas.
+      Avoid abrupt cross section transitions between channel elements.
+      Adjust the channel cross section geometry in the PROFILES.
+      Use PROFILES to re-interpolate between surveyed cross sections.
+    - Review and adjust the bed slope with the PROFILES program.
+      Adverse bed slopes are OK but adverse spikes and dips are not.
+    - Select a longer channel length within the channel grid element.
 
 One Drive Sync
 ~~~~~~~~~~~~~~~~~~~~
@@ -452,25 +447,20 @@ assist in debugging runtime errors.
 
 Program will not run:
 
-- Data errors.
-  Turn off the component switches until the model runs.
-
-- The executable program was damaged.
-  Reload the program or contact technical support.
-
-- The model is not properly licensed.
-  Contact technical support.
+    - Data errors.
+      Turn off the component switches until the model runs.
+    - The executable program was damaged.
+      Reload the program or contact technical support.
+    - The model is not properly licensed.
+      Contact technical support.
 
 Program stops
 
    The model run is terminated before the first timestep or after a few timesteps with data file error indicated on the screen or in ERROR.CHK:
 
-- Review the ERROR.CHK file or the data file identified by the program error message.
-
-- Review the backup file (\*.
-  BAC).
-
-- Review the List of Common Data Errors.
+    - Review the ERROR.CHK file or the data file identified by the program error message.
+    - Review the backup file (\*.BAC).
+    - Review the List of Common Data Errors.
 
 Program stops
 
@@ -515,46 +505,35 @@ Numerical Instability:
    Mismatched slope, flow area and n-values are the most common causes of channel instability.
    A combination of revisions may improve numerical instability.
 
-- Abrupt changes in slope or severe adverse slope may cause in- stability.
-  Use the PROFILES program to fix irregular bed slope conditions.
-
-- Review the cross-section flow areas over several channel elements in PROFILES.
-  Eliminate any abrupt changes in cross section areas between channel elements.
-  If the surging occurs at low flows, review only the bottom portion of the cross section not the bankfull conditions.
-
-- Decrease the channel Courant number in the TOLER.DAT file.
-  Decrease the Courant number in 0.1 increments until a reason- able lower limit of 0.2 is reached.
-
-- Insufficient floodplain area.
-  Small floodplain surface areas can exacerbate unsteady flow.
-  Review SURFAREA.OUT and in- crease the available grid element surface area for flood storage.
-
-- Increase the n-values for the grid elements in the vicinity of the surging flow.
-
-- Adjust the floodplain grid element elevations around the problem element.
-
-- Increase the channel length within the grid element.
-
-- The hydraulic structure discharge rating curve or table may be poorly matched with the upstream or downstream channel hydraulics.
-  Review the hydraulic structure rating curve or table and compare the discharge values to those found in the HYCHAN.OUT file for that particular
-  channel element or the next one upstream.
+    - Abrupt changes in slope or severe adverse slope may cause in- stability.
+      Use the PROFILES program to fix irregular bed slope conditions.
+    - Review the cross-section flow areas over several channel elements in PROFILES.
+      Eliminate any abrupt changes in cross section areas between channel elements.
+      If the surging occurs at low flows, review only the bottom portion of the cross section not the bankfull conditions.
+    - Decrease the channel Courant number in the TOLER.DAT file.
+      Decrease the Courant number in 0.1 increments until a reason- able lower limit of 0.2 is reached.
+    - Insufficient floodplain area.
+      Small floodplain surface areas can exacerbate unsteady flow.
+      Review SURFAREA.OUT and in- crease the available grid element surface area for flood storage.
+    - Increase the n-values for the grid elements in the vicinity of the surging flow.
+    - Adjust the floodplain grid element elevations around the problem element.
+    - Increase the channel length within the grid element.
+    - The hydraulic structure discharge rating curve or table may be poorly matched with the upstream or downstream channel hydraulics.
+      Review the hydraulic structure rating curve or table and compare the discharge values to those found in the HYCHAN.OUT file for that particular
+      channel element or the next one upstream.
 
 Unexpected supercritical flow on alluvial surfaces:
 
-- Adjust the limiting Froude number using the FROUDL variable in the CONT.DAT file or the FROUDC variable in the CHAN.
-  DAT.
-
-- Increase the floodplain or channel roughness values.
-
-- Modify the slope.
-  The grid elevations assigned by the FLO-2D Plugin may not be representative of the field condition.
-  Change the grid element elevations to make the channel or floodplain slope more uniform.
+    - Adjust the limiting Froude number using the FROUDL variable in the CONT.DAT file or the FROUDC variable in the CHAN.DAT.
+    - Increase the floodplain or channel roughness values.
+    - Modify the slope.
+      The grid elevations assigned by the FLO-2D Plugin may not be representative of the field condition.
+      Change the grid element elevations to make the channel or floodplain slope more uniform.
 
 Variable mudflow sediment concentration:
 
-- Review the sediment concentration in the inflow hydrographs in the INFLOW.DAT file.
-
-- The relationships for viscosity and yield stress should fall with the research data presented in the reference manual.
+    - Review the sediment concentration in the inflow hydrographs in the INFLOW.DAT file.
+    - The relationships for viscosity and yield stress should fall with the research data presented in the reference manual.
 
 FLO-2D simulation runs slow
 
@@ -567,46 +546,35 @@ FLO-2D simulation runs slow
 
    Other solutions may include:
 
-- Adjust the channel geometry in transition reaches.
-
-- Create a more uniform channel or floodplain slope.
-
-- Revise the roughness values or limit the supercritical flow.
-
-- Reduce the channel width, street width, ARF values or other parameters to increase the floodplain surface area.
-  Review the SURFAREA.OUT file.
-
-- Check for updates.
-  FLOPRO.EXE updates.
-
-- Increase the grid element size (a last resort).
+        - Adjust the channel geometry in transition reaches.
+        - Create a more uniform channel or floodplain slope.
+        - Revise the roughness values or limit the supercritical flow.
+        - Reduce the channel width, street width, ARF values or other parameters to increase the floodplain surface area.
+          Review the SURFAREA.OUT file.
+        - Check for updates.
+          FLOPRO.EXE updates.
+        - Increase the grid element size (a last resort).
 
 The inflow hydrograph does not plot in the graphics display
 
-- No hydrograph is associated with the IDEPLT variable.
-
-- The hydrograph duration is too long.
-  Reduce the hydrograph length.
-
-- The rainfall duration is too long.
-  Reduce the rainfall time.
-
-- Inappropriate peak discharge or total rainfall values distort the scale for hydrograph plot.
+    - No hydrograph is associated with the IDEPLT variable.
+    - The hydrograph duration is too long.
+      Reduce the hydrograph length.
+    - The rainfall duration is too long.
+      Reduce the rainfall time.
+    - Inappropriate peak discharge or total rainfall values distort the scale for hydrograph plot.
 
 Program stops.
 Excessive flow depths
 
 If flow depths are excessive, then ponding or surging may be occurring.
 
-- Identify the problem element in MAXPLOT or in the end of the BASE.OUT file.
-
-- Check TIME.OUT to determine if the problem element is also causing the model to run slowly.
-
-- Check the elevation of the problem grid element in the TOPO.
-  DAT or in the FLO-2D Plugin.
-
-- If the depressed element is a gravel pit or some other feature, increase the n-value to decrease the velocity (vertical overfall velocity) into the
-  pit.
+    - Identify the problem element in MAXPLOT or in the end of the BASE.OUT file.
+    - Check TIME.OUT to determine if the problem element is also causing the model to run slowly.
+    - Check the elevation of the problem grid element in the TOPO.
+      DAT or in the FLO-2D Plugin.
+    - If the depressed element is a gravel pit or some other feature, increase the n-value to decrease the velocity (vertical overfall velocity) into the
+      pit.
 
 Erratic discharge in the channel elements.
 
@@ -616,16 +584,13 @@ Erratic discharge in the channel elements.
    Channel surging can be natural phenomena.
    Rivers can rise and fall over a few tenths of a foot in matter of seconds in reaches that are expanding and contracting causing rapidly variable
    storage.
-   During high flow in a large river, the variation in discharge associated with stage change on the order of
-
-   ~0.2 ft can be 1,000 cfs or more.
-   Review the numerical surging trouble- shooting.
+   During high flow in a large river, the variation in discharge associated with stage change on the order of ~ 0.2 ft can be 1,000 cfs or more.
+   Review the numerical surging troubleshooting.
    If the channel surging is severe, the two conditions to review are:
 
-- Review the channel confluence and make the confluence pairs are properly assigned.
-  See the CONFLUENCE.OUT file.
-
-- The channel grid elements in the CHAN.DAT file may be mis- identified.
+        - Review the channel confluence and make the confluence pairs are properly assigned.
+          See the CONFLUENCE.OUT file.
+        - The channel grid elements in the CHAN.DAT file may be mis- identified.
 
 Erratic flow in the floodplain grid elements.
 
@@ -649,12 +614,10 @@ Program stops; identifying one or more grid elements with too little flood- plai
    element.
    If this problem occurs and the floodplain surface is less than 5%, then there are several solutions:
 
-- Reduce the ARF value, multiple channel area or street area.
-
-- The channel area can be reduced by decreasing the XLEN variable or top width, which is a function of the channel in the natural channels, the side
-  slopes, or the bottom width in the trapezoidal cross section or the width in the rectangular cross section.
-
-- As a last resort the grid element size can be increased, but this requires the re-generation of the grid system.
+        - Reduce the ARF value, multiple channel area or street area.
+        - The channel area can be reduced by decreasing the XLEN variable or top width, which is a function of the channel in the natural channels, the side
+          slopes, or the bottom width in the trapezoidal cross section or the width in the rectangular cross section.
+        - As a last resort the grid element size can be increased, but this requires the re-generation of the grid system.
 
 CADPTS.DAT error
 
