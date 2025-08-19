@@ -1661,6 +1661,7 @@ MULTCHN.OUT
     The file has the following format:
 
     - Grid element
+
         - Max width (ft or m)
         - Depth (ft or m)
         - Qmax (cfs or cms)
