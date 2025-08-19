@@ -35,14 +35,14 @@ Profiles
 The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel
 bed elevation, channel depth, channel n-values and channel geometry.
 It will display the channel cross section geometry and interpolate the slope and cross-section geometry
-between surveyed cross sections.
+between surveyed cross-sections.
 PRO- FILES can also be used to view output water surface profiles (see the Post-Processor Programs Section).
 Run Profiles from the FLO-2D Plugin.
 
 Before using the PROFILES program, the basic FLO-2D files plus the CHAN.
 DAT file have to be created.
 The XSEC.DAT will also have to be created if surveyed cross-section data will be used.
-The general procedure for using the PRO- FILES program is as follows:
+The general procedure for using the PROFILES program is as follows:
 
     1. Create the six basic FLO-2D data files.
     2. Develop the XSEC.DAT file for surveyed cross section data if necessary.
@@ -78,7 +78,7 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
 
     2. PROFILES will automatically locate the surveyed cross-section data and interpolate the cross-section
        geometry and elevation (thalweg slope) for all
-       those channel elements between the surveyed cross sections within the segment.
+       those channel elements between the surveyed cross-sections within the segment.
        The following dialog box will appear indicating that the original cross-sections have been renamed with
        a prefix ‘X-’ before each cross-section name.
 
@@ -109,8 +109,8 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
     8. Interpolate bedslope and or channel geometry.
        Identify the Upstream and Downstream channel elements in the group boxes labeled ‘Slope and Xsection
        Interpolation’.
-       Use ‘Up’ and ‘Down’ buttons to locate one of the surveyed cross sections and then type in the other either
-       upstream or down- stream channel elements.
+       Use ‘Up’ and ‘Down’ buttons to locate one of the surveyed cross-sections and then type in the other either
+       upstream or downstream channel elements.
        There may be several channel elements between two cross-sections selected for interpolation.
        Click on either the ‘Slope Only’ or ‘Shape/Slope’ buttons to interpolate either the channel bed slope or
        slope and the cross-section shape.
@@ -125,5 +125,5 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
         The saved data will not be written to file until the program is closed.
 
     .. note::
-       Perform the initial channel interpolation of the cross sections automatically with the FLO-2D plugin.
+       Perform the initial channel interpolation of the cross-sections automatically with the FLO-2D plugin.
 
