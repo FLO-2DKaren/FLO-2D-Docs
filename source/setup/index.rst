@@ -13,12 +13,16 @@ Welcome to the FLO-2D setup page. Get a computer ready for FLO-2D with:
    Troubleshooting.rst
 
 
-Please refer to the below links to access our YouTube, LinkedIn, and Facebook pages:
+For more information, please refer to the below links to access our YouTube, LinkedIn, and Facebook pages:
 
 |YouTube_English|
+
 |YouTube_Spanish|
+
 |YouTube_Portuguese|
+
 |LinkedIn|
+
 |Facebook|
 
 
