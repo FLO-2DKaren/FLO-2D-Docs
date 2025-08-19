@@ -28,21 +28,21 @@ For more information, please refer to the below links to access our YouTube, Lin
 
 .. |YouTube_English| raw:: html
 
-   <a href="https://www.youtube.com/@flo-2dsoftware490/videos" target="_blank">YouTube English.</a>
+   <a href="https://www.youtube.com/@flo-2dsoftware490/videos" target="_blank">FLO-2D YouTube English.</a>
 
 .. |YouTube_Spanish| raw:: html
 
-   <a href="https://www.youtube.com/@FLO-2DSoftwareSP/videos" target="_blank">YouTube Spanish.</a>
+   <a href="https://www.youtube.com/@FLO-2DSoftwareSP/videos" target="_blank">FLO-2D YouTube Spanish.</a>
 
 .. |YouTube_Portuguese| raw:: html
 
-   <a href="https://www.youtube.com/@FLO-2DSoftwarePT/videos" target="_blank">YouTube Portuguese.</a>
+   <a href="https://www.youtube.com/@FLO-2DSoftwarePT/videos" target="_blank">FLO-2D YouTube Portuguese.</a>
 
 .. |LinkedIn| raw:: html
 
-   <a href="https://www.linkedin.com/company/15449443" target="_blank">LinkedIn.</a>
+   <a href="https://www.linkedin.com/company/15449443" target="_blank">FLO-2D LinkedIn.</a>
 
 .. |Facebook| raw:: html
 
-   <a href="https://www.facebook.com/profile.php?id=100057701370116" target="_blank">Facebook.</a>
+   <a href="https://www.facebook.com/profile.php?id=100057701370116" target="_blank">FLO-2D Facebook.</a>
 
