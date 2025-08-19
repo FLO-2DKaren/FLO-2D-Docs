@@ -1659,7 +1659,6 @@ MULTCHN.OUT
         - Max width (ft or m)
         - Depth (ft or m)
         - Qmax (cfs or cms)
-        - of the 8 directions has inflow or outflow)
         - WSEL= Water Surface Elevation for each cell.
 
 MULTSTEEP.OUT
