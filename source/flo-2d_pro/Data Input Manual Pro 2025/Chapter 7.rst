@@ -236,7 +236,7 @@ Review the results.
 If any issues arise consult the troubleshooting tips found in this chapter.
 Table 7.2 lists some common data errors.
 
-To debug the data files after a FLO-2D simulation, begin by reviewing the ER- ROR.CHK file.
+To debug the data files after a FLO-2D simulation, begin by reviewing the ERROR.CHK file.
 All the data errors recognized by the model are reported in this file.
 FLO-2D has an extensive data error and warning message system and the messages are reported in ERROR.CHK as data inconsistencies are encountered.
 One of the most common errors is missing data that will invoke an end-of-file error statement to the screen.
