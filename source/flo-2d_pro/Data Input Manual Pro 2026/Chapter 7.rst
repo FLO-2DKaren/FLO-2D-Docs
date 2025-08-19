@@ -1385,6 +1385,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - \
      - Review the channel invert elevation and make the necessary correction so that the outflow node can calculate normal depth.
+
        The outflow invert elevation must be lower than that of the upstream node.
 
    * - \
@@ -1703,6 +1704,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - \
      - See ARF.DAT for automatic correction list.
        ARFs were reassigned 1.0 to Eliminate the Potential For Instability Related to Small Surface Area.
+
        These are Reported to the ARF_Adjustment.Chk File
 
    * - \
@@ -1732,7 +1734,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - \
      - Make sure the inlet is on the correct side of the levee.
-       Check the elevation of the cell so that it matches he rim elevation of the inlet or the invert elevation of the type 4.
+       Check the elevation of the cell so that it matches he rim elevation of the inlet or
+
+       the invert elevation of the type 4.
 
    * - \
      - Delete the repeated inlet.
@@ -1820,7 +1824,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - \
      - Make sure the inlet is on the correct side of the levee.
-       Check the elevation of the cell so that it matches he rim elevation of the inlet or the invert elevation of the type 4.
+       Check the elevation of the cell so that it matches he rim elevation of the inlet or
+
+       the invert elevation of the type 4.
 
    * - \
      - Move the inlet or delete the ARF.
@@ -2056,22 +2062,27 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - \
      - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
        Do Not Assign Isedn to a Sediment Transport Equation Number
 
    * - \
      - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
        Consider repositioning or deleting the levee.
 
    * - \
      - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
        Make sure the levee is on the correct side of the cell.
 
    * - \
      - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
        Make sure the levee and WRF relationship is correct.
 
    * - \
      - Make sure the hydraulic structure is on the correct side of the levee.
+
        Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
 
    * - \
