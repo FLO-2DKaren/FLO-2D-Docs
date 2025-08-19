@@ -39,8 +39,6 @@ The variables in Line 3 on the INFLOW.DAT file represent one line of a discretiz
 repeated for each of the hydrograph pairs for each inflow grid element.
 The Line 3 data for the first four-time steps is as follows:
 
-
-
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
@@ -169,6 +167,7 @@ SYSTEM CONTROL DATA
             2 Line 7: <b> NOPRTC</b>
             0 0.0 Line 8: <b> ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP</b>
             0.1 Line 9: <b> GRAPTIM</b><br>
+
     Notes:
        Line 5: If IFLOODWAY = 0 omit ENCROACH
        Line 7: If ICHANNEL = 0 omit Line 7
@@ -648,8 +647,8 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
        a. Allow supercritical flow and do not limit the Froude number.
 
-       b. Increase the grid element roughness by assigning AMANN or setting higher individual grid element n-values to reduce the Froude number (assign
-          spatially variable n-values).
+       b. Increase the grid element roughness by assigning AMANN or setting higher individual grid element n-values to reduce
+          the Froude number (assign spatially variable n-values).
 
        c. Set the Limiting Froude number or the floodplain (e.g. set FROUDL = 0.99 or 1.11).
           When FROUDL is exceeded the grid element roughness value will be increased by 0.001 for the next timestep.
@@ -657,7 +656,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
           for that cell were computed.
           Consider revising the n-values in the MANNINGS_N.DAT file to match those in the ROUGH.OUT file.
           This will ensure that FROUDL is not exceeded.
-          Re- name the MANNINGS_N.RGH file to MANNINGS_N.DAT.
+          Rename the MANNINGS_N.RGH file to MANNINGS_N.DAT.
 
        d. Spatially variable limiting Froude numbers can also be assigned to individual grid elements in FPFROUDE.DAT.
 
@@ -668,11 +667,11 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
    4. The floodwave travel time should be reviewed to determine if it is appropriate.
       The travel time can also be used to calibrate the n-values.
       Adjusting n-values with FROUDL will slow the arrival of the frontal wave.
-      During the hydro- graph recessional limb when the Froude number is less than 0.5 and the flow is shallow,
+      During the hydrograph recessional limb when the Froude number is less than 0.5 and the flow is shallow,
       the n-value decreases by 0.0005 until the original n-value is reached.
 
    5. IFLOODWAY initiates the floodway routine.
-      Flow will not be exchanged be- tween floodplain grid elements unless the maximum water surface plus the
+      Flow will not be exchanged between floodplain grid elements unless the maximum water surface plus the
       encroachment depth (ENCROACH) from a previous FLO-2D simulation is exceeded.
       An initial FLO-2D simulation is required to establish the maximum water surface elevations.
       See the Floodway discussion in the Reference Manual component section.
@@ -684,7 +683,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
       in the file BASEFLOWFP_TIME.OUT.
 
    6. If channel flow is simulated (ICHANNEL = 1), then the NOPRTC variable must be set in CONT.DAT.
-      In addition, channel outflow control can be as- signed in OUTFLOW.DAT.
+      In addition, channel outflow control can be assigned in OUTFLOW.DAT.
 
    7. ITIMTEP will enable a simple animation (time and space output) of the over- land flow to be displayed in Mapper,
       MAXPLOT or other map software.
@@ -692,7 +691,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
    8. The depth duration analysis is used to determine how long a floodplain grid element is inundated at a flow depth
       greater than the DEPTHDUR variable.
-      If DEPTHDUR = 1 ft, the output file DEPTHDUR.OUT has the total du- ration in hours that the depth exceeded 1 ft.
+      If DEPTHDUR = 1 ft, the output file DEPTHDUR.OUT has the total duration in hours that the depth exceeded 1 ft.
       The results can be reviewed in MAXPLOT.
       If the depth duration analysis is activated, then a second output file DEPTHDURATION2.OUT is generated for the
       cumulative time duration above 2 ft (0.61 m).
@@ -712,23 +711,23 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
             dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
-   This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
-   roughness elements (assumed to be 3 ft or 1 m).
-   This equation is applied by the model as a default and the user can turn ‘off’ the depth roughness adjustment coefficient for all grid elements by
-   assigning AMANN = -99.
-   This roughness adjustment will slow the progression of the floodwave.
-   It is valid for flow depths ranging from 0.5 ft (0.15 m) to 3 ft (1 m).
-   For example, at 1 ft (0.3 m), the computed roughness will be about 1.31 times the assigned roughness for a flow depth of 3 ft.
-   Assigning a ROUGHADJ value may reduce unexpected high Froude numbers.
+       This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
+       submergence of all roughness elements (assumed to be 3 ft or 1 m).
+       This equation is applied by the model as a default and the user can turn ‘off’ the depth roughness adjustment coefficient for
+       all grid elements by assigning AMANN = -99.
+       This roughness adjustment will slow the progression of the floodwave.
+       It is valid for flow depths ranging from 0.5 ft (0.15 m) to 3 ft (1 m).
+       For example, at 1 ft (0.3 m), the computed roughness will be about 1.31 times the assigned roughness for a flow depth of 3 ft.
+       Assigning a ROUGHADJ value may reduce unexpected high Froude numbers.
 
-   The following rules apply:
+       The following rules apply:
 
-    .. raw:: html
+        .. raw:: html
 
-       0.0 &lt; flow depth &lt; 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
-       0.2 ft (0.06 m) &lt; flow depth &lt; 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2.<br>
-       0.5 ft (0.15 m) &lt; flow depth &lt; 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = nb *1.5* e<sup>-(0.4 depth/dmax)</sup><br>
-       3 ft (1 m) &lt; flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
+           0.0 &lt; flow depth &lt; 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
+           0.2 ft (0.06 m) &lt; flow depth &lt; 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2.<br>
+           0.5 ft (0.15 m) &lt; flow depth &lt; 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = nb *1.5* e<sup>-(0.4 depth/dmax)</sup><br>
+           3 ft (1 m) &lt; flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
 
    10. The IBACKUP = 1 switch is used to create a backup file with an \*.BAC extension. The\*.BAC files can be reviewed to see if the model
        is correctly reading the data.This is a data file format troubleshooting tool. These files can be renamed to \*.DAT and the model can
@@ -743,18 +742,18 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
    11. The DEPRESSDEPTH parameter can be used to either identify depressed elements or low levee crest elevations.
        Set SIMUL = 0.01 hrs for separate values for each filter.
        Set DEPRESSDEPTH = 3.0 ft to review the depressed elements in the DEPRESSED_ELEMENTS.OUT ﬁle, rename the file and reassign
-       DEPRESSDEPTH to 1.0 ft or so and rerun the model to generate LOW_LEVEE\_ CREST_ELEVATIONS.OUT ﬁle.
+       DEPRESSDEPTH to 1.0 ft or so and rerun the model to generate LOW_LEVEE_CREST_ELEVATIONS.OUT ﬁle.
 
-   12. If a grid element is lower than every neighboring cell, to the depth of DE- PRESSDEPTH, the grid element is considered to be a
+   12. If a grid element is lower than every neighboring cell, to the depth of DEPRESSDEPTH, the grid element is considered to be a
        topographical depression and a probable error.
-       The grid element is listed in DEPRESSED_ELE- MENTS.OUT file.
+       The grid element is listed in DEPRESSED_ELEMENTS.OUT file.
 
    13. DEPRESSDEPTH is also used to identify levees that have a low crest elevation.
        A levee or wall that is only 0.1 ft above the ground is superfluous.
        The low levee warning message and action has three options:
 
-          a. DEPRESSDEPTH = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in LOW_LEVEE_CREST\_ ELEVATIONS.OUT
-             file.
+          a. DEPRESSDEPTH = 0.0 to 10.0 ft; Identifies the wall with a crest elevation lower than DEPRESSDEPTH in
+             LOW_LEVEE_CREST_ELEVATIONS.OUT file.
           b. DEPRESSDEPTH = -1.0 to - 10.0 ft; Assesses the side of the wall where the crest elevation is assigned to determine if the
              levee height is lower than the DEPRESSDEPTH value.
           c. DEPRESSDEPTH = -101.0 to -110.0 ft; Assesses both sides of the wall to determine if the height is lower than DEPRESSDEPTH
@@ -763,7 +762,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
    14. Multiple channels IMULTC have various conditions depending on the switch position and which multiple channel data files exist.
        If IMULTC = 1, the engine checks for MULT.DAT, and SIMPLE_MULT.DAT.
-       Data can be as- signed to both files for separate grid elements.
+       Data can be assigned to both files for separate grid elements.
        If IMULTC = 2, then multiple channels can be used alongside separate gutter cells in GUTTER.DAT.
 
 FILE: TOLER.DAT
@@ -892,7 +891,7 @@ NUMERICAL STABILITY CONTROL DATA
    TOLGLOBAL is analogous to a depression storage rainfall abstraction.
    The TOLGLOBAL value for streets is hardwired (0.03 ft or 0.01 m).
    TOLSPATIAL is another variable that can be assigned to any cell.
-   The TOLSPATIAL variable will re- place TOLGLOBAL if assigned.
+   The TOLSPATIAL variable will replace TOLGLOBAL if assigned.
    See TOLSPATIAL tab for further instructions.
 
 2. DEPTOL controls the percent change in grid element or channel flow depth for a given timestep.
@@ -904,7 +903,7 @@ NUMERICAL STABILITY CONTROL DATA
    Setting DEPTOL = 0 dictates that only the Courant criteria will be applied for numerical stability.
 
 3. To identify numerical instability, review the CHANMAX.OUT file and the HYDROG program hydrograph plots for hydrograph spikes.
-   Review MAX- PLOT or Mapper or the VELTIMEFP.OUT file to determine if floodplain velocities are too high.
+   Review MAXPLOT or Mapper or the VELTIMEFP.OUT file to determine if floodplain velocities are too high.
 
 4. If the model is unstable, reduce the appropriate Courant number by 0.1 in successive runs until the Courant number reaches 0.2.
 
@@ -932,17 +931,13 @@ NUMERICAL STABILITY CONTROL DATA
 
     - Initially run the model with the Courant numbers = 0.6.
       If the model is unstable, reduce the appropriate Courant number by 0.1 increments in successive runs until the Courant number reaches 0.2.
-
     - Run the model with an appropriate limiting Froude number (e.g. FROUDL in CONT>DAT = 0.9 subcritical flow on an alluvial surface).
       This will calibrate the model n-values for reasonable Froude numbers.
-
     - Review the maximum velocities in VELTIMEC.OUT, VELTIMEFP.
       OUT and VELTIMEST.OUT (or in MAXPLOT or Mapper) and the maximum Froude numbers in SUPER.OUT to determine the location of any inappropriate high
       velocities related to numerical surging and increase the n-values in the vicinity of the grid elements with high velocities.
-
     - Review the n-values in ROUGH.OUT and MANNINGS_N.DAT.
       Make n-value adjustments in MANNINGS_N.DAT based on exceedingly high n-values in ROUGH.OUT then replace MANNINGS_NDAT with MANNINGS.RGH.
-
     - Run the simulation and repeat steps 3 and 4 making adjustments to MANNINGS_N.DAT until ROUGH.OUT is essentially empty.
       A few incremental n-value changes will not affect the simulation.
       Make adjustments to FROUDL to decrease the number of n-value adjustments.
@@ -950,12 +945,9 @@ NUMERICAL STABILITY CONTROL DATA
 6. Increase the model speed:
 
     - Increase the Courant numbers in 0.1 increments until C = 0.9.
-
     - Increase the TIME_ACCEL parameter in TOLER.DAT in 0.1 increments to increase the computational timesteps increments.
-
     - Review the model numerical stability with the maximum velocity and Froude number output files.
       Decrease the TIME_ACCEL parameter if unreasonable increases in the maximum velocity and Froude number are reported.
-
     - Review the computational runtime in the SUMMARY.OUT file and balance the increased Courant numbers and TIME_ACCEL parameter to achieve the best
       runtime. This may require only an increase in TIME_ACCEL.
 
@@ -1157,8 +1149,6 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
 
 To turn off the depth variable roughness set AMANN = -99.
 See the Comment 9 in the CONT.DAT file.
-
-
 
 
 FILE: MANNINGS_N.DAT
@@ -1584,10 +1574,10 @@ INFLOW HYDROGRAPH DATA
 
 6. Flooding routing a deep reservoir pool is essentially frictionless flow and should not be simulated using a friction
    slope given by Manning’s equation.
-   Friction- less flow cannot be predicted with the full dynamic equation without a friction slope term.
+   Frictionless flow cannot be predicted with the full dynamic equation without a friction slope term.
    In order to apply the revised Manning’s equation for ponded flow, it is recommended that a high n-value be used on
    the order of 0.1 to 0.4.
-   This will result in reservoir velocities of approximately 1 fps (0.3 mps) which will be representing for filling o3r
+   This will result in reservoir velocities of approximately 1 fps (0.3 mps) which will be representing for filling or
    draining the reservoir when the water surface slope is almost flat.
    RESERVOIRN is a required variable in Build 22 and on.
 
@@ -1828,7 +1818,7 @@ OUTFLOW HYDROGRAPH DATA
    The flood- plain elevation of the outflow node is automatically set to an elevation lower (0.25 ft or 0.1 m) than
    the lowest upstream grid element unless it is already lower than all the upstream grid elements.
 
-2. Omitting Lines 2 and 3 will cause all the inflow to the outflow elements to dis- charge from the grid system at
+2. Omitting Lines 2 and 3 will cause all the inflow to the outflow elements to discharge from the grid system at
    normal flow conditions.
    This outflow is equal to the sum of the inflow from the contiguous elements that are not outflow nodes and enables
    an approximation of normal flow depth in the outflow elements.
@@ -1842,14 +1832,15 @@ OUTFLOW HYDROGRAPH DATA
 
         Q = a hb
 
-    where the coefficient (a) and exponent (b) are required input and h is the flow depth. The coefficient (a) and exponent (b) can be used to established critical flow at the outflow grids.
+    where the coefficient (a) and exponent (b) are required input and h is the flow depth. The coefficient (a) and
+    exponent (b) can be used to established critical flow at the outflow grids.
 
 4. A discretized time-stage relationship can be employed to specify a water surface elevation for at various channel or
    floodplain locations in the grid system.
    This is a simple method by which to simulate storm surge flooding on the coastal floodplain.
    Floodplain or channel elements can be specified with increasing tides or storm surge water surface elevations.
 
-5. If coastal flooding (storm surges or tsunamis) is being simulated with a time- stage hydraulic control, assign the
+5. If coastal flooding (storm surges or tsunamis) is being simulated with a time-stage hydraulic control, assign the
    time-stage control to the outflow nodes.
    When the time-stage water surface elevation in OUTFLOW.DAT is higher than the model predicted stage, inflow to the
    grid system will occur with assigned time-stage elevation to the outflow node.
@@ -2533,7 +2524,7 @@ INFILTRATION DATA
      - **0.0 - 1**
 
        **0.0 - 0.5**
-     - The grid element soil moisture deficit (SATF-SATI) is ex- pressed as a decimal with a range from 0.0 to 1.0.
+     - The grid element soil moisture deficit (SATF-SATI) is expressed as a decimal with a range from 0.0 to 1.0.
 
        It can also represent the grid element volumetric soil moisture deficit that is defined as the soil moisture
 
@@ -2546,7 +2537,7 @@ INFILTRATION DATA
      - **0.0 - 1**
 
        **0.0 - 0.5**
-     - The channel segment or reach soil moisture deficit (SATF- SATI) is expressed as a decimal with a range from
+     - The channel segment or reach soil moisture deficit (SATF-SATI) is expressed as a decimal with a range from
 
        0.0 to 1.0.
 
@@ -2689,8 +2680,7 @@ INFILTRATION DATA
      - **r**
      - **0.3 - 0.5**
      - Global floodplain soil porosity.
-       If using the volumetric soil moisture deficiency for DTHETA, set POROS =
-       0.
+       If using the volumetric soil moisture deficiency for DTHETA, set POROS = 0.
 
    * - RTIMPF(N)
      - **r**
@@ -2842,7 +2832,7 @@ INFILTRATION DATA
     There are no metric equivalent values so if using Horton on a metric project, use in/hr even if IMETRIC = 1.
 
 15. As the channel infiltration storage fills, the infiltration rate declines but does not cease.
-    The decay of the hydraulic conductivity Hc from the initially as- signed hydraulic conductivity Hi to a final saturated hydraulic conductivity Hf is
+    The decay of the hydraulic conductivity Hc from the initially assigned hydraulic conductivity Hi to a final saturated hydraulic conductivity Hf is
     based on the following equation:
 
         .. math::
@@ -3370,9 +3360,9 @@ CHANNEL DATA
 
    The second regression applies when the flow depth is greater than EXCDEP, but does not include the lower flow area.
    The two variable area cross section relationships are unique and separate.
-   The total cross section flow area is the sum of the lower flow and upper (second relationship) flow areas.
+   The total cross-section flow area is the sum of the lower flow and upper (second relationship) flow areas.
    The channel top width is computed directly from the second relationship.
-   The area, wet- ted perimeter and top width are evaluated using the upper flow depth given by total depth - EXCDEP.
+   The area, wetted perimeter and top width are evaluated using the upper flow depth given by total depth - EXCDEP.
    To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the EXCDEP depth are used.
 
    These channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
@@ -3382,17 +3372,16 @@ CHANNEL DATA
 5. A preprocessor program XSEC is available in the FLO-2D subdirectory to determine the regression coefficient and exponents (A1, A2, A11, A22, B1, B2,
    B11, B22, B2, C1, C11, C22) in Line 2b.
 
-6. A cross section width can exceed the width of the grid element.
+6. A cross-section width can exceed the width of the grid element.
    For example, a channel cross section that is 100 ft wide can be used in a 20 ft grid system.
-   The model automatically determines the number of grid elements required by a channel cross section.
+   The model automatically determines the number of grid elements required by a channel cross-section.
    If the cross-section width exceeds 95% of the combined bank elements width or if there is less than 5% floodplain surface area left in the bank
    element after removing the channel surface area, the channel will extend the right bank over another grid element looking downstream.
 
 7. Set the channel roughness to a reasonable n-value and then set the FROUDC variable to an appropriate value (e.g. 0.95 to ensure subcritical flow).
    FLO- 2D will adjust the roughness values according to the limiting Froude number criteria (see the ROUGH.OUT file).
    Changes to the channel n-values may be accepted by replacing the CHAN.DAT file with the CHAN.RGH file.
-   Just delete the original CHAN.DAT file and rename the CHAN.RGH to CHAN.
-   DAT.
+   Just delete the original CHAN.DAT file and rename the CHAN.RGH to CHAN.DAT.
 
 8. The confluence can be made by the tributary joining either side of the main channel.
    List the tributary first and the main channel second in Line C.
@@ -3402,7 +3391,7 @@ CHANNEL DATA
 
 10. The key to channel routing is to balance the relationship between the slope, flow area and roughness.
     Channel routing is more stable if the natural cross section routing routine is used (SHAPE = N).
-    When one cross section is as- signed to several grid elements it will be necessary to interpolate both the slope and the cross-section geometry in the
+    When one cross section is assigned to several grid elements it will be necessary to interpolate both the slope and the cross-section geometry in the
     PROFILES program to create a smooth average channel slope.
     Review the PROFILES program instructions for cross section and channel bed slope interpolation.
     If there is more than one surveyed cross section per channel element, use the one that has the greatest hydraulic control to represent the channel.
@@ -3457,7 +3446,7 @@ CHANNEL DATA
     Assigning a ROUGHADJ value may reduce high Froude numbers.
 
     A channel spatially variable shallow n-value assigned to the depths less than 0.2 ft (0.067 m) is defined by applying the ROUGHADJ to each channel
-    reach.:
+    reach:
 
         SHALLOWN = ROUGHADJ / 2
 
@@ -3688,7 +3677,7 @@ CROSS SECTION DATA
      - **Alpha Numeric**
      - Cross section name (less than 15 characters, not case sensitive).
 
-       This name is for cross section ID purposes only and it is not used by the model.
+       This name is for cross-section ID purposes only and it is not used by the model.
 
        Do not use spaces in the name.
 
@@ -3843,7 +3832,7 @@ HYDRAULIC STRUCTURE DATA
      - **0 - ∞**
      - When the long culvert routine is used (CLENGTH(I) > 1),.
 
-       COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is ex- pressed as a
+       COEFQ(I,J) is the flow area rating curve coefficient where the flow area A is expressed as a
 
        power function of the headwater depth.
 
@@ -3988,7 +3977,7 @@ HYDRAULIC STRUCTURE DATA
 
        INOUTCONT(I,J) = 1; reduced discharge for tailwater submergence, but does not allow upstream flow.
 
-       Suggested rating table revisions posted to REVISED_RATING\_ TABLE.OUT.
+       Suggested rating table revisions posted to REVISED_RATING_TABLE.OUT.
 
        INOUTCONT(I,J) = 2; reduced discharge for tailwater submergence.
 
@@ -4236,7 +4225,7 @@ HYDRAULIC STRUCTURE DATA
      - **r**
      - **2.65 - 3.21**
      - Weir coefficient for flow over the bridge deck.
-       For metric: COEFFWI- ERB x 0.552.
+       For metric: COEFFWIERB x 0.552.
        Comment 19.
 
    * - WINGWALL_ANGLE
@@ -4251,12 +4240,12 @@ HYDRAULIC STRUCTURE DATA
 
    * - LBTOEABUT
      - **r**
-     - **ELEVA- TION**
+     - **ELEVATION**
      - Toe elevation of the left abutment (ft or m)
 
    * - RBTOEABUT
      - **r**
-     - **ELEVA- TION**
+     - **ELEVATION**
      - Toe elevation of the right abutment (ft or m)
 
    * -
@@ -4321,7 +4310,7 @@ HYDRAULIC STRUCTURE DATA
 
 9. The culvert equations use the conventional entrance loss coefficients KE values that be found in the literature.
 
-10. If INOUTCONT(I,J) = 0, then the hydraulic structure discharge is based solely on the upstream water surface elevation ( headwater depth above the
+10. If INOUTCONT(I,J) = 0, then the hydraulic structure discharge is based solely on the upstream water surface elevation (headwater depth above the
     reference elevation which is either assigned or represents the node elevation).
     This is equivalent to inlet control for a culvert.
     If INOUTCONT(I,J) = 1, then the tailwater submergence is evaluated.
@@ -4467,7 +4456,7 @@ SUBMERGENCE DATA
        HSUBFACTOR = HSUBFACTOR + 0.015 \* SUBM_ADJ
 
 2. The submergence factor for hydraulic structures is not a DOT table but rather it adjusts on the fly during runtime.
-   This is not new. What is new is SUBM\_ ADJ. If SUBM_ADJ = 1.0, there is no change from the existing method.
+   This is not new. What is new is SUBM_ADJ. If SUBM_ADJ = 1.0, there is no change from the existing method.
    If a SUBMERGE_FACTOR only has
 
        1811 1.0
@@ -4593,7 +4582,7 @@ STREET DATA
        **0 - 9,000**
      - Optional street elevation (ft or m).
 
-       This elevation will supersede the flood- plain grid element elevation.
+       This elevation will supersede the floodplain grid element elevation.
 
        If ELSTR(L) = 0, the model will assign the street elevation as the grid element
 
@@ -5732,7 +5721,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
 4. Mudflow simulation is dependent on the appropriate selection of viscosity and yield stress parameters.
    Please review the mudflow discussion in Chapter 4 of the FLO-2D Reference Manual to determine an appropriate viscosity and yield stress relationship
    as function of sediment concentration.
-   There are also mud- flow guidelines available in the Handout documents.
+   There are also mudflow guidelines available in the Handout documents.
    Viscosity and yield stress units are defined in Table 2.1.
 
 5. The floodplain spatially variable sediment size fraction is assigned by sediment groups (Lines 3, 4 and 10).
@@ -5744,8 +5733,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
    as specified by the ISEDN variable in CHAN.DAT.
 
 6. It is important to note that each sediment group will have the identical size fraction delineation.
-   The SEDIAM variable will be the same for all the groups (i.e.
-   the number of Line 4s in all groups will be the same).
+   The SEDIAM variable will be the same for all the groups (i.e. the number of Line 4s in all groups will be the same).
    If one group is missing a specific size fraction, then the sediment percentage for that group (SEDPERCENT variable) will either be the same as the
    previous value or only slightly different (see the above example data file).
 
@@ -5940,7 +5928,7 @@ LEVEE AND FAILURE DATA
 
        ILEVFAIL = 0 no levee failure.
 
-       ILEVFAIL = 1 prescribed level failure rates of breach opening or wall col- lapse.
+       ILEVFAIL = 1 prescribed level failure rates of breach opening or wall collapse.
 
        ILEVFAIL = 2 initiate the levee or dam breach failure routine.
 
@@ -6220,7 +6208,7 @@ FLOODPLAIN CROSS SECTION DATA
      - **1 - 8**
      - Defines the general direction that the flow is expected to cross the floodplain
 
-       cross section (See comment 1).
+       cross-section (See comment 1).
 
        IFLO is set to one of the following:
 
@@ -6249,18 +6237,18 @@ FLOODPLAIN CROSS SECTION DATA
    * - NODX(N,J)
      - **i**
      - **1 - NNOD**
-     - Array of grid elements that constitute a given floodplain cross section (see comment 2 and 3).
+     - Array of grid elements that constitute a given floodplain cross-section (see comment 2 and 3).
 
    * - NNXSEC(N)
      - **i**
      - **1 - 1,000**
-     - Number of floodplain elements in a given cross section.
+     - Number of floodplain elements in a given cross-section.
 
        The selected cross section grid elements do not have to extend across the entire grid system.
 
-       Only one grid element is necessary to constitute a floodplain cross section.
+       Only one grid element is necessary to constitute a floodplain cross-section.
 
-       The cross section can include a channel element.
+       The cross-section can include a channel element.
 
        If one of the floodplain cross section grid elements is a channel element, the cross-section
 
@@ -6271,7 +6259,7 @@ FLOODPLAIN CROSS SECTION DATA
      - **0 or 1**
      - If NXPRT = 1, the cross-section summary information including cross-section discharge,
 
-       average cross section velocity, width and depth will be reported in the BASE.OUT file.
+       average cross-section velocity, width and depth will be reported in the BASE.OUT file.
 
 .. raw:: html
 
@@ -6279,8 +6267,8 @@ FLOODPLAIN CROSS SECTION DATA
 
 **Instructional Comments for the FPXSEC.DAT File**
 
-1. The floodplain grid elements can be combined to define a cross section across a floodplain or alluvial fan.
-   Each floodplain cross section is assigned flow discharge in only one flow direction given by IFLO.
+1. The floodplain grid elements can be combined to define a cross-section across a floodplain or alluvial fan.
+   Each floodplain cross-section is assigned flow discharge in only one flow direction given by IFLO.
    This direction includes the flow contribution from the two contiguous directions.
    The cross-section routine can be used to isolate the results for a single element.
    The flow directions and associated discharge components are as follows:
@@ -6292,7 +6280,7 @@ FLOODPLAIN CROSS SECTION DATA
        :header-rows: 1
 
        * - **Selected Cross Section Flow**
-         - **Flow Direction Components Added to the Cross Section Discharge**
+         - **Flow Direction Components Added to the Cross-Section Discharge**
 
        * - north = 1
          - northeast 5 and northwest 8
@@ -6326,7 +6314,7 @@ FLOODPLAIN CROSS SECTION DATA
 3. The floodplain cross section grid elements can be selected graphically with the FLO-2D Plugin.
    See FLO-2D Plugin User Manual for instructions.
 
-4. Select a flow direction perpendicular to the cross section only.
+4. Select a flow direction perpendicular to the cross-section only.
    For example, if the cross-section orientation is East to West, the flow direction should be North or South only.
 
 
@@ -6463,7 +6451,7 @@ DAM AND LEVEE BREACH DATA
    * - BRBOTWIDMAX
      - **r**
      - **0 - ∞**
-     - Maximum allowable breach bottom width (ft or m) as constrained by the valley cross section.
+     - Maximum allowable breach bottom width (ft or m) as constrained by the valley cross-section.
 
        Set BRBOTWIDWAX = 0.0 if the dam levee is continuous through adjoining grid elements
 
@@ -6497,7 +6485,7 @@ DAM AND LEVEE BREACH DATA
    * - BRTOPWIDMAX
      - **r**
      - **0 - ∞**
-     - Maximum allowable breach top width (ft or m) as constrained by the valley cross section.
+     - Maximum allowable breach top width (ft or m) as constrained by the valley cross-section.
 
        Set BRTOPWIDMAX = 0.0 if the levee is continuous through adjoining grid elements
 
@@ -6508,7 +6496,7 @@ DAM AND LEVEE BREACH DATA
      - **0 - 750**
 
        **0 - 30,000**
-     - Cohesive strength (lb/ft2 or N/m2) of the levee or dam core material.
+     - Cohesive strength (lb/ft\ :sup:`2` or N/m\ :sup:`2`) of the levee or dam core material.
 
        If there is no core, COHC = 0.
 
@@ -6517,7 +6505,7 @@ DAM AND LEVEE BREACH DATA
      - **0 - 750**
 
        **0 - 30,000**
-     - Cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material.
+     - Cohesive strength (lb/ft\ :sup:`2` or N/m\ :sup:`2`) of the levee or dam shell material.
 
        If there is no core, COHS = 0.
 
@@ -6528,10 +6516,7 @@ DAM AND LEVEE BREACH DATA
 
        If CNC = 0., Manning’s n-value for the core material will computed from Strickler’s equation.
 
-       If CNC > 1., the n-value will be computed from a Moody diagram (Darcy f
-
-       vs.
-       D50).
+       If CNC > 1., the n-value will be computed from a Moody diagram (Darcy f vs. D50).
        Set CNC = 0.0 for no core material.
 
    * - CNS
@@ -6648,7 +6633,7 @@ DAM AND LEVEE BREACH DATA
      - **0 - 750**
 
        **0 - 30,000**
-     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam core material for an
+     - Global cohesive strength (lb/ft\ :sup:`2` or N/m\ :sup:`2`) of the levee or dam core material for an
 
        unspecified failure location.
 
@@ -6659,7 +6644,7 @@ DAM AND LEVEE BREACH DATA
      - **0 - 750**
 
        **0 - 30,000**
-     - Global cohesive strength (lb/ft2 or N/m2) of the levee or dam shell material for an
+     - Global cohesive strength (lb/ft\ :sup:`2` or N/m\ :sup:`2`) of the levee or dam shell material for an
 
        unspecified failure location.
 
@@ -6752,7 +6737,7 @@ DAM AND LEVEE BREACH DATA
      - **3 - 6**
 
        **1 - 2**
-     - Global maximum permissible velocity (fps or mps) for a grass-lined down- stream face before
+     - Global maximum permissible velocity (fps or mps) for a grass-lined downstream face before
 
        the grass is eroded for an unspecified failure location.
 
@@ -6808,7 +6793,7 @@ DAM AND LEVEE BREACH DATA
    * - GSEDCONMAX
      - **r**
      - **0.2 - 0.55**
-     - Global maximum sediment concentration by volume in the breach dis- charge for an unspecified
+     - Global maximum sediment concentration by volume in the breach discharge for an unspecified
 
        failure location.
 
@@ -6854,7 +6839,7 @@ DAM AND LEVEE BREACH DATA
        **13,500 -**
 
        **19,000**
-     - Global unit weight (lb/ft3 or N/m3) of the levee or dam core material for an
+     - Global unit weight (lb/ft\ :sup:`3` or N/m\ :sup:`3`) of the levee or dam core material for an
 
        unspecified failure location.
 
@@ -6867,7 +6852,7 @@ DAM AND LEVEE BREACH DATA
        **13,500 -**
 
        **19,000**
-     - Global unit weight (lb/ft3 or N/m3) of the levee or dam shell material for an unspecified
+     - Global unit weight (lb/ft\ :sup:`3` or N/m\ :sup:`3`) of the levee or dam shell material for an unspecified
 
        failure location.
 
@@ -7046,7 +7031,7 @@ DAM AND LEVEE BREACH DATA
        **13,500 -**
 
        **19,000**
-     - Unit weight (lb/ft3 or N/m3) of the levee or dam core material for a prescribed
+     - Unit weight (lb/ft\ :sup:`3` or N/m\ :sup:`3`) of the levee or dam core material for a prescribed
 
        grid element failure location.
 
@@ -7059,7 +7044,7 @@ DAM AND LEVEE BREACH DATA
        **13,500 -**
 
        **19,000**
-     - Unit weight (lb/ft3 or N/m3) of the levee or dam shell material for a prescribed grid
+     - Unit weight (lb/ft\ :sup:`3` or N/m\ :sup:`3`) of the levee or dam shell material for a prescribed grid
 
        element failure location.
 
@@ -7209,7 +7194,7 @@ FLOODPLAIN LIMITING FROUDE NUMBERS
 1. The spatially variable limiting Froude number supersedes the global limiting Froude number (FROUDL) in CONT.DAT.
 
 2. When FROUDEFP is exceeded the grid element roughness value will be increased by 0.001 for the next timestep.
-   After a flood simulation, review ROUGH.OUT to determine where FROUDEFP was exceeded and the maxi- mum n-values for that cell were computed.
+   After a flood simulation, review ROUGH.OUT to determine where FROUDEFP was exceeded and the maximum n-values for that cell were computed.
    Consider revising the n-values in the MANNINGS_N.DAT file to match those in the ROUGH.OUT file.
    This will ensure that FROUDEFP is not exceeded.
    Rename the MANNINGS_N.
@@ -7361,7 +7346,7 @@ STORM DRAIN DATA FILE
 **Instructional Comments for the SWMMFLO.DAT File**
 
 1. The Storm Drain Guidelines manual offers a comprehensive overview of storm drain modeling using FLO-2D.
-   The storm drain feature names must begin with an i or I to indicate an inlet, im or IM to indicate a manhole.
+   The storm drain feature names **must** begin with an i or I to indicate an inlet, im or IM to indicate a manhole.
    This naming convention will allow the FLO-2D Plugin and FLOPRO.EXE to identify features that will connect to the surface for flow exchange.
    The storm drain naming feature need not be overly complicated because locating the features is simple with the various attribute query tools available
    in QGIS.
@@ -7523,7 +7508,7 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
 
        (cfs or cms)
 
-   * - STRUCTNAME\_INLET
+   * - STRUCTNAME_INLET
      - **c**
      - **Alpha numeric**
      - Name of the type 4 inlet.
@@ -7647,7 +7632,7 @@ STORM DRAIN OUTFALL ID DATA FILE
      - **1 - NNOD**
      - Grid element corresponding to the location of the outfall.
 
-   * - OUTF\_FLO2DVOL(JT)
+   * - OUTF_FLO2DVOL(JT)
      - **s**
      - **0 or 1**
      - Outfall discharge switch (see comments 2 and 3):
@@ -7664,7 +7649,7 @@ STORM DRAIN OUTFALL ID DATA FILE
 1. The list of outfall names and position should correspond to the SWMM.inp file.
    Do not add spaces to the name.
 
-2. If the discharge cannot physically return to the surface, set the OUTF_FLO2D- VOL to 0.
+2. If the discharge cannot physically return to the surface, set the OUTF_FLO2D-VOL to 0.
 
 3. If the flow in the storm drain system can return to the surface, set the switch to the on position = 1.
 
@@ -7735,7 +7720,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
      - **r**
      - **0 - 100.**
      - Clogging factor for each inlet node.
-       The value is a percent- age (see comment 1).
+       The value is a percentage (see comment 1).
 
    * - SWMM_IDEN(I)
      - **c**
@@ -8119,7 +8104,7 @@ WATER SURFACE ELEVATION COMPARISON
 1. The WSTIME.DAT file is used as a calibration tool.
    It is set up with a known water surface elevation and peak discharge time.
    When the model completes, a comparison file is populated.
-   It compares the high water mark to the maxi- mum water surface elevation at the corresponding node for a given time.
+   It compares the high water mark to the maximum water surface elevation at the corresponding node for a given time.
    The FLO-2D model will read this file if it is present.
 
 2. The FLO-2D Plugin does not build this file.
@@ -8192,8 +8177,7 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 
 1. A time series of specific grid cell hydraulics can be created by generating the TIMDEPCELL.DAT file with a list of the grid cells.
    Change the ITIMTEP to 5 in the CONT.DAT file.
-   Run the model to generate the TIMDEPCELL.
-   OUT file.
+   Run the model to generate the TIMDEPCELL.OUT file.
    This output file contains the temporal hydraulic results for each grid cell specified in the TIMDEPCELL.DAT file.
 
 2. The FLO-2D Plugin does not build this file.
@@ -8441,7 +8425,7 @@ FLOODPLAIN STREET ELEMENT GUTTER DATA
         - The flow is shared with a street element without a gutter based on the average depth between the two contiguous elements.
         - The flow is shared with a contiguous floodplain element that is not a street and is not a curb flow direction based on the average flow depth between
           the two contiguous elements.
-        - If the flow direction is the curb direction or one of the two diagonal directions associated with the curb direction, the flow is first ex- changed to
+        - If the flow direction is the curb direction or one of the two diagonal directions associated with the curb direction, the flow is first exchanged to
           the sidewalk area within the gutter element when the flow depth exceeds the curb height.
           This exchange occurs in either direction from the street to the sidewalk or from the sidewalk to the street.
           After the internal flow exchange within the gutter element is complete the overland flow between the sidewalk area and the contiguous floodplain
@@ -8519,7 +8503,7 @@ BUILDING COLLAPSE PARAMETERS
    * - IG(M)
      - **i**
      - **1 - NNOD**
-     - Individual grid elements with building that are to be as- signed a vulnerability curve for potential collapse.
+     - Individual grid elements with building that are to be assigned a vulnerability curve for potential collapse.
 
    * - IARFSMASHGLOBAL
      - **i**
@@ -8702,9 +8686,6 @@ ARRAY OF INTERIOR GRID ELEMENTS
 
     <br><br>
 
-
-
-
 **Variable Descriptions for the CHAN_INTERIOR_NODES.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
@@ -8723,7 +8704,7 @@ ARRAY OF INTERIOR GRID ELEMENTS
      - **i**
      - **1 - NNOD**
      - Nodes that represent the interior of the channel.
-       (see Com- ment 1)
+       (see Comment 1)
 
 
 **Instructional Comments for the CHAN_INTERIOR_NODES.DAT File**
@@ -9305,7 +9286,6 @@ STEEP SLOPE N VALUE DATA FILE
         <pre>
         0               Line 1: <b>ISTEEPN_GLOBAL</b>
         263             Line 2: <b>IDUM</b>
-                        J = grid element that has a
 
         Notes:
            Line 2: Repeat this line for each grid element has a steep slope.
