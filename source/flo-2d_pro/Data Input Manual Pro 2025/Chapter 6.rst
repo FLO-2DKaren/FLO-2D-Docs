@@ -1,7 +1,7 @@
 .. vim: syntax=rst
 
-Chapter6: Post-Processor Programs
-=====================================================
+Chapter 6: Post-Processor Programs
+====================================
 
 There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
 FLO-2D MapCrafter and MAXPLOT display the flood inundation depth and velocity plots.
