@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-CHAPTER 7: Debugging and Trouble Shooting the Data Files
+Chapter 7: Debugging and Trouble Shooting the Data Files
 ========================================================
 
 **Troubleshooting Guidelines**
