@@ -2087,6 +2087,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - \
      - Make sure the hydraulic structure is on the correct side of the levee.
+
        Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
 
    * - \
