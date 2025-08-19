@@ -179,47 +179,47 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
 
 **Make some adjustments**
 
-The following data file adjustments may improve the simulation and speed up the model:
+    The following data file adjustments may improve the simulation and speed up the model:
 
-*Spatial Variation of n-values*
+    *Spatial Variation of n-values*
 
-   The most common cause of numerical surging is underestimated n-values.
-   Typical n-values represent steady, uniform flow.
-   Spatial variation of n-values will affect the floodwave progression (travel time) and reduce surging, but may not significantly impact the area of
-   inundation (especially for longer flood durations).
-   Focus on the critical part of the project area when adjusting n-values and review TIME.OUT and ROUGH.OUT to complete the n-value revisions.
+       The most common cause of numerical surging is underestimated n-values.
+       Typical n-values represent steady, uniform flow.
+       Spatial variation of n-values will affect the floodwave progression (travel time) and reduce surging, but may not significantly impact the area of
+       inundation (especially for longer flood durations).
+       Focus on the critical part of the project area when adjusting n-values and review TIME.OUT and ROUGH.OUT to complete the n-value revisions.
 
-*Edit Topography*
+    *Edit Topography*
 
-   The interpolation of DTM points to assign elevations to grid elements is not perfect even when the FLO-2D Plugin filters are applied.
-   It may be necessary to adjust some floodplain grid element elevations when you review the results.
-   MAXPLOT and Mapper++ can be used to locate grid elements with unreasonable flow depths that may constitute inappropriate depressions.
-   Floodplain depressions can sometimes occur along a river channel if too many floodplain DTM points located within the channel.
+       The interpolation of DTM points to assign elevations to grid elements is not perfect even when the FLO-2D Plugin filters are applied.
+       It may be necessary to adjust some floodplain grid element elevations when you review the results.
+       MAXPLOT and Mapper++ can be used to locate grid elements with unreasonable flow depths that may constitute inappropriate depressions.
+       Floodplain depressions can sometimes occur along a river channel if too many floodplain DTM points located within the channel.
 
-*Floodplain Surface Area Reduction*
+    *Floodplain Surface Area Reduction*
 
-   The distribution of flood storage on the grid system can be influenced by as- signing area reduction factors (ARF’s) to represent loss of storage (i.e.
-   buildings).
-   For large flood events, the assignment of individual grid element ARF values will usually have minor impact on the area of inundation.
-   For local flooding detail, individual grid element ARF assignments may be justified.
+       The distribution of flood storage on the grid system can be influenced by as- signing area reduction factors (ARF’s) to represent loss of storage (i.e.
+       buildings).
+       For large flood events, the assignment of individual grid element ARF values will usually have minor impact on the area of inundation.
+       For local flooding detail, individual grid element ARF assignments may be justified.
 
-*Channel Cross Section Adjustments*
+    *Channel Cross Section Adjustments*
 
-   Typically a surveyed cross section will represent five to ten channel elements.
-   Selecting a cross section to represent transitions between wide and narrow cross sections requires engineering judgment.
-   Use the PROFILES program to interpolate the transition between surveyed cross sections.
+       Typically a surveyed cross section will represent five to ten channel elements.
+       Selecting a cross section to represent transitions between wide and narrow cross sections requires engineering judgment.
+       Use the PROFILES program to interpolate the transition between surveyed cross sections.
 
-*Channel Slope Adjustments*
+    *Channel Slope Adjustments*
 
-   Adverse channel slopes can be simulated by FLO-2D.
-   Smoothing out an irregular slope condition over several channel elements to represent reach average slope conditions may speed up the simulation.
-   Cross sections with scour holes can result in local adverse slopes that misrepresent the average reach conditions.
-   Review the channel slope in PROFILES.
+       Adverse channel slopes can be simulated by FLO-2D.
+       Smoothing out an irregular slope condition over several channel elements to represent reach average slope conditions may speed up the simulation.
+       Cross sections with scour holes can result in local adverse slopes that misrepresent the average reach conditions.
+       Review the channel slope in PROFILES.
 
-*Street Flow*
+    *Street Flow*
 
-   High street velocities may cause numerical surging and slow the simulation down.
-   Assign reasonable limiting street Froude numbers to adjust the street n-values.
+       High street velocities may cause numerical surging and slow the simulation down.
+       Assign reasonable limiting street Froude numbers to adjust the street n-values.
 
 **Model Calibration and Replication of Flood Events**
 
