@@ -802,7 +802,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Hydraulic Structure Channel Inflow must be a Channel Element
 
    * - 200
-     - Time-Stage Elements Have a Stage Assigned that Was Less Than the Flood- plain or Channel Bed Elevation.
+     - Time-Stage Elements Have a Stage Assigned that Was Less Than the Floodplain or Channel Bed Elevation.
        Stage Was Reset to the Bed Elevation
 
    * - 200
@@ -862,7 +862,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
 
    * - \
-     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain =1 in CONT.DAT and Assign the RAIN.DAT File
+     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File
 
    * - \
      - Set the correct Courant number.
@@ -1068,7 +1068,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - This Grid Cell Has an Outflow and a Partial ARF
 
    * - 800
-     - The Following Cell Has an Outflow and a WRF:
+     - The Following Cell Has an Outflow and a WRF
 
    * - 800
      - This Grid Cell Has a Stage Time Relationship and a Full ARF
@@ -1082,20 +1082,20 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 800
      - This Grid Cell Has an Outflow and a Full ARF
 
-   * - \800
+   * - 800
      - This Grid Cell Has an Outflow and a Partial ARF
 
-   * - \800
-     - The Following Cell Has an Outflow and a WRF:
+   * - 800
+     - The Following Cell Has an Outflow and a WRF
 
-   * - \800
+   * - 800
      - An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)
 
-   * - \800
+   * - 800
      - First Pair of the Floodplain Hydrograph Should Be 0.0.
        to Interpolate the First Timestep
 
-   * - \800
+   * - 800
      - No Inflow Discharge Specified For the Inflow Element
 
    * - \
@@ -1214,7 +1214,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Channel Element Extends Into Interior of the Channel Element Instead Extend the Channel Into Another Bank Element
 
    * - \
-     - To run in display mode, set the graphics mode in CONT.DAT and the plotting hydro- graph in INFLOW.DAT.
+     - To run in display mode, set the graphics mode in CONT.DAT and the plotting hydrograph in INFLOW.DAT.
 
    * - \
      - Move inflow node or realign channel.
@@ -1473,13 +1473,13 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Hydraulic Structure Outflow Node is Repeated More Than Once Without Assigning a D-Line Conveyance Capacity Limitation.
 
    * - 2000
-     - Hydraulic Structure Has a Reference Elevation that is Lower Than the In- flow Node Bed Elevation
+     - Hydraulic Structure Has a Reference Elevation that is Lower Than the Inflow Node Bed Elevation
 
    * - 2000
      - Hydraulic Structure Channel Outflow must be a Channel Element
 
    * - 2000
-     - Hydraulic Structure Has a Reference Elevation that is Lower Than the In- flow Node Bed Elevation
+     - Hydraulic Structure Has a Reference Elevation that is Lower Than the Inflow Node Bed Elevation
 
    * - 2000
      - Hydraulic Structure Channel Inflow Element must be a Channel Element
@@ -1592,7 +1592,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Variable Igridn must be Greater Than 0
 
    * - 3000
-     - Grid Elements are Defined More Than Once (Street.Dat) For a Street Inter- section Within a Grid Element
+     - Grid Elements are Defined More Than Once (Street.Dat) For a Street Intersection Within a Grid Element
 
    * - 3000
      - Street Elements (Street.Dat) are Missing Line "W" in the Street.Dat File
@@ -1695,7 +1695,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - \
      - Make sure the inlet is on the correct side of the levee.
-       Check the elevation of the cell so that it matches he rim elevation of the inlet or
+       Check the elevation of the cell so that it matches the rim elevation of the inlet or
 
        the invert elevation of the type 4.
 
@@ -1738,7 +1738,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 4000
      - Curb Opening Height must be Greater Than Zero.
-       Please Revise SWMMF- LO.DAT File
+       Please Revise SWMMFLO.DAT File
 
    * - 4000
      - Length must be Greater Than Zero
@@ -1859,7 +1859,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Cross Section Element Can Only Be Assigned Once in the FPXSEC.DAT File.
 
    * - 6000
-     - Variable Xconc Should Not Be Assigned If Mudflow With a Sediment Con- centration is Assigned to the Inflow Hydrograph
+     - Variable Xconc Should Not Be Assigned If Mudflow With a Sediment Concentration is Assigned to the Inflow Hydrograph
 
    * - 6000
      - No Sediment Data in the SED.DAT File
