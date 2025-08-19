@@ -111,105 +111,89 @@
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Storm Drain Lectures</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
-<h2>Data and Resources</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/YGHUA2fgIFA?si=hJIfJgNR7BOciJuL"
+<h2>Data and Resources</h2><p class="sd-card-text">This lesson provides an introduction to the storm drain data used by FLO-2D.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YGHUA2fgIFA?si=hJIfJgNR7BOciJuL"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.</p>
-<p class="sd-card-text"><strong>Import Storm Drain Shapefiles</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Load storm drain shapefiles into your project:</p>
-<ul>
-<li><p class="sd-card-text">Sort files by type and select those labeled as <strong>shapefiles</strong>.</p></li>
-<li><p class="sd-card-text">Drag and drop into a <strong>Storm Drain</strong> group in your QGIS layer panel.</p></li>
-</ul>
-</li>
-</ul>
-<p class="sd-card-text"><strong>Understanding FLO-2D Storm Drain Logic</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">FLO-2D handles most drainage through the <strong>surface model</strong>:</p>
-<ul>
-<li><p class="sd-card-text">Channels and detention basins are modeled at the surface.</p></li>
-<li><p class="sd-card-text">Inlets and outfalls interface with the surface system.</p></li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">You do <strong>not</strong> need subcatchments, rain gauges, or separate infiltration models like in SWMM.</p>
-</div>
-<ul class="simple">
-<li><p class="sd-card-text">Storm drains receive water from:</p>
-<ul>
-<li><p class="sd-card-text">Streets and inlets (inflow)</p></li>
-<li><p class="sd-card-text">Outfalls discharge to channels or basins (outflow)</p></li>
-</ul>
-</li>
-</ul>
-<p class="sd-card-text"><strong>Documentation and Learning Resources</strong></p>
-<ul>
-<li><p class="sd-card-text">FLO-2D provides built-in documentation:</p>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text"><strong>Resources</strong></p>
+<ol class="arabic">
+<li><p class="sd-card-text">FLO-2D Storm Drain Manual <a class="reference internal" href="../../flo-2d_pro/Storm%20Drain%20Modeling%20Guidelines/index.html#sdguidelines"><span class="std std-ref">Storm drain Guidelines</span></a>.</p></li>
+<li><p class="sd-card-text">FLO-2D Plugin User Manual <a class="reference internal" href="../../flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#sdeditor"><span class="std std-ref">Storm Drain Editor</span></a>.</p></li>
+<li><p class="sd-card-text">EPA SWMM Documentation 5.0 is installed with EPA SWMM.</p>
 <blockquote>
-<div><dl class="simple">
-<dt><strong>Storm Drain Guidelines</strong></dt><dd><ul class="simple">
-<li><p class="sd-card-text">Location:</p>
-<ul>
-<li><p class="sd-card-text"><a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources">Storm Drain Resources section</a>.</p></li>
-<li><p class="sd-card-text">The installation directory under <code class="docutils literal notranslate"><span class="pre">FLO-2D</span> <span class="pre">&gt;</span> <span class="pre">Manuals</span></code> or</p></li>
-<li><p class="sd-card-text">Via the <strong>book icon</strong> in the editor.</p></li>
-</ul>
-</li>
-<li><p class="sd-card-text">Key Chapters:</p>
-<ul>
-<li><p class="sd-card-text">Chapter 2: Inlet data types</p></li>
-<li><p class="sd-card-text">Chapter 3: Output file structure</p></li>
-<li><p class="sd-card-text">Chapter 4: Setup guidelines</p></li>
-<li><p class="sd-card-text">Chapter 5: Troubleshooting</p></li>
-<li><p class="sd-card-text">Chapter 6: How to review your storm drain model</p></li>
-</ul>
-</li>
-</ul>
-</dd>
-</dl>
-<p class="sd-card-text"><strong>Advanced Tutorial</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p class="sd-card-text">Found on YouTube under the <em>New Self-Help Kit</em> playlist</p></li>
-</ul>
-</div></blockquote>
-<p class="sd-card-text"><strong>EPA SWMM GUI</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p class="sd-card-text">Installed alongside FLO-2D</p></li>
-<li><p class="sd-card-text">Use for pump setups, advanced SWMM elements, and additional documentation</p></li>
-</ul>
-</div></blockquote>
-<dl class="simple">
-<dt><strong>OpenSWMM.org</strong></dt><dd><ul class="simple">
-<li><p class="sd-card-text">A knowledge base and community forum with examples, questions, and shared resources.</p></li>
-</ul>
-</dd>
-</dl>
-<p class="sd-card-text"><strong>ChatGPT</strong></p>
-<blockquote>
-<div><ul class="simple">
-<li><p class="sd-card-text">Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples</p></li>
-<li><p class="sd-card-text">For example: “Build a SWMM example with a pump” will generate a valid <code class="docutils literal notranslate"><span class="pre">.inp</span></code> file</p></li>
-</ul>
-</div></blockquote>
+<div><p class="sd-card-text">C:\Program Files (x86)\EPA SWMM 5.0\epaswmm5.chm</p>
 </div></blockquote>
 </li>
-</ul>
-<h3>Contact Support</h3><p class="sd-card-text">For technical assistance or troubleshooting, use the official FLO-2D support form available at
-the link below:</p>
-<p class="sd-card-text"><a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a></p>
+<li><p class="sd-card-text">Open SWMM Documentation and Forum is an excellent resource for general storm drain modeling questions.</p>
+<blockquote>
+<div><a href="https://www.openswmm.org/" target="_blank">Open SWMM</a></div></blockquote>
+</li>
+<li><p class="sd-card-text">ChatGPT is an excellent quick reference but be careful because it often uses the wrong version of a software when it
+provides help.</p>
+<blockquote>
+<div><a href ="https://chat.openai.com/" target="_blank">Chat GPT 3.5</a></div></blockquote>
+</li>
+<li><p class="sd-card-text">Use the contact form if these resources do not provide a solution to a FLO-2D storm drain modeling problem.</p>
+<blockquote>
+<div><a href ="https://flo-2d.com/contact/" target="_blank">Contact FLO-2D Support</a></div></blockquote>
+</li>
+</ol>
+<p class="sd-card-text"><strong>Storm Drain Units</strong></p>
+<p class="sd-card-text">FLO-2D uses the following units for storm drain modeling.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text"><strong>Parameter</strong></p></th>
+<th class="head"><p class="sd-card-text"><strong>Units (Imperial)</strong></p></th>
+<th class="head"><p class="sd-card-text"><strong>Units (Metric)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text">Discharge</p></td>
+<td><p class="sd-card-text">cubic feet per second (cfs)</p></td>
+<td><p class="sd-card-text">cubic meters per second (cms)</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Volume</p></td>
+<td><p class="sd-card-text">cubic feet (ft³)</p></td>
+<td><p class="sd-card-text">cubic meters (m³)</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Depth</p></td>
+<td><p class="sd-card-text">feet (ft)</p></td>
+<td><p class="sd-card-text">meters (m)</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Area</p></td>
+<td><p class="sd-card-text">square feet (ft²)</p></td>
+<td><p class="sd-card-text">square meters (m²)</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Elevation</p></td>
+<td><p class="sd-card-text">feet (ft)</p></td>
+<td><p class="sd-card-text">meters (m)</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Velocity</p></td>
+<td><p class="sd-card-text">feet per second (ft/s)</p></td>
+<td><p class="sd-card-text">meters per second (m/s)</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Time</p></td>
+<td><p class="sd-card-text">hours (hr)</p></td>
+<td><p class="sd-card-text">hours (hr)</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text">Date</p></td>
+<td><p class="sd-card-text">MM/DD/YYYY</p></td>
+<td><p class="sd-card-text">MM/DD/YYYY</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text">Time Series</p></td>
+<td><p class="sd-card-text">HH:MM</p></td>
+<td><p class="sd-card-text">HH:MM</p></td>
+</tr>
+</tbody>
+</table>
 <h3>Storm Drain Feature Overview</h3><ul class="simple">
 <li><p class="sd-card-text"><strong>Point features</strong> (nodes): inlets, junctions, manholes, outfalls, storage units</p></li>
 <li><p class="sd-card-text"><strong>Polyline features</strong> (links): conduits, pumps, orifices</p></li>
 </ul>
-<h3>Storm Drain Feature Overview</h3><h4>Node Overview - Inlet, Junction</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/KzIdcyYZKpQ?si=a3u6R2X0fQH_HiuQ"
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
+<h4>Node Overview - Inlet, Junction</h4><p class="sd-card-text">This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
 Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.</p>
-<p class="sd-card-text"><strong>Documentation References</strong></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KzIdcyYZKpQ?si=a3u6R2X0fQH_HiuQ"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text"><strong>Documentation</strong></p>
 <ul class="simple">
 <li><p class="sd-card-text">Use the <strong>Storm Drain Guidelines</strong> (Chapter 2) to understand inlet types:</p>
 <ul>
@@ -222,440 +206,16 @@ Inlet and junction nodes contain attributes that define how they interact with t
 </ul>
 </li>
 </ul>
-<p class="sd-card-text"><strong>Reviewing Node Attributes</strong></p>
-<p class="sd-card-text">Open the shapefile table for inlets and junctions in QGIS.</p>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>Required attributes</strong> (vary by type):</p>
-<ul>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Name</span></code>: Must start with “I” for inlets</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Type</span></code>: Integer (0 to 5)</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Elevation</span></code>: Invert elevation</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Max</span> <span class="pre">Depth</span></code>: From surface to invert</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Length</span></code>, <code class="docutils literal notranslate"><span class="pre">Width</span></code>, <code class="docutils literal notranslate"><span class="pre">Perimeter</span></code>, <code class="docutils literal notranslate"><span class="pre">Area</span></code>, <code class="docutils literal notranslate"><span class="pre">Height</span></code>: As required per type</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Weir</span> <span class="pre">Coefficient</span></code></p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">Switch</span></code>: 0 (rim), 1 (invert), or 2 (special conditions)</p></li>
-<li><p class="sd-card-text">Optional: <code class="docutils literal notranslate"><span class="pre">Curb</span> <span class="pre">Height</span></code>, <code class="docutils literal notranslate"><span class="pre">Clog</span> <span class="pre">Factor</span></code>, <code class="docutils literal notranslate"><span class="pre">Clog</span> <span class="pre">Time</span></code>, <code class="docutils literal notranslate"><span class="pre">Dropbox</span> <span class="pre">Area</span></code></p></li>
-</ul>
-</li>
-</ul>
-<p class="sd-card-text"><strong>Understanding Specific Types</strong></p>
-<p class="sd-card-text"><strong>Type 0: Junction</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">No surface interaction</p></li>
-<li><p class="sd-card-text">Requires only invert elevation and max depth</p></li>
-</ul>
-<p class="sd-card-text"><strong>Type 1: Curb Opening</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Requires: Length, Height, Weir Coefficient</p></li>
-<li><p class="sd-card-text">Does not include sag or width</p></li>
-</ul>
-<p class="sd-card-text"><strong>Type 2: Curb with Gutter</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Requires: Length, Width (sag), Height, Weir Coefficient</p></li>
-<li><p class="sd-card-text">Optional: Curb Height, Dropbox Area</p></li>
-</ul>
-<p class="sd-card-text"><strong>Type 3: Grate</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Requires: Perimeter, Area, Sag (optional), Weir Coefficient</p></li>
-<li><p class="sd-card-text">Often used in depressed road areas</p></li>
-</ul>
-<p class="sd-card-text"><strong>Type 4: Unique (Headwall)</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Requires: Invert Elevation, Max Depth</p></li>
-<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">Switch</span> <span class="pre">=</span> <span class="pre">1</span></code> sets grid elevation to invert</p></li>
-<li><p class="sd-card-text">Used for channel interfaces or direct inflow control</p></li>
-</ul>
-<p class="sd-card-text"><strong>Type 5: Manhole</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Requires: Invert Elevation, Max Depth, Perimeter, Area, Surcharge Depth, Weir Coefficient</p></li>
-<li><p class="sd-card-text">Acts like a junction until surcharge pops the lid</p></li>
-<li><p class="sd-card-text">Allows bidirectional flow once popped</p></li>
-</ul>
-<p class="sd-card-text"><strong>Visualization Tips</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Use <strong>categorized symbology</strong> to color nodes by inlet type</p></li>
-<li><p class="sd-card-text">Use <strong>Zoom to Feature</strong> and satellite imagery to verify node alignment</p></li>
-<li><p class="sd-card-text">Position nodes carefully relative to grid elements for accurate simulation</p></li>
-</ul>
-<p class="sd-card-text"><strong>Unit Notes</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">All dimensions in <strong>feet</strong></p></li>
-<li><p class="sd-card-text">Clogging factor is a <strong>percentage (0-1)</strong></p></li>
-<li><p class="sd-card-text">Clogging time is in <strong>hours</strong></p></li>
-<li><p class="sd-card-text">For more information on storm drain units, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-units">Storm Drain Units</a>.</p></li>
-</ul>
-<p class="sd-card-text">For more information on inlets/junctions, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#inlets-junctions">Inlets/Junctions</a> .</p>
-<h4>Node Overview - Outfall, Storage Unit</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/D-tWFxOMdXE?si=DjCLC3GfiyyMzqsu"
+<h4>Node Overview - Outfall, Storage Unit</h4><p class="sd-card-text">This lesson explains how to review and configure outfalls and storage units in storm drain shapefiles.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D-tWFxOMdXE?si=DjCLC3GfiyyMzqsu"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson explains how to review and configure outfalls and storage units in your storm drain shapefiles.</p>
-<p class="sd-card-text"><strong>Outfalls</strong></p>
-<p class="sd-card-text">Outfalls are point features representing discharge points from the storm drain network.</p>
-<p class="sd-card-text">To open the outfall data:</p>
-<ul class="simple">
-<li><p class="sd-card-text">Right-click the <strong>Outfalls</strong> layer and select <strong>Open Attribute Table</strong>.</p></li>
-<li><p class="sd-card-text">Dock the table for convenience.</p></li>
-</ul>
-<p class="sd-card-text">Key Attributes for Outfalls:</p>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>Name</strong>: Should begin with “O” (e.g., <cite>O1</cite>, <cite>O2</cite>) for clarity.</p></li>
-<li><p class="sd-card-text"><strong>Invert Elevation</strong>: Elevation where flow exits.</p></li>
-<li><p class="sd-card-text"><strong>Flap Gate</strong>: <cite>True</cite> or <cite>False</cite>. Controls whether backflow is allowed.</p></li>
-<li><p class="sd-card-text"><strong>Allow Q</strong>: <cite>1</cite> = yes, interfaces with FLO-2D; <cite>0</cite> = no interface.</p></li>
-<li><p class="sd-card-text"><strong>Outfall Type</strong>: Options include:</p>
-<ul>
-<li><p class="sd-card-text"><cite>FREE</cite>: Free discharge</p></li>
-<li><p class="sd-card-text"><cite>NORMAL</cite>: Controlled by downstream conditions</p></li>
-<li><p class="sd-card-text"><cite>FIXED</cite>: Fixed stage elevation</p></li>
-<li><p class="sd-card-text"><cite>TIDAL_CURVE</cite>: Elevation changes with time</p></li>
-<li><p class="sd-card-text"><cite>TIME_SERIES</cite>: Stage varies over time</p></li>
-</ul>
-</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">When connecting an outfall to a channel, always assign it to the <strong>left bank looking downstream</strong>, even if physically placed on the right.</p>
-</div>
-<p class="sd-card-text">Examples:</p>
-<ul class="simple">
-<li><p class="sd-card-text">Outfalls located outside the grid should have <cite>Allow Q</cite> set to <cite>0</cite>.</p></li>
-<li><p class="sd-card-text">Tidal or fixed outfalls must define a corresponding elevation, curve, or time series.</p></li>
-</ul>
-<p class="sd-card-text">For more information on outfalls, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#outfalls">Outfalls</a> .</p>
-<p class="sd-card-text">Use the <strong>EPA SWMM GUI</strong> to understand field definitions.</p>
-<p class="sd-card-text">FLO-2D only uses closed storage systems in the storm drain module.</p>
-<p class="sd-card-text"><strong>Storage Units</strong></p>
-<p class="sd-card-text">Storage units in FLO-2D are used for <strong>closed systems</strong> like tanks or underground vaults.</p>
-<p class="sd-card-text">Open the <strong>Storage Units</strong> layer:</p>
-<ul class="simple">
-<li><p class="sd-card-text">Right-click and select <strong>Open Attribute Table</strong></p></li>
-<li><p class="sd-card-text">Dock the table for visibility</p></li>
-</ul>
-<p class="sd-card-text">Valid Attributes for Storage Units:</p>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>Name</strong>: Unique identifier</p></li>
-<li><p class="sd-card-text"><strong>Invert Elevation</strong>: Bottom elevation of the storage unit</p></li>
-<li><p class="sd-card-text"><strong>Max Depth</strong>: Maximum storage depth</p></li>
-<li><p class="sd-card-text"><strong>Initial Depth</strong> <em>(optional)</em></p></li>
-<li><p class="sd-card-text"><strong>Storage Curve</strong>: Define a depth-volume relationship (tabular curve only)</p></li>
-</ul>
-<p class="sd-card-text">Unsupported Features:</p>
-<ul class="simple">
-<li><p class="sd-card-text">No <strong>infiltration</strong>, <strong>evaporation</strong>, or <strong>ponded area</strong></p></li>
-<li><p class="sd-card-text">These values must exist in the <cite>.inp</cite> file but can be left blank or zero</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">FLO-2D does not support surface ponding or infiltration via storage units. Use the grid system for those interactions.</p>
-</div>
-<p class="sd-card-text">For more information on storage units, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#storage-units">Storage Units</a> .</p>
-<p class="sd-card-text">Use the <strong>EPA SWMM GUI</strong> to understand field definitions.</p>
-<p class="sd-card-text">FLO-2D only uses closed storage systems in the storm drain module.</p>
-<h4>Link Overview - Conduit</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/ZReLFF5yfYQ?si=K1QSmsJcsPRt9Hr-"
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><h4>Link Overview - Conduits</h4><p class="sd-card-text">This lesson explains how to review and configure conduits in storm drain shapefiles.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZReLFF5yfYQ?si=K1QSmsJcsPRt9Hr-"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson focuses on configuring <strong>conduits</strong> in the storm drain system. Conduits are polylines that connect nodes (e.g., inlets, junctions, outfalls), and are fully stored in the <cite>.inp</cite> file without an associated FLO-2D file.</p>
-<p class="sd-card-text"><strong>Open and Review the Conduit Attribute Table</strong></p>
-<ol class="arabic simple">
-<li><p class="sd-card-text">In QGIS, right-click on the <strong>Conduits</strong> layer and choose <strong>Open Attribute Table</strong>.</p></li>
-<li><p class="sd-card-text">Dock the table to work alongside the map.</p></li>
-<li><p class="sd-card-text">Note that conduits:</p>
-<ul class="simple">
-<li><p class="sd-card-text">Do not generate <cite>.dat</cite> files like <cite>SWMMFLOW.DAT</cite> or <cite>SWMMOUTF.DAT</cite>.</p></li>
-<li><p class="sd-card-text">Are entirely represented in the <strong>SWMM .inp file</strong>.</p></li>
-</ul>
-</li>
-</ol>
-<p class="sd-card-text"><strong>Key Fields and Attributes</strong></p>
-<p class="sd-card-text">The following fields should be configured in the conduit shapefile:</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p class="sd-card-text">Field Name</p></th>
-<th class="head"><p class="sd-card-text">Type</p></th>
-<th class="head"><p class="sd-card-text">Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="sd-card-text"><cite>name</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Unique identifier</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>inletoffset</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Offset from upstream node</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>outletoffset</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Offset from downstream node</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>shape</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Closed RECTANGLE, CIRCULAR, etc.</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>barrels</cite></p></td>
-<td><p class="sd-card-text">Integer</p></td>
-<td><p class="sd-card-text">Number of parallel conduits</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>geom1</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Max depth (or diameter)</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>geom2</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Width or other geometry parameter</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>geom3</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Side slope 1 (if applicable)</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>geom4</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Side slope 2 (if applicable)</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>length</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Length in feet or meters</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>n_manning</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Manning’s roughness coefficient</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>initial_flow</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Optional initial flow</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>max_flow</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Optional max flow</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>entrance_loss</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Entry loss coefficient</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>exit_loss</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Exit loss coefficient</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>avg_loss</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Average loss coefficient</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>flapgate</cite></p></td>
-<td><p class="sd-card-text">Integer</p></td>
-<td><p class="sd-card-text">0 (no flap) or 1 (with flap)</p></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">Use the <strong>Storm Drain Guidelines</strong> or <strong>SWMM GUI Help</strong> to reference proper field definitions and recommended values.</p>
-</div>
-<p class="sd-card-text"><strong>Tips on Flow Direction</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Flow direction is determined by the digitized order of the polyline.</p></li>
-<li><p class="sd-card-text">Use the <strong>Advanced Digitizing Toolbar</strong> in QGIS to flip flow direction with the <strong>Reverse Line</strong> tool.</p></li>
-<li><p class="sd-card-text">Turn on <strong>arrow symbology</strong> to visualize flow direction:</p>
-<ul>
-<li><p class="sd-card-text">Right-click layer &gt; Symbology &gt; Line Symbol &gt; Arrow</p></li>
-</ul>
-</li>
-</ul>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p class="sd-card-text">Reversing a line also reverses all internal vertices, keeping topology intact.</p>
-</div>
-<p class="sd-card-text"><strong>Checking Profiles and Connectivity</strong></p>
-<p class="sd-card-text">Use the <strong>Profile Tool</strong> to visualize elevation and connectivity:</p>
-<ol class="arabic simple">
-<li><p class="sd-card-text">Select a starting node and ending node.</p></li>
-<li><p class="sd-card-text">Plot the conduit profile.</p></li>
-<li><p class="sd-card-text">Observe invert elevations and slope direction.</p></li>
-<li><p class="sd-card-text">Check for backward conduits or improper connections.</p></li>
-</ol>
-<p class="sd-card-text"><strong>Minimum Length Guidelines</strong></p>
-<p class="sd-card-text">To maintain model stability:</p>
-<ul class="simple">
-<li><p class="sd-card-text">The <strong>minimum conduit length</strong> should match or exceed the grid cell size.</p></li>
-<li><p class="sd-card-text">For urban grids (typically 20 to 30 ft), no conduit should be shorter than the grid resolution.</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example: Reset all conduits with length &lt; 20 to 20</span>
-<span class="n">length</span> <span class="o">&lt;</span> <span class="mi">20</span> <span class="o">=</span> <span class="n">update</span> <span class="n">to</span> <span class="mi">20</span>
-</pre></div>
-</div>
-<p class="sd-card-text"><strong>Loss Coefficients and Flap Gates</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Reference <strong>SWMM GUI Help &gt; Losses</strong> for entrance/exit coefficient ranges.</p></li>
-<li><p class="sd-card-text"><strong>Flap Gate</strong> set to 1 prevents backflow.</p></li>
-</ul>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p class="sd-card-text">Entry/exit losses are applied to simulate energy loss at junctions and transitions.</p>
-</div>
-<p class="sd-card-text">For more information on conduits, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#conduits">Conduits</a> .</p>
-<h4>Link Overview - Pump, Orifice, Weir</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/FQhkxsgntPY?si=CWEW6rvhRHw51-NA"
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><h4>Link Overview - Pump, Orifice, Weir</h4><p class="sd-card-text">This lesson explains how to review and configure pumps, orifices, and weirs in storm drain shapefiles.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FQhkxsgntPY?si=CWEW6rvhRHw51-NA"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson explains the setup and attributes for <strong>pumps</strong>, <strong>orifices</strong>, and <strong>weirs</strong> in the storm drain system using QGIS and the EPA SWMM interface.</p>
-<p class="sd-card-text"><strong>Pumps</strong></p>
-<p class="sd-card-text">To view and configure pump data:</p>
-<ol class="arabic simple">
-<li><p class="sd-card-text">Right-click the <strong>Pumps</strong> layer and select <strong>Open Attribute Table</strong>.</p></li>
-<li><p class="sd-card-text">Dock the table for easier viewing.</p></li>
-</ol>
-<p class="sd-card-text">Pump fields:</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p class="sd-card-text">Field</p></th>
-<th class="head"><p class="sd-card-text">Type</p></th>
-<th class="head"><p class="sd-card-text">Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="sd-card-text"><cite>name</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Unique pump name</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>init_status</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">“ON” or “OFF”</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>start_depth</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Starting water depth to activate pump</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>shutoff_depth</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Depth to stop pump</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>curve_name</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Name of the associated pump curve</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>pump_type</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Type of pump: IDEAL, TYPE1-4</p></td>
-</tr>
-</tbody>
-</table>
-<p class="sd-card-text">Pump types:</p>
-<ul class="simple">
-<li><p class="sd-card-text"><strong>IDEAL</strong>: Transfers all flow from inlet to outlet (design only).</p></li>
-<li><p class="sd-card-text"><strong>TYPE 1</strong>: Offline, staged, requires wet well.</p></li>
-<li><p class="sd-card-text"><strong>TYPE 2</strong>: Inline, stepped flow.</p></li>
-<li><p class="sd-card-text"><strong>TYPE 3</strong>: Head/flow differential.</p></li>
-<li><p class="sd-card-text"><strong>TYPE 4</strong>: Flow-depth, continuous.</p></li>
-</ul>
-<p class="sd-card-text">For more information on pumps, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#pumps">Pumps</a> .</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p class="sd-card-text">Set up the pump in the storm drain editor first, then assign the curve data in the <strong>Pump Curves</strong> table.</p>
-</div>
-<p class="sd-card-text"><strong>Orifices</strong></p>
-<p class="sd-card-text">Orifices are typically underground restrictions connected to manholes or other subsurface elements.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p class="sd-card-text">Field</p></th>
-<th class="head"><p class="sd-card-text">Type</p></th>
-<th class="head"><p class="sd-card-text">Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="sd-card-text"><cite>name</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Unique orifice name</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>type</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">“SIDE” or “BOTTOM”</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>shape</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">“CIRCULAR” or “RECTANGULAR”</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>height</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Height of orifice opening</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>width</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Width of opening (for RECTANGULAR)</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>inlet_offset</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Distance from invert to orifice opening</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>q_coeff</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Discharge coefficient</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>flap_gate</cite></p></td>
-<td><p class="sd-card-text">Integer</p></td>
-<td><p class="sd-card-text">0 or 1 (flap gate on/off)</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>open_close_time</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Optional: time to open or close in hours</p></td>
-</tr>
-</tbody>
-</table>
-<p class="sd-card-text">For more information on orifices, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#orifices">Orifices</a> .</p>
-<p class="sd-card-text"><strong>Weirs</strong></p>
-<p class="sd-card-text">Weirs are usually surface-connected structures (rare underground). Always verify usage.</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p class="sd-card-text">Field</p></th>
-<th class="head"><p class="sd-card-text">Type</p></th>
-<th class="head"><p class="sd-card-text">Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p class="sd-card-text"><cite>name</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">Unique weir name</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>type</cite></p></td>
-<td><p class="sd-card-text">String</p></td>
-<td><p class="sd-card-text">TRANSVERSE, SIDEFLOW, V-NOTCH, TRAPEZOIDAL</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>height</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Height of opening</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>length</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Length of weir opening</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>side_slope</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Slope of trapezoidal shape</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>inlet_offset</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Elevation offset from structure invert</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>q_coeff</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Discharge coefficient</p></td>
-</tr>
-<tr class="row-odd"><td><p class="sd-card-text"><cite>flap_gate</cite></p></td>
-<td><p class="sd-card-text">Integer</p></td>
-<td><p class="sd-card-text">0 or 1 (flap gate status)</p></td>
-</tr>
-<tr class="row-even"><td><p class="sd-card-text"><cite>contraction_coeff</cite></p></td>
-<td><p class="sd-card-text">Float</p></td>
-<td><p class="sd-card-text">Optional contraction coefficient</p></td>
-</tr>
-</tbody>
-</table>
-<p class="sd-card-text">For more information on weirs, see the <strong>Storm Drain Guidelines</strong> for <a class="reference external" href="https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#weirs">Weirs</a> .</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p class="sd-card-text">Weirs are typically not used in FLO-2D storm drain systems. If one appears in an <cite>.inp</cite> file, confirm its purpose. May need to be removed if inherited from surface modeling software.</p>
-</div>
-<p class="sd-card-text"><strong>Review Tips</strong></p>
-<ul class="simple">
-<li><p class="sd-card-text">Use the <strong>EPA SWMM GUI</strong> to preview expected inputs and verify how fields work together.</p></li>
-<li><p class="sd-card-text">Field types and required formats should follow SWMM rules.</p></li>
-<li><p class="sd-card-text">Curves (for pumps and orifices) are configured in a separate step.</p></li>
-</ul>
-</div>
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Simple Storm Drain Tutorial</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
@@ -667,7 +227,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <p class="sd-card-text">The videos are more detailed whereas the text gives the minimum steps needed
 to complete the project.</p>
 </div>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C6xeIRDMeMg?si=-kFK9glCNNb5-YDH"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through building a simple storm drain system from shapefiles.</p>
 <h3> Step 1: Load Shapefiles </h3><ul class="simple">
@@ -676,8 +236,10 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </ul>
 <img alt="../../_images/shg_sstorm001.jpg" src="../../_images/shg_sstorm001.jpg" />
 <ul class="simple">
-<li><p class="sd-card-text">Do <strong>not</strong> add them to the GeoPackage. Keep them in the User Layers.</p></li>
-<li><p class="sd-card-text">Save when prompted and select <strong>Yes</strong> to embed data into the GeoPackage for portability.</p></li>
+<li><p class="sd-card-text">Save the project and when prompted to save the layers to the GeoPackage, select <strong>No</strong>.</p></li>
+<li><p class="sd-card-text">These layers can be removed when no longer needed.</p></li>
+<li><p class="sd-card-text">These features will be copied to the Storm Drain User Layers and are no longer needed when that process is complete and
+the test run is successful.</p></li>
 </ul>
 <h3> Step 2: Assign Shapefile Fields </h3><p class="sd-card-text">Open the <strong>Storm Drain Editor</strong> and click <strong>Select Components from Shapefile</strong>.</p>
 <img alt="../../_images/shg_sstorm002.jpg" src="../../_images/shg_sstorm002.jpg" />
@@ -723,7 +285,7 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p class="sd-card-text">Format for rating tables: Depth on the left, Discharge on the right.</p></li>
 </ul>
 <h3> Step 5: Set Storm Drain Control Parameters </h3><ul class="simple">
-<li><p class="sd-card-text">Set the <strong>start and end time</strong> of your simulation (e.g., 10 hours).</p></li>
+<li><p class="sd-card-text">Set the <strong>start and end time</strong> of the simulation (e.g., 10 hours).</p></li>
 <li><p class="sd-card-text">Ensure it matches any time series used.</p></li>
 <li><p class="sd-card-text">Adjust the <strong>report step</strong>, <strong>flow units</strong> (CFS/CMS), and <strong>routing method</strong>.</p></li>
 <li><p class="sd-card-text">Leave advanced defaults unless needed.</p></li>
@@ -735,21 +297,20 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <img alt="../../_images/shg_sstorm012.jpg" src="../../_images/shg_sstorm012.jpg" />
 <ul class="simple">
 <li><p class="sd-card-text">Click <strong>Quick Run</strong> to simulate.</p></li>
-<li><p class="sd-card-text">Output files will populate your designated folder.</p></li>
+<li><p class="sd-card-text">Output files will populate the designated folder.</p></li>
 </ul>
 <img alt="../../_images/shg_sstorm013.jpg" src="../../_images/shg_sstorm013.jpg" />
 <img alt="../../_images/shg_sstorm014.jpg" src="../../_images/shg_sstorm014.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p class="sd-card-text">If errors occur, check your shapefile connections, field assignments, or go to a <strong>FLO-2D Troubleshooting</strong> video in the series.</p>
+<p class="sd-card-text">If errors occur, check the shapefile connections, field assignments, or go to a <strong>FLO-2D Troubleshooting</strong> video in the series.</p>
 </div>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
 <span class="sd-summary-text">Advanced Storm Drain Tutorial</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text">This advanced lesson shows how to create a storm drain from Shapefiles.
-Stay tuned for more lessons that will
-show how to set up a storm drain from a swmm.inp.</p>
+It uses more complex shapefiles and features than the simple storm drain lesson.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p class="sd-card-text">It will be easier to view these videos on YouTube.</p>
@@ -758,21 +319,22 @@ show how to set up a storm drain from a swmm.inp.</p>
 to complete the project.</p>
 </div>
 <p class="sd-card-text">Storm drain checklist.</p>
-<p class="sd-card-text">For those of you who love a challenge, it’s good practice to do a “Speed Run” of the Self-Help
-Kit.  Here is a checklist of tasks that might get skipped during storm drain model building.</p>
+<p class="sd-card-text">Here is a checklist of tasks that need to be completed to successfully build the advanced storm drain model.</p>
 <ul class="simple">
-<li><p class="sd-card-text">[ ] Adjust outfall location so all outfalls rest on a left bank node.</p></li>
-<li><p class="sd-card-text">[ ] Add a storage unit volume table and assign <cite>Storage1</cite> to all storage units.</p></li>
-<li><p class="sd-card-text">[ ] Ensure conduit length is a minimum of 30 ft, which is the cell size.</p></li>
-<li><p class="sd-card-text">[ ] Add Type 4 rating tables to the Type 4 inlets.</p></li>
-<li><p class="sd-card-text">[ ] Add a pump table and assign it to <cite>P1</cite>.</p></li>
+<li><p class="sd-card-text">[ ] Inspect shapefile fields carefully.  A single incorrect field assignment can cause the storm drain to fail or run incorrectly.</p></li>
 <li><p class="sd-card-text">[ ] Auto-assign nodes.</p></li>
-<li><p class="sd-card-text">[ ] Carefully inspect shapefile fields.</p></li>
+<li><p class="sd-card-text">[ ] Adjust outfall locations so all outfalls are placed on a left bank node.</p></li>
+<li><p class="sd-card-text">[ ] Check channel outfall elevations and ensure they are at or slightly higher than the channel invert elevation.</p></li>
+<li><p class="sd-card-text">[ ] Ensure conduit length is a minimum of 30 ft, which is the cell size.</p></li>
+<li><p class="sd-card-text">[ ] Add Type 4 rating tables and culverts to the Type 4 inlets.</p></li>
+<li><p class="sd-card-text">[ ] Add a pump table and assign it to <cite>P1</cite>.</p></li>
+<li><p class="sd-card-text">[ ] Create a storage unit volume table and assign <cite>Storage1</cite> to all storage units.</p></li>
+<li><p class="sd-card-text">[ ] Add the Grover Street junction external inflow data.</p></li>
 <li><p class="sd-card-text">[ ] Check storm drain control settings.</p></li>
 <li><p class="sd-card-text">[ ] Schematize the network.</p></li>
 <li><p class="sd-card-text">[ ] Perform a test run.</p></li>
 </ul>
-<h2>Create a Storm Drain from Shapefiles</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
+<h2>Create a Storm Drain from Shapefiles - Advanced</h2><iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
 gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><p class="sd-card-text">This lesson walks through building an entire storm drain system from shapefiles, defining rating tables, storage units, and pump curves, and then running the simulation.</p>
 <h3>Step 1: Load Shapefiles</h3><ul class="simple">
@@ -781,8 +343,10 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </ul>
 <img alt="../../_images/shg_storm001.jpg" src="../../_images/shg_storm001.jpg" />
 <ul class="simple">
-<li><p class="sd-card-text">Do <strong>not</strong> add them to the GeoPackage. Keep them in the User Layers.</p></li>
-<li><p class="sd-card-text">Save when prompted and select <strong>Yes</strong> to embed data into the GeoPackage for portability.</p></li>
+<li><p class="sd-card-text">Save the project and when prompted to save the layers to the GeoPackage, select <strong>No</strong>.</p></li>
+<li><p class="sd-card-text">These layers can be removed when no longer needed.</p></li>
+<li><p class="sd-card-text">These features will be copied to the Storm Drain User Layers and are no longer needed when that process is complete and
+the test run is successful.</p></li>
 </ul>
 <h3>Step 2: Assign Shapefile Fields</h3><p class="sd-card-text">Open the <strong>Storm Drain Editor</strong> and click <strong>Select Components from Shapefile</strong>.</p>
 <img alt="../../_images/shg_storm002.jpg" src="../../_images/shg_storm002.jpg" />
@@ -794,15 +358,27 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </ul>
 <img alt="../../_images/shg_storm003.jpg" src="../../_images/shg_storm003.jpg" />
 <img alt="../../_images/shg_storm004.jpg" src="../../_images/shg_storm004.jpg" />
-<img alt="../../_images/shg_storm021.jpg" src="../../_images/shg_storm021.jpg" />
 <img alt="../../_images/shg_storm005.jpg" src="../../_images/shg_storm005.jpg" />
 <img alt="../../_images/shg_storm006.jpg" src="../../_images/shg_storm006.jpg" />
+<img alt="../../_images/shg_storm021.jpg" src="../../_images/shg_storm021.jpg" />
 <img alt="../../_images/shg_storm022.jpg" src="../../_images/shg_storm022.jpg" />
 <img alt="../../_images/shg_storm023.jpg" src="../../_images/shg_storm023.jpg" />
 <p class="sd-card-text">Click <strong>Assign Selected Fields</strong>, then click <strong>OK</strong> for the warning that follows.</p>
 <img alt="../../_images/shg_storm024.jpg" src="../../_images/shg_storm024.jpg" />
 <img alt="../../_images/shg_storm007.jpg" src="../../_images/shg_storm007.jpg" />
-<h3>Step 3: Assign Nodes to Links</h3><p class="sd-card-text">Click the <strong>Auto-Assign Links and Nodes</strong> button.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p class="sd-card-text"><strong>Warning 1</strong>
+The yellow warning bar is normal with respect to the advanced storm drain system.  It has 1 junctions and 4 outfalls
+that are positioned outside of the grid area.  This is done intentionally to demonstrate that it is OK to have
+these feature outside of the grid area so long as they do not need to connect to the surface.  Those outfalls
+should be set to Sink or 0 in the Allow Discharge field. The junctions should have a name that doesn’t start with
+“I” because they do not interact with the surface.</p>
+<p class="sd-card-text"><strong>Warning 2</strong>
+The Warning dialog box is also normal because the node names were not filled during the field assignment step.
+The fields will be filled in the next step.</p>
+</div>
+<h3>Step 3: Auto-Assign Nodes to Links</h3><p class="sd-card-text">Click the <strong>Auto-Assign Links and Nodes</strong> button.</p>
 <img alt="../../_images/shg_storm008.jpg" src="../../_images/shg_storm008.jpg" />
 <ul class="simple">
 <li><p class="sd-card-text">This assigns start and end nodes to each conduit.</p></li>
@@ -817,7 +393,28 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </div>
 <p class="sd-card-text">Check the <strong>Simulate Storm Drain</strong> box to turn it on.</p>
 <img alt="../../_images/shg_storm010.jpg" src="../../_images/shg_storm010.jpg" />
-<h3>Step 4: Add Type 4 Rating Tables and Culverts</h3><ul class="simple">
+<h3>Step 4: Check Outfalls</h3><ul class="simple">
+<li><p class="sd-card-text">Ensure every outfall that is near the channel is aligned to a left bank grid.</p></li>
+<li><p class="sd-card-text">Move outfalls and conduit vertices as needed to ensure they are contained by a left bank grid element.</p></li>
+<li><p class="sd-card-text">Select the outfall and conduit layers and click the Edit Pencil.</p></li>
+<li><p class="sd-card-text">Use the <strong>Snapping Tool</strong> to ensure precise vertex-node connections.</p></li>
+<li><p class="sd-card-text">Click the vertex to pick it up.  Move the cursor to the left bank grid and click again to drop it.</p></li>
+</ul>
+<img alt="../../_images/shg_storm001.gif" src="../../_images/shg_storm001.gif" />
+<ul class="simple">
+<li><p class="sd-card-text">Outfalls should have the same an elevation that is the same or slightly higher than the channel cross section.</p></li>
+</ul>
+<img alt="../../_images/shg_storm032.jpg" src="../../_images/shg_storm032.jpg" />
+<h3>Step 5: Check Conduit Length</h3><ul class="simple">
+<li><p class="sd-card-text">Open the Conduits attribute table.</p></li>
+<li><p class="sd-card-text">Sort the table by the <cite>length</cite> field.</p></li>
+<li><p class="sd-card-text">Select the conduits taht are less than 30 ft long.</p></li>
+<li><p class="sd-card-text">Set the field editor to the <cite>length</cite> field.</p></li>
+<li><p class="sd-card-text">Set the length of the conduits to 30 ft.</p></li>
+<li><p class="sd-card-text">Apply 30 ft to the selected conduits.</p></li>
+</ul>
+<img alt="../../_images/shg_storm033.jpg" src="../../_images/shg_storm033.jpg" />
+<h3>Step 6: Add Type 4 Rating Tables and Culverts</h3><ul class="simple">
 <li><p class="sd-card-text">Go to the <strong>Type 4 Table Editor</strong>.</p></li>
 </ul>
 <img alt="../../_images/shg_storm011.jpg" src="../../_images/shg_storm011.jpg" />
@@ -825,12 +422,22 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p class="sd-card-text">Import rating tables or culvert equations for each type 4 inlet.</p></li>
 </ul>
 <img alt="../../_images/shg_storm012.jpg" src="../../_images/shg_storm012.jpg" />
-<img alt="../../_images/shg_storm013.jpg" src="../../_images/shg_storm013.jpg" />
 <ul class="simple">
-<li><p class="sd-card-text">File names must match inlet names (e.g., <code class="docutils literal notranslate"><span class="pre">41.txt</span></code> for inlet 41).</p></li>
+<li><p class="sd-card-text">The rating table file names must match inlet names (e.g., <code class="docutils literal notranslate"><span class="pre">I4-47-32-26-1.txt</span></code> matches inlet <code class="docutils literal notranslate"><span class="pre">I4-47-32-26-1</span></code>).</p></li>
 <li><p class="sd-card-text">Format for rating tables: Depth on the left, Discharge on the right.</p></li>
 </ul>
-<h3>Step 5: Add Pump Curve Data</h3><ul class="simple">
+<img alt="../../_images/shg_storm013.jpg" src="../../_images/shg_storm013.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">The culvert equations are set for type 4 inlets.</p></li>
+<li><p class="sd-card-text">The culvert data needs to be written to a file names TYPE4CULVERT.txt.</p></li>
+<li><p class="sd-card-text">The format of the file is important.</p></li>
+</ul>
+<img alt="../../_images/shg_storm013c.jpg" src="../../_images/shg_storm013c.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">After the import is complete, review the warning text file to check for any issues.</p></li>
+</ul>
+<img alt="../../_images/shg_storm013a.jpg" src="../../_images/shg_storm013a.jpg" />
+<h3>Step 7: Add Pump Curve Data</h3><ul class="simple">
 <li><p class="sd-card-text">Add a pump curve via the Pump Table interface.</p></li>
 </ul>
 <img alt="../../_images/shg_storm014.jpg" src="../../_images/shg_storm014.jpg" />
@@ -843,12 +450,14 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 </ul>
 <img alt="../../_images/shg_storm016.jpg" src="../../_images/shg_storm016.jpg" />
 <ul class="simple">
-<li><p class="sd-card-text">Data is saved automatically when you click off the cell.</p></li>
+<li><p class="sd-card-text">Data is saved automatically when the table is modified.</p></li>
 </ul>
-<h3>Step 6: Add Storage Unit Curves</h3><ul class="simple">
+<h3>Step 8: Add Storage Unit Curves</h3><ul class="simple">
 <li><p class="sd-card-text">Open <strong>Storage Units</strong> attribute table.</p></li>
 </ul>
 <img alt="../../_images/shg_storm025.jpg" src="../../_images/shg_storm025.jpg" />
+<p class="sd-card-text">Zoom to the storage units.</p>
+<img alt="../../_images/shg_storm025a.jpg" src="../../_images/shg_storm025a.jpg" />
 <ul class="simple">
 <li><p class="sd-card-text">Use the <strong>FLO-2D Info Tool</strong> to open the storage curve editor.</p></li>
 </ul>
@@ -857,32 +466,58 @@ gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cro
 <li><p class="sd-card-text">Import a tab-delimited text file or paste Excel values.</p></li>
 </ul>
 <img alt="../../_images/shg_storm027.jpg" src="../../_images/shg_storm027.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">Repeat the select feature process for the other two storage units.</p></li>
+<li><p class="sd-card-text">They should already be set because they had the correct curve name in the attribute table field.</p></li>
+<li><p class="sd-card-text">All three storage units will use the same storage curve named <cite>Storage1</cite>.</p></li>
+</ul>
+<h3>Step 9: Set External Inflow for Grover Street Junction</h3><ul class="simple">
+<li><p class="sd-card-text">Zoom to the northeast corner of the storm drain system.</p></li>
+</ul>
 <img alt="../../_images/shg_storm028.jpg" src="../../_images/shg_storm028.jpg" />
+<ul class="simple">
+<li><p class="sd-card-text">Use the <strong>FLO-2D Info Tool</strong> to open the junction editor of the junction that is outside the grid area.</p></li>
+<li><p class="sd-card-text">Set the <cite>Grover Street</cite> junction to have an external inflow = Yes.</p></li>
+</ul>
 <img alt="../../_images/shg_storm029.jpg" src="../../_images/shg_storm029.jpg" />
-<h3>Step 7: Set Storm Drain Control Parameters</h3><ul class="simple">
-<li><p class="sd-card-text">Set the <strong>start and end time</strong> of your simulation (e.g., 10 hours).</p></li>
-<li><p class="sd-card-text">Ensure it matches any time series used.</p></li>
-<li><p class="sd-card-text">Adjust the <strong>report step</strong>, <strong>flow units</strong> (CFS/CMS), and <strong>routing method</strong>.</p></li>
-<li><p class="sd-card-text">Leave advanced defaults unless needed.</p></li>
+<ul class="simple">
+<li><p class="sd-card-text">Click the Blue button to open the time series editor.</p></li>
+<li><p class="sd-card-text">Click the three dots next to <cite>Time Series</cite> to open the time series editor.</p></li>
+<li><p class="sd-card-text">Assign the Time Series Name and Description as shown in the image below.</p></li>
+<li><p class="sd-card-text">Add one blank line to the table.</p></li>
+<li><p class="sd-card-text">Copy the time series data from the <cite>GroverTimeSeries’ text file</cite>.</p></li>
+<li><p class="sd-card-text">Paste the data into the time series table.</p></li>
+<li><p class="sd-card-text">Close both editors.</p></li>
+</ul>
+<img alt="../../_images/shg_storm030.jpg" src="../../_images/shg_storm030.jpg" />
+<img alt="../../_images/shg_storm031.jpg" src="../../_images/shg_storm031.jpg" />
+<h3>Step 10: Set Storm Drain Control Parameters</h3><ul class="simple">
+<li><p class="sd-card-text">Set the <strong>start and end time</strong> of the simulation (e.g., 10 hours).</p></li>
+<li><p class="sd-card-text">Ensure the start time and end time matches any time series data used. (Grover Street Time Series)</p></li>
+<li><p class="sd-card-text">Check the <strong>report step</strong>, <strong>flow units</strong> (CFS/CMS), and <strong>routing method</strong>.</p></li>
+<li><p class="sd-card-text">The Hardwired parameters are not editable in this dialog.  If they are modified in the swmm.inp file, they will be
+ignored by the FLO-2D Storm Drain engine.</p></li>
 </ul>
 <img alt="../../_images/shg_storm017.jpg" src="../../_images/shg_storm017.jpg" />
-<h3>Step 8: Schematize and Run</h3><ul class="simple">
+<h3>Step 11: Schematize and Run</h3><ul class="simple">
 <li><p class="sd-card-text">Click <strong>Schematize Storm Drain</strong> to export <code class="docutils literal notranslate"><span class="pre">SWMM.OUTF</span></code>, <code class="docutils literal notranslate"><span class="pre">SWMM.FLOW</span></code>, <code class="docutils literal notranslate"><span class="pre">DROPBOX.DAT</span></code>, etc.</p></li>
 </ul>
 <img alt="../../_images/shg_storm018.jpg" src="../../_images/shg_storm018.jpg" />
 <ul class="simple">
 <li><p class="sd-card-text">Click <strong>Quick Run</strong> to simulate.</p></li>
-<li><p class="sd-card-text">Output files will populate your designated folder.</p></li>
+<li><p class="sd-card-text">Output files will populate the designated folder.</p></li>
 </ul>
 <img alt="../../_images/shg_storm019.jpg" src="../../_images/shg_storm019.jpg" />
 <img alt="../../_images/shg_storm020.jpg" src="../../_images/shg_storm020.jpg" />
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p class="sd-card-text">If errors occur, check your shapefile connections, field assignments, or go to a <strong>FLO-2D Troubleshooting</strong> video in the series.</p>
+<p class="sd-card-text">If errors occur, check the shapefile connections, field assignments, or go to a <strong>FLO-2D Troubleshooting</strong> video in the series.</p>
 </div>
 </div>
-</details><h2>Summary and Review Results</h2><p>Coming Soon</p>
-<h2>Storm Drain from SWMM.INP</h2><p>Coming Soon</p>
+</details><h2>Summary and Review Results</h2><p>This lesson shows the process to review results and confirm that a storm drain model is set up and working correctly.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n_DxnlHc0kY?si=K3L090c8i3lBXzid"
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><h2>Storm Drain from SWMM.INP</h2><p>Coming Soon</p>
 </section>
 
 

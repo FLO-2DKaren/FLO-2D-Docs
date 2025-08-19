@@ -1,3 +1,5 @@
+.. _sdeditor:
+
 Storm Drain Editor
 =====================
 

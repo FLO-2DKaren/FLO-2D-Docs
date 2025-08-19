@@ -8,6 +8,8 @@ Storm Drain
 
         <h2>Data and Resources</h2>
 
+    This lesson provides an introduction to the storm drain data used by FLO-2D.
+
     .. raw:: html
 
        <iframe width="560" height="315" src="https://www.youtube.com/embed/YGHUA2fgIFA?si=hJIfJgNR7BOciJuL"
@@ -15,80 +17,52 @@ Storm Drain
        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-    This lesson provides an introduction to importing and understanding the storm drain system in FLO-2D using QGIS.
+    **Resources**
 
-    **Import Storm Drain Shapefiles**
+    1. FLO-2D Storm Drain Manual :ref:`Storm drain Guidelines <sdguidelines>`. 
+    2. FLO-2D Plugin User Manual :ref:`Storm Drain Editor <sdeditor>`.
 
-    - Load storm drain shapefiles into your project:
+    3. EPA SWMM Documentation 5.0 is installed with EPA SWMM.
 
-      - Sort files by type and select those labeled as **shapefiles**.
-      - Drag and drop into a **Storm Drain** group in your QGIS layer panel.
+        C:\\Program Files (x86)\\EPA SWMM 5.0\\epaswmm5.chm
 
-    **Understanding FLO-2D Storm Drain Logic**
+    4. Open SWMM Documentation and Forum is an excellent resource for general storm drain modeling questions.
 
-    - FLO-2D handles most drainage through the **surface model**:
+        .. raw:: html
 
-      - Channels and detention basins are modeled at the surface.
-      - Inlets and outfalls interface with the surface system.
+            <a href="https://www.openswmm.org/" target="_blank">Open SWMM</a>
 
-    .. note::
-       You do **not** need subcatchments, rain gauges, or separate infiltration models like in SWMM.
+    5. ChatGPT is an excellent quick reference but be careful because it often uses the wrong version of a software when it
+       provides help.
 
-    - Storm drains receive water from:
+        .. raw:: html
 
-      - Streets and inlets (inflow)
-      - Outfalls discharge to channels or basins (outflow)
+            <a href ="https://chat.openai.com/" target="_blank">Chat GPT 3.5</a>
 
-    **Documentation and Learning Resources**
+    6. Use the contact form if these resources do not provide a solution to a FLO-2D storm drain modeling problem.
 
-    - FLO-2D provides built-in documentation:
+        .. raw:: html
 
-        **Storm Drain Guidelines**
-          - Location:
+            <a href ="https://flo-2d.com/contact/" target="_blank">Contact FLO-2D Support</a>
 
-            - `Storm Drain Resources section <https://flo-2dkaren.github.io/FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-resources>`_.
-            - The installation directory under ``FLO-2D > Manuals`` or
-            - Via the **book icon** in the editor.
+    
+    **Storm Drain Units**
 
-          - Key Chapters:
+    FLO-2D uses the following units for storm drain modeling.
 
-            - Chapter 2: Inlet data types
-            - Chapter 3: Output file structure
-            - Chapter 4: Setup guidelines
-            - Chapter 5: Troubleshooting
-            - Chapter 6: How to review your storm drain model
-
-
-        **Advanced Tutorial**
-
-           - Found on YouTube under the *New Self-Help Kit* playlist
-
-        **EPA SWMM GUI**
-
-           - Installed alongside FLO-2D
-           - Use for pump setups, advanced SWMM elements, and additional documentation
-
-        **OpenSWMM.org**
-           - A knowledge base and community forum with examples, questions, and shared resources.
-
-        **ChatGPT**
-
-           - Use ChatGPT (3.5 or 4.0) to assist with modeling questions or examples
-           - For example: "Build a SWMM example with a pump" will generate a valid ``.inp`` file
-
-    .. raw:: html
-
-        <h3>Contact Support</h3>
-
-
-    For technical assistance or troubleshooting, use the official FLO-2D support form available at
-    the link below:
-
-    |Contact-Form|
-
-    .. |Contact-Form| raw:: html
-
-       <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
+    ====================  ============================  ===============================
+    **Parameter**         **Units (Imperial)**          **Units (Metric)**
+    ====================  ============================  ===============================
+    Discharge             cubic feet per second (cfs)   cubic meters per second (cms)
+    Volume                cubic feet (ft³)              cubic meters (m³)
+    Depth                 feet (ft)                     meters (m)
+    Area                  square feet (ft²)             square meters (m²)
+    Elevation             feet (ft)                     meters (m)
+    Velocity              feet per second (ft/s)        meters per second (m/s)
+    Time                  hours (hr)                    hours (hr)
+    Date                  MM/DD/YYYY                    MM/DD/YYYY
+    Time Series           HH:MM                         HH:MM
+    ====================  ============================  ===============================
 
     .. raw:: html
 
@@ -99,11 +73,10 @@ Storm Drain
 
     .. raw:: html
 
-        <h3>Storm Drain Feature Overview</h3>
-
-    .. raw:: html
-
         <h4>Node Overview - Inlet, Junction</h4>
+
+    This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
+    Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
 
     .. raw:: html
 
@@ -112,10 +85,7 @@ Storm Drain
        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-    This lesson explains how to review and interpret inlet and junction shapefile data for storm drain modeling in FLO-2D.
-    Inlet and junction nodes contain attributes that define how they interact with the grid and storm drain network.
-
-    **Documentation References**
+    **Documentation**
 
     - Use the **Storm Drain Guidelines** (Chapter 2) to understand inlet types:
 
@@ -126,76 +96,11 @@ Storm Drain
       - Type 4: Unique (e.g. headwall)
       - Type 5: Manhole
 
-    **Reviewing Node Attributes**
-
-    Open the shapefile table for inlets and junctions in QGIS.
-
-    - **Required attributes** (vary by type):
-
-      - ``Name``: Must start with "I" for inlets
-      - ``Type``: Integer (0 to 5)
-      - ``Elevation``: Invert elevation
-      - ``Max Depth``: From surface to invert
-      - ``Length``, ``Width``, ``Perimeter``, ``Area``, ``Height``: As required per type
-      - ``Weir Coefficient``
-      - ``Feature Switch``: 0 (rim), 1 (invert), or 2 (special conditions)
-      - Optional: ``Curb Height``, ``Clog Factor``, ``Clog Time``, ``Dropbox Area``
-
-    **Understanding Specific Types**
-
-
-    **Type 0: Junction**
-
-    - No surface interaction
-    - Requires only invert elevation and max depth
-
-    **Type 1: Curb Opening**
-
-    - Requires: Length, Height, Weir Coefficient
-    - Does not include sag or width
-
-    **Type 2: Curb with Gutter**
-
-    - Requires: Length, Width (sag), Height, Weir Coefficient
-    - Optional: Curb Height, Dropbox Area
-
-    **Type 3: Grate**
-
-    - Requires: Perimeter, Area, Sag (optional), Weir Coefficient
-    - Often used in depressed road areas
-
-    **Type 4: Unique (Headwall)**
-
-    - Requires: Invert Elevation, Max Depth
-    - ``Feature Switch = 1`` sets grid elevation to invert
-    - Used for channel interfaces or direct inflow control
-
-    **Type 5: Manhole**
-
-    - Requires: Invert Elevation, Max Depth, Perimeter, Area, Surcharge Depth, Weir Coefficient
-    - Acts like a junction until surcharge pops the lid
-    - Allows bidirectional flow once popped
-
-    **Visualization Tips**
-
-    - Use **categorized symbology** to color nodes by inlet type
-    - Use **Zoom to Feature** and satellite imagery to verify node alignment
-    - Position nodes carefully relative to grid elements for accurate simulation
-
-    **Unit Notes**
-
-    - All dimensions in **feet**
-    - Clogging factor is a **percentage (0-1)**
-    - Clogging time is in **hours**
-    - For more information on storm drain units, see the **Storm Drain Guidelines** for `Storm Drain Units <https://flo-2dkaren.github.io
-      /FLO-2D-Docs/Build25/  flo-2d_plugin/user_manual/widgets/storm-drain-editor/index.html#storm-drain-units>`_.
-
-    For more information on inlets/junctions, see the **Storm Drain Guidelines** for `Inlets/Junctions <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#inlets-junctions>`_ .
-
     .. raw:: html
 
         <h4>Node Overview - Outfall, Storage Unit</h4>
+
+    This lesson explains how to review and configure outfalls and storage units in storm drain shapefiles.
 
     .. raw:: html
 
@@ -203,83 +108,11 @@ Storm Drain
        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-    This lesson explains how to review and configure outfalls and storage units in your storm drain shapefiles.
-
-    **Outfalls**
-
-
-    Outfalls are point features representing discharge points from the storm drain network.
-
-    To open the outfall data:
-
-    - Right-click the **Outfalls** layer and select **Open Attribute Table**.
-    - Dock the table for convenience.
-
-    Key Attributes for Outfalls:
-
-    - **Name**: Should begin with "O" (e.g., `O1`, `O2`) for clarity.
-    - **Invert Elevation**: Elevation where flow exits.
-    - **Flap Gate**: `True` or `False`. Controls whether backflow is allowed.
-    - **Allow Q**: `1` = yes, interfaces with FLO-2D; `0` = no interface.
-    - **Outfall Type**: Options include:
-
-      - `FREE`: Free discharge
-      - `NORMAL`: Controlled by downstream conditions
-      - `FIXED`: Fixed stage elevation
-      - `TIDAL_CURVE`: Elevation changes with time
-      - `TIME_SERIES`: Stage varies over time
-
-    .. note::
-       When connecting an outfall to a channel, always assign it to the **left bank looking downstream**, even if physically placed on the right.
-
-    Examples:
-
-    - Outfalls located outside the grid should have `Allow Q` set to `0`.
-    - Tidal or fixed outfalls must define a corresponding elevation, curve, or time series.
-
-    For more information on outfalls, see the **Storm Drain Guidelines** for `Outfalls <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#outfalls>`_ .
-
-    Use the **EPA SWMM GUI** to understand field definitions.
-
-    FLO-2D only uses closed storage systems in the storm drain module.
-
-    **Storage Units**
-
-    Storage units in FLO-2D are used for **closed systems** like tanks or underground vaults.
-
-    Open the **Storage Units** layer:
-
-    - Right-click and select **Open Attribute Table**
-    - Dock the table for visibility
-
-    Valid Attributes for Storage Units:
-
-    - **Name**: Unique identifier
-    - **Invert Elevation**: Bottom elevation of the storage unit
-    - **Max Depth**: Maximum storage depth
-    - **Initial Depth** *(optional)*
-    - **Storage Curve**: Define a depth-volume relationship (tabular curve only)
-
-    Unsupported Features:
-
-    - No **infiltration**, **evaporation**, or **ponded area**
-    - These values must exist in the `.inp` file but can be left blank or zero
-
-    .. note::
-       FLO-2D does not support surface ponding or infiltration via storage units. Use the grid system for those interactions.
-
-    For more information on storage units, see the **Storm Drain Guidelines** for `Storage Units <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#storage-units>`_ .
-
-    Use the **EPA SWMM GUI** to understand field definitions.
-
-    FLO-2D only uses closed storage systems in the storm drain module.
-
     .. raw:: html
 
-        <h4>Link Overview - Conduit</h4>
+        <h4>Link Overview - Conduits</h4>
+
+    This lesson explains how to review and configure conduits in storm drain shapefiles.
 
     .. raw:: html
 
@@ -287,126 +120,11 @@ Storm Drain
        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
-    This lesson focuses on configuring **conduits** in the storm drain system. Conduits are polylines that connect nodes (e.g., inlets, junctions, outfalls), and are fully stored in the `.inp` file without an associated FLO-2D file.
-
-    **Open and Review the Conduit Attribute Table**
-
-    1. In QGIS, right-click on the **Conduits** layer and choose **Open Attribute Table**.
-    2. Dock the table to work alongside the map.
-    3. Note that conduits:
-
-       - Do not generate `.dat` files like `SWMMFLOW.DAT` or `SWMMOUTF.DAT`.
-       - Are entirely represented in the **SWMM .inp file**.
-
-    **Key Fields and Attributes**
-
-    The following fields should be configured in the conduit shapefile:
-
-    +------------------------+----------------+---------------------------------------------+
-    | Field Name             | Type           | Description                                 |
-    +========================+================+=============================================+
-    | `name`                 | String         | Unique identifier                           |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `inletoffset`          | Float          | Offset from upstream node                   |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `outletoffset`         | Float          | Offset from downstream node                 |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `shape`                | String         | Closed RECTANGLE, CIRCULAR, etc.            |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `barrels`              | Integer        | Number of parallel conduits                 |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `geom1`                | Float          | Max depth (or diameter)                     |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `geom2`                | Float          | Width or other geometry parameter           |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `geom3`                | Float          | Side slope 1 (if applicable)                |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `geom4`                | Float          | Side slope 2 (if applicable)                |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `length`               | Float          | Length in feet or meters                    |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `n_manning`            | Float          | Manning’s roughness coefficient             |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `initial_flow`         | Float          | Optional initial flow                       |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `max_flow`             | Float          | Optional max flow                           |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `entrance_loss`        | Float          | Entry loss coefficient                      |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `exit_loss`            | Float          | Exit loss coefficient                       |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `avg_loss`             | Float          | Average loss coefficient                    |
-    |                        |                |                                             |
-    +------------------------+----------------+---------------------------------------------+
-    | `flapgate`             | Integer        | 0 (no flap) or 1 (with flap)                |
-    +------------------------+----------------+---------------------------------------------+
-
-    .. note::
-       Use the **Storm Drain Guidelines** or **SWMM GUI Help** to reference proper field definitions and recommended values.
-
-    **Tips on Flow Direction**
-
-    - Flow direction is determined by the digitized order of the polyline.
-    - Use the **Advanced Digitizing Toolbar** in QGIS to flip flow direction with the **Reverse Line** tool.
-    - Turn on **arrow symbology** to visualize flow direction:
-
-      - Right-click layer > Symbology > Line Symbol > Arrow
-
-    .. tip::
-       Reversing a line also reverses all internal vertices, keeping topology intact.
-
-    **Checking Profiles and Connectivity**
-
-    Use the **Profile Tool** to visualize elevation and connectivity:
-
-    1. Select a starting node and ending node.
-    2. Plot the conduit profile.
-    3. Observe invert elevations and slope direction.
-    4. Check for backward conduits or improper connections.
-
-    **Minimum Length Guidelines**
-
-    To maintain model stability:
-
-    - The **minimum conduit length** should match or exceed the grid cell size.
-    - For urban grids (typically 20 to 30 ft), no conduit should be shorter than the grid resolution.
-
-    .. code-block:: python
-
-       # Example: Reset all conduits with length < 20 to 20
-       length < 20 = update to 20
-
-
-    **Loss Coefficients and Flap Gates**
-
-    - Reference **SWMM GUI Help > Losses** for entrance/exit coefficient ranges.
-    - **Flap Gate** set to 1 prevents backflow.
-
-    .. important::
-       Entry/exit losses are applied to simulate energy loss at junctions and transitions.
-
-    For more information on conduits, see the **Storm Drain Guidelines** for `Conduits <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#conduits>`_ .
-
     .. raw:: html
 
         <h4>Link Overview - Pump, Orifice, Weir</h4>
+
+    This lesson explains how to review and configure pumps, orifices, and weirs in storm drain shapefiles.
 
     .. raw:: html
 
@@ -414,135 +132,7 @@ Storm Drain
        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-    This lesson explains the setup and attributes for **pumps**, **orifices**, and **weirs** in the storm drain system using QGIS and the EPA SWMM interface.
-
-    **Pumps**
-
-    To view and configure pump data:
-
-    1. Right-click the **Pumps** layer and select **Open Attribute Table**.
-    2. Dock the table for easier viewing.
-
-    Pump fields:
-
-    +-------------------+----------+----------------------------------------+
-    | Field             | Type     | Description                            |
-    +===================+==========+========================================+
-    | `name`            | String   | Unique pump name                       |
-    |                   |          |                                        |
-    +-------------------+----------+----------------------------------------+
-    | `init_status`     | String   | "ON" or "OFF"                          |
-    |                   |          |                                        |
-    +-------------------+----------+----------------------------------------+
-    | `start_depth`     | Float    | Starting water depth to activate pump  |
-    |                   |          |                                        |
-    +-------------------+----------+----------------------------------------+
-    | `shutoff_depth`   | Float    | Depth to stop pump                     |
-    |                   |          |                                        |
-    +-------------------+----------+----------------------------------------+
-    | `curve_name`      | String   | Name of the associated pump curve      |
-    |                   |          |                                        |
-    +-------------------+----------+----------------------------------------+
-    | `pump_type`       | String   | Type of pump: IDEAL, TYPE1-4           |
-    +-------------------+----------+----------------------------------------+
-
-    Pump types:
-
-    - **IDEAL**: Transfers all flow from inlet to outlet (design only).
-    - **TYPE 1**: Offline, staged, requires wet well.
-    - **TYPE 2**: Inline, stepped flow.
-    - **TYPE 3**: Head/flow differential.
-    - **TYPE 4**: Flow-depth, continuous.
-
-    For more information on pumps, see the **Storm Drain Guidelines** for `Pumps <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#pumps>`_ .
-
-    .. note::
-       Set up the pump in the storm drain editor first, then assign the curve data in the **Pump Curves** table.
-
-    **Orifices**
-
-    Orifices are typically underground restrictions connected to manholes or other subsurface elements.
-
-    +-----------------------+----------+------------------------------------------------+
-    | Field                 | Type     | Description                                    |
-    +=======================+==========+================================================+
-    | `name`                | String   | Unique orifice name                            |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `type`                | String   | "SIDE" or "BOTTOM"                             |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `shape`               | String   | "CIRCULAR" or "RECTANGULAR"                    |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `height`              | Float    | Height of orifice opening                      |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `width`               | Float    | Width of opening (for RECTANGULAR)             |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `inlet_offset`        | Float    | Distance from invert to orifice opening        |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `q_coeff`             | Float    | Discharge coefficient                          |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `flap_gate`           | Integer  | 0 or 1 (flap gate on/off)                      |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `open_close_time`     | Float    | Optional: time to open or close in hours       |
-    +-----------------------+----------+------------------------------------------------+
-
-    For more information on orifices, see the **Storm Drain Guidelines** for `Orifices <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#orifices>`_ .
-
-    **Weirs**
-
-    Weirs are usually surface-connected structures (rare underground). Always verify usage.
-
-    +-----------------------+----------+------------------------------------------------+
-    | Field                 | Type     | Description                                    |
-    +=======================+==========+================================================+
-    | `name`                | String   | Unique weir name                               |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `type`                | String   | TRANSVERSE, SIDEFLOW, V-NOTCH, TRAPEZOIDAL     |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `height`              | Float    | Height of opening                              |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `length`              | Float    | Length of weir opening                         |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `side_slope`          | Float    | Slope of trapezoidal shape                     |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `inlet_offset`        | Float    | Elevation offset from structure invert         |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `q_coeff`             | Float    | Discharge coefficient                          |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `flap_gate`           | Integer  | 0 or 1 (flap gate status)                      |
-    |                       |          |                                                |
-    +-----------------------+----------+------------------------------------------------+
-    | `contraction_coeff`   | Float    | Optional contraction coefficient               |
-    +-----------------------+----------+------------------------------------------------+
-
-    For more information on weirs, see the **Storm Drain Guidelines** for `Weirs <https://flo-2dkaren.github.io
-    /FLO-2D-Docs/Build25/flo-2d_plugin/user_manual/widgets/storm-drain-editor/Properties.html#weirs>`_ .
-
-    .. caution::
-       Weirs are typically not used in FLO-2D storm drain systems. If one appears in an `.inp` file, confirm its purpose. May need to be removed if inherited from surface modeling software.
-
-    **Review Tips**
-
-    - Use the **EPA SWMM GUI** to preview expected inputs and verify how fields work together.
-    - Field types and required formats should follow SWMM rules.
-    - Curves (for pumps and orifices) are configured in a separate step.
-
+    
 
 .. dropdown:: Simple Storm Drain Tutorial
 
@@ -561,8 +151,8 @@ Storm Drain
 
     .. raw:: html
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DNxhqBgOfuY?si=D67eo3YLWYpqs0x4"
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/C6xeIRDMeMg?si=-kFK9glCNNb5-YDH" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
         gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
@@ -577,8 +167,10 @@ Storm Drain
 
     .. image:: ../img/shg/5a/shg_sstorm001.jpg
 
-    - Do **not** add them to the GeoPackage. Keep them in the User Layers.
-    - Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
+    - Save the project and when prompted to save the layers to the GeoPackage, select **No**.  
+    - These layers can be removed when no longer needed.
+    - These features will be copied to the Storm Drain User Layers and are no longer needed when that process is complete and 
+      the test run is successful.
 
     .. raw:: html
 
@@ -643,7 +235,7 @@ Storm Drain
 
         <h3> Step 5: Set Storm Drain Control Parameters </h3>
 
-    - Set the **start and end time** of your simulation (e.g., 10 hours).
+    - Set the **start and end time** of the simulation (e.g., 10 hours).
     - Ensure it matches any time series used.
     - Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
     - Leave advanced defaults unless needed.
@@ -659,23 +251,23 @@ Storm Drain
     .. image:: ../img/shg/5a/shg_sstorm012.jpg
 
     - Click **Quick Run** to simulate.
-    - Output files will populate your designated folder.
+    - Output files will populate the designated folder.
 
     .. image:: ../img/shg/5a/shg_sstorm013.jpg
 
     .. image:: ../img/shg/5a/shg_sstorm014.jpg
 
     .. tip::
-       If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
+       If errors occur, check the shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
 
 
 
 .. dropdown:: Advanced Storm Drain Tutorial
 
 
-    This advanced lesson shows how to create a storm drain from Shapefiles.
-    Stay tuned for more lessons that will
-    show how to set up a storm drain from a swmm.inp.
+    This advanced lesson shows how to create a storm drain from Shapefiles.  
+    It uses more complex shapefiles and features than the simple storm drain lesson. 
+
 
     .. Note:: It will be easier to view these videos on YouTube.
 
@@ -686,24 +278,24 @@ Storm Drain
 
     Storm drain checklist.
 
-    For those of you who love a challenge, it's good practice to do a "Speed Run" of the Self-Help
-    Kit.  Here is a checklist of tasks that might get skipped during storm drain model building.
+    Here is a checklist of tasks that need to be completed to successfully build the advanced storm drain model.
 
-    - [ ] Adjust outfall location so all outfalls rest on a left bank node.
-    - [ ] Add a storage unit volume table and assign `Storage1` to all storage units.
-    - [ ] Ensure conduit length is a minimum of 30 ft, which is the cell size.
-    - [ ] Add Type 4 rating tables to the Type 4 inlets.
-    - [ ] Add a pump table and assign it to `P1`.
+    - [ ] Inspect shapefile fields carefully.  A single incorrect field assignment can cause the storm drain to fail or run incorrectly.
     - [ ] Auto-assign nodes.
-    - [ ] Carefully inspect shapefile fields.
+    - [ ] Adjust outfall locations so all outfalls are placed on a left bank node.
+    - [ ] Check channel outfall elevations and ensure they are at or slightly higher than the channel invert elevation.
+    - [ ] Ensure conduit length is a minimum of 30 ft, which is the cell size.
+    - [ ] Add Type 4 rating tables and culverts to the Type 4 inlets.
+    - [ ] Add a pump table and assign it to `P1`.
+    - [ ] Create a storage unit volume table and assign `Storage1` to all storage units.
+    - [ ] Add the Grover Street junction external inflow data.
     - [ ] Check storm drain control settings.
     - [ ] Schematize the network.
     - [ ] Perform a test run.
 
-
     .. raw:: html
 
-        <h2>Create a Storm Drain from Shapefiles</h2>
+        <h2>Create a Storm Drain from Shapefiles - Advanced</h2>
 
     .. raw:: html
 
@@ -722,9 +314,11 @@ Storm Drain
     - Drag and drop the appropriate shapefiles into QGIS.
 
     .. image:: ../img/shg/5b/shg_storm001.jpg
-
-    - Do **not** add them to the GeoPackage. Keep them in the User Layers.
-    - Save when prompted and select **Yes** to embed data into the GeoPackage for portability.
+    
+    - Save the project and when prompted to save the layers to the GeoPackage, select **No**.  
+    - These layers can be removed when no longer needed.
+    - These features will be copied to the Storm Drain User Layers and are no longer needed when that process is complete and 
+      the test run is successful.
 
     .. raw:: html
 
@@ -743,11 +337,11 @@ Storm Drain
 
     .. image:: ../img/shg/5b/shg_storm004.jpg
 
-    .. image:: ../img/shg/5b/shg_storm021.jpg
-
     .. image:: ../img/shg/5b/shg_storm005.jpg
 
     .. image:: ../img/shg/5b/shg_storm006.jpg
+
+    .. image:: ../img/shg/5b/shg_storm021.jpg
 
     .. image:: ../img/shg/5b/shg_storm022.jpg
 
@@ -759,9 +353,22 @@ Storm Drain
 
     .. image:: ../img/shg/5b/shg_storm007.jpg
 
+    .. warning::
+        **Warning 1**
+        The yellow warning bar is normal with respect to the advanced storm drain system.  It has 1 junctions and 4 outfalls
+        that are positioned outside of the grid area.  This is done intentionally to demonstrate that it is OK to have 
+        these feature outside of the grid area so long as they do not need to connect to the surface.  Those outfalls 
+        should be set to Sink or 0 in the Allow Discharge field. The junctions should have a name that doesn't start with
+        "I" because they do not interact with the surface.
+        
+        **Warning 2**
+        The Warning dialog box is also normal because the node names were not filled during the field assignment step.
+        The fields will be filled in the next step.
+
+
     .. raw:: html
 
-        <h3>Step 3: Assign Nodes to Links</h3>
+        <h3>Step 3: Auto-Assign Nodes to Links</h3>
 
     Click the **Auto-Assign Links and Nodes** button.
 
@@ -780,7 +387,36 @@ Storm Drain
 
     .. raw:: html
 
-        <h3>Step 4: Add Type 4 Rating Tables and Culverts</h3>
+        <h3>Step 4: Check Outfalls</h3>
+
+    - Ensure every outfall that is near the channel is aligned to a left bank grid.
+    - Move outfalls and conduit vertices as needed to ensure they are contained by a left bank grid element.
+    - Select the outfall and conduit layers and click the Edit Pencil.
+    - Use the **Snapping Tool** to ensure precise vertex-node connections.
+    - Click the vertex to pick it up.  Move the cursor to the left bank grid and click again to drop it.
+
+    .. image:: ../img/shg/5b/shg_storm001.gif
+
+    - Outfalls should have the same an elevation that is the same or slightly higher than the channel cross section.
+    
+    .. image:: ../img/shg/5b/shg_storm032.jpg
+        
+    .. raw:: html
+
+        <h3>Step 5: Check Conduit Length</h3>
+
+    - Open the Conduits attribute table.
+    - Sort the table by the `length` field.
+    - Select the conduits taht are less than 30 ft long.
+    - Set the field editor to the `length` field.
+    - Set the length of the conduits to 30 ft.
+    - Apply 30 ft to the selected conduits.
+
+    .. image:: ../img/shg/5b/shg_storm033.jpg
+
+    .. raw:: html
+
+        <h3>Step 6: Add Type 4 Rating Tables and Culverts</h3>
 
     - Go to the **Type 4 Table Editor**.
 
@@ -790,14 +426,24 @@ Storm Drain
 
     .. image:: ../img/shg/5b/shg_storm012.jpg
 
+    - The rating table file names must match inlet names (e.g., ``I4-47-32-26-1.txt`` matches inlet ``I4-47-32-26-1``).
+    - Format for rating tables: Depth on the left, Discharge on the right.
+
     .. image:: ../img/shg/5b/shg_storm013.jpg
 
-    - File names must match inlet names (e.g., ``41.txt`` for inlet 41).
-    - Format for rating tables: Depth on the left, Discharge on the right.
+    - The culvert equations are set for type 4 inlets.
+    - The culvert data needs to be written to a file names TYPE4CULVERT.txt.
+    - The format of the file is important. 
+
+    .. image:: ../img/shg/5b/shg_storm013c.jpg
+
+    - After the import is complete, review the warning text file to check for any issues.
+
+    .. image:: ../img/shg/5b/shg_storm013a.jpg
 
     .. raw:: html
 
-        <h3>Step 5: Add Pump Curve Data</h3>
+        <h3>Step 7: Add Pump Curve Data</h3>
 
     - Add a pump curve via the Pump Table interface.
 
@@ -811,15 +457,19 @@ Storm Drain
 
     .. image:: ../img/shg/5b/shg_storm016.jpg
 
-    - Data is saved automatically when you click off the cell.
+    - Data is saved automatically when the table is modified.
 
     .. raw:: html
 
-        <h3>Step 6: Add Storage Unit Curves</h3>
+        <h3>Step 8: Add Storage Unit Curves</h3>
 
     - Open **Storage Units** attribute table.
 
     .. image:: ../img/shg/5b/shg_storm025.jpg
+
+    Zoom to the storage units.
+
+    .. image:: ../img/shg/5b/shg_storm025a.jpg
 
     - Use the **FLO-2D Info Tool** to open the storage curve editor.
 
@@ -829,44 +479,78 @@ Storm Drain
 
     .. image:: ../img/shg/5b/shg_storm027.jpg
 
-    .. image:: ../img/shg/5b/shg_storm028.jpg
-
-    .. image:: ../img/shg/5b/shg_storm029.jpg
+    - Repeat the select feature process for the other two storage units.  
+    - They should already be set because they had the correct curve name in the attribute table field.
+    - All three storage units will use the same storage curve named `Storage1`.
 
     .. raw:: html
 
-        <h3>Step 7: Set Storm Drain Control Parameters</h3>
+        <h3>Step 9: Set External Inflow for Grover Street Junction</h3>
 
-    - Set the **start and end time** of your simulation (e.g., 10 hours).
-    - Ensure it matches any time series used.
-    - Adjust the **report step**, **flow units** (CFS/CMS), and **routing method**.
-    - Leave advanced defaults unless needed.
+    - Zoom to the northeast corner of the storm drain system.
+
+    .. image:: ../img/shg/5b/shg_storm028.jpg
+
+    - Use the **FLO-2D Info Tool** to open the junction editor of the junction that is outside the grid area.
+    - Set the `Grover Street` junction to have an external inflow = Yes.
+
+    .. image:: ../img/shg/5b/shg_storm029.jpg
+
+    - Click the Blue button to open the time series editor.
+    - Click the three dots next to `Time Series` to open the time series editor.
+    - Assign the Time Series Name and Description as shown in the image below.
+    - Add one blank line to the table.
+    - Copy the time series data from the `GroverTimeSeries' text file`.
+    - Paste the data into the time series table.
+    - Close both editors.
+
+    .. image:: ../img/shg/5b/shg_storm030.jpg
+
+    .. image:: ../img/shg/5b/shg_storm031.jpg 
+
+
+    .. raw:: html
+
+        <h3>Step 10: Set Storm Drain Control Parameters</h3>
+
+    - Set the **start and end time** of the simulation (e.g., 10 hours).
+    - Ensure the start time and end time matches any time series data used. (Grover Street Time Series)
+    - Check the **report step**, **flow units** (CFS/CMS), and **routing method**.
+    - The Hardwired parameters are not editable in this dialog.  If they are modified in the swmm.inp file, they will be
+      ignored by the FLO-2D Storm Drain engine. 
+
 
     .. image:: ../img/shg/5b/shg_storm017.jpg
 
     .. raw:: html
 
-        <h3>Step 8: Schematize and Run</h3>
+        <h3>Step 11: Schematize and Run</h3>
 
     - Click **Schematize Storm Drain** to export ``SWMM.OUTF``, ``SWMM.FLOW``, ``DROPBOX.DAT``, etc.
 
     .. image:: ../img/shg/5b/shg_storm018.jpg
 
     - Click **Quick Run** to simulate.
-    - Output files will populate your designated folder.
+    - Output files will populate the designated folder.
 
     .. image:: ../img/shg/5b/shg_storm019.jpg
 
     .. image:: ../img/shg/5b/shg_storm020.jpg
 
     .. tip::
-       If errors occur, check your shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
+       If errors occur, check the shapefile connections, field assignments, or go to a **FLO-2D Troubleshooting** video in the series.
 
 .. raw:: html
 
     <h2>Summary and Review Results</h2>
 
-Coming Soon
+This lesson shows the process to review results and confirm that a storm drain model is set up and working correctly.
+
+.. raw:: html
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/n_DxnlHc0kY?si=K3L090c8i3lBXzid" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+        gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 .. raw:: html
 
