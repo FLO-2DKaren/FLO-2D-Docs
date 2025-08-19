@@ -11,7 +11,7 @@ Data input errors may result in the automatic termination of a simulation run al
 The error message will report a ‘Unit’ number that is associated with the FLO-2D file that contains the error.
 The files are listed in Table 4.1, Table 7.1, and Table 7.2.
 
-**Table 7. 1 List of Misc Files and Unit Numbers**
+**Table 7.1 List of Misc Files and Unit Numbers**
 
 .. list-table::
    :widths: 25 25 25 25
@@ -149,7 +149,6 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
 
 - Decrease the channel cross section width in the PROFILES program.
 
--
 
 *Limiting Froude Numbers*
 
@@ -280,7 +279,8 @@ A list of the most common errors associated with running FLO-2D is presented bel
 Whenever an error is encountered, refer to the ERROR.CHK file first.
 All of the \*.CHK files are listed in Table 7.3.
 The file descriptions can be referenced in Chapter 5.
-Table 7. 2 List of Common Data Errors
+
+**Table 7.2 List of Common Data Errors**
 
 .. list-table::
    :widths: 100
@@ -390,7 +390,7 @@ A program like Docker can be used to build, deploy, and optimize server configur
 Get help from an IT professional and FLO-2D staff to explore this option.
 It should be noted that for FLO-2D no server system can outperform a high performance desktop computer running AMD high performance processors.
 
-**Table 7. 3 List of \*.CHK Files and Unit Numbers**
+**Table 7.3 List of \*.CHK Files and Unit Numbers**
 
 .. list-table::
    :widths: 25 25 25 25
@@ -672,7 +672,7 @@ These files are generated as part of the preliminary data checks.
 These error checks do not include any simulation results.
 Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
-**Table 7. 4 ERROR CODE CATEGORIES**
+**Table 7.4 ERROR CODE CATEGORIES**
 
 .. list-table::
    :widths: 50 50
@@ -816,6 +816,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - \
      - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
        Check the location of the cell.
+
        Correct it by realigning the grid to the computational domain.
 
    * - \
@@ -1192,7 +1193,8 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 800
      - INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be
-       Specified, CONT.DAT Variable  Inplot must be Set to 1
+
+       specified, CONT.DAT Variable  Inplot must be Set to 1
 
 
 **Table 7.6 ADVANCED ERROR CODES**
