@@ -74,7 +74,7 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
        profile at this point.
        Following interpolation, the slope profile will be more representative of the actual river profile.
 
-        .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_002.png
+        .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_002.png
 
     2. PROFILES will automatically locate the surveyed cross-section data and interpolate the cross-section
        geometry and elevation (thalweg slope) for all
@@ -84,21 +84,21 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
 
     3. Click ‘OK’ in the dialog box to view the interpolated bedslope.
 
-       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_003.png
+       .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_003.png
 
     4. Click on the ‘View Local Reach’ button on the menu bar.
        Click anywhere along the bedslope profile to zoom in on a local reach of 10 channel elements.
 
-       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_004.png
+       .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_004.png
 
     5. Click on ‘View/Edit Cross-Section Data’ to view the following dialog box displaying the channel element
        characteristics:
 
-       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_005.png
+       .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_005.png
 
     6. Click on the ‘Xsec’ button in the dialog box to view the cross-section data and image.
 
-       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_006.png
+       .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_006.png
 
     7. View additional cross-sections by clicking on the “Up” and “Down” but- tons in the dialog box.
        The computed cross section geometry and all the cross-section station and elevation data can be
@@ -119,7 +119,7 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
        One cross-section is overlaid on the other cross-section, stretched or contracted and the elevations
        averaged.
 
-       .. image:: ../img/Data_Input_Manual_PRO_2026/Chapter3/DIM_Pro_2026_Chapter3_007.png
+       .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_007.png
 
     9.  Save the results frequently by clicking on ‘Save’ on the menu bar.
         The saved data will not be written to file until the program is closed.
