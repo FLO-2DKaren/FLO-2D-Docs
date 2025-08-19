@@ -66,7 +66,6 @@ below:
 
 Click on ‘Plot Channel Hydrographs’ a dialog box appears to select either a channel segment or element:
 
-
 .. image:: .. /img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_002.png
 
 After selecting the channel element and clicking ‘OK’, the hydrograph is plotted as shown in the following figure.
@@ -82,8 +81,7 @@ After entering the three data fields in the dialog box (including the desired di
 to display the following table:
 
 This table displays the average discharge weighted hydraulic conditions for the given discharge between the two channel elements (inclusive).
-From this dialog box, select a new discharge and add to the table or print this table to an ASCII file (HYDR.
-OUT).
+From this dialog box, select a new discharge and add to the table or print this table to an ASCII file (HYDR.OUT).
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_005.png
 
@@ -170,7 +168,7 @@ To view the predicted maximum water surface elevation profile, click on the radi
 Plot the water surface at any output interval by entering the time in the text box in the upper right corner.
 The peak discharge can also be plotted as a function of the channel distance.
 To plot the surveyed or measured, the WSURF.DAT must be prepared.
-The file for- mat is presented at the end of this section of the manual.
+The file format is presented at the end of this section of the manual.
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_014.png
 
