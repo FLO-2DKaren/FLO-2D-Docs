@@ -67,16 +67,16 @@ below:
 Click on ‘Plot Channel Hydrographs’ a dialog box appears to select either a channel segment or element:
 
 
-.. image:: .. /img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_002.png
+.. image:: .. /img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_002.png
 
 After selecting the channel element and clicking ‘OK’, the hydrograph is plotted as shown in the following figure.
 Use the dialog box in the upper right portion of the screen to select another channel element or to return to the channel element list or main menu.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_003.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_003.png
 
 If the ‘Compute Hydraulics’ is selected from the Main Menu, the following dialog box is displayed:
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_004.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_004.png
 
 After entering the three data fields in the dialog box (including the desired discharge for computing the average channel hydraulics, mouse click ‘OK’
 to display the following table:
@@ -85,15 +85,15 @@ This table displays the average discharge weighted hydraulic conditions for the 
 From this dialog box, select a new discharge and add to the table or print this table to an ASCII file (HYDR.
 OUT).
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_005.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_005.png
 
 Similar hydrographs can be plotted for floodplain cross section selected in the HYCROSS.OUT and Hydraulic Structure hydrographs in HYDROSTRUCT.OUT.
 If the file exists, the cross-section hydrograph for the selected cross section elements and flow direction will plotted using the second command on
 the Main Menu bar.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_006.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_006.png
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_007.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_007.png
 
 6.3 FLO-2D MapCrafter
 ---------------------
@@ -104,11 +104,11 @@ The MapCrafter documentation is maintained on the MapCrafter wiki.
 
 https://github.com/FLO-2DSoftware/FLO-2DMapCrafter.wiki.git
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_008.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_008.png
 
 In addition to mapping FLO-2D results, MapCrafter can also help users design map layouts for printing high resolution mapping pdfs.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_009.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_009.png
 
 Mapper Pro
 --------------
@@ -139,20 +139,20 @@ Use MAXPLOT for a quick overview of predicted flow depths and velocities.
 By zooming in on a given plot, the grid element number, maximum flow depth or velocity and the maximum water surface elevation can be viewed.
 The tool bar has options for view extents, previous view, pan, a coarse flood contour and 3-D plot and an option to save the view as a bitmap.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_010.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_010.png
 
 MAXPLOT can be initiated by copying the program to the project folder and double clicking it.
 After opening MAXPLOT a blank screen appears with a Main Menu:
 
 Click on ‘Open’ to display the following the dialog box:
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_011.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_011.png
 
 Activate one of the plots listed in the dialog box above by clicking on the radio button in front of the plot option and clicking the ‘OK’ button.
 Set limits on the minimum and maximum depths or velocities to display.
 The following plot displays the combined channel and floodplain maximum flow depth for the Monroe project example.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_012.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_012.png
 
 Profiles
 ------------
@@ -164,7 +164,7 @@ The PROFILES program has zoom and print options to assist in reviewing the resul
 
 To view the predicted water surface profiles, click on ‘View Profiles’ in the Main Menu and a dialog box appears:
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_013.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_013.png
 
 To view the predicted maximum water surface elevation profile, click on the radio button labeled ‘Maximum Water Surface’ and click ‘OK’.
 Plot the water surface at any output interval by entering the time in the text box in the upper right corner.
@@ -172,26 +172,26 @@ The peak discharge can also be plotted as a function of the channel distance.
 To plot the surveyed or measured, the WSURF.DAT must be prepared.
 The file for- mat is presented at the end of this section of the manual.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_014.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_014.png
 
 There are several options on the Main Menu.
 Zoom in on given river reach, print the image or label the distance along the channel in river miles.
 The zoom view is shown in the following figure:
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_015.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_015.png
 
 If sediment transport has been simulated, PROFILES will plot the final bed elevation and the cross-section geometry changes associated with either
 scour or deposition.
 The image below displays sediment deposition and scour in a reach of the Middle Rio Grande in New Mexico.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_016.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_016.png
 
 Non-uniform sediment distribution on the channel bed can be viewed when the channel flow is simulated.
 The cross-section plot below displays the final cross-section elevations in red compared to the cross-section elevations at the start of the flood
 simulation shown in black.
 This image can be expanded to full view.
 
-.. image:: ../img/Data_Input_Manual_PRO_2025/DIM_Pro_2025/Chapter6/DIM_Pro_2025/Chapter6_017.png
+.. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/Chapter6_017.png
 
 The user has an option in the water surface dialog box of plotting the surveyed water surface and bed elevations along with the predicted values.
 To plot the surveyed water surface or channel bed elevation, the WSURF.DAT file must be created in the following format:
