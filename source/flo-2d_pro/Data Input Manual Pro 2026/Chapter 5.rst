@@ -1184,7 +1184,7 @@ FLOODPLAIN_CONVERGENCE.OUT
 
 FLOODWAVETIME.OUT
 
-    This file has contains the following output:
+    This file contains the following output:
 
     .. raw:: html
 
