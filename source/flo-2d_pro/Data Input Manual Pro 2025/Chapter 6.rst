@@ -1,6 +1,6 @@
 .. vim: syntax=rst
 
-DIM_Pro_2025/Chapter6_r 6: Post-Processor Programs
+Chapter6: Post-Processor Programs
 =====================================================
 
 There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
