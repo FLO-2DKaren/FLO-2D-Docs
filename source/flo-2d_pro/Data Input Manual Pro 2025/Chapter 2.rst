@@ -52,7 +52,7 @@ A number of example projects are provided in the FLO-2D Documentation/Example Pr
 Most of the example simulations are setup for the graphics mode and will take only a few minutes to run.
 Run these projects using the Run for FLO-2D Project folder.
 
-   *Working with Geo-referenced Images – Goat Camp Creek, Gila County, Ari- zona (Goat subdirectory)*
+   *Working with Geo-referenced Images – Goat Camp Creek, Gila County, Arizona (Goat subdirectory)*
 
    - This project provides an opportunity to work with the GDS editor components and capabilities.
      The aerial photos can be imported and used to edit the various model components such as channels,
