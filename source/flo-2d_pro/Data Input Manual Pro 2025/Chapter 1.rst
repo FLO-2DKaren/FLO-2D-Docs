@@ -181,7 +181,7 @@ As new components are added to a model and tested, other components switches can
 
 FLO-2D routes flows in eight directions as shown in figure 1.1 below.
 
-    .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter1/DIM_Pro_2025_Chapter1_001.png
+
 
     *Figure 1.1.
     Flow directions.*
