@@ -1,4 +1,5 @@
 .. vim: syntax=rst
+.. _sdguidelines:
 
 =================================
 Storm Drain Modeling Guidelines
