@@ -9308,7 +9308,7 @@ STEEP SLOPE N VALUE DATA FILE
                         J = grid element that has a
 
         Notes:
-           Line 2: Repeat this line for each grid element has an steep slope.
+           Line 2: Repeat this line for each grid element has a steep slope.
         </pre>
     </div>
 
