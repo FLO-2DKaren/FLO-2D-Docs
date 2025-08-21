@@ -5731,39 +5731,39 @@ LEVEE AND FAILURE DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>LEVEE.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           0.00 0
-        L 1891
-        D 4 5020.00
-        L 1896
-        D 6 5020.00
-        L 1897
-        D 2 5020.00
-        D 3 5020.00
-        D 5 5020.00
-        D 6 5020.00
-        L 1921
-        D 1 5020.00
-        D 4 5020.00
-        D 8 5020.00
-        L 1922
-        D 8 5020.00
-        L 1927
-        D 2 5020.00
-        D 6 5020.00
-        L ...
-        C FS3 0.5
-        P 3450 S1 0.5
-        P 3558 S1 0.9
-        P 3559 S2 0.7
-        P 3669 S3 0.5
-        P 3670 S4 0.5
-        P 3782 C1 0.3
-        P 3783 S1 0.5
-        P 3815 J2 0.5
-        P 3897 S1 0.5
-        P ...
-        </pre>
+    <pre>
+     0.00 0
+    L 1891
+    D 4 5020.00
+    L 1896
+    D 6 5020.00
+    L 1897
+    D 2 5020.00
+    D 3 5020.00
+    D 5 5020.00
+    D 6 5020.00
+    L 1921
+    D 1 5020.00
+    D 4 5020.00
+    D 8 5020.00
+    L 1922
+    D 8 5020.00
+    L 1927
+    D 2 5020.00
+    D 6 5020.00
+    L ...
+    C FS3 0.5
+    P 3450 S1 0.5
+    P 3558 S1 0.9
+    P 3559 S2 0.7
+    P 3669 S3 0.5
+    P 3670 S4 0.5
+    P 3782 C1 0.3
+    P 3783 S1 0.5
+    P 3815 J2 0.5
+    P 3897 S1 0.5
+    P ...
+    </pre>
     </div>
 
 .. raw:: html
