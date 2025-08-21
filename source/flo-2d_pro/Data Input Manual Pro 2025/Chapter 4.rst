@@ -5066,14 +5066,14 @@ MULTIPLE CHANNEL DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                       SIMPLE_MULT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0.025               Line 1: <b>XNMULTTRICHN</b>
-        1961                Line 2: <b>IMGRID(I)</b>
-                                    <i>I = number of grid elements with multiple channels</i>
+    <pre>
+    0.025               Line 1: <b>XNMULTTRICHN</b>
+    1961                Line 2: <b>IMGRID(I)</b>
+                                <i>I = number of grid elements with multiple channels</i>
 
-        Notes:
-           Line 2: Repeat this line for each grid element revision.
-        </pre>
+    Notes:
+     Line 2: Repeat this line for each grid element revision.
+    </pre>
     </div>
 
 .. raw:: html
@@ -5083,13 +5083,13 @@ MULTIPLE CHANNEL DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>SIMPLE_MULT.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           0.060
-           19612
-           19625
-           19458
-           ...
-        </pre>
+    <pre>
+    0.060
+    19612
+    19625
+    19458
+    ...
+    </pre>
     </div>
 .. raw:: html
 
