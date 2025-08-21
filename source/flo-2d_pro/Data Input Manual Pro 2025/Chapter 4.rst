@@ -193,7 +193,7 @@ SYSTEM CONTROL DATA
 
        exceeding Courant number.
 
-   * - DEPRESS-DEPTH
+   * - DEPRESSDEPTH
      - **r**
      - **-110.0 to**
 
@@ -252,7 +252,9 @@ SYSTEM CONTROL DATA
 
        increased by 0.001 for that grid element for the next timestep (see comment 3).
 
-       The increased n-values are reported in the ROUGH.OUT and FPLAIN.RGH files (see comments 3 and 4).
+       The increased n-values are reported in the ROUGH.OUT and FPLAIN.RGH files\.
+
+       (see comments 3 and 4).
 
    * - GRAPTIM
      - r
@@ -280,7 +282,9 @@ SYSTEM CONTROL DATA
 
        IBACKUP = 2 enables elevation changes for outflow nodes made at runtime to be permanently
 
-       written to the FPLAIN.RGH file (see comment 10).
+       written to the FPLAIN.RGH file.
+
+       (see comment 10).
 
    * - ICHANNEL
      - s
@@ -364,7 +368,7 @@ SYSTEM CONTROL DATA
        **1 = on**
      - INFIL = 1 initiates an infiltration subroutine using the Green-Ampt infiltration model for either
 
-       channel or over- land infiltration.
+       channel or overland infiltration.
        The INFIL.DAT file must be created.
 
    * - IRAIN
@@ -373,7 +377,9 @@ SYSTEM CONTROL DATA
 
        **1 = on**
      - Set IRAIN = 1 to simulate rain on the grid system.
-       The RAIN.DAT file must be created (see comment 1).
+       The RAIN.DAT file must be created.
+
+       (see comment 1).
 
    * - ISED
      - s
@@ -406,8 +412,7 @@ SYSTEM CONTROL DATA
 
        4 = All time series output is written.
 
-       5 = Extract a time series for specific cells.
-       Requires TIM- DEPCELL.DAT
+       5 = Extract a time series for specific cells. Requires TIMDEPCELL.DAT
 
        11 = TIMDEP.OUT and TIMDEP_NC4.OUT are written for the time interval.
 
@@ -465,7 +470,9 @@ SYSTEM CONTROL DATA
 
        **1 = on**
      - MSTREET = 1 to initiate the street flow component.
-       The STREET.DAT file must be created (see comment 2).
+       The STREET.DAT file must be created.
+
+       (see comment 2).
 
    * - MUD
      - s
@@ -508,7 +515,9 @@ SYSTEM CONTROL DATA
      - **0 = off**
 
        **0.1 - 0.99**
-     - Flow roughness n-value for shallow overland flow (flow depth < 0.2 ft or 0.06 m) (see comment 9).
+     - Flow roughness n-value for shallow overland flow (flow depth < 0.2 ft or 0.06 m).
+
+       (see comment 9).
 
    * - SIMUL
      - r
@@ -556,7 +565,7 @@ SYSTEM CONTROL DATA
 
        XARF can be used to account irregular surface topography, dense vegetation or other features.
 
-       Range: 0 < XARF < 1.0
+       Range: 0 < XARF < 1.0.
        A typical value for XARF of 0.10 indicates that 10% of each grid element surface is not
 
        available for flood storage.
