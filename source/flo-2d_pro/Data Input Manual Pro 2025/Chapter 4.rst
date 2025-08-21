@@ -200,17 +200,17 @@ SYSTEM CONTROL DATA
        **10.0**
      - The DEPRESSDEPTH variable has two functions:
 
-       DEPRESSDEPTH identifies depressed grid elements that are lower than all contiguous nodes.
+       - DEPRESSDEPTH identifies depressed grid elements that are lower than all contiguous nodes.
 
-       A value of DEPRESSDEPTH = 3.0 ft is suggested.
+         A value of DEPRESSDEPTH = 3.0 ft is suggested.
 
-       Depressed elements may be real, but in most cases isolated depressed elements are a result
+         Depressed elements may be real, but in most cases isolated depressed elements are a result
 
-       of poor topographic data.
+         of poor topographic data.
 
-       Identifies low levee crest elevations.
+       - Identifies low levee crest elevations.
 
-       A typical value of DEPRESSDEPTH 3.0 (default value = zero).
+         A typical value of DEPRESSDEPTH 3.0 (default value = zero).
 
        (see comments 11 and 12).
 
