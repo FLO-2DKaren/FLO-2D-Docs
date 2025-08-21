@@ -257,9 +257,7 @@ SYSTEM CONTROL DATA
    * - GRAPTIM
      - r
      - **0.01 - 10.0**
-     - Time interval in hours that the graphics display is updated (e.g. set GRAPTIM = 0.02 for a
-
-       frequent update).
+     - Time interval in hours that the graphics display is updated (e.g. set GRAPTIM = 0.02 for a frequent update).
 
        GRAPHTIM is required when LGPLOT = 2.
 
