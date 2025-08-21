@@ -6082,13 +6082,13 @@ FLOODPLAIN CROSS SECTION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                       FPXSEC.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        P 0                 Line 1: <b>FPXSECHAR = ‘P’ NXPRT</b>
-        X 3 11 284 ...      Line 2: <b>FPXSECHAR = ‘X’ IFLO(N) NNXSEC(N) NODX(N,J)</b>
+    <pre>
+    P 0                 Line 1: <b>FPXSECHAR = ‘P’ NXPRT</b>
+    X 3 11 284 ...      Line 2: <b>FPXSECHAR = ‘X’ IFLO(N) NNXSEC(N) NODX(N,J)</b>
 
-        Notes:
-         Line 2: Repeat this line for each cross section.
-        </pre>
+    Notes:
+     Line 2: Repeat this line for each cross section.
+    </pre>
     </div>
 
 .. raw:: html
@@ -6100,20 +6100,20 @@ FLOODPLAIN CROSS SECTION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                       FPXSEC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           P 0
-           X 3 11 284 285 286 287 288 289 290 291 292 293 294
-           X 3 14 808 809 810 811 812 813 814 815 816 817 818 819 820 821
-           X 3 15 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 1109 1110 1111
-           X 3 10 1365 1366 1367 1368 1369 1370 1371 1372 1373 1374
-           X 3 26 1857 1858 1859 1860 1861 1862 1863 1864 1865 1866 1867 1868 1869 1870 1871
-           X 3 28 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 2504 2505
-           X 3 12 4224 4225 4226 4227 4228 4229 4230 4231 4232 4233 4234 4235
-           X 2 8 7373 7303 7236 7180 7124 7068 7012 6956
-           X 2 5 8233 8135 7941 7845 7749
-           X 3 6 9000 9001 9002 9003 9004 9005
-           X 3 ...
-        </pre>
+    <pre>
+    P 0
+    X 3 11 284 285 286 287 288 289 290 291 292 293 294
+    X 3 14 808 809 810 811 812 813 814 815 816 817 818 819 820 821
+    X 3 15 1097 1098 1099 1100 1101 1102 1103 1104 1105 1106 1107 1108 1109 1110 1111
+    X 3 10 1365 1366 1367 1368 1369 1370 1371 1372 1373 1374
+    X 3 26 1857 1858 1859 1860 1861 1862 1863 1864 1865 1866 1867 1868 1869 1870 1871
+    X 3 28 2491 2492 2493 2494 2495 2496 2497 2498 2499 2500 2501 2502 2503 2504 2505
+    X 3 12 4224 4225 4226 4227 4228 4229 4230 4231 4232 4233 4234 4235
+    X 2 8 7373 7303 7236 7180 7124 7068 7012 6956
+    X 2 5 8233 8135 7941 7845 7749
+    X 3 6 9000 9001 9002 9003 9004 9005
+    X 3 ...
+    </pre>
     </div>
 
 .. raw:: html
