@@ -794,7 +794,7 @@ NUMERICAL STABILITY CONTROL DATA
     * - COURANTST
       - **r**
       - 0.2 - 0.9
-      - Courant number for streets.Courant number for floodplain.Numerical stability parameter
+      - Courant number for streets. Courant number for floodplain. Numerical stability parameter
 
         that relates the floodwave movement in streets to the discretized model in space and time.
 
