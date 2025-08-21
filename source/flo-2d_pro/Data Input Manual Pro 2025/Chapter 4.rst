@@ -1502,7 +1502,7 @@ INFLOW HYDROGRAPH DATA
 
 2. The user has a choice to input either the sediment concentration by volume associated with the inflow water discharge
    or a sediment volume for the time interval HP(I,J,1).
-   The mudflow volume (ft3 or m3) can represent erosion, hillslope failure, or any other type of mass sediment loading.
+   The mudflow volume (ft\ :sub:`3` or m\ :sub:`3`) can represent erosion, hillslope failure, or any other type of mass sediment loading.
    When HP(I,J,3) is less than 1.0, HP (I,J,3) corresponds to the sediment concentration by volume for floodplain
    discharge HP(I,J,2) for the time interval which starts at HP(I,J,1).
    If HP(I,J,3) is greater than 1.0, then HP(I,J,3) represents a sediment inflow volume.
@@ -1516,7 +1516,7 @@ INFLOW HYDROGRAPH DATA
 
 5. To create a filled reservoir, pond, or tailings dam, simply assign the desired water or tailings surface elevation
    to one grid element (IRESGRID) within the reservoir or ponded area.
-   At model runtime, the model will automatically as- sign the same water surface to all the grid elements in an
+   At model runtime, the model will automatically assign the same water surface to all the grid elements in an
    expanding circle of elements around IRESGRID that have a ground elevation less than the prescribed water surface
    elevation RESERVOIREL and/or the tailings surface elevation TAILINGSELEV(II).
 
