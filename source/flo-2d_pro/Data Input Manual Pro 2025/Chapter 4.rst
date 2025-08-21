@@ -3688,7 +3688,7 @@ HYDRAULIC STRUCTURE DATA
     D 4 15
         </pre>
     </div>
-
+/
 .. raw:: html
 
     <br><br>
@@ -3699,19 +3699,19 @@ HYDRAULIC STRUCTURE DATA
         <div><i><pre>                           HYSTRUC.DAT File Notes</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
-        Notes:
-            If IHYDRSTRUCT = 0 in the CONT.DAT file, omit this file.
-            Line 2: Include this line for rating curve.
-            Repeat this line for each rating curve.
-            Line 1, 2: If CLENGTH(I) = 0, ignore COEFA(I,J) AND EXPA(I,J)
-            Line 3: If a replacement rating curve is required, include this line.
-            Line 1, 3: If CLENGTH(I) = 0, ignore RACOEF(I,J) and RAEXP(I,J).
-            Line 5: For generalized culverts (ICURVTABLE(I) = 2), if TYPEC(I) = 2
-            (round pipe), CUBASE(I) = 0,
-            Line 4: If a rating table is used, include this line.
-            Repeat for each depth and discharge pair.
-            Line 1, 4: If CLENGTH(I) = 0, ignore ATABLE(I,J).
-        </pre>
+    Notes:
+    If IHYDRSTRUCT = 0 in the CONT.DAT file, omit this file.
+    Line 2: Include this line for rating curve.
+    Repeat this line for each rating curve.
+    Line 1, 2: If CLENGTH(I) = 0, ignore COEFA(I,J) AND EXPA(I,J)
+    Line 3: If a replacement rating curve is required, include this line.
+    Line 1, 3: If CLENGTH(I) = 0, ignore RACOEF(I,J) and RAEXP(I,J).
+    Line 5: For generalized culverts (ICURVTABLE(I) = 2), if TYPEC(I) = 2
+    (round pipe), CUBASE(I) = 0,
+    Line 4: If a rating table is used, include this line.
+    Repeat for each depth and discharge pair.
+    Line 1, 4: If CLENGTH(I) = 0, ignore ATABLE(I,J).
+    </pre>
     </div>
 
 .. raw:: html
