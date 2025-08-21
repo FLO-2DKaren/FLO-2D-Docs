@@ -2654,7 +2654,7 @@ INFILTRATION DATA
 
        Values lower than 67 will result in an excessive loss and variables higher than 99 will be reset to 99.
 
-   * - SOIL\_DEPTH(N)
+   * - SOIL_DEPTH(N)
      - **r**
      - **0.0 - 100.**
      - Spatially variable Green-Ampt infiltration soil limiting depth storage (ft or m).
@@ -2761,9 +2761,10 @@ INFILTRATION DATA
     .. raw:: html
 
         where:<br>
-            f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
-            fn = final infiltration rate (in/hr)
-            a = decay coefficient (1/sec)
+            f = infiltration rate at simulation time t from start of the rainfall<br>
+            f<sub>i</sub> = initial infiltration rate (in/hr)<br>
+            f<sub>n</sub> = final infiltration rate (in/hr)<br>
+            a = decay coefficient (1/sec)<br>
             t = time from start of rainfall (sec)
 
     There are no metric equivalent values so if using Horton on a metric project, use in/hr even if IMETRIC = 1.
@@ -2777,12 +2778,12 @@ INFILTRATION DATA
 
             H_c = H_f + (H_i - H_f) e^{-at}
 
-    where:
+    .. raw:: html
 
-        a = decay coefficient hardwired to 0.00002, selected to have the decay from the initial to the final hydraulic conductivity over a 72 hr period with
-        the decay to half the original hydraulic conductivity in 12 hours.
-
-        t = time (seconds) from when the wetting front reaches the limiting soil depth
+        where:<br>
+            a = decay coefficient hardwired to 0.00002, selected to have the decay from the initial to the final hydraulic conductivity over a 72 hr period with
+            the decay to half the original hydraulic conductivity in 12 hours.<br>
+            t = time (seconds) from when the wetting front reaches the limiting soil depth
 
 16. Horton infiltration for Build23 and on requires an initial abstraction of inches to be assigned to Line 2 of the INFIL.DAT file..
 
