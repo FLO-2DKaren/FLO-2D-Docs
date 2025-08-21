@@ -1,24 +1,24 @@
 .. vim: syntax=rst
 
-Chapter 3: Pre-Processor Programs
+CHAPTER 3: PRE-PROCESSOR PROGRAMS
 =================================
 
-Introduction
-----------------
+INTRODUCTION
+-------------
 
 There are two pre-processor programs to help to create or edit the FLO-2D data files: QGIS Plugin, and PROFILES.
 Tutorials and workshop lessons for some of the programs’ functions are available in the FLO-2D/flo_help subdirectory.
 A discussion of the commands in the PROFILES program is included in this manual.
 
-QGIS FLO-2D Plugin
-----------------------
+QGIS FLO-2D PLUGIN
+------------------
 
 The FLO-2D Plugin for Quantum Geographical Interface System (QGIS) is a program developed to generate FLO-2D data files using QGIS.
 This program has separate documentation available in the FLO-2D Documentation subdirectory.
 Tutorials and sample projects are available at https://documentation.flo-2d.com.
 
-GDs
--------
+GDS
+---
 
 The grid developer system (GDS) is a GIS program used to create and edit the FLO-2D grid system and its attributes.
 As of October 2023, the GDS and Map- per are now distributed separately from FLO-2D.
@@ -29,8 +29,8 @@ In addition, there are a number of GDS tutorials and workshop lessons that are a
 The tutorial and GDS/Mapper installer are in the Sharefile FLO-2D Pro Update folder.
 A Sharefile account is given to all end users and IT Admin.
 
-Profiles
-------------
+PROFILES
+--------
 
 The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel
 bed elevation, channel depth, channel n-values and channel geometry.
@@ -62,7 +62,7 @@ The general procedure for using the PROFILES program is as follows:
 Initially the PROFILES program will display a blank screen with a Main Menu showing options to ‘View Segment
 Bed Slope’ or ‘Interpolate Segment Slope/Shape’.
 
-Interpolating a New Channel with Surveyed Cross-Sections
+**Interpolating a New Channel with Surveyed Cross-Sections**
 
 To interpolate the cross-sections and slope and assign a cross-section to every channel element in PROFILES,
 use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
