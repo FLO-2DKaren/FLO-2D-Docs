@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 1: FLO-2D Installation and Getting Started
+CHAPTER 1: FLO-2D INSTALLATION AND GETTING STARTED
 ===================================================
 
-General
------------
+GENERAL
+-------
 
 Use this document to help create the FLO-2D input data and review the output data.
 It has chapters on getting started, resources, preprocessor programs, data files, output files, post-processor programs and troubleshooting.
@@ -17,8 +17,8 @@ QGIS facilitates assigning spatially variable data that can be interpolated from
 PROFILES is used to edit channel geometry data.
 Data files can also be edited using an ASCII text editor such as UltraEdit© or NotePad++©.
 
-FLO-2D Installation
------------------------
+FLO-2D INSTALLATION
+--------------------
 
 The FLO-2D Pro model has been compiled for 64-bit multi-core processor computers.
 It cannot be run on a 32-bit computer.
@@ -30,18 +30,17 @@ The FLO-2D model, and the processor programs are loaded into the FLO-2D Pro fold
 The FLO-2D resource files are saved to the FLO-2D Documentation folder under C:\\Users\\Public\\Public Documents\\FLO-2D PRO Documentation.
 These files include helpful resources such as user manuals, example projects, lessons and PowerPoint presentations and instructional handouts.
 
-Un-installing the FLO-2D Software
--------------------------------------
+UN-INSTALLING THE FLO-2D SOFTWARE
+---------------------------------
 
 Remove the FLO-2D program and all of its attendant software from the computer with the Windows system Add Remove Programs tool.
 When removing the model, if the option appears to keep shared DLL/OCX files, do not remove them from the computer.
 To completely remove the FLO-2D files, delete the FLO-2D Pro Folder from the Program Files (x86).
 
-Getting Started
--------------------
+GETTING STARTED
+----------------
 
-Updates
-~~~~~~~
+**Updates**
 
 When starting a new FLO-2D project, first visit the Sharefile FTP and download any executable updates.
 New features are frequently added to the model.
@@ -50,18 +49,22 @@ These will be addressed as soon as possible.
 Program revisions are listed in the FLO-2D Pro Model Revisions document.
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Handouts.
 
-Tutorials and Lessons
-~~~~~~~~~~~~~~~~~~~~~
+**Tutorials and Lessons**
 
 Tutorials and training videos are available for the FLO-2D Plugin.
 The Plugin is the recommended data editor.
 
 C:\\users\\public\\public documents\\flo-2d pro documentation https://documentation.flo-2d.com
 
-Seeking Assistance – Technical Support
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Seeking Assistance – Technical Support**
 
-Send technical support questions by e-mail to contact@flo-2d.com.
+
+For technical support questions, please email FLO-2D via this |Contact-Form|.
+
+.. |Contact-Form| raw:: html
+
+   <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
+
 If there is a specific problem that needs to be resolved, zip the data files (only the \*.DAT files, no output files \*.OUT) and attach them to the
 e-mail along with a brief description of the problem and the project.
 Before sending the files, try to reduce the problem to its simplest form by turning off all components that are not contributing to the problem.
