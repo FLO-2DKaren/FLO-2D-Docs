@@ -1,7 +1,7 @@
-Preface
+PREFACE
 ========
 
-FLO-2D Input Data Overview
+FLO-2D INPUT DATA OVERVIEW
 --------------------------
 
 This manual describes the FLO-2D Pro Model data input parameters and their format.The FLO-2D data base consists
