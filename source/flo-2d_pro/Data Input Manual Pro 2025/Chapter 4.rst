@@ -2227,11 +2227,11 @@ RAINCELLRAW.DAT File
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           RAINCELLRAW.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-          15min   96 intervals          Line 1: RAININTIME   IRINTERS
-          N   10055330                  Line 2: RAINCHAR = ‘N' NXRGD(I)
-          R   0   0                     Line 3: RAINCHAR = ‘R’   R_TIME(K)   RRGRID(I,K) K=1
-        </pre>
+    <pre>
+    15min   96 intervals          Line 1: RAININTIME   IRINTERS
+    N   10055330                  Line 2: RAINCHAR = ‘N' NXRGD(I)
+    R   0   0                     Line 3: RAINCHAR = ‘R’   R_TIME(K)   RRGRID(I,K) K=1
+    </pre>
     </div>
 
 .. raw:: html
@@ -2243,22 +2243,21 @@ RAINCELLRAW.DAT File
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre> RAINCELLRAW.DAT File Example </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-          15min  96 intervals
-         N 10055330
-         R 0 0
-         R 0.25 0
-         R 0.5 0
-         R 0.75 0
-         R 1 0.01
-         R 1.25 0.01
-         R 1.5 0.01
-         R 1.75 0.01
-         R 2 0.01
-         ...
-        </pre>
+    <pre>
+     15min  96 intervals
+    N 10055330
+    R 0 0
+    R 0.25 0
+    R 0.5 0
+    R 0.75 0
+    R 1 0.01
+    R 1.25 0.01
+    R 1.5 0.01
+    R 1.75 0.01
+    R 2 0.01
+    ...
+    </pre>
     </div>
-
 .. raw:: html
 
     <br><br>
@@ -2291,7 +2290,7 @@ RAINCELLRAW.DAT File
     * - RAINCHA
       - **c**
       - N, R
-      - Character ‘N’ or ‘R’ that identifies Line 2 and Line 3 to the Number of rainfall lines.
+      - Character ‘N’ or ‘R’ that identifies Line 2 and Line 3 to the number of rainfall lines.
 
         Variable is case sensitive and it must be upper case.
 
@@ -2316,7 +2315,7 @@ RAINCELLRAW.DAT File
 
 **Instructional Comments for the RAINCELLRAW.DAT File**
 
-1. This data file stores cumulative rainfall depth for each real-time rainfall grid and at each time interval.
+1. This data file stores cumulative rainfall depth for each realtime rainfall grid and at each time interval.
    For each NEXRAD grid a rainfall table of time and depth is required.
 
 
