@@ -872,11 +872,9 @@ NUMERICAL STABILITY CONTROL DATA
 
     where:
 
-    C is the Courant number (C ≤ 1.0) Δx is the square grid element width.
-
-    V is the computed average cross section velocity.
-
-    β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
+        C is the Courant number (C ≤ 1.0) Δx is the square grid element width.|br|
+        V is the computed average cross section velocity.|br|
+        β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
 
    The Courant coefficient C may vary from 0.2 to 0.9 depending on the size of the grid element and floodwave velocity.
    If C is set to 1.0, artificial or numerical diffusivity is assumed to be zero.
