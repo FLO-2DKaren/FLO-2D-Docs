@@ -669,8 +669,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
             n_d = n_b \, ^* \, 1.5 \, ^* \, e^{-(\frac{0.4 depth}{dmax})}
 
-        where:
-
+        where:|br|
          n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
          dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
@@ -742,8 +741,7 @@ NUMERICAL STABILITY CONTROL DATA
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         0.1  0.00                   Line 1: <b>TOLGLOBAL   DEPTOL</b>
-        C  0.6   0.6   0.6          <b>Line 2: COURCHAR = ‘C’  COURANTFP   COURANTC</b>
-                                            <b>COURANTST</b>
+        C  0.6   0.6   0.6          <b>Line 2: COURCHAR = ‘C’  COURANTFP   COURANTC COURANTST</b>
         T   0.1                     <b>Line 3: COURCHAR = “T”   TIME_ACCEL</b>
         </pre>
     </div>
