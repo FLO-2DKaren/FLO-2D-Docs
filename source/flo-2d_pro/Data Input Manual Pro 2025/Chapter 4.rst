@@ -608,10 +608,8 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
       There are three possible approaches to a high Froude number flow analysis:
 
        a. Allow supercritical flow and do not limit the Froude number.
-
        b. Increase the grid element roughness by assigning AMANN or setting higher individual grid element n-values to reduce
           the Froude number (assign spatially variable n-values).
-
        c. Set the Limiting Froude number or the floodplain (e.g. set FROUDL = 0.99 or 1.11).
           When FROUDL is exceeded the grid element roughness value will be increased by 0.001 for the next timestep.
           After a flood simulation, review ROUGH.OUT to determine where FROUDL was exceeded and the maximum n-values
@@ -619,9 +617,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
           Consider revising the n-values in the MANNINGS_N.DAT file to match those in the ROUGH.OUT file.
           This will ensure that FROUDL is not exceeded.
           Rename the MANNINGS_N.RGH file to MANNINGS_N.DAT.
-
        d. Spatially variable limiting Froude numbers can also be assigned to individual grid elements in FPFROUDE.DAT.
-
        e. The shallow n-value is off when SHALLOWN = 0. or when AMANN = -99.
           The limiting Froude number is off if you set FROUDL = 0.for the floodplain.
           AMANN= -99 turns off the depth variable n-value, but not the limiting Froude number n-value adjustments.
