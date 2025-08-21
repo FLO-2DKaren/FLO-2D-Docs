@@ -112,7 +112,7 @@ SYSTEM CONTROL DATA
 .. raw:: html
 
     <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>                                     CONT.DAT File Variables</pre></i></div>
+        <div><i><pre>                                 CONT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
      24.0 0.10 2 0 0 Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b>
@@ -697,7 +697,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
        is correctly reading the data.This is a data file format troubleshooting tool. These files can be renamed to \*.DAT and the model can
        be run with them.
        IBACKUP = 1 will also generate a series of binary files that represent the model results at the last output interval.
-       The binary files are overwritten at the end of each output inter- val so if the model is terminated prior to the end of the run for
+       The binary files are overwritten at the end of each output interval so if the model is terminated prior to the end of the run for
        any reason, the simulation can be restarted from the last interval.
        Setting the switch to 1 can significantly lengthen the model run time.
        Setting IBACKUP = 2 will write all elevation changes associated with the outflow nodes and channel top-of-bank revisions to
