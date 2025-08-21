@@ -158,7 +158,7 @@ SYSTEM CONTROL DATA
 
 **Variable Descriptions for the CONT.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -760,7 +760,7 @@ NUMERICAL STABILITY CONTROL DATA
 
 **Variable Descriptions for the TOLER.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -1004,15 +1004,15 @@ FLOODPLAIN GRID ELEMENT DATA
         <div><pre><i>           FPLAIN.DAT File Example </i></pre></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    1  0	2	10  0	0.060	4005.23
-    2  0	3	11  1	0.065	4008.65
-    3  0	4	12  2	0.065	4002.23
-    4  0	5	13  3	0.065	4003.15
+    1  0    2   10  0   0.060   4005.23
+    2  0    3   11  1   0.065   4008.65
+    3  0    4   12  2   0.065   4002.23
+    4  0    5   13  3   0.065   4003.15
     ...
-    33 24  34  0	32	0.065	4000.22
-    34 25  35  0	33	0.065	4000.56
-    35 26  36  0	34	0.065	4001.00
-    36 27  0   0	35	0.065	4001.45
+    33 24  34  0    32  0.065   4000.22
+    34 25  35  0    33  0.065   4000.56
+    35 26  36  0    34  0.065   4001.00
+    36 27  0   0    35  0.065   4001.45
     </pre>
     </div>
 
@@ -1023,7 +1023,7 @@ FLOODPLAIN GRID ELEMENT DATA
 
 **Variable Descriptions for the FPLAIN.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -1161,7 +1161,7 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
 
 **Variable Descriptions for the MANNINGS_N.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -1219,7 +1219,7 @@ TOPOGRAPHICAL ELEVATION DATA
         <div><i><pre>                                       TOPO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-    551397.50 44608.95 6.00                                   <b>Line 1:	XCOORD(I), YCOORD(I) FP(I, J)</b>
+    551397.50 44608.95 6.00                                   <b>Line 1:    XCOORD(I), YCOORD(I) FP(I, J)</b>
 
 
     Note: TOPO.DAT is a list of the grid element x- and y-coordinates and their elevations.
@@ -1258,7 +1258,7 @@ TOPOGRAPHICAL ELEVATION DATA
 
 **Variable Descriptions for the TOPO.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -1346,16 +1346,16 @@ INFLOW HYDROGRAPH DATA
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     0 4335
-    C	    0   4335
-    H	    0	 0
-    H	    1	55.30
-    H	    2	155.30
-    H	    3	253.78
-    H	    4	537.8
-    H	    5	522.7
-    H	    6	507.5
-    H	    7	492.4
-    R	 5232  1734.02 0.250
+    C       0   4335
+    H       0    0
+    H       1   55.30
+    H       2   155.30
+    H       3   253.78
+    H       4   537.8
+    H       5   522.7
+    H       6   507.5
+    H       7   492.4
+    R    5232  1734.02 0.250
     ....
     </pre>
     </div>
@@ -1368,7 +1368,7 @@ INFLOW HYDROGRAPH DATA
 
 **Variable Descriptions for the INFLOW.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -1626,29 +1626,29 @@ OUTFLOW HYDROGRAPH DATA
     <pre>
     K   374
     H   10.0    2.6  0.35
-    K	1007
-    T	0.0	0.00
-    T	3.0	50.35
-    T	5.0	157.67
-    T   10.0	366.58
-    K	567
-    N	567	1
-    S	0.00	0.00
-    S	0.50	10.00
-    S	1.00	20.00
-    S	1.50	10.00
-    S	2.00	0.00
-    O	273
-    O	373
-    O	374
-    O	564
-    O	565
-    O	566
-    O	566
-    O	567
-    O	568
-    O1	1005
-    O1	1006
+    K   1007
+    T   0.0 0.00
+    T   3.0 50.35
+    T   5.0 157.67
+    T   10.0    366.58
+    K   567
+    N   567 1
+    S   0.00    0.00
+    S   0.50    10.00
+    S   1.00    20.00
+    S   1.50    10.00
+    S   2.00    0.00
+    O   273
+    O   373
+    O   374
+    O   564
+    O   565
+    O   566
+    O   566
+    O   567
+    O   568
+    O1  1005
+    O1  1006
     O1  1007
         ...
         </pre>
@@ -1660,7 +1660,7 @@ OUTFLOW HYDROGRAPH DATA
 
 **Variable Descriptions for the OUTFLOW.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 
 .. list-table::
@@ -1877,7 +1877,7 @@ RAINFALL DATA
 
 **Variable Descriptions for the RAIN.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -2059,7 +2059,7 @@ FILE: RAINCELL.DAT
 
 **Variable Descriptions for the RAINCELL.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -2180,7 +2180,7 @@ FLO2DRAINCELL.DAT File
 
 **Variable Descriptions for the FLO2DRAINCELL.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -2264,7 +2264,7 @@ RAINCELLRAW.DAT File
 
 **Variable Descriptions for the RAINCELLRAW.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
     :widths: 25 25 25 25
@@ -2405,7 +2405,7 @@ INFILTRATION DATA
 
 **Variable Descriptions for the INFIL.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -2854,7 +2854,7 @@ EVAPORATION DATA
 
 **Variable Descriptions for the EVAPOR.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -2998,7 +2998,7 @@ CHANNEL DATA
 
 **Variable Descriptions for the CHAN.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -3475,7 +3475,7 @@ CHANNEL BANK DATA
 
 **Variable Descriptions for the CHANBANK.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -3577,7 +3577,7 @@ CROSS SECTION DATA
 
 **Variable Descriptions for the XSEC.DAT File**
 
-\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -3746,7 +3746,7 @@ HYDRAULIC STRUCTURE DATA
 
 **Variable Descriptions for the HYSTRUC.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -4356,7 +4356,7 @@ SUBMERGENCE DATA
 
 **Variable Descriptions for the SUBMERGE_FACTOR.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -4479,7 +4479,7 @@ STREET DATA
 
 **Variable Descriptions for the STREET.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -4725,7 +4725,7 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
 
 **Variable Descriptions for the ARF.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -4905,7 +4905,7 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
 
 **Variable Descriptions for the MULT.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -5096,7 +5096,7 @@ MULTIPLE CHANNEL DATA
 
 **Variable Descriptions for the SIMPLE_MULT.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -5248,7 +5248,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
 
 **Variable Descriptions for the SED.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -5770,7 +5770,7 @@ LEVEE AND FAILURE DATA
 
 **Variable Descriptions for the LEVEE.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -6120,7 +6120,7 @@ FLOODPLAIN CROSS SECTION DATA
 
 **Variable Descriptions for the FPXSEC.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -6350,7 +6350,7 @@ DAM AND LEVEE BREACH DATA
 
 **Variable Descriptions for the BREACH.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7100,7 +7100,7 @@ FLOODPLAIN LIMITING FROUDE NUMBERS
 
 **Variable Descriptions for the FPFROUDE.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7187,7 +7187,7 @@ STORM DRAIN DATA FILE
 
 **Variable Descriptions for the SWMMFLO.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7400,7 +7400,7 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
 
 **Variable Descriptions for the SWMMFLORT.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7547,7 +7547,7 @@ STORM DRAIN OUTFALL ID DATA FILE
 
 **Variable Descriptions for the SWMMOUTF.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7637,7 +7637,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
 
 **Variable Descriptions for the SDCLOGGING.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7729,7 +7729,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
 
 **Variable Descriptions for the SWMMFLODROPBOX.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7831,7 +7831,7 @@ SPATIALLY VARIABLE TOLLERANCE VALUES
 
 **Variable Descriptions for the TOLSPATIAL.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -7913,7 +7913,7 @@ WATER SURFACE ELEVATION COMPARISON
 
 **Variable Descriptions for the WSURF.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8004,7 +8004,7 @@ WATER SURFACE ELEVATION COMPARISON
 
 **Variable Descriptions for the WSTIME.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8095,7 +8095,7 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 
 **Variable Descriptions for the TIMDEPCELL.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8161,7 +8161,7 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 
 **Variable Descriptions for the SHALLOWN_SPATIAL File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8278,7 +8278,7 @@ FLOODPLAIN STREET ELEMENT GUTTER DATA
 
 **Variable Descriptions for the GUTTER File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8428,7 +8428,7 @@ BUILDING COLLAPSE PARAMETERS
 
 **Variable Descriptions for the BUILDING_COLLAPSE.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8538,7 +8538,7 @@ SURFACE WATER RATING TABLES
 
 **Variable Descriptions for the OUTRC.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8628,7 +8628,7 @@ ARRAY OF INTERIOR GRID ELEMENTS
 
 **Variable Descriptions for the CHAN_INTERIOR_NODES.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8708,7 +8708,7 @@ BRIDGE CROSS SECTIONS
 
 **Variable Descriptions for the BRIDGE_XSEC.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8801,7 +8801,7 @@ Notes:
 
 **Variable Descriptions for the TAILINGS.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8875,7 +8875,7 @@ TAILINGS DATA
 
 **Variable Descriptions for the TAILINGS_CV.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -8974,7 +8974,7 @@ TAILINGS DEPTH DATA
 
 **Variable Descriptions for the TAILINGS_STACK_DEPTH.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -9072,7 +9072,7 @@ LOW IMPACT DEVELOPMENT DATA FILE
 
 **Variable Descriptions for the LID_VOLUME.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -9161,7 +9161,7 @@ MULTIPLE DOMAIN DATA FILE
 
 **Variable Descriptions for the MULTDOMAIN.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -9257,7 +9257,7 @@ STEEP SLOPE N VALUE DATA FILE
 
 **Variable Descriptions for the STEEP_SLOPEN.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
