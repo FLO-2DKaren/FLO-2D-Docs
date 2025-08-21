@@ -115,15 +115,15 @@ SYSTEM CONTROL DATA
         <div><i><pre>                                 CONT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
-     24.0 0.10 2 0 0 Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b>
-     1 1 0 0 0 Line 2: <b> ICHANNEL MSTREET LEVEE IWRFS IMULTC</b>
-     0 1 0 0 0 0 0 Line 3: <b> IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM</b>
-     0 0 0 Line 4: <b> IHYDRSTRUCT IFLOODWAY IDEBRV</b>
-     0.000 0.0 0.0 0.30 0.70 0.150 Line 5: <b> AMANN DEPTHDUR XCONC XARF FROUDL SHALLOWN ENCROACH</b>
-     2 3.0 Line 6: <b> NOPRTFP DEPRESSDEPTH</b>
-     2 Line 7: <b> NOPRTC</b>
-     0 0.0 Line 8: <b> ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP</b>
-     0.1 Line 9: <b> GRAPTIM</b><br>
+     24.0 0.10 2 0 0                    Line 1: <b> SIMUL TOUT LGPLOT METRIC IBACKUP</b>
+     1 1 0 0 0                          Line 2: <b> ICHANNEL MSTREET LEVEE IWRFS IMULTC</b>
+     0 1 0 0 0 0 0                      Line 3: <b> IRAIN INFIL IEVAP MUD ISED IMODFLOW SWMM</b>
+     0 0 0                              Line 4: <b> IHYDRSTRUCT IFLOODWAY IDEBRV</b>
+     0.000 0.0 0.0 0.30 0.70 0.150      Line 5: <b> AMANN DEPTHDUR XCONC XARF FROUDL SHALLOWN ENCROACH</b>
+     2 3.0                              Line 6: <b> NOPRTFP DEPRESSDEPTH</b>
+     2                                  Line 7: <b> NOPRTC</b>
+     0 0.0                              Line 8: <b> ITIMTEP TIMTEP STARTTIMTEP ENDTIMTEP</b>
+     0.1                                Line 9: <b> GRAPTIM</b><br>
 
     Notes:
      Line 5: If IFLOODWAY = 0 omit ENCROACH
