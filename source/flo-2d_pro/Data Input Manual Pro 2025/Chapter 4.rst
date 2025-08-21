@@ -5337,7 +5337,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
    * - DEBRISV
      - **r**
      - **0 - ∞**
-     - Volume of the debris basin in ft3 or m3.
+     - Volume of the debris basin in ft\ :sup:`3` or m\ :sup:`3`.
 
    * - DFIFTY
      - **r**
@@ -5347,7 +5347,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
    * - DRYSPWT
      - **r**
      - **70 - 130**
-     - Dry specific weight of the sediment (lb/ft3 or N/m3).
+     - Dry specific weight of the sediment (lb/ft\ :sup:`3` or N/m\ :sup:`3`).
 
    * - ICRETN
      - **i**
@@ -5370,7 +5370,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
 
        channels and streets (see comment 3).
 
-       In Line 2 (Line ‘C’), ISEDEQG will set the sediment transport equation for
+       In Line 2 (Line ‘C’), ISEDEQG will set the sediment transgport equation for
 
        floodplain sediment routing and channel routing.
 
@@ -5546,7 +5546,7 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
      - **0 - 1**
      - Sediment size distribution percentage (expressed as a decimal).
 
-       The percent- age represents the percent of the bed material sediment that is finer
+       The percentage represents the percent of the bed material sediment that is finer
 
        than the representative size diameter.
 
