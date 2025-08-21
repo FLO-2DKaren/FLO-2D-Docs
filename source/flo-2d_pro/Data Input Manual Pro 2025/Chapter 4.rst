@@ -1157,9 +1157,7 @@ FLOODPLAIN GRID ELEMENT NVALUE DATA
     <br><br>
 
 
-**Variable Descriptions for the**
-
-**MANNINGS_N.DAT File**
+**Variable Descriptions for the MANNINGS_N.DAT File**
 
 (s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
