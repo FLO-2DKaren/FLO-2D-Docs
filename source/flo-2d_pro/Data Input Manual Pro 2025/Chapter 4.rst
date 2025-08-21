@@ -6320,30 +6320,30 @@ DAM AND LEVEE BREACH DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           BREACH.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         B1   4.0   2.0    2.95     0.50
-         G1  2.0     2.0      0.      5.      0.      0.     0.     3.     3.05
-         G2  0.      0.       0.      0.      0.      0.     0.
-         G3  0.25    0.40   100.      0.06   30.     100.    0.
-         G4  1.      0.       0.      0.      0.      0.     0.
-         B2  4015   7
-         D1  2.0     2.0      0.      8.      0.      0.     0.    83.25    3.05
-         D2  0.      0.       0.      0.      0.      0.     0.    0.    0.     0.
-         D3  0.25    0.40   100.      0.10   25.    100.     0.
-         D4  2.      0.       0.      0.      0.      0.     0.    0.
-         F S1  0.03  6.0
-         F S1  0.15  3.5
-         F S1  0.50  2.5
-         F S1  0.85  1.0
-         F S1  0.95  0.0
-         F S2  0.03  9.0
-         F S2  0.15  5.5
-         F S2  0.50  4.0
-         F S2  0.85  2.0
-         F S2  0.98  0.0
-         F S3  0.03 12.0
-         F S3  ...
-        </pre>
+    <pre>
+    B1   4.0   2.0    2.95     0.50
+    G1  2.0     2.0      0.      5.      0.      0.     0.     3.     3.05
+    G2  0.      0.       0.      0.      0.      0.     0.
+    G3  0.25    0.40   100.      0.06   30.     100.    0.
+    G4  1.      0.       0.      0.      0.      0.     0.
+    B2  4015   7
+    D1  2.0     2.0      0.      8.      0.      0.     0.    83.25    3.05
+    D2  0.      0.       0.      0.      0.      0.     0.    0.    0.     0.
+    D3  0.25    0.40   100.      0.10   25.    100.     0.
+    D4  2.      0.       0.      0.      0.      0.     0.    0.
+    F S1  0.03  6.0
+    F S1  0.15  3.5
+    F S1  0.50  2.5
+    F S1  0.85  1.0
+    F S1  0.95  0.0
+    F S2  0.03  9.0
+    F S2  0.15  5.5
+    F S2  0.50  4.0
+    F S2  0.85  2.0
+    F S2  0.98  0.0
+    F S3  0.03 12.0
+    F S3  ...
+    </pre>
     </div>
 
 .. raw:: html
@@ -6459,6 +6459,7 @@ DAM AND LEVEE BREACH DATA
        If CNC = 0., Manning’s n-value for the core material will computed from Strickler’s equation.
 
        If CNC > 1., the n-value will be computed from a Moody diagram (Darcy f vs. D50).
+
        Set CNC = 0.0 for no core material.
 
    * - CNS
@@ -7070,9 +7071,9 @@ FLOODPLAIN LIMITING FROUDE NUMBERS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                   FPFROUDE.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        F 1 0.65 Line 1: <b>IFR = ‘F’ IDUM FROUDEFP (I = 1, NNOD)</b>
-        </pre>
+    <pre>
+    F 1 0.65 Line 1: <b>IFR = ‘F’ IDUM FROUDEFP (I = 1, NNOD)</b>
+    </pre>
     </div>
 
 .. raw:: html
@@ -7084,16 +7085,16 @@ FLOODPLAIN LIMITING FROUDE NUMBERS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>FPFROUDE.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           F 1 0.65
-           F 2 0.88
-           F 3 0.90
-           F 43 0.90
-           F 54 0.90
-           F 56 1.05
-           F 107 0.90
-           F 108 0.90
-        </pre>
+    <pre>
+    F 1 0.65
+    F 2 0.88
+    F 3 0.90
+    F 43 0.90
+    F 54 0.90
+    F 56 1.05
+    F 107 0.90
+    F 108 0.90
+    </pre>
     </div>
 
 .. raw:: html
@@ -7153,12 +7154,12 @@ STORM DRAIN DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                               SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                    Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),
-                            SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I), FEATURE(I),CURBHEIGHT(I)</b>
-                            <i>I = number of storm drain inlet nodes.</i>
-        D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
-        </pre>
+    <pre>
+          Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I), SWMM_IDEN(I), INTYPE(I),
+                  SWMMlength(I), SWMMwidth(I), SWMMheight(I), SWMMcoeff(I), FEATURE(I),CURBHEIGHT(I)</b>
+                  <i>I = number of storm drain inlet nodes.</i>
+    D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+    </pre>
     </div>
 
 .. raw:: html
@@ -7170,17 +7171,17 @@ STORM DRAIN DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>           SWMMFLO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+    <pre>
+    D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-           D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+    D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-           D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+    D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-           D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+    D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-           D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
-        </pre>
+    D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+    </pre>
     </div>
 
 .. raw:: html
