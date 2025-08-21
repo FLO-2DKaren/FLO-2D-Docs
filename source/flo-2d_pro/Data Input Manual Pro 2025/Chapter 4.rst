@@ -514,7 +514,7 @@ SYSTEM CONTROL DATA
 
    * - SIMUL
      - r
-     - **0.01 -**∞
+     - **0.01 - ∞**
      - Simulation time (hours).
 
    * - STARTIMTEP
