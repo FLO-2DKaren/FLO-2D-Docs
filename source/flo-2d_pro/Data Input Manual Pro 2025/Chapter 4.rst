@@ -3525,19 +3525,19 @@ CROSS SECTION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                               XSEC.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        X 1 X-CI-27.1                    Line 1: <b>XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..</b>
-                                                 <b>n number of cross sections</b>
-        25.0 5234.90                     Line 2: <b>XI(I,J) YI(I,J)</b>
-        30.0 5231.53                     Line 2: <b>XI(I,J) YI(I,J)</b>
-        35.0 5230.20                     Line 2: <b>XI(I,J) YI(I,J)</b>
+    <pre>
+    X 1 X-CI-27.1                    Line 1: <b>XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..</b>
+                                             <b>n number of cross sections</b>
+    25.0 5234.90                     Line 2: <b>XI(I,J) YI(I,J)</b>
+    30.0 5231.53                     Line 2: <b>XI(I,J) YI(I,J)</b>
+    35.0 5230.20                     Line 2: <b>XI(I,J) YI(I,J)</b>
 
-        Notes:
-           If ICHANNEL = 0 in the CONT.DAT file, omit this file.
-           Set SHAPE = ‘N’ (line 2d) in the CHAN.DAT file to use this file.
-           Line 1: This line is repeated for each cross section.
-           Line 2: This line is repeated for the Station, Elevation pairs.
-        </pre>
+    Notes:
+     If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+     Set SHAPE = ‘N’ (line 2d) in the CHAN.DAT file to use this file.
+     Line 1: This line is repeated for each cross section.
+     Line 2: This line is repeated for the Station, Elevation pairs.
+    </pre>
     </div>
 
 .. raw:: html
@@ -3549,26 +3549,26 @@ CROSS SECTION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre> XSEC.DAT File Example </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        X   1 X-CI-27.1
-            0.0     5235.07
-            10.0    5235.17
-            25.0    5235.31
-            30.0    5231.84
-            ...        ...
-            ...        ...
-            288.0   5236.01
-            294.0   5236.51
-            313.0   5237.00
-        X   2 CI-27.1
-            25.0    5234.90
-            30.0    5231.53
-            35.0    5230.20
-            40.0    5228.50
-            45.0    5227.20
-            50.0    5224.35
-            ...        ...
-        </pre>
+    <pre>
+    X   1 X-CI-27.1
+        0.0     5235.07
+        10.0    5235.17
+        25.0    5235.31
+        30.0    5231.84
+        ...        ...
+        ...        ...
+        288.0   5236.01
+        294.0   5236.51
+        313.0   5237.00
+    X   2 CI-27.1
+        25.0    5234.90
+        30.0    5231.53
+        35.0    5230.20
+        40.0    5228.50
+        45.0    5227.20
+        50.0    5224.35
+        ...        ...
+    </pre>
     </div>
 
 .. raw:: html
@@ -3577,7 +3577,7 @@ CROSS SECTION DATA
 
 **Variable Descriptions for the XSEC.DAT File**
 
-(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -3594,14 +3594,14 @@ CROSS SECTION DATA
      - **1**
 
        **to NNODC**
-     - Cross section number starting with 1 and ending with the last surveyed cross section.
+     - Cross-section number starting with 1 and ending with the last surveyed cross-section.
 
        This number will be assigned to the channel element NXSECNUM in CHAN.DAT (see comment 1).
 
    * - XI(I,J)
      - **r**
      - **0.0 - ∞**
-     - Cross section station distance from the left end point (ft or m).
+     - Cross-section station distance from the left end point (ft or m).
 
        The value of XI can be either positive or negative.
 
@@ -3615,7 +3615,7 @@ CROSS SECTION DATA
    * - XSECNAME(I)
      - **c**
      - **Alpha Numeric**
-     - Cross section name (less than 15 characters, not case sensitive).
+     - Cross-section name (less than 15 characters, not case sensitive).
 
        This name is for cross-section ID purposes only and it is not used by the model.
 
@@ -3626,7 +3626,7 @@ CROSS SECTION DATA
      - **0 - 30,000**
 
        **0 - 9,000**
-     - Cross section elevation (ft or m) at each station.
+     - Cross-section elevation (ft or m) at each station.
 
        The value of YI can either positive or negative indicating elevations below sea level.
 
@@ -3638,7 +3638,7 @@ CROSS SECTION DATA
 
 1. The NXSECNUM in XSEC.DAT and CHAN.DAT must match and be listed in order from 1 to N number of natural channel elements.
    The natural channel elements in the CHAN.DAT file must start at 1 and continue in sequence to NNODC from the top of the file to the end.
-   Use the FLO-2D Plugin or PROFILES programs to interpolate a cross section to each channel element.
+   Use the FLO-2D Plugin or PROFILES programs to interpolate a cross-section to each channel element.
 
 
 
