@@ -1829,22 +1829,22 @@ RAINFALL DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           RAIN.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0   0                           Line 1: <b>IRAINREAL, IRAINBUILDING</b>
-        3.100   0.000   1   1           Line 2: <b>RTT RAINABS RAINARF MOVINGSTORM</b>
-        R 0.000 0.000                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=1</b>
-        R 0.083 0.050                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=2</b>
-        R 0.167 0.110                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=3</b>
-        R 0.250 0.300                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=4</b>
-        R 0.330 0.450                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=5</b>
-        R....
-        2.0 5                           Line 4: <b>RAINSPEED IRAINDIR</b>
-        2558 0.5                        Line 5  <b>IRGRID(I) RAINARF(I)</b>
-                                        <I>I = number of rainfall depth-area reduction values</I>
-        Notes:
-            Line 4: If MOVINGSTORM = 0, omit this line.
-            Line 5: If IRAINARF = 0, omit this line
-        </pre>
+    <pre>
+    0   0                           Line 1: <b>IRAINREAL, IRAINBUILDING</b>
+    3.100   0.000   1   1           Line 2: <b>RTT RAINABS RAINARF MOVINGSTORM</b>
+    R 0.000 0.000                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=1</b>
+    R 0.083 0.050                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=2</b>
+    R 0.167 0.110                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=3</b>
+    R 0.250 0.300                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=4</b>
+    R 0.330 0.450                   Line 3: <b>RAINCHAR = ‘R’ R_TIME(I) R_DISTR(I) I=5</b>
+    R....
+    2.0 5                           Line 4: <b>RAINSPEED IRAINDIR</b>
+    2558 0.5                        Line 5  <b>IRGRID(I) RAINARF(I)</b>
+                                            <I>I = number of rainfall depth-area reduction values</I>
+    Notes:
+     Line 4: If MOVINGSTORM = 0, omit this line.
+     Line 5: If IRAINARF = 0, omit this line
+    </pre>
     </div>
 
 
@@ -1857,22 +1857,23 @@ RAINFALL DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>   RAIN.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         0    0
-         3.100     0.000     1     1
-         R   0.000        0.000
-         R   0.083        0.050
-         R   0.167        0.110
-         R   0.250        0.300
-         R   0.330        0.450
-         R....
-         2.0   5
-        2558   0.50
-        </pre>
+    <pre>
+     0    0
+     3.100     0.000     1     1
+     R   0.000        0.000
+     R   0.083        0.050
+     R   0.167        0.110
+     R   0.250        0.300
+     R   0.330        0.450
+     R....
+     2.0   5
+    2558   0.50
+    </pre>
     </div>
 
+.. raw:: html
 
-
+    <br><br>
 
 **Variable Descriptions for the RAIN.DAT File**
 
@@ -1893,7 +1894,7 @@ RAINFALL DATA
       - 0 = off
 
         1 = on
-      - IRAINARF = 1 indicates that individual grid element depth- area reduction values will be assigned.
+      - IRAINARF = 1 indicates that individual grid element depth-area reduction values will be assigned.
 
     * - IRAINBUILDING
       - **s**
