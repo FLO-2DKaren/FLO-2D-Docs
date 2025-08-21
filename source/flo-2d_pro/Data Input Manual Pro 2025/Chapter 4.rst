@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 4: Input Data File Description
+CHAPTER 4: INPUT DATA FILE DESCRIPTION
 ======================================
 
-General
------------
+GENERAL
+-------
 
 The FLO-2D data file variables and format are described in this chapter.
 These files are accessed directly by the model.
@@ -13,62 +13,15 @@ the variables are presented.
 Some instructional comments follow the variable descriptions for clarification.
 QGIS or any ASCII text editor can be used to create or edit the data files.
 
-All of the data entries, integers (i) or real numbers (r) are in free format space delimited.
-The ID characters (letters) are case sensitive.
-The variables are listed line by line and each line may contain several variables that are highlighted by
-bold text and capital letters.
-Array variables are indexed as shown in the following example from the INFLOW.DAT file, Line 3:
-
-   Line 3 **HYDCHAR = ‘H’, HP(I,J,1), HP(I,J,2), HP(I,J,3)**
-
-   *I = 1, J = 1, Number of inflow hydrograph pairs*
-
-   where:
-
-       I and J (array indices) represent element number and hydrograph pair.
-
-       **H(I,J,1)** = time (hrs) start of the discretized interval of inflow hydrograph.
-
-       **H(I,J,2)** = discharge (cfs).
-
-       **H(I,J,3)** = mudflow sediment concentration by volume inflow hydrograph.
-
-       **HDYCHAR** is a line identifier character ‘H’.
-
-The variables in Line 3 on the INFLOW.DAT file represent one line of a discretized inflow hydrograph that is
-repeated for each of the hydrograph pairs for each inflow grid element.
-The Line 3 data for the first four-time steps is as follows:
-
-.. raw:: html
-
-    <div style="border:2px solid black; padding:5px; display:inline-block;">
-        <div><i><pre>                INFLOW.DAT Variable Example</pre></i></div>
-        <hr style="margin:4px 0;border:2px solid black;">
-    <pre>
-      <b>HP(J,1)</b>           <b>HP(J,2)</b>              <b>HP(J,3)</b>
-    Time (hrs)      Discharge (cfs)     Sediment Conc. (% by Volume)
-        0.0                0.0                      0.00
-
-        0.1                10.0                     0.00
-
-        0.2                25.0                     0.20
-
-        0.3                50.0                     0.25
-    </pre>
-    </div>
-
-Backup files of the data files (\*.BAC) can be created when program reads the data.
-The backup option is invoked by a switch (IBACKUP) in the CONT.DAT file.
-
-List of Program file units
-------------------------------
+LIST OF PROGRAM FILE UNITS
+---------------------------
 
 The following table lists the data and output file (‘Unit’) numbers that are assigned by the FLO-2D model at runtime.
 These unit numbers may be reported in error messages and referring to these numbers may help to locate input data
 errors.
 
-Data files
---------------
+DATA FILES
+-----------
 
 Four data files are required for every flood simulation: CONT.DAT, TOLER.DAT, FPLAIN.DAT, CADPTS.DAT.
 The INFLOW.DAT and OUTFLOW.DAT files are optional, but typically are necessary for a FLO-2D flood simulation.
@@ -566,7 +519,7 @@ SYSTEM CONTROL DATA
 
    * - STARTIMTEP
      - r
-     - **0 to ENDTIM- TEP**
+     - **0 to ENDTIMTEP**
      - Start time for the time series output data (hours).
        Set this value to any time 0 to ENDTIMTEP.
 
@@ -597,7 +550,7 @@ SYSTEM CONTROL DATA
 
    * - XARF
      - r
-     - **0.
+     - **0.0
        - 1.**
      - Global area reduction factor applied to all grid elements. This factor reduces the
 
@@ -845,7 +798,7 @@ NUMERICAL STABILITY CONTROL DATA
         (see comments 3 thru 5).
 
     * - COURCHAR
-      - **r**
+      - **c**
       - C, T
       - Character ‘C’ that identifies Line 2 with the Courant stability parameter.
 
@@ -1701,7 +1654,8 @@ OUTFLOW HYDROGRAPH DATA
         O	568
         O1	1005
         O1	1006
-        O1      1007.....
+        O1  1007
+            .....
         </pre>
     </div>
 
@@ -1921,6 +1875,8 @@ RAINFALL DATA
         2558   0.50
         </pre>
     </div>
+
+
 
 
 **Variable Descriptions for the RAIN.DAT File**
