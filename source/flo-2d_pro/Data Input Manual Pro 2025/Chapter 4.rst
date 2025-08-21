@@ -654,10 +654,6 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
       assigned.
       The basic equation for the grid element roughness nd as function of flow depth is:
 
-        .. |br| raw:: html
-
-           <br>
-
         .. math::
             :label:
 
