@@ -58,7 +58,6 @@ C:\\users\\public\\public documents\\flo-2d pro documentation https://documentat
 
 **Seeking Assistance – Technical Support**
 
-
 For technical support questions, please email FLO-2D via this |Contact-Form|.
 
 .. |Contact-Form| raw:: html
@@ -76,42 +75,40 @@ simulation.
 Questions regarding a project application are considered to be technical consulting and outside the scope of data input technical support.
 If assistance is needed on a project, reasonable consulting fees can be discussed to provide guidance and oversight.
 
-Hydrology, Base Mapping and DTM Points
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Hydrology, Base Mapping and DTM Points**
 
-**DTM data**
+DTM data
 
-To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model
-(DTM) data which might consist of LiDAR data, point shape files, rasters, contour maps or digital elevation model
-DEM data.
-The imagery and DTM points must have the same coordinate system.
-The most common formats for digital imagery are; \*.tif, \*.sid and \*.jpg files
+    To start a FLO-2D model, define the project area and compile available mapping, imagery and digital terrain model
+    (DTM) data which might consist of LiDAR data, point shape files, rasters, contour maps or digital elevation model
+    DEM data.
+    The imagery and DTM points must have the same coordinate system.
+    The most common formats for digital imagery are; \*.tif, \*.sid and \*.jpg files
 
-.. note::
-   Images must have corresponding world files (e.g. \*.tfw, \*.sdw and \*.jgw).
+    .. note::
+       Images must have corresponding world files (e.g. \*.tfw, \*.sdw and \*.jgw).
 
-   If photogrametric or LiDAR data are not available, DEM data can be used.
+       If photogrametric or LiDAR data are not available, DEM data can be used.
 
-   Elevation data formats that are accepted by the QGIS/FLO-2D Plugin are ASCII Grid, ASCII xyz data sets and
-   ArcGIS elevation shapefiles and Elevation Raster GeoTiff files.
+       Elevation data formats that are accepted by the QGIS/FLO-2D Plugin are ASCII Grid, ASCII xyz data sets and
+       ArcGIS elevation shapefiles and Elevation Raster GeoTiff files.
 
-**Hydrologic data**
+Hydrologic data
 
-Hydrologic data for a flood simulation can include both rainfall and discharge hydrographs.
-The rainfall runoff from a watershed model can be the desired product or the watershed model can be used to
-generate inflow flood hydrographs for downstream flood routing.
-In either case the hydrologic data should be carefully reviewed because the area of inundation is determined by
-the flood and rainfall volume.
+    Hydrologic data for a flood simulation can include both rainfall and discharge hydrographs.
+    The rainfall runoff from a watershed model can be the desired product or the watershed model can be used to
+    generate inflow flood hydrographs for downstream flood routing.
+    In either case the hydrologic data should be carefully reviewed because the area of inundation is determined by
+    the flood and rainfall volume.
 
-**Floodplain and channel detail**
+Floodplain and channel detail
 
-If river channels, bridges, culverts, buildings and streets are to be simulated, the user must be able to locate
-these features with respect to individual grid elements. Aerial imagery and shapefiles are used for this purpose.
-Additional data may be required for these components including bridge and culvert rating curves or tables, streets
-width and curb height, and river cross-section surveys.
+    If river channels, bridges, culverts, buildings and streets are to be simulated, the user must be able to locate
+    these features with respect to individual grid elements. Aerial imagery and shapefiles are used for this purpose.
+    Additional data may be required for these components including bridge and culvert rating curves or tables, streets
+    width and curb height, and river cross-section surveys.
 
-Estimate the project area
-~~~~~~~~~~~~~~~~~~~~~~~~~
+**Estimate the project area**
 
 To create a computationally efficient model, it is best to minimize the grid system around the project area.
 The project computational domain (or grid system) can be outlined using the aerial photography.
@@ -126,8 +123,7 @@ A coarse grid system can be established for watershed or river system and a more
 the local project area where flood detail may be important.
 The outflow from the course grid system will constitute the inflow to the detailed grid system.
 
-Selecting the grid element size
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Selecting the grid element size**
 
 See the FLO-2D Reference Manual for more instructions.
 Once the overall project area has been identified, estimate the grid system size (as a rough rectangle) and determine
@@ -163,8 +159,7 @@ Grid System Size.*
 | 1,000,000                       | Very Slow (> 1 day)             |
 +---------------------------------+---------------------------------+
 
-Start simple, then add detail
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Start simple, then add detail**
 
 The first flood simulation for any project will be a simple overland flow model upon which a more detailed flood simulation will be built.
 
@@ -193,27 +188,24 @@ The four compass directions are numbered 1 to 4 and the four diagonal directions
 Some components such as levees are placed on boundaries of the grid element.
 The grid element boundaries constitute an octagon for components associated with the boundary.
 
-Saving data
-~~~~~~~~~~~
-
+**Saving data**
 When creating or editing the data files, it is suggested that the data files saved frequently and that one folder for testing a project and another
 one for editing a project.
 It is suggested that the data files be saved after finishing each component.
 
-Develop the Project Files
-~~~~~~~~~~~~~~~~~~~~~~~~~
+**Develop the Project Files**
 
-*Create a Project Folder*
+Create a Project Folder
 
     Start by creating a subdirectory for the project data files and import the DTM data base files, map images and
     aerial photos.
 
-*Build the Project Files*
+Build the Project Files
 
     Use the QGIS/FLO-2D Plugin to graphically create and edit the grid system Follow the QGIS Lesson 1
     “Getting Started” lesson.
 
-*Run the FLO-2D model*
+Run the FLO-2D model
 
     The required data files for a basic overland flood model are:
 
@@ -233,8 +225,7 @@ Develop the Project Files
         i.  QGIS - click on ‘\ *Run FLO-2D’* command in the File menu.
         ii. Copy the ‘\ *FLOPRO.EXE’* file in the project folder and double click it.
 
-Some General Guidelines
-~~~~~~~~~~~~~~~~~~~~~~~
+**Some General Guidelines**
 
 *Data Input*
 
@@ -266,11 +257,10 @@ Some General Guidelines
        Outflow nodes should not be doubled up.
        Use a single line of outflow nodes.
 
-Model Component considerations
+MODEL COMPONENT CONSIDERATIONS
 ----------------------------------
 
-Channel Modeling
-~~~~~~~~~~~~~~~~
+**Channel Modeling**
 
 The 1-D channel component can simulate flow in channels defined by various geometries.
 The flow shares between the channel banks and the floodplain.
@@ -279,8 +269,7 @@ They can reduce flooding and help the water move downstream quicker than flow on
 An extensive Channel Guidelines document is available in the Manuals Folder.
 C:\\users\\Public\\Public Documents\\FLO-2D Pro Documenta- tion\\flo_help\\Manuals.
 
-Street Flow
-~~~~~~~~~~~
+**Street Flow**
 
 Streets may convey or store only a small portion of the total flood volume, but may be important for distributing
 the flow to remote areas of the grid system.
@@ -288,8 +277,7 @@ Street flow is simulated as a shallow rectangular channel with curbs.
 Street width and n-values are spatially variable.
 Streets are important to flood distribution in urban areas.
 
-Levees, Dams and Breach
-~~~~~~~~~~~~~~~~~~~~~~~
+**Levees, Dams and Breach**
 
 Levees and levee failure can be an important detail for floodplain projects.
 Levees are assigned to grid element boundaries with a crest elevations.
@@ -298,8 +286,7 @@ There is a levee and dam erosion component in FLO-2D.
 An extensive Levee, Dam, and Wall Breach document is available in the Manuals folder.
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Levee Dam and Wall Breach Guidelines.pdf
 
-Rainfall and Infiltration on Alluvial Fans
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Rainfall and Infiltration on Alluvial Fans**
 
 Alluvial fan surfaces can be as large as the upstream watershed.
 Fan rainfall can contribute a volume of water on the same order of magnitude as the inflow flood hydrograph at the fan apex.
@@ -307,8 +294,7 @@ Infiltration losses can also significantly effect flood- wave attenuation.
 Infiltration losses can be calibrated by adjusting the hydraulic conductivity.
 Spatial variable hydraulic conductivity can be assigned in the QGIS/ FLO-2D Plugin.
 
-Sediment Bulking of Flood Hydrographs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**Sediment Bulking of Flood Hydrographs**
 
 An alluvial fan will have geomorphic features that identify the watershed potential for generating mudflows.
 For mudflow simulation, sediment concentration can be assigned in the INFLOW.DAT file.
