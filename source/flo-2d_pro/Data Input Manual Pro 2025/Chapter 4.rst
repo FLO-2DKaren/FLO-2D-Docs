@@ -1595,7 +1595,7 @@ OUTFLOW HYDROGRAPH DATA
         T  0.0  0.00            Line 3: <b>OUTCHAR = ‘T’ CHDEPTH(J) CQTABLE(J) J=1 T  3.0  50.35   Line 3: OUTCHAR = ‘T’ CHDEPTH(J)
                                         CQTABLE(J) J=2 T  5.0  157.67  Line 3: OUTCHAR = ‘T’ CHDEPTH(J) CQTABLE(J) J=3 K  567
                                         Line 1: OUTCHAR = ‘K’ KOUT</b>
-        N   567  1              Line 4:  <b>OUTCHAR = ‘N’ NOSTA NOSTACFP</b>
+        N   567  1              Line 4: <b>OUTCHAR = ‘N’ NOSTA NOSTACFP</b>
         S  0.00 0.00            Line 5: <b>OUTCHAR = ‘S’ STA_TIME(J) STA_STAGE(J) J=1 S  0.50 10.00    Line 5: OUTCHAR = ‘S’
                                         STA_TIME(J) STA_STAGE(J) J=2 O  273    Line 6 OUTCHAR = ‘O’ NODDC(J) J=1</b>
         O1 373                  Line 6: <b>OUTCHAR = ‘O1’ NODDC(J) J=2</b>
@@ -1625,7 +1625,7 @@ OUTFLOW HYDROGRAPH DATA
         <hr style="margin:4px 0;border:2px solid black;">
         <pre>
         K   374
-        H   10.0  2.6  0.35
+        H   10.0    2.6  0.35
         K	1007
         T	0.0	0.00
         T	3.0	50.35
@@ -1694,7 +1694,7 @@ OUTFLOW HYDROGRAPH DATA
     * - HOUT(J,2)
       - **r**
       - 0.0 - ∞
-      - Array of coefficients for the channel element outflow stage- discharge
+      - Array of coefficients for the channel element outflow stage-discharge
 
         relationship (see comment 3).
 
@@ -1764,7 +1764,7 @@ OUTFLOW HYDROGRAPH DATA
 1. Either the channel or the floodplain outflow elements can be used to discharge the flow off the grid system.
    The outflow node is an artificial grid element whose sole purpose is to discharge flow off the grid system.
    The outflow nodes should not contain hydraulic structures, streets or other attributes.
-   The flood- plain elevation of the outflow node is automatically set to an elevation lower (0.25 ft or 0.1 m) than
+   The floodplain elevation of the outflow node is automatically set to an elevation lower (0.25 ft or 0.1 m) than
    the lowest upstream grid element unless it is already lower than all the upstream grid elements.
 
 2. Omitting Lines 2 and 3 will cause all the inflow to the outflow elements to discharge from the grid system at
@@ -1774,7 +1774,7 @@ OUTFLOW HYDROGRAPH DATA
    This is a simple method to ensure that backwater related to artificial boundary conditions does not occur in the
    upstream elements.
 
-3. Channel boundary outflow condition may be established by specifying a stage- discharge relationship given by;
+3. Channel boundary outflow condition may be established by specifying a stagedischarge relationship given by;
 
     .. math::
         :label:
