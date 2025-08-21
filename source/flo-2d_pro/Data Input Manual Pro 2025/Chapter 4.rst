@@ -661,10 +661,11 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
         where:
 
-    .. raw:: html
+        .. raw:: html
 
-            n\ :sub:`b` = bankfull discharge roughness depth = flow depth<br>
+            n<sub>b</sub> = bankfull discharge roughness depth = flow depth<br>
             dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+
 
        This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
        submergence of all roughness elements (assumed to be 3 ft or 1 m).
@@ -871,9 +872,10 @@ NUMERICAL STABILITY CONTROL DATA
 
         \Delta t = \frac{C \Delta x}{(\beta V + c)}
 
-    .. raw:: html
 
         where:
+
+        .. raw:: html
 
             C is the Courant number (C ≤ 1.0) Δx is the square grid element width.<br>
             V is the computed average cross section velocity.<br>
