@@ -7362,17 +7362,17 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           SWMMFLO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                Line 1: <b>SWMMCHARRT=’D’   SWMM_JT(I)   STRUCTNAME_INLET</b>
-         D   14292   I4-26
-                Line 2: <b>SWMMCHAR = ‘N’    DEPTHSWMMRT(J,K)   QSWMMRT(J,K)</b>
-         N    0.0     0.0
+    <pre>
+           Line 1: <b>SWMMCHARRT=’D’   SWMM_JT(I)   STRUCTNAME_INLET</b>
+    D   14292   I4-26
+           Line 2: <b>SWMMCHAR = ‘N’    DEPTHSWMMRT(J,K)   QSWMMRT(J,K)</b>
+    N    0.0     0.0
 
-                Line 1: <b>SWMMCHARRT=’S’   SWMM_JT(I)   STRUCTNAME_INLET   CDIAMETER(I)</b>
-         S   7545   I4-38   1.5
-                Line 2: <b>SWMMCHAR = ‘F’   TYPECTYP4   TYPEENTYP4   CUBASETYP4  MULTBARRELSTYP4</b>
-         F   2   1   0   1
-        </pre>
+           Line 1: <b>SWMMCHARRT=’S’   SWMM_JT(I)   STRUCTNAME_INLET   CDIAMETER(I)</b>
+    S   7545   I4-38   1.5
+           Line 2: <b>SWMMCHAR = ‘F’   TYPECTYP4   TYPEENTYP4   CUBASETYP4  MULTBARRELSTYP4</b>
+    F   2   1   0   1
+    </pre>
     </div>
 
 .. raw:: html
@@ -7384,17 +7384,17 @@ STORM DRAIN TYPE 4 RATING TABLE FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               SWMMFLO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+    <pre>
+    D 14291 I37CP1WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-        D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
+    D 14481 I37CP2WTRADL 2 13.00 1.00 0.42 2.30 0 0.00
 
-        D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+    D 13785 I14CP1WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-        D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
+    D 13968 I14CP2WTRCLRL 2 20.00 1.00 0.42 2.30 0 0.00
 
-        D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
-        </pre>
+    D 14156 I15WTRCLRL 3 11.00 7.00 0.50 3.00 0 0.00
+    </pre>
     </div>
 
 .. raw:: html
@@ -7522,11 +7522,11 @@ STORM DRAIN OUTFALL ID DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                   SWMMOUTF.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                Line 1: <b>OUTF_NAME(JT)   OUTF_GRID(JT)   OUTF_FLO2DVOL(JT)</b>
-                        <i>JT = Number of outfalls.</i>
-        OUTFALL1  14292    1
-        </pre>
+    <pre>
+         Line 1: <b>OUTF_NAME(JT)   OUTF_GRID(JT)   OUTF_FLO2DVOL(JT)</b>
+                 <i>JT = Number of outfalls.</i>
+    OUTFALL1  14292    1
+    </pre>
     </div>
 
 .. raw:: html
@@ -7538,10 +7538,10 @@ STORM DRAIN OUTFALL ID DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>SWMMOUTF.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        OUTFALL1  14292    1
-         ...
-        </pre>
+    <pre>
+    OUTFALL1  14292    1
+    ...
+    </pre>
     </div>
 
 .. raw:: html
@@ -7607,12 +7607,12 @@ STORM DRAIN BLOCKAGE METHOD FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               SDCLOGGING.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                    Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I) SWMM_IDEN(I)
-                            SWMM_CLOGFAC(I) CLOGTIME(I)</b>
+    <pre>
+                Line 1: <b>SWMMCHAR= ‘D’ SWMM_JT(I) SWMM_IDEN(I)
+                        SWMM_CLOGFAC(I) CLOGTIME(I)</b>
 
-        D 2694 I1 25 0.50
-        </pre>
+    D 2694 I1 25 0.50
+    </pre>
     </div>
 
 .. raw:: html
@@ -7624,14 +7624,14 @@ STORM DRAIN BLOCKAGE METHOD FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>SDCLOGGING.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        D 2694 I1 25 0.50
-        D 3658 I2 25 0.50
-        D 224 I3 25 0.50
-        D 5286 I4 25 0.50
-        D 10257 I5 25 0.50
-        ...
-        </pre>
+    <pre>
+    D 2694 I1 25 0.50
+    D 3658 I2 25 0.50
+    D 224 I3 25 0.50
+    D 5286 I4 25 0.50
+    D 10257 I5 25 0.50
+    ...
+    </pre>
     </div>
 
 .. raw:: html
