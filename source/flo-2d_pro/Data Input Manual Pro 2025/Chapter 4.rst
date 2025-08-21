@@ -663,9 +663,10 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
             n_d = n_b \, ^* \, 1.5 \, ^* \, e^{-(\frac{0.4 depth}{dmax})}
 
-        where:|br|
-                 n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
-                 dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+        where:
+
+            n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
+            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
        This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
        submergence of all roughness elements (assumed to be 3 ft or 1 m).
@@ -732,11 +733,11 @@ NUMERICAL STABILITY CONTROL DATA
     <div style="border:2px solid black; padding:5px; display:inline-block;">
         <div><i><pre>                           TOLER.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0.1  0.00                   Line 1: <b>TOLGLOBAL   DEPTOL</b>
-        C  0.6   0.6   0.6          <b>Line 2: COURCHAR = ‘C’  COURANTFP   COURANTC COURANTST</b>
-        T   0.1                     <b>Line 3: COURCHAR = “T”   TIME_ACCEL</b>
-        </pre>
+    <pre>
+    0.1  0.00                   Line 1: <b>TOLGLOBAL   DEPTOL</b>
+    C  0.6   0.6   0.6          <b>Line 2: COURCHAR = ‘C’  COURANTFP   COURANTC COURANTST</b>
+    T   0.1                     <b>Line 3: COURCHAR = “T”   TIME_ACCEL</b>
+    </pre>
     </div>
 
 .. raw:: html
@@ -748,11 +749,11 @@ NUMERICAL STABILITY CONTROL DATA
     <div style="border:2px solid black; padding:5px; display:inline-block;">
         <div><i><pre>TOLER.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0.1 0.00
-        C 0.6 0.6 0.6
-        T 0.1
-        </pre>
+    <pre>
+    0.1 0.00
+    C 0.6 0.6 0.6
+    T 0.1
+    </pre>
     </div>
 
 .. raw:: html
