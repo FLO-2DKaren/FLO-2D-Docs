@@ -122,11 +122,11 @@ SYSTEM CONTROL DATA
      0.1 Line 9: <b> GRAPTIM</b><br>
 
     Notes:
-       Line 5: If IFLOODWAY = 0 omit ENCROACH
-       Line 7: If ICHANNEL = 0 omit Line 7
-       Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required
-       Line 8: If ITIMTEP = 11, 21, 31, 41, or 51 add STARTTIMTEP and ENDTIMTEP
-       Line 9: If LPLOT = 0 omit Line 9
+     Line 5: If IFLOODWAY = 0 omit ENCROACH
+     Line 7: If ICHANNEL = 0 omit Line 7
+     Line 8: If ITIMTEP = 5 TIMEDEPCELL.DAT is required
+     Line 8: If ITIMTEP = 11, 21, 31, 41, or 51 add STARTTIMTEP and ENDTIMTEP
+     Line 9: If LPLOT = 0 omit Line 9
     </pre>
     </div>
 
