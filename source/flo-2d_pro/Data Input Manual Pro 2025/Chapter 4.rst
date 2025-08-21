@@ -5166,36 +5166,36 @@ MUDFLOW AND SEDIMENT TRANSPORT DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                               SED.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                                Line 1:  <b>SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX</b>
-        M 0.000602 33.10 0.001720 29.50 2.74 0.00
+    <pre>
+                           Line 1:  <b>SEDCHAR = ‘M’ VA VB YSA YSB SGSM XKX</b>
+    M 0.000602 33.10 0.001720 29.50 2.74 0.00
 
-                                Line 2:  <b>SEDCHAR = ‘C’ ISEDEQG ISEDSIZEFRAC DFIFTY SGRAD
-                                         SGST DRYSPWT CVFG ISEDSUPPLY ISEDISPLAY</b>
-        C 2 0.25 2.5 2.65 92.5 1 7232
+                            Line 2:  <b>SEDCHAR = ‘C’ ISEDEQG ISEDSIZEFRAC DFIFTY SGRAD
+                                     SGST DRYSPWT CVFG ISEDSUPPLY ISEDISPLAY</b>
+    C 2 0.25 2.5 2.65 92.5 1 7232
 
-        Z 2 5.0 0.15            Line 3:  <b>SEDCHAR = ‘Z’ ISEDEQI BEDTHICK CVFI</b>
-        P 0.062 0.010           Line 4:  <b>SEDCHAR = ‘P’ SEDIAM SEDPERCENT</b>
-        D 111 20.0              Line 5:  <b>SEDCHAR = ‘D’ JDEBNOD DEBRISV</b>
-        E 1.0                   Line 6:  <b>SEDCHAR = ‘E’ SCOURDEP</b>
-        R 9366                  Line 7:  <b>SEDCHAR = ‘R’ ICRETIN(N)</b> <i>N = number of rigid bed nodes</i>
-        S 23798 1 4.49 0.89     Line 8:  <b>SEDCHAR = ‘S’ ISEDGRID(N) ISEDCFP(N) ASED(N)
-                                         BSED(N)</b> <i>N = number of sediment supply rating curves.</i>
-        N 0.062 0.052           Line 9:  <b>SEDCHAR = ‘N’ SSEDIAM SSEDPERCENT</b>
-        G 1 3                   Line 10: <b>SEDCHAR = ‘G’ ISEDUM ISEDGROUP(N)</b>
-                                          <i>N = number of sediment groups</i>
+    Z 2 5.0 0.15            Line 3:  <b>SEDCHAR = ‘Z’ ISEDEQI BEDTHICK CVFI</b>
+    P 0.062 0.010           Line 4:  <b>SEDCHAR = ‘P’ SEDIAM SEDPERCENT</b>
+    D 111 20.0              Line 5:  <b>SEDCHAR = ‘D’ JDEBNOD DEBRISV</b>
+    E 1.0                   Line 6:  <b>SEDCHAR = ‘E’ SCOURDEP</b>
+    R 9366                  Line 7:  <b>SEDCHAR = ‘R’ ICRETIN(N)</b> <i>N = number of rigid bed nodes</i>
+    S 23798 1 4.49 0.89     Line 8:  <b>SEDCHAR = ‘S’ ISEDGRID(N) ISEDCFP(N) ASED(N)
+                                     BSED(N)</b> <i>N = number of sediment supply rating curves.</i>
+    N 0.062 0.052           Line 9:  <b>SEDCHAR = ‘N’ SSEDIAM SSEDPERCENT</b>
+    G 1 3                   Line 10: <b>SEDCHAR = ‘G’ ISEDUM ISEDGROUP(N)</b>
+                                     <i>N = number of sediment groups</i>
 
-        Notes:
-         Only a sediment transport ISED or mudflow MUD simulation can be applied in a project model.
-         If MUD = 0 in the CONT.DAT file, omit line 1.
-         If ISED = 0 in the CONT.DAT file, omit line 2, 3, 4, 6, 7, 8, and 9.
-         If both MUD and ISED = zero in the CONT.DAT file, omit this file.
-         Line 2: If ISEDSIZEFRAC = 1, it is necessary to create a sediment group using Lines 3 and 4.
-         Line 4: Repeat this line for each size fraction.
-         Each group must have the same number of size fractions.
-         Line 5: If debris basin IDEBRV = 0 in the CONT.DAT file, ignore this line.
-         Line 8, 9: If ISEDSUPPLY = 0, ignore these lines.
-        </pre>
+    Notes:
+     Only a sediment transport ISED or mudflow MUD simulation can be applied in a project model.
+     If MUD = 0 in the CONT.DAT file, omit line 1.
+     If ISED = 0 in the CONT.DAT file, omit line 2, 3, 4, 6, 7, 8, and 9.
+     If both MUD and ISED = zero in the CONT.DAT file, omit this file.
+     Line 2: If ISEDSIZEFRAC = 1, it is necessary to create a sediment group using Lines 3 and 4.
+     Line 4: Repeat this line for each size fraction.
+     Each group must have the same number of size fractions.
+     Line 5: If debris basin IDEBRV = 0 in the CONT.DAT file, ignore this line.
+     Line 8, 9: If ISEDSUPPLY = 0, ignore these lines.
+    </pre>
     </div>
 
 .. raw:: html
