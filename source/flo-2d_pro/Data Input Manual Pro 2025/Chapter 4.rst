@@ -2028,11 +2028,11 @@ FILE: RAINCELL.DAT
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           RAINCELL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         15   96  1/1/2000     12:00:00 AM   1/2/2000     12:00:00 AM
-                                        Line 1: RAININTIME   IRINTERS   TIMESTAMP
-         1   0.0                        Line 2: IRAINDUM (I)   RRGRID(I,K)
-        </pre>
+    <pre>
+    15   96  1/1/2000     12:00:00 AM   1/2/2000     12:00:00 AM
+                                   Line 1: RAININTIME   IRINTERS   TIMESTAMP
+    1   0.0                        Line 2: IRAINDUM (I)   RRGRID(I,K)
+    </pre>
     </div>
 
 .. raw:: html
@@ -2044,14 +2044,14 @@ FILE: RAINCELL.DAT
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           RAINCELL.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         1             73           4/17/2013     12:00:00 AM   4/20/2013     2:00:00 AM
-         1            0.0
-         2            0.0
-         3            0.0
-         4            0.0
-         5            0.0
-        </pre>
+    <pre>
+     1             73           4/17/2013     12:00:00 AM   4/20/2013     2:00:00 AM
+     1            0.0
+     2            0.0
+     3            0.0
+     4            0.0
+     5            0.0
+    </pre>
     </div>
 .. raw:: html
 
@@ -2105,7 +2105,7 @@ FILE: RAINCELL.DAT
 
 **Instructional Comments for the RAINCELL.DAT File**
 
-1. Real-time rainfall, specifically NEXRAD rainfall data, is rainfall information that varies both in space and time
+1. Realtime rainfall, specifically NEXRAD rainfall data, is rainfall information that varies both in space and time
    and is applied to individual cells within a grid system.
    The rainfall data is usually recorded at fifteen-minute intervals over a specific duration.
    All the relevant data for this rainfall, forming a comprehensive dataset, is stored within the RAINCELL.DAT file.
@@ -2121,15 +2121,7 @@ FILE: RAINCELL.DAT
 
     7/13/2008 10:00 7/13/2008 15:00 1 5
 
-    C:\\Projects\\NexRAD\\Min1.asc
-
-    C:\\Projects\\NexRAD\\Min2.asc
-
-    C:\\Projects\\NexRAD\\Min3.asc
-
-    C:\\Projects\\NexRAD\\Min4.asc
-
-    C:\\Projects\\NexRAD\\Min5.asc
+   .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter4/DIM_Pro_2025_Chapter4_001.png
 
 4. The timestamp is not used by the FLO-2D Plugin or FLOPRO.EXE engine.
    It is a reference variable.
