@@ -1086,7 +1086,7 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
 
 5. The roughness assigned to the floodplain grid element should represent the flow resistance associated with a flow
    depth of 3 ft (1 m) or greater.
-   The model automatically computes a depth variable roughness for depths less than 3 ft ap- proximately as follows:
+   The model automatically computes a depth variable roughness for depths less than 3 ft approximately as follows:
 
         .. math::
             :label:
@@ -1095,9 +1095,8 @@ FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The mod
 
         where:
 
-            n\ :sub:`b` = bankfull discharge roughness depth = flow depth
-
-            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+            n\ :sub:`b` = bankfull discharge roughness depth = flow depth|br|
+            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)|br|
 
 To turn off the depth variable roughness set AMANN = -99.
 See the Comment 9 in the CONT.DAT file.
