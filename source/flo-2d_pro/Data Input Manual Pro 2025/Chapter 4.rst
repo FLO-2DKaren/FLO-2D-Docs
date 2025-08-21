@@ -4327,13 +4327,13 @@ SUBMERGENCE DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                   SUBMERGE_FACTOR.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        1181 1.2 Line 1:    <b>CELL SUBM_ADJ(I)</b>
-                            <i>L = number of grid elements in each street segment.</i>
+    <pre>
+    1181 1.2 Line 1:    <b>CELL SUBM_ADJ(I)</b>
+                        <i>L = number of grid elements in each street segment.</i>
 
-        Notes:
-          If MSTREET = 0 in the CONT.DAT file, omit this file.
-        </pre>
+    Notes:
+    If MSTREET = 0 in the CONT.DAT file, omit this file.
+    </pre>
     </div>
 
 .. raw:: html
