@@ -4686,9 +4686,9 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
                                                 J = 8 flow directions</i>
 
     Notes:
-    If IWRFS = 0 in the CONT.DAT file, omit this file.
-    Line 1: Repeat this line for each totally blocked grid element.
-    Line 2: Repeat this line for each partially blocked grid element.
+     If IWRFS = 0 in the CONT.DAT file, omit this file.
+     Line 1: Repeat this line for each totally blocked grid element.
+     Line 2: Repeat this line for each partially blocked grid element.
     </pre>
     </div>
 
@@ -4699,25 +4699,25 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>ARF.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        S 0.
-        T 540
-        T 2502
-        T 3818
-        T 3861
-        T 4435
-        T 4766
-          46 .1 0 .5 0 .5 0 0 0 0
-          69 .3 0 0 0 0 0 0 0 0
-          119 .4 .5 .7 1 0 0 0 0 0
-          120 0 0 0 0 1 0 .2 0 0
-          142 .2 .2 0 0 0 0 0 0 0
-          161 .5 0 0 0 0 0 0 0 0
-          162 .5 .7 .2 1 0 0 0 0 1
-          163 .1 0 0 0 1 0 0 0 0
-          182 .3 0 0 0 0 0 0 .3 0
-          ....
-        </pre>
+    <pre>
+    S 0.
+    T 540
+    T 2502]
+    T 3818
+    T 3861
+    T 4435
+    T 4766
+     46 .1 0 .5 0 .5 0 0 0 0
+     69 .3 0 0 0 0 0 0 0 0
+     119 .4 .5 .7 1 0 0 0 0 0
+     120 0 0 0 0 1 0 .2 0 0
+     142 .2 .2 0 0 0 0 0 0 0
+     161 .5 0 0 0 0 0 0 0 0
+     162 .5 .7 .2 1 0 0 0 0 1
+     163 .1 0 0 0 1 0 0 0 0
+     182 .3 0 0 0 0 0 0 .3 0
+     ....
+    </pre>
     </div>
 
 .. raw:: html
@@ -4865,18 +4865,18 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           MULT.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                                Line 1: <b>WMC WDRALL DMALL NODCHNSALL XNMULTALL
-                                        SSLOPEMIN, SSLOPEMAX AVULD50</b>
-        0 0.0 5.0 1 0.04 0.00 0.00 0.0
+    <pre>
+                           Line 1: <b>WMC WDRALL DMALL NODCHNSALL XNMULTALL
+                                   SSLOPEMIN, SSLOPEMAX AVULD50</b>
+    0 0.0 5.0 1 0.04 0.00 0.00 0.0
 
-        1961 3.0 5.0 1 0.04     Line 2: <b>IGRID(I) WDR(I) DM(I) NODCHNS(I) XNMULT(I)</b>
-                                        <i>I = number of grid elements with multiple channels</i>
-        Notes:
-          If IMULTC = 0 in the CONT.DAT file, omit this file.
-          If WDRALL = 0, no global assignment of the variables occurs.
-          Line 3: Repeat this line for each grid element revision.
-        </pre>
+    1961 3.0 5.0 1 0.04     Line 2: <b>IGRID(I) WDR(I) DM(I) NODCHNS(I) XNMULT(I)</b>
+                                    <i>I = number of grid elements with multiple channels</i>
+    Notes:
+     If IMULTC = 0 in the CONT.DAT file, omit this file.
+     If WDRALL = 0, no global assignment of the variables occurs.
+     Line 3: Repeat this line for each grid element revision.
+    </pre>
     </div>
 
 .. raw:: html
@@ -4888,16 +4888,16 @@ MULTIPLE CHANNEL (RILL AND GULLY) DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>       MULT.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           0 0.0 5.0 1 0.04 0.00 0.00 0.0
-           1961 3.0 5.0 1 0.04
-           1962 3.0 5.0 1 0.04
-           1963 3.0 5.0 1 0.04
-           1964 3.0 5.0 1 0.04
-           1965 3.0 5.0 1 0.04
-           1966 3.0 5.0 1 0.04
-           1967 3.0 5.0 1 0.04
-        </pre>
+    <pre>
+    0 0.0 5.0 1 0.04 0.00 0.00 0.0
+    1961 3.0 5.0 1 0.04
+    1962 3.0 5.0 1 0.04
+    1963 3.0 5.0 1 0.04
+    1964 3.0 5.0 1 0.04
+    1965 3.0 5.0 1 0.04
+    1966 3.0 5.0 1 0.04
+    1967 3.0 5.0 1 0.04
+    </pre>
     </div>
 
 .. raw:: html
