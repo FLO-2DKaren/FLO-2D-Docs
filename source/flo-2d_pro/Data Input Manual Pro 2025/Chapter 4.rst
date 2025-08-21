@@ -3,6 +3,10 @@
 CHAPTER 4: INPUT DATA FILE DESCRIPTION
 ======================================
 
+.. |br| raw:: html
+
+   <br>
+
 GENERAL
 -------
 
@@ -667,13 +671,9 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
         where:
 
-         n\ :sub:`b` = bankfull discharge roughness depth = flow depth\
+         n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
          dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
-        .. raw:: html
-
-           0.0 &lt; flow depth &lt; 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
-           0.2 ft (0.06 m) &lt; flow depth &lt; 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2.<br>
 
        This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
        submergence of all roughness elements (assumed to be 3 ft or 1 m).
