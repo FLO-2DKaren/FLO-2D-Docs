@@ -189,6 +189,7 @@ Some components such as levees are placed on boundaries of the grid element.
 The grid element boundaries constitute an octagon for components associated with the boundary.
 
 **Saving data**
+
 When creating or editing the data files, it is suggested that the data files saved frequently and that one folder for testing a project and another
 one for editing a project.
 It is suggested that the data files be saved after finishing each component.
