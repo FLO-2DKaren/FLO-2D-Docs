@@ -2958,6 +2958,10 @@ CHANNEL DATA
 
 .. raw:: html
 
+    <br><br>
+
+.. raw:: html
+
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                               CHAN.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
@@ -3343,7 +3347,7 @@ CHANNEL DATA
 13. The first two channel elements in a segment should have a positive slope in the downstream direction.
     This is important for inflow channel elements.
     There should also be a positive slope into the channel outflow nodes.
-    This will im- prove the numerical stability around the inflow and outflow nodes.
+    This will improve the numerical stability around the inflow and outflow nodes.
 
 14. After deleting a channel element, remove the cross section for that channel element from the XSEC.DAT file and renumbered in the PROFILES program.
     If cross sections are mixed with other channel geometry (trapezoidal or rectangular), the cross-section elements should be grouped into segments to
