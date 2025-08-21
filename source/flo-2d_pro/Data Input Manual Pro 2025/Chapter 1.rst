@@ -108,7 +108,7 @@ Floodplain and channel detail
     Additional data may be required for these components including bridge and culvert rating curves or tables, streets
     width and curb height, and river cross-section surveys.
 
-**Estimate the project area**
+**Estimate the Project Area**
 
 To create a computationally efficient model, it is best to minimize the grid system around the project area.
 The project computational domain (or grid system) can be outlined using the aerial photography.
@@ -123,7 +123,7 @@ A coarse grid system can be established for watershed or river system and a more
 the local project area where flood detail may be important.
 The outflow from the course grid system will constitute the inflow to the detailed grid system.
 
-**Selecting the grid element size**
+**Selecting the Grid Element Size**
 
 See the FLO-2D Reference Manual for more instructions.
 Once the overall project area has been identified, estimate the grid system size (as a rough rectangle) and determine
@@ -159,7 +159,7 @@ Grid System Size.*
 | 1,000,000                       | Very Slow (> 1 day)             |
 +---------------------------------+---------------------------------+
 
-**Start simple, then add detail**
+**Start Simple, then Add Detail**
 
 The first flood simulation for any project will be a simple overland flow model upon which a more detailed flood simulation will be built.
 
@@ -188,7 +188,7 @@ The four compass directions are numbered 1 to 4 and the four diagonal directions
 Some components such as levees are placed on boundaries of the grid element.
 The grid element boundaries constitute an octagon for components associated with the boundary.
 
-**Saving data**
+**Saving Data**
 
 When creating or editing the data files, it is suggested that the data files saved frequently and that one folder for testing a project and another
 one for editing a project.
@@ -245,7 +245,7 @@ Run the FLO-2D model
     This switch is set in the QGIS/FLO-2D Plugin by clicking the Control Variables button.
     Then check the Graphics Display mode and the Run button.
 
-**Things to check when creating the data files:**
+Things to check when creating the data files:
 
    *Grid System*
 
