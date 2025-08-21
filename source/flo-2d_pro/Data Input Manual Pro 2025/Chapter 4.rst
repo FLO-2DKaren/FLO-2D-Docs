@@ -3688,7 +3688,7 @@ HYDRAULIC STRUCTURE DATA
     D 4 15
         </pre>
     </div>
-/
+
 .. raw:: html
 
     <br><br>
@@ -3723,22 +3723,22 @@ HYDRAULIC STRUCTURE DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>           HYSTRUC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        S BridgeA 1 0 1713 1827 0 4425.23 0.0 0.0
-        C 20.0 3.543 0.890
-        S BridgeB 0 0 2503 2725 1 0.0 0.0 0.0
-        C 5.0 25.023 1.035
-        C 10.0 30.00 1.4
-        R 12.0 0.00 1.0
-        S Wier 1 1 1856 1945 0 4421.18 0.0 0.0
-        T 0.0 0.0
-        T 5.0 250.0
-        T 8.0 5500.0
-        T 10.0 1000.0
-        T 12.5 1500.0
-        S CulvertA 1 2 4417 4562 0 0.0 100. 6.
-        F 1 2 0.004 0.1 0.0 1
-        </pre>
+    <pre>
+    S BridgeA 1 0 1713 1827 0 4425.23 0.0 0.0
+    C 20.0 3.543 0.890
+    S BridgeB 0 0 2503 2725 1 0.0 0.0 0.0
+    C 5.0 25.023 1.035
+    C 10.0 30.00 1.4
+    R 12.0 0.00 1.0
+    S Wier 1 1 1856 1945 0 4421.18 0.0 0.0
+    T 0.0 0.0
+    T 5.0 250.0
+    T 8.0 5500.0
+    T 10.0 1000.0
+    T 12.5 1500.0
+    S CulvertA 1 2 4417 4562 0 0.0 100. 6.
+    F 1 2 0.004 0.1 0.0 1
+    </pre>
     </div>
 
 .. raw:: html
