@@ -1216,16 +1216,16 @@ TOPOGRAPHICAL ELEVATION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                           TOPO.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        551397.50 44608.95 6.00                                   <b>Line 1:	XCOORD(I), YCOORD(I) FP(I, J)</b>
+    <pre>
+    551397.50 44608.95 6.00                                   <b>Line 1:	XCOORD(I), YCOORD(I) FP(I, J)</b>
 
 
-        Note: TOPO.DAT is a list of the grid element x- and y-coordinates and their elevations.
-        The elevations are interpolated from topographical data by the FLO-2D Plugin. This file contains
-        the same data as the FPLAIN.DAT and CADPTS.DAT files except for the neighbor grid elements and n-value.
-        It is automatically generated and edited by the FLO-2D Plugin when the FPLAIN.DAT is written. Use this file
-        together with Mannings_N.DAT for GIS and CADD applications.
-        </pre>
+    Note: TOPO.DAT is a list of the grid element x- and y-coordinates and their elevations.
+    The elevations are interpolated from topographical data by the FLO-2D Plugin. This file contains
+    the same data as the FPLAIN.DAT and CADPTS.DAT files except for the neighbor grid elements and n-value.
+    It is automatically generated and edited by the FLO-2D Plugin when the FPLAIN.DAT is written. Use this file
+    together with Mannings_N.DAT for GIS and CADD applications.
+    </pre>
     </div>
 
 .. raw:: html
@@ -1237,16 +1237,16 @@ TOPOGRAPHICAL ELEVATION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>       TOPO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        551397.50 44608.95 6.00
-        551397.50 44708.95 6.05
-        551397.50 44808.95 6.06
-        551397.50 44908.95 6.06
-        551397.50 45008.95 6.11
-        551397.50 45108.95 6.09
-        551397.50 45208.95 6.12
-        551397.50 45308.95 6.14
-        </pre>
+    <pre>
+    551397.50 44608.95 6.00
+    551397.50 44708.95 6.05
+    551397.50 44808.95 6.06
+    551397.50 44908.95 6.06
+    551397.50 45008.95 6.11
+    551397.50 45108.95 6.09
+    551397.50 45208.95 6.12
+    551397.50 45308.95 6.14
+    </pre>
     </div>
 
 ..  raw:: html
