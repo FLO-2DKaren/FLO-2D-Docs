@@ -665,7 +665,10 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
         where:
 
-            n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
+
+            .. raw::html
+
+            n\ :sub:`b` = bankfull discharge roughness depth = flow depth <br>
             dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
        This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
@@ -865,20 +868,21 @@ NUMERICAL STABILITY CONTROL DATA
 
 5. Using the Courant criteria, the timestep Δt is limited by:
 
-    .. |br| raw:: html
 
-       <br>
+
 
     .. math::
         :label:
 
         \Delta t = \frac{C \Delta x}{(\beta V + c)}
 
-    where:
+    .. raw:: html
 
-        C is the Courant number (C ≤ 1.0) Δx is the square grid element width.|br|
-        V is the computed average cross section velocity.|br|
-        β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
+        where:
+
+            C is the Courant number (C ≤ 1.0) Δx is the square grid element width.<br>
+            V is the computed average cross section velocity.<br>
+            β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
 
    The Courant coefficient C may vary from 0.2 to 0.9 depending on the size of the grid element and floodwave velocity.
    If C is set to 1.0, artificial or numerical diffusivity is assumed to be zero.
