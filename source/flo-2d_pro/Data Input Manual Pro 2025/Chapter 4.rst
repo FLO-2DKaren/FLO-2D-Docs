@@ -1036,7 +1036,7 @@ FLOODPLAIN GRID ELEMENT DATA
     * - DUM
       - **i**
       - **1 - NNOD**
-      - Grid element number (I) of the floodplain grid system.This is a dummy variable that is not used
+      - Grid element number (I) of the floodplain grid system. This is a dummy variable that is not used
 
         by the model. It is only used for the convenience of viewing the input data file.
 
@@ -1059,7 +1059,7 @@ FLOODPLAIN GRID ELEMENT DATA
 
 .. important::
     If a grid size, shape, elevation or roughness is adjusted with the FLO-2D Plugin, the exported data will
-    not overwrite FPLAIN.DAT,CADPTS.DAT, or NEIGHBORS.DAT. Those files should be deleted prior to running the engine.
+    not overwrite FPLAIN.DAT, CADPTS.DAT, or NEIGHBORS.DAT. Those files should be deleted prior to running the engine.
 
 FLOPRO.EXE reads the grid, elevation, and Manning’s n data as follows: The model verifies the following files:
 
