@@ -594,9 +594,7 @@ SYSTEM CONTROL DATA
        If MUD = 2, XCONC is the global mudflow or tailings sediment concentration by volume.
 
 
-**Instructional Comments**
-
-**CONT.DAT File**
+**Instructional Comments for the CONT.DAT File**
 
 These instructions will aid in assigning of the CONT.DAT file parameters:
 
@@ -670,9 +668,8 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
             n_d = n_b \, ^* \, 1.5 \, ^* \, e^{-(\frac{0.4 depth}{dmax})}
 
         where:|br|
-         n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
-         dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
-
+             n\ :sub:`b` = bankfull discharge roughness depth = flow depth |br|
+             dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
        This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
        submergence of all roughness elements (assumed to be 3 ft or 1 m).
@@ -926,19 +923,17 @@ FLOODPLAIN GRID ELEMENT DATA
     <div style="border:2px solid black; padding:5px; display:inline-block;">
         <div><i><pre>                                   FPLAIN.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
+    <pre>
+    1 0 2 10 0 0.060 4005.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+    2 0 3 11 1 0.065 4008.65 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+    3 0 4 12 2 0.065 4002.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
+    ...
+    ...
+    ...
+    18 9 0 27 17 0.065 4010.78 Line 1:  <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
 
-        <pre>
-        1 0 2 10 0 0.060 4005.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
-        2 0 3 11 1 0.065 4008.65 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
-        3 0 4 12 2 0.065 4002.23 Line 1:    <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
-        ...
-        ...
-        ...
-        18 9 0 27 17 0.065 4010.78 Line 1:  <b>DUM FP(I, J) FP(1, 5) FP(1,6)</b>
-
-
-        Note:  FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
-        boundary elements.
+    Note:  FPLAIN.DAT is a list of the grid element and its bordering grid elements. Zeros indicate
+    boundary elements.
 
                                                                                 Line 1:
                                                                                 1 = grid element,
