@@ -1623,34 +1623,34 @@ OUTFLOW HYDROGRAPH DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>OUTFLOW.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        K   374
-        H   10.0    2.6  0.35
-        K	1007
-        T	0.0	0.00
-        T	3.0	50.35
-        T	5.0	157.67
-        T   10.0	366.58
-        K	567
-        N	567	1
-        S	0.00	0.00
-        S	0.50	10.00
-        S	1.00	20.00
-        S	1.50	10.00
-        S	2.00	0.00
-        O	273
-        O	373
-        O	374
-        O	564
-        O	565
-        O	566
-        O	566
-        O	567
-        O	568
-        O1	1005
-        O1	1006
-        O1  1007
-            .....
+    <pre>
+    K   374
+    H   10.0    2.6  0.35
+    K	1007
+    T	0.0	0.00
+    T	3.0	50.35
+    T	5.0	157.67
+    T   10.0	366.58
+    K	567
+    N	567	1
+    S	0.00	0.00
+    S	0.50	10.00
+    S	1.00	20.00
+    S	1.50	10.00
+    S	2.00	0.00
+    O	273
+    O	373
+    O	374
+    O	564
+    O	565
+    O	566
+    O	566
+    O	567
+    O	568
+    O1	1005
+    O1	1006
+    O1  1007
+        ...
         </pre>
     </div>
 
@@ -2334,43 +2334,39 @@ INFILTRATION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                       INFIL.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         3                                  Line 1:  <b>INFMETHOD</b>
-         0   0.7   1   0.4  10.0  1         Line 2:  <b>ABSTR   SATI   SATF   POROS  SOILD  INFCHAN</b>
-         0.1   4.3   0                      Line 3:  <b>HYDCALL   SOILALL   HYDCADJ</b>
-         0.03                               Line 4:  <b>HYDCXX   *See Notes</b>
-         R   0.03                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
-         R   0.03   0.3   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC)
-                                                     SOIL_DEPTHCX(IC)</b>
-                                                     <i>IC= number of channel segments or reaches</i>
-         99   0                             Line 5:  <b>SCSCNALL   ABSTR1</b>
-         F  1730  0.01  4.3  0.3  0.0  0.0  10.0
-                                            Line 6:  <b>INFILCHAR = ‘F’  INFGRID(IF)  HYDC(IF)
-                                                     SOILS(IF)   DTHETA(IF)  ABSTRINF(IF)
-                                                     RTIMPF(IF)   SOIL_DEPTH(IF)</b>
-                                                     <i>F =  1 - number of infiltration data sets</i>
-         S  320   82.00                     Line 7:  <b>INFILCHAR = ‘S’  INFGRID(IF)  SCSCN(IF)</b>
-         C  2   0.04                         Line 8: <b>INFILCHAR = ‘C’  INFCH(N)   HYDCONCH(N)</b>
-         I  5.0   1.0   0.0007               Line 9: <b>INFILCHAR = ‘I’  FHORTONI   FHORTONF
-                                                     DECAYA</b>
-         H  3450   3.0   0.5   0.00018      Line 10:  <b>IFILCHAR = ‘H’  INFGRID(IF)
-                                                     FHORTI(INFGRID(IF))   FHORTF(INFGRID(IF))
-                                                     DECA(INFGRID(IF))</b>
-                                                     <i>IF =  1 - number of Horton infiltration elements</i>
+    <pre>
+    3                                  Line 1:  <b>INFMETHOD</b>
+    0   0.7   1   0.4  10.0  1         Line 2:  <b>ABSTR   SATI   SATF   POROS  SOILD  INFCHAN</b>
+    0.1   4.3   0                      Line 3:  <b>HYDCALL   SOILALL   HYDCADJ</b>
+    0.03                               Line 4:  <b>HYDCXX   *See Notes</b>
+    R   0.03                           Line 4a: <b>INFILCHAR = ‘R’   HYDCX(IC)   *See Notes</b>
+    R   0.03   0.3   10.0              Line 4b: <b>INFILCHAR = ‘R’   HYDCX(IC)   HYDCXFINAL(IC) SOIL_DEPTHCX(IC)</b>
+                                                <i>IC= number of channel segments or reaches</i>
+    99   0                             Line 5:  <b>SCSCNALL   ABSTR1</b>
+    F  1730  0.01  4.3  0.3  0.0  0.0  10.0
+                                       Line 6:  <b>INFILCHAR = ‘F’  INFGRID(IF)  HYDC(IF)
+                                                SOILS(IF)   DTHETA(IF)  ABSTRINF(IF)
+                                                RTIMPF(IF)   SOIL_DEPTH(IF)</b>
+                                                <i>F =  1 - number of infiltration data sets</i>
+    S  320   82.00                     Line 7:  <b>INFILCHAR = ‘S’  INFGRID(IF)  SCSCN(IF)</b>
+    C  2   0.04                        Line 8:  <b>INFILCHAR = ‘C’  INFCH(N)   HYDCONCH(N)</b>
+    I  5.0   1.0   0.0007              Line 9:  <b>INFILCHAR = ‘I’  FHORTONI   FHORTONF DECAYA</b>
+    H  3450   3.0   0.5   0.00018      Line 10: <b>IFILCHAR = ‘H’  INFGRID(IF) FHORTI(INFGRID(IF))
+                                                FHORTF(INFGRID(IF)) DECA(INFGRID(IF))</b>
+                                                <i>IF =  1 - number of Horton infiltration elements</i>
 
+    Notes:
+     If INFIL = 0 in the CONT.DAT file, omit this file.
+     If INFMETHOD = 1 (Green-Ampt) add Line 2 thru 4, skip Line 5.  Line 6 is optional.
+     If INFMETHOD = 2 (SCS Curve)  add Line 5, skip Lines 2 thru 4.  Line 7 is optional.
+     If INFMETHOD = 3 (Both Green-Ampt and SCS)  add Lines 2 thru 5. Line 6 and 7 are optional.
+     If INFMETHOD = 4 (Horton), add lines 2, 9 and 10.  Line 2 is only ABSTR.
 
-         Notes:
-             If INFIL = 0 in the CONT.DAT file, omit this file.
-             If INFMETHOD = 1 (Green-Ampt) add Line 2 thru 4, skip Line 5.  Line 6 is optional.
-             If INFMETHOD = 2 (SCS Curve)  add Line 5, skip Lines 2 thru 4.  Line 7 is optional.
-             If INFMETHOD = 3 (Both Green-Ampt and SCS)  add Lines 2 thru 5. Line 6 and 7 are optional.
-             If INFMETHOD = 4 (Horton), add lines 2, 9 and 10.  Line 2 is only ABSTR.
-
-             *If INFCHAN = 1 add Line 4.  Line 8 is optional.
-             If SOILD = 0. Use Line 4 or 4a
-             If SOILD > 0. use Line 4b
-             Line 4a or 4b, use one line per channel segment.
-        </pre>
+     *If INFCHAN = 1 add Line 4.  Line 8 is optional.
+     If SOILD = 0. Use Line 4 or 4a
+     If SOILD > 0. use Line 4b
+     Line 4a or 4b, use one line per channel segment.
+     </pre>
     </div>
 
 .. raw:: html
@@ -2382,25 +2378,25 @@ INFILTRATION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               INFIL.DAT File Example </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         3
-         0   0.7   1   0.4   10.0  1
-         0.0   4.3
-         R   0.03   0.2   5.0
-         R   0.12   0.3   10.0
-         99   0
-         F   1730   1.01   4.3   0.3   0.0   0.0    8.5
-         F   1730   1.01   4.3   0.3   0.0   0.0  10.0
-         F   1730   1.01   4.3   0.3   0.0   0.0    9.2
-         F...
-         S   320   82.00
-         S   321   82.00
-         S   322   82.50
-         S...
-         C   2   0.04
-         C  10  0.04
-         C...
-        </pre>
+    <pre>
+    3
+    0   0.7   1   0.4   10.0  1
+    0.0   4.3
+    R   0.03   0.2   5.0
+    R   0.12   0.3   10.0
+    99   0
+    F   1730   1.01   4.3   0.3   0.0   0.0    8.5
+    F   1730   1.01   4.3   0.3   0.0   0.0  10.0
+    F   1730   1.01   4.3   0.3   0.0   0.0    9.2
+    F...
+    S   320   82.00
+    S   321   82.00
+    S   322   82.50
+    S...
+    C   2   0.04
+    C  10  0.04
+    C...
+    </pre>
     </div>
 
 .. raw:: html
@@ -2416,17 +2412,17 @@ INFILTRATION DATA
    :header-rows: 0
 
 
-   * - VARIABLE
-     - FMT
-     - RANGE
-     - DESCRIPTION
+   * - **VARIABLE**
+     - **FMT**
+     - **RANGE**
+     - **DESCRIPTION**
 
    * - ABSTR
      - **r**
      - **0 - 1**
 
        **0 - 25**
-     - Green Ampt global floodplain rainfall abstraction or interception (inches or mm) (see comments 1 and 7).
+     - Green-Ampt global floodplain rainfall abstraction or interception (inches or mm) (see comments 1 and 7).
 
        Horton infiltration also uses this variable for initial abstraction.
 
@@ -2739,7 +2735,7 @@ INFILTRATION DATA
 9. If SCS curve number method (INFMETHOD = 2) is used, it is assumed that the channel infiltration is negligible.
    Simulate channel infiltration with the Green-Ampt method.
 
-10. With the SCS curve number method (INFMETHOD = 2), assign the AB- STRSCS variable in Line 5 to the abstraction (inches or mm).
+10. With the SCS curve number method (INFMETHOD = 2), assign the ABSTRSCS variable in Line 5 to the abstraction (inches or mm).
     If ABSTRSCS = 0.0, the abstraction value is automatically computed using the SCS method.
 
 11. The infiltration parameters can be estimated from the tables in the Reference Manual.
@@ -2762,15 +2758,13 @@ INFILTRATION DATA
 
             f = f_n \, + \, (f_i \, - \, f_n) e^{-at}
 
-    where:
+    .. raw:: html
 
-        f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
-
-        fn = final infiltration rate (in/hr)
-
-        a = decay coefficient (1/sec)
-
-        t = time from start of rainfall (sec)
+        where:<br>
+            f = infiltration rate at simulation time t from start of the rainfall fi = initial infiltration rate (in/hr)
+            fn = final infiltration rate (in/hr)
+            a = decay coefficient (1/sec)
+            t = time from start of rainfall (sec)
 
     There are no metric equivalent values so if using Horton on a metric project, use in/hr even if IMETRIC = 1.
 
