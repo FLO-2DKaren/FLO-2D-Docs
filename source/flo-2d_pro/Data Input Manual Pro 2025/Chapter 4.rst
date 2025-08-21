@@ -256,7 +256,7 @@ SYSTEM CONTROL DATA
 
    * - GRAPTIM
      - r
-     - **0.01 - 10.**
+     - **0.01 - 10.0**
      - Time interval in hours that the graphics display is updated (e.g. set GRAPTIM = 0.02 for a
 
        frequent update).
@@ -545,23 +545,23 @@ SYSTEM CONTROL DATA
 
    * - TOUT
      - r
-     - **0.01 - 24.**
+     - **0.01 - 24.0**
      - Output interval (hrs) that hydraulic data is reported to the various output files \*.OUT.
 
    * - XARF
      - r
      - **0.0
-       - 1.**
+       - 1.0**
      - Global area reduction factor applied to all grid elements. This factor reduces the
 
        grid element surface area available for flood volume storage.
 
        XARF can be used to account irregular surface topography, dense vegetation or other features.
 
-       Range: 0 < XARF < 1.
+       Range: 0 < XARF < 1.0
        A typical value for XARF of 0.10 indicates that 10% of each grid element surface is not
 
-       avail- able for flood storage.
+       available for flood storage.
 
        The XARF value is overridden by the ARF variable specified for the individual grid elements
 
