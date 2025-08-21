@@ -645,7 +645,7 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
    6. If channel flow is simulated (ICHANNEL = 1), then the NOPRTC variable must be set in CONT.DAT.
       In addition, channel outflow control can be assigned in OUTFLOW.DAT.
 
-   7. ITIMTEP will enable a simple animation (time and space output) of the over- land flow to be displayed in Mapper,
+   7. ITIMTEP will enable a simple animation (time and space output) of the overland flow to be displayed in Mapper,
       MAXPLOT or other map software.
       The animation will be based on a time interval TIMTEP specified by the user.
 
@@ -667,9 +667,9 @@ These instructions will aid in assigning of the CONT.DAT file parameters:
 
         where:
 
-            n\ :sub:`b` = bankfull discharge roughness depth = flow depth
+         n\ :sub:`b` = bankfull discharge roughness depth = flow depth
 
-            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+         dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
        This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete
        submergence of all roughness elements (assumed to be 3 ft or 1 m).
