@@ -4677,19 +4677,19 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                               ARF.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        S 0                                 Line 1: <b>ITTCHAR = ‘S’ ARFBLOCKMOD</b>
-        T 49                                Line 1: <b>ITTCHAR = ‘T’ ITTAWF(K)</b>
-        29 .2 .70 .50 1.0 0. 0. 0. 0. 0.    Line 2: <b>IDG(I) ARF(I) WRF(I,J)</b>
-                                                    <i>K = number of totally blocked grid elements
-                                                    I = number of partially blocked grid elements
-                                                    J = 8 flow directions</i>
+    <pre>
+    S 0                                 Line 1: <b>ITTCHAR = ‘S’ ARFBLOCKMOD</b>
+    T 49                                Line 1: <b>ITTCHAR = ‘T’ ITTAWF(K)</b>
+    29 .2 .70 .50 1.0 0. 0. 0. 0. 0.    Line 2: <b>IDG(I) ARF(I) WRF(I,J)</b>
+                                                <i>K = number of totally blocked grid elements
+                                                I = number of partially blocked grid elements
+                                                J = 8 flow directions</i>
 
-        Notes:
-         If IWRFS = 0 in the CONT.DAT file, omit this file.
-         Line 1: Repeat this line for each totally blocked grid element.
-         Line 2: Repeat this line for each partially blocked grid element.
-        </pre>
+    Notes:
+    If IWRFS = 0 in the CONT.DAT file, omit this file.
+    Line 1: Repeat this line for each totally blocked grid element.
+    Line 2: Repeat this line for each partially blocked grid element.
+    </pre>
     </div>
 
 .. raw:: html
