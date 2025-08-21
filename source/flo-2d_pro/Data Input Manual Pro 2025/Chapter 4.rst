@@ -2802,21 +2802,21 @@ EVAPORATION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                   EVAPOR.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         5   1   0.00               Line 1: <b>IEVAPMONTH   IDAY   CLOCKTIME</b>
-         january  2                 Line 2: <b>EMONTH(I)   EVAP(I)</b>   <i>I = 1 - 12</i>
-         0.0071                     Line 3: <b>EVAPER(I, J)</b> <i>I = 1, 12 Months, J = 1,24 Hours</i>
-         0.0086                     Line 3: <b>EVAPER(I, J)</b> <i>I = 1, 12 Months, J = 1,24 Hours</i>
-         0.0051                     Line 3: <b>EVAPER(I, J)</b> <i>I = 1, 12 Months, J = 1,24 Hours</i>
-         ...
+    <pre>
+    5   1   0.00               Line 1: <b>IEVAPMONTH   IDAY   CLOCKTIME</b>
+    january  2                 Line 2: <b>EMONTH(I)   EVAP(I)</b>   <i>I = 1 - 12</i>
+    0.0071                     Line 3: <b>EVAPER(I, J)</b> <i>I = 1, 12 Months, J = 1,24 Hours</i>
+    0.0086                     Line 3: <b>EVAPER(I, J)</b> <i>I = 1, 12 Months, J = 1,24 Hours</i>
+    0.0051                     Line 3: <b>EVAPER(I, J)</b> <i>I = 1, 12 Months, J = 1,24 Hours</i>
+    ...
 
-         Notes:
-             If IEVAP = 0 in the CONT.DAT file, omit this file.
-             Line 3:  Repeat 24 times for every Line 2.
+    Notes:
+     If IEVAP = 0 in the CONT.DAT file, omit this file.
+     Line 3:  Repeat 24 times for every Line 2.
 
-         An example of the EVAPOR.DAT file is available in the FLO-2D Example Project subdirectory based
-         on available data for the Rio Grande project.
-        </pre>
+     An example of the EVAPOR.DAT file is available in the FLO-2D Example Project subdirectory based
+     on available data for the Rio Grande project.
+     </pre>
     </div>
 
 .. raw:: html
@@ -2828,24 +2828,24 @@ EVAPORATION DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>EVAPOR.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        5   1   0.00
-        january  2.00
-        0.0071
-        0.0086
-        0.0051
-        0.0065
-        0.0038
-        0.0040
-        0.0055
-        0.0090
-        0.0285
-        0.0556
-        0.0799
-        0.0975
-        0.11
-        ...
-        </pre>
+    <pre>
+    5   1   0.00
+    january  2.00
+    0.0071
+    0.0086
+    0.0051
+    0.0065
+    0.0038
+    0.0040
+    0.0055
+    0.0090
+    0.0285
+    0.0556
+    0.0799
+    0.0975
+    0.11
+    ...
+    </pre>
     </div>
 
 .. raw:: html
