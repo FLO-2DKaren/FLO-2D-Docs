@@ -2912,48 +2912,48 @@ CHANNEL DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                   CHAN.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-              Line 1: <b>DEPINITIAL(K) FROUDC(K) ROUGHADJ ISEDN(K)</b>
-        0.00 0.50 0.20 0
+    <pre>
+           Line 1: <b>DEPINITIAL(K) FROUDC(K) ROUGHADJ ISEDN(K)</b>
+    0.00 0.50 0.20 0
 
-              Line 2a: <b>SHAPE</b> <i>‘R’ = Rectangular</i> <b>ICHANGRID(I) BANKELL(I)
-                       BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I)</b>
-        R 50 4765.52 4765.00 0.031 22.54 6.32 100.00
+           Line 2a: <b>SHAPE</b> <i>‘R’ = Rectangular</i> <b>ICHANGRID(I) BANKELL(I)
+                    BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I)</b>
+    R 50 4765.52 4765.00 0.031 22.54 6.32 100.00
 
-              Line 2b: <b>SHAPE</b> <i>‘V’ = Variable Area</i> <b>ICHANGRID(I) BANKELL(I)
-                       BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)
-                       C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)</b>
-        V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
+          Line 2b: <b>SHAPE</b> <i>‘V’ = Variable Area</i> <b>ICHANGRID(I) BANKELL(I)
+                    BANKELR(I) FCN(I) FCD(I) XLEN(I) A1(I) A2(I) B1(I) B2(I)
+                    C1(I) C2(I) EXCDEP(I) A11(I) A22(I) B11(I) B22(I) C11(I) C22(I)</b>
+    V 50 4765.52 4765.00 0.031 6.32 505.00 36.77 1.63 63.37 0.491 63.261 0.49 0.00
 
-              Line 2c: <b>SHAPE</b> <i>‘T’ = Trapezoidal</i> <b>ICHANGRID(I) BANKELL(I)
-                       BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I) ZL(I) ZR(I)</b>
-        T 50 4765.52 4765.00 0.031 22.54 6.32 100.00 2.40 1.50
+           Line 2c: <b>SHAPE</b> <i>‘T’ = Trapezoidal</i> <b>ICHANGRID(I) BANKELL(I)
+                    BANKELR(I) FCN(I) FCW(I) FCD(I) XLEN(I) ZL(I) ZR(I)</b>
+    T 50 4765.52 4765.00 0.031 22.54 6.32 100.00 2.40 1.50
 
-              Line 2d: <b>SHAPE</b> <i>‘N’ = Natural</i> <b>ICHANGRID(I) FCN(I) XLEN(I) NXECNUM(I)</b>
-        N 50 1 0.031 100.00 1
+           Line 2d: <b>SHAPE</b> <i>‘N’ = Natural</i> <b>ICHANGRID(I) FCN(I) XLEN(I) NXECNUM(I)</b>
+    N 50 1 0.031 100.00 1
 
-        50 4763.00                      Line 3a: <b>ISTART WSELSTART</b>
-        77 4761.00                      Line 3b: <b>IEND WSELEND</b>
-        C 501 498                       Line 4:  <b>CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)</b>
-        E 5112                          Line 5:  <b>CHANCHAR = 'E' ICHANGRID(N)</b>
-        B 12.3                          Line 6:  <b>CHANCHAR = 'B' IBASEFLOW(K)</b>
-                                                 <i>I = number of channel nodes.</i>
-                                                 <i>J = number of channel confluences</i>
-                                                 <i>K = number of channel segments</i>
-                                                 <i>N = number of nofloc and noexchange data sets</i>
+    50 4763.00                      Line 3a: <b>ISTART WSELSTART</b>
+    77 4761.00                      Line 3b: <b>IEND WSELEND</b>
+    C 501 498                       Line 4:  <b>CHANCHAR = ‘C’ ICONFLO1(J) ICONFLO2(J)</b>
+    E 5112                          Line 5:  <b>CHANCHAR = 'E' ICHANGRID(N)</b>
+    B 12.3                          Line 6:  <b>CHANCHAR = 'B' IBASEFLOW(K)</b>
+                                             <i>I = number of channel nodes.</i>
+                                             <i>J = number of channel confluences</i>
+                                             <i>K = number of channel segments</i>
+                                             <i>N = number of nofloc and noexchange data sets</i>
 
-        Notes:
-          If ICHANNEL = 0 in the CONT.DAT file, omit this file.
-          Line 1: This line is repeated at the start of each channel segment.
-          If ISED = 0 in the CONT.DAT file omit ISEDN(K).
-          Line 2: This line is repeated for each channel grid element.
-          Use 2a, 2b, 2c, or 2d for this line.
-          Line 3: If not simulating an initial water surface elevation in the channel, omit this line.
-          Repeat 3a and 3b for each channel segment.
-          Line 3, 4 and 5: Multiple lines are grouped together.
-          Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
-          Place Line 6 after each segment.
-        </pre>
+    Notes:
+     If ICHANNEL = 0 in the CONT.DAT file, omit this file.
+     Line 1: This line is repeated at the start of each channel segment.
+     If ISED = 0 in the CONT.DAT file omit ISEDN(K).
+     Line 2: This line is repeated for each channel grid element.
+     Use 2a, 2b, 2c, or 2d for this line.
+     Line 3: If not simulating an initial water surface elevation in the channel, omit this line.
+     Repeat 3a and 3b for each channel segment.
+     Line 3, 4 and 5: Multiple lines are grouped together.
+     Line 6: If a baseflow is used to report a time TIME_TO_ABOVE_BASEFLOW.OUT.
+     Place Line 6 after each segment.
+     </pre>
     </div>
 
 .. raw:: html
@@ -2961,35 +2961,35 @@ CHANNEL DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                               CHAN.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-          0.00 0.60 0.40
-         R 3170 4433.00 4433.00 0.032 40.00 9.30 520.00
-         R 3118 4431.00 4431.00 0.032 20.00 9.50 510.00
-         R 3066 4430.30 4430.30 0.032 35.00 11.00 500.00
-         R 3013 4430.00 4430.00 0.032 35.00 12.70 500.00 R ...
-         0.00 0.70 0.20
-         V 4560 4675.19 4675.19 0.060 10.59 550.00 36.774 1.630 63.369 0.491 63.261 0.486 0.00
-         V 4385 4673.10 4673.10 0.050 11.00 620.00 30.774 1.630 63.369 0.491 63.261 0.486 0.00
-         V 4212 4672.86 4672.86 0.040 13.56 560.00 24.439 1.905 53.016 0.749 42.886 0.745 0.00
-         V 4213 4672.46 4672.46 0.040 16.16 550.00 22.200 1.807 31.248 0.696 31.235 0.688 0.00
-         V ...
-          0.00 0.60 0.40
-         T 7170 4423.00 4423.00 0.032 40.00 9.30 520.00 1.60 1.90
-         T 7118 4421.00 4421.00 0.032 20.00 9.50 510.00 2.60 2.70
-         T 7066 4420.30 4420.30 0.032 35.00 11.00 500.00 1.60 1.20
-         T 7013 4420.00 4420.00 0.032 35.00 12.70 500.00 1.60 1.20 T ...
-          -1.00 0.60 0.20 5
-         N 7432 0.060 450.00 1
-         N 7389 0.059 450.00 2
-         N 7344 0.050 590.00 3
-         N 7298 0.060 590.00 4
-         N 7299 0.060 590.00 5 N ...
-        7432 4432.00
-        7160 4427.00
-         C 3669 3825
-         C 6296 6377
-         C ...
-        </pre>
+    <pre>
+    0.00 0.60 0.40
+    R 3170 4433.00 4433.00 0.032 40.00 9.30 520.00
+    R 3118 4431.00 4431.00 0.032 20.00 9.50 510.00
+    R 3066 4430.30 4430.30 0.032 35.00 11.00 500.00
+    R 3013 4430.00 4430.00 0.032 35.00 12.70 500.00 R ...
+    0.00 0.70 0.20
+    V 4560 4675.19 4675.19 0.060 10.59 550.00 36.774 1.630 63.369 0.491 63.261 0.486 0.00
+    V 4385 4673.10 4673.10 0.050 11.00 620.00 30.774 1.630 63.369 0.491 63.261 0.486 0.00
+    V 4212 4672.86 4672.86 0.040 13.56 560.00 24.439 1.905 53.016 0.749 42.886 0.745 0.00
+    V 4213 4672.46 4672.46 0.040 16.16 550.00 22.200 1.807 31.248 0.696 31.235 0.688 0.00
+    V ...
+    0.00 0.60 0.40
+    T 7170 4423.00 4423.00 0.032 40.00 9.30 520.00 1.60 1.90
+    T 7118 4421.00 4421.00 0.032 20.00 9.50 510.00 2.60 2.70
+    T 7066 4420.30 4420.30 0.032 35.00 11.00 500.00 1.60 1.20
+    T 7013 4420.00 4420.00 0.032 35.00 12.70 500.00 1.60 1.20 T ...
+    -1.00 0.60 0.20 5
+    N 7432 0.060 450.00 1
+    N 7389 0.059 450.00 2
+    N 7344 0.050 590.00 3
+    N 7298 0.060 590.00 4
+    N 7299 0.060 590.00 5 N ...
+    7432 4432.00
+    7160 4427.00
+    C 3669 3825
+    C 6296 6377
+    C ...
+    </pre>
     </div>
 
 **Variable Descriptions for the CHAN.DAT File**
@@ -3115,7 +3115,7 @@ CHANNEL DATA
    * - EXCDEP(I)
      - **r**
      - **0.0 - ∞**
-     - Channel depth above which a second variable area relation- ship will apply (see comment 4).
+     - Channel depth above which a second variable area relationship will apply (see comment 4).
 
        If only one channel geometry relationship is used, set EXCDEP(I) = 0.
 
@@ -3147,7 +3147,7 @@ CHANNEL DATA
 
        Set FROUDC = 0 for no adjustments of the n-value in a given channel segment.
 
-       The increased n- values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).
+       The increased n-values are reported in the ROUGH.OUT and CHAN.RGH files (see comment 7).
 
    * - IBASEFLOW(K)
      - **i**
@@ -3282,26 +3282,26 @@ CHANNEL DATA
 
         A = ad^b
 
-    where:
+    .. raw:: html
 
-        A = area of the channel d = depth to thalweg
-
-        a = coefficient
-
-        b = exponent
+        where:<br>
+            A = area of the channel<br>
+            d = depth to thalweg<br>
+            a = coefficient<br>
+            b = exponent
 
    Similar relationships are required for wetted perimeter and top width.
    There is a limit of two channel geometry relationships per channel element.
    A second geometry relationship may be useful if there is a significant change in the cross section (e.g. an island).
-   If two power relationships are used to represent a natural cross section, then the maximum depth (EXCDEP) to which the first relationship applies must
+   If two power relationships are used to represent a natural cross-section, then the maximum depth (EXCDEP) to which the first relationship applies must
    be specified.
 
    The second regression applies when the flow depth is greater than EXCDEP, but does not include the lower flow area.
-   The two variable area cross section relationships are unique and separate.
+   The two variable area cross-section relationships are unique and separate.
    The total cross-section flow area is the sum of the lower flow and upper (second relationship) flow areas.
    The channel top width is computed directly from the second relationship.
    The area, wetted perimeter and top width are evaluated using the upper flow depth given by total depth - EXCDEP.
-   To analyze the upper channel geometry using the XSEC program, only the cross section coordinates above the EXCDEP depth are used.
+   To analyze the upper channel geometry using the XSEC program, only the cross-section coordinates above the EXCDEP depth are used.
 
    These channel geometry relationships apply only to flow depths that are less than the channel depth (lower than the top of bank).
    When the flow depth exceeds the top of bank, then the channel geometry above bank is evaluated as a rectangle.
@@ -3311,7 +3311,7 @@ CHANNEL DATA
    B11, B22, B2, C1, C11, C22) in Line 2b.
 
 6. A cross-section width can exceed the width of the grid element.
-   For example, a channel cross section that is 100 ft wide can be used in a 20 ft grid system.
+   For example, a channel cross-section that is 100 ft wide can be used in a 20 ft grid system.
    The model automatically determines the number of grid elements required by a channel cross-section.
    If the cross-section width exceeds 95% of the combined bank elements width or if there is less than 5% floodplain surface area left in the bank
    element after removing the channel surface area, the channel will extend the right bank over another grid element looking downstream.
@@ -3325,7 +3325,7 @@ CHANNEL DATA
    List the tributary first and the main channel second in Line C.
 
 9. Use the PROFILES program to review the channel slope and adjust the bed elevations to create a more uniform average channel reach slope.
-   The PROFILES program can interpolate cross sections and slope for surveyed cross sections.
+   The PROFILES program can interpolate cross-sections and slope for surveyed cross-sections.
 
 10. The key to channel routing is to balance the relationship between the slope, flow area and roughness.
     Channel routing is more stable if the natural cross section routing routine is used (SHAPE = N).
@@ -3363,15 +3363,13 @@ CHANNEL DATA
 
             n_d = n_b \, a \, e^{-(b \, depth/dmax)}
 
-        where:
+        .. raw:: html
 
-           n\ :sub:`b` = bankfull discharge roughness depth = flow depth
-
-           dmax = bankfull flow depth
-
-           a = 1/e\ :sup:`-b`
-
-           b = roughness adjustment coefficient prescribed by the user (0 to 1.2)
+            where:<br>
+               n<sub>b</sub> = bankfull discharge roughness depth = flow depth<br>
+               dmax = bankfull flow depth<br>
+               a = 1/e<sup>-b</sup><br>
+               b = roughness adjustment coefficient prescribed by the user (0 to 1.2)
 
     This equation prescribes that the variable depth channel roughness is equal to the roughness at bankfull discharge.
     If the user assigns a ROUGHADJ value (from 0 to 1.2) as the roughness adjustment coefficient b for a given reach, the roughness will increase with a
@@ -3390,7 +3388,7 @@ CHANNEL DATA
 
         where: ROUGHADJ is assigned to line 1 of each channel segment.
 
-18. Instructions for creating the cross-section channel geometry data files are out- lined in Lesson 14 of the Workshop Lessons.
+18. Instructions for creating the cross-section channel geometry data files are outlined in Lesson 14 of the Workshop Lessons.
     The lessons are found in the FLO-2D Pro Documentation folder.
 
 19. Surveyed water surfaces can be automatically compared with the predicted water surface in the PROFILES program by creating a WSTIME.DAT file.
@@ -3402,7 +3400,7 @@ CHANNEL DATA
     For these elements, no lateral exchange occurs: neither overbank discharge from the channel to the adjacent floodplain (left or right bank), nor
     return flow from the floodplain to the channel.
 
-    Additionally, NOEXCHANGE can be applied to channel elements at the up- stream or downstream termini.
+    Additionally, NOEXCHANGE can be applied to channel elements at the upstream or downstream termini.
     When this designation is used, flow will not enter the channel at the upstream end, nor exit at either the upstream or downstream ends.
 
     This feature is particularly useful at the upstream end of a channel segment when an inflow hydrograph is applied at a node.
