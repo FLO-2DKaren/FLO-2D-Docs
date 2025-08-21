@@ -3577,7 +3577,7 @@ CROSS SECTION DATA
 
 **Variable Descriptions for the XSEC.DAT File**
 
-\\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
+\(s) Switch (i) = Integer variable (r) = Real variable (c) = Character
 
 .. list-table::
    :widths: 25 25 25 25
@@ -3653,39 +3653,39 @@ HYDRAULIC STRUCTURE DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                               HYSTRUC.DAT File Variables </pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-                Line 1:   <b>STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
-                          CLENGTH(I) CDIAMETER(I)</b> <i>I = number of structures</i>
-        S Patagonia 1 0 1713 1827 0 4425.23 0.0 0.0
+    <pre>
+            Line 1:   <b>STRUCHAR = ‘S’ STRUCTNAME IFPORCHAN(I) ICURVTABLE(I) INFLONOD(I) OUTFLONOD(I) INOUTCONT(I) HEADREFEL(I)
+                      CLENGTH(I) CDIAMETER(I)</b> <i>I = number of structures</i>
+    S Patagonia 1 0 1713 1827 0 4425.23 0.0 0.0
 
-                Line 2:   <b>STRUCHAR = ‘C’ HDEPEXC(I,J) COEFQ(I,J) EXPQ(I,J) COEFA(I,J)
-                          EXPA(I,J)</b> <i>I = number of structures, J = number of curves</i>
+            Line 2:   <b>STRUCHAR = ‘C’ HDEPEXC(I,J) COEFQ(I,J) EXPQ(I,J) COEFA(I,J)
+                      EXPA(I,J)</b> <i>I = number of structures, J = number of curves</i>
 
-                Line 2:   <b>STRUCHAR = ‘B’ IBTYPE(I) COEFFP(I) C_PRIME_USER(I) KF_COEF(I) KWW_COEF(I) KPHI_COEF(I) KY_COEF(I)
-                          KX_COEF(I) KJ_COEF(I)</b> <i>I = number of bridges in bridge routine</i>
+            Line 2:   <b>STRUCHAR = ‘B’ IBTYPE(I) COEFFP(I) C_PRIME_USER(I) KF_COEF(I) KWW_COEF(I) KPHI_COEF(I) KY_COEF(I)
+                      KX_COEF(I) KJ_COEF(I)</b> <i>I = number of bridges in bridge routine</i>
 
-                Line 3:   <b>STRUCHAR = ‘B’ BOPENING(I) BLENGTH(I) BN_VALUE(I)
-                          UPLENGTH12(I) LOWCHORD(I) DECKHT(I) DECKLENGTH(I)
-                          PIERWIDTH(I) SLUICECOEFADJ(I) ORIFICECOEFADJ(I)
-                          COEFFWEIRB(I) WINGWALL_ANGLE(I) PHI_ANGLE(I) LBTOEABUT(I)
-                          RBTOEABUT(I)</b> <i>I = number of bridges in bridge routine</i>
-           C 20.0 3.543 0.890
+            Line 3:   <b>STRUCHAR = ‘B’ BOPENING(I) BLENGTH(I) BN_VALUE(I)
+                      UPLENGTH12(I) LOWCHORD(I) DECKHT(I) DECKLENGTH(I)
+                      PIERWIDTH(I) SLUICECOEFADJ(I) ORIFICECOEFADJ(I)
+                      COEFFWEIRB(I) WINGWALL_ANGLE(I) PHI_ANGLE(I) LBTOEABUT(I)
+                      RBTOEABUT(I)</b> <i>I = number of bridges in bridge routine</i>
+    C 20.0 3.543 0.890
 
-                Line 3:   <b>STRUCHAR = ‘R’ REPDEP(I,J) RQCOEFQ(I,J) RQEXP(I,J)
-                          RACOEF(I,J) RAEXP(I,J)</b> <i>I = number of structures, J = number of curves</i>
-           R 12.0 0.00 1.0
+            Line 3:   <b>STRUCHAR = ‘R’ REPDEP(I,J) RQCOEFQ(I,J) RQEXP(I,J)
+                      RACOEF(I,J) RAEXP(I,J)</b> <i>I = number of structures, J = number of curves</i>
+    R 12.0 0.00 1.0
 
-                Line 4:   <b>STRUCHAR = ‘T’ HDEPTH(I,J) QTABLE(I,J) ATABLE(I,J)</b>
-                          <i>I = number of structures, J = number of datasets in table</i>
-           T 0 0
+            Line 4:   <b>STRUCHAR = ‘T’ HDEPTH(I,J) QTABLE(I,J) ATABLE(I,J)</b>
+                      <i>I = number of structures, J = number of datasets in table</i>
+    T 0 0
 
-                Line 5:   <b>STRUCHAR = ‘F’ TYPEC(I) TYPEEN(I) CULVERTN(I) KE(I) CUBASE(I) MULTBARRELS(I)</b>
-                          <i>I = number of structures, Set ICURVTABLE = 2 in Line 1.</i>
-           F 1 2 0.040 0.1 0.0 1
+            Line 5:   <b>STRUCHAR = ‘F’ TYPEC(I) TYPEEN(I) CULVERTN(I) KE(I) CUBASE(I) MULTBARRELS(I)</b>
+                      <i>I = number of structures, Set ICURVTABLE = 2 in Line 1.</i>
+    F 1 2 0.040 0.1 0.0 1
 
-                Line 6:   <b>STRUCHAR = ‘D’ ISTORMDOUT(I), STORMDMAXQ(I),</b>
-                          <i>I = number of drain structures.</i>
-           D 4 15
+            Line 6:   <b>STRUCHAR = ‘D’ ISTORMDOUT(I), STORMDMAXQ(I),</b>
+                      <i>I = number of drain structures.</i>
+    D 4 15
         </pre>
     </div>
 
