@@ -5693,33 +5693,33 @@ LEVEE AND FAILURE DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                       LEVEE.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0.00 00             Line 1:     <b>RAISELEV ILEVFAIL</b>
-        L 1891              Line 2:     <b>LEVCHAR = ‘L’ LGRIDNO(L)</b> <i>L = number of levee grid elements</i>
-        D 4 5029.00         Line 3:     <b>LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)</b>
-                                        <i>L = number of levee grid elements
-                                        J = number of levee directions in grid element</i>
-        F 1891              Line 4:     <b>LEVCHAR = ‘F’ LFAILGRID(LF)</b>
-                                        <i>LF = number of failure grid elements</i>
-                            Line 5:     <b>LEVCHAR = ‘W’ LFAILDIR(LF,LD) FAILEVEL(LF,LD)
-                                        FAILTIME(LF,LD) LEVBASE(LF,LD) FAILWIDTHMAX(LF,LD)
-                                        FAILRATE(LF,LD) FAILWIDRATE(LF,LD)</b>
-                                        <i>LD = number of fail directions
-                                        LF = number of failure grid elements</i>
-        W 4 5019.5 27.0 10 1 2 0.
+    <pre>
+    0.00 00             Line 1:     <b>RAISELEV ILEVFAIL</b>
+    L 1891              Line 2:     <b>LEVCHAR = ‘L’ LGRIDNO(L)</b> <i>L = number of levee grid elements</i>
+    D 4 5029.00         Line 3:     <b>LEVCHAR = ‘D’ LDIR(L,J) LEVCREST(L,J)</b>
+                                    <i>L = number of levee grid elements
+                                    J = number of levee directions in grid element</i>
+    F 1891              Line 4:     <b>LEVCHAR = ‘F’ LFAILGRID(LF)</b>
+                                    <i>LF = number of failure grid elements</i>
+                        Line 5:     <b>LEVCHAR = ‘W’ LFAILDIR(LF,LD) FAILEVEL(LF,LD)
+                                    FAILTIME(LF,LD) LEVBASE(LF,LD) FAILWIDTHMAX(LF,LD)
+                                    FAILRATE(LF,LD) FAILWIDRATE(LF,LD)</b>
+                                    <i>LD = number of fail directions
+                                    LF = number of failure grid elements</i>
+    W 4 5019.5 27.0 10 1 2 0.
 
-        C FS3 0.5           Line 6:     <b>LEVCHAR = ‘C’ GFRAGCHAR GFRAGPROB</b>
-        P 3450 FS1 0.5      Line 7:     <b>LEVCHAR = ‘P’ LEVFRAGRID(LP) LEVFRAGCHAR (LP)
-                                        LEVFRAGPROB(LP)</b>
-                                        <i>LP = number levee grid elements with fragility curve assignments</i>
+    C FS3 0.5           Line 6:     <b>LEVCHAR = ‘C’ GFRAGCHAR GFRAGPROB</b>
+    P 3450 FS1 0.5      Line 7:     <b>LEVCHAR = ‘P’ LEVFRAGRID(LP) LEVFRAGCHAR (LP)
+                                    LEVFRAGPROB(LP)</b>
+                                    <i>LP = number levee grid elements with fragility curve assignments</i>
 
-        Notes:
-         If LEVEE = 0 in the CONT.DAT file, omit this file.
-         Line 2: Repeat this line for each levee grid element.
-         Line 3: Repeat this line for each levee direction in a grid element.
-         Line 4: Repeat this line for each LEVEEFAILURE grid element.
-         Line 5: Repeat this line for each grid element failure direction.
-        </pre>
+    Notes:
+     If LEVEE = 0 in the CONT.DAT file, omit this file.
+     Line 2: Repeat this line for each levee grid element.
+     Line 3: Repeat this line for each levee direction in a grid element.
+     Line 4: Repeat this line for each LEVEEFAILURE grid element.
+     Line 5: Repeat this line for each grid element failure direction.
+    </pre>
     </div>
 
 .. raw:: html
