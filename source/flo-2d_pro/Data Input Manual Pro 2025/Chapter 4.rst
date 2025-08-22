@@ -7702,10 +7702,10 @@ STORM DRAIN BLOCKAGE METHOD FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               SWMMFLODROPBOX.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        2694 I1 19.635      Line 1: <b>SWMMDBID SWMMNodeID SWMMDROPBOX(I)</b>
-                            <i>I = Number of drop box nodes.</i>
-        </pre>
+    <pre>
+    2694 I1 19.635      Line 1: <b>SWMMDBID SWMMNodeID SWMMDROPBOX(I)</b>
+                                <i>I = Number of drop box nodes.</i>
+    </pre>
     </div>
 
 .. raw:: html
