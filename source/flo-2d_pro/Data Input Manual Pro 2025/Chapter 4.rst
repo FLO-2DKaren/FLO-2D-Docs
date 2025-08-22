@@ -4238,14 +4238,10 @@ HYDRAULIC STRUCTURE DATA
    The types of culvert entrances are:
 
        *BOX entrance:*
-
-       type 1 - wingwall flare 30 to 75 degrees
-
-       type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
-
+           - type 1 - wingwall flare 30 to 75 degrees
+           - type 2 - wingwall flare 90 or 15 degrees type 3 - wingwall flare 0 degrees
        *PIPE entrance:*
-
-       type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
+           - type 1 - square edge with headwall type 2 - socket end with headwall type 3 - socket end projecting
 
 9. The culvert equations use the conventional entrance loss coefficients KE values that be found in the literature.
 
