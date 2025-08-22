@@ -8841,6 +8841,7 @@ TAILINGS DATA
 
     <br><br>
 
+
   .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
