@@ -1527,7 +1527,7 @@ LEVOVERTOP.OUT
 
         - Discharge total
         - Time - time of overtopping,
-        - Discharge direction columns N, E, S, W, NE, SE,SW, NW.
+        - Discharge direction columns N, E, S, W, NE, SE, SW, NW.
           Negative value means flow is moving from the opposite grid to the grid with the levee assigned.
 
 LEVOVERTOPMAX.OUT
@@ -1615,9 +1615,9 @@ MAXWSELEV.OUT
 
 MODFLOW CHANNEL INFILTRATION TOTALS.OUT
 
-    Total accumulated volume of water that infiltrates from the CH to MOD- FLOW at each MODFLOW timestep.
+    Total accumulated volume of water that infiltrates from the CH to MODFLOW at each MODFLOW timestep.
 
-        -Time
+        - Time
         - Accumulated infiltration volume CH (ft\ :sup:`3` or m\ :sup:`3`)
 
 MODFLOW CHANNEL INFILTRATION VOLUMES.OUT
