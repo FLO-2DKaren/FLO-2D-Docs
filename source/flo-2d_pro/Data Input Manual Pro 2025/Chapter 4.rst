@@ -8759,12 +8759,11 @@ TAILINGS DEPTH DATA
     <pre>
     7659 10              Line 1: <b>JGRIDUMMY TAILINGSDEPTH(I)</b>
                                 <i>I = grid element that has a tailings depth assigned.</i>
-    </pre>
-    </div>
 
     Notes:
      Line 1: Repeat this line for each grid element has a tailings depth assigned.
-
+    </pre
+    </div>
 .. raw:: html
 
     <br><br>
