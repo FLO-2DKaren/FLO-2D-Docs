@@ -7752,7 +7752,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
    * - SWMMDROPBOX(I)
      - **r**
      - **0 - ∞**
-     - Drop box surface area for inlet contain in grid element SWMMDBID (ft2 or m2)(see comment 1).
+     - Drop box surface area for inlet contain in grid element SWMMDBID (ft\ :sup:`2` or m\ :sup:`2`)(see comment 1).
 
    * - SWMMNodeID
      - **c**
@@ -7776,7 +7776,7 @@ STORM DRAIN BLOCKAGE METHOD FILE
 
 
    * - **Pipe Diameter (ft)**
-     - **Dropbox Surf Area (ft2)**
+     - **Dropbox Surf Area (ft\ :sup:`2`)**
 
    * - 5
      - 19.635
