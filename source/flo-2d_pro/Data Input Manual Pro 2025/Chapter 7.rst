@@ -98,24 +98,24 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
    Any hydraulics model that does not report on volume conservation should be suspected of generating or losing volume.
    A review of the SUMMARY.
    OUT file will identify any volume conservation problems.
-   This file will dis- play the time when the volume conservation error began to appear during the simulation.
+   This file will display the time when the volume conservation error began to appear during the simulation.
    Typically a volume conservation error greater 0.001 percent is an indication that the model could be improved.
    The file CHVOLUME.
    OUT will indicate if the volume conservation error occurred in the channel routing instead of the overland flow component.
    Components should be switched ‘off’ one at a time and the model simulation run again until the volume conservation problem disappears.
-   This will identify which com- ponent is causing the difficulty.
+   This will identify which component is causing the difficulty.
    Some volume conservation problems may be eliminated by slowing the model down (decreasing the timesteps) using the numerical stability criteria.
    Most volume conservation problems are an indication of data errors.
 
 *Surging*
 
    It is possible for volume to be conserved during a flood simulation and still have numerical surging.
-   Numerical surging is the result of a mismatch be- tween flow area, slope and roughness.
+   Numerical surging is the result of a mismatch between flow area, slope and roughness.
    It can cause an over-steepening of the floodwave identified by spikes in the output hydrographs.
    Channel surging can be identified by discharge spikes in the CHANMAX.OUT file or in the HYDROG program plotted hydrographs.
    Predicted high maximum velocities indicate surging.
    To identify floodplain surging, review the maximum velocities in the MAXPLOT or Mapper post-processor program.
-   You can also review the VELTIMEC.OUT (channel) or VELTIMEFP.OUT (flood- plain) files for unreasonable maximum velocities.
+   You can also review the VELTIMEC.OUT (channel) or VELTIMEFP.OUT (floodplain) files for unreasonable maximum velocities.
    Surging can be reduced or eliminated by adjusting (lowering) the stability criteria (COURANT or DEPTOLFP in TOLER.DAT) thus decreasing the timesteps.
    If decreasing the timesteps fails to eliminate the surging, then individual grid element topography, slope or roughness should be adjusted.
    This can be accomplished in the FLO-2D Plugin for floodplain flow.
@@ -144,8 +144,8 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
 
     - Remove other components from the channel bank element including streets or ARF values.
     - Shorten the channel length (XLEN in CHAN.DAT).
-      This will in- crease the surface area in the channel bank floodplain elements.
-    - Decrease the channel cross section width in the PROFILES program.
+      This will increase the surface area in the channel bank floodplain elements.
+    - Decrease the channel cross-section width in the PROFILES program.
 
 
 *Limiting Froude Numbers*
@@ -154,7 +154,7 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
    numerical flood routing.
    This is a physical relationship between the kinematic and gravitation forces.
    To use the limiting Froude number, estimate a reasonaclsble maximum Froude number for your flood simulation and assign the value to either FROUDL
-   (floodplain), FROUDC (channels) or STRF- NO (streets) variables.
+   (floodplain), FROUDC (channels) or STRFNO (streets) variables.
    When the computed Froude number exceeds the limiting Froude number, the n-value is increased by a small value (~ 0.001) for the next timestep.
    This change in grid element n-value helps to create a better match between the slope, flow area and n-value during the simulation.
    When the limiting Froude number is no longer exceeded, the n-value is gradually decreased to the original value.
@@ -198,22 +198,22 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
 
     *Floodplain Surface Area Reduction*
 
-       The distribution of flood storage on the grid system can be influenced by as- signing area reduction factors (ARF’s) to represent loss of storage (i.e.
+       The distribution of flood storage on the grid system can be influenced by assigning area reduction factors (ARF’s) to represent loss of storage (i.e.
        buildings).
        For large flood events, the assignment of individual grid element ARF values will usually have minor impact on the area of inundation.
        For local flooding detail, individual grid element ARF assignments may be justified.
 
-    *Channel Cross Section Adjustments*
+    *Channel Cross-Section Adjustments*
 
-       Typically a surveyed cross section will represent five to ten channel elements.
-       Selecting a cross section to represent transitions between wide and narrow cross sections requires engineering judgment.
-       Use the PROFILES program to interpolate the transition between surveyed cross sections.
+       Typically a surveyed cross-section will represent five to ten channel elements.
+       Selecting a cross-section to represent transitions between wide and narrow cross-sections requires engineering judgment.
+       Use the PROFILES program to interpolate the transition between surveyed cross-sections.
 
     *Channel Slope Adjustments*
 
        Adverse channel slopes can be simulated by FLO-2D.
        Smoothing out an irregular slope condition over several channel elements to represent reach average slope conditions may speed up the simulation.
-       Cross sections with scour holes can result in local adverse slopes that misrepresent the average reach conditions.
+       Cross-sections with scour holes can result in local adverse slopes that misrepresent the average reach conditions.
        Review the channel slope in PROFILES.
 
     *Street Flow*
@@ -248,12 +248,16 @@ One data error that is difficult to locate is the array allocation violation whe
 value.
 For example, there may be missing sediment concentrations in INFLOW.DAT for a mudflow simulation.
 This made a code error where a variable is not initialized to zero.
-When this type of error is encountered, the FLO-2D model is terminated with a FOR- TRAN error message without indicating the file location or line
+When this type of error is encountered, the FLO-2D model is terminated with a FORTRAN error message without indicating the file location or line
 entry of the error.
 To locate the data error, simplify the simulation and turn off all of the components and turn them back on one at time until the error occurs again.
 Reset simulation time to the model time just after the error occurred to reduce time to debug the model.
-If attempts to debug an error are ineffective, send a zipped copy of the data files to FLO-2D (contact@flo-2d.com) along with brief description of the
+If attempts to debug an error are ineffective, send a zipped copy of the data files to FLO-2D via this |Contact-Form| along with brief description of the
 problem.
+
+.. |Contact-Form| raw:: html
+
+   <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
 
 The user can create a set of backup data files to debug the model.
 Set IBACKUP = 1 in the CONT.DAT file.
@@ -265,9 +269,7 @@ If one of the files is not complete, this may be the location of the data error.
 
 Review the following files to analyze volume conservation problems: SUMMARY.
 OUT, CHVOLUME.OUT, CHANMAX.OUT, TIME.OUT, BASE.OUT, ROUGH.OUT, CHANNEL.CHK, and SURFAREA.OUT.
-See the ‘Pocket
-
-Guide’ for further troubleshooting tips involving volume conservation, sticky grid elements listed in the TIME.OUT file, and numerical surging.
+See the ‘Pocket Guide’ for further troubleshooting tips involving volume conservation, sticky grid elements listed in the TIME.OUT file, and numerical surging.
 The instructional comments at the end of each data file description in this manual contains a number of guidelines to assist the user in creating or
 checking the data files.
 
@@ -292,11 +294,11 @@ The file descriptions can be referenced in Chapter 5.
 
    * - 3. There was missing or additional lines in a data file when switch is activated. Observe the \**\* Notes: \**\* in the file descriptions.
 
-   * - 4. Percentages were expressed as a number instead of a decimal.See the description of XCONC in CONT.DAT or the HP(I,J,3) variable in IN- FLOW.DAT.
+   * - 4. Percentages were expressed as a number instead of a decimal. See the description of XCONC in CONT.DAT or the HP(I,J,3) variable in INFLOW.DAT.
 
    * - 5. The IDEPLT grid element was improperly assigned in INFLOW.DAT for the graphics mode.
 
-   * - 6. Channel infiltration switch INFCHAN was not ‘turned on’ in theIN- FIL.DAT file.
+   * - 6. Channel infiltration switch INFCHAN was not ‘turned on’ in the INFIL.DAT file.
 
    * - 7. Either one or both of channel and floodplain outflow elements were not assigned for a given grid element.
 
@@ -310,7 +312,7 @@ The file descriptions can be referenced in Chapter 5.
 
    * - 11. The rainfall variable R_DISTRIB data was entered as total cumulative rainfall instead of the percentage of the total rainfall (range0.0 to 1.0).
 
-   * - 12. The ISEDN switch for channel sediment transport was not‘turned on’ in the CHAN.DAT file for the channel segment.
+   * - 12. The ISEDN switch for channel sediment transport was not ‘turned on’ in the CHAN.DAT file for the channel segment.
 
 
 **Runtime Errors**
@@ -323,30 +325,30 @@ If the simulation stops before reaching the prescribed simulation time, review t
     - Review the channel check files for potential errors.
 
 Volume Conservation Errors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most volume conservation and numerical stability problems are associated with channel flow.
-When constructing a channel system, it is often necessary to fabricate cross section geometry, estimate roughness or adjust channel bed slopes.
+When constructing a channel system, it is often necessary to fabricate cross-section geometry, estimate roughness or adjust channel bed slopes.
 Mismatched channel morphology parameters with an appropriate roughness are the primary source of numerical stability problems.
-To compute smoother hydraulics between two channel grid elements, adjust the bed slope, cross section flow area or roughness values.
-Try to avoid abrupt changes in cross sections geometry from one channel element to another.
+To compute smoother hydraulics between two channel grid elements, adjust the bed slope, cross-section flow area or roughness values.
+Try to avoid abrupt changes in cross-sections geometry from one channel element to another.
 The channel flow area for a natural channel (not a concrete rectangular or trapezoidal channel geometry) should make a gradual transition from a wide,
-shallow cross section to a narrow deep cross section.
-An actual cross section transition may occur over several channel grid elements.
+shallow cross section to a narrow deep cross-section.
+An actual cross-section transition may occur over several channel grid elements.
 Adjust the channel geometry so that the maximum change in flow area between channel elements is less than 25%.
 To address channel problems, consider the following measures:
 
-    - Increase the roughness in wide, shallow cross sections and decrease the roughness in narrow deep channel grid elements.
+    - Increase the roughness in wide, shallow cross-sections and decrease the roughness in narrow deep channel grid elements.
     - Reduce the difference between the cross-section areas.
-      Avoid abrupt cross section transitions between channel elements.
-      Adjust the channel cross section geometry in the PROFILES.
-      Use PROFILES to re-interpolate between surveyed cross sections.
+      Avoid abrupt cross-section transitions between channel elements.
+      Adjust the channel cross-section geometry in the PROFILES.
+      Use PROFILES to re-interpolate between surveyed cross-sections.
     - Review and adjust the bed slope with the PROFILES program.
       Adverse bed slopes are OK but adverse spikes and dips are not.
     - Select a longer channel length within the channel grid element.
 
 One Drive Sync
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
 
 Running simulations on projects that are stored on a directory that is synced to One Drive may result in a simulation crash.
 Small projects that run quickly and do not have long intervals between data output might be OK but it is a poor modeling practice to run projects on
@@ -373,7 +375,7 @@ It is better to run simulations on the local computer.
 Servers and Virtual Computers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Running simulations on servers or virtual computers is relatively straight for- ward and easy.
+Running simulations on servers or virtual computers is relatively straight forward and easy.
 For a Virtual Computer, simply set up the computer the same way a normal installation is performed.
 FLO-2D and QGIS can be installed on a Virtual Computer.
 Use it just like a regular computer.
@@ -447,12 +449,9 @@ assist in debugging runtime errors.
 
 Program will not run:
 
-    - Data errors.
-      Turn off the component switches until the model runs.
-    - The executable program was damaged.
-      Reload the program or contact technical support.
-    - The model is not properly licensed.
-      Contact technical support.
+    - Data errors: Turn off the component switches until the model runs.
+    - The executable program was damaged: Reload the program or contact technical support.
+    - The model is not properly licensed: Contact technical support.
 
 Program stops
 
@@ -505,16 +504,16 @@ Numerical Instability:
    Mismatched slope, flow area and n-values are the most common causes of channel instability.
    A combination of revisions may improve numerical instability.
 
-    - Abrupt changes in slope or severe adverse slope may cause in- stability.
+    - Abrupt changes in slope or severe adverse slope may cause instability.
       Use the PROFILES program to fix irregular bed slope conditions.
     - Review the cross-section flow areas over several channel elements in PROFILES.
-      Eliminate any abrupt changes in cross section areas between channel elements.
+      Eliminate any abrupt changes in cross-section areas between channel elements.
       If the surging occurs at low flows, review only the bottom portion of the cross section not the bankfull conditions.
     - Decrease the channel Courant number in the TOLER.DAT file.
-      Decrease the Courant number in 0.1 increments until a reason- able lower limit of 0.2 is reached.
+      Decrease the Courant number in 0.1 increments until a reasonable lower limit of 0.2 is reached.
     - Insufficient floodplain area.
       Small floodplain surface areas can exacerbate unsteady flow.
-      Review SURFAREA.OUT and in- crease the available grid element surface area for flood storage.
+      Review SURFAREA.OUT and increase the available grid element surface area for flood storage.
     - Increase the n-values for the grid elements in the vicinity of the surging flow.
     - Adjust the floodplain grid element elevations around the problem element.
     - Increase the channel length within the grid element.
@@ -564,17 +563,16 @@ The inflow hydrograph does not plot in the graphics display
       Reduce the rainfall time.
     - Inappropriate peak discharge or total rainfall values distort the scale for hydrograph plot.
 
-Program stops.
-Excessive flow depths
+Program stops. Excessive flow depths
 
-If flow depths are excessive, then ponding or surging may be occurring.
+    If flow depths are excessive, then ponding or surging may be occurring.
 
-    - Identify the problem element in MAXPLOT or in the end of the BASE.OUT file.
-    - Check TIME.OUT to determine if the problem element is also causing the model to run slowly.
-    - Check the elevation of the problem grid element in the TOPO.
-      DAT or in the FLO-2D Plugin.
-    - If the depressed element is a gravel pit or some other feature, increase the n-value to decrease the velocity (vertical overfall velocity) into the
-      pit.
+        - Identify the problem element in MAXPLOT or in the end of the BASE.OUT file.
+        - Check TIME.OUT to determine if the problem element is also causing the model to run slowly.
+        - Check the elevation of the problem grid element in the TOPO.
+          DAT or in the FLO-2D Plugin.
+        - If the depressed element is a gravel pit or some other feature, increase the n-value to decrease the velocity (vertical overfall velocity) into the
+          pit.
 
 Erratic discharge in the channel elements.
 
@@ -608,7 +606,7 @@ Channel extends through another channel element.
    If there is a problem with the channel bank alignment, simply revised the right bank element.
    The right bank element can be any grid element if it does not cross another connecting channel bank line.
 
-Program stops; identifying one or more grid elements with too little flood- plain surface.
+Program stops; identifying one or more grid elements with too little floodplain surface.
 
    The model will generate a message in ERROR.CHK if the channel right bank has is too little surface storage area on the floodplain portion of the
    element.
@@ -616,7 +614,7 @@ Program stops; identifying one or more grid elements with too little flood- plai
 
         - Reduce the ARF value, multiple channel area or street area.
         - The channel area can be reduced by decreasing the XLEN variable or top width, which is a function of the channel in the natural channels, the side
-          slopes, or the bottom width in the trapezoidal cross section or the width in the rectangular cross section.
+          slopes, or the bottom width in the trapezoidal cross-section or the width in the rectangular cross-section.
         - As a last resort the grid element size can be increased, but this requires the re-generation of the grid system.
 
 CADPTS.DAT error
@@ -680,7 +678,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Storm Drain
 
    * - 5000
-     - Cross Sections
+     - Cross-Sections
 
    * - 6000
      - Sediment, Mud
@@ -700,106 +698,77 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 100
      - Versions of the FLO-2D Pro and Storm Drain are Different. Please Check FLO-2D Build and Update Vc2005-Con.Dll
+     - Review engine file dates and flopro.exe and vc2005con.dll.
+       Make sure the file dates correspond to builds that are the same.
+       This may require Technical Support.
 
    * - 100
      - Floodway Switch = 1,Set Encroach in CONT.DAT
+     - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
+       The positions are 0, 1 or 2.
 
    * - 100
      - Set NOPRTC to Only 0, 1, or 2 in CONT.DAT
+     - The variable Graphtim is missing in CONT.DAT.
 
    * - 100
      - For Graphical Display (Lgplot=2),Graptim must be Greater Than 0
+     - The sediment concentration cannot be greater than 1.
 
    * - 100
      - Variable Xconc Exceeds 1
+     - The Xarf variable must be a value between 0 and 1.
 
    * - 100
      - Variable Xarf is Less Than 0 or Greater Than 1
+     - The Froudl variable should not be greater than 1.
 
    * - 100
      - Variable Froudl Greater Than 9
+     - NOPRTFP is a switch.
+       The positions are 0, 1 or 2.
 
    * - 100
      - Variable Noprtfp is a Switch,Use Only 0,1,2 or 3
+     - Set either MUD or ISED to 0.
 
    * - 100
      - Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation. Review CONT.DAT File
+     - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
+       Check the location of the cell.
+
+       Correct it by realigning the grid to the computational domain.
 
    * - 100
      - Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File
+     - Set ideplt to an inflow grid element number in inflow.dat.
 
    * - 100
      - If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT
 
    * - 100
      - If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
+     - For text mode, set lgplot = 0 and ideplt = 0.
 
    * - 100
-     - Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Vari-able Lgplot must be Set to 1
+     - Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Variable Lgplot must be Set to 1
+     - Make sure Ideplt is a grid element listed in inflow.dat.
 
    * - 100
      - Total Simulation Time of the Model Exceeds the Hydrograph Duration
+     - If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
 
    * - 100
      - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File, Then Lgplot must be 0 or 1
+     - Turn on the Lgplot and Graphtim to use Display Mode.
 
    * - 200
      - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
-
-   * - \
-     - Review engine file dates and flopro.exe and vc2005con.dll.
-       Make sure the file dates correspond to builds that are the same.
-       This may require Technical Support.
-
-   * - \
-     - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
-       The positions are 0, 1 or 2.
-
-   * - \
-     - The variable Graphtim is missing in CONT.DAT.
-
-   * - \
-     - The sediment concentration cannot be greater than 1.
-
-   * - \
-     - The Xarf variable must be a value between 0 and 1.
-
-   * - \
-     - The Froudl variable should not be greater than 1.
-
-   * - \
-     - NOPRTFP is a switch.
-       The positions are 0, 1 or 2.
-
-   * - \
-     - Set either MUD or ISED to 0.
-
-   * - \
-     - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
-       Check the location of the cell.
-
-       Correct it by realigning the grid to the computational domain.
-
-   * - \
-     - Set ideplt to an inflow grid element number in inflow.dat.
-
-   * - \
-     - For text mode, set lgplot = 0 and ideplt = 0.
-
-   * - \
-     - Make sure Ideplt is a grid element listed in inflow.dat.
-
-   * - \
-     - If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
-
-   * - \
-     - Turn on the Lgplot and Graphtim to use Display Mode.
-
-   * - \
      - Check the coordinates in topo.dat.
 
    * - 200
      - Hydraulic Structure Channel Inflow must be a Channel Element
+     - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
 
    * - 200
      - Time-Stage Elements Have a Stage Assigned that Was Less Than the Floodplain or Channel Bed Elevation.
@@ -807,355 +776,244 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 200
      - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
+     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File
 
    * - 300
      - A Channel/Street Courant Number is Required in TOLER.DAT
+     - Set the correct Courant number.
 
    * - 300
      - If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
+     - Check the STREET.DAT file.
 
    * - 400
      - Variable Tol Has an Inappropriate Value
+     - Check the TOL value. It must be in a correct range.
 
    * - 400
      - Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction
+     - Check the TOL variable and the Initial Abstraction variable. The initial abstraction may be too high. See INFIL.DAT.
 
    * - 500
      - MANNINGS_N.DAT File Has a Mismatched Grid Element Number...
        Check the End of this File
+     - The MANNINGS_N.DAT file might not be complete.
 
    * - 500
      - MANNINGS_N.DAT Files Does Not Exist.
        Create the File Before Proceeding
+     - Export MANINGS_N.DAT again.
 
    * - 500
      - The Spatially Variable Shallown Value is Outside the Range 0.010 to 0.99
+     - Check the SPATIALSHALLOWN.DAT file.
 
    * - 500
      - N-Value is Less Than 0 or Greater Than 1
+     - Check the CONT.DAT file.
 
    * - 600
      - Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable Real Rainfall Adjustments (Irainarf=1) With Rainarf Values
-
-   * - 600
-     - Rtt must be Greater Than 0
-
-   * - 600
-     - First Pair of the Rainfall Distribution Should Be 0.0.
-
-   * - 600
-     - Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
-
-   * - 700
-     - Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
-
-   * - 700
-     - To Use the SCS Curve Number Method For Infiltration You Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File
-
-   * - 700:
-     - Variable Poros is Greater Than 1
-
-   * - \
-     - Reposition the structure node onto a left bank node.
-
-   * - \
-     - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
-
-   * - \
-     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File
-
-   * - \
-     - Set the correct Courant number.
-
-   * - \
-     - Check the STREET.DAT file.
-
-   * - \
-     - Check the TOL value. It must be in a correct range.
-
-   * - \
-     - Check the TOL variable and the Initial Abstraction variable. The initial abstraction may be too high. See INFIL.DAT.
-
-   * - \
-     - The MANNINGS_N.DAT file might not be complete.
-
-   * - \
-     - Export MANINGS_N.DAT again.
-
-   * - \
-     - Check the SPATIALSHALLOWN.DAT file.
-
-   * - \
-     - Check the CONT.DAT file.
-
-   * - \
      - Spatially variable data is missing.
        Check RAIN.DAT.
 
-   * - \
+   * - 600
+     - Rtt must be Greater Than 0
      - Check RAIN.DAT.
 
-   * - \
+   * - 600
+     - First Pair of the Rainfall Distribution Should Be 0.0.
      - Correct the first data pair of the rainfall distribution curve.
        Set the first data pair to 0.0 0.0.
 
-   * - \
+   * - 600
+     - Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
      - Check RAINCELL.DAT.
 
-   * - \
+   * - 700
+     - Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
      - Check INFIL.DAT.
 
-   * - \
+   * - 700
+     - To Use the SCS Curve Number Method For Infiltration You Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File
      - Check RAIN.DAT.
 
-   * - \
+   * - 700:
+     - Variable Poros is Greater Than 1
      - Check INFIL.DAT.
 
    * - 700
      - Variable Sati or Satf is Greater Than 1
+     - Check INFIL.DAT.
 
    * - 700
      - Variable Rtimpf Exceeds 1.0.
        Do Not Enter As a Percent Use a Fraction
+     - Check INFIL.DAT.
 
    * - 700
      - Abstraction Exceeds the Total Rainfall (Impossible) For at Least One Grid Element and May Result in Volume Conservation Error
+     - Check spatial abstraction variable in INFIL.DAT.
 
    * - 700
      - Initial Abstraction > Tol (Depression Storage).
        Consider (Not Required) Lowering the Tol Value or Adjusting the Ia Value
+     - The TOL variable and IA variable can be summed to account for the initial abstraction.
 
    * - 800
      - There are Two Inflow Conditions Imposed at the Same Cell
+     - A cell is listed twice in INFLOW.DAT.
+       Check the file and remove one of the hydrographs.
 
    * - 800
      - This Grid Cell Has an Inflow and a Full ARF
+     - Reposition the inflow node.
 
    * - 800
      - This Grid Cell Has an Inflow and a Partial ARF
+     - Consider repositioning the inflow node.
 
    * - 800
      - The Following Cell Has an Inflow and a Hs
+     - Reposition the inflow node or the hydraulic structure inlet node.
 
    * - 800
      - The Following Cell Has an Inflow Fp on a Channel Left Bank Element
+     - Consider changing the inflow to channel inflow.
 
    * - 800
      - The Following Cell Has an Inflow Fp on a Channel Right Bank Element
+     - Consider moving the inflow node to the left bank and changing it to a channel node.
 
    * - 800
      - There are an Inflow Conditions Imposed on a Levee Element
+     - Check the levee Inflow condition.
+       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
 
    * - 800
      - This Grid Cell Has an Inflow on a Multiple Ch Element
+     - Reposition the inflow node.
 
    * - 800
      - This Grid Cell Has an Inflow on a Multiple Ch Element
+     - Reposition the inflow node.
 
    * - 800
      - There are Two Inflow Conditions Imposed at the Same Cell
+     - A cell is listed twice in INFLOW.DAT.
+       Check the file and remove one of the hydrographs.
 
    * - 800
      - The Following Cell Has an Inflow Ch on a Channel Right Bank Element
+     - Move the inflow node to the left bank.
 
    * - 800
      - There are an Inflow Conditions Imposed on a Levee Element
+     - Check the levee Inflow condition.
+       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
 
    * - 800
      - There are Two Outflow Conditions Imposed at the Same Cell
+     - Remove the extra line in OUTFLOW.DAT.
 
    * - 800
      - The Following Cell Has a Channel Outflow on a Channel Right Bank Element
+     - Move the outflow node left bank.
 
    * - 800
      - There are an Outflow Conditions Imposed on a Levee Element
+     - Make sure the outflow node is on the correct side of the levee.
 
    * - 800
      - There are Two Outflow Conditions Imposed at the Same Cell
-
-   * - \
-     - Check INFIL.DAT.
-
-   * - \
-     - Check INFIL.DAT.
-
-   * - \
-     - Check spatial abstraction variable in INFIL.DAT.
-
-   * - \
-     - The TOL variable and IA variable can be summed to account for the initial abstraction.
-
-   * - \
-     - A cell is listed twice in INFLOW.DAT.
-       Check the file and remove one of the hydrographs.
-
-   * - \
-     - Reposition the inflow node.
-
-   * - \
-     - Consider repositioning the inflow node.
-
-   * - \
-     - Reposition the inflow node or the hydraulic structure inlet node.
-
-   * - \
-     - Consider changing the inflow to channel inflow.
-
-   * - \
-     - Consider moving the inflow node to the left bank and changing it to a channel node.
-
-   * - \
-     - Check the levee Inflow condition.
-       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
-
-   * - \
-     - Reposition the inflow node.
-
-   * - \
-     - Reposition the inflow node.
-
-   * - \
-     - A cell is listed twice in INFLOW.DAT.
-       Check the file and remove one of the hydrographs.
-
-   * - \
-     - Move the inflow node to the left bank.
-
-   * - \
-     - Check the levee Inflow condition.
-       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
-
-   * - \
-     - Remove the extra line in OUTFLOW.DAT.
-
-   * - \
-     - Move the outflow node left bank.
-
-   * - \
-     - Make sure the outflow node is on the correct side of the levee.
-
-   * - \
      - Move the outflow node left bank.
 
    * - 800
      - The Following Cell Has an Outflow (Fp) on a Channel Left Bank or Right Bank Element:
+     - It's OK for n FP outflow node to be on a left bank but not a right bank.
 
    * - 800
      - There is an Outflow Conditions Imposed on a Levee Element
+     - Make sure the outflow node is on the correct side of the levee.
 
    * - 800
      - There are Two Stage Time Relationships Imposed at the Same Cell
+     - Remove one of the duplicate stage time conditions from OUTFLOW.DAT.
 
    * - 800
      - The Following Cell Has Stage Time Relationship on a Channel Right Bank Element:
+     - Remove the outflow from the right bank.
 
    * - 800
      - There are a Stage Time Outflow Condition Imposed on a Levee Element
+     - Make sure the outflow node is on the correct side of the levee.
 
    * - 800
      - There are a Stage Time Relationship Imposed on an Outflow Cell
+     - \
 
    * - 800
      - There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell
+     - \
 
    * - 800
      - There are Two Outflow Conditions Imposed at the Same Cell
+     - Delete one of the outflow nodes in OUTFLOW.DAT.
 
    * - 800
      - This Grid Cell Has an Outflow and a Full ARF
+     - Delete the outflow node or the ARF.
 
    * - 800
      - This Grid Cell Has an Outflow and a Partial ARF
+     - Delete the ARF.
 
    * - 800
      - The Following Cell Has an Outflow and a WRF
+     - Delete the WRF.
 
    * - 800
      - This Grid Cell Has a Stage Time Relationship and a Full ARF
+     - Delete the outflow node or the ARF.
 
    * - 800
      - This Grid Cell Has a Stage Time Relationship and a Partial ARF
+     - Delete the ARF.
 
    * - 800
      - The Following Cell Has an Outflow and a WRF:
+     - Delete the WRF.
 
    * - 800
      - This Grid Cell Has an Outflow and a Full ARF
+     - Delete the outflow node or the ARF.
 
    * - 800
      - This Grid Cell Has an Outflow and a Partial ARF
+     - Delete the ARF.
 
    * - 800
      - The Following Cell Has an Outflow and a WRF
+     - Delete the WRF.
 
    * - 800
      - An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)
+     - Turn the channel switch on or reset the inflow node to floodplain.
 
    * - 800
      - First Pair of the Floodplain Hydrograph Should Be 0.0.
        to Interpolate the First Timestep
+     - Set the first data pair to 0.0 0.0 in the INFLOW.DAT.
 
    * - 800
      - No Inflow Discharge Specified For the Inflow Element
-
-   * - \
-     - It's OK for n FP outflow node to be on a left bank but not a right bank.
-
-   * - \
-     - Make sure the outflow node is on the correct side of the levee.
-
-   * - \
-     - Remove one of the duplicate stage time conditions from OUTFLOW.DAT.
-
-   * - \
-     - Remove the outflow from the right bank.
-
-   * - \
-     - Make sure the outflow node is on the correct side of the levee.
-
-   * - \
-     - Delete one of the outflow nodes in OUTFLOW.DAT.
-
-   * - \
-     - Delete the outflow node or the ARF.
-
-   * - \
-     - Delete the ARF.
-
-   * - \
-     - Delete the WRF.
-
-   * - \
-     - Delete the outflow node or the ARF.
-
-   * - \
-     - Delete the ARF.
-
-   * - \
-     - Delete the WRF.
-
-   * - \
-     - Delete the outflow node or the ARF.
-
-   * - \
-     - Delete the ARF.
-
-   * - \
-     - Delete the WRF.
-
-   * - \
-     - Turn the channel switch on or reset the inflow node to floodplain.
-
-   * - \
-     - Set the first data pair to 0.0 0.0 in the INFLOW.DAT.
-
-   * - \
      - Check INFLOW.DAT.
 
    * - 800
      - INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be
 
        specified, CONT.DAT Variable  Inplot must be Set to 1
+     - \
 
 
 **Table 7.6 ADVANCED ERROR CODES**
