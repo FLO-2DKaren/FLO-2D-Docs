@@ -696,6 +696,10 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    :widths: 33 33 34
    :header-rows: 0
 
+   * - **Code**
+     - **Reason**
+     - **Solution**
+
    * - 100
      - Versions of the FLO-2D Pro and Storm Drain are Different.
 
