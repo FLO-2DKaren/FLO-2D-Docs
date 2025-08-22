@@ -731,13 +731,14 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Variable Froudl Greater Than 9
      - The Froudl variable should not be greater than 1.
 
-
    * - 100
      - Variable Noprtfp is a Switch,Use Only 0,1,2 or 3
      - NOPRTFP is a switch.  The positions are 0, 1 or 2.
 
    * - 100
-     - Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation. Review CONT.DAT File
+     - Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1)
+
+       Cannot Be Modeled in the Same Simulation. Review CONT.DAT File
      - Set either MUD or ISED to 0.
 
    * - 100
@@ -749,26 +750,36 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        to the computational domain.
 
    * - 100
-     - If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT
+     - If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then
+
+       Ideplt must be Greater Than Zero in INFLOW.DAT
      - Set ideplt to an inflow grid element number in inflow.dat.
    * - 100
-     - If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
+     - If Only Writing Text Output to Screen - No Flood Graphics
+
+       Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
      - For text mode, set lgplot = 0 and ideplt = 0.
 
    * - 100
-     - Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT Variable Lgplot must be Set to 1
+     - Ideplt (INFLOW.DAT) must be an Inflow Node and the CONT.DAT
+
+       Variable Lgplot must be Set to 1
      - Make sure Ideplt is a grid element listed in inflow.dat.
 
    * - 100
      - Total Simulation Time of the Model Exceeds the Hydrograph Duration
-     - If the hydrograph ends before the simulation, make sure it is set to zero or the last dis- charge in the hydrograph will continue as steady flow.
+     - If the hydrograph ends before the simulation, make sure it is set to zero or the last discharge in the hydrograph will continue as steady flow.
 
    * - 100
-     - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File, Then Lgplot must be 0 or 1
+     - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,
+
+       Then Lgplot must be 0 or 1
      - Turn on the Lgplot and Graphtim to use Display Mode.
 
    * - 200
-     - Grid Element Coordinates Exceed 1000000000. Reduce the Coordinate Values Before Proceeding
+     - Grid Element Coordinates Exceed 1000000000. Reduce the
+
+       Coordinate Values Before Proceeding
      - Check the coordinates in topo.dat.
 
    * - 200
@@ -776,12 +787,17 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Reposition the structure node onto a left bank node.
 
    * - 200
-     - Time-Stage Elements Have a Stage Assigned that Was Less Than the Floodplain or Channel Bed Elevation.
+     - Time-Stage Elements Have a Stage Assigned that Was Less Than
+
+       the Floodplain or Channel Bed Elevation.
+
        Stage Was Reset to the Bed Elevation
      - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
 
    * - 200
-     - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
+     - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,
+
+       There is No Inflow to Be Plotted.
      - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File
 
    * - 300
@@ -789,7 +805,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Set the correct Courant number.
 
    * - 300
-     - If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow Node Must Have a Street in It
+     - If Istrflo in STREET.DAT is Set to 1,Then at Least One Inflow
+
+       Node Must Have a Street in It
      - Check the STREET.DAT file.
 
    * - 400
@@ -802,11 +820,13 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 500
      - MANNINGS_N.DAT File Has a Mismatched Grid Element Number...
+
        Check the End of this File
      - The MANNINGS_N.DAT file might not be complete.
 
    * - 500
      - MANNINGS_N.DAT Files Does Not Exist.
+
        Create the File Before Proceeding
      - Export MANINGS_N.DAT again.
 
@@ -819,7 +839,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Check the CONT.DAT file.
 
    * - 600
-     - Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable Real Rainfall Adjustments (Irainarf=1) With Rainarf Values
+     - Line 2 in RAIN.DAT File Has to Be Reviewed For Spatially Variable
+
+       Real Rainfall Adjustments (Irainarf=1) With Rainarf Values
      - Spatially variable data is missing.
        Check RAIN.DAT.
 
@@ -833,15 +855,21 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        Set the first data pair to 0.0 0.0.
 
    * - 600
-     - Date and Time in Raincell.Dat Must Have this Format: 06-15-2003 14:00:00
+     - Date and Time in Raincell.Dat Must Have this
+
+       Format: 06-15-2003 14:00:00
      - Check RAINCELL.DAT.
 
    * - 700
-     - Variable Infmethod Line 1 in the INFIL.DAT is Either Missing or Not Correctly Assigned
+     - Variable Infmethod Line 1 in the INFIL.DAT is Either Missing
+
+       or Not Correctly Assigned
      - Check INFIL.DAT.
 
    * - 700
-     - To Use the SCS Curve Number Method For Infiltration You Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File
+     - To Use the SCS Curve Number Method For Infiltration You
+
+       Must Have Rainfall, Irain = 1 in CONT.DAT and RAIN.DAT File
      - Check RAIN.DAT.
 
    * - 700:
@@ -858,12 +886,19 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Check INFIL.DAT.
 
    * - 700
-     - Abstraction Exceeds the Total Rainfall (Impossible) For at Least One Grid Element and May Result in Volume Conservation Error
+     - Abstraction Exceeds the Total Rainfall (Impossible)
+
+       For at Least One Grid Element and May Result in Volume
+
+       Conservation Error
      - Check spatial abstraction variable in INFIL.DAT.
 
    * - 700
      - Initial Abstraction > Tol (Depression Storage).
-       Consider (Not Required) Lowering the Tol Value or Adjusting the Ia Value
+
+       Consider (Not Required) Lowering the Tol Value or
+
+       Adjusting the Ia Value
      - The TOL variable and IA variable can be summed to account for the initial abstraction.
 
    * - 800
@@ -923,7 +958,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Remove the extra line in OUTFLOW.DAT.
 
    * - 800
-     - The Following Cell Has a Channel Outflow on a Channel Right Bank Element
+     - The Following Cell Has a Channel Outflow on a Channel
+
+       Right Bank Element
      - Move the outflow node left bank.
 
    * - 800
@@ -935,7 +972,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Move the outflow node left bank.
 
    * - 800
-     - The Following Cell Has an Outflow (Fp) on a Channel Left Bank or Right Bank Element:
+     - The Following Cell Has an Outflow (Fp) on a Channel
+
+       Left Bank or Right Bank Element
      - It's OK for n FP outflow node to be on a left bank but not a right bank.
 
    * - 800
@@ -947,7 +986,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Remove one of the duplicate stage time conditions from OUTFLOW.DAT.
 
    * - 800
-     - The Following Cell Has Stage Time Relationship on a Channel Right Bank Element:
+     - The Following Cell Has Stage Time Relationship on a
+
+       Channel Right Bank Element:
      - Remove the outflow from the right bank.
 
    * - 800
@@ -959,7 +1000,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - \
 
    * - 800
-     - There are a Floodplain Outflow and a Stage Time Relationship at the Same Cell
+     - There are a Floodplain Outflow and a Stage Time
+
+       Relationship at the Same Cell
      - \
 
    * - 800
@@ -1003,11 +1046,16 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Delete the WRF.
 
    * - 800
-     - An Inflow Hydrograph Has Been Assigned to a Channel Element (C-Line in INFLOW.DAT) and There is No Channel Component (Ichannel = 0 in CONT.DAT)
+     - An Inflow Hydrograph Has Been Assigned to a Channel
+
+       Element (C-Line in INFLOW.DAT) and There is No
+
+       Channel Component (Ichannel = 0 in CONT.DAT)
      - Turn the channel switch on or reset the inflow node to floodplain.
 
    * - 800
      - First Pair of the Floodplain Hydrograph Should Be 0.0.
+
        to Interpolate the First Timestep
      - Set the first data pair to 0.0 0.0 in the INFLOW.DAT.
 
@@ -1016,7 +1064,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Check INFLOW.DAT.
 
    * - 800
-     - INFLOW.DAT Variable Ideplt must be an Inflow Node and an Inflow Node  - Khin - Variable in INFLOW.DAT must be
+     - INFLOW.DAT Variable Ideplt must be an Inflow Node
+
+       and an Inflow Node  - Khin - Variable in INFLOW.DAT must be
 
        specified, CONT.DAT Variable  Inplot must be Set to 1
      - \
