@@ -8076,7 +8076,7 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>TIMDEPCELL.DAT File Example</pre></i></div>
+        <div><i><pre>   TIMDEPCELL.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     1521
@@ -8132,7 +8132,7 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>    SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
+        <div><i><pre>SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
@@ -8200,9 +8200,9 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
         .. raw:: html
 
             where:<br>
-                n<sub>b</sub> = bankfull discharge roughness<br>
-                depth = flow depth<br>
-                dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+                        n<sub>b</sub> = bankfull discharge roughness<br>
+                        depth = flow depth<br>
+                        dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
    This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
    roughness elements (assumed to be 3 ft or 1 m).
@@ -8218,10 +8218,10 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
        .. raw:: html
 
            If the<br>
-           0.0 < flow depth < 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
-           0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2<br>
-           0.5 ft (0.15 m) < flow depth < 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n<sub>b</sub> * 1.5 * e<sup>-(0.4 depth/dmax)</sup><br>
-           3 ft (1 m) < flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
+           0.0 < flow depth < 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
+           0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2<br>
+           0.5 ft (0.15 m) < flow depth < 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n<sub>b</sub> * 1.5 * e<sup>-(0.4 depth/dmax)</sup><br>
+           3 ft (1 m) < flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
 
 FILE: GUTTER.DAT
 ~~~~~~~~~~~~~~~~
