@@ -8228,16 +8228,16 @@ FLOODPLAIN STREET ELEMENT GUTTER DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                                   GUTTER.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        2  0.67   0.020                             Line 1:    <b>STRWIDTH  CURBHEIGHT   STREET_n-VALUE</b>
-        G   4525   25.0   0.67   0.025   8          Line 2:    <b>GUTTERCHAR   IGRID(I)   WIDSTR(I)</b>
-                                                               <b>CURBHT(I)   XNSTR(I)   ICURBDIR(J=1-8)</b>
+    <pre>
+    2  0.67   0.020                             Line 1:    <b>STRWIDTH  CURBHEIGHT   STREET_n-VALUE</b>
+    G   4525   25.0   0.67   0.025   8          Line 2:    <b>GUTTERCHAR   IGRID(I)   WIDSTR(I)</b>
+                                                           <b>CURBHT(I)   XNSTR(I)   ICURBDIR(J=1-8)</b>
 
-                                                               <i>I = number of grid elements with gutters
-                                                               J = curbside flow direction</i>
-        Notes:
-         Repeat line 2 for each assigned gutter element.
-        </pre>
+                                                           <i>I = number of grid elements with gutters
+                                                           J = curbside flow direction</i>
+    Notes:
+     Repeat line 2 for each assigned gutter element.
+    </pre>
     </div>
 
 .. raw:: html
@@ -8249,21 +8249,21 @@ FLOODPLAIN STREET ELEMENT GUTTER DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>GUTTER.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           20.0 0.67 0.020
-           20 20.
-           0.67 0.025 1
-           27 20.
-           0.67 0.030 1
-           28 20.
-           0.67 0.025 1
-           29 20.
-           0.67 0.020 1
-           30 20.
-           0.67 0.020 1
-           50 10.
-           0.67 0.025 5
-        </pre>
+    <pre>
+    20.0 0.67 0.020
+    20 20.
+    0.67 0.025 1
+    27 20.
+    0.67 0.030 1
+    28 20.
+    0.67 0.025 1
+    29 20.
+    0.67 0.020 1
+    30 20.
+    0.67 0.020 1
+    50 10.
+    0.67 0.025 5
+    </pre>
     </div>
 
 .. raw:: html
