@@ -1081,7 +1081,7 @@ DEPRESSED_ELEMENTS.OUT
 
 **Flow Depth Output Files for TWO-PHASE modeling.**
 
-    - DEPCH_COMBO.OUT - Combined channel fluid and mudflow maxi- mum flow depths.
+    - DEPCH_COMBO.OUT - Combined channel fluid and mudflow maximum flow depths.
       Channel fluid or mudflow max depth (whichever is greater).
     - DEPCH_MUD.OUT - Channel maximum mudflow depth.
     - DEPCHFINAL_MUD.OUT - Channel final mudflow depth.
@@ -1153,9 +1153,9 @@ FLO-2D MODFLOW CH RETURN EXCHANGE.OUT
         - CH depth (ft or m)
         - Water exchange · · · CH CH grid element
         - CH depth (ft or m)
-        - Water exchange volume (ft3 or m\ :sup:`3`)
+        - Water exchange volume (ft\ :sup:`3` or m\ :sup:`3`)
         - Grid area (ft\ :sup:`2` or m\ :sup:`2`)
-        - Groundwater volume to surface (ft3 or m\ :sup:`3`)
+        - Groundwater volume to surface (ft\ :sup:`3` or m\ :sup:`3`)
         - Column
         - Row
         - Ground water depth (ft or m)
@@ -1192,11 +1192,8 @@ FLOODWAVETIME.OUT
 
     .. raw:: html
 
-        <pre>
-        Node    X-coord    Y-coord    Floodwave Arrival Time    Flood Time    Peak
-        Time    Deflood Time    Max WS
-        </pre>
-
+        Node&nbsp;&nbsp;&nbsp;X-coord&nbsp;&nbsp;&nbsp;Y-coord&nbsp;&nbsp;&nbsp;Floodwave Arrival Time&nbsp;&nbsp;&nbsp;Flood Time&nbsp;&nbsp;&nbsp;Peak<br>
+        Time&nbsp;&nbsp;&nbsp;Deflood Time&nbsp;&nbsp;&nbsp;Max WS
 
     Each grid element is assigned a specific value of the above parameters at the end of the simulation.
     The maximum values are tracked during the simulation on a computational timestep basis.
