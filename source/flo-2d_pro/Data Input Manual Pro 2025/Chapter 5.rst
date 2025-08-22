@@ -706,7 +706,7 @@ BASEFLOWFP_TIME.OUT
     The floodplain time above baseflow reporting option requires 2 two simulations: 1) Set IFLOODWAVE = 0 in CONT.DAT
     and prepare INFLOW.
     DAT with only the base flow hydrographs and run the model.
-    2) Set IF- LOODWAVE = 2 and swap out the INFLOW.DAT file with the flood hydrograph (such as a dam breach hydrograph) and run the model a second time
+    2) Set IFLOODWAVE = 2 and swap out the INFLOW.DAT file with the flood hydrograph (such as a dam breach hydrograph) and run the model a second time
     to generate the BASEFLOWFP_TIME.OUT file.
 
 BATCH COMPARISON FILES
@@ -801,7 +801,7 @@ BRIDGE_FLOW_GEOMETRY.OUT
 
     Bridge flow area, wetted perimeter, and top width of the bridge cross-sections.
 
-        - US flow area (ft\ :sup:`2` or m2)
+        - US flow area (ft\ :sup:`2` or m\ :sup:`2`)
         - US wetted perimeter (ft or m)
         - US topwidth (ft or m)
         - BR flow area (ft\ :sup:`2` or m\ :sup:`2`)
