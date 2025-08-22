@@ -9198,13 +9198,13 @@ STEEP SLOPE N VALUE DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>       STEEP_SLOPEN.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0               Line 1: <b>ISTEEPN_GLOBAL</b>
-        263             Line 2: <b>IDUM</b>
+    <pre>
+    0               Line 1: <b>ISTEEPN_GLOBAL</b>
+    263             Line 2: <b>IDUM</b>
 
-        Notes:
-           Line 2: Repeat this line for each grid element has a steep slope.
-        </pre>
+    Notes:
+     Line 2: Repeat this line for each grid element has a steep slope.
+    </pre>
     </div>
 
 .. raw:: html
@@ -9215,15 +9215,15 @@ STEEP SLOPE N VALUE DATA FILE
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           STEEP_SLOPEN.DAT File Example</pre></i></div>
+        <div><i><pre>     STEEP_SLOPEN.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        2
-        263
-        236
-        245
-        ...
-        </pre>
+    <pre>
+    2
+    263
+    236
+    245
+    ...
+    </pre>
     </div>
 
 .. raw:: html
