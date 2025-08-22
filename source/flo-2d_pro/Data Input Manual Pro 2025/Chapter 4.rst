@@ -8587,9 +8587,9 @@ ARRAY OF INTERIOR GRID ELEMENTS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>CHAN_INTERIOR_NODES.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        1521 Line 1: <b>IGRID(I)</b>
-        </pre>
+    <pre>
+    1521 Line 1: <b>IGRID(I)</b>
+    </pre>
     </div>
 
 .. raw:: html
@@ -8601,18 +8601,18 @@ ARRAY OF INTERIOR GRID ELEMENTS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre> CHAN_INTERIOR_NODES.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        1521
-        4099
-        5713
-        7611
-        9183
-        10751
-        12442
-        14079
-        15977
-        18061
-        </pre>
+    <pre>
+    1521
+    4099
+    5713
+    7611
+    9183
+    10751
+    12442
+    14079
+    15977
+    18061
+    </pre>
     </div>
 
 .. raw:: html
