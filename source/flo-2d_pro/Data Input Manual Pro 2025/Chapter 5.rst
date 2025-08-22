@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 5: Output Files and Options
+Chapter 5: OUTPUT FILES AND OPTIONS
 ===================================
 
-Basic guidelines for using output files.
---------------------------------------------
+BASIC GUIDELINES FOR USING OUTPUT FILES.
+-----------------------------------------
 
 During the flood simulation, the user has two choices for viewing the model flood progression:
 
@@ -1005,12 +1005,12 @@ CVTFINAL_MUD.OUT
 
 CVTMAX.OUT
 
-This file contains the channel fluid maximum sediment concentration by volume.
+    This file contains the channel fluid maximum sediment concentration by volume.
 
-    - Grid element
-    - x-coord
-    - y-coord
-    - Channel fluid max concentration
+        - Grid element
+        - x-coord
+        - y-coord
+        - Channel fluid max concentration
 
 CVTMAX_MUD.OUT
 
