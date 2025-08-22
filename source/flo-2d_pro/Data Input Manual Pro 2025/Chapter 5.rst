@@ -1484,10 +1484,10 @@ LEVEEDEFIC.OUT
             3 = freeboard < 1 ft (0.3 m) <br>
             4 = levee is overtopped by flow. <br><br>
 
-                - Grid element
-                - Xcoord
-                - Ycoord
-                - Levee deficit
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Levee deficit
 
 GE_LEVFAIL.OUT
 
