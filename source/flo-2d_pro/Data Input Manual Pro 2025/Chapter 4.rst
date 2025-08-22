@@ -9020,14 +9020,14 @@ LOW IMPACT DEVELOPMENT DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>       LID_VOLUME.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        7659 10 Line 1: <b>IDUM LIDVOLUMEMAX(J)</b>
+    <pre>
+    7659 10 Line 1: <b>IDUM LIDVOLUMEMAX(J)</b>
 
-           <i>J = grid element that has a LID volume assigned.</i>
+    <i>J = grid element that has a LID volume assigned.</i>
 
-        Notes:
-           Line 1: Repeat this line for each grid element has an LID volume.
-        </pre>
+    Notes:
+    Line 1: Repeat this line for each grid element has an LID volume.
+    </pre>
     </div>
 
 .. raw:: html
@@ -9039,12 +9039,12 @@ LOW IMPACT DEVELOPMENT DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>        LID_VOLUME.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        7650 10
-        7651 10
-        7652 10
-           ...
-        </pre>
+    <pre>
+    7650 10
+    7651 10
+    7652 10
+    ...
+    </pre>
     </div>
 
 .. raw:: html
