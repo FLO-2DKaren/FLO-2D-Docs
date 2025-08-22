@@ -8062,7 +8062,7 @@ ARRAY OF GRID ELEMENTS FOR TIME OUTPUT
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre>           TIMDEPCELL.DAT File Variables</pre></i></div>
+        <div><i><pre>   TIMDEPCELL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     1521            Line 1: <b>IGRID(I)</b>
@@ -8134,9 +8134,9 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>    SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
-        </pre>
+    <pre>
+    1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
+    </pre>
     </div>
 
 .. raw:: html
@@ -8148,13 +8148,13 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>SHALLOWN_SPATIAL.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           1521 0.200
-           4099 0.150
-           5713 0.220
-           7611 0.250
-           9183 0.190
-        </pre>
+    <pre>
+    1521 0.200
+    4099 0.150
+    5713 0.220
+    7611 0.250
+    9183 0.190
+    </pre>
     </div>
 
 .. raw:: html
@@ -8197,13 +8197,12 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 
             n_d = n_b \, * 1.5 \, * \, e^{-(0.4 depth/dmax)}
 
-        where:
+        .. raw:: html
 
-            n\ :sub:`b` = bankfull discharge roughness
-
-            depth = flow depth
-
-            dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
+            where:<br>
+                n<sub>b</sub> = bankfull discharge roughness<br>
+                depth = flow depth<br>
+                dmax = flow depth for drowning the roughness elements and vegetation (hardwired 3 ft or 1 m)
 
    This equation prescribes that the variable depth floodplain roughness is equal to the assigned flow roughness for complete submergence of all
    roughness elements (assumed to be 3 ft or 1 m).
@@ -8216,15 +8215,13 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 
    The following rules apply:
 
-       If the
+       .. raw:: html
 
-       0.0 < flow depth < 0.2 ft (0.06 m),                n = SHALLOWN value
-
-       0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m),    n = SHALLOWN/2.
-
-       0.5 ft (0.15 m) < flow depth < 3 ft (1 m),         n = n\ :sub:`b` * 1.5 * e\ :sup:`-(0.4 depth/dmax)`
-
-       3 ft (1 m) < flow depth,                           n = n-value in MANNINGS_N.DAT
+       If the<br>
+       0.0 < flow depth < 0.2 ft (0.06 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN value<br>
+       0.2 ft (0.06 m) < flow depth < 0.5 ft (0.15 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = SHALLOWN/2<br>
+       0.5 ft (0.15 m) < flow depth < 3 ft (1 m)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n<sub>b</sub> * 1.5 * e<sup>-(0.4 depth/dmax)</sup><br>
+       3 ft (1 m) < flow depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n = n-value in MANNINGS_N.DAT
 
 FILE: GUTTER.DAT
 ~~~~~~~~~~~~~~~~
