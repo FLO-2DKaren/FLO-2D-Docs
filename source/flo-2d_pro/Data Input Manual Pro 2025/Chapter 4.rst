@@ -8491,38 +8491,37 @@ SURFACE WATER RATING TABLES
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                           OUTRC.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         N   13562              Line 1: <b>IVOLSTOCHAR   NNODSTOVO</b>
-         P   1.25   20.5        Line 2: <b>IVOLSTOCHAR   DEPTHRT(I,K)   VOLRT(I,K)</b>
-                                <i>I = Depths
-                                K = Volume corresponding to I depths.</i>
-        </pre>
+    <pre>
+    N   13562              Line 1: <b>IVOLSTOCHAR   NNODSTOVO</b>
+    P   1.25   20.5        Line 2: <b>IVOLSTOCHAR   DEPTHRT(I,K)   VOLRT(I,K)</b>
+                                   <i>I = Depths
+                                   K = Volume corresponding to I depths.</i>
+    </pre>
     </div>
 
 .. raw:: html
 
     <br><br>
 
-
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>OUTRC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        N 25146
-        P 0.00 0.00
-        P 1.00 5.25
-        P 2.00 25.2
-        P 3.00 100.32
-        P 4.00 180.5
-        ...
-        P 20.5 736.00
-        N 14079
-        P 0.00 0.00
-        P 1.00 2.50
-        ...
-        </pre>
+    <pre>
+    N 25146
+    P 0.00 0.00
+    P 1.00 5.25
+    P 2.00 25.2
+    P 3.00 100.32
+    P 4.00 180.5
+    ...
+    P 20.5 736.00
+    N 14079
+    P 0.00 0.00
+    P 1.00 2.50
+    ...
+    </pre>
     </div>
 
 .. raw:: html
