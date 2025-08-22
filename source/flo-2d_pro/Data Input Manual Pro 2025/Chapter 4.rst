@@ -5996,7 +5996,7 @@ LEVEE AND FAILURE DATA
     a. For the levee to fail when overtopped by the flow, set FAILELEV and FAILTIME = 0.
     b. To fail the levee at a specified elevation, set FAILELEV equal to the failure elevation.
     c. To fail the levee at a specified level below the top of the levee, set FAILELEV to a value less than 10 ft and the levee will fail at an elevation
-       equal to LEVCREST - FAILELEV.
+       equal to LEVCREST-FAILELEV.
     d. To fail the levee at a specific level below the crest after the water surface reaches FAILELEV for a cumulative duration, assign FAILTIME.
     e. To fail the levee to a new base elevation that is different than the floodplain elevation, assign LEVBASE.
     f. To fail a levee to a specified maximum width, set the FAILWIDTHMAX to the limiting width.
@@ -6024,15 +6024,15 @@ LEVEE AND FAILURE DATA
 5. Levee freeboard deficit is reported in the output file LEVEEDEFIC.OUT.
    Five levels of freeboard deficit are listed in the file as follows:
 
-        ::
+    .. raw:: html
 
-           Level 0      > 3 ft
+        Level 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;> 3 ft
 
-                 1       2 ft < freeboard < 3 ft
+              1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2 ft < freeboard < 3 ft
 
-                 2       1 ft < freeboard < 2 ft
+              2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 ft < freeboard < 2 ft
 
-                 3       freeboard < 1 ft
+              3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;freeboard < 1 ft
 
                  4       levee overtopped
 
