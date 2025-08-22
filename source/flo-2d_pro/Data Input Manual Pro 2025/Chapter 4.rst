@@ -8841,8 +8841,7 @@ TAILINGS DATA
 
     <br><br>
 
-
-  .. raw:: html
+.. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               TAILINGS_CV.DAT File Example</pre></i></div>
