@@ -8385,12 +8385,12 @@ BUILDING COLLAPSE PARAMETERS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               BUILDING_COLLAPSE.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        0                           Line 2: <b>IARFSMASHGLOBAL</b>
-        4025 1                      Line 2: <b>IG(M) IARFSMASH(M)</b>
-                                    <i>M = number of grid elements to be considered for collapse
-                                    IG = grid element</i>
-        </pre>
+    <pre>
+    0                           Line 2: <b>IARFSMASHGLOBAL</b>
+    4025 1                      Line 2: <b>IG(M) IARFSMASH(M)</b>
+                                        <i>M = number of grid elements to be considered for collapse
+                                        IG = grid element</i>
+    </pre>
     </div>
 
 .. raw:: html
@@ -8402,17 +8402,17 @@ BUILDING COLLAPSE PARAMETERS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>BUILDING_COLLAPSE.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           0
-           4563 2
-           6756 1
-           23145 1
-           23146 2
-           23147 3
-           25331 4
-           26345 1
-           …
-        </pre>
+    <pre>
+    0
+    4563 2
+    6756 1
+    23145 1
+    23146 2
+    23147 3
+    25331 4
+    26345 1
+    …
+    </pre>
     </div>
 
 .. raw:: html
