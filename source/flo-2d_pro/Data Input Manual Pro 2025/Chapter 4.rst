@@ -8919,15 +8919,14 @@ TAILINGS DEPTH DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               TAILINGS_STACK_DEPTH.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        7659 10 5 Line 1: <b>IDUM FPD(I) FPD_MUD(I)</b>
-        <i>I = grid element that has a tailings depth assigned.</i>
+    <pre>
+    7659 10 5 Line 1: <b>IDUM FPD(I) FPD_MUD(I)</b>
+                      <i>I = grid element that has a tailings depth assigned.</i>
 
-        Notes:
-
-           In CONT.DAT, If MUD = 1 FPD is water or tailings depth.
-           In CONT.DAT, If MUD = 2 FPD is water depth and FPD_MUD is the tailings depth
-        </pre>
+    Notes:
+     In CONT.DAT, If MUD = 1 FPD is water or tailings depth.
+     In CONT.DAT, If MUD = 2 FPD is water depth and FPD_MUD is the tailings depth
+    </pre>
     </div>
 
 .. raw:: html
@@ -8939,25 +8938,24 @@ TAILINGS DEPTH DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               TAILINGS_STACK_DEPTH.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        Example MUD = 1
-           7650 10
-           7651 10
-           7652 10
-           ...
-         Example  MUD = 2
-          7650  10     5
-          7651   10    5
-          7652   10    5
-          ...
-        </pre>
+    <pre>
+    Example MUD = 1
+     7650 10
+     7651 10
+     7652 10
+     ...
+
+    Example  MUD = 2
+     7650  10     5
+     7651   10    5
+     7652   10    5
+     ...
+    </pre>
     </div>
 
 .. raw:: html
 
     <br><br>
-
-
 
 **Variable Descriptions for the TAILINGS_STACK_DEPTH.DAT File**
 
@@ -8994,7 +8992,7 @@ TAILINGS DEPTH DATA
 1. TAILINGS_STACK_DEPTH.DAT is used to simulate a static or seismic tailings dam failure where the tailings constitute the dam.
    This file will contain the tailing grid elements, water depth on the surface of the tailings and tailings depth.
    If the tailings stack failure is only mudflow and not 2 phase flow, then only the tailings depth will be listed in this file.
-   This file can be imported to QGIS or opened in an ASCII file program editor (WordPad) to revise or con- tour the tailings depths and this will now
+   This file can be imported to QGIS or opened in an ASCII file program editor (WordPad) to revise or contour the tailings depths and this will now
    constitute the FLO-2D simulation source volume.
 
 2. The TAILINGS_STACK_DEPTH.DAT file can be created using a preparation FLO-2D model simulation in the following sequence:
@@ -9010,7 +9008,7 @@ TAILINGS DEPTH DATA
         vii. Assign SIMUL = simulation model time with a representative TOUT = 0.1 or some other value.
         viii. Run the FLO-2D model again and the assigned stack depths will begin to move at the initiation of the model.
 
-3. A second option is to assign the TAILINGS_STACK_DEPTH.DAT in QGIS and then follow steps vi thru viii above to initiate the stack failure.
+3. A second option is to assign the TAILINGS_STACK_DEPTH.DAT in QGIS and then follow steps 5 thru 8 above to initiate the stack failure.
 
 FILE: LID_VOLUME.DAT
 ~~~~~~~~~~~~~~~~~~~~
