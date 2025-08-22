@@ -7854,7 +7854,7 @@ SPATIALLY VARIABLE TOLLERANCE VALUES
    * - TOL
      - **r**
      - **0.001
-       - 5.**
+       - 5.0**
      - Spatially variable TOL value (ft or m) that can range from
 
        0.001 ft to 5 ft (0.0003 m to 1.52 m)
