@@ -7205,7 +7205,7 @@ STORM DRAIN DATA FILE
    * - CURBHEIGHT(I)
      - **r**
      - **0.0 - ∞**
-     - Curb height used to calculate discharge on inlets for all IN- TYPE inlets.
+     - Curb height used to calculate discharge on inlets for all INTYPE inlets.
 
    * - FEATURE(I)
      - **i**
@@ -7237,7 +7237,7 @@ STORM DRAIN DATA FILE
      - **c**
      - **D**
      - Character line identifier for the SWMM model inlets.
-       Vari- able is case sensitive and it must be upper case.
+       Variable is case sensitive and it must be upper case.
 
    * - SWMMcoeff(I)
      - **r**
@@ -7255,7 +7255,7 @@ STORM DRAIN DATA FILE
    * - SWMM_JT(I)
      - **i**
      - **1 - NNOD**
-     - Grid elements that contains storm drain inlets or man- holes.
+     - Grid elements that contains storm drain inlets or manholes.
 
    * - SWMMlength(I)
      - **r**
@@ -7326,7 +7326,7 @@ STORM DRAIN DATA FILE
             - Grate open area
             - Grate sag height (zero for at grade)
 
-        **Type 4** - Variable storm drain inlet geometry.*
+        **Type 4** - Variable storm drain inlet geometry.
 
             - Weir coefficient: not required.
             - The storm drain inlet rating table (line n with depth and discharge pairs) is required in the SWMMFLORT data file.
@@ -7340,7 +7340,7 @@ STORM DRAIN DATA FILE
 
 3. The Feature switch = 0 allows a type 4 inlet to be horizontal.
    This means the inlet exchanges flow with the grid element at the rim elevation.
-   It is best ap- plied to headwall features that are submerged below the surface of the grid.
+   It is best applied to headwall features that are submerged below the surface of the grid.
    The Feature switch = 1 if the type 4 inlet is vertical.
    This means the inlet exchanges water with the grid element at the invert elevation.
    This feature type is used when an inlet is a headwall.
