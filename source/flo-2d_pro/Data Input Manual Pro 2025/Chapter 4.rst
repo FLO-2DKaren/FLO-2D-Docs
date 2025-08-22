@@ -4784,7 +4784,7 @@ FLOODPLAIN AREA WIDTH REDUCTION DATA
 
        Variable is case sensitive and it must be upper case.
 
-   * - **WRF(I,J)**
+   * - WRF(I,J)
      - **r**
      - **0 - 1**
      - Width reduction factors (WRF).
