@@ -1702,9 +1702,10 @@ RAINCELL.CHK
     This file was created for the user to be able check the magnitude of the average total rainfall for all grids and the total rainfall for each grid
     during the simulation, the file contains the following:
 
-        Line 1 Average grid element rainfall for the entire storm=, RGRIDTOTALAVE
+    .. raw:: html
 
-        Line 2 1 to NNOD TOTAL RAINFALL
+        Line 1 Average grid element rainfall for the entire storm=, RGRIDTOTALAVE<br>
+        Line 2 1 to NNOD TOTAL RAINFALL<br>
 
 RAINONECELL.CHK
 
