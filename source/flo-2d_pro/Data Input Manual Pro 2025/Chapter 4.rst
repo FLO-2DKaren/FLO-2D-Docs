@@ -863,20 +863,18 @@ NUMERICAL STABILITY CONTROL DATA
 
 5. Using the Courant criteria, the timestep Δt is limited by:
 
+        .. math::
+            :label:
 
+            \Delta t = \frac{C \Delta x}{(\beta V + c)}
 
-
-    .. math::
-        :label:
-
-        \Delta t = \frac{C \Delta x}{(\beta V + c)}
 
         .. raw:: html
 
             where:<br>
-                C is the Courant number (C ≤ 1.0) Δx is the square grid element width.<br>
-                V is the computed average cross section velocity.<br>
-                β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
+                    C is the Courant number (C ≤ 1.0) Δx is the square grid element width.<br>
+                    V is the computed average cross section velocity.<br>
+                    β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
 
    The Courant coefficient C may vary from 0.2 to 0.9 depending on the size of the grid element and floodwave velocity.
    If C is set to 1.0, artificial or numerical diffusivity is assumed to be zero.
@@ -8132,7 +8130,7 @@ FILE: SHALLOWN_SPATIAL.DAT ARRAY OF GRID ELEMENTS FOR SPATIALLY VARIABLE SHALLOW
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre> SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
+        <div><i><pre>  SHALLOWN_SPATIAL.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     1521 0.100 Line 1: <b>IGRID(I) SHALLOWN(I)</b>
