@@ -708,7 +708,10 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 100
      - Floodway Switch = 1,Set Encroach in CONT.DAT
-     - To run a floodway simulation, set Floodway Switch = 1 and set the Encroach variable in CONT.DAT. NOPRTC is a switch.
+     - To run a floodway simulation, set Floodway Switch = 1 and set the
+
+       Encroach variable in CONT.DAT. NOPRTC is a switch.
+
        The positions are 0, 1 or 2.
 
    * - 100
@@ -743,11 +746,11 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 100
      - Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File
-     - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are
+     - If grid element number 1 does not have a neighbor, it is dangling
 
-       wrong in TOPO.DAT.  Check the location of the cell.  Correct it by realigning the grid
+       or the coordinates are wrong in TOPO.DAT.  Check the location of the cell.
 
-       to the computational domain.
+       Correct it by realigning the grid to the computational domain.
 
    * - 100
      - If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then
@@ -768,7 +771,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 100
      - Total Simulation Time of the Model Exceeds the Hydrograph Duration
-     - If the hydrograph ends before the simulation, make sure it is set to zero or the last discharge in the hydrograph will continue as steady flow.
+     - If the hydrograph ends before the simulation, make sure it is set to zero
+
+       or the last discharge in the hydrograph will continue as steady flow.
 
    * - 100
      - If Ideplt is Listed As Inflow Node in the INFLOW.DAT File,
@@ -792,13 +797,17 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        the Floodplain or Channel Bed Elevation.
 
        Stage Was Reset to the Bed Elevation
-     - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
+     - Check the invert elevation of the structure, the grid element elevation
+
+       or the head reference elevation.
 
    * - 200
      - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,
 
        There is No Inflow to Be Plotted.
-     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT, Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File
+     - Either Set Lgplot = 0, Assign Ideplt an Inflow Hydrograph in INFLOW.DAT,
+
+       Or Set Irain = 1 in CONT.DAT and Assign the RAIN.DAT File
 
    * - 300
      - A Channel/Street Courant Number is Required in TOLER.DAT
@@ -816,7 +825,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 400
      - Please Review If Tol = 0.05 Ft or 0.015 M With the Rainfall Abstraction
-     - Check the TOL variable and the Initial Abstraction variable. The initial abstraction may be too high. See INFIL.DAT.
+     - Check the TOL variable and the Initial Abstraction variable.
+
+       The initial abstraction may be too high. See INFIL.DAT.
 
    * - 500
      - MANNINGS_N.DAT File Has a Mismatched Grid Element Number...
@@ -852,6 +863,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 600
      - First Pair of the Rainfall Distribution Should Be 0.0.
      - Correct the first data pair of the rainfall distribution curve.
+
        Set the first data pair to 0.0 0.0.
 
    * - 600
@@ -899,12 +911,16 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        Consider (Not Required) Lowering the Tol Value or
 
        Adjusting the Ia Value
-     - The TOL variable and IA variable can be summed to account for the initial abstraction.
+     - The TOL variable and IA variable can be summed to account for the
+
+       initial abstraction.
 
    * - 800
      - There are Two Inflow Conditions Imposed at the Same Cell
      - A cell is listed twice in INFLOW.DAT.
-       Check the file and remove one of the hydrographs.
+       Check the file and remove one
+
+       of the hydrographs.
 
    * - 800
      - This Grid Cell Has an Inflow and a Full ARF
@@ -924,12 +940,17 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 800
      - The Following Cell Has an Inflow Fp on a Channel Right Bank Element
-     - Consider moving the inflow node to the left bank and changing it to a channel node.
+     - Consider moving the inflow node to the left bank and changing
+
+       it to a channel node.
 
    * - 800
      - There are an Inflow Conditions Imposed on a Levee Element
      - Check the levee Inflow condition.
-       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
+
+       Make sure the inflow is on the correct side of the levee
+
+       and make sure the cell elevation is set correctly.
 
    * - 800
      - This Grid Cell Has an Inflow on a Multiple Ch Element
@@ -942,6 +963,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 800
      - There are Two Inflow Conditions Imposed at the Same Cell
      - A cell is listed twice in INFLOW.DAT.
+
        Check the file and remove one of the hydrographs.
 
    * - 800
@@ -951,7 +973,10 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 800
      - There are an Inflow Conditions Imposed on a Levee Element
      - Check the levee Inflow condition.
-       Make sure the inflow is on the correct side of the levee and make sure the cell elevation is set correctly.
+
+       Make sure the inflow is on the correct side of the levee
+
+       and make sure the cell elevation is set correctly.
 
    * - 800
      - There are Two Outflow Conditions Imposed at the Same Cell
