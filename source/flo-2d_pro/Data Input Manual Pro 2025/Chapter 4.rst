@@ -8659,10 +8659,10 @@ BRIDGE CROSS SECTIONS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>           BRIDGE_XSEC.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        X 6657                      Line 1: <b>XSECCHAR = 'X' IBRIDGE(I)</b>
-        0.00 957.08 954.11          Line 2: <b>XUP(I,J) YUP(I,J) YB(I,J)</b>
-        </pre>
+    <pre>
+    X 6657                      Line 1: <b>XSECCHAR = 'X' IBRIDGE(I)</b>
+    0.00 957.08 954.11          Line 2: <b>XUP(I,J) YUP(I,J) YB(I,J)</b>
+    </pre>
     </div>
 
 .. raw:: html
@@ -8674,25 +8674,25 @@ BRIDGE CROSS SECTIONS
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>      BRIDGE_XSEC.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           X 6657
-           0.00 957.08 954.11
-           4.00 957.15 953.48
-           10.01 957.16 952.04
-           16.02 955.69 950.18
-           20.02 954.13 949.50
-           22.02 953.38 944.24
-           28.03 950.24 942.80
-           78.09 944.95 937.26
-           88.10 949.16 937.69
-           94.11 951.27 939.68
-           98.11 953.63 940.94
-           102.12 955.43 942.52
-           110.12 956.13 945.75
-           112.13 955.87 945.87
-           118.13 955.86 948.39
-           120.14 955.90 954.00
-        </pre>
+    <pre>
+    X 6657
+    0.00 957.08 954.11
+    4.00 957.15 953.48
+    10.01 957.16 952.04
+    16.02 955.69 950.18
+    20.02 954.13 949.50
+    22.02 953.38 944.24
+    28.03 950.24 942.80
+    78.09 944.95 937.26
+    88.10 949.16 937.69
+    94.11 951.27 939.68
+    98.11 953.63 940.94
+    102.12 955.43 942.52
+    110.12 956.13 945.75
+    112.13 955.87 945.87
+    118.13 955.86 948.39
+    120.14 955.90 954.00
+    </pre>
     </div>
 
 .. raw:: html
@@ -8722,7 +8722,7 @@ BRIDGE CROSS SECTIONS
    * - XSECCHAR
      - **c**
      - **X**
-     - A character to define a new bridge cross section dataset.
+     - A character to define a new bridge cross-section dataset.
 
    * - XUP(i,j)
      - **r**
@@ -8732,12 +8732,12 @@ BRIDGE CROSS SECTIONS
    * - YUP(i,j)
      - **r**
      - **0 - ∞**
-     - Upstream cross section elevation ft or m.
+     - Upstream cross-section elevation ft or m.
 
    * - YB(i,j)
      - **r**
      - **0 - ∞**
-     - Downstream cross section elevation ft or m.
+     - Downstream cross-section elevation ft or m.
 
 
 **Instructional Comments for the BRIDGE_XSEC.DAT File**
