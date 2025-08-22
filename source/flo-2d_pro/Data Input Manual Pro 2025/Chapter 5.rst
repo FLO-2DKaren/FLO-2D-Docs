@@ -1193,11 +1193,7 @@ FLOODWAVETIME.OUT
     .. raw:: html
 
         Node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X-coord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y-coord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floodwave Arrival Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flood Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peak<br>
-        Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deflood Time&nbsp&nbsp;&nbsp;;&nbsp;&nbsp;Max WS
-
-.. raw:: html
-
-    <br><br>
+        Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deflood Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max WS
 
     Each grid element is assigned a specif8ic value of the above parameters at the end of the simulation.
     The maximum values are tracked during the simulation on a computational timestep basis.
@@ -1234,7 +1230,7 @@ FLOODWAY.OUT
 
 FPINFILTRATION.OUT
 
-    The total infiltration (ft or m) at the end of the simulation for each flood- plain element is written to this file with grid element x- and
+    The total infiltration (ft or m) at the end of the simulation for each floodplain element is written to this file with grid element x- and
     y-coordinates.
 
         - Grid element
