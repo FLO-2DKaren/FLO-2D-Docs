@@ -1723,7 +1723,7 @@ ROUGH.OUT
 
     The ROUGH.OUT file reports the automated Manning’s n-value adjustment during model simulation including n-value change for exceeding the Courant
     number and exceeding the limiting Froude.
-    The user specifies a maximum Froude number for overland, channel and street name.
+    The user specifies a maximum Froude number for overland, channel and street flow.
     When the computed Froude number exceeds the defined maximum value for a given grid element, the n-value for that grid element is increased by a value
     based on the percent change in the n-value.
     During the falling limb of the hydrograph when the Froude number is no longer exceeded, the n-value is decreased by 0.0005 until the original n-value
@@ -1999,7 +1999,7 @@ TIMDEP.OUT
 
         - Grid element
         - Depth (ft or m)
-        - Velocity (sqrt(x^2+y^2)) (fps or mps)
+        - Velocity (sqrt(x\ :sup:`2` +y\ :sup:`2`)) (fps or mps)
         - Velocity x - velocity vector x
         - Velocity y - velocity vector y
         - Water surface elevation (ft or m)
@@ -2007,7 +2007,7 @@ TIMDEP.OUT
 TIMDEPCELL.OUT
 
     This file contains flow depth, velocity, and velocity direction x and y, and water surface elevation for a set of grid elements defined by the
-    TIMEDEP- CELL.DAT file.
+    TIMEDEPCELL.DAT file.
     The user specifies time intervals with TIMTEP in CONT.DAT.
 
 TIMDEP.HDF5
@@ -2065,7 +2065,7 @@ TIME_TO_ABOVE_BASEFLOW.OUT
 TIMEONEFT.OUT
 
     This file reports the grid element number, the x- and y-coordinates and the initial time to one foot of depth.
-    The time to one foot of depth can be plot- ted in FLO-2D MapCrafter.
+    The time to one foot of depth can be plotted in FLO-2D MapCrafter.
     This file is typically used for dam and levee breach analysis.
 
         - Grid element
@@ -2087,7 +2087,7 @@ TIMETOPEAK.OUT
 TIMETWOFT.OUT
 
     This file reports the grid element number, the x- and y-coordinates and the initial time to two feet of depth.
-    The time to two feet of depth can be plot- ted in FLO-2D MapCrafter.
+    The time to two feet of depth can be plotted in FLO-2D MapCrafter.
     This file is typically used for dam and levee breach analysis.
 
         - Grid element
@@ -2129,13 +2129,13 @@ The velocity output files include:
 
     VELOC.OUT - Maximum channel flow velocity;
 
-    VELCHFINAL.OUT - Final channel flow velocities.;
+    VELCHFINAL.OUT - Final channel flow velocities;
 
-    VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity.
+    VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity;
 
-    FINALVEL.OUT -Flow velocity at the end of the simulation.
+    FINALVEL.OUT - Flow velocity at the end of the simulation;
 
-    FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation.
+    FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation;
 
     VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable.
     This is not max velocity x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
@@ -2170,7 +2170,8 @@ The velocity output files related to two-PHASE flow include:
 VELTIMEC.OUT
 
     This file lists the grid element number, maximum channel velocity and the time of occurrence.
-    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any unreasonably high maximum channel velocities.
+    It is sorted from highest to lowest velocity so that an examination of the first several lines
+    of output data will determine if there are any unreasonably high maximum channel velocities.
 
         - Grid element
         - Vmax in the channel element (fps or mps)
@@ -2178,9 +2179,9 @@ VELTIMEC.OUT
 
 VELTIMEFP.OUT
 
-    This file lists the first 100 floodplain elements: number, maximum flood- plain velocity and the time of occurrence.
-    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
-    unreasonably high maximum floodplain velocities.
+    This file lists the first 100 floodplain elements: number, maximum floodplain velocity and the time of occurrence.
+    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine
+    if there are any unreasonably high maximum floodplain velocities.
 
         - Grid element
         - Vmax floodplain element (fps or mps)
@@ -2200,8 +2201,8 @@ VELRESMAX.OUT
         - Velymax
 
     Flow velocities are computed in 8-directions for each grid element.
-    In the figure below, the red arrows indicate inflow to the grid element (2-directions) and the blue arrows represent outflow from the grid element
-    (3-directions).
+    In the figure below, the red arrows indicate inflow to the grid element (2-directions) and the blue arrows represent outflow from
+    the grid element (3-directions).
     The remaining flow directions have zero discharge and velocities.
     The arrow length indicates relative magnitude.
     If the outflow velocities from the grid element are resolved into x- and y- coordinate directions, the components would be depicted by the blue arrows
@@ -2211,8 +2212,8 @@ VELRESMAX.OUT
 VELTIMEST.OUT
 
     This file lists the street element number, maximum street velocity and the time of occurrence.
-    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
-    unreasonably high maximum street velocities.
+    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine
+    if there are any unreasonably high maximum street velocities.
 
         - Grid element
         - Vmax street element (fps or mps)
@@ -2220,7 +2221,7 @@ VELTIMEST.OUT
 
 WSTIME.OUT
 
-    If the WSTIME.DAT file is created, the WSTIME.OUT file will be generated listing the channel element number, time of the measured water sur- face
+    If the WSTIME.DAT file is created, the WSTIME.OUT file will be generated listing the channel element number, time of the measured water surface
     elevation, measured water surface elevation at stated time, predicted water surface elevation at stated time, difference between the water surface
     elevations and the cumulative difference between the measured and predicted water surfaces.
 
