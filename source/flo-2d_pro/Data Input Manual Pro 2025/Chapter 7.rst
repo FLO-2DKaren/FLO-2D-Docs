@@ -697,9 +697,13 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    :header-rows: 0
 
    * - 100
-     - Versions of the FLO-2D Pro and Storm Drain are Different. Please Check FLO-2D Build and Update Vc2005-Con.Dll
+     - Versions of the FLO-2D Pro and Storm Drain are Different.
+
+       Please Check FLO-2D Build and Update Vc2005-Con.Dll
      - Review engine file dates and flopro.exe and vc2005con.dll.
+
        Make sure the file dates correspond to builds that are the same.
+
        This may require Technical Support.
 
    * - 100
