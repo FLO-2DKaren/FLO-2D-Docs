@@ -9022,7 +9022,7 @@ LOW IMPACT DEVELOPMENT DATA FILE
     <pre>
     7659 10 Line 1: <b>IDUM LIDVOLUMEMAX(J)</b>
 
-    <i>J = grid element that has a LID volume assigned.</i>
+                    <i>J = grid element that has a LID volume assigned.</i>
 
     Notes:
     Line 1: Repeat this line for each grid element has an LID volume.
@@ -9049,10 +9049,6 @@ LOW IMPACT DEVELOPMENT DATA FILE
 .. raw:: html
 
     <br><br>
-
-
-
-
 
 **Variable Descriptions for the LID_VOLUME.DAT File**
 
@@ -9101,14 +9097,14 @@ MULTIPLE DOMAIN DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>        MULTDOMAIN.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        N 6 Line 1: <b>OUTCHAR = 'N' NOFDOWNSDOMAIN</b>
-        D 3490 5707 Line 2: <b>OUTCHAR = 'D' UPSCONNECTIVITY(I,J)
-                            DOWNCONNECTIVITY(I,J)</b>
+    <pre>
+    N 6 Line 1: <b>OUTCHAR = 'N' NOFDOWNSDOMAIN</b>
+    D 3490 5707 Line 2: <b>OUTCHAR = 'D' UPSCONNECTIVITY(I,J)
+                        DOWNCONNECTIVITY(I,J)</b>
 
-        Notes:
-        Line 1: This number is the number of the downstream domain
-        </pre>
+    Notes:
+     Line 1: This number is the number of the downstream domain
+    </pre>
     </div>
 
 .. raw:: html
@@ -9119,29 +9115,24 @@ MULTIPLE DOMAIN DATA FILE
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>           MULTDOMAIN.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        N 1
-        D 9877 1
-        D 10054 2
-        D 10231 3
-        N 2
-        D 95 7
-        D 94 8
-        D 93 9
-        D 92 10
-        D 91 11
-           ...
-        </pre>
+    <pre>
+    N 1
+    D 9877 1
+    D 10054 2
+    D 10231 3
+    N 2
+    D 95 7
+    D 94 8
+    D 93 9
+    D 92 10
+    D 91 11
+    ...
+    </pre>
     </div>
 
 .. raw:: html
 
     <br><br>
-
-
-
-
-
 
 **Variable Descriptions for the MULTDOMAIN.DAT File**
 
@@ -9157,7 +9148,7 @@ MULTIPLE DOMAIN DATA FILE
      - **RANGE**
      - **DESCRIPTION**
 
-   * - **NOFDOWNSDO-MAIN**
+   * - **NOFDOWNSDOMAIN**
      - **r**
      - **0.01 - ∞**
      - Downstream domain number.
@@ -9169,12 +9160,12 @@ MULTIPLE DOMAIN DATA FILE
 
        D = Connectivity line.
 
-   * - **UPSCONNEC-TIVITY**
+   * - **UPSCONNECTIVITY**
      - **i**
      - **1 to NNOD**
      - Upstream connected node.
 
-   * - **DOWNCON-NECTIVITY**
+   * - **DOWNCONNECTIVITY**
      - **i**
      - **1 to NNOD**
      - Downstream connected node.
