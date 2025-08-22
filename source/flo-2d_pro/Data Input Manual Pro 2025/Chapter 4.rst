@@ -6887,7 +6887,7 @@ DAM AND LEVEE BREACH DATA
      - **1 - 11**
      - Sediment transport equation that is used to compute the breach erosion.
 
-       Out of eleven transport equations in FLO- 2D only Tofaletti and MPM-Woo are not available.
+       Out of eleven transport equations in FLO-2D only Tofaletti and MPM-Woo are not available.
 
        See the list of sediment transport equation numbers in SED.DAT.
 
@@ -6956,7 +6956,7 @@ DAM AND LEVEE BREACH DATA
 
        material (riprap) for a prescribed grid element failure location.
 
-       If UNFCDF = 0.0 : UNDFCDF = UNFCS when D50DF = 0.0 and UND- FCDF = 3.0 when D50DF > 0.0.
+       If UNFCDF = 0.0 : UNDFCDF = UNFCS when D50DF = 0.0 and UNDFCDF = 3.0 when D50DF > 0.0.
 
    * - UNFCS
      - **r**
@@ -7027,7 +7027,7 @@ DAM AND LEVEE BREACH DATA
 
        ZU is expressed as a ratio (horizontal : vertical).
 
-       For ex- ample: ZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
+       For example: ZU = 2.0 represents 2.0 horizontal to 1.0 vertical.
 
 
 **Instructional Comments for the BREACH.DAT File**
