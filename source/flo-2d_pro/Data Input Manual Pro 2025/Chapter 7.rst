@@ -709,43 +709,44 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 100
      - Set NOPRTC to Only 0, 1, or 2 in CONT.DAT
-     - The variable Graphtim is missing in CONT.DAT.
+     - NOPRTC is a switch.  The positions are 0, 1 or 2.
 
    * - 100
      - For Graphical Display (Lgplot=2),Graptim must be Greater Than 0
-     - The sediment concentration cannot be greater than 1.
+     - The variable Graphtim is missing in CONT.DAT.
 
    * - 100
      - Variable Xconc Exceeds 1
-     - The Xarf variable must be a value between 0 and 1.
+     - The sediment concentration cannot be greater than 1.
 
    * - 100
      - Variable Xarf is Less Than 0 or Greater Than 1
-     - The Froudl variable should not be greater than 1.
+     - The Xarf variable must be a value between 0 and 1.
 
    * - 100
      - Variable Froudl Greater Than 9
-     - NOPRTFP is a switch.
-       The positions are 0, 1 or 2.
+     - The Froudl variable should not be greater than 1.
+
 
    * - 100
      - Variable Noprtfp is a Switch,Use Only 0,1,2 or 3
-     - Set either MUD or ISED to 0.
+     - NOPRTFP is a switch.  The positions are 0, 1 or 2.
 
    * - 100
      - Mudflow (Mud=1) and Conventional Sediment Transport (Ised=1) Cannot Be Modeled in the Same Simulation. Review CONT.DAT File
-     - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are wrong in TOPO.DAT.
-       Check the location of the cell.
-
-       Correct it by realigning the grid to the computational domain.
+     - Set either MUD or ISED to 0.
 
    * - 100
      - Grid Element 1 Has No Neighbor Grid Elements,Check the CADPTS.DAT File
-     - Set ideplt to an inflow grid element number in inflow.dat.
+     - If grid element number 1 does not have a neighbor, it is dangling or the coordinates are
+
+       wrong in TOPO.DAT.  Check the location of the cell.  Correct it by realigning the grid
+
+       to the computational domain.
 
    * - 100
      - If Displaying the Flood Graphics - Lgplot = 2 in CONT.DAT - Then Ideplt must be Greater Than Zero in INFLOW.DAT
-
+     - Set ideplt to an inflow grid element number in inflow.dat.
    * - 100
      - If Only Writing Text Output to Screen - No Flood Graphics Lgplot = 0 in CONT.DAT - Set Ideplt = 0 in INFLOW.DAT
      - For text mode, set lgplot = 0 and ideplt = 0.
@@ -768,11 +769,12 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 200
      - Hydraulic Structure Channel Inflow must be a Channel Element
-     - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
+     - Reposition the structure node onto a left bank node.
 
    * - 200
      - Time-Stage Elements Have a Stage Assigned that Was Less Than the Floodplain or Channel Bed Elevation.
        Stage Was Reset to the Bed Elevation
+     - Check the invert elevation of the structure, the grid element elevation or the head reference elevation.
 
    * - 200
      - If Ideplt is 0 in INFLOW.DAT and Irain is 0 in CONT.DAT,There is No Inflow to Be Plotted.
