@@ -1311,11 +1311,11 @@ HYCHAN.OUT
         - Elevation – water surface elevation starting at bed elevation.
         - Thalweg depth - average depth above the lowest point in the channel for the duration of the output interval.
           (ft or m)
-        - Velocity - depth average velocity for cross section for the duration of the output interval (fps or mps)
+        - Velocity - depth average velocity for cross-section for the duration of the output interval (fps or mps)
         - Discharge - average discharge for the output interval (cfs or cms)
         - Froude number - based on the average depth and velocity.
         - Flow area - average flow area given by the average discharge divided by the average velocity (sqft or sqm)
-        - Wetted Perimeter - average wetted perimeter for the cross section for the duration of the output interval (ft or m)
+        - Wetted Perimeter - average wetted perimeter for the cross-section for the duration of the output interval (ft or m)
         - Hydraulic radius average flow area divided the average wetted perimeter (ft or m)
         - Top width - average top width for the duration of the output interval (ft or m)
         - Width to depth ratio - average width divided by the average depth
@@ -1326,18 +1326,18 @@ HYCHAN.OUT
 
 HYCROSS.OUT
 
-    The output interval time, top width, depth, velocity and discharge are listed for each cross section.
-    The discharge passing the cross section of grid elements is compiled as a hydrograph.
-    The cross section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file..
+    The output interval time, top width, depth, velocity and discharge are listed for each cross-section.
+    The discharge passing the cross-section of grid elements is compiled as a hydrograph.
+    The cross-section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file..
 
         - Time
         - Flow width - distance between the first and last node (ft or m)
-        - Depth - average depth across the complete cross section (ft or m)
+        - Depth - average depth across the complete cross-section (ft or m)
         - Watersurface elevation (ft or m)
-        - Velocity - average velocity for the complete cross section (fps or mps)
-        - Discharge - resolved and compiled discharge for the complete cross section.
+        - Velocity - average velocity for the complete cross-section (fps or mps)
+        - Discharge - resolved and compiled discharge for the complete cross-section.
           This is the most important value (cfs or cms).
-          If mudflow is used, this is the total water discharge including mud- flow concentration.
+          If mudflow is used, this is the total water discharge including mudflow concentration.
         - Concentration by volume - mudflow concentration is written as output when mudflow or two phase mudflow is used.
 
 HYDROALL.OUT
@@ -1351,7 +1351,7 @@ HYDRAULIC STRUCTURE SUBFACTORS.OUT
     This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
     If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
     If the discharge varies wildly, there could be surging.
-    The rating table or curve might not match the cross sectional areas adjacent to the structures.
+    The rating table or curve might not match the cross-sectional areas adjacent to the structures.
 
         - GE
         - Name
@@ -1369,7 +1369,7 @@ HYDROSTRUCT.OUT
     This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
     If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
     If the discharge varies wildly, there could be surging.
-    The rating table or curve might not match the cross sectional areas adjacent to the structures.
+    The rating table or curve might not match the cross-sectional areas adjacent to the structures.
 
         - Time
         - Discharge inlet
@@ -1377,7 +1377,7 @@ HYDROSTRUCT.OUT
 
 HYSTREET.OUT
 
-    The street flow hydrograph for the grid element that is coincidental to the street and the cross section is recorded
+    The street flow hydrograph for the grid element that is coincidental to the street and the cross-section is recorded
     in this file.
 
 IMPACT.OUT
@@ -1446,9 +1446,9 @@ LEVEE.HDF5
 
         .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter5/DIM_Pro_2025_Chapter3_001.png
 
-        - Grid element listed for the failure direction(ft or m)
-        - Total Q sum of all Q for 10 timesteps(cfs or cms)
-        - Water surface Elevation at the failure direction(ft or m)
+        - Grid element listed for the failure direction (ft or m)
+        - Total Q sum of all Q for 10 timesteps (cfs or cms)
+        - Water surface Elevation at the failure direction (ft or m)
 
     To use the data in this file, join the data tables by grid number and direction and then by time because multiple grid elements and directions are
     reported for each output interval.
@@ -1476,20 +1476,18 @@ LEVEEDEFIC.OUT
     The levee freeboard deficit is listed in this file.
     Five levels of freeboard deficit are reported:
 
-        0 = freeboard > 3 ft (0.9 m)
+        .. raw:: html
 
-        1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
+            0 = freeboard > 3 ft (0.9 m) <br>
+            1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m) <br>
+            2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m) <br>
+            3 = freeboard < 1 ft (0.3 m) <br>
+            4 = levee is overtopped by flow.
 
-        2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
-
-        3 = freeboard < 1 ft (0.3 m)
-
-        4 = levee is overtopped by flow.
-
-            - Grid element
-            - Xcoord
-            - Ycoord
-            - Levee deficit
+                - Grid element
+                - Xcoord
+                - Ycoord
+                - Levee deficit
 
 GE_LEVFAIL.OUT
 
