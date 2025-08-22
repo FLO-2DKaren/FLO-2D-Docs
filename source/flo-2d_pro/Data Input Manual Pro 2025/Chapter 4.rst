@@ -8756,20 +8756,14 @@ TAILINGS DEPTH DATA
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>           TAILINGS.DAT File Variables</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           7659 10              Line 1: <b>JGRIDUMMY TAILINGSDEPTH(I)</b>
+    <pre>
+    7659 10              Line 1: <b>JGRIDUMMY TAILINGSDEPTH(I)</b>
                                 <i>I = grid element that has a tailings depth assigned.</i>
-        </pre>
+    </pre>
     </div>
 
-.. raw:: html
-
-    <br><br>
-
-
-Notes:
-
-   Line 1: Repeat this line for each grid element has a tailings depth assigned.
+    Notes:
+     Line 1: Repeat this line for each grid element has a tailings depth assigned.
 
 .. raw:: html
 
@@ -8780,12 +8774,12 @@ Notes:
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>           TAILINGS.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        7650 10
-        7651 10
-        7652 10
-           ...
-        </pre>
+    <pre>
+    7650 10
+    7651 10
+    7652 10
+    ...
+    </pre>
     </div>
 
 .. raw:: html
@@ -8822,7 +8816,7 @@ Notes:
 1. If tailings dam material is uniform, a single tailings dam depth or elevation is written to INFLOW.DAT file in line R.
    TAILINGSELEV is the 4th parameter of R line INFLOW.DAT file.
 
-2. Tailings.dat file is needed for a tailings dam material with no uniform depth.
+2. Tailings.DAT file is needed for a tailings dam material with no uniform depth.
    One or multiple cells in the tailings dam storage area might have a different tailings dam depth than uniform TAILINGSELEV read from INFLOW.DAT file.
 
 FILE: TAILINGS_CV.DAT
@@ -8904,13 +8898,13 @@ TAILINGS DATA
    There is no water storage, so there is no two-phase flow.
 
 2. The flow depth volume (in the TAILINGS_CV.DAT file) is summed up and reported as INFLOW volume in the SUMMARY.OUT file.
-   This can be com- pared to the known or estimated tailings dam volume.
+   This can be compared to the known or estimated tailings dam volume.
    It is contingent upon the user to either assess the depth of the tailings by grid element or knowing the tailings surface elevation and pre-dam
    topography to compute the tailings depth as the difference between two surfaces in CAD or GIS.
 
 3. If storage volume vs stage data is available, this would allow the user to check the volume associated with the depths in the TAILINGS_CV.DAT file.
    The user should not use the project volume vs stage data because this makes all the volume available at the toe of the dam and there is no routing of
-   the mud- flow through the dam breach.
+   the mudflow through the dam breach.
    Only a portion of the tailings will actually flow through the breach.
 
 FILE: TAILINGS_STACK_DEPTH.DAT
