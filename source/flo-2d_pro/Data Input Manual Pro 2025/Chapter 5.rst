@@ -1615,7 +1615,7 @@ MAXWSELEV.OUT
 
 MODFLOW CHANNEL INFILTRATION TOTALS.OUT
 
-    Total aaccumulated volume of water that infiltrates from the CH to MOD- FLOW at each MODFLOW timestep.
+    Total accumulated volume of water that infiltrates from the CH to MOD- FLOW at each MODFLOW timestep.
 
         -Time
         - Accumulated infiltration volume CH (ft\ :sup:`3` or m\ :sup:`3`)
@@ -1717,13 +1717,13 @@ REVISED_RATING_TABLE.OUT
     This file reports suggested revisions to hydraulic structure rating tables based on the inflow discharge to the hydraulic structure inlet floodplain
     or channel element.
     These revisions are usually the result of the rating table being created with low n-values or because the rating table has insufficient low depth
-    stage-discharge pairs or the cross section do not match the rating table data.
+    stage-discharge pairs or the cross-section do not match the rating table data.
 
 ROUGH.OUT
 
     The ROUGH.OUT file reports the automated Manning’s n-value adjustment during model simulation including n-value change for exceeding the Courant
     number and exceeding the limiting Froude.
-    The user specifies a maximum Froude number for overland, channel and street ?ow.
+    The user specifies a maximum Froude number for overland, channel and street name.
     When the computed Froude number exceeds the defined maximum value for a given grid element, the n-value for that grid element is increased by a value
     based on the percent change in the n-value.
     During the falling limb of the hydrograph when the Froude number is no longer exceeded, the n-value is decreased by 0.0005 until the original n-value
@@ -1907,7 +1907,7 @@ SUMMARY.OUT
             - Grid System area (acres or m\ :sup:`2` and mi\ :sup:`2` or km\ :sup:`2`) Average hydraulics
             - Discharge (cfs or cms)
             - Velocity (fps or cms)
-            - Flow area (ft^2 or m^2)
+            - Flow area (ft\ :sup:`2` or m\ :sup:`2`)
             - Flow depth (ft or m)
             - Flow width (ft or m) Computation data
             - Total Computations
