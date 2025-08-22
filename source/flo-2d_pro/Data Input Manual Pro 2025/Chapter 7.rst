@@ -693,7 +693,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 **Table 7.5 BASIC ERROR CODES**
 
 .. list-table::
-   :widths: 50 50
+   :widths: 33 33 34
    :header-rows: 0
 
    * - 100
