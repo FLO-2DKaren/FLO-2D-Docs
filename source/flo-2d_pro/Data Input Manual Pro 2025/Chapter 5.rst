@@ -1192,10 +1192,14 @@ FLOODWAVETIME.OUT
 
     .. raw:: html
 
-        Node&nbsp;&nbsp;&nbsp;X-coord&nbsp;&nbsp;&nbsp;Y-coord&nbsp;&nbsp;&nbsp;Floodwave Arrival Time&nbsp;&nbsp;&nbsp;Flood Time&nbsp;&nbsp;&nbsp;Peak<br>
-        Time&nbsp;&nbsp;&nbsp;Deflood Time&nbsp;&nbsp;&nbsp;Max WS
+        Node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X-coord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y-coord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floodwave Arrival Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flood Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peak<br>
+        Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deflood Time&nbsp&nbsp;&nbsp;;&nbsp;&nbsp;Max WS
 
-    Each grid element is assigned a specific value of the above parameters at the end of the simulation.
+.. raw:: html
+
+    <br><br>
+
+    Each grid element is assigned a specif8ic value of the above parameters at the end of the simulation.
     The maximum values are tracked during the simulation on a computational timestep basis.
     The following parameter definitions are used:
 
