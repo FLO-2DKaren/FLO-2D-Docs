@@ -8599,7 +8599,7 @@ ARRAY OF INTERIOR GRID ELEMENTS
 .. raw:: html
 
     <div style="border:2px solid black;padding:5px;display:inline-block;">
-        <div><i><pre> CHAN_INTERIOR_NODES.DAT File Example</pre></i></div>
+        <div><i><pre>CHAN_INTERIOR_NODES.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     1521
