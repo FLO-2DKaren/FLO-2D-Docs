@@ -1482,7 +1482,7 @@ LEVEEDEFIC.OUT
             1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m) <br>
             2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m) <br>
             3 = freeboard < 1 ft (0.3 m) <br>
-            4 = levee is overtopped by flow. <br><br>
+            4 = levee is overtopped by flow.
 
     - Grid element
     - Xcoord
