@@ -1104,110 +1104,85 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 **Table 7.6 ADVANCED ERROR CODES**
 
 .. list-table::
-   :widths: 50 50
+   :widths: 33 33 34
    :header-rows: 0
+
+   * - **Code**
+     - **Reason**
+     - **Solution**
 
    * - 1000
      - Inflow Fp on a Ch Interior Element
+     - To run in display mode, set the graphics mode in CONT.DAT and the plotting hydrograph in INFLOW.DAT.
 
    * - 1000
      - Inflow Ch on a Ch Interior Element
+     - Move inflow node or realign channel.
 
    * - 1000
      - Outflow Ch on a Ch Interior Element
+     - Move inflow node or realign channel.
 
    * - 1000
      - Outflow Fp on a Ch Interior Element
+     - Move outflow node or realign channel.
 
    * - 1000
      - Stage Time Relationship on a Ch Interior Element
+     - Move outflow node or realign channel.
 
    * - 1000
      - Full ARF on a Ch Interior Element
+     - Move outflow node or realign channel.
 
    * - 1000
      - Partial ARF on a Ch Interior Element
+     - Delete ARF or realign channel.
 
    * - 1000
      - WRF on a Ch Interior Element
+     - Delete ARF or realign channel.
 
    * - 1000
      - Hs inlet on a Ch Interior Element
+     - Delete WRF or realign channel.
 
    * - 1000
      - Hs outlet on a Ch Interior Element
+     - Move hydraulic structure or realign channel.
 
    * - 1000
      - Levee on a Ch Interior Element
+     - Move hydraulic structure of realigning channel.
 
    * - 1000
      - Multiple Channel on a Channel Interior Element
+     - Realign levee or realign channel.
 
    * - 1000
      - Channel Width is Greater Than the Element Width.
        Channel Left and Right Bank Elements Should Be Separated
-
-   * - 1000
-     - Channel Grid Element Will Require Separate Left and Right Bank Elements
-
-   * - 1000
-     - Channel Extension Exceeds the Grid System Boundary
-
-   * - 1000
-     - Channel Element Extends Into Interior of the Channel Element Instead Extend the Channel Into Another Bank Element
-
-   * - \
-     - To run in display mode, set the graphics mode in CONT.DAT and the plotting hydrograph in INFLOW.DAT.
-
-   * - \
-     - Move inflow node or realign channel.
-
-   * - \
-     - Move inflow node or realign channel.
-
-   * - \
-     - Move outflow node or realign channel.
-
-   * - \
-     - Move outflow node or realign channel.
-
-   * - \
-     - Move outflow node or realign channel.
-
-   * - \
-     - Delete ARF or realign channel.
-
-   * - \
-     - Delete ARF or realign channel.
-
-   * - \
-     - Delete WRF or realign channel.
-
-   * - \
-     - Move hydraulic structure or realign channel.
-
-   * - \
-     - Move hydraulic structure of realigning channel.
-
-   * - \
-     - Realign levee or realign channel.
-
-   * - \
      - Realign multiple channel.
        See reference manual.
 
-   * - \
+   * - 1000
+     - Channel Grid Element Will Require Separate Left and Right Bank Elements
      - Realign right bank.
        Extend right bank way from left bank.
 
-   * - \
+   * - 1000
+     - Channel Extension Exceeds the Grid System Boundary
      - Realign right bank.
 
-   * - \
+   * - 1000
+     - Channel Element Extends Into Interior of the Channel Element Instead Extend the Channel Into Another Bank Element
      - Realign right bank.
 
-   * - \
-     - Realign right bank.
+
+
+
+
+
 
    * - 1000
      - Channel Element is Repeated in the CHAN.DAT File.
