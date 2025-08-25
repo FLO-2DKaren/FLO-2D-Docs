@@ -1531,7 +1531,6 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 4000
      - Length must be Greater Than Zero
      - Review SWMMFLOW.DAT.
-
    * - 4000
      - Height must be Greater Than Zero
      - Review SWMMFLOW.DAT.
