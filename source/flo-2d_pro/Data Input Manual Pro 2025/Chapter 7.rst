@@ -1604,14 +1604,18 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 4000
      - Outfall on a Levee Element
      - Review outfall position.
+
        Make sure it is on the correct side of the levee.
+
        Review elevation.
 
    * - 4000
      - Inlet on a Levee Element
      - Make sure the inlet is on the correct side of the levee.
 
-       Check the elevation of the cell so that it matches the rim elevation of the inlet or
+       Check the elevation of the cell so that it matches the rim
+
+       elevation of the inlet or
 
        the invert elevation of the type 4.
 
@@ -1729,7 +1733,9 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Inlets in the SWMMFLO.DAT File must be Identical
 
        to the Listed Inlets Junction Table of SWMM.INP File
-     - Check the order of the inlets in SWMMFLOW.DAT and SWMM.INP.
+     - Check the order of the inlets in SWMMFLOW.DAT
+
+       and SWMM.INP.
 
    * - 4000
      - Multiple Inlets Assigned to One Grid Cell
@@ -1966,4 +1972,5 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 8000
      - Multiple Channel Element on a Multiple Channel Element
      - A multiple channel cannot be assigned to a bank element.
+
        See reference manual.
