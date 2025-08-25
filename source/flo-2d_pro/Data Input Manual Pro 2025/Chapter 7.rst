@@ -1531,6 +1531,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 4000
      - Length must be Greater Than Zero
      - Review SWMMFLOW.DAT.
+
    * - 4000
      - Height must be Greater Than Zero
      - Review SWMMFLOW.DAT.
@@ -1640,7 +1641,6 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
    * - 6000
      - Scourdep Variable in SED.DAT Line E Should Be Positive (>0.)
      - Check the scour depth.
-     - Check the scour depth.
 
    * - 6000
      - Error in E-Line of the SED.DAT File
@@ -1654,4 +1654,98 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
      - Error in S-Line of the SED.DAT File
      - Check the size distribution for sediment supply.
 
+   * - 6000
+     - Error in N-Line of the SED.DAT File
+     - \
+
+   * - 6000
+     - Isedn variable is incorrect.
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
+       Do Not Assign Isedn to a Sediment Transport Equation Number
+
+   * - 7000
+     - There are a Levee Element on a Complete Blocked Element
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
+       Consider repositioning or deleting the levee.
+
+   * - 7000
+     - There are a Levee Element on a Partial Blocked Element
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
+       Make sure the levee is on the correct side of the cell.
+
+   * - 7000
+     - There are a Levee Element With a WRF
+     - Isedn Variable Must Equal One of the Sediment Size Fraction Groups in SED.DAT that is Associated With a Sediment Transport Equation.
+
+       Make sure the levee and WRF relationship is correct.
+
+   * - 7000
+     - This Grid Cell Has a Hs Inlet on a Levee Element
+     - Make sure the hydraulic structure is on the correct side of the levee.
+
+       Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
+
+   * - 7000
+     - This Grid Cell Has a Hs Outlet on a Levee Element
+     - Make sure the hydraulic structure is on the correct side of the levee.
+
+       Review the grid element elevation so that the water can get to and from the structure inlet and outlet nodes.
+
+   * - 7000
+     - This Grid Cell Has Two Levees
+     - Delete the repeated levee.
+
+   * - 8000
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
+     - Move the inflow node.
+
+   * - 8000
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
+     - Move the inflow node.
+
+   * - 8000
+     - This Grid Cell Has an Inflow on a Multiple Ch Element
+     - Move the inflow node.
+
+   * - 8000
+     - This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
+     - Remove the ARF/WRF.
+
+   * - 8000
+     - This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
+     - Remove the ARF/WRF.
+
+   * - 8000
+     - This Grid Cell Has a Full/Partial ARF or WRF on a Multiple Ch Element
+     - Remove the ARF/WRF.
+
+   * - 8000
+     - Channel Lb Rb on a Multiple Channel Element
+     - A multiple channel cannot be assigned to a bank element.
+       See reference manual.
+
+   * - 8000
+     - Channel Lb Rb on a Multiple Channel Element
+     - A multiple channel cannot be assigned to a bank element.
+       See reference manual.
+
+   * - 8000
+     - Levee on a Multiple Channel Element
+     - Make sure the multiple channel is on the correct side of the levee.
+
+   * - 8000
+     - Multiple Channel Element on a Multiple Channel Element
+     - Delete one of the repeated lines in MULT.DAT.
+
+   * - 8000
+     - Levee on a Multiple Channel Element
+     - Make sure the multiple channel is on the correct side of the levee.
+
+   * - 8000
+     - Multiple Channel Element on a Multiple Channel Element
+     - A multiple channel cannot be assigned to a bank element.
+       See reference manual.
 
