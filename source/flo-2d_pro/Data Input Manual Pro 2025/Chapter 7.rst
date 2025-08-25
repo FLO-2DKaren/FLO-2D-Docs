@@ -1657,7 +1657,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
    * - 6000
      - Error in N-Line of the SED.DAT File
-     - \
+     - \uiguiuiui
 
    * - 6000
      - Isedn variable is incorrect.
