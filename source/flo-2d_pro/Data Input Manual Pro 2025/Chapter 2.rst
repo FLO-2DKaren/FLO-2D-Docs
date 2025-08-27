@@ -61,7 +61,7 @@ Run these projects using the Run for FLO-2D Project folder.
 
 *Large River Flooding – Rio Grande, New Mexico (Rio Grande subdirectory)*
 
-   - Over 173 miles of the Middle Rio Grande is simulated using surveyed channel cross section data.
+   - Over 173 miles of the Middle Rio Grande is simulated using surveyed channel cross-section data.
      The river floodplain is confined by levees along most of its length.
      Use this flood simulation to review the data input in the XSEC.
      DAT and CHAN.DAT files and river-floodplain discharge exchange.

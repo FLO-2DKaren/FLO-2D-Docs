@@ -28,7 +28,7 @@ Output files that are listed in the order of the output intervals are temporal o
 spatial output.
 Output data include water surface elevation, flow depth, velocity, discharge, impact pressure, specific energy,
 sediment concentration and other variables.
-Overland flow hydraulics may be viewed as individual grid elements or the grid elements can be grouped together to produce floodplain cross sections.
+Overland flow hydraulics may be viewed as individual grid elements or the grid elements can be grouped together to produce floodplain cross-sections.
 Summary tables listing maximum velocity and flow depths and their times of occurrence appear at the end of the BASE.OUT file.
 Review the CONT.DAT file description in Chapter 4 for more information about specifying output file formats.
 
@@ -864,7 +864,7 @@ CHANMAX.OUT
 
 CHANNEL.CHK
 
-    When the channel cross section width exceeds the grid element width, the cross section needs to extend into 1 or more neighboring elements.
+    When the channel cross-section width exceeds the grid element width, the cross-section needs to extend into 1 or more neighboring elements.
     When the channel surface area is 0.95 times the floodplain surface area the channel needs to extend into 1 or more neighboring elements.
     This file lists the necessary extensions.
 
@@ -964,7 +964,7 @@ CROSSMAX.OUT
 
     When the floodplain cross-section analysis is requested by creating the FPXSEC.DAT file, the CROSSMAX.OUT is created.
     This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified
-    in the cross section analysis.
+    in the cross-section analysis.
     It also list the total volume in acre-ft for each cell.
 
 CROSSQ.OUT
@@ -2228,17 +2228,17 @@ WSTIME.OUT
 
 XSECAREA.OUT
 
-    When the channel cross section option is invoked for channel routing, the channel geometry data is written to this file.
+    When the channel cross-section option is invoked for channel routing, the channel geometry data is written to this file.
     It includes: grid element, flow area, top width and wetted perimeter for the lowest top of bank (bankfull flow).
 
         - Grid element
-        - Flow area of the cross section (sqft or sqm)
-        - Top width of the cross section (ft or m)
-        - Wetted Perimeter of the cross section (ft or m)
+        - Flow area of the cross-section (sqft or sqm)
+        - Top width of the cross-section (ft or m)
+        - Wetted Perimeter of the cross-section (ft or m)
 
 XSEC.OUT
 
     This file is created by the channel sediment transport option (ISED = 1 in CONT.
-    DAT and ISEDN = 1 for a channel segment in CHAN.DAT) for natural cross section geometry data.
-    It contains the final cross section bed elevations after scour and deposition have been computed.
+    DAT and ISEDN = 1 for a channel segment in CHAN.DAT) for natural cross-section geometry data.
+    It contains the final cross-section bed elevations after scour and deposition have been computed.
     The file looks the same as XSEC.DAT with updated elevation data.

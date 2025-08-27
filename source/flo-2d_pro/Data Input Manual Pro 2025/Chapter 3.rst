@@ -34,7 +34,7 @@ PROFILES
 
 The PROFILES processor program displays the channel slope and permits interactive adjustment of the channel
 bed elevation, channel depth, channel n-values and channel geometry.
-It will display the channel cross section geometry and interpolate the slope and cross-section geometry
+It will display the channel cross-section geometry and interpolate the slope and cross-section geometry
 between surveyed cross-sections.
 PRO- FILES can also be used to view output water surface profiles (see the Post-Processor Programs Section).
 Run Profiles from the FLO-2D Plugin.
@@ -45,10 +45,10 @@ The XSEC.DAT will also have to be created if surveyed cross-section data will be
 The general procedure for using the PROFILES program is as follows:
 
     1. Create the six basic FLO-2D data files.
-    2. Develop the XSEC.DAT file for surveyed cross section data if necessary.
+    2. Develop the XSEC.DAT file for surveyed cross-section data if necessary.
     3. Complete the channel data file (CHAN.DAT) based on rectangular, trapezoidal or surveyed (natural)
        cross-sections.
-    4. For surveyed cross-sections, identify the channel element cross section number XSECNUM in the
+    4. For surveyed cross-sections, identify the channel element cross-section number XSECNUM in the
        CHAN.DAT file to represent the cross-section.
        All other XSECNUM’s will be assigned a zero ‘0’ value.
     5. Run the PROFILES program from the FLO-2D Plugin or Explorer.

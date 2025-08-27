@@ -5,7 +5,7 @@ CHAPTER 6: POST-PROCESSOR PROGRAMS
 
 There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
 FLO-2D MapCrafter and MAXPLOT display the flood inundation depth and velocity plots.
-Channel flood simulations or floodplain cross sections are required to view hydrographs in HYDROG.
+Channel flood simulations or floodplain cross-sections are required to view hydrographs in HYDROG.
 A channel model is also required to view the channel water surface profiles in PROFILES.
 These programs can be initiated by clicking on their names in the File pull down menu in the FLO-2D Plugin or by copying the executable (\*.EXE) file
 into the project subdirectory and double clicking on the program name in a file browser.
@@ -13,7 +13,7 @@ into the project subdirectory and double clicking on the program name in a file 
 HYDROG
 -------
 
-Channel output hydrographs, floodplain cross section hydrographs, and hydraulic structure hydrographs can be viewed with the HYDROG program.
+Channel output hydrographs, floodplain cross-section hydrographs, and hydraulic structure hydrographs can be viewed with the HYDROG program.
 It displays the hydrograph for every channel element in the system.
 It will also list the average channel hydraulic data for various reaches of river.
 Gaging station hydrograph data can be plotted along with the FLO-2D predicted hydrograph by creating the optional HYDRO.DAT file in the following
@@ -61,7 +61,7 @@ format:
 
     <br><br>
 
-After opening HYDROG, click on either ‘Plot Channel Hydrographs’, ‘Plot Cross Section Hydrographs,’ or ‘Compute Hydraulics’ in the Main Menu shown
+After opening HYDROG, click on either ‘Plot Channel Hydrographs’, ‘Plot Cross-Section Hydrographs,’ or ‘Compute Hydraulics’ in the Main Menu shown
 below:
 
 Click on ‘Plot Channel Hydrographs’ a dialog box appears to select either a channel segment or element:

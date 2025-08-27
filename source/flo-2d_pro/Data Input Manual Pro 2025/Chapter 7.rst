@@ -166,7 +166,7 @@ The FLO-2D results should be reviewed for volume conservation, surging, timestep
 *Reviewing the results*
 
    FLO-2D results include the maximum area of inundation as displayed by the maximum flow depth, temporal and spatial hydraulic results, channel or
-   floodplain cross section hydrographs and peak discharges.
+   floodplain cross-section hydrographs and peak discharges.
    The Mapper++ program can used to review maximum flow depths, water surface elevations or velocities.
    The results can be plotted as either line contours or shaded contours in Mapper++.
    Look for any maximum velocities or flow depths that are unreasonable.
@@ -333,7 +333,7 @@ Mismatched channel morphology parameters with an appropriate roughness are the p
 To compute smoother hydraulics between two channel grid elements, adjust the bed slope, cross-section flow area or roughness values.
 Try to avoid abrupt changes in cross-sections geometry from one channel element to another.
 The channel flow area for a natural channel (not a concrete rectangular or trapezoidal channel geometry) should make a gradual transition from a wide,
-shallow cross section to a narrow deep cross-section.
+shallow cross-section to a narrow deep cross-section.
 An actual cross-section transition may occur over several channel grid elements.
 Adjust the channel geometry so that the maximum change in flow area between channel elements is less than 25%.
 To address channel problems, consider the following measures:
@@ -508,7 +508,7 @@ Numerical Instability:
       Use the PROFILES program to fix irregular bed slope conditions.
     - Review the cross-section flow areas over several channel elements in PROFILES.
       Eliminate any abrupt changes in cross-section areas between channel elements.
-      If the surging occurs at low flows, review only the bottom portion of the cross section not the bankfull conditions.
+      If the surging occurs at low flows, review only the bottom portion of the cross-section not the bankfull conditions.
     - Decrease the channel Courant number in the TOLER.DAT file.
       Decrease the Courant number in 0.1 increments until a reasonable lower limit of 0.2 is reached.
     - Insufficient floodplain area.
@@ -1780,12 +1780,12 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
        then grid element in SWMMFLO.DAT.
 
    * - 5000
-     - Cross Section Element Can Only Be Assigned Once
+     - Cross-Section Element Can Only Be Assigned Once
 
        in the FPXSEC.DAT File.
      - Remove repeated grid elements in FPXSEC.DAT.
 
-       If the Cross Section Includes the Channel Use
+       If the Cross-Section Includes the Channel Use
 
        Only the Left Bank Channel Element in CHAN.DAT
 
