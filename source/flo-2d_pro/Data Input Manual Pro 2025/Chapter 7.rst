@@ -1653,7 +1653,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
        Check the elevation of the cell so that it matches
 
-       he rim elevation of the inlet or
+       the rim elevation of the inlet or
 
        the invert elevation of the type 4.
 
