@@ -101,7 +101,7 @@ use the ‘Interpolate Segment Slope/Shape’ menu option as follows:
        .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter3/DIM_Pro_2025_Chapter3_006.png
 
     7. View additional cross-sections by clicking on the “Up” and “Down” but- tons in the dialog box.
-       The computed cross section geometry and all the cross-section station and elevation data can be
+       The computed cross-section geometry and all the cross-section station and elevation data can be
        reviewed and edited.
        Edit the channel and cross-section data by adding or deleting stations and elevations, revising the
        Manning’s n-value, or raising or lowering the entire cross-section.
