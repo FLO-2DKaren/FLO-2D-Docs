@@ -9169,9 +9169,8 @@ MULTIPLE DOMAIN DATA FILE
 
 **Instructional Comments for the MULTDOMAIN.DAT File**
 
-1. Downstream cells: it can be only 1 as it is shown in the example, or more than
-
-1. If the downstream cells are more than 1, then the upstream discharge will be divided between the number of downstream cells.
+1. Downstream cells: it can be only 1 as it is shown in the example, or more than 1. If the downstream cells are more than 1, then the upstream discharge will be
+   divided between the number of downstream cells.
 
 2. Outflow.dat still needs the O1 - O9 lines to create the downstream inflow.
 
