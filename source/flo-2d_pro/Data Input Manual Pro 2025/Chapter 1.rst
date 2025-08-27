@@ -268,7 +268,7 @@ The flow shares between the channel banks and the floodplain.
 Channels are defined in FLO-2D whenever 1-D flow is more accurate than overland flow.
 They can reduce flooding and help the water move downstream quicker than flow on the floodplain.
 An extensive Channel Guidelines document is available in the Manuals Folder.
-C:\\users\\Public\\Public Documents\\FLO-2D Pro Documenta- tion\\flo_help\\Manuals.
+C:\\users\\Public\\Public Documents\\FLO-2D Pro Documentation\\flo_help\\Manuals.
 
 **Street Flow**
 
