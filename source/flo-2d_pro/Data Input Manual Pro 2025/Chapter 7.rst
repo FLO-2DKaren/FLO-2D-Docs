@@ -1724,9 +1724,7 @@ Table 7.5 and 7.6 offer basic corrective actions for the errors.
 
        SWMMFLO.DAT File and Sub-catchments in the SWMM.INP,
 
-       Features in Both
-
-       Lists Need to Be in the Same Order
+       Features in Both Lists Need to Be in the Same Order
      - Check the order of the inlets and the subcatchments.
 
    * - 4000
