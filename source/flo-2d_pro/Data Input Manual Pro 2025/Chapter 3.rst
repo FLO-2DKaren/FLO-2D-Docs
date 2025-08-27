@@ -18,7 +18,7 @@ This program has separate documentation available in the FLO-2D Documentation su
 Tutorials and sample projects are available at https://documentation.flo-2d.com.
 
 GDS
----
+----
 
 The grid developer system (GDS) is a GIS program used to create and edit the FLO-2D grid system and its attributes.
 As of October 2023, the GDS and Map- per are now distributed separately from FLO-2D.
