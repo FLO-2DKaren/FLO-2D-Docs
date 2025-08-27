@@ -873,7 +873,7 @@ NUMERICAL STABILITY CONTROL DATA
 
             where:<br>
                     C is the Courant number (C ≤ 1.0) Δx is the square grid element width.<br>
-                    V is the computed average cross section velocity.<br>
+                    V is the computed average cross-section velocity.<br>
                     β is a coefficient (e.g. 5/3 for a wide channel) but is seldom used c is the computed wave celerity.
 
    The Courant coefficient C may vary from 0.2 to 0.9 depending on the size of the grid element and floodwave velocity.
@@ -1544,7 +1544,7 @@ INFLOW HYDROGRAPH DATA
            cell is subtracted from the surface.
 
         e. INOUTFC = 0; Channel inflow hydrograph a cell can either be a source or a sink for this condition.
-           The channel cross section can become a source at one time-step and a sink at another time-step during a simulation.
+           The channel cross-section can become a source at one time-step and a sink at another time-step during a simulation.
            Sink (negative) and sources (positive) at a given time.
 
         f. INOUTFC = 1; Channel, the diversion will act as a sink but not added to ground water.
@@ -1554,7 +1554,7 @@ INFLOW HYDROGRAPH DATA
            The source flow will be added to the cross-section flow.
 
         h. INOUTFC = 3; MODFLOW Sink (See Comment 8).
-           Channel, the sink of this discharge condition to groundwater from the channel cross section.
+           Channel, the sink of this discharge condition to groundwater from the channel cross-section.
 
 8. A floodplain cell can be either source or sink at a given time-step.
    It may be source at one time-step and sink at another time-step during a simulation.
@@ -3197,7 +3197,7 @@ CHANNEL DATA
        **to**
 
        **NNODC**
-     - Surveyed cross section number assigned in the XSEC.DAT file that will represent the specific channel element.
+     - Surveyed cross-section number assigned in the XSEC.DAT file that will represent the specific channel element.
 
        This variable is used only for the cross-section data option (see comments 14 and 18).
 
@@ -3223,7 +3223,7 @@ CHANNEL DATA
 
        SHAPE = ‘T’, trapezoidal channel (bottom width, depth and slopes data).
 
-       SHAPE = ‘N’, channel cross sections (cross section survey data).
+       SHAPE = ‘N’, channel cross-sections (cross-section survey data).
 
        Variable is case sensitive and it must be upper case.
 
@@ -3294,7 +3294,7 @@ CHANNEL DATA
 
    Similar relationships are required for wetted perimeter and top width.
    There is a limit of two channel geometry relationships per channel element.
-   A second geometry relationship may be useful if there is a significant change in the cross section (e.g. an island).
+   A second geometry relationship may be useful if there is a significant change in the cross-section (e.g. an island).
    If two power relationships are used to represent a natural cross-section, then the maximum depth (EXCDEP) to which the first relationship applies must
    be specified.
 
@@ -3330,11 +3330,11 @@ CHANNEL DATA
    The PROFILES program can interpolate cross-sections and slope for surveyed cross-sections.
 
 10. The key to channel routing is to balance the relationship between the slope, flow area and roughness.
-    Channel routing is more stable if the natural cross section routing routine is used (SHAPE = N).
-    When one cross section is assigned to several grid elements it will be necessary to interpolate both the slope and the cross-section geometry in the
+    Channel routing is more stable if the natural cross-section routing routine is used (SHAPE = N).
+    When one cross-section is assigned to several grid elements it will be necessary to interpolate both the slope and the cross-section geometry in the
     PROFILES program to create a smooth average channel slope.
-    Review the PROFILES program instructions for cross section and channel bed slope interpolation.
-    If there is more than one surveyed cross section per channel element, use the one that has the greatest hydraulic control to represent the channel.
+    Review the PROFILES program instructions for cross-section and channel bed slope interpolation.
+    If there is more than one surveyed cross-section per channel element, use the one that has the greatest hydraulic control to represent the channel.
 
 11. At a channel confluence, the next downstream channel element bed elevation must be lower than the confluence bed elevation creating a positive slope
     downstream of the confluence.
@@ -3347,8 +3347,8 @@ CHANNEL DATA
     There should also be a positive slope into the channel outflow nodes.
     This will improve the numerical stability around the inflow and outflow nodes.
 
-14. After deleting a channel element, remove the cross section for that channel element from the XSEC.DAT file and renumbered in the PROFILES program.
-    If cross sections are mixed with other channel geometry (trapezoidal or rectangular), the cross-section elements should be grouped into segments to
+14. After deleting a channel element, remove the cross-section for that channel element from the XSEC.DAT file and renumbered in the PROFILES program.
+    If cross-sections are mixed with other channel geometry (trapezoidal or rectangular), the cross-section elements should be grouped into segments to
     identify the reaches with similar channel geometry.
 
 15. Eliminate channel elements that have a XLEN less than 50% of the SIDE (grid element width).
@@ -3509,13 +3509,13 @@ CHANNEL BANK DATA
    The FLO-2D Plugin will automatically check the channel width to determine if the channel bank assignments are appropriate and will report and required
    modifications in the ERROR.CHK file.
 
-3. Channel right bank assignments are not required if the channel cross section will fit in one grid element and no bank elevations are assigned in CHAN.
+3. Channel right bank assignments are not required if the channel cross-section will fit in one grid element and no bank elevations are assigned in CHAN.
    DAT.
 
 FILE: XSEC.DAT
 ~~~~~~~~~~~~~~
 
-CROSS SECTION DATA
+CROSS-SECTION DATA
 ^^^^^^^^^^^^^^^^^^
 
    .. raw:: html
@@ -3525,7 +3525,7 @@ CROSS SECTION DATA
         <hr style="margin:4px 0;border:2px solid black;">
     <pre>
     X 1 X-CI-27.1                    Line 1: <b>XSECCHAR = ‘X’ NXSECUM(I) XSECNAME(I) I=1, ..</b>
-                                             <b>n number of cross sections</b>
+                                             <b>n number of cross-sections</b>
     25.0 5234.90                     Line 2: <b>XI(I,J) YI(I,J)</b>
     30.0 5231.53                     Line 2: <b>XI(I,J) YI(I,J)</b>
     35.0 5230.20                     Line 2: <b>XI(I,J) YI(I,J)</b>
@@ -3533,7 +3533,7 @@ CROSS SECTION DATA
     Notes:
      If ICHANNEL = 0 in the CONT.DAT file, omit this file.
      Set SHAPE = ‘N’ (line 2d) in the CHAN.DAT file to use this file.
-     Line 1: This line is repeated for each cross section.
+     Line 1: This line is repeated for each cross-section.
      Line 2: This line is repeated for the Station, Elevation pairs.
     </pre>
     </div>
@@ -4124,7 +4124,7 @@ HYDRAULIC STRUCTURE DATA
    * - UPLENGTH
      - **r**
      - **0.0 - ∞**
-     - Distance to upstream cross section unaffected by bridge backwater (ft or m)
+     - Distance to upstream cross-section unaffected by bridge backwater (ft or m)
 
    * - LOWCHORD
      - **r**
@@ -4144,7 +4144,7 @@ HYDRAULIC STRUCTURE DATA
    * - PIERWIDTH
      - **r**
      - **0.0 - ∞**
-     - Combined pier or pile cross section width (flow blockage width in ft or m)
+     - Combined pier or pile cross-section width (flow blockage width in ft or m)
 
    * - SLUICECOEFADJ
      - **r**
@@ -5106,7 +5106,7 @@ MULTIPLE CHANNEL DATA
    * - IMGRID(I)
      - **i**
      - **1 - NNOD**
-     - A character to define a new bridge cross section dataset.
+     - A character to define a new bridge cross-section dataset.
 
    * - XNMULTTRICHN
      - **r**
@@ -6064,7 +6064,7 @@ LEVEE AND FAILURE DATA
 FILE: FPXSEC.DAT
 ~~~~~~~~~~~~~~~~
 
-FLOODPLAIN CROSS SECTION DATA
+FLOODPLAIN CROSS-SECTION DATA
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
@@ -6077,7 +6077,7 @@ FLOODPLAIN CROSS SECTION DATA
     X 3 11 284 ...      Line 2: <b>FPXSECHAR = ‘X’ IFLO(N) NNXSEC(N) NODX(N,J)</b>
 
     Notes:
-     Line 2: Repeat this line for each cross section.
+     Line 2: Repeat this line for each cross-section.
     </pre>
     </div>
 
@@ -6176,13 +6176,13 @@ FLOODPLAIN CROSS SECTION DATA
      - **1 - 1,000**
      - Number of floodplain elements in a given cross-section.
 
-       The selected cross section grid elements do not have to extend across the entire grid system.
+       The selected cross-section grid elements do not have to extend across the entire grid system.
 
        Only one grid element is necessary to constitute a floodplain cross-section.
 
        The cross-section can include a channel element.
 
-       If one of the floodplain cross section grid elements is a channel element, the cross-section
+       If one of the floodplain cross-section grid elements is a channel element, the cross-section
 
        discharge hydrograph reported in HYCROSS will include the channel element discharge.
 
@@ -6205,13 +6205,13 @@ FLOODPLAIN CROSS SECTION DATA
    The cross-section routine can be used to isolate the results for a single element.
    The flow directions and associated discharge components are as follows:
 
-    *TABLE 4.3. CROSS SECTION FLOW DIRECTION*
+    *TABLE 4.3. CROSS-SECTION FLOW DIRECTION*
 
     .. list-table::
        :widths: 40 60
        :header-rows: 1
 
-       * - **Selected Cross Section Flow**
+       * - **Selected Cross-Section Flow**
          - **Flow Direction Components Added to the Cross-Section Discharge**
 
        * - north = 1
@@ -6243,7 +6243,7 @@ FLOODPLAIN CROSS SECTION DATA
 
 2. If a grid element is listed more than once, the simulation will fail and the ERROR.CHK file will report the redundant element.
 
-3. The floodplain cross section grid elements can be selected graphically with the FLO-2D Plugin.
+3. The floodplain cross-section grid elements can be selected graphically with the FLO-2D Plugin.
    See FLO-2D Plugin User Manual for instructions.
 
 4. Select a flow direction perpendicular to the cross-section only.
@@ -8648,7 +8648,7 @@ ARRAY OF INTERIOR GRID ELEMENTS
 FILE: BRIDGE_XSEC.DAT
 ~~~~~~~~~~~~~~~~~~~~~
 
-BRIDGE CROSS SECTIONS
+BRIDGE CROSS-SECTIONS
 ^^^^^^^^^^^^^^^^^^^^^
 .. raw:: html
 
