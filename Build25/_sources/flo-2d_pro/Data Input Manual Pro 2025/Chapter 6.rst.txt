@@ -1,19 +1,19 @@
 .. vim: syntax=rst
 
-Chapter 6: Post-Processor Programs
-====================================
+CHAPTER 6: POST-PROCESSOR PROGRAMS
+==================================
 
 There are four post-processor programs: FLO-2D MapCrafter, MAXPLOT, HYDROG and PROFILES that display the output data graphically.
 FLO-2D MapCrafter and MAXPLOT display the flood inundation depth and velocity plots.
-Channel flood simulations or floodplain cross sections are required to view hydrographs in HYDROG.
+Channel flood simulations or floodplain cross-sections are required to view hydrographs in HYDROG.
 A channel model is also required to view the channel water surface profiles in PROFILES.
 These programs can be initiated by clicking on their names in the File pull down menu in the FLO-2D Plugin or by copying the executable (\*.EXE) file
 into the project subdirectory and double clicking on the program name in a file browser.
 
-Hydrog
-----------
+HYDROG
+-------
 
-Channel output hydrographs, floodplain cross section hydrographs, and hydraulic structure hydrographs can be viewed with the HYDROG program.
+Channel output hydrographs, floodplain cross-section hydrographs, and hydraulic structure hydrographs can be viewed with the HYDROG program.
 It displays the hydrograph for every channel element in the system.
 It will also list the average channel hydraulic data for various reaches of river.
 Gaging station hydrograph data can be plotted along with the FLO-2D predicted hydrograph by creating the optional HYDRO.DAT file in the following
@@ -25,16 +25,16 @@ format:
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>              HYDRO.DAT File Descriptors</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-         3                  Line 1: Number of gaging station with hydrograph data
-         Haynor             Line 2: Name of gaging station (10 letters)
-         13160    251       Line 3: Channel grid element and # of hydrograph pairs
-         0.00   1287.85     Line 4: Hydrograph pairs time(hours) discharge (cfs)
-         1.00   1285.47     Line 4: Hydrograph pairs time(hours) discharge (cfs)
+    <pre>
+    3                  Line 1: Number of gaging station with hydrograph data
+    Haynor             Line 2: Name of gaging station (10 letters)
+    13160    251       Line 3: Channel grid element and # of hydrograph pairs
+    0.00   1287.85     Line 4: Hydrograph pairs time(hours) discharge (cfs)
+    1.00   1285.47     Line 4: Hydrograph pairs time(hours) discharge (cfs)
 
-        Notes:
-         Line 2 - 4:  These lines are repeated for each gaging station.
-        </pre>
+    Notes:
+     Line 2 - 4:  These lines are repeated for each gaging station.
+    </pre>
     </div>
 
 .. raw:: html
@@ -46,22 +46,22 @@ format:
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>    HYDRO.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        Haynor
-        13160  251
-        0.00  1287.85
-        1.00  1285.47
-        2.00  1295.01
-        3.05  1302.20
-        ...
-        </pre>
+    <pre>
+    Haynor
+    13160  251
+    0.00  1287.85
+    1.00  1285.47
+    2.00  1295.01
+    3.05  1302.20
+    ...
+    </pre>
     </div>
 
 .. raw:: html
 
     <br><br>
 
-After opening HYDROG, click on either ‘Plot Channel Hydrographs’, ‘Plot Cross Section Hydrographs,’ or ‘Compute Hydraulics’ in the Main Menu shown
+After opening HYDROG, click on either ‘Plot Channel Hydrographs’, ‘Plot Cross-Section Hydrographs,’ or ‘Compute Hydraulics’ in the Main Menu shown
 below:
 
 Click on ‘Plot Channel Hydrographs’ a dialog box appears to select either a channel segment or element:
@@ -85,22 +85,22 @@ From this dialog box, select a new discharge and add to the table or print this 
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_005.png
 
-Similar hydrographs can be plotted for floodplain cross section selected in the HYCROSS.OUT and Hydraulic Structure hydrographs in HYDROSTRUCT.OUT.
-If the file exists, the cross-section hydrograph for the selected cross section elements and flow direction will plotted using the second command on
+Similar hydrographs can be plotted for floodplain cross-section selected in the HYCROSS.OUT and Hydraulic Structure hydrographs in HYDROSTRUCT.OUT.
+If the file exists, the cross-section hydrograph for the selected cross-section elements and flow direction will plotted using the second command on
 the Main Menu bar.
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_006.png
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_007.png
 
-6.3 FLO-2D MapCrafter
+FLO-2D MapCrafter
 ---------------------
 
 FLO-2D MapCrafter is the primary post processing tool for FLO-2D software.
 It is a QGIS plugin and can be accessed via the QGIS Plugin Directory using the Plugin Manager.
 The MapCrafter documentation is maintained on the MapCrafter wiki.
 
-https://github.com/FLO-2DSoftware/FLO-2DMapCrafter.wiki.git
+https://github.com/FLO-2DSoftware/FLO-2DMapCrafter/wiki
 
 .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter6/DIM_Pro_2025_Chapter6_008.png
 
@@ -129,8 +129,8 @@ The MAPPER Pro manual describes the commands and tools and provides instruction.
 MaxPlot
 -----------
 
-The MAXPLOT program is a basic graphical tool to display the grid element maxi- mum depths and velocities.
-MAXPLOT is a simple alternative to MAPPER Pro that quickly displays plots of the maximum floodplain and channel depths, maxi- mum street velocity,
+The MAXPLOT program is a basic graphical tool to display the grid element maximum depths and velocities.
+MAXPLOT is a simple alternative to MAPPER Pro that quickly displays plots of the maximum floodplain and channel depths, maximum street velocity,
 final floodplain depths and others.
 It is faster than MAPPER Pro but has less graphical resolution and fewer display options.
 Use MAXPLOT for a quick overview of predicted flow depths and velocities.
@@ -196,7 +196,7 @@ To plot the surveyed water surface or channel bed elevation, the WSURF.DAT file 
 
 Optional WSURF.DAT file format:
 
-Please note that PROFILES also has options for editing the channel bed slope and thalweg flow depth and for interpolating the slope and cross section
+Please note that PROFILES also has options for editing the channel bed slope and thalweg flow depth and for interpolating the slope and cross-section
 geometry for the cross-section option.
 Refer the section on Pre-Processor Programs for a discussion on these features.
 
@@ -205,16 +205,15 @@ Refer the section on Pre-Processor Programs for a discussion on these features.
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>                WSURF.DAT File Descriptors</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           2045             Line 1: # of channel elements with a surveyed ws elev.
-           4 4152.22        Line 2: Grid Element WS elevation
-           8 4151.84        Line 2: Grid Element WS elevation
-           ...
+    <pre>
+    2045             Line 1: # of channel elements with a surveyed ws elev.
+    4 4152.22        Line 2: Grid Element WS elevation
+    8 4151.84        Line 2: Grid Element WS elevation
+    ...
 
-        Notes:
-
-           Line 2: This line is repeated for each channel element with a surveyed ws elevation.
-        </pre>
+    Notes:
+     Line 2: This line is repeated for each channel element with a surveyed ws elevation.
+    </pre>
     </div>
 
 .. raw:: html
@@ -226,15 +225,15 @@ Refer the section on Pre-Processor Programs for a discussion on these features.
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               WSURF.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        2045
-           4 4152.22
-           8 4151.84
-           12 4151.69
-           15 4151.55
-           19 4151.41
-           ....
-        </pre>
+    <pre>
+    2045
+    4 4152.22
+    8 4151.84
+    12 4151.69
+    15 4151.55
+    19 4151.41
+    ...
+    </pre>
     </div>
 
 .. raw:: html
@@ -250,14 +249,14 @@ The WSTIME.DAT file format is as follows:
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>               WSTIME.DAT File Descriptors</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-        49                           Line 1: # of channel elements with a surveyed ws elev.
-        117632 4658.95 240           Line 2: Grid Element WS elevation Time
-        117928 4655.80 240           Line 2: Grid Element WS elevation
-        ...
-        Notes:
-           Line 2: This line is repeated for each data set.
-        </pre>
+    <pre>
+    49                           Line 1: # of channel elements with a surveyed ws elev.
+    117632 4658.95 240           Line 2: Grid Element WS elevation Time
+    117928 4655.80 240           Line 2: Grid Element WS elevation
+    ...
+    Notes:
+     Line 2: This line is repeated for each data set.
+    </pre>
     </div>
 .. raw:: html
 
@@ -265,7 +264,7 @@ The WSTIME.DAT file format is as follows:
 
 The WSTIME.OUT file will contain:
 
-Channel element number., time of survey (hrs), surveyed water surface elevation, computed water surface elevation, difference between the surveyed and
+Channel element number, time of survey (hrs), surveyed water surface elevation, computed water surface elevation, difference between the surveyed and
 computed water surface and cumulative difference between the surveyed and computed water surface elevations.
 
 .. raw:: html
@@ -273,16 +272,14 @@ computed water surface and cumulative difference between the surveyed and comput
     <div style="border:2px solid black;padding:5px;display:inline-block;">
         <div><i><pre>          WSTIME.DAT File Example</pre></i></div>
         <hr style="margin:4px 0;border:2px solid black;">
-        <pre>
-           49
-           117632 4658.95 240
-           117928 4655.80 240
-           119882 4652.28 240
-           120580 4650.36 240
-           120915 4648.52 240
-           ....
-        </pre>
+    <pre>
+    49
+    117632 4658.95 240
+    117928 4655.80 240
+    119882 4652.28 240
+    120580 4650.36 240
+    120915 4648.52 240
+    ...
+    </pre>
     </div>
-.. raw:: html
 
-    <br><br>

@@ -1,10 +1,10 @@
 .. vim: syntax=rst
 
-Chapter 5: Output Files and Options
+Chapter 5: OUTPUT FILES AND OPTIONS
 ===================================
 
-Basic guidelines for using output files.
---------------------------------------------
+BASIC GUIDELINES FOR USING OUTPUT FILES.
+-----------------------------------------
 
 During the flood simulation, the user has two choices for viewing the model flood progression:
 
@@ -28,7 +28,7 @@ Output files that are listed in the order of the output intervals are temporal o
 spatial output.
 Output data include water surface elevation, flow depth, velocity, discharge, impact pressure, specific energy,
 sediment concentration and other variables.
-Overland flow hydraulics may be viewed as individual grid elements or the grid elements can be grouped together to produce floodplain cross sections.
+Overland flow hydraulics may be viewed as individual grid elements or the grid elements can be grouped together to produce floodplain cross-sections.
 Summary tables listing maximum velocity and flow depths and their times of occurrence appear at the end of the BASE.OUT file.
 Review the CONT.DAT file description in Chapter 4 for more information about specifying output file formats.
 
@@ -706,7 +706,7 @@ BASEFLOWFP_TIME.OUT
     The floodplain time above baseflow reporting option requires 2 two simulations: 1) Set IFLOODWAVE = 0 in CONT.DAT
     and prepare INFLOW.
     DAT with only the base flow hydrographs and run the model.
-    2) Set IF- LOODWAVE = 2 and swap out the INFLOW.DAT file with the flood hydrograph (such as a dam breach hydrograph) and run the model a second time
+    2) Set IFLOODWAVE = 2 and swap out the INFLOW.DAT file with the flood hydrograph (such as a dam breach hydrograph) and run the model a second time
     to generate the BASEFLOWFP_TIME.OUT file.
 
 BATCH COMPARISON FILES
@@ -801,7 +801,7 @@ BRIDGE_FLOW_GEOMETRY.OUT
 
     Bridge flow area, wetted perimeter, and top width of the bridge cross-sections.
 
-        - US flow area (ft\ :sup:`2` or m2)
+        - US flow area (ft\ :sup:`2` or m\ :sup:`2`)
         - US wetted perimeter (ft or m)
         - US topwidth (ft or m)
         - BR flow area (ft\ :sup:`2` or m\ :sup:`2`)
@@ -864,7 +864,7 @@ CHANMAX.OUT
 
 CHANNEL.CHK
 
-    When the channel cross section width exceeds the grid element width, the cross section needs to extend into 1 or more neighboring elements.
+    When the channel cross-section width exceeds the grid element width, the cross-section needs to extend into 1 or more neighboring elements.
     When the channel surface area is 0.95 times the floodplain surface area the channel needs to extend into 1 or more neighboring elements.
     This file lists the necessary extensions.
 
@@ -964,7 +964,7 @@ CROSSMAX.OUT
 
     When the floodplain cross-section analysis is requested by creating the FPXSEC.DAT file, the CROSSMAX.OUT is created.
     This file lists the maximum discharge, maximum flow depth and time of occurrence for each grid element specified
-    in the cross section analysis.
+    in the cross-section analysis.
     It also list the total volume in acre-ft for each cell.
 
 CROSSQ.OUT
@@ -1005,12 +1005,12 @@ CVTFINAL_MUD.OUT
 
 CVTMAX.OUT
 
-This file contains the channel fluid maximum sediment concentration by volume.
+    This file contains the channel fluid maximum sediment concentration by volume.
 
-    - Grid element
-    - x-coord
-    - y-coord
-    - Channel fluid max concentration
+        - Grid element
+        - x-coord
+        - y-coord
+        - Channel fluid max concentration
 
 CVTMAX_MUD.OUT
 
@@ -1081,7 +1081,7 @@ DEPRESSED_ELEMENTS.OUT
 
 **Flow Depth Output Files for TWO-PHASE modeling.**
 
-    - DEPCH_COMBO.OUT - Combined channel fluid and mudflow maxi- mum flow depths.
+    - DEPCH_COMBO.OUT - Combined channel fluid and mudflow maximum flow depths.
       Channel fluid or mudflow max depth (whichever is greater).
     - DEPCH_MUD.OUT - Channel maximum mudflow depth.
     - DEPCHFINAL_MUD.OUT - Channel final mudflow depth.
@@ -1153,9 +1153,9 @@ FLO-2D MODFLOW CH RETURN EXCHANGE.OUT
         - CH depth (ft or m)
         - Water exchange · · · CH CH grid element
         - CH depth (ft or m)
-        - Water exchange volume (ft3 or m\ :sup:`3`)
+        - Water exchange volume (ft\ :sup:`3` or m\ :sup:`3`)
         - Grid area (ft\ :sup:`2` or m\ :sup:`2`)
-        - Groundwater volume to surface (ft3 or m\ :sup:`3`)
+        - Groundwater volume to surface (ft\ :sup:`3` or m\ :sup:`3`)
         - Column
         - Row
         - Ground water depth (ft or m)
@@ -1192,11 +1192,8 @@ FLOODWAVETIME.OUT
 
     .. raw:: html
 
-        <pre>
-        Node    X-coord    Y-coord    Floodwave Arrival Time    Flood Time    Peak
-        Time    Deflood Time    Max WS
-        </pre>
-
+        Node&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X-coord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Y-coord&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Floodwave Arrival Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flood Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Peak<br>
+        Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deflood Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Max WS<br><br>
 
     Each grid element is assigned a specific value of the above parameters at the end of the simulation.
     The maximum values are tracked during the simulation on a computational timestep basis.
@@ -1233,7 +1230,7 @@ FLOODWAY.OUT
 
 FPINFILTRATION.OUT
 
-    The total infiltration (ft or m) at the end of the simulation for each flood- plain element is written to this file with grid element x- and
+    The total infiltration (ft or m) at the end of the simulation for each floodplain element is written to this file with grid element x- and
     y-coordinates.
 
         - Grid element
@@ -1314,11 +1311,11 @@ HYCHAN.OUT
         - Elevation – water surface elevation starting at bed elevation.
         - Thalweg depth - average depth above the lowest point in the channel for the duration of the output interval.
           (ft or m)
-        - Velocity - depth average velocity for cross section for the duration of the output interval (fps or mps)
+        - Velocity - depth average velocity for cross-section for the duration of the output interval (fps or mps)
         - Discharge - average discharge for the output interval (cfs or cms)
         - Froude number - based on the average depth and velocity.
         - Flow area - average flow area given by the average discharge divided by the average velocity (sqft or sqm)
-        - Wetted Perimeter - average wetted perimeter for the cross section for the duration of the output interval (ft or m)
+        - Wetted Perimeter - average wetted perimeter for the cross-section for the duration of the output interval (ft or m)
         - Hydraulic radius average flow area divided the average wetted perimeter (ft or m)
         - Top width - average top width for the duration of the output interval (ft or m)
         - Width to depth ratio - average width divided by the average depth
@@ -1329,18 +1326,18 @@ HYCHAN.OUT
 
 HYCROSS.OUT
 
-    The output interval time, top width, depth, velocity and discharge are listed for each cross section.
-    The discharge passing the cross section of grid elements is compiled as a hydrograph.
-    The cross section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file..
+    The output interval time, top width, depth, velocity and discharge are listed for each cross-section.
+    The discharge passing the cross-section of grid elements is compiled as a hydrograph.
+    The cross-section maximum discharge and the individual grid elements are written to the CROSSMAX.OUT file..
 
         - Time
         - Flow width - distance between the first and last node (ft or m)
-        - Depth - average depth across the complete cross section (ft or m)
+        - Depth - average depth across the complete cross-section (ft or m)
         - Watersurface elevation (ft or m)
-        - Velocity - average velocity for the complete cross section (fps or mps)
-        - Discharge - resolved and compiled discharge for the complete cross section.
+        - Velocity - average velocity for the complete cross-section (fps or mps)
+        - Discharge - resolved and compiled discharge for the complete cross-section.
           This is the most important value (cfs or cms).
-          If mudflow is used, this is the total water discharge including mud- flow concentration.
+          If mudflow is used, this is the total water discharge including mudflow concentration.
         - Concentration by volume - mudflow concentration is written as output when mudflow or two phase mudflow is used.
 
 HYDROALL.OUT
@@ -1354,7 +1351,7 @@ HYDRAULIC STRUCTURE SUBFACTORS.OUT
     This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
     If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
     If the discharge varies wildly, there could be surging.
-    The rating table or curve might not match the cross sectional areas adjacent to the structures.
+    The rating table or curve might not match the cross-sectional areas adjacent to the structures.
 
         - GE
         - Name
@@ -1372,7 +1369,7 @@ HYDROSTRUCT.OUT
     This file lists time and the discharge seen an the inlet and at the outlet for each hydraulic structure.
     If the values are negative in the inlet, the water is moving from the outlet to the inlet as backwater.
     If the discharge varies wildly, there could be surging.
-    The rating table or curve might not match the cross sectional areas adjacent to the structures.
+    The rating table or curve might not match the cross-sectional areas adjacent to the structures.
 
         - Time
         - Discharge inlet
@@ -1380,7 +1377,7 @@ HYDROSTRUCT.OUT
 
 HYSTREET.OUT
 
-    The street flow hydrograph for the grid element that is coincidental to the street and the cross section is recorded
+    The street flow hydrograph for the grid element that is coincidental to the street and the cross-section is recorded
     in this file.
 
 IMPACT.OUT
@@ -1449,9 +1446,9 @@ LEVEE.HDF5
 
         .. image:: ../img/Data_Input_Manual_PRO_2025/Chapter5/DIM_Pro_2025_Chapter3_001.png
 
-        - Grid element listed for the failure direction(ft or m)
-        - Total Q sum of all Q for 10 timesteps(cfs or cms)
-        - Water surface Elevation at the failure direction(ft or m)
+        - Grid element listed for the failure direction (ft or m)
+        - Total Q sum of all Q for 10 timesteps (cfs or cms)
+        - Water surface Elevation at the failure direction (ft or m)
 
     To use the data in this file, join the data tables by grid number and direction and then by time because multiple grid elements and directions are
     reported for each output interval.
@@ -1479,20 +1476,18 @@ LEVEEDEFIC.OUT
     The levee freeboard deficit is listed in this file.
     Five levels of freeboard deficit are reported:
 
-        0 = freeboard > 3 ft (0.9 m)
+        .. raw:: html
 
-        1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m)
+            0 = freeboard > 3 ft (0.9 m) <br>
+            1 = 2 ft (0.6 m) < freeboard < 3 ft (0.9 m) <br>
+            2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m) <br>
+            3 = freeboard < 1 ft (0.3 m) <br>
+            4 = levee is overtopped by flow.
 
-        2 = 1 ft (0.3 m) < freeboard < 2 ft (0.6 m)
-
-        3 = freeboard < 1 ft (0.3 m)
-
-        4 = levee is overtopped by flow.
-
-            - Grid element
-            - Xcoord
-            - Ycoord
-            - Levee deficit
+    - Grid element
+    - Xcoord
+    - Ycoord
+    - Levee deficit
 
 GE_LEVFAIL.OUT
 
@@ -1532,7 +1527,7 @@ LEVOVERTOP.OUT
 
         - Discharge total
         - Time - time of overtopping,
-        - Discharge direction columns N, E, S, W, NE, SE,SW, NW.
+        - Discharge direction columns N, E, S, W, NE, SE, SW, NW.
           Negative value means flow is moving from the opposite grid to the grid with the levee assigned.
 
 LEVOVERTOPMAX.OUT
@@ -1620,9 +1615,9 @@ MAXWSELEV.OUT
 
 MODFLOW CHANNEL INFILTRATION TOTALS.OUT
 
-    Total aaccumulated volume of water that infiltrates from the CH to MOD- FLOW at each MODFLOW timestep.
+    Total accumulated volume of water that infiltrates from the CH to MODFLOW at each MODFLOW timestep.
 
-        -Time
+        - Time
         - Accumulated infiltration volume CH (ft\ :sup:`3` or m\ :sup:`3`)
 
 MODFLOW CHANNEL INFILTRATION VOLUMES.OUT
@@ -1707,9 +1702,10 @@ RAINCELL.CHK
     This file was created for the user to be able check the magnitude of the average total rainfall for all grids and the total rainfall for each grid
     during the simulation, the file contains the following:
 
-        Line 1 Average grid element rainfall for the entire storm=, RGRIDTOTALAVE
+    .. raw:: html
 
-        Line 2 1 to NNOD TOTAL RAINFALL
+        Line 1 Average grid element rainfall for the entire storm=, RGRIDTOTALAVE<br>
+        Line 2 1 to NNOD TOTAL RAINFALL<br>
 
 RAINONECELL.CHK
 
@@ -1722,13 +1718,13 @@ REVISED_RATING_TABLE.OUT
     This file reports suggested revisions to hydraulic structure rating tables based on the inflow discharge to the hydraulic structure inlet floodplain
     or channel element.
     These revisions are usually the result of the rating table being created with low n-values or because the rating table has insufficient low depth
-    stage-discharge pairs or the cross section do not match the rating table data.
+    stage-discharge pairs or the cross-section do not match the rating table data.
 
 ROUGH.OUT
 
     The ROUGH.OUT file reports the automated Manning’s n-value adjustment during model simulation including n-value change for exceeding the Courant
     number and exceeding the limiting Froude.
-    The user specifies a maximum Froude number for overland, channel and street ?ow.
+    The user specifies a maximum Froude number for overland, channel and street flow.
     When the computed Froude number exceeds the defined maximum value for a given grid element, the n-value for that grid element is increased by a value
     based on the percent change in the n-value.
     During the falling limb of the hydrograph when the Froude number is no longer exceeded, the n-value is decreased by 0.0005 until the original n-value
@@ -1912,7 +1908,7 @@ SUMMARY.OUT
             - Grid System area (acres or m\ :sup:`2` and mi\ :sup:`2` or km\ :sup:`2`) Average hydraulics
             - Discharge (cfs or cms)
             - Velocity (fps or cms)
-            - Flow area (ft^2 or m^2)
+            - Flow area (ft\ :sup:`2` or m\ :sup:`2`)
             - Flow depth (ft or m)
             - Flow width (ft or m) Computation data
             - Total Computations
@@ -2004,7 +2000,7 @@ TIMDEP.OUT
 
         - Grid element
         - Depth (ft or m)
-        - Velocity (sqrt(x^2+y^2)) (fps or mps)
+        - Velocity (sqrt(x\ :sup:`2` +y\ :sup:`2`)) (fps or mps)
         - Velocity x - velocity vector x
         - Velocity y - velocity vector y
         - Water surface elevation (ft or m)
@@ -2012,7 +2008,7 @@ TIMDEP.OUT
 TIMDEPCELL.OUT
 
     This file contains flow depth, velocity, and velocity direction x and y, and water surface elevation for a set of grid elements defined by the
-    TIMEDEP- CELL.DAT file.
+    TIMEDEPCELL.DAT file.
     The user specifies time intervals with TIMTEP in CONT.DAT.
 
 TIMDEP.HDF5
@@ -2070,7 +2066,7 @@ TIME_TO_ABOVE_BASEFLOW.OUT
 TIMEONEFT.OUT
 
     This file reports the grid element number, the x- and y-coordinates and the initial time to one foot of depth.
-    The time to one foot of depth can be plot- ted in FLO-2D MapCrafter.
+    The time to one foot of depth can be plotted in FLO-2D MapCrafter.
     This file is typically used for dam and levee breach analysis.
 
         - Grid element
@@ -2092,7 +2088,7 @@ TIMETOPEAK.OUT
 TIMETWOFT.OUT
 
     This file reports the grid element number, the x- and y-coordinates and the initial time to two feet of depth.
-    The time to two feet of depth can be plot- ted in FLO-2D MapCrafter.
+    The time to two feet of depth can be plotted in FLO-2D MapCrafter.
     This file is typically used for dam and levee breach analysis.
 
         - Grid element
@@ -2134,13 +2130,13 @@ The velocity output files include:
 
     VELOC.OUT - Maximum channel flow velocity;
 
-    VELCHFINAL.OUT - Final channel flow velocities.;
+    VELCHFINAL.OUT - Final channel flow velocities;
 
-    VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity.
+    VELDIREC.OUT - Flow direction of the maximum floodplain flow velocity;
 
-    FINALVEL.OUT -Flow velocity at the end of the simulation.
+    FINALVEL.OUT - Flow velocity at the end of the simulation;
 
-    FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation.
+    FINALDIR.OUT - Flow maximum velocity direction at the end of the simulation;
 
     VEL_X_DEPTH.OUT - The velocity x depth parameter is evaluated as a single variable.
     This is not max velocity x max depth, it is the maximum value of the velocity squared x depth that is synchronized by time.
@@ -2175,7 +2171,8 @@ The velocity output files related to two-PHASE flow include:
 VELTIMEC.OUT
 
     This file lists the grid element number, maximum channel velocity and the time of occurrence.
-    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any unreasonably high maximum channel velocities.
+    It is sorted from highest to lowest velocity so that an examination of the first several lines
+    of output data will determine if there are any unreasonably high maximum channel velocities.
 
         - Grid element
         - Vmax in the channel element (fps or mps)
@@ -2183,9 +2180,9 @@ VELTIMEC.OUT
 
 VELTIMEFP.OUT
 
-    This file lists the first 100 floodplain elements: number, maximum flood- plain velocity and the time of occurrence.
-    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
-    unreasonably high maximum floodplain velocities.
+    This file lists the first 100 floodplain elements: number, maximum floodplain velocity and the time of occurrence.
+    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine
+    if there are any unreasonably high maximum floodplain velocities.
 
         - Grid element
         - Vmax floodplain element (fps or mps)
@@ -2205,8 +2202,8 @@ VELRESMAX.OUT
         - Velymax
 
     Flow velocities are computed in 8-directions for each grid element.
-    In the figure below, the red arrows indicate inflow to the grid element (2-directions) and the blue arrows represent outflow from the grid element
-    (3-directions).
+    In the figure below, the red arrows indicate inflow to the grid element (2-directions) and the blue arrows represent outflow from
+    the grid element (3-directions).
     The remaining flow directions have zero discharge and velocities.
     The arrow length indicates relative magnitude.
     If the outflow velocities from the grid element are resolved into x- and y- coordinate directions, the components would be depicted by the blue arrows
@@ -2216,8 +2213,8 @@ VELRESMAX.OUT
 VELTIMEST.OUT
 
     This file lists the street element number, maximum street velocity and the time of occurrence.
-    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine if there are any
-    unreasonably high maximum street velocities.
+    It is sorted from highest to lowest velocity so that an examination of the first several lines of output data will determine
+    if there are any unreasonably high maximum street velocities.
 
         - Grid element
         - Vmax street element (fps or mps)
@@ -2225,23 +2222,23 @@ VELTIMEST.OUT
 
 WSTIME.OUT
 
-    If the WSTIME.DAT file is created, the WSTIME.OUT file will be generated listing the channel element number, time of the measured water sur- face
+    If the WSTIME.DAT file is created, the WSTIME.OUT file will be generated listing the channel element number, time of the measured water surface
     elevation, measured water surface elevation at stated time, predicted water surface elevation at stated time, difference between the water surface
     elevations and the cumulative difference between the measured and predicted water surfaces.
 
 XSECAREA.OUT
 
-    When the channel cross section option is invoked for channel routing, the channel geometry data is written to this file.
+    When the channel cross-section option is invoked for channel routing, the channel geometry data is written to this file.
     It includes: grid element, flow area, top width and wetted perimeter for the lowest top of bank (bankfull flow).
 
         - Grid element
-        - Flow area of the cross section (sqft or sqm)
-        - Top width of the cross section (ft or m)
-        - Wetted Perimeter of the cross section (ft or m)
+        - Flow area of the cross-section (sqft or sqm)
+        - Top width of the cross-section (ft or m)
+        - Wetted Perimeter of the cross-section (ft or m)
 
 XSEC.OUT
 
     This file is created by the channel sediment transport option (ISED = 1 in CONT.
-    DAT and ISEDN = 1 for a channel segment in CHAN.DAT) for natural cross section geometry data.
-    It contains the final cross section bed elevations after scour and deposition have been computed.
+    DAT and ISEDN = 1 for a channel segment in CHAN.DAT) for natural cross-section geometry data.
+    It contains the final cross-section bed elevations after scour and deposition have been computed.
     The file looks the same as XSEC.DAT with updated elevation data.
