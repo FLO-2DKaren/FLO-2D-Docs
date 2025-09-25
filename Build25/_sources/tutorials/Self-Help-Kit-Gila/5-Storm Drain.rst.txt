@@ -500,7 +500,7 @@ Storm Drain
     - Click the three dots next to `Time Series` to open the time series editor.
     - Assign the Time Series Name and Description as shown in the image below.
     - Add one blank line to the table.
-    - Copy the time series data from the `GroverTimeSeries' text file`.
+    - Copy the time series data from the `GroverTimeSeries.txt` file.
     - Paste the data into the time series table.
     - Close both editors.
 
