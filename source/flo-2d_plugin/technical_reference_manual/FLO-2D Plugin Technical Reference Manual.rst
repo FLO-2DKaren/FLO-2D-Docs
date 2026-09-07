@@ -449,9 +449,11 @@ Area and Width Reduction Factor
 The calculator intersects the polygons in the *Blocked Areas* (buildings) layer to the polygons in the *Grid* layer and uses the centroid to set up
 the ARF/WRF table of variables.
 The ARF calculator intersects the *Blocked Areas* polygon with the grid polygon and calculates the area of the building that occupies each grid.
-If the grid is totally blocked, the ARF = 1.
-If the blockage is greater than 0.9, the ARF is reset to 1.
-If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
+
+- If the grid is totally blocked, the ARF = 1.
+- If the blockage is greater than 0.9, the ARF is reset to 1.
+- If the area of the building is a percentage of the grid, then the value is assessed and written to the ARF attribute.
+
 Figure 18 shows an ARF that would have a value of 4.74 / 9.29 = 0.51.
 
 .. image:: ./img/refman/ref018.png
@@ -490,14 +492,16 @@ GDS on the left and QGIS on the right (Figure 21).
 *Figure 21.
 WRF Redundancy GDS / QGIS Comparison.*
 
-1. QGIS calculator is more accurate on cells that have partial WRFs.
-   The GDS WRF on the left is calculated as 0.98.
-   The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
+QGIS calculator is more accurate on cells that have partial WRFs.
+The GDS WRF on the left is calculated as 0.98.
+The QGIS WRF on the right is calculated at 0.44 and that is more accurate (Figure 22).
 
 .. image:: ./img/refman/ref022.png
 
 *Figure 22.
 WRF Calculator GDS / QGIS Comparison.*
+
+
 
 Rainfall Interpolation Tool
 ---------------------------
